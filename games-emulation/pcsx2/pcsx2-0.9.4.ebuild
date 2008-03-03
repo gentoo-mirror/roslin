@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/pcsx2/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="alsa custom-cflags debug devbuild nls oss sse3 vmbuild"
+IUSE="alsa debug devbuild nls oss sse3 vmbuild"
 
 CDEPEND="sys-libs/zlib
 	>=x11-libs/gtk+-2"
@@ -54,11 +54,6 @@ pkg_setup() {
 		ewarn "Warning: Compilation is known to fail with the vmbuild use flag enabled"
 		ebeep 5
 	fi
-
-	if use custom-cflags; then
-		ewarn "Warning: Dynamic recompilation is known not to work with the custom-cflags use flag enabled"
-		ebeep 5
-	fi
 }
 
 src_unpack() {
@@ -78,6 +73,14 @@ src_unpack() {
 }
 
 src_compile() {
+	local myconf
+	filter-flags -O0
+	
+	if ! use x86 && ! use amd64; then
+		einfo "Recompiler not supported on this architecture. Disabling."
+		myconf=" --disable-recbuild"
+	fi
+
 	egamesconf  \
 		$(use_enable devbuild) \
 		$(use_enable debug) \
@@ -114,7 +117,7 @@ src_install() {
 			doins -r Langs/${x} || die "doins for language ${x} failed"
 		fi
 	done
-	
+
 	make_desktop_entry pcsx2 PCSX2 xgame
 
 	prepgamesdirs

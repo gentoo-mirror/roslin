@@ -12,7 +12,7 @@ ESVN_REPO_URI="https://pcsx2.svn.sourceforge.net/svnroot/pcsx2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS=""
-IUSE="alsa custom-cflags debug devbuild nls oss sse3 vmbuild"
+IUSE="alsa debug devbuild nls oss sse3 vmbuild"
 
 CDEPEND="sys-libs/zlib
 		>=x11-libs/gtk+-2"
@@ -57,11 +57,6 @@ pkg_setup() {
 		ewarn "Warning: Compilation is known to fail with the vmbuild use flag enabled"
 		ebeep 5
 	fi
-
-	if use custom-cflags; then
-		ewarn "Warning: Dynamic recompilation is known not to work with the custom-cflags use flag enabled"
-		ebeep 5
-	fi
 }
 
 src_unpack() {
@@ -73,7 +68,7 @@ src_unpack() {
 		cd ${S}/${PN}
 
 		# Preserve custom CFLAGS passed to configure.
-		use custom-cflags && epatch "${FILESDIR}"/${PN}-0.9.4-custom-cflags.patch
+		epatch "${FILESDIR}"/${PN}-0.9.4-custom-cflags.patch
 
 		# Add nls support to the configure script.
 		epatch "${FILESDIR}"/${PN}-0.9.4-add-nls.patch
@@ -85,7 +80,15 @@ src_unpack() {
 
 src_compile() {
 	cd ${S}/${PN}
+
+	local myconf
+	filter-flags -O0
 	
+	if ! use x86 && ! use amd64; then
+		einfo "Recompiler not supported on this architecture. Disabling."
+		myconf=" --disable-recbuild"
+	fi
+
 	egamesconf  \
 		$(use_enable devbuild) \
 		$(use_enable debug) \

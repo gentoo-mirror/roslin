@@ -1,0 +1,10 @@
+# ChangeLog for games-emulation/pcsx2
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  03 Mar 2008; Michał Ziąbkowski <mziab@o2.pl> pcsx2-0.9.4.ebuild,
+  files/pcsx2-0.9.4-custom-cflags.patch, pcsx2-9999.ebuild:
+  Add some of the goodies from http://bugs.gentoo.org/show_bug.cgi?id=141626.
+  USE="custom-cflags" is obsolete, so it was deleted. Dynarec is disabled on
+  unsupported arches.
+

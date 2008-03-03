@@ -1,0 +1,8 @@
+# ChangeLog for games-emulation/ps2emu-usblinuz
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  03 Mar 2008; Michał Ziąbkowski <mziab@o2.pl> ps2emu-usblinuz-0.4.ebuild,
+  ps2emu-usblinuz-9999.ebuild:
+  Fixed the docs in src_install. My bad.
+

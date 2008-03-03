@@ -1,0 +1,48 @@
+diff -Nur FW.old/Linux/conf.c FWlinuz/Linux/conf.c
+--- FW.old/Linux/conf.c	2007-11-11 03:55:00.000000000 +0100
++++ FWlinuz/Linux/conf.c	2008-03-03 12:26:40.834488923 +0100
+@@ -26,7 +26,7 @@
+ #include "interface.h"
+ #include "support.h"
+ #include "callbacks.h"
+-#include "FireWire.h"
++#include "../FW.h"
+ #include "Config.h"
+ 
+ GtkWidget *MsgDlg;
+diff -Nur FW.old/Linux/Config.c FWlinuz/Linux/Config.c
+--- FW.old/Linux/Config.c	2007-11-11 03:55:00.000000000 +0100
++++ FWlinuz/Linux/Config.c	2008-03-03 12:26:21.434488838 +0100
+@@ -22,7 +22,7 @@
+ #include <unistd.h>
+ #include <sys/stat.h>
+ 
+-#include "FireWire.h"
++#include "../FW.h"
+ 
+ void LoadConfig() {
+ 	FILE *f;
+diff -Nur FW.old/Linux/Linux.c FWlinuz/Linux/Linux.c
+--- FW.old/Linux/Linux.c	2007-11-11 03:55:00.000000000 +0100
++++ FWlinuz/Linux/Linux.c	2008-03-03 12:26:07.346488962 +0100
+@@ -24,7 +24,7 @@
+ #include <sys/ioctl.h>
+ #include <pthread.h>
+ 
+-#include "FireWire.h"
++#include "../FW.h"
+ 
+ int ExecCfg(char *arg) {
+ 	char cfg[256];
+diff -Nur FW.old/Linux/Makefile FWlinuz/Linux/Makefile
+--- FW.old/Linux/Makefile	2007-11-11 03:55:00.000000000 +0100
++++ FWlinuz/Linux/Makefile	2008-03-03 12:25:11.146489430 +0100
+@@ -2,7 +2,7 @@
+ PLUGIN = libFireWire.so
+ CFG = cfgFireWire
+ CFLAGS+= -fPIC -Wall -I. -I.. -O3 -fomit-frame-pointer -fno-strict-aliasing
+-OBJS = ../FireWire.o
++OBJS = ../FW.o
+ OBJS+= Linux.o Config.o
+ CFGOBJS = conf.o interface.o support.o Config.o
+ DEPS:= $(OBJS:.o=.d)

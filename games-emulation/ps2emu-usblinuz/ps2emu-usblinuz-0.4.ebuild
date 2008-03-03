@@ -1,4 +1,4 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: /var/cvsroot/gentoo-x86/games-emulation/ps2emu-cddvdlinuz/ps2emu-cddvdlinuz-0.3-r1.ebuild,v 1.7 2007/04/06 18:56:48 nyhm Exp $
 
@@ -36,6 +36,6 @@ src_install() {
 	newexe libUSBlinuz.so libUSBlinuz.${PV}.so || die "newexe failed"
 	exeinto "$(games_get_libdir)"/ps2emu/plugins/cfg
 	doexe cfgUSBlinuz || die "newexe failed"
-	dodoc ../readme.txt
+	dodoc ../ReadMe.txt || die
 	prepgamesdirs
 }

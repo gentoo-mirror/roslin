@@ -1,0 +1,24 @@
+diff -Naur lts-1.02/libfhi_scons.py lts-1.02-gentoo/libfhi_scons.py
+--- lts-1.02/libfhi_scons.py	2007-01-27 01:37:37.000000000 +0100
++++ lts-1.02-gentoo/libfhi_scons.py	2007-07-22 12:01:28.000000000 +0200
+@@ -927,7 +927,7 @@
+ 	obligatory)
+ 
+   # Find VHO API.
+-  # @param cmp Minimum version.
++  # @param cmp Minimum version.wx
+   # @param define If set, define this on success.
+   # @param obligatory If true, exit on error.
+   # @return True on success, false on error.
+@@ -942,8 +942,8 @@
+   # @param obligatory If true, exit on error.
+   # @return True on success, false on error.
+   def find_wxwidgets(self, cmp,  define = '', obligatory = True):
+-    return self.find_compare('wx-config --version',
+-	'wx-config --cflags --libs', 'wxWidgets', cmp, define,
++    return self.find_compare('wx-config-2.6 --version',
++	'wx-config-2.6 --cflags --libs', 'wxWidgets', cmp, define,
+ 	obligatory)
+ 
+ ##############################################################################
+

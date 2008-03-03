@@ -1,0 +1,6 @@
+# ChangeLog for games-fps/quake1-zerstorer
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+
+  22 Sep 2007; Piotr Szymaniak <lazy_bum@o2.pl>
+  quake1-zerstorer-1.1-r1.ebuild:
+  Added "vispatch" flag for transparent water support.

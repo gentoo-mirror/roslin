@@ -1,0 +1,8 @@
+# ChangeLog for media-libs/fmodex
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+
+  28 Sep 2007; Piotr Szymaniak <lazy_bum@o2.pl> fmodex-4.08.02.ebuild:
+  Version bump. Minor changes in SRC_URI.
+
+  28 Sep 2007; Piotr Szymaniak <lazy_bum@o2.pl> fmodex-4.06.22.ebuild:
+  Removed.

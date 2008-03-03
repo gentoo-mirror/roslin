@@ -1,0 +1,15 @@
+# ChangeLog for games-strategy/ufo2000
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+
+  14 Dec 2007; Piotr Szymaniak <lazy_bum@o2.pl> ufo2000-9999.ebuild:
+  Changed KEYWORDS to "".
+
+*ufo2000-9999 (24 Sep 2007)
+
+  24 Sep 2007; Piotr Szymaniak <lazy_bum@o2.pl> +ufo2000-9999.ebuild:
+  Added svn ebuild.
+
+*ufo2000-0.7.1086 (23 Sep 2007)
+
+  23 Sep 2007; Piotr Szymaniak <lazy_bum@o2.pl> +ufo2000-0.7.1086.ebuild:
+  Version bump. Removed vorbis support as it needs dumb-0.9.2.

@@ -1,0 +1,11 @@
+--- Extras/glui/GL/glui.h.org	2007-10-31 09:00:03.000000000 +0100
++++ Extras/glui/GL/glui.h	2008-02-11 22:07:19.000000000 +0100
+@@ -321,6 +321,8 @@
+ class GLUI_Scrollbar;
+ class GLUI_Listbox;
+ class GLUI_List;
++class GLUI_Rollout;
++class GLUI_Tree;
+ 
+ 
+ /**

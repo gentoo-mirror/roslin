@@ -1,0 +1,17 @@
+# ChangeLog for games-sports/top10
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  14 Feb 2008; Piotr Szymaniak <lazy_bum@o2.pl> top10-9999.ebuild:
+  Minor bugs, added openal dep.
+
+  12 Feb 2008; Piotr Szymaniak <lazy_bum@o2.pl> top10-9999.ebuild:
+  Fixed installdir, fixed depends. "editor" can be broken.
+
+  10 Feb 2008; Piotr Szymaniak <lazy_bum@o2.pl> top10-9999.ebuild:
+  Builds fine, but installs in wrong dir. Will be fixed soon.
+
+*top10-9999 (13 Jan 2008)
+
+  13 Jan 2008; Piotr Szymaniak <lazy_bum@o2.pl> +top10-9999.ebuild:
+  Initial ebuild.

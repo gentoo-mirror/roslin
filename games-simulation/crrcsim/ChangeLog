@@ -1,0 +1,8 @@
+# ChangeLog for games-simulation/crrcsim
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+
+  30 Sep 2007; Piotr Szymaniak <lazy_bum@o2.pl> crrcsim-0.9.8.ebuild:
+  Changed "x86" to more appropriate version with ~.
+
+  26 Sep 2007; Piotr Szymaniak <lazy_bum@o2.pl> crrcsim-0.9.8.ebuild:
+  New ebuild (I know it's ugly, patches are welcome ;)

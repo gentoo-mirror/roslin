@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/jinja
+# Copyright 2008-2008 Gentoo Foundation; Distributed under the GPL v2
+
+  26 Jan 2008; Piotr Szymaniak <lazy_bum@o2.pl> jinja-1.2.ebuild:
+  Added ~amd64 KEYWORD.
+
+*jinja-1.2 (22 Jan 2008)
+
+  22 Jan 2008; Piotr Szymaniak <lazy_bum@o2.pl> +jinja-1.2.ebuild:
+  Initial ebuild (bumped from pythonhead overlay).

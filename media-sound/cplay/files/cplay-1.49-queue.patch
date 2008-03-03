@@ -1,0 +1,104 @@
+--- cplay.orig	2003-12-05 09:20:56.000000000 +0100
++++ cplay	2007-09-18 16:21:56.187883216 +0200
+@@ -539,6 +539,7 @@
+   <, >        : horizontal scrolling   s, S  : shuffle/Sort playlist
+   C-l, l      : refresh, list mode     w, @  : write playlist, jump to active
+   h, q, Q     : help, quit?, Quit!     X     : stop playlist after each track
++                                       &, *  : toggle queued current/tagged
+ """), "\n")
+ 
+ # ------------------------------------------
+@@ -577,6 +578,7 @@
+         ListEntry.__init__(self, pathname)
+         self.metadata = None
+         self.active = 0
++        self.queued = 0
+ 
+     def set_active(self, value):
+         self.active = value
+@@ -584,6 +586,18 @@
+     def is_active(self):
+         return self.active == 1
+ 
++    def set_queued(self, value):
++	self.queued = value
++
++    def is_queued(self):
++	return self.queued
++	
++    def __str__(self):
++	mark = self.is_tagged() and "#" or " "
++	num = self.is_queued() or " "
++	return "%s %s %s%s" % (num, mark, self.vp(), self.slash)
++
++
+     def vp_metadata(self):
+         return self.metadata or self.read_metadata()
+ 
+@@ -889,6 +903,7 @@
+         self.random_prev = []
+         self.random_next = []
+         self.random_left = []
++	self.queue = []
+         self.stop = 0
+         self.keymap.bind(['\n', curses.KEY_ENTER],
+                          self.command_play, ())
+@@ -903,6 +918,43 @@
+         self.keymap.bind('X', self.command_toggle_stop, ())
+         self.keymap.bind('w', self.command_save_playlist, ())
+         self.keymap.bind('@', self.command_jump_to_active, ())
++	self.keymap.bind('&', self.command_toggle_queue, ())
++	self.keymap.bind('*', self.command_toggle_queue_tagged, ())
++
++    def command_toggle_queue_tagged(self):
++	if not self.buffer: return
++	for i in self.buffer:
++		if i.is_tagged():
++			self.enqueue(i)
++			i.set_tagged(not i.is_tagged())
++			self.update()
++
++    def command_toggle_queue(self):
++	self.enqueue(self.buffer[self.bufptr])
++
++    def enqueue(self, entry):
++	if not self.buffer: return
++	if(entry.is_queued() == 0):
++		entry.set_queued(len(self.queue) + 1)
++		self.queue.append(entry)
++		self.update()
++	else:
++		self.dequeue(entry)
++
++    def dequeue(self, entry):
++	for i in self.queue:
++		if( i == entry):
++			entry.set_queued(0)
++			self.queue.remove(i)
++			self.refresh_queue()
++			break
++
++    def refresh_queue(self):
++	x = 1
++	for i in self.queue:
++		i.set_queued(x)
++		x = x + 1
++	self.update()
+ 
+     def command_change_viewpoint(self, klass=PlaylistEntry):
+         if not globals().get("ID3"):
+@@ -986,6 +1038,14 @@
+         if not self.buffer: return
+         old = self.get_active_entry()
+         new = None
++	if self.queue and direction > 0:
++		new = self.queue[0]
++		self.dequeue(new)
++		new.set_active(1)
++		old.set_active(0)
++		self.update()
++		return new
++
+         if self.random:
+             if direction > 0:
+                 if self.random_next: new = self.random_next.pop()

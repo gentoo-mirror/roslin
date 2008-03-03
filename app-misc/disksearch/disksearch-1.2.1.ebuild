@@ -1,0 +1,31 @@
+# Copyright 1999-2008 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: $
+
+inherit eutils
+
+DESCRIPTION="Tool for searching for files on removable media disks"
+HOMEPAGE="http://disksearch.sourceforge.net"
+SRC_URI="http://dfn.dl.sourceforge.net/sourceforge/disksearch/${P}.tar.gz"
+LICENSE="GPL-2"
+
+SLOT="0"
+KEYWORDS="x86"
+IUSE=""
+
+DEPEND=">=virtual/python-2.3
+	>=dev-python/pygtk-2.4"
+
+RDEPEND=">=x11-libs/gtk+-2.4
+	${DEPEND}"
+
+src_compile() {
+	cd ${S}
+	epatch "${FILESDIR}/homedir.patch"
+}
+
+src_install() {
+	emake prefix="${D}/usr/" || die "emake failed"
+	dodir "/usr/share/applications/"
+	cp "${FILESDIR}/disksearch.desktop" "${D}/usr/share/applications"
+}

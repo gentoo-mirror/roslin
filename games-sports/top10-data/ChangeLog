@@ -1,0 +1,11 @@
+# ChangeLog for games-sports/top10-data
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  14 Feb 2008; Piotr Szymaniak <lazy_bum@o2.pl> top10-data-20080127.ebuild:
+  Fixed file groups.
+
+*top10-data-20080127 (12 Feb 2008)
+
+  12 Feb 2008; Piotr Szymaniak <lazy_bum@o2.pl> +top10-data-20080127.ebuild:
+  Initial ebuild.

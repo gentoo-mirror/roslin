@@ -1,0 +1,30 @@
+# ChangeLog for net-im/ekg2
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  20 Feb 2008; Piotr Szymaniak <lazy_bum@o2.pl> ekg2-9999.ebuild:
+  Added sed to change CVS -> SVN in /version. (;
+
+  14 Feb 2008; Piotr Szymaniak <lazy_bum@o2.pl> ekg2-9999.ebuild:
+  Cleaned up, fixed tons of other errors.
+
+  13 Feb 2008; Piotr Szymaniak <lazy_bum@o2.pl> ekg2-9999.ebuild:
+  Fixed svn.
+
+  24 Jan 2008; Piotr Szymaniak <lazy_bum@o2.pl> ekg2-9999.ebuild:
+  Changed cvs to svn.
+
+*ekg2-9999 (14 Dec 2007)
+
+  14 Dec 2007; Piotr Szymaniak <lazy_bum@o2.pl> +ekg2-9999.ebuild:
+  Added live ebuild.
+
+*ekg2-0.1.1-r1 (04 Dec 2007)
+
+  04 Dec 2007; Piotr Szymaniak <lazy_bum@o2.pl> +ekg2-0.1.1-r1.ebuild:
+  Added conference log patches.
+
+*ekg2-0.1.1 (04 Nov 2007)
+
+  04 Nov 2007; Piotr Szymaniak <lazy_bum@o2.pl> +ekg2-0.1.1.ebuild:
+  Initial ebuild.

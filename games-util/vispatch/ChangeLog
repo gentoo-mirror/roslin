@@ -1,0 +1,5 @@
+# ChangeLog for games-util/vispatch
+# Copyright 2007-2008 Gentoo Foundation; Distributed under the GPL v2
+
+  24 Jan 2008; Piotr Szymaniak <lazy_bum@o2.pl> +vispatch-1.4.3.ebuild:
+  Version bump.

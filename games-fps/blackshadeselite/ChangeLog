@@ -1,0 +1,8 @@
+# ChangeLog for games-fps/blackshadeselite
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header
+
+*blackshades-9999 (24 Nov 2007)
+
+  24 Nov 2007; Piotr Szymaniak <lazy_bum@o2.pl> +blackshadeselite-9999.ebuild:
+  New ebuild

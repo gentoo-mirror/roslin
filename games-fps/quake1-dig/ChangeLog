@@ -1,0 +1,5 @@
+# ChangeLog for games-fps/quake1-dig
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+
+  22 Sep 2007; Piotr Szymaniak <lazy_bum@o2.pl> quake1-dig-1.ebuild:
+  Improved previous ebuild. This one works!

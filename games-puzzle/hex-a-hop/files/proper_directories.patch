@@ -1,0 +1,133 @@
+# Copyright (C) 2007  Miriam Ruiz <little_miry@yahoo.es>
+# Copyright (C) 2007  Jens Seidel <jensseidel@users.sf.net>
+# Licensed under the GPL, see /usr/share/common-licenses/GPL
+
+Index: hex-a-hop.svn/hex_puzzzle.cpp
+===================================================================
+--- hex-a-hop.svn.orig/hex_puzzzle.cpp	2007-09-20 00:49:01.000000000 +0200
++++ hex-a-hop.svn/hex_puzzzle.cpp	2007-09-20 00:49:08.000000000 +0200
+@@ -27,7 +27,13 @@
+ 
+ //#define MAP_LOCKED_VISIBLE
+ 
++#ifndef GAME_NAME
+ #define GAME_NAME "Hex-a-hop"
++#endif
++
++#ifndef DATA_DIR
++#define DATA_DIR "."
++#endif
+ 
+ #ifdef EDIT
+ //	#define MAP_EDIT_HACKS
+@@ -67,6 +73,15 @@
+ #include "packfile.h"
+ #endif
+ 
++#include <unistd.h>
++#include <limits.h>
++#include <sys/stat.h>
++#include <sys/types.h>
++
++#ifndef PATH_MAX 
++#define PATH_MAX 4096 
++#endif 
++
+ void RenderTile(bool reflect, int t, int x, int y, int cliplift=-1);
+ 
+ int keyState[SDLK_LAST] = {0};
+@@ -76,15 +91,34 @@
+ //	printf("file_open( \"%s\", \"%s\" )\n", file, flags );
+ 	extern String base_path;
+ 	static String filename; // static to reduce memory alloc/free calls.
+-	if (file[0]=='\0' || file[1]!=':') //If a full path is specified, don't prepend base_path
+-		filename = base_path;
++	if (file[0]=='/') //If a full path is specified, don't prepend base_path
++		filename = "";
++	else
++	{
++		if (strncmp(file, "save", 4) == 0)
++		{
++			const char *home = getenv("HOME");
++			if (home) 
++			{
++				char save_path[PATH_MAX];
++				snprintf(save_path, sizeof(save_path), "%s/.hex-a-hop", home);
++				if (!strchr(flags, 'r'))
++					if (mkdir(save_path, S_IRWXU | S_IRWXG | S_IROTH | S_IXOTH) != -1)
++						printf("Creating directory \"%s\"\n", (const char *)save_path);
++				strncat(save_path, "/", sizeof(save_path));
++				filename = save_path;
++			}
++			else filename = "/tmp/";
++		}
++		else filename = base_path;
++	}
+ 	filename += file;
+ //	printf("   -> \"%s\"\n", filename );
+-	
++
+ 	filename.fix_backslashes();
+ 	FILE* f = fopen( filename, flags );
+ 
+-	if (!f)
++	if (!f && strncmp(file, "save", 4) != 0)
+ 	{
+ 		printf("Warning: unable to open file \"%s\" for %s\n", (const char*)filename, strchr(flags, 'r') ? "reading" : "writing");
+ 	}
+@@ -4099,7 +4133,7 @@
+ 	}
+ 	void LoadGraphics()
+ 	{
+-		#define X(NAME,FILE,ALPHA) NAME = Load("graphics/" FILE BMP_SUFFIX, ALPHA);
++		#define X(NAME,FILE,ALPHA) NAME = Load(DATA_DIR "/graphics/" FILE BMP_SUFFIX, ALPHA);
+ 		#include "gfx_list.h"
+ 
+ 		static int first = 1;
+Index: hex-a-hop.svn/gfx.cpp
+===================================================================
+--- hex-a-hop.svn.orig/gfx.cpp	2007-09-20 00:49:05.000000000 +0200
++++ hex-a-hop.svn/gfx.cpp	2007-09-20 00:49:08.000000000 +0200
+@@ -28,6 +28,10 @@
+ 	#undef USE_BBTABLET
+ #endif
+ 
++#ifndef DATA_DIR
++#define DATA_DIR "."
++#endif
++
+ StateMakerBase* StateMakerBase::first = 0;
+ State* StateMakerBase::current = 0;
+ 
+@@ -166,7 +170,7 @@
+ 
+ int main(int argc, char * argv[])
+ {
+-	base_path = argv[0];
++	base_path = DATA_DIR "/";
+ 	for (int i=strlen(base_path)-1; i>=0; i--)
+ 		if (base_path[i]=='/' || base_path[i]=='\\')
+ 		{
+Index: hex-a-hop.svn/Makefile
+===================================================================
+--- hex-a-hop.svn.orig/Makefile	2007-09-20 00:48:52.000000000 +0200
++++ hex-a-hop.svn/Makefile	2007-09-20 00:49:08.000000000 +0200
+@@ -2,7 +2,8 @@
+ NAME		= Hex-a-hop
+ VERSION		= 1.0.0
+ CC		= gcc
+-CXXFLAGS		+= -D_VERSION=\"$(VERSION)\" -g
++DATA_DIR="."
++CXXFLAGS		+= -g
+ GCC =g++
+ CXXSOURCES	= gfx.cpp hex_puzzzle.cpp
+ #INCLUDES	= 
+@@ -13,7 +14,7 @@
+ OBJS=$(CXXSOURCES:.cpp=.o)
+ 
+ %.o	: %.cpp
+-	$(GCC) $(CXXFLAGS)  `sdl-config --cflags`  -c -o $@ $<
++	$(GCC) $(CXXFLAGS) -D_VERSION=\"$(VERSION)\" -DDATA_DIR=\"$(DATA_DIR)\" `sdl-config --cflags`  -c -o $@ $<
+ 	
+ $(NAME) : $(OBJS)
+ 		$(GCC) $(CXXFLAGS) $(OBJS)  `sdl-config --libs` -lm  \

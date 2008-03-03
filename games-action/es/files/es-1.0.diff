@@ -1,0 +1,119 @@
+diff -Naur ES_d/import/opengl.d ES_d-gentoo/import/opengl.d
+--- ES_d/import/opengl.d	2005-03-11 01:43:08.000000000 +0100
++++ ES_d-gentoo/import/opengl.d	2007-09-19 22:34:20.000000000 +0200
+@@ -1,10 +1,6 @@
+-version (Win32) {
+-	private import std.c.windows.windows;
+-	extern(Windows):
+-}
+-else {
++
+ 	extern(C):
+-}
++
+ 
+ alias uint GLenum;
+ alias ubyte GLboolean;
+@@ -1116,7 +1112,7 @@
+ /*************************************************************/
+ 
+ void /*APIENTRY*/glAccum (GLenum op, GLfloat value);
+-void /*APIENTRY*/glAlphaFunc (GLenum func, GLclampf ref);
++void /*APIENTRY*/glAlphaFunc (GLenum func, GLclampf);
+ GLboolean /*APIENTRY*/glAreTexturesResident (GLsizei n, GLuint *textures, GLboolean *residences);
+ void /*APIENTRY*/glArrayElement (GLint i);
+ void /*APIENTRY*/glBegin (GLenum mode);
+@@ -1369,7 +1365,7 @@
+ void /*APIENTRY*/glScissor (GLint x, GLint y, GLsizei width, GLsizei height);
+ void /*APIENTRY*/glSelectBuffer (GLsizei size, GLuint *buffer);
+ void /*APIENTRY*/glShadeModel (GLenum mode);
+-void /*APIENTRY*/glStencilFunc (GLenum func, GLint ref, GLuint mask);
++void /*APIENTRY*/glStencilFunc (GLenum func, GLint, GLuint mask);
+ void /*APIENTRY*/glStencilMask (GLuint mask);
+ void /*APIENTRY*/glStencilOp (GLenum fail, GLenum zfail, GLenum zpass);
+ void /*APIENTRY*/glTexCoord1d (GLdouble s);
+diff -Naur ES_d/import/openglu.d ES_d-gentoo/import/openglu.d
+--- ES_d/import/openglu.d	2005-03-11 01:43:20.000000000 +0100
++++ ES_d-gentoo/import/openglu.d	2007-09-19 22:33:32.000000000 +0200
+@@ -1,11 +1,8 @@
+ import opengl;
+ 
+-version (Win32) {
+-	extern(Windows):
+-}
+-else {
++
+ 	extern(C):
+-}
++
+ 
+ GLubyte* gluErrorString (
+     GLenum   errCode);
+diff -Naur ES_d/Makefile ES_d-gentoo/Makefile
+--- ES_d/Makefile	1970-01-01 01:00:00.000000000 +0100
++++ ES_d-gentoo/Makefile	2007-09-19 22:31:23.000000000 +0200
+@@ -0,0 +1,17 @@
++DC=gdmd
++DFLAGS=-g -O -d -release -Iimport -Isrc
++DOUT=-of
++
++DSRC=$(shell find src/ -name "*.d")
++SOURCES=$(DSRC) import/SDL_video.d import/SDL_mouse.d import/SDL_mixer.d
++OBJS=$(SOURCES:.d=.o)
++EXE=es
++
++all: $(EXE)
++
++$(EXE): $(OBJS)
++	gcc -o $@ $(OBJS) -lbulletml_d -lgphobos -lpthread -lm -lSDL -lGL -lGLU -lSDL_mixer
++
++$(OBJS): %.o: %.d
++	$(DC) -c $(DOUT)$@ $(DFLAGS) $<
++
+diff -Naur ES_d/src/es/boot.d ES_d-gentoo/src/es/boot.d
+--- ES_d/src/es/boot.d	2007-07-01 10:21:20.000000000 +0200
++++ ES_d-gentoo/src/es/boot.d	2007-09-19 22:31:23.000000000 +0200
+@@ -4,7 +4,11 @@
+ 
+ private import es.mouse;
+ 
+-private Mainloop mainloop;
++private Mainloop mainloop;
++private Mouse mouse;
++
++version (Win32_release) {
++
+ 
+ private:
+ import std.c.windows.windows;
+@@ -39,6 +43,20 @@
+ 	gc_term();
+ 	return result;
+ }
++} else {
++  // Boot as the general executable.
++  public int main(char[][] args) {
++    return boot(args);
++  }
++}
++
++public int boot(char[][] args) {
++ 	double d;
++	mouse = new Mouse();
++	mainloop = new Mainloop(mouse);
++	mainloop.loop();
++	return 0;
++}
+ 
+ int user_start(){
+ 	double d;
+diff -Naur ES_d/src/es/sound.d ES_d-gentoo/src/es/sound.d
+--- ES_d/src/es/sound.d	2007-07-14 23:56:04.000000000 +0200
++++ ES_d-gentoo/src/es/sound.d	2007-09-19 22:31:23.000000000 +0200
+@@ -73,4 +73,4 @@
+ public int Sound_PlayingMusic(){
+ 	if(Mix_PlayingMusic() == 0)_Sound_PlayingMusic = -1;
+ 	return _Sound_PlayingMusic;
+-}
+\ Kein Zeilenumbruch am Dateiende.
++}

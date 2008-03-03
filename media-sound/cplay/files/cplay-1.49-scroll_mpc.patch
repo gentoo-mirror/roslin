@@ -1,0 +1,60 @@
+--- cplay.orig	2003-12-05 09:20:56.000000000 +0100
++++ cplay	2007-09-18 12:38:26.206890682 +0200
+@@ -401,7 +401,9 @@
+ 
+     def update(self, force = 1):
+         self.bufptr = max(0, min(self.bufptr, len(self.buffer) - 1))
+-        scrptr = (self.bufptr / self.rows) * self.rows
++	scrptr = self.scrptr
++	if (self.bufptr < scrptr): scrptr = self.bufptr
++	if (self.bufptr > scrptr + self.rows - 1): scrptr = self.bufptr - self.rows + 1
+         if force or self.scrptr != scrptr:
+             self.scrptr = scrptr
+             self.move(0, 0)
+@@ -449,7 +451,8 @@
+         if app.input_mode: app.cancel_input()
+         if not self.buffer: return
+         self.update_line(refresh = 0)
+-        self.bufptr = (self.bufptr + ydiff) % len(self.buffer)
++	self.bufptr = max(0, min(self.bufptr + ydiff, len(self.buffer)-1))
++
+         self.update(force = 0)
+ 
+     def cursor_ppage(self):
+@@ -468,7 +471,7 @@
+ 
+     def cursor_home(self): self.cursor_move(-self.bufptr)
+ 
+-    def cursor_end(self): self.cursor_move(-self.bufptr - 1)
++    def cursor_end(self): self.cursor_move(len(self.buffer)-1)
+ 
+     def start_search(self, type, direction):
+         self.search_direction = direction
+@@ -1301,6 +1304,19 @@
+             self.set_position(head, head+tail, [head, tail])
+ 
+ # ------------------------------------------
++class FrameOffsetPlayerMpp(Player):
++    re_progress = re.compile(".*\s(\d+):(\d+).*decoded.*\(\s*(\d+)\.(\d+)%\)")
++
++    def parse_buf(self):
++        match = self.re_progress.search(self.buf or '')
++        self.buf = None
++        if match and not self.step:
++            m1, s1, per2, pers2 = map(string.atoi, match.groups())
++            head = (((m1*60+s1)/1000.0)*(per2*10+pers2+1))
++	    tail = (m1*60+s1)-head
++            self.set_position(head, head+tail , [head, tail])
++
++# ------------------------------------------
+ class NoOffsetPlayer(Player):
+ 
+     def parse_buf(self):
+@@ -1628,6 +1644,7 @@
+ # ------------------------------------------
+ PLAYERS = [
+     FrameOffsetPlayer("ogg123 -q -v -k %d %s", "\.ogg$"),
++    FrameOffsetPlayerMpp("mppdec --gain 3 --start %d %s /dev/dsp", "\.mp[cp+]$"),
+     FrameOffsetPlayer("splay -f -k %d %s", "(^http://|\.mp[123]$)", 38.28),
+     FrameOffsetPlayer("mpg123 -q -v -k %d %s", "(^http://|\.mp[123]$)", 38.28),
+     FrameOffsetPlayer("mpg321 -q -v -k %d %s", "(^http://|\.mp[123]$)", 38.28),

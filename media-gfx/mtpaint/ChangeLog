@@ -1,0 +1,12 @@
+# ChangeLog for media-gfx/mtpaint
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+
+*mtpaint-3.20 (31 Dec 2007)
+
+  31 Dec 2007; Piotr Szymaniak <lazy_bum@o2.pl> +mtpaint-3.20.ebuild:
+  Version bump.
+
+*mtpaint-3.11 (01 Oct 2007)
+
+  01 Oct 2007; Piotr Szymaniak <lazy_bum@o2.pl> +mtpaint-3.11.ebuild:
+  New ebuild (with some changes) thanks to Michał "mziab" Ziąbkowski.

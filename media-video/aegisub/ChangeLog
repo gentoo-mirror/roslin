@@ -1,0 +1,11 @@
+# ChangeLog for media-video/aegisub
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  14 Dec 2007; Piotr Szymaniak <lazy_bum@o2.pl> aegisub-9999.ebuild:
+  Changed ~x86 to "" KEYWORD.  
+
+*aegisub-9999 (05 Oct 2007)
+
+  05 Oct 2007; Piotr Szymaniak <lazy_bum@o2.pl> +aegisub-9999.ebuild:
+  New ebuild.

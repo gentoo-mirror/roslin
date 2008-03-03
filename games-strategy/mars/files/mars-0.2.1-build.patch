@@ -1,0 +1,17 @@
+--- SConstruct
++++ SConstruct
+@@ -44,8 +44,12 @@
+ 	env.ParseConfig('sdl-config --cflags')
+ 	env.ParseConfig('sdl-config --libs')
+ 	# add additional compiler flags
+-	if not int(env['debug']):
+-		env.Append(CXXFLAGS = ['-O2'])
++
++import os
++import SCons.Util
++if os.environ.has_key('CXX'):      env['CXX'] = os.environ['CXX']
++if os.environ.has_key('CXXFLAGS'): env['CXXFLAGS']  += SCons.Util.CLVar(os.environ['CXXFLAGS'])
++if os.environ.has_key('LDFLAGS'):  env['LINKFLAGS'] += SCons.Util.CLVar(os.environ['LDFLAGS'])
+ 
+ 
+ # generate help for options

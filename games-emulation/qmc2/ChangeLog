@@ -1,0 +1,10 @@
+# ChangeLog for games-emulation/qmc2
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+
+  24 Feb 2008; Piotr Szymaniak <lazy_bum@o2.pl> qmc2-0.1.ebuild:
+  Updated by previous author.
+
+*qmc2-0.1 (19 Feb 2008)
+
+  19 Feb 2008; Piotr Szymaniak <lazy_bum@o2.pl> +qmc2-0.1.ebuild:
+  Initial ebuild by Michał "mziab" Ziąbkowski.

@@ -1,0 +1,10 @@
+# ChangeLog for sci-libs/cgal
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+
+  29 Jan 2008; Piotr Szymaniak <lazy_bum@o2.pl> cgal-3.2.1.ebuild:
+  Fixed description.
+
+*cgal-3.2.1 (13 Jan 2008)
+
+  13 Jan 2008; Piotr Szymaniak <lazy_bum@o2.pl> +cgal-3.2.1.ebuild:
+  Initial ebuild (found somewhere).

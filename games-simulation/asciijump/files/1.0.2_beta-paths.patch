@@ -1,0 +1,36 @@
+--- /var/tmp/portage/asciijump-1.0.2_beta/work/asciijump-1.0.2beta/Makefile.in	2003-12-14 05:54:47.000000000 -0600
++++ /var/tmp/portage/asciijump-1.0.2_beta/work/asciijump-1.0.2beta/Makefile-paths	2004-06-23 17:39:55.599226016 -0500
+@@ -138,16 +138,13 @@
+ 	${INSTALL_PROGRAM} ${ac_name} ${DESTDIR}${bindir}/
+ 	${INSTALL_PROGRAM} ${as_name} ${DESTDIR}${bindir}/
+ 
+-	${INSTALL} -d $(DESTDIR)$(prefix)/share/applications
++	${INSTALL} -d ${D}usr/share/applications
+ 	${INSTALL} -m 644 asciijump.desktop \
+-		$(DESTDIR)$(prefix)/share/applications
++		${D}/usr/share/applications
+ 		
+-	${INSTALL} -d $(DESTDIR)$(prefix)/X11R6/share/pixmaps
+-	${INSTALL} -m 644 asciijump.png $(DESTDIR)$(prefix)/X11R6/share/pixmaps
++	${INSTALL} -d ${D}/usr/share/pixmaps
++	${INSTALL} -m 644 asciijump.png ${D}/usr/share/pixmaps
+ 		
+-	${INSTALL} -d $(DESTDIR)$(prefix)/share/pixmaps
+-	${INSTALL} -m 644 asciijump.png $(DESTDIR)$(prefix)/share/pixmaps
+-	
+ 	${INSTALL} -d $(DESTDIR)$/$(mandir)/man6
+ 	${INSTALL} -m 644 asciijump.6 $(DESTDIR)$/$(mandir)/man6
+ 
+@@ -161,10 +158,8 @@
+ 	rm -f ${DESTDIR}${bindir}/${ac_name}
+ 	rm -f ${DESTDIR}${bindir}/${as_name}
+ 	rm -rf ${DESTDIR}${datadir}/${name}
+-	rm -f $(DESTDIR)$(prefix)/X11R6/share/applnk/Games/Arcade/asciijump.desktop
+-	rm -f $(DESTDIR)$(prefix)/share/applnk/Games/Arcade/asciijump.desktop
+-	rm -f $(DESTDIR)$(prefix)/X11R6/share/pixmaps/asciijump.png
+-	rm -f $(DESTDIR)$(prefix)/share/pixmaps/asciijump.png
++	rm -f ${D}/usr/share/applications/asciijump.desktop
++	rm -f ${D}/usr/share/pixmaps/asciijump.png
+ 	rm -f $(DESTDIR)/$(mandir)/man6/asciijump.6
+ 
+ distdir = ${top_builddir}/${PACKAGE}-${VERSION}/${subdir}

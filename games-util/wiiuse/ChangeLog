@@ -1,0 +1,18 @@
+# ChangeLog for games-util/wiiuse
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+
+*wiiuse-0.9.ebuild (04 Nov 2007)
+
+  04 Nov 2007; Piotr Szymaniak <lazy_bum@o2.pl> +wiiuse-0.9.ebuild:
+  Version bump.
+  Removed older files.
+
+*wiiuse-0.7.ebuild (26 Oct 2007)
+
+  26 Oct 2007; Piotr Szymaniak <lazy_bum@o2.pl> +wiiuse-0.7.ebuild:
+  Version bump.
+
+*wiiuse-0.6.ebuild (18 Oct 2007)
+
+  18 Oct 2007; Piotr Szymaniak <lazy_bum@o2.pl> +wiiuse-0.6.ebuild:
+  Initial ebuild.

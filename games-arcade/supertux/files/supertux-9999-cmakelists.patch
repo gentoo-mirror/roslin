@@ -1,0 +1,11 @@
+--- CMakeLists.txt.old	2008-02-09 23:19:10.000000000 +0100
++++ CMakeLists.txt	2008-02-09 23:19:33.000000000 +0100
+@@ -337,7 +337,7 @@
+ 
+ ELSE(${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
+ 
+-  SET(INSTALL_SUBDIR_BIN "games/")
++  SET(INSTALL_SUBDIR_BIN "games/bin/")
+   SET(INSTALL_SUBDIR_SHARE "share/games/supertux2/")
+   SET(INSTALL_SUBDIR_DOC "share/doc/supertux2/")
+ 

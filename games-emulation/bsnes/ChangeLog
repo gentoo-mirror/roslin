@@ -1,0 +1,14 @@
+# ChangeLog for games-emulation/bsnes
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+
+  15 Feb 2008; Piotr Szymaniak <lazy_bum@o2.pl> +bsnes-0.028.01.ebuild:
+  Version bump by Michał "mziab" Ziąbkowski.
+
+  06 Feb 2008; Piotr Szymaniak <lazy_bum@o2.pl> bsnes-0.028.ebuild:
+  Keyworded ~ for x86 and added ~amd64.
+  Michał "mziab" Ziąbkowski added jma and zip USE flags.
+
+*bsnes-0.028 (05 Feb 2008)
+
+  05 Feb 2008; Piotr Szymaniak <lazy_bum@o2.pl> +bsnes-0.028.ebuild:
+  Initial ebuild. A little thanks goes to MichaÄšÂ "mziab" ZiĂÂbkowski.

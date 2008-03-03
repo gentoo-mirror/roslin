@@ -1,0 +1,13 @@
+# ChangeLog for games-misc/fretsonfire
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+
+*fretsonfire-1.2.512.ebuild (21 Oct 2007)
+
+  21 Oct 2007; Piotr Szymaniak <lazy_bum@o2.pl> +fretsonfire-1.2.512.ebuild,
+  -fretsonfire-1.2.451.ebuild:
+  Version bump.
+
+*fretsonfire-1.2.451.ebuild (11 Oct 2007)
+
+  11 Oct 2007; Piotr Szymaniak <lazy_bum@o2.pl> +fretsonfire-1.2.451.ebuild:
+  Version bump (ebuild from bug #143388). Thanks to Alar Kvell.

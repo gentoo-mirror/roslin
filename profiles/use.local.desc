@@ -1,0 +1,28 @@
+# Copyright 1999-2007 Gentoo Foundation.
+# Distributed under the terms of the GNU General Public License v2
+
+# This file contains descriptions of local USE flags, and the ebuilds which
+# contain them.
+
+# Keep it sorted.
+
+app-portage/portage-bashrc-ng:autopatch - Enable autopatch module.
+app-portage/portage-bashrc-ng:distclean - Enable distclean module.
+app-portage/portage-bashrc-ng:localepurge - Enable localepurge module.
+app-portage/portage-bashrc-ng:oldtmpfs - Enable use of tmpfs (old module) in RAM to compile.
+app-portage/portage-bashrc-ng:resumemerge - Enable resumemerge module.
+app-portage/portage-bashrc-ng:tmpfs - Enable use of tmpfs in RAM to compile.
+games-action/bombattack:editor - Enable compilation of map editor
+games-action/teewars:dedicated - Install only server.
+games-action/teewars:racemod - Adds maps from racemod.
+games-action/teewars:server - Install client and server.
+games-action/teewars-jeppomaps:racemod - Adds maps from racemod.
+games-emulation/sdlmame:wolfmame - Adds WolfMAME patches
+games-fps/quake1-data:vispatch - Adds patches for transparent water
+games-fps/quake1-soa:vispatch - Adds patches for transparent water
+games-fps/quake1-zerstorer:vispatch - Adds patches for transparent water
+games-puzzle/reaction:single - Turns on computer player for singleplayer fun
+games-simulation/secondlife:elfio - Adds support for ELFIO
+games-simulation/secondlife:fmod - Adds support for fmod
+media-video/aegisub:asa - Adds support for asa cross-platform SSA/ASS subtitles rendering library
+media-video/aegisub:libass - Adds support for libass SSA/ASS subtitles rendering portable library

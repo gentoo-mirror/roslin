@@ -1,0 +1,9 @@
+# ChangeLog for games-arcade/peng2illa-bin
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/peng2illa-bin/ChangeLog,v 1.1 2005/12/27 12:20:05 egore Exp $
+
+*peng2illa-bin-2.5
+
+  27 Dec 2005; Christoph Brill <egore911@egore911.de> +peng2illa-bin-2.5.ebuild:
+  Initial import. Ebuild submitted by me.
+  

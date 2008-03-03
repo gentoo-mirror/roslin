@@ -1,0 +1,80 @@
+--- Makefile	2006-07-02 11:58:33.000000000 +0200
++++ Makefile.new	2007-09-30 22:39:05.221153944 +0200
+@@ -32,11 +32,11 @@
+ 
+ 
+ # Location in which to install files.
+-INSTALL_PREFIX=/usr/local/games
++INSTALL_PREFIX=/usr/games
+ 
+ # Define C compiler and options to use.
+ CC=gcc
+-CFLAGS=-Wall -O2 -pipe -Xlinker --strip-all #-DDEBUG -g
++CFLAGS_BY_DEFAULT=-Xlinker -L/usr/X11R6/lib -lX11 -lXtst
+ 
+ # Get the version number to be added into the executable.
+ VERSION_STAMP := "\"$(shell cat VERSION)\""
+@@ -45,10 +45,6 @@
+ SDL_CFLAGS := $(shell sdl-config --cflags)
+ SDL_LDFLAGS := $(shell sdl-config --libs)
+ 
+-# Get compiler options for SDL for MS Windows (note hard-coded path).
+-SDLWIN_CFLAGS := $(shell /usr/local/microsoft/bin/sdl-config --cflags)
+-SDLWIN_LDFLAGS := $(shell /usr/local/microsoft/bin/sdl-config --libs)
+-
+ # Build the Linux executable by default.
+ default : reaction
+ 
+@@ -58,49 +54,26 @@
+ 	   font.h yacrai.h misc.h
+ 	$(CC) -o reaction main.c game.c sdl.c audio.c config.c file.c yacrai.c \
+ 		$(CFLAGS) \
++		${CFLAGS_BY_DEFAULT} \
+ 		$(SDL_CFLAGS) \
+ 		$(SDL_LDFLAGS) \
+ 		-DYACRAI YACRAI/libyacrai.so -Xlinker -rpath=YACRAI \
+ 		-DLINUX -DVERSION_STAMP=$(VERSION_STAMP) $(REACTION_DEFINES)
+ 
+-# MS Windows game executable (with computer player).
+-reaction.exe : main.c game.c sdl.c audio.c config.c file.c yacrai.c \
+-	       YACRAI/yacrai.dll main.h game.h sdl.h audio.h config.h file.h \
+-	       font.h yacrai.h misc.h
+-	$(CC) -o reaction.exe \
+-	    main.c game.c sdl.c audio.c config.c file.c yacrai.c \
+-		$(CFLAGS) \
+-		-DWINDOWS -DVERSION_STAMP=$(VERSION_STAMP) $(REACTION_DEFINES) \
+-		$(SDLWIN_CFLAGS) \
+-		$(SDLWIN_LDFLAGS) \
+-		-DYACRAI YACRAI/yacrai.dll
+-
+ # Linux computer player library (YACRAI).
+ YACRAI/libyacrai.so :
+ 	make -C YACRAI libyacrai.so
+ 
+-# MS Windows computer player library (YACRAI).
+-YACRAI/yacrai.dll :
+-	make -C YACRAI yacrai.dll
+-
+ # Linux game executable (without computer player).
+ reaction1 : main.c game.c sdl.c audio.c config.c file.c \
+ 	    main.h game.h sdl.h audio.h config.h file.h font.h misc.h
+-	$(CC) -o reaction1 main.c game.c sdl.c audio.c config.c file.c \
++	$(CC) -o reaction main.c game.c sdl.c audio.c config.c file.c \
+ 		$(CFLAGS) \
++		${CFLAGS_BY_DEFAULT} \
+ 		$(SDL_CFLAGS) \
+ 		$(SDL_LDFLAGS) \
+ 		-DLINUX -DVERSION_STAMP=$(VERSION_STAMP) $(REACTION_DEFINES)
+ 
+-# MS Windows game executable (without computer player).
+-reaction1.exe : main.c game.c sdl.c audio.c config.c file.c \
+-	    main.h game.h sdl.h audio.h config.h file.h font.h yacrai.h misc.h
+-	$(CC) -o reaction1.exe main.c game.c sdl.c audio.c config.c file.c \
+-	    $(CFLAGS) \
+-	    -DWINDOWS -DVERSION_STAMP=$(VERSION_STAMP) $(REACTION_DEFINES) \
+-	    $(SDLWIN_CFLAGS) \
+-	    $(SDLWIN_LDFLAGS)
+-
+ # Install either Linux executable and data files, etc.
+ install :
+ 	./install.sh $(INSTALL_PREFIX)/ChainReaction

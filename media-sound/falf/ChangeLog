@@ -1,0 +1,25 @@
+# ChangeLog for media-sound/falf
+# Copyright 2007-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*falf-1.1 (05 Feb 2008)
+
+  05 Feb 2008; Piotr Szymaniak <lazy_bum@o2.pl> +falf-1.1.ebuild:
+  Bump (thanks to arcon portage overlay).
+
+  01 Feb 2008; Piotr Szymaniak <lazy_bum@o2.pl> falf-9999.ebuild:
+  Keyworded "".
+
+  20 Jan 2008; Piotr Szymaniak <lazy_bum@o2.pl> falf-1.0.ebuild,
+  falf-9999.ebuild:
+  Completly new ebuilds, stolen (; from arcon overlay and updated.
+
+*falf-9999 (28 Dec 2007)
+
+  28 Dec 2007; Piotr Szymaniak <lazy_bum@o2.pl> +falf-9999.ebuild:
+  Added ebuild made by David Watzke (also sfsvn.eclass).
+
+*falf-1.0 (25 Dec 2007)
+
+  25 Dec 2007; Piotr Szymaniak <lazy_bum@o2.pl> +falf-1.0.ebuild:
+  New ebuild, made from svn ebuild by David Watzke.

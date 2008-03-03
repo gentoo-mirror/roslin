@@ -1,0 +1,7 @@
+# ChangeLog for games-fps/quetoo
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+
+*quetoo-0.6.1.ebuild (24 Oct 2007)
+
+  24 Oct 2007; Piotr Szymaniak <lazy_bum@o2.pl> +quetoo-0.6.1.ebuild:
+  New ebuild (bug #154292). Thanks to Paul Bredbury.

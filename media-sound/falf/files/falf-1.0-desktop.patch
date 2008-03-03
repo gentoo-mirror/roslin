@@ -1,0 +1,22 @@
+--- falf_mnu.desktop~   2007-06-30 15:29:47.000000000 +0200
++++ falf_mnu.desktop    2007-06-30 15:34:21.000000000 +0200
+@@ -1,7 +1,10 @@
+ [Desktop Entry]
+-Actions=AddToPlaylist
+-encoding=UTF-8
++Actions=AddToPlaylist;
++Categories=Audio;Player;
++Name=FALF Player
+ ServiceTypes=inode/directory,application/asx,audio/*
++Type=Application
++X-Encoding=UTF-8
+ 
+ [Desktop Action AddToPlaylist]
+ Exec=falf %U
+@@ -9,5 +12,5 @@
+ Name[pl]=Dodaj do playlisty FALF Player
+ Name[es]=A??adir a la lista de reproducci??n de FALF Player
+ Name[it]=Aggiungi alla playlist del Player FALF
+-Name[cs]=P?idat do seznamu skladeb FALF Player
++Name[cs]=P?idat do seznamu skladeb FALF Playeru
+ Icon=falf

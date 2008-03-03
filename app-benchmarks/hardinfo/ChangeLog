@@ -1,0 +1,17 @@
+# ChangeLog for app-benchmarks/hardinfo
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+
+  14 Dec 2007; Piotr Szymaniak <lazy_bum@o2.pl> hardinfo-9999.ebuild:
+  Changed KEYWORDS to "".
+
+*hardinfo-0.4.2.3.ebuild (22 Nov 2007)
+
+  22 Nov 2007; Piotr Szymaniak <lazy_bum@o2.pl> hardinfo-0.4.2.3.ebuild,
+  hardinfo-9999.ebuild:
+  Added libsoup dependency.
+
+*hardinfo-0.4.2.3.ebuild (21 Nov 2007)
+
+  21 Nov 2007; Piotr Szymaniak <lazy_bum@o2.pl> +hardinfo-0.4.2.3.ebuild,
+  +hardinfo-9999.ebuild:
+  Initial ebuild.

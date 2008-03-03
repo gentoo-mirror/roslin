@@ -1,0 +1,77 @@
+diff -ur sdlmame/makefile sdlmame.new/makefile
+--- sdlmame/makefile	2007-11-26 14:31:12.000000000 +0800
++++ sdlmame.new/makefile	2007-11-30 08:25:18.000000000 +0800
+@@ -59,6 +59,16 @@
+ endif
+ endif
+ 
++#-------------------------------------------------
++# directory for shared data
++#-------------------------------------------------
++ifeq ($(TARGETOS),win32)
++SHARED_PREFIX =
++USER_PREFIX =
++else
++SHARED_PREFIX = /usr/share/sdlmess/
++USER_PREFIX = $$HOME/.sdlmess/
++endif
+ 
+ 
+ #-------------------------------------------------
+@@ -327,6 +337,8 @@
+ DEFS += -DVOODOO_DRC
+ endif
+ 
++DEFS += -DSHARED_PREFIX='"${SHARED_PREFIX}"'
++DEFS += -DUSER_PREFIX='"${USER_PREFIX}"'
+ 
+ 
+ #-------------------------------------------------
+diff -ur sdlmame/src/emu/emuopts.c sdlmame.new/src/emu/emuopts.c
+--- sdlmame/src/emu/emuopts.c	2007-11-26 14:25:30.000000000 +0800
++++ sdlmame.new/src/emu/emuopts.c	2007-11-30 08:28:42.000000000 +0800
+@@ -33,30 +33,30 @@
+ 
+ 	/* seach path options */
+ 	{ NULL,                          NULL,        OPTION_HEADER,     "CORE SEARCH PATH OPTIONS" },
+-	{ "rompath;rp;biospath;bp",      "roms",      0,                 "path to ROMsets and hard disk images" },
++	{ "rompath;rp;biospath;bp",      SHARED_PREFIX "roms",      0,                 "path to ROMsets and hard disk images" },
+ #ifdef MESS
+-	{ "hashpath;hash_directory;hash","hash",      0,                 "path to hash files" },
++	{ "hashpath;hash_directory;hash",USER_PREFIX "hash",      0,                 "path to hash files" },
+ #endif /* MESS */
+-	{ "samplepath;sp",               "samples",   0,                 "path to samplesets" },
+-	{ "artpath;artwork_directory",   "artwork",   0,                 "path to artwork files" },
+-	{ "ctrlrpath;ctrlr_directory",   "ctrlr",     0,                 "path to controller definitions" },
++	{ "samplepath;sp",               SHARED_PREFIX "samples",   0,                 "path to samplesets" },
++	{ "artpath;artwork_directory",   SHARED_PREFIX "artwork",   0,                 "path to artwork files" },
++	{ "ctrlrpath;ctrlr_directory",   USER_PREFIX "ctrlr",     0,                 "path to controller definitions" },
+ 	{ "inipath",                     ".;ini",     0,                 "path to ini files" },
+ 	{ "fontpath",                    ".",         0,                 "path to font files" },
+ 
+ 	/* output directory options */
+ 	{ NULL,                          NULL,        OPTION_HEADER,     "CORE OUTPUT DIRECTORY OPTIONS" },
+-	{ "cfg_directory",               "cfg",       0,                 "directory to save configurations" },
+-	{ "nvram_directory",             "nvram",     0,                 "directory to save nvram contents" },
+-	{ "memcard_directory",           "memcard",   0,                 "directory to save memory card contents" },
+-	{ "input_directory",             "inp",       0,                 "directory to save input device logs" },
+-	{ "state_directory",             "sta",       0,                 "directory to save states" },
+-	{ "snapshot_directory",          "snap",      0,                 "directory to save screenshots" },
+-	{ "diff_directory",              "diff",      0,                 "directory to save hard drive image difference files" },
+-	{ "comment_directory",           "comments",  0,                 "directory to save debugger comments" },
++	{ "cfg_directory",               USER_PREFIX "cfg",       0,                 "directory to save configurations" },
++	{ "nvram_directory",             USER_PREFIX "nvram",     0,                 "directory to save nvram contents" },
++	{ "memcard_directory",           USER_PREFIX "memcard",   0,                 "directory to save memory card contents" },
++	{ "input_directory",             USER_PREFIX "inp",       0,                 "directory to save input device logs" },
++	{ "state_directory",             USER_PREFIX "sta",       0,                 "directory to save states" },
++	{ "snapshot_directory",          USER_PREFIX "snap",      0,                 "directory to save screenshots" },
++	{ "diff_directory",              USER_PREFIX "diff",      0,                 "directory to save hard drive image difference files" },
++	{ "comment_directory",           USER_PREFIX "comments",  0,                 "directory to save debugger comments" },
+ 
+ 	/* filename options */
+ 	{ NULL,                          NULL,        OPTION_HEADER,     "CORE FILENAME OPTIONS" },
+-	{ "cheat_file",                  "cheat.dat", 0,                 "cheat filename" },
++	{ "cheat_file",                  SHARED_PREFIX "cheat.dat", 0,                 "cheat filename" },
+ 
+ 	/* state/playback options */
+ 	{ NULL,                          NULL,        OPTION_HEADER,     "CORE STATE/PLAYBACK OPTIONS" },

@@ -1,0 +1,5 @@
+# ChangeLog for games-fps/quake1-data
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+
+  20 Sep 2007; Piotr Szymaniak <lazy_bum@o2.pl> quake1-data-2.40-r1.ebuild:
+  Added "vispatch" flag for transparent water support.

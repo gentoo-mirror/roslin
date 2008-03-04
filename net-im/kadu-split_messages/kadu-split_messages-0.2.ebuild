@@ -1,0 +1,9 @@
+SRC_URI="http://www.kadu.net/~dorr/moduly/kadu-split_messages-${PV}.tar.bz2"
+
+MOD_TYPE="ext"
+
+inherit kadu-module
+
+DESCRIPTION="Kadu module that splits long messages into shorter ones"
+HOMEPAGE="http://kadu.net"
+KEYWORDS="amd64 x86"

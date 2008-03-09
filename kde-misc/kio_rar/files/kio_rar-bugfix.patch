@@ -1,0 +1,11 @@
+--- kio_rar-0.6/src/kio_rar.cpp	2007-08-15 17:13:57.000000000 +0200
++++ kio_rar-0.6/src/kio_rar.cpp	2007-08-15 17:14:27.000000000 +0200
+@@ -313,7 +313,7 @@
+ 
+     if( m_archiveFile && url.path().startsWith( m_archiveFile->fileName() ) )
+     {
+-      fileUrl = url.path().section( m_archiveFile->fileName(), 1 );
++      fileUrl.setPath(url.path().section( m_archiveFile->fileName(), 1 ));
+       // Has it changed ?
+       if ( ::stat( QFile::encodeName( m_archiveFile->fileName() ), &statbuf ) == 0 )
+       {

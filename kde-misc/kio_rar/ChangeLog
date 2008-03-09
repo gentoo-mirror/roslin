@@ -1,0 +1,8 @@
+# ChangeLog for kde-misc/kio_rar
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  09 Mar 2008; Michał Ziąbkowski <mziab@o2.pl> +kio_rar-0.6-r1.ebuild,
+  +files/kio_rar-bugfix.patch:
+  Bumped kio_rar with added fix
+

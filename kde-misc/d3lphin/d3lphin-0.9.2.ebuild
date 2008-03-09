@@ -4,7 +4,7 @@
 inherit kde
 
 DESCRIPTION="A file manager for KDE focusing on usability."
-HOMEPAGE="http://marrat.homelinux.org/D3lphin"
+HOMEPAGE="https://marrat.homelinux.org/D3lphin"
 SRC_URI="${P}.tar.gz"
 
 KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"

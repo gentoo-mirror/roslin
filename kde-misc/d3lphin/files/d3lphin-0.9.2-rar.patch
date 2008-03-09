@@ -1,0 +1,49 @@
+diff -Nur d3lphin-0.9.2orig/src/dolphinview.cpp d3lphin-0.9.2/src/dolphinview.cpp
+--- d3lphin-0.9.2.old/src/dolphinview.cpp	2007-07-24 20:11:39.000000000 +0200
++++ d3lphin-0.9.2/src/dolphinview.cpp	2008-03-09 02:23:25.529522002 +0100
+@@ -722,6 +722,12 @@
+            url.setProtocol("tar");
+            setURL(url);
+        }
++       else if (mime->is("application/x-rar")) {
++        // allow to browse through rar files
++	KURL url = fileItem->url();
++	url.setProtocol("rar");
++	setURL(url);
++	}
+        else {
+            fileItem->run();
+        }
+diff -Nur d3lphin-0.9.2orig/src/urlnavigator.cpp d3lphin-0.9.2/src/urlnavigator.cpp
+--- d3lphin-0.9.2.old/src/urlnavigator.cpp	2007-07-24 20:00:42.000000000 +0200
++++ d3lphin-0.9.2/src/urlnavigator.cpp	2008-03-09 02:25:17.717521943 +0100
+@@ -140,6 +140,29 @@
+            urlStr = url.path();
+        }
+     }
++    else if (url.protocol() == "rar") {
++       bool stillInside = false;
++       if (KMimeType::findByPath(url.url(-1))
++           ->is("application/x-rar")) {
++           stillInside = true;
++       }
++       else {
++           KURL url1 = url.upURL();
++           while (url1 != url1.upURL()) {
++               if (KMimeType::findByPath(url1.url(-1))
++                   ->is("application/x-rar")) {
++                   stillInside = true;
++                   break;
++               }
++               url1 = url1.upURL();
++           }
++       }
++       if (!stillInside)
++       {
++           // Drop the rar:/ protocol since we are not in the rar anymore
++           urlStr = url.path();
++       }
++    }
+     else if (url.protocol() == "tar")
+     {
+        bool stillInside = false;

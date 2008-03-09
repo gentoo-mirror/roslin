@@ -1,0 +1,8 @@
+# ChangeLog for kde-misc/d3lphin
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  09 Mar 2008; Michał Ziąbkowski <mziab@o2.pl> ChangeLog:
+  An ebuild for the newest d3lphin, plus a few patches, including kio_rar and
+  kio_p7zip support by your truly
+

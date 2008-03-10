@@ -2,6 +2,10 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  10 Mar 2008; Piotr Szymaniak <lazy_bum@o2.pl> -quake1-quoth-1.ebuild,
+  +quake1-quoth-2.ebuild:
+  Small fixes and name change (this looks more like "part 2")
+
   10 Mar 2008; Piotr Szymaniak <lazy_bum@o2.pl> ChangeLog:
   Updated for Quoth part 2 support
 

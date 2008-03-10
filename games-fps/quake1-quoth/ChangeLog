@@ -1,0 +1,7 @@
+# ChangeLog for games-fps/quake1-quoth
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  10 Mar 2008; Piotr Szymaniak <lazy_bum@o2.pl> ChangeLog:
+  Updated for Quoth part 2 support
+

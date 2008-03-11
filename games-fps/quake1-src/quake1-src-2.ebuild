@@ -15,6 +15,5 @@ MOD_RDEPEND="games-fps/quake1-quoth"
 inherit eutils games games-mod
 
 DESCRIPTION="Slime Refinery Complex for Quoth"
-HOMEPAGE="http://www.celephais.net/board/view_thread.php?id=60083"
-SRC_URI="http://lambert.jeanphilippe.free.fr/DownLoad/src.zip"
-
+HOMEPAGE="http://www.celephais.net/board/view_thread.php?id=60175"
+SRC_URI="http://lambert.jeanphilippe.free.fr/DownLoad/src2.zip"

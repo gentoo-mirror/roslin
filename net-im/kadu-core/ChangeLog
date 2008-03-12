@@ -2,6 +2,11 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  12 Mar 2008; Michał Ziąbkowski <mziab@o2.pl> kadu-core-0.6.0-r1.ebuild:
+  Actually, I think it's better to bump libgadu and use it. Uncommented some
+  code. Added a blocker for <net-libs/libgadu-1.8.0. Masked the new ebuild
+  just in case.
+
   12 Mar 2008; Michał Ziąbkowski <mziab@o2.pl> +kadu-core-0.6.0-r1.ebuild:
   Add blocker for libgadu due to some file collisions
 

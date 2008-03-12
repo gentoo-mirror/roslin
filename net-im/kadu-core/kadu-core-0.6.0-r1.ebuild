@@ -5,14 +5,14 @@ inherit eutils flag-o-matic kadu
 
 DESCRIPTION="Core of Kadu IM"
 HOMEPAGE="http://kadu.net"
-KEYWORDS="amd64 x86"
+KEYWORDS=""
 
 LICENSE="GPL-2"
 
 IUSE="debug"
 
 DEPEND="=x11-libs/qt-3*
-	!net-libs/libgadu"
+	!<net-libs/libgadu-1.8.0"
 
 SRC_URI="http://www.kadu.net/download/stable/kadu-${K_PV}.tar.bz2"
 
@@ -92,13 +92,13 @@ src_compile()
 	local myconf
 	myconf="${myconf} --disable-autodownload --enable-dist-info=Gentoo"
 	
-#	if has_version '>=net-libs/libgadu-1.7.0'
-#	then
-#	    myconf="${myconf} --with-existing-libgadu"
-#
-#	    ewarn "Kadu will be linked against existing libgadu - dcc features may work improperly"
-#	    ewarn "If you have problems, unmerge libgadu and reemerge kadu then"
-#	fi
+	if has_version '>=net-libs/libgadu-1.8.0'
+	then
+	    myconf="${myconf} --with-existing-libgadu"
+
+	    ewarn "Kadu will be linked against existing libgadu - dcc features may work improperly"
+	    ewarn "If you have problems, unmerge libgadu and reemerge kadu then"
+	fi
 
 	# Compile package
 	econf \

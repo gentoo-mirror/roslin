@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libgadu
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 
+  12 Mar 2008; Michał Ziąbkowski <mziab@o2.pl> +libgadu-1.8.0.ebuild:
+  Added newest stable version. It's supposed to have some security holes fixed
+  and Kadu 0.6.0 relies on it.
+
   20 Feb 2008; Piotr Szymaniak <lazy_bum@o2.pl> libgadu-9999.ebuild:
   CVS -> SVN.
 

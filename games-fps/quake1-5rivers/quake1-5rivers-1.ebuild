@@ -13,6 +13,7 @@ DESCRIPTION="Mini campaign in DOOM 3 hell-style with three small to medium
 sized, dark and scrary maps"
 HOMEPAGE="http://lambert.jeanphilippe.free.fr/"
 SRC_URI="${SRC_ADDICT}/${MOD_DIR}.zip"
+MOD_RDEPEND="games-fps/quake1-quoth"
 
 dir=${GAMES_DATADIR}/quake1
 

@@ -3,6 +3,9 @@
 # $Header: $
 
   13 Mar 2008; Piotr Szymaniak <lazy_bum@o2.pl> quake1-5rivers-1.ebuild:
+  Added Quoth depend.
+
+  13 Mar 2008; Piotr Szymaniak <lazy_bum@o2.pl> quake1-5rivers-1.ebuild:
   Fixed installation, rekeyworded.
 
   12 Mar 2008; Piotr Szymaniak <lazy_bum@o2.pl> +quake1-5rivers-1.ebuild:

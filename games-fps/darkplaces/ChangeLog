@@ -1,0 +1,8 @@
+# ChangeLog for games-fps/darkplaces
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  13 Mar 2008; Piotr Szymaniak <lazy_bum@o2.pl> -darkplaces-20070412.ebuild,
+  +darkplaces-20070927.ebuild:
+  Version bump, thanks to Paul Bredbury (bug #140074)
+

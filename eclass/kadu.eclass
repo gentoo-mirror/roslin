@@ -70,6 +70,7 @@ kadu_install_fix_perms()
 kadu_install_fix_dir_struct()
 {
 	# Fix directory structure
+	local IFS=$'\n'
 	BROKEN_DIRS="`find -type d | grep " "`"
 
 	if [ "${BROKEN_DIRS}" ]

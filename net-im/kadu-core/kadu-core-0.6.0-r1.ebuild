@@ -5,7 +5,7 @@ inherit eutils flag-o-matic kadu
 
 DESCRIPTION="Core of Kadu IM"
 HOMEPAGE="http://kadu.net"
-KEYWORDS=""
+KEYWORDS="amd64 x86"
 
 LICENSE="GPL-2"
 

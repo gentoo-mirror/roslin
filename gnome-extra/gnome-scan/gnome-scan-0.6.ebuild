@@ -12,10 +12,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="debug doc"
 
-# Is scrollkeeper really needed?
 RDEPEND=">=x11-libs/gtk+-2.12
 	media-gfx/sane-backends
-	>=app-text/scrollkeeper-0.3.14
 	>=media-libs/gegl-0.0.16
 	>=media-gfx/gimp-2.3
 	>=gnome-base/libglade-2.6"

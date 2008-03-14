@@ -8,7 +8,7 @@ ESVN_REPO_URI="https://spaceboyz.net/svn/aegisub/trunk"
 ESVN_PROJECT="aegisub"
 
 DESCRIPTION="A WxWidgets subtitle editing tool for ass"
-HOMEPAGE="http://aegisub.cellosoft.com/"
+HOMEPAGE="http://malakith.net/aegiwiki/Main_Page"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS=""

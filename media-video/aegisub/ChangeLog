@@ -2,6 +2,9 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  14 Mar 2008; Michał Ziąbkowski <mziab@o2.pl> aegisub-9999.ebuild:
+  Updated homepage url
+
   14 Dec 2007; Piotr Szymaniak <lazy_bum@o2.pl> aegisub-9999.ebuild:
   Changed ~x86 to "" KEYWORD.  
 

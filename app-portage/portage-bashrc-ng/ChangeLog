@@ -1,0 +1,9 @@
+# ChangeLog for app-portage/portage-bashrc-ng
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  14 Mar 2008; Michał Ziąbkowski <mziab@o2.pl>
+  +portage-bashrc-ng-0.14.1-r1.ebuild:
+  Another variable collision fixed. This time it's CONFFILE, which was used by
+  app-office/openoffice
+

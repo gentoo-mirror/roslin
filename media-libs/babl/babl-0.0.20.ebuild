@@ -8,7 +8,7 @@ SRC_URI="ftp://ftp.gtk.org/pub/${PN}/0.0/${P}.tar.bz2"
 
 LICENSE="|| ( GPL-3 LGPL-3 )"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE="inkscape w3m"
 
 RDEPEND=""

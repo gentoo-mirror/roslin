@@ -28,6 +28,7 @@ src_unpack() {
 	cd ${S}
 
 	epatch ${FILESDIR}/${PN}-makefile.patch
+	epatch ${FILESDIR}/${PN}-nodebug.patch
 	chmod +x configure
 	
 	use amd64 && epatch ${PN}-${VER}_amd64.patch

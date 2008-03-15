@@ -29,14 +29,14 @@ src_unpack() {
 
 	epatch ${FILESDIR}/${PN}-makefile.patch
 	epatch ${FILESDIR}/${PN}-nodebug.patch
-	chmod +x configure
+	#chmod +x configure
 	
 	use amd64 && epatch ${PN}-${VER}_amd64.patch
 }
 
 src_compile() {
 	# configure script is buggy, so we can't use econf
-	./configure || die
+	#./configure || die
 	eqmake3 || die
 	emake || die
 }

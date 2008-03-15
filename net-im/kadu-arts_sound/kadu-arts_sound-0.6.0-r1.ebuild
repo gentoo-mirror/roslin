@@ -4,7 +4,7 @@ MOD_DEPEND="kde-base/arts >=net-im/kadu-sound-${MIN_REQ}"
 MOD_CXXFLAGS="`artsc-config --cflags`"
 MOD_LDFLAGS="`artsc-config --libs`"
 
-inherit kadu-module
+inherit kadu-module kadu-module-func
 
 SRC_URI="http://www.kadu.net/download/stable/kadu-${K_PV}.tar.bz2"
 DESCRIPTION="Kadu module that play sounds using ARTS"

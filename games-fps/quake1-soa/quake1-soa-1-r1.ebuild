@@ -12,7 +12,10 @@ DESCRIPTION="Scourge of Armagon mission pack"
 HOMEPAGE="http://www.idsoftware.com/games/quake/quake-mp1/"
 
 IUSE="vispatch"
-SRC_URI="vispatch? ( ftp://ftp.lublin.pl/vol/8/planetquake/qng/hipnotic.zip )"
+SRC_URI="vispatch? (
+		ftp://ftp.lublin.pl/vol/8/planetquake/qng/hipnotic.zip
+		http://shub-hub.com/idgames2/planetquake/qng/hipnotic.zip
+	)"
 
 DEPEND="vispatch? (
 		games-util/vispatch

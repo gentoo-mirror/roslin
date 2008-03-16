@@ -10,7 +10,14 @@ inherit eutils games games-mod
 
 DESCRIPTION="Dissolution of Eternity mission pack for Quake 1"
 HOMEPAGE="http://www.idsoftware.com/games/quake/quake-mp2/"
-SRC_URI=""
+SRC_URI="vispatch? ( http://mlodyinteligent.pl/~lazy_bum/quake-vis/rogue.zip )"
+
+IUSE="vispatch"
+
+DEPEND="vispatch? (
+		games-util/vispatch
+		app-arch/zip
+	)"
 
 pkg_setup() {
 	games_pkg_setup
@@ -18,12 +25,24 @@ pkg_setup() {
 	cdrom_get_cds Eternity/ROGUE/PAK0.PAK:rogue/pak0.pak
 }
 
-src_unpack() { :; }
+src_unpack() {
+	if use vispatch; then
+		unpack "${A}"
+		mkdir rogue
+		cp "${CDROM_ROOT}/${CDROM_MATCH}" rogue/pak0.pak
+		vispatch -dir ${S}/rogue -data ${S}/rogue.vis || die "vispatch failed"
+	fi
+}
 
 src_install() {
 	insinto "${dir}"/rogue
-	newins "${CDROM_ROOT}/${CDROM_MATCH}" pak0.pak \
-		|| die "newins ${CDROM_MATCH} failed"
+	if use vispatch; then
+		newins "${S}"/rogue/pak0.pak pak0.pak \
+			|| die "newins ${S}/rogue/pak0.pak failed"
+	else
+		newins "${CDROM_ROOT}/${CDROM_MATCH}" pak0.pak \
+			|| die "newins ${CDROM_MATCH} failed"
+	fi
 
 	# CDROM_SET starts at 0
 	if [[ "${CDROM_SET}" = "0" ]] ; then
@@ -31,12 +50,6 @@ src_install() {
 	else
 		dodoc "${CDROM_ROOT}"/*.txt
 	fi
-
-#	if use X ; then
-#		# Wrapper for darkplaces engine
-#		games_make_wrapper darkplaces-doe "darkplaces -rogue"
-#		make_desktop_entry darkplaces-doe "Dark Places (Dissolution of Eternity)" darkplaces.png
-#	fi
 
 	games-mod_src_install_tidy
 

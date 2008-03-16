@@ -11,7 +11,7 @@ SRC_URI="http://${PN}.g0dsoft.com/download/${MY_PN}${PV}.tar.gz"
 
 LICENSE="blob"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS=""
 
 S=${WORKDIR}/${MY_PN}${PV}
 

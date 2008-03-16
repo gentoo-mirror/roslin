@@ -1,6 +1,9 @@
 # ChangeLog for games-sports/tileracer
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 
+  16 Mar 2008; Piotr Szymaniak <lazy_bum@o2.pl> tileracer-0.65.ebuild:
+  Keyworded "", it won't work anyway.
+
 *tileracer-0.65 (10 Dec 2007)
 
   10 Dec 2007; Piotr Szymaniak <lazy_bum@o2.pl> +tileracer-0.65.ebuild,

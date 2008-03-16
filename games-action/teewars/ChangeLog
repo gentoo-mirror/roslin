@@ -1,6 +1,10 @@
 # ChangeLog for games-action/teewars
 # Copyright 2008-2008 Gentoo Foundation; Distributed under the GPL v2
 
+  16 Mar 2008; Piotr Szymaniak <lazy_bum@o2.pl> teewars-9999.ebuild,
+  -files/teewars-different-svn-config-dir-and-cleanup.patch:
+  Removed patch.
+
   10 Feb 2008; Piotr Szymaniak <lazy_bum@o2.pl> teewars-9999.ebuild,
   -files/teewars-different-version.patch:
   Removed, fixed in source.

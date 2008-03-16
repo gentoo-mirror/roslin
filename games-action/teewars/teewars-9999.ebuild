@@ -62,7 +62,7 @@ src_unpack() {
 
 	cd "${S}/${PN}"
 
-	epatch ${FILESDIR}/${PN}-different-svn-config-dir-and-cleanup.patch
+#	epatch ${FILESDIR}/${PN}-different-svn-config-dir-and-cleanup.patch
 
 	sed -i \
 		-e "s:data/:${dir}/data/:g" \

@@ -7,7 +7,9 @@ inherit eutils games
 DESCRIPTION="iD Software's Quake 1 ... the data files"
 HOMEPAGE="http://www.idsoftware.com/games/quake/quake/"
 SRC_URI="mirror://idsoftware/quake/quake106.zip
-	vispatch? ( http://tenebrae.sourceforge.net/downloads/id1vis.zip )"
+	vispatch? (
+		http://shub-hub.com/idgames2/planetquake/qng/id1.zip
+	)"
 
 LICENSE="as-is"
 SLOT="0"

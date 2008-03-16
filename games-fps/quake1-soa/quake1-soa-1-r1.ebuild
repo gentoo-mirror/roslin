@@ -12,15 +12,12 @@ DESCRIPTION="Scourge of Armagon mission pack"
 HOMEPAGE="http://www.idsoftware.com/games/quake/quake-mp1/"
 
 IUSE="vispatch"
-
-SRC_URI="vispatch? ( hipnotic.zip )"
-
-RESTRICT="fetch"
+SRC_URI="vispatch? ( ftp://ftp.lublin.pl/vol/8/planetquake/qng/hipnotic.zip )"
 
 DEPEND="vispatch? (
 		games-util/vispatch
 		app-arch/zip
-		)"
+	)"
 
 # See manual.txt for license
 
@@ -28,17 +25,6 @@ pkg_setup() {
 	games_pkg_setup
 
 	cdrom_get_cds Armagon/HIPNOTIC/PAK0.PAK:hipnotic/pak0.pak
-}
-
-pkg_nofetch() {
-	# Don't know if this is correct, but it works.
-	use vispatch
-		einfo "Download hipnotic.zip manually from 3D Downloads website at"
-		einfo "http://www.3ddownloads.com/telefragged/inside3d/qip/"
-		einfo "Choose watervis/patches/hipnotic.zip"
-		einfo ""
-		einfo "Then place the file into ${DISTDIR}"
-		einfo "and restart the emerge."
 }
 
 src_unpack() {

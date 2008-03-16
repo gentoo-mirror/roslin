@@ -1,5 +1,8 @@
 # ChangeLog for games-fps/quake1-soa
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 
+  16 Mar 2008; Piotr Szymaniak <lazy_bum@o2.pl> quake1-soa-1-r1.ebuild:
+  Removed "fetch" restriction for vispatch.
+
   22 Sep 2007; Piotr Szymaniak <lazy_bum@o2.pl> quake1-soa-1-r1.ebuild:
   Added "vispatch" flag for transparent water support.

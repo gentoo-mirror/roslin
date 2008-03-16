@@ -7,14 +7,12 @@ inherit eutils games
 DESCRIPTION="iD Software's Quake 1 ... the data files"
 HOMEPAGE="http://www.idsoftware.com/games/quake/quake/"
 SRC_URI="mirror://idsoftware/quake/quake106.zip
-	vispatch? ( id1.zip )"
+	vispatch? ( http://tenebrae.sourceforge.net/downloads/id1vis.zip )"
 
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE="vispatch"
-
-RESTRICT="fetch"
 
 DEPEND="app-arch/lha
 	vispatch? ( 
@@ -33,16 +31,6 @@ pkg_setup() {
 		eerror "The symlink for the demo data conflicts with the cdinstall data"
 		die "Unmerge games-fps/quake1-demodata to remove the conflict"
 	fi
-}
-
-pkg_nofetch() {
-	# Don't know if this is correct, but it works.
-	use vispatch
-		einfo "Download id1.zip manually from 3D Downloads website at"
-		einfo "http://www.3ddownloads.com/telefragged/inside3d/qip/"
-		einfo "Choose watervis/patches/id1.zip"
-		einfo ""
-		einfo "Then place the file into ${DISTDIR} and restart the emerge."
 }
 
 src_unpack() {

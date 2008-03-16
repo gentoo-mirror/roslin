@@ -2,6 +2,9 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 
   16 Mar 2008; Piotr Szymaniak <lazy_bum@o2.pl> quake1-data-2.40-r1.ebuild:
+  Removed "fetch" restriction
+
+  16 Mar 2008; Piotr Szymaniak <lazy_bum@o2.pl> quake1-data-2.40-r1.ebuild:
   Updated the ebuild with Paul Bredbury fixes, bug #166704
 
   20 Sep 2007; Piotr Szymaniak <lazy_bum@o2.pl> quake1-data-2.40-r1.ebuild:

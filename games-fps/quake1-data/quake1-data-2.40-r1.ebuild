@@ -6,15 +6,13 @@ inherit eutils games
 
 DESCRIPTION="iD Software's Quake 1 ... the data files"
 HOMEPAGE="http://www.idsoftware.com/games/quake/quake/"
-
-IUSE="vispatch"
-
 SRC_URI="mirror://idsoftware/quake/quake106.zip
 	vispatch? ( id1.zip )"
 
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="amd64 ppc x86"
+IUSE="vispatch"
 
 RESTRICT="fetch"
 
@@ -53,16 +51,22 @@ src_unpack() {
 
 	if [[ "${CDROM_SET}" == "1" ]] ; then
 		cat "${CDROM_ROOT}"/q101_int.{1,2} > q101_int.x || die "cat"
-		lha xf q101_int.x || die "lha q101_int.x"
+		lha xfq q101_int.x || die "lha q101_int.x"
 	elif [[ "${CDROM_SET}" == "3" ]] ; then
 		cp "${CDROM_ROOT}"/resource.1 resource.x || die "cp"
-		lha xf resource.x || die "lha resource.x"
+		lha xfq resource.x || die "lha resource.x"
 	fi
 
 	# Prepare pak0 from the demo data, to ensure it is version 1.06
 	# rather than 1.01.
 	# http://linux.omnipotent.net/article.php?article_id=11287
 	unpack ${A}
+	# Need to rename, otherwise lha moans:
+	# "LHa: Error: Checksum error (LHarc file?)"
+	mv -f resource.{1,x} || die
+	# "lha xqf resource.x" gives error:  "lha: invalid option -- q"
+	# Creates id1/pak0.pak
+	lha xfq resource.x || die "lha demo resource.x"
 
 	if use vispatch; then
 		mv ID1.VIS id1.vis

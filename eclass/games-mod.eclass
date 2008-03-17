@@ -119,7 +119,7 @@ case "${GAME}" in
 			if [[ "${MOD_USES_TYRQUAKE}" = "y" ]] ; then
 				[[ "${GAME_EXE}" = "" ]] && GAME_EXE="tyr-glquake"
 				IUSE="${IUSE} tyrquake"
-				RDEPEND="${RDEPEND} tyrquake? ( || ( games-fps/tyrquake )"
+				RDEPEND="${RDEPEND} tyrquake? ( games-fps/tyrquake )"
 			fi
 		fi
 		# Ensure that GAME_EXE is set

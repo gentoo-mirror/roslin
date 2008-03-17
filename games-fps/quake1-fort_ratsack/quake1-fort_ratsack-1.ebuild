@@ -16,6 +16,6 @@ MOD_RDEPEND="games-fps/quake1-quoth"
 inherit eutils games games-mod
 
 DESCRIPTION="Attack On Fort Ratsack! - part of dead Base Pack for Quoth"
-HOMEPAGE="http://www.celephais.net/board/view_thread.php?id=60175"
+HOMEPAGE="http://www.celephais.net/board/view_thread.php?id=60179"
 SRC_URI="http://biff.leveldesign.org/maps/q1/sp/${MOD_MAP}.zip
 	${SRC_ADDICT}/${MOD_MAP}.zip"

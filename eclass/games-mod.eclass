@@ -120,7 +120,6 @@ case "${GAME}" in
 				IUSE="${IUSE} tyrquake"
 				RDEPEND="${RDEPEND} tyrquake? ( games-fps/tyrquake )"
 			fi
-
 		fi
 		# Ensure that GAME_EXE is set
 		[[ "${GAME_EXE}" = "" ]] && GAME_EXE="darkplaces"

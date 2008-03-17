@@ -12,7 +12,7 @@ EGIT_REPO_URI="git://disenchant.net/${PN}"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~x86"
 IUSE="cdinstall debug dedicated opengl X"
 
 S=${WORKDIR}/engine

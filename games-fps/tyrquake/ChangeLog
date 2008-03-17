@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/tyrquake
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 
+  17 Mar 2008; Piotr Szymaniak <lazy_bum@o2.pl> tyrquake-0.58.ebuild,
+  tyrquake-9999.ebuild:
+  Rekeyworded. Dont know why, but 0.58 failed to work on my box.
+
   14 Dec 2007; Piotr Szymaniak <lazy_bum@o2.pl> tyrquake-9999.ebuild:
   Changed KEYWORDS to "".
 

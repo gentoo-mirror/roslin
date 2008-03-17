@@ -10,7 +10,7 @@ SRC_URI="http://disenchant.net/files/engine/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS=""
 IUSE="cdinstall debug dedicated opengl X"
 
 S=${WORKDIR}/${P}

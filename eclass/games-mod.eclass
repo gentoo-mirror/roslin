@@ -35,11 +35,12 @@ GAME=${PN%%-*}
 [[ "${GAME}" = "zdoom" ]] && GAME="doom"
 [[ "${GAME}" = "vavoom" ]] && GAME="doom"
 [[ "${GAME}" = "darkplaces" ]] && GAME="quake1"
+[[ "${GAME}" = "ezquake" ]] && GAME="quake1"
+[[ "${GAME}" = "fuhquake" ]] && GAME="quake1"
 [[ "${GAME}" = "joequake" ]] && GAME="quake1"
 [[ "${GAME}" = "qrack" ]] && GAME="quake1"
 [[ "${GAME}" = "tenebrae" ]] && GAME="quake1"
-[[ "${GAME}" = "fuhquake" ]] && GAME="quake1"
-[[ "${GAME}" = "ezquake" ]] && GAME="quake1"
+[[ "${GAME}" = "tyrquake" ]] && GAME="quake1"
 [[ "${GAME}" = "kmquake2" ]] && GAME="quake2"
 [[ "${GAME}" = "qudos" ]] && GAME="quake2"
 
@@ -114,6 +115,12 @@ case "${GAME}" in
 				IUSE="${IUSE} fuhquake"
 				RDEPEND="${RDEPEND} fuhquake? ( || ( games-fps/fuhquake games-fps/fuhquake-bin )"
 			fi
+			if [[ "${MOD_USES_TYRQUAKE}" = "y" ]] ; then
+				[[ "${GAME_EXE}" = "" ]] && GAME_EXE="tyr-glquake"
+				IUSE="${IUSE} tyrquake"
+				RDEPEND="${RDEPEND} tyrquake? ( games-fps/tyrquake )"
+			fi
+
 		fi
 		# Ensure that GAME_EXE is set
 		[[ "${GAME_EXE}" = "" ]] && GAME_EXE="darkplaces"
@@ -426,6 +433,8 @@ games-mod_src_install_wrapper() {
 								game_title="ezQuake" ;;
 							fuhquake)
 								game_title="FuhQuake" ;;
+							tyrquake)
+								game_title="TyrQuake" ;;
 							kmquake2)
 								game_title="KM Quake 2" ;;
 							qudos)

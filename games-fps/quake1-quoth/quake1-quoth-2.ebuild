@@ -7,6 +7,8 @@ MOD_TITLE="Quoth"
 # The "hipnotic" expansion pack does *not* need to be installed.
 MOD_MAP="start"
 
+MOD_USES_TYRQUAKE=y
+
 inherit games games-mod
 
 SRC_KELL="http://kell.leveldesign.org/${MOD_DIR}"

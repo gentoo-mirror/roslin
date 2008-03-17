@@ -8,8 +8,6 @@ MOD_USES_JOEQUAKE=y
 MOD_DIR="fort_ratsack"
 MOD_MAP="base_debris"
 
-MOD_CMDLINE_END="-game quoth +map ${MOD_MAP}"
-
 MOD_TITLE="Attack On Fort Ratsack"
 MOD_RDEPEND="games-fps/quake1-quoth"
 

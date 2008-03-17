@@ -4,6 +4,7 @@
 
   17 Mar 2008; Piotr Szymaniak <lazy_bum@o2.pl> quake1-quoth-2.ebuild:
   Fixed the ebuild to download FULL Quoth2, doh.
+  Added experimental "tyrquake" support.
 
   10 Mar 2008; Piotr Szymaniak <lazy_bum@o2.pl> -quake1-quoth-1.ebuild,
   +quake1-quoth-2.ebuild:

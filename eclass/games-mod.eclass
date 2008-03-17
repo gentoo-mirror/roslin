@@ -35,14 +35,15 @@ GAME=${PN%%-*}
 [[ "${GAME}" = "zdoom" ]] && GAME="doom"
 [[ "${GAME}" = "vavoom" ]] && GAME="doom"
 [[ "${GAME}" = "darkplaces" ]] && GAME="quake1"
-[[ "${GAME}" = "ezquake" ]] && GAME="quake1"
-[[ "${GAME}" = "fuhquake" ]] && GAME="quake1"
 [[ "${GAME}" = "joequake" ]] && GAME="quake1"
 [[ "${GAME}" = "qrack" ]] && GAME="quake1"
 [[ "${GAME}" = "tenebrae" ]] && GAME="quake1"
+[[ "${GAME}" = "fuhquake" ]] && GAME="quake1"
+[[ "${GAME}" = "ezquake" ]] && GAME="quake1"
 [[ "${GAME}" = "tyrquake" ]] && GAME="quake1"
 [[ "${GAME}" = "kmquake2" ]] && GAME="quake2"
 [[ "${GAME}" = "qudos" ]] && GAME="quake2"
+#[[ "${GAME}" = "quetoo" ]] && GAME="quake2"
 
 GAME_EXE=${GAME}
 MOD_CMDLINE_DIR_SELECT="+set fs_game "
@@ -118,7 +119,7 @@ case "${GAME}" in
 			if [[ "${MOD_USES_TYRQUAKE}" = "y" ]] ; then
 				[[ "${GAME_EXE}" = "" ]] && GAME_EXE="tyr-glquake"
 				IUSE="${IUSE} tyrquake"
-				RDEPEND="${RDEPEND} tyrquake? ( games-fps/tyrquake )"
+				RDEPEND="${RDEPEND} tyrquake? ( || ( games-fps/tyrquake )"
 			fi
 		fi
 		# Ensure that GAME_EXE is set
@@ -368,7 +369,7 @@ games-mod_src_install_wrapper() {
 
 	local engine game_exe mod_cmdline mod_cmdline_wrapper mod_title mod_desktop_title game_title
 	for engine in doomsday zdoom darkplaces joequake qrack tenebrae \
-		ezquake fuhquake kmquake2 qudos quake3 quake3-bin X ; do
+		ezquake fuhquake tyrquake kmquake2 qudos quake3 quake3-bin X ; do
 		if has ${engine} ${IUSE} && use ${engine} ; then
 			if [[ "${MOD_CREATE_CMDLINE}" != "n" ]] ; then
 				# The setting of game_exe may be more complex in future

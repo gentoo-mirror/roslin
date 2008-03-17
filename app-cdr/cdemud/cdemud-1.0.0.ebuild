@@ -5,7 +5,7 @@
 inherit eutils
 
 DESCRIPTION="daemon of the cdemu cd image mounting suite"
-HOMEPAGE="http://www.cdemu.org"
+HOMEPAGE="http://cdemu.org"
 SRC_URI="mirror://sourceforge/cdemu/cdemu-daemon-${PV}.tar.bz2"
 
 LICENSE="GLP-2"

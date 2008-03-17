@@ -1,0 +1,7 @@
+# ChangeLog for app-cdr/cdemud
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  17 Mar 2008; Piotr Szymaniak <lazy_bum@o2.pl> cdemud-1.0.0.ebuild:
+  Fixed HOMEPAGE.
+

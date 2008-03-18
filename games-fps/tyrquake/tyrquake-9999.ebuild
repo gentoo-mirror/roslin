@@ -69,6 +69,10 @@ src_compile() {
 
 src_install() {
 	dogamesbin tyr-* || die "dogamesbin failed"
+	
+	if use opengl; then
+		games_make_wrapper ${PN} ./tyr-glquake "${GAMES_BINDIR}"
+	fi
 
 	dodoc readme.txt
 

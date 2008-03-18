@@ -2,6 +2,12 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
+# Original Author: Paul Bredbury <brebs@sent.com>
+# Purpose: Simplify random fps games mod installation
+# 
+# Added by Piotr Szymaniak <lazy_bum@o2.pl>
+# Initial support for tyrquake (quake1)
+
 inherit versionator games
 
 EXPORT_FUNCTIONS pkg_nofetch src_unpack src_unpack_tidy src_install \

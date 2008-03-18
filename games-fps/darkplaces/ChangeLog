@@ -4,7 +4,7 @@
 
   18 Mar 2008; Piotr Szymaniak <lazy_bum@o2.pl>
   +darkplaces-20080311_beta1.ebuild:
-  Newest beta added.
+  Newest beta added, with some small ebuild changes.
 
   13 Mar 2008; Piotr Szymaniak <lazy_bum@o2.pl> -darkplaces-20070412.ebuild,
   +darkplaces-20070927.ebuild:

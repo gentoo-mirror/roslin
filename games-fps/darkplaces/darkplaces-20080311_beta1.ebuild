@@ -104,7 +104,7 @@ src_unpack() {
 		-e '/^CC=/d' \
 		-e "s:-lasound:$(pkg-config --libs alsa):" \
 		-e "s:CPUOPTIMIZATIONS=:CPUOPTIMIZATIONS=${march}:" \
-		-e "s:strip:#strip:" \
+		-e "s:strip:echo:" \
 		makefile.inc || die "sed makefile.inc failed"
 
 	if ! use cdsound ; then
@@ -129,6 +129,9 @@ src_compile() {
 
 	local type="release"
 	use debug && type="debug"
+
+	# Using -j1
+	opts="-j1 ${opts}"
 
 	# Only compile a maximum of 1 client
 	if use sdl ; then

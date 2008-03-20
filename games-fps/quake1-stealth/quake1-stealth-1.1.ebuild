@@ -15,16 +15,12 @@ inherit games games-mod
 
 DESCRIPTION="Stealth Quake is a retelling of Quake if it were a stealth survival horror game,"
 HOMEPAGE="http://forums.inside3d.com/viewtopic.php?p=10210"
-SRC_URI="!darkplaces? ( ${SRC_RENNYC}/${MY_PN}WQ.rar )
-	darkplaces? ( ${SRC_RENNYC}/${MY_PN}DP.rar )"
+SRC_URI="!darkplaces? ( ${SRC_RENNYC}/${MY_PN}WQ.rar
+		${SRC_RENNYC}/${MY_PN}WQ11.rar )
+	darkplaces? ( ${SRC_RENNYC}/${MY_PN}DP.rar
+		${SRC_RENNYC}/${MY_PN}DP11.rar )"
 
 DEPEND="app-arch/unrar"
-
-if use darkplaces; then
-	S=${WORKDIR}/${MY_PN}
-else
-	S=${WORKDIR}/${MY_PN}WQ
-fi
 
 pkg_setup() {
 	games_pkg_setup
@@ -39,4 +35,21 @@ pkg_setup() {
 		einfo "Please select only one \"engine\" USE flag."
 		die ""darkplaces" and "tyrquake" USE flags enabled."
 	fi
+}
+
+src_unpack() {
+	unpack ${A}
+	cd ${WORKDIR}
+
+	if use darkplaces; then
+		mv Stealth stealth || die "mv failed"
+	else
+		mv StealthWQ stealth || die "mv failed"
+	fi
+
+	mv src/* stealth/src/ || die "mv failed"
+	mv progs.dat stealth/ || die "mv failed"
+	mv readme.txt stealth/ || die "mv failed"
+
+	games-mod_src_unpack_tidy
 }

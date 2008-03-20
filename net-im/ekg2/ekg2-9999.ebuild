@@ -37,7 +37,8 @@ DEPEND="crypt? ( app-crypt/gpgme )
 	ssl? ( >=dev-libs/openssl-0.9.6m \
 		jabber? ( >=net-libs/gnutls-1.0.17 ) )
 	xosd? ( x11-libs/xosd )
-	virtual/libintl"
+	virtual/libintl
+	dev-util/cvs"
 
 pkg_setup() {
 	if use unicode && ! built_with_use sys-libs/ncurses unicode; then

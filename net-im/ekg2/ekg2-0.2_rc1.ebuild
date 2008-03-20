@@ -3,24 +3,20 @@
 # $Header: /var/cvsroot/gentoo-x86/net-im/ekg2/ekg2-20061202.ebuild,v 1.6 2007/01/09 21:09:02 swegener Exp $
 
 WANT_AUTOCONF=latest
-WANT_AUTOMAKE=latest
+#WANT_AUTOMAKE=1.7
 
-inherit eutils subversion perl-module autotools
+inherit eutils perl-module autotools
+
+MY_P="${P/_rc/-rc}"
 
 DESCRIPTION="Text based Instant Messenger and IRC client that supports protocols like Jabber and Gadu-Gadu"
 HOMEPAGE="http://pl.ekg2.org/"
-SRC_URI=""
-#http://pl.ekg2.org/${P}.tar.gz"
-
-#ECVS_SERVER="ekg2.org:/home/cvs"
-#ECVS_MODULE="${PN}"
-
-ESVN_REPO_URI="http://toxygen.net/svn/ekg2/trunk/"
+SRC_URI="http://pl.ekg2.org/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
 
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 IUSE="crypt gif gpm gsm gtk inotify jabber jpeg nls nogg perl python readline ruby spell sqlite sqlite3 ssl unicode xosd"
 
 DEPEND="crypt? ( app-crypt/gpgme )
@@ -51,11 +47,11 @@ pkg_setup() {
 	fi
 }
 
-S=${WORKDIR}/${PN}
+S=${WORKDIR}/${MY_P}
 
 src_unpack() {
-#	unpack ${A}
-	subversion_src_unpack
+	unpack ${A}
+#	subversion_src_unpack
 	cd ${S}
 
 	# Ekg2 has no debug configure option
@@ -66,17 +62,15 @@ src_unpack() {
 	#epatch ${FILESDIR}/${P}-intl.patch
 	AT_M4DIR=m4 eautoreconf
 
-	sed -i \
-		-e "s|AM_INIT_AUTOMAKE(ekg2, CVS)|AM_INIT_AUTOMAKE(ekg2, SVN)|" \
-		configure.ac || die "sed failed"
+#	sed -i \
+#		-e "s|AM_INIT_AUTOMAKE(ekg2, CVS)|AM_INIT_AUTOMAKE(ekg2, SVN)|" \
+#		configure.ac || die "sed failed"
 }
 
 src_compile() {
-#	./autogen.sh || die "autogen.sh failed"
-
-#	econf \
 #	export WANT_AUTOMAKE="1.7"
-	./autogen.sh \
+	export WANT_AUTOMAKE="latest"
+	econf \
 		"--with-pthread" \
 		$(use_with crypt gpg) \
 		$(use_with gif libgif) \
@@ -116,7 +110,7 @@ src_install() {
 	emake DESTDIR="${D}" install || die "einstall failed"
 	dodoc docs/*
 
-#	use perl && fixlocalpod
+	use perl && fixlocalpod
 }
 
 pkg_postinst() {

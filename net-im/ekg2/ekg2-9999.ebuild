@@ -64,15 +64,11 @@ src_unpack() {
 
 	epatch ${FILESDIR}/0.1.1-conference-logs.patch
 	#epatch ${FILESDIR}/${P}-intl.patch
-	AT_M4DIR=m4 eautoreconf
+#	AT_M4DIR=m4 eautoreconf
 
 	sed -i \
 		-e "s|AM_INIT_AUTOMAKE(ekg2, CVS)|AM_INIT_AUTOMAKE(ekg2, SVN)|" \
 		configure.ac || die "sed failed"
-
-	sed -i \
-		-e "s!sys.argv[1:], \"cvs\"!sys.argv[1:], \"svn\"!" \
-		docs/ekg2book*/txt2docbook.py || die "sed2"
 }
 
 src_compile() {

@@ -69,6 +69,10 @@ src_unpack() {
 	sed -i \
 		-e "s|AM_INIT_AUTOMAKE(ekg2, CVS)|AM_INIT_AUTOMAKE(ekg2, SVN)|" \
 		configure.ac || die "sed failed"
+
+	sed -i \
+		-e "s!sys.argv[1:], \"cvs\"!sys.argv[1:], \"svn\"!" \
+		docs/ekg2book*/txt2docbook.py || die "sed2"
 }
 
 src_compile() {

@@ -9,11 +9,6 @@ inherit eutils subversion perl-module autotools
 
 DESCRIPTION="Text based Instant Messenger and IRC client that supports protocols like Jabber and Gadu-Gadu"
 HOMEPAGE="http://pl.ekg2.org/"
-SRC_URI=""
-#http://pl.ekg2.org/${P}.tar.gz"
-
-#ECVS_SERVER="ekg2.org:/home/cvs"
-#ECVS_MODULE="${PN}"
 
 ESVN_REPO_URI="http://toxygen.net/svn/ekg2/trunk/"
 
@@ -64,7 +59,7 @@ src_unpack() {
 
 	epatch ${FILESDIR}/0.1.1-conference-logs.patch
 	#epatch ${FILESDIR}/${P}-intl.patch
-#	AT_M4DIR=m4 eautoreconf
+	AT_M4DIR=m4 eautoreconf
 
 	sed -i \
 		-e "s|AM_INIT_AUTOMAKE(ekg2, CVS)|AM_INIT_AUTOMAKE(ekg2, SVN)|" \

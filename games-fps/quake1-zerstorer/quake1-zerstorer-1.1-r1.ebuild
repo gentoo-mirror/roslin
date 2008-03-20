@@ -6,6 +6,7 @@ MOD_TITLE="Zerstorer"
 MOD_DIR="zer"
 
 MOD_USES_QRACK=y
+MOD_USES_TYRQUAKE=y
 
 inherit eutils versionator games games-mod
 

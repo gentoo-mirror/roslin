@@ -10,7 +10,7 @@ inherit eutils games games-mod
 
 DESCRIPTION="Dissolution of Eternity mission pack for Quake 1"
 HOMEPAGE="http://www.idsoftware.com/games/quake/quake-mp2/"
-SRC_URI="vispatch? ( http://mlodyinteligent.pl/~lazy_bum/quake-vis/rogue.zip )"
+SRC_URI="vispatch? ( mirror://sourceforge/vispatch/rogue_vis.tgz )"
 
 IUSE="vispatch"
 

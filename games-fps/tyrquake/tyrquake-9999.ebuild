@@ -2,6 +2,8 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
+QWPN="${PN/quake/qw}"
+
 inherit eutils git games
 
 DESCRIPTION="Conservative Quake 1 engine"
@@ -13,7 +15,7 @@ EGIT_REPO_URI="git://disenchant.net/${PN}"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
-IUSE="cdinstall debug dedicated opengl X"
+IUSE="X cdinstall debug dedicated opengl qwclient"
 
 S=${WORKDIR}/engine
 dir=${GAMES_DATADIR}/quake1
@@ -46,14 +48,19 @@ src_unpack() {
 
 }
 
+# Split the build
 src_compile() {
 	yesno() { useq $1 && echo Y || echo N ; }
 
 	local apps
 	use dedicated && apps="${apps} tyr-qwsv"
-	use X && apps="${apps} tyr-quake tyr-qwcl"
-	if use opengl || [[ -z "${apps}" ]] ; then
-		apps="${apps} tyr-glquake tyr-glqwcl"
+	use X && apps="${apps} tyr-quake"
+	use qwclient && apps="${apps} tyr-qwcl"
+	if use opengl; then
+		if use qwclient; then
+			apps="${apps} tyr-glqwcl"
+		fi
+		apps="${apps} tyr-glquake"
 	fi
 
 	emake prepare || die "emake prepare failed"
@@ -67,11 +74,20 @@ src_compile() {
 		|| die "emake ${apps} failed"
 }
 
+
 src_install() {
 	dogamesbin tyr-* || die "dogamesbin failed"
 	
 	if use opengl; then
-		games_make_wrapper ${PN} ./tyr-glquake "${GAMES_BINDIR}"
+		if use qwclient; then
+			games_make_wrapper ${QWPN} "./tyr-glqwcl -mem 32" "${GAMES_BINDIR}"
+		fi
+		games_make_wrapper ${PN} "./tyr-glquake -mem 32" "${GAMES_BINDIR}"
+	elif use X; then
+		if use qwclient; then
+			games_make_wrapper ${QWPN} "./tyr-qwcl -mem 32" "${GAMES_BINDIR}"
+		fi
+		games_make_wrapper ${PN} "./tyr-quake -mem 32" "${GAMES_BINDIR}"
 	fi
 
 	dodoc readme.txt

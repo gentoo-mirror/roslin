@@ -76,7 +76,8 @@ src_compile() {
 
 #	econf \
 #	export WANT_AUTOMAKE="1.7"
-	./autogen.sh \
+	./autogen.sh || die "autogen.sh failed"
+	econf \
 		"--with-pthread" \
 		$(use_with crypt gpg) \
 		$(use_with gif libgif) \

@@ -7,9 +7,7 @@ inherit eutils games
 DESCRIPTION="iD Software's Quake 1 ... the data files"
 HOMEPAGE="http://www.idsoftware.com/games/quake/quake/"
 SRC_URI="mirror://idsoftware/quake/quake106.zip
-	vispatch? (
-		http://shub-hub.com/idgames2/planetquake/qng/id1.zip
-	)"
+	vispatch? ( mirror://sourceforge/vispatch/id1_vis.tgz )"
 
 LICENSE="as-is"
 SLOT="0"
@@ -17,10 +15,7 @@ KEYWORDS="amd64 ppc x86"
 IUSE="vispatch"
 
 DEPEND="app-arch/lha
-	vispatch? ( 
-			games-util/vispatch
-			app-arch/zip
-	)"
+	vispatch? ( games-util/vispatch )"
 RDEPEND=""
 
 S=${WORKDIR}

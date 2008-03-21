@@ -8,19 +8,15 @@ MOD_DEPEND_UNZIP=n
 
 inherit eutils games games-mod
 
-DESCRIPTION="Scourge of Armagon mission pack"
+DESCRIPTION="Scourge of Armagon mission pack for Quake 1"
 HOMEPAGE="http://www.idsoftware.com/games/quake/quake-mp1/"
 
 IUSE="vispatch"
-SRC_URI="vispatch? (
-		ftp://ftp.lublin.pl/vol/8/planetquake/qng/hipnotic.zip
-		http://shub-hub.com/idgames2/planetquake/qng/hipnotic.zip
-	)"
+SRC_URI="vispatch? ( mirror://sourceforge/vispatch/hipnotic_vis.tgz )"
+#		ftp://ftp.lublin.pl/vol/8/planetquake/qng/hipnotic.zip
+#		http://shub-hub.com/idgames2/planetquake/qng/hipnotic.zip
 
-DEPEND="vispatch? (
-		games-util/vispatch
-		app-arch/zip
-	)"
+DEPEND="vispatch? ( games-util/vispatch )"
 
 # See manual.txt for license
 

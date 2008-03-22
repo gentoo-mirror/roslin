@@ -48,6 +48,8 @@ src_unpack() {
 		-e "s:\*com_homedir = '\\\0';:printf;:" \
 		-e "s:Con_Printf(\"Using home directory:Sys_mkdir (com_homedir);\n\t\tSys_mkdir (va(\"%sfte\", com_homedir));\n\t\tCon_Printf(\"Using home directory:" \
 		common/fs.c || die "sed fs.c failed"
+
+	edos2unix makeconfig.sh
 }
 
 src_compile() {
@@ -79,7 +81,7 @@ src_compile() {
 
 src_install() {
 	# A single executable is created
-	newgamesbin engine/release/${PN}* ${PN} || die "newgamesbin failed"
+	newgamesbin release/${PN}* ${PN} || die "newgamesbin failed"
 
 	# No icon
 	make_desktop_entry ${PN} "FTE QuakeWorld"

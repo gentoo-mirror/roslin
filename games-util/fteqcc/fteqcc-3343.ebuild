@@ -31,7 +31,7 @@ src_unpack() {
 }
 
 src_compile() {
-	emake BASE_CFLAGS="${CFLAGS} -Wall" || die "emake qcc failed"
+	emake BASE_CFLAGS="${CFLAGS} -Wall -DQCCONLY" || die "emake qcc failed"
 }
 
 src_install() {

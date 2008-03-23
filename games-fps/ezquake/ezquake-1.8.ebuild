@@ -18,8 +18,8 @@ RESTRICT="strip"
 
 # glib from http://bugs.gentoo.org/show_bug.cgi?id=163847
 UIDEPEND="virtual/opengl
-	dev-libs/expat"
-#	=dev-libs/glib-1.2*"
+	dev-libs/expat
+	=dev-libs/glib-1.2*"
 RDEPEND="${UIDEPEND}
 	cdinstall? ( games-fps/quake1-data )"
 DEPEND="${UIDEPEND}
@@ -64,7 +64,6 @@ src_compile() {
 	emake \
 		TYPE=${type} \
 		${target} \
-		RELEASE_CFLAGS=${CFLAGS} \
 		|| die "emake failed"
 }
 

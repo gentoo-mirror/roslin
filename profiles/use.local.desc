@@ -18,6 +18,7 @@ games-action/teewars:racemod - Adds maps from racemod.
 games-action/teewars:server - Install client and server.
 games-action/teewars-jeppomaps:racemod - Adds maps from racemod.
 games-emulation/sdlmame:wolfmame - Adds WolfMAME patches
+games-fps/ezquake-bin:security - Install security module for online tournaments.
 games-fps/quake1-data:vispatch - Adds patches for transparent water
 games-fps/quake1-soa:vispatch - Adds patches for transparent water
 games-fps/quake1-zerstorer:vispatch - Adds patches for transparent water

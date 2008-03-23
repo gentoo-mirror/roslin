@@ -72,7 +72,8 @@ src_compile() {
 
 #	econf \
 #	export WANT_AUTOMAKE="1.7"
-	./autogen.sh || die "autogen.sh failed"
+#	./autogen.sh || die "autogen.sh failed"
+	eautoreconf || die "eautoreconf failed"
 	econf \
 		"--with-pthread" \
 		$(use_with crypt gpg) \

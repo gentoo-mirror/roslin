@@ -7,13 +7,15 @@ inherit eutils toolchain-funcs flag-o-matic toolchain-funcs games
 MY_PN="quake2"
 FILE_STEM="KMQuake2-SDL-${PV}_src_unix"
 DATA_STEM="KMQuake2_data-0.19"
-QUDOS_SRC="http://qudos.quakedev.com/linux/quake2/engines/KMQuake2"
+QUDOS_SRC="http://qudos.quakedev.com/linux/quake2"
 
 DESCRIPTION="Enhanced Quake 2 engine with Lazarus mod support"
 HOMEPAGE="http://qexpo2005.quakedev.com/booths.php?tag=knightmare
 	http://qudos.quakedev.com/"
-SRC_URI="${QUDOS_SRC}/${FILE_STEM}.tar.bz2
-	${QUDOS_SRC}/${DATA_STEM}.tar"
+SRC_URI="${QUDOS_SRC}/engines/KMQuake2/${FILE_STEM}.tar.bz2
+	${QUDOS_SRC}/engines/KMQuake2/${DATA_STEM}.tar
+	textures? ( ${QUDOS_SRC}/textures/textures32bit-1.zip
+		    ${QUDOS_SRC}/textures/textures32bit-2.zip )"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -22,18 +24,13 @@ IUSE="alsa audacious cdinstall cdsound debug dedicated demo dga maps mods opengl
 
 QA_EXECSTACK="${GAMES_BINDIR:1}/${PN}"
 
-UIRDEPEND="alsa? ( media-libs/alsa-lib )
-	audacious? ( media-sound/audacious )
-	media-libs/jpeg
-	media-libs/libogg
-	media-libs/libpng
-	media-libs/libvorbis
+UIRDEPEND="audacious? ( media-sound/audacious )
+	dga? ( x11-libs/libXxf86dga )
+	sdl? ( media-libs/libsdl )
 	virtual/opengl
 	virtual/glu
-	sdl? ( media-libs/libsdl )
 	x11-libs/libX11
 	x11-libs/libXext
-	dga? ( x11-libs/libXxf86dga )
 	x11-libs/libXxf86vm"
 UIDEPEND="${UIRDEPEND}
 	x11-proto/xf86dgaproto
@@ -41,27 +38,52 @@ UIDEPEND="${UIRDEPEND}
 	x11-proto/xproto"
 RDEPEND="opengl? ( ${UIRDEPEND} )
 	!opengl? ( sdl? ( ${UIRDEPEND} ) )
-	!opengl? ( !sdl? ( !dedicated? ( ${UIRDEPEND} ) ) )
 	cdinstall? ( games-fps/quake2-data )
 	demo? ( games-fps/quake2-demodata )
 	maps? ( games-fps/kmquake2-shanmaps )
-	mods? ( games-fps/kmquake2-mods )
-	textures? ( games-fps/quake2-textures )"
+	mods? ( games-fps/kmquake2-mods )"
 DEPEND="opengl? ( ${UIDEPEND} )
 	!opengl? ( sdl? ( ${UIDEPEND} ) )
-	!opengl? ( !sdl? ( !dedicated? ( ${UIDEPEND} ) ) )
+	alsa? ( media-libs/alsa-lib )
+	media-libs/openal
+	media-libs/jpeg
+	media-libs/libogg
+	media-libs/libpng
+	media-libs/libvorbis
 	app-arch/unzip"
 
 S=${WORKDIR}/${FILE_STEM}
-dir=${GAMES_DATADIR}/${MY_PN}
-libdir=${GAMES_LIBDIR}/${PN}
 
-build_client() {
-	if use opengl || use sdl || ! use dedicated ; then
-		# Build default client
-		return 0
+pkg_setup() {
+	if ! use sdl && ! use opengl && ! use dedicated; then
+		echo
+		eerror "you should choose at least one video renderer:"
+		eerror "opengl or sdl"
+		eerror "OR"
+		eerror "add dedicated flag to build server"
+		echo
+		epause 5
+		die "no video renderer chosen"
 	fi
-	return 1
+	
+	if ! use alsa && ! use oss && ! use sdl && ! use dedicated; then
+		echo
+		eerror "you should choose at least one audio output:"
+		eerror "alsa (not recommended), oss (good with alsa-oss) or sdl (choppy cutscenes)"
+		eerror "OR"
+		eerror "add dedicated flag to build server"
+		echo
+		epause 5
+		die "no audio output chosen"
+	fi
+
+	if use alsa; then
+		echo
+		ewarn "The ALSA sound driver for this game is incomplete."
+		ewarn "The 'oss' USE flag is recommended instead."
+		echo
+		epause 2
+	fi
 }
 
 src_unpack() {
@@ -69,48 +91,18 @@ src_unpack() {
 	cd "${S}"
 
 	# Fix for amd64 - http://bugs.gentoo.org/show_bug.cgi?id=158415
-	sed -i \
-		-e "s:\#include <sys/types\.h>:\#define _GNU_SOURCE\n\#include <sys/types\.h>:" \
-		unix/qsh_unix.c || die "sed qsh_unix.c failed"
+	epatch "${FILESDIR}"/${PN}-${PV}-remaping_amd64.patch
 
 	# Fix directory search for the game API
-	sed -i \
-		-e 's:"%s/%s/%s", curpath, path, gamename:"%s/%s", path, gamename:' \
-		unix/sys_unix.c || die "sed sys_unix.c failed"
+	epatch "${FILESDIR}"/${PN}-${PV}-search_path.patch
 
-	# Fix Makefile for "optimize" USE flag
-	local march=$(get-flag -march)
-	sed -i \
-		-e "s:-march=\$(MACHINE):${march}:" \
-		Makefile || die "sed Makefile failed"
+	# Use alsa by default
+	use alsa && \
+	epatch "${FILESDIR}"/${PN}-${PV}-alsa.patch
 
-	if [[ "$(gcc-fullversion)" == "4.1.1" ]] ; then
-		# Needs -O0 to stop audio corruption with shotgun
-		sed -i \
-			-e "s:-O3:-O0:" \
-		Makefile || die "sed Makefile -O0 failed"
-	fi
-
-	if build_client ; then
-		if use alsa && ! use oss ; then
-			ewarn "The ALSA sound driver for this game is incomplete."
-			ewarn "The 'oss' USE flag is recommended instead."
-			echo
-			# Change default from OSS to ALSA
-			sed -i \
-				-e "s:\"sndalsa\", \"0\":\"sndalsa\", \"1\":" \
-				unix/snd_unix.c || die "sed snd_alsa.c failed"
-		fi
-
-		if ! use cdsound ; then
-			# Disable checking of the CD drive
-			sed -i \
-				-e "s:/dev/cdrom:/dev/null:" \
-				-e "s:\"nocdaudio\", \"0\":\"nocdaudio\", \"1\":" \
-				-e "s:\"cd_nocd\", \"0\":\"cd_nocd\", \"1\":" \
-				unix/cd_unix.c || die "sed cd_unix.c failed"
-		fi
-	fi
+	# Without cd-audio by default
+	use cdsound || \
+	epatch "${FILESDIR}"/${PN}-${PV}-nocd.patch
 
 	rm gnu.txt
 	mv "${WORKDIR}/${DATA_STEM}/${PN}.png" "${WORKDIR}"
@@ -119,16 +111,9 @@ src_unpack() {
 src_compile() {
 	yesno() { useq $1 && echo YES || echo NO ; }
 
-	local target="release"
-	use debug && target="debug"
-
-	local opengl="NO" sdl="NO"
-	if build_client ; then
-		if use sdl ; then
-			sdl="YES"
-		else
-			opengl="YES"
-		fi
+	# gcc-4.1.1 workaround
+	if [[ "$(gcc-fullversion)" == "4.1.1" ]] ; then
+		append-flags -O0
 	fi
 
 	# Prevent potential for "signal 11" abort, requested by QuDos
@@ -136,56 +121,60 @@ src_compile() {
 
 	emake \
 		BUILD_DEDICATED=$(yesno dedicated) \
-		BUILD_KMQUAKE2=${opengl} \
-		BUILD_KMQUAKE2_SDL=${sdl} \
+		BUILD_KMQUAKE2=$(yesno opengl) \
+		BUILD_KMQUAKE2_SDL=$(yesno sdl) \
 		WITH_AUDACIOUS=$(yesno audacious) \
 		WITH_XMMS=NO \
-		DATADIR="${dir}" \
-		LIBDIR="${libdir}" \
+		DATADIR="${GAMES_DATADIR}/${MY_PN}" \
+		LIBDIR="$(games_get_libdir)/${PN}" \
 		OPTIMIZE=$(yesno optimize-cflags) \
 		WITH_XF86_DGA=$(yesno dga) \
 		LOCALBASE="/usr" \
 		CC="$(tc-getCC)" \
 		BUILD_DATADIR=YES \
 		BUILD_LIBDIR=YES \
-		"${target}" \
+		$(use debug && echo debug || echo release) \
 		|| die "emake failed"
 }
 
 src_install() {
-	local icon=${PN}.png
-
-	insinto "${libdir}"
+	insinto "${GAMES_DATADIR}/${MY_PN}"
 	doins -r "${WORKDIR}/${DATA_STEM}"/* \
-		|| die "doins ${DATA_STEM} failed"
+		|| die "doins ${GAMES_DATADIR}/${MY_PN}/baseq2 failed"
+
+	insinto "$(games_get_libdir)/${PN}"
 	doins -r quake2/baseq2 \
-		|| die "doins quake2/baseq2 failed"
+		|| die "doins $(games_get_libdir)/${PN}/baseq2 failed"
 
-	doicon "${WORKDIR}/${icon}" || die "doicon failed"
-
-	if build_client ; then
-		if use sdl ; then
-			newgamesbin ${MY_PN}/${PN}-sdl ${PN} \
-				|| die "newgamesbin ${PN}-sdl failed"
-		else
-			dogamesbin ${MY_PN}/${PN} \
-				|| die "dogamesbin ${PN} failed"
-		fi
-
-		if use demo ; then
-			games_make_wrapper ${PN}-demo "${PN} +set game demo"
-			make_desktop_entry ${PN}-demo "KM Quake 2 (Demo)" "${icon}"
-		else
-			make_desktop_entry ${PN} "KM Quake 2" "${icon}"
-		fi
-	fi
+	doicon "${WORKDIR}/${PN}.png" || die "doicon failed"
 
 	if use dedicated ; then
 		newgamesbin ${MY_PN}/${PN}_netserver ${PN}-ded \
 			|| die "newgamesbin ${PN}_netserver failed"
 	fi
 
-	dodoc *.{txt,unix}
+	if use sdl ; then
+		dogamesbin ${MY_PN}/${PN}-sdl \
+			|| die "dogamesbin ${PN}-sdl failed"
+	fi
 
+	if use opengl ; then
+		dogamesbin ${MY_PN}/${PN} \
+			|| die "dogamesbin ${PN} failed"
+	fi
+
+	if use demo ; then
+		games_make_wrapper ${PN}-demo "${PN} +set game demo"
+		make_desktop_entry ${PN}-demo "KM Quake 2 (Demo)" "${PN}.png"
+	else
+		make_desktop_entry ${PN} "KM Quake 2" "${PN}.png"
+	fi
+
+	if use textures ; then
+		insinto "${GAMES_DATADIR}/${MY_PN}"/baseq2
+		doins -r "${WORKDIR}/models" "${WORKDIR}/textures"
+	fi
+
+	dodoc *.{txt,unix}
 	prepgamesdirs
 }

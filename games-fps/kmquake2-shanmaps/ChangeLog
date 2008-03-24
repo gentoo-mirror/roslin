@@ -1,0 +1,7 @@
+# ChangeLog for games-fps/kmquake2-shanmaps
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  24 Mar 2008; Piotr Szymaniak <lazy_bum@o2.pl>
+  +kmquake2-shanmaps-1.01.ebuild:
+  New package, thanks to Paul Bredbury (bug #140124).

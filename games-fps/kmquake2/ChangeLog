@@ -2,6 +2,9 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  25 Mar 2008; Piotr Szymaniak <lazy_bum@o2.pl> kmquake2-0.19.2.ebuild:
+  Updated ebuild (bug #140121).
+
   24 Mar 2008; Piotr Szymaniak <lazy_bum@o2.pl> +kmquake2-0.19.2.ebuild,
   +files/kmquake2-0.19.2-alsa.patch, +files/kmquake2-0.19.2-nocd.patch,
   +files/kmquake2-0.19.2-remaping_amd64.patch,

@@ -13,20 +13,19 @@ DESCRIPTION="Enhanced Quake 2 engine with Lazarus mod support"
 HOMEPAGE="http://qexpo2005.quakedev.com/booths.php?tag=knightmare
 	http://qudos.quakedev.com/"
 SRC_URI="${QUDOS_SRC}/engines/KMQuake2/${FILE_STEM}.tar.bz2
-	${QUDOS_SRC}/engines/KMQuake2/${DATA_STEM}.tar
-	textures? ( ${QUDOS_SRC}/textures/textures32bit-1.zip
-		    ${QUDOS_SRC}/textures/textures32bit-2.zip )"
+	${QUDOS_SRC}/engines/KMQuake2/${DATA_STEM}.tar"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="alsa audacious cdinstall cdsound debug dedicated demo dga maps mods opengl oss optimize-cflags sdl textures"
+IUSE="alsa audacious cdinstall cdsound debug dedicated demo dga maps mods opengl oss custom-cflags sdl textures"
 
 QA_EXECSTACK="${GAMES_BINDIR:1}/${PN}"
 
 UIRDEPEND="audacious? ( media-sound/audacious )
 	dga? ( x11-libs/libXxf86dga )
 	sdl? ( media-libs/libsdl )
+	textures? ( games-fps/quake2-textures )
 	virtual/opengl
 	virtual/glu
 	x11-libs/libX11
@@ -58,9 +57,9 @@ pkg_setup() {
 	if ! use sdl && ! use opengl && ! use dedicated; then
 		echo
 		eerror "you should choose at least one video renderer:"
-		eerror "opengl or sdl"
+		eerror "'opengl' or 'sdl'"
 		eerror "OR"
-		eerror "add dedicated flag to build server"
+		eerror "add 'dedicated' USE-flag to build server"
 		echo
 		epause 5
 		die "no video renderer chosen"
@@ -69,9 +68,9 @@ pkg_setup() {
 	if ! use alsa && ! use oss && ! use sdl && ! use dedicated; then
 		echo
 		eerror "you should choose at least one audio output:"
-		eerror "alsa (not recommended), oss (good with alsa-oss) or sdl (choppy cutscenes)"
+		eerror "'alsa' (not recommended), 'oss' (good) or 'sdl' (choppy cutscenes)"
 		eerror "OR"
-		eerror "add dedicated flag to build server"
+		eerror "add 'dedicated' USE-flag to build server"
 		echo
 		epause 5
 		die "no audio output chosen"
@@ -80,7 +79,7 @@ pkg_setup() {
 	if use alsa; then
 		echo
 		ewarn "The ALSA sound driver for this game is incomplete."
-		ewarn "The 'oss' USE flag is recommended instead."
+		ewarn "The 'oss' USE-flag is recommended instead."
 		echo
 		epause 2
 	fi
@@ -111,10 +110,16 @@ src_unpack() {
 src_compile() {
 	yesno() { useq $1 && echo YES || echo NO ; }
 
+	use custom-cflags || \
+		append-flags 	-O3 \
+				-ffast-math \
+				-funroll-loops \
+				-fstrength-reduce \
+				-fexpensive-optimizations
+
 	# gcc-4.1.1 workaround
-	if [[ "$(gcc-fullversion)" == "4.1.1" ]] ; then
-		append-flags -O0
-	fi
+	[[ "$(gcc-fullversion)" == "4.1.1" ]] && \
+				replace-flags -O? -O0
 
 	# Prevent potential for "signal 11" abort, requested by QuDos
 	filter-flags -fomit-frame-pointer
@@ -127,7 +132,7 @@ src_compile() {
 		WITH_XMMS=NO \
 		DATADIR="${GAMES_DATADIR}/${MY_PN}" \
 		LIBDIR="$(games_get_libdir)/${PN}" \
-		OPTIMIZE=$(yesno optimize-cflags) \
+		OPTIMIZE=NO \
 		WITH_XF86_DGA=$(yesno dga) \
 		LOCALBASE="/usr" \
 		CC="$(tc-getCC)" \
@@ -148,32 +153,20 @@ src_install() {
 
 	doicon "${WORKDIR}/${PN}.png" || die "doicon failed"
 
-	if use dedicated ; then
-		newgamesbin ${MY_PN}/${PN}_netserver ${PN}-ded \
-			|| die "newgamesbin ${PN}_netserver failed"
-	fi
+	use dedicated && \
+		newgamesbin "${MY_PN}/${PN}_netserver" "${PN}-ded"
 
-	if use sdl ; then
-		dogamesbin ${MY_PN}/${PN}-sdl \
-			|| die "dogamesbin ${PN}-sdl failed"
-	fi
+	use opengl && \
+		dogamesbin "${MY_PN}/${PN}" && \
+		make_desktop_entry "${PN}" "KM Quake 2" "${PN}.png"
 
-	if use opengl ; then
-		dogamesbin ${MY_PN}/${PN} \
-			|| die "dogamesbin ${PN} failed"
-	fi
+	use sdl && \
+		dogamesbin "${MY_PN}/${PN}-sdl" && \
+		make_desktop_entry "${PN}-sdl" "KM Quake 2 SDL" "${PN}.png"
 
-	if use demo ; then
-		games_make_wrapper ${PN}-demo "${PN} +set game demo"
-		make_desktop_entry ${PN}-demo "KM Quake 2 (Demo)" "${PN}.png"
-	else
-		make_desktop_entry ${PN} "KM Quake 2" "${PN}.png"
-	fi
-
-	if use textures ; then
-		insinto "${GAMES_DATADIR}/${MY_PN}"/baseq2
-		doins -r "${WORKDIR}/models" "${WORKDIR}/textures"
-	fi
+	use demo && \
+		games_make_wrapper "${PN}-demo" "${PN} +set game demo" && \
+		make_desktop_entry "${PN}-demo" "KM Quake 2 (Demo)" "${PN}.png"
 
 	dodoc *.{txt,unix}
 	prepgamesdirs

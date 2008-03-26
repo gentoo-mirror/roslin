@@ -1,4 +1,4 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -19,8 +19,6 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="alsa audacious cdinstall cdsound debug dedicated demo dga maps mods opengl oss custom-cflags sdl textures"
-
-QA_EXECSTACK="${GAMES_BINDIR:1}/${PN}"
 
 UIRDEPEND="audacious? ( media-sound/audacious )
 	dga? ( x11-libs/libXxf86dga )

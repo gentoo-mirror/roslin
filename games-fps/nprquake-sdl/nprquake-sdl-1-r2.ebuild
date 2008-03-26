@@ -29,6 +29,9 @@ src_unpack() {
 
 	epatch \
 		"${FILESDIR}"/${PN}-save-in-home.patch \
+		"${FILESDIR}"/${PN}-exec-stack.patch \
+		"${FILESDIR}"/${PN}-makefiles.patch \
+		"${FILESDIR}"/${PN}-sys_printf.patch \
 		|| die "epatch failed"
 
 	# fix libdirs

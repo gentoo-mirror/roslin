@@ -1,0 +1,6 @@
+# ChangeLog for games-fps/quake2-textures
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  26 Mar 2008; Piotr Szymaniak <lazy_bum@o2.pl> +quake2-textures-1.ebuild:
+  Version bump (bug #140246).

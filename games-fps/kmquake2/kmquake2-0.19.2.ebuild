@@ -95,6 +95,9 @@ src_unpack() {
 	# Fix directory search for the game API
 	epatch "${FILESDIR}"/${PN}-${PV}-search_path.patch
 
+	# Now we can safely reemerge it and play further
+	epatch 	"${FILESDIR}"/${PN}-${PV}-safe_saving.patch
+
 	# Use alsa by default
 	use alsa && \
 	epatch "${FILESDIR}"/${PN}-${PV}-alsa.patch
@@ -110,18 +113,17 @@ src_unpack() {
 src_compile() {
 	yesno() { useq $1 && echo YES || echo NO ; }
 
-	use custom-cflags || \
-		append-flags 	-O3 \
-				-ffast-math \
-				-funroll-loops \
-				-fstrength-reduce \
-				-fexpensive-optimizations
+	# avoiding segfaults
+	if ! use custom-cflags; then
+			strip-flags
+			replace-flags -O? -O0
+	fi
 
-	# gcc-4.1.1 workaround
+	# gcc-4.1.1 hard workaround
 	[[ "$(gcc-fullversion)" == "4.1.1" ]] && \
 				replace-flags -O? -O0
 
-	# Prevent potential for "signal 11" abort, requested by QuDos
+	# Prevent potential for "signal 11"(segv) abort, requested by QuDos
 	filter-flags -fomit-frame-pointer
 
 	emake \

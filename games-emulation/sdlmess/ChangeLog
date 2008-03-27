@@ -2,6 +2,9 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  27 Mar 2008; Michał Ziąbkowski <mziab@o2.pl> +sdlmess-0.124.ebuild:
+  Bumped.
+
   01 Mar 2008; Michał Ziąbkowski <mziab@o2.pl> ChangeLog:
   A new ebuild based on the sdlmame one, with minimal changes.
 

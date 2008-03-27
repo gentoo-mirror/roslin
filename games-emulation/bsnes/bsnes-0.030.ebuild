@@ -6,8 +6,7 @@ inherit eutils games
 
 DESCRIPTION="A Super Famicom/SNES emulator written with absolute accuracy in mind"
 HOMEPAGE="http://byuu.cinnamonpirate.com/bsnes/"
-MY_PV="${PV/.0/}"
-MY_PV="${MY_PV/./_}"
+MY_PV="${PV/0./}"
 SRC_URI="http://byuu.cinnamonpirate.com/files/${PN}_v${MY_PV}.tar.bz2"
 
 LICENSE="bsnes"

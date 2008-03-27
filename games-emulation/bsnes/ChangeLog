@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/bsnes
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 
+  27 Mar 2008; Michał Ziąbkowski <mziab@o2.pl> -bsnes-0.028.ebuild,
+  -bsnes-0.028.01.ebuild, -bsnes-0.029.ebuild, bsnes-0.030.ebuild:
+  Clean out old ebuilds. Some cosmetic fixes.
+
   26 Mar 2008; Michał Ziąbkowski <mziab@o2.pl> +bsnes-0.030.ebuild:
   Bumped.
 

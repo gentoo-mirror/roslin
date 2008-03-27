@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-inherit games autotools eutils
+inherit games autotools eutils flag-o-matic
 
 DESCRIPTION="PlayStation2 emulator"
 HOMEPAGE="http://www.pcsx2.net/"

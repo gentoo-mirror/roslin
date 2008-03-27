@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-inherit games subversion autotools
+inherit games subversion autotools flag-o-matic
 
 DESCRIPTION="Playstation2 emulator"
 HOMEPAGE="http://www.pcsx2.net/"

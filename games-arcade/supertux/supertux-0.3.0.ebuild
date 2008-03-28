@@ -17,7 +17,7 @@ IUSE=""
 RDEPEND=">=media-libs/libsdl-1.2.4
 	>=media-libs/sdl-image-1.2.2
 	sys-libs/zlib
-	dev-util/jam
+	dev-util/ftjam
 	>=dev-games/physfs-1.0.0
 	media-libs/libvorbis
 	media-libs/libogg

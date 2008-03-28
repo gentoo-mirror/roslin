@@ -1,0 +1,8 @@
+# ChangeLog for sci-physics/bullet
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  28 Mar 2008; Michał Ziąbkowski <mziab@o2.pl> bullet-2.54.ebuild,
+  bullet-2.64.ebuild:
+  Replaced jam with ftjam.
+

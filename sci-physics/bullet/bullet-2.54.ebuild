@@ -15,7 +15,7 @@ IUSE="test doc examples"
 
 RDEPEND="examples? ( virtual/opengl )"
 DEPEND="${DEPEND}
-	dev-util/jam"
+	dev-util/ftjam"
 #	test? ( dev-util/cppunit )"
 
 src_compile() {

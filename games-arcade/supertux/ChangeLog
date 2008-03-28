@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/supertux
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 
+  28 Mar 2008; Michał Ziąbkowski <mziab@o2.pl> supertux-0.3.0.ebuild:
+  Replaced jam with ftjam in deps.
+
 *supertux-9999 (09 Feb 2008)
 
   09 Feb 2008; Piotr Szymaniak <lazy_bum@o2.pl> +supertux-9999.ebuild,

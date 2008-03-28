@@ -1,4 +1,4 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: /var/cvsroot/gentoo-x86/games-emulation/visualboyadvance/visualboyadvance-1.7.2.ebuild,v 1.3 2004/11/22 20:37:06 plasmaroo Exp $
 
@@ -42,7 +42,7 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" PREFIX="/usr/games" install || die "make install failed"
+	emake DESTDIR="${D}" PREFIX="${GAMES_PREFIX}" install || die "make install failed"
 	dodoc doc/DevInfo.txt "doc/Known Bugs.txt" doc/ReadMe.txt doc/authors.txt doc/todo.txt
 	
 	prepgamesdirs

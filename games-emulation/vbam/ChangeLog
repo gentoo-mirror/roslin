@@ -1,0 +1,7 @@
+# ChangeLog for games-emulation/vbam
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  28 Mar 2008; Michał Ziąbkowski <mziab@o2.pl> vbam-9999.ebuild:
+  A cosmetic fix
+

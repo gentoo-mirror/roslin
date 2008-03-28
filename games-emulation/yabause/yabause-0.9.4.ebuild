@@ -45,7 +45,7 @@ src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 	
 	# hackish fix for some bad directory structure
-	mv ${D}/usr/local/share ${D}/usr/games/share
+	mv ${D}/usr/local/share ${D}${GAMES_DATADIR}
 	rm -rf ${D}/usr/local
 	
 	dodoc AUTHORS ChangeLog GOALS README README.LIN TODO

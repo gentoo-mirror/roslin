@@ -18,6 +18,8 @@ DEPEND="media-libs/sdl-image
 	media-libs/sdl-ttf
 	media-libs/smpeg
 	app-arch/bzip2"
+	
+RDEPEND="${DEPEND}"
 
 pkg_setup() {
 	games_pkg_setup

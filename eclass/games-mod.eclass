@@ -47,6 +47,7 @@ GAME=${PN%%-*}
 [[ "${GAME}" = "fuhquake" ]] && GAME="quake1"
 [[ "${GAME}" = "ezquake" ]] && GAME="quake1"
 [[ "${GAME}" = "tyrquake" ]] && GAME="quake1"
+[[ "${GAME}" = "fteqw" ]] && GAME="quake1"
 [[ "${GAME}" = "kmquake2" ]] && GAME="quake2"
 [[ "${GAME}" = "qudos" ]] && GAME="quake2"
 #[[ "${GAME}" = "quetoo" ]] && GAME="quake2"
@@ -123,9 +124,14 @@ case "${GAME}" in
 				RDEPEND="${RDEPEND} fuhquake? ( || ( games-fps/fuhquake games-fps/fuhquake-bin )"
 			fi
 			if [[ "${MOD_USES_TYRQUAKE}" = "y" ]] ; then
-				[[ "${GAME_EXE}" = "" ]] && GAME_EXE="tyr-glquake"
+				[[ "${GAME_EXE}" = "" ]] && GAME_EXE="tyrquake"
 				IUSE="${IUSE} tyrquake"
 				RDEPEND="${RDEPEND} tyrquake? ( games-fps/tyrquake )"
+			fi
+			if [[ "${MOD_USES_FTEQW}" = "y" ]] ; then
+				[[ "${GAME_EXE}" = "" ]] && GAME_EXE="fteqw"
+				IUSE="${IUSE} fteqw"
+				RDEPEND="${RDEPEND} fteqw? ( games-fps/fteqw )"
 			fi
 		fi
 		# Ensure that GAME_EXE is set
@@ -375,7 +381,7 @@ games-mod_src_install_wrapper() {
 
 	local engine game_exe mod_cmdline mod_cmdline_wrapper mod_title mod_desktop_title game_title
 	for engine in doomsday zdoom darkplaces joequake qrack tenebrae \
-		ezquake fuhquake tyrquake kmquake2 qudos quake3 quake3-bin X ; do
+		ezquake fuhquake tyrquake fteqw kmquake2 qudos quake3 quake3-bin X ; do
 		if has ${engine} ${IUSE} && use ${engine} ; then
 			if [[ "${MOD_CREATE_CMDLINE}" != "n" ]] ; then
 				# The setting of game_exe may be more complex in future
@@ -441,6 +447,8 @@ games-mod_src_install_wrapper() {
 								game_title="FuhQuake" ;;
 							tyrquake)
 								game_title="TyrQuake" ;;
+							fteqw)
+								game_title="FTE QuakeWorld" ;;
 							kmquake2)
 								game_title="KM Quake 2" ;;
 							qudos)

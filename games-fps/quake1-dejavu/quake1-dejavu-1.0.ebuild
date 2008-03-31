@@ -12,6 +12,8 @@ inherit eutils versionator games games-mod
 
 MY_P="${MY_PN}$(delete_all_version_separators)"
 
+KEYWORDS=""
+
 DESCRIPTION="Deja Vu - Six Map Mini Episode"
 HOMEPAGE="http://www.celephais.net/board/view_thread.php?id=60115"
 SRC_URI="${SRC_ADDICT}/quoth.zip

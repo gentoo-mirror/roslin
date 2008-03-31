@@ -4,8 +4,9 @@
 
 MOD_USES_QRACK=y
 MOD_USES_JOEQUAKE=y
+MOD_USES_TYRQUAKE=y
 
-MOD_DIR="fort_ratsack"
+MOD_DIR="quoth"
 MOD_MAP="base_debris"
 
 MOD_TITLE="Attack On Fort Ratsack"

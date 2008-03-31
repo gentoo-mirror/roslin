@@ -4,11 +4,12 @@
 
 MOD_USES_QRACK=y
 MOD_USES_JOEQUAKE=y
+MOD_USES_TYRQUAKE=y
 
-MOD_DIR="src"
+MOD_DIR="quoth"
 MOD_MAP="src2"
 
-MOD_CMDLINE_END="-game quoth +map ${MOD_MAP}"
+#MOD_CMDLINE_END="-game quoth +map ${MOD_MAP}"
 
 MOD_TITLE="Slime Refinery Complex"
 MOD_RDEPEND="games-fps/quake1-quoth"

@@ -1,4 +1,4 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -6,7 +6,7 @@
 # Purpose: Simplify random fps games mod installation
 # 
 # Added by Piotr Szymaniak <lazy_bum@o2.pl>
-# Initial support for tyrquake (quake1)
+# Support for tyrquake and fteqw (quake1)
 
 inherit versionator games
 
@@ -47,7 +47,6 @@ GAME=${PN%%-*}
 [[ "${GAME}" = "fuhquake" ]] && GAME="quake1"
 [[ "${GAME}" = "ezquake" ]] && GAME="quake1"
 [[ "${GAME}" = "tyrquake" ]] && GAME="quake1"
-[[ "${GAME}" = "fteqw" ]] && GAME="quake1"
 [[ "${GAME}" = "kmquake2" ]] && GAME="quake2"
 [[ "${GAME}" = "qudos" ]] && GAME="quake2"
 #[[ "${GAME}" = "quetoo" ]] && GAME="quake2"
@@ -124,14 +123,9 @@ case "${GAME}" in
 				RDEPEND="${RDEPEND} fuhquake? ( || ( games-fps/fuhquake games-fps/fuhquake-bin )"
 			fi
 			if [[ "${MOD_USES_TYRQUAKE}" = "y" ]] ; then
-				[[ "${GAME_EXE}" = "" ]] && GAME_EXE="tyrquake"
+				[[ "${GAME_EXE}" = "" ]] && GAME_EXE="tyr-glquake"
 				IUSE="${IUSE} tyrquake"
 				RDEPEND="${RDEPEND} tyrquake? ( games-fps/tyrquake )"
-			fi
-			if [[ "${MOD_USES_FTEQW}" = "y" ]] ; then
-				[[ "${GAME_EXE}" = "" ]] && GAME_EXE="fteqw"
-				IUSE="${IUSE} fteqw"
-				RDEPEND="${RDEPEND} fteqw? ( games-fps/fteqw )"
 			fi
 		fi
 		# Ensure that GAME_EXE is set
@@ -312,11 +306,13 @@ games-mod_src_unpack_tidy() {
 	case "${GAME}" in
 		quake1)
 			if [[ -n "${MOD_DIR}" ]] ; then
-				if [[ -n $(find . -name '*.bsp') ]] ; then
-					# Move .bsp files to correct directory. Used by quake1-dazsp2.
+				# Added suport for .lit files (Piotr Szymaniak)
+				if [[ -n $(find . -name '*.bsp' -o -name '*.lit') ]] ; then
+					# Move .bsp files to correct directory.
 					mkdir -p "${MOD_DIR}"/maps
 					local f fname
-					for f in $(find . -name '*.bsp') ; do
+					# Added suport for .lit files (Piotr Szymaniak)
+					for f in $(find . -name '*.bsp' -o -name '*.lit') ; do
 						fname=$(basename "${f}")
 						if [[ ! -e "${MOD_DIR}/maps/${fname}" ]] ; then
 							mv "${f}" "${MOD_DIR}"/maps \
@@ -381,7 +377,7 @@ games-mod_src_install_wrapper() {
 
 	local engine game_exe mod_cmdline mod_cmdline_wrapper mod_title mod_desktop_title game_title
 	for engine in doomsday zdoom darkplaces joequake qrack tenebrae \
-		ezquake fuhquake tyrquake fteqw kmquake2 qudos quake3 quake3-bin X ; do
+		ezquake fuhquake tyrquake kmquake2 qudos quake3 quake3-bin X ; do
 		if has ${engine} ${IUSE} && use ${engine} ; then
 			if [[ "${MOD_CREATE_CMDLINE}" != "n" ]] ; then
 				# The setting of game_exe may be more complex in future
@@ -447,8 +443,6 @@ games-mod_src_install_wrapper() {
 								game_title="FuhQuake" ;;
 							tyrquake)
 								game_title="TyrQuake" ;;
-							fteqw)
-								game_title="FTE QuakeWorld" ;;
 							kmquake2)
 								game_title="KM Quake 2" ;;
 							qudos)

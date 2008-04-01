@@ -1,0 +1,8 @@
+# ChangeLog for games-util/ups
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  01 Apr 2008; Michał Ziąbkowski <mziab@o2.pl> +ups-0.03.ebuild:
+  Initial ebuild. It's not pretty and I'm unsure about the license, but here
+  it is.
+

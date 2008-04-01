@@ -16,6 +16,7 @@ IUSE="jma zip"
 
 DEPEND="media-libs/freealut
 	x11-libs/gtk+
+	x11-libs/libXtst
 	media-libs/libsdl
 	virtual/opengl"
 

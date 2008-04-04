@@ -14,7 +14,7 @@ KEYWORDS="~x86 ~amd64"
 IUSE=""
 
 # not sure about the actual version needed
-DEPEND="$(qt4_min_version 4.0)"
+DEPEND="$(qt4_min_version 4.3)"
 RDEPEND="${DEPEND}"
 
 src_compile() {

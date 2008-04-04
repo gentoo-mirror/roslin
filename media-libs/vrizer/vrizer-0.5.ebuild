@@ -10,11 +10,13 @@ SRC_URI="http://futurelab.aec.at/${PN}/${P_N}-${PV}-bin.tar.gz"
 
 LICENSE="vrizer"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS=""
 IUSE=""
 
 RDEPEND="virtual/opengl"
 DEPEND="${RDEPEND}"
+
+S=${WORKDIR}/${P_N}-${PV}-bin
 
 src_install() {
 	dolib ${PN}.so || die "dolib failed"

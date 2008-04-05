@@ -1,0 +1,7 @@
+# ChangeLog for games-fps/quake1-red777
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  05 Apr 2008; Piotr Szymaniak <lazy_bum@o2.pl> quake1-red777-1.ebuild:
+  Fixed SRC_URI, RDEPEND and description.
+

@@ -10,7 +10,8 @@ MOD_DIR="quoth"
 MOD_MAP="base_debris"
 
 MOD_TITLE="Attack On Fort Ratsack"
-MOD_RDEPEND="games-fps/quake1-quoth"
+MOD_CMDLINE_START="-hipnotic"
+MOD_RDEPEND_EXTRA="games-fps/quake1-quoth"
 
 inherit eutils games games-mod
 

@@ -6,13 +6,12 @@ MOD_USES_QRACK=y
 MOD_USES_JOEQUAKE=y
 MOD_USES_TYRQUAKE=y
 
+MOD_CMDLINE_START="-hipnotic"
+MOD_RDEPEND_EXTRA="games-fps/quake1-quoth"
+
 MOD_DIR="quoth"
 MOD_MAP="${PN/quake1-/}"
-
-#MOD_CMDLINE_END="-game quoth +map ${MOD_MAP}"
-
 MOD_TITLE="Slave to a Machine"
-MOD_RDEPEND="games-fps/quake1-quoth"
 
 inherit eutils games games-mod
 

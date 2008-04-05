@@ -2,6 +2,10 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  05 Apr 2008; Piotr Szymaniak <lazy_bum@o2.pl>
+  quake1-fort_ratsack-1.ebuild:
+  Fixed RDEPEND.
+
   31 Mar 2008; Piotr Szymaniak <lazy_bum@o2.pl>
   quake1-fort_ratsack-1.ebuild:
   Added tyrquake USE flag.

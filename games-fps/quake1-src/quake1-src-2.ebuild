@@ -12,7 +12,8 @@ MOD_MAP="src2"
 #MOD_CMDLINE_END="-game quoth +map ${MOD_MAP}"
 
 MOD_TITLE="Slime Refinery Complex"
-MOD_RDEPEND="games-fps/quake1-quoth"
+MOD_CMDLINE_START="-hipnotic"
+MOD_RDEPEND_EXTRA="games-fps/quake1-quoth"
 
 inherit eutils games games-mod
 

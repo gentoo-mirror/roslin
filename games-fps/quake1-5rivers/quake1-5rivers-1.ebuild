@@ -4,8 +4,10 @@
 
 MOD_DIR="5rivers"
 MOD_TITLE="The Five Rivers Land"
-# The "hipnotic" expansion pack does *not* need to be installed.
 MOD_MAP="5rivers_e1"
+
+MOD_CMDLINE_START="-hipnotic"
+MOD_RDEPEND_EXTRA="games-fps/quake1-quoth"
 
 inherit games games-mod
 
@@ -13,7 +15,6 @@ DESCRIPTION="Mini campaign in DOOM 3 hell-style with three small to medium
 sized, dark and scrary maps"
 HOMEPAGE="http://lambert.jeanphilippe.free.fr/"
 SRC_URI="${SRC_ADDICT}/${MOD_DIR}.zip"
-MOD_RDEPEND="games-fps/quake1-quoth"
 
 dir=${GAMES_DATADIR}/quake1
 

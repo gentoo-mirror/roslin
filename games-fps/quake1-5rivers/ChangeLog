@@ -2,6 +2,9 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  05 Apr 2008; Piotr Szymaniak <lazy_bum@o2.pl> quake1-5rivers-1.ebuild:
+  Fixed RDEPEND.
+
   13 Mar 2008; Piotr Szymaniak <lazy_bum@o2.pl> quake1-5rivers-1.ebuild:
   Added Quoth depend.
 

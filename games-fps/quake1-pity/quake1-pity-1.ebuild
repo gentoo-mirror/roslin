@@ -3,13 +3,13 @@
 # $Header: $
 
 MOD_DIR="quoth"
-MOD_MAP="red777"
+MOD_MAP="kellmet1"
 MOD_CMDLINE_START="-hipnotic"
 MOD_RDEPEND_EXTRA="games-fps/quake1-quoth"
 
 inherit eutils games games-mod
 
 SRC_KELL="http://kell.quaddicted.com/${MOD_MAP}"
-DESCRIPTION="Red777 - large map for Quoth"
+DESCRIPTION="I pity thee not - map for Quoth"
 HOMEPAGE="http://kell.quaddicted.com/"
 SRC_URI="${SRC_KELL}/${MOD_MAP}.zip"

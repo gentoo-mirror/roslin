@@ -20,7 +20,7 @@ RDEPEND="!dedicated? (
 		media-libs/alsa-lib
 		media-libs/mesa
 		x11-libs/libX11
-		)"
+	)"
 DEPEND="${RDEPEND}
 	app-arch/zip"
 
@@ -41,27 +41,12 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-
-	# fix bam default optimisation
-	cd "${SB}"
-#	sed -i \
-#		-e "s|-O2|${CXXFLAGS}|" \
-#		-e "s|s.linker.flags = \"\"|s.linker.flags = \"${LDFLAGS}\"|" \
-#		src/base.bam || die "sed base.bam failed"
-
 	cd "${S}"
+	# the data-dir needs to be patched in some files
+	to_patch=$(grep -Rl '"data\/' *)
 	sed -i \
 		-e "s:data/:${dir}/data/:g" \
-		datasrc/data.ds \
-		src/engine/e_map.c \
-		src/engine/server/es_server.c \
-		src/engine/client/ec_client.c \
-		src/engine/client/ec_gfx.c \
-		src/game/client/gc_hooks.cpp \
-		src/game/client/gc_map_image.cpp \
-		src/game/client/gc_skin.cpp \
-		src/game/editor/ed_editor.cpp \
-		src/game/editor/ed_io.cpp \
+		$to_patch \
 		|| die "sed-ing default datadir location failed"
 
 #	if use alsa; then
@@ -114,18 +99,18 @@ src_install() {
 	if use debug && use server; then
 		dogamesbin ${PN}_srv_d || die "dogamesbin failed"
 		dogamesbin ${PN}_d || die "dogamesbin failed"
-		make_desktop_entry ${PN} "Teewars"
+		make_desktop_entry ${PN} "Teeworlds"
 	elif use !debug && use server; then
 		dogamesbin ${PN}_srv || die "dogamesbin failed"
 		dogamesbin ${PN} || die "dogamesbin failed"
-		make_desktop_entry ${PN} "Teewars"
+		make_desktop_entry ${PN} "Teeworlds"
 	elif use debug && use dedicated; then
 		dogamesbin ${PN}_srv_d || die "dogamesbin failed"
 	elif use !debug && use dedicated; then
 		dogamesbin ${PN}_srv || die "dogamesbin failed"
 	else
 		dogamesbin ${PN} || die "dogamesbin failed"
-		make_desktop_entry ${PN} "Teewars"
+		make_desktop_entry ${PN} "Teeworlds"
 	fi
 
 	dodoc *.txt
@@ -138,6 +123,6 @@ pkg_postinst() {
 
 	if use server || use dedicated; then
 		einfo "For more information about server setup read:"
-		einfo "http://www.teewars.com/?page=docs"
+		einfo "http://www.teeworlds.com/?page=docs"
 	fi
 }

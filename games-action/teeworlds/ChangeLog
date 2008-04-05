@@ -1,6 +1,10 @@
 # ChangeLog for games-action/teewars
 # Copyright 2008-2008 Gentoo Foundation; Distributed under the GPL v2
 
+  05 Apr 2008; Piotr Szymaniak <lazy_bum@o2.pl> -teeworlds-0.4.0.ebuild,
+  +teeworlds-0.4.2.ebuild:
+  Version bump.
+
   23 Mar 2008; Piotr Szymaniak <lazy_bum@o2.pl> +teeworlds-0.4.1.ebuild:
   Version bump. minor ebuild fixes.
 

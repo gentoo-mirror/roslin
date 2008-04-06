@@ -2,9 +2,10 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-MOD_TITLE="Marcher Fortress"
+MOD_TITLE="The Marcher Fortress"
 MOD_MAP="marcher"
 
-HOMEPAGE="http://underworld.planetquake.gamespy.com/quakerev050114d.html"
-
 inherit games games-mod
+
+HOMEPAGE="http://underworld.planetquake.gamespy.com/quakerev050114d.html"
+DESCRIPTION="The Marcher Fortress - great, huge map with excellent design."

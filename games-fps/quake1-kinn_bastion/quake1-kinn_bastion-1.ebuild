@@ -8,3 +8,4 @@ MOD_MAP="bastion"
 inherit games games-mod
 
 HOMEPAGE="http://underworld.planetquake.gamespy.com/quakerev040522.html"
+DESCRIPTION="Bastion of the Underworld - an impressive, big and imposing medieval/stone map"

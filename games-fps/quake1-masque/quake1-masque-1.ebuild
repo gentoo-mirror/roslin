@@ -12,3 +12,4 @@ inherit games games-mod
 
 HOMEPAGE="http://tronyn.planetquake.gamespy.com/
 	http://underworld.planetquake.gamespy.com/quakerev051101a.html"
+DESCRIPTION="Masque of the Red Death - An atmospheric trail of medieval carnage."

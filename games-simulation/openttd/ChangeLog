@@ -2,6 +2,10 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  06 Apr 2008; Piotr Szymaniak <lazy_bum@o2.pl> -openttd-0.6.0_beta4.ebuild,
+  +openttd-0.6.0.ebuild:
+  Version bump.
+
   03 Mar 2008; Piotr Szymaniak <lazy_bum@o2.pl> +openttd-0.6.0_beta4.ebuild,
   +files/libiconv.patch:
   New ebuild, latest beta (thanks to Alexander Sulfrian, bug #206337)

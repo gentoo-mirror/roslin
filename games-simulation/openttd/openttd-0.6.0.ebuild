@@ -4,16 +4,13 @@
 
 inherit eutils games
 
-MY_P=${P/_rc/-RC}
-MY_P=${P/_beta/-beta}
-
 SCENARIOS_048="${PN}-0.4.8-scenarios.tar.bz2"
 SCENARIOS_050="${PN}-0.5.0-scenarios.tar.bz2"
 
 DESCRIPTION="OpenTTD is a clone of Transport Tycoon Deluxe"
 HOMEPAGE="http://www.openttd.com/"
 SB="mirror://sourceforge/openttd"
-SRC_URI="${SB}/${MY_P}-source.tar.bz2
+SRC_URI="${SB}/${P}-source.tar.bz2
 		scenarios? ( ${SB}/${SCENARIOS_048}
 			${SB}/${SCENARIOS_050} )"
 
@@ -34,8 +31,6 @@ RDEPEND="${DEPEND}
 		!timidity? ( alsa? ( media-sound/alsa-utils ) )
 	)"
 
-S=${WORKDIR}/${MY_P}
-
 pkg_setup() {
 	if ! use dedicated && ! built_with_use media-libs/libsdl X ; then
 		die "Please emerge media-libs/libsdl with USE=X"
@@ -44,7 +39,7 @@ pkg_setup() {
 }
 
 src_unpack() {
-	unpack ${MY_P}-source.tar.bz2
+	unpack ${P}-source.tar.bz2
 	if use scenarios ; then
 		cd "${S}"/bin/scenario/
 		unpack ${SCENARIOS_048}

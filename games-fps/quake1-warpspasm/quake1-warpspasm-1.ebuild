@@ -2,11 +2,8 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-MOD_USES_QRACK=y
-
 MOD_DIR="warpspasm"
 MOD_TITLE="Warpspasm"
-MOD_CMDLINE_OPTIONS="-game warpspasm -heapsize 48000"
 
 inherit eutils games games-mod
 
@@ -16,13 +13,22 @@ SRC_URI="${SRC_ADDICT}/quoth.zip
 	${SRC_KELL}/quoth.zip
 	${SRC_ADDICT}/${MOD_DIR}.zip"
 
+dir=${GAMES_DATADIR}/quake1
+
 src_unpack() {
-	unpack warpspasm.7z
-	mv pak2.pak pak4.pak
-	mv pak1.pak pak3.pak
-	mv pak0.pak pak2.pak
+	unpack ${MOD_DIR}.zip
+	mv warp/pak2.pak pak4.pak
+	mv warp/pak1.pak pak3.pak
+	mv warp/pak0.pak pak2.pak
 
 	unpack quoth.zip
 
+	rm quoth*txt
+
 	games-mod_src_unpack_tidy
 }
+
+#src_install() {
+#	insinto "${dir}/${MOD_DIR}"
+#	doins 
+#}

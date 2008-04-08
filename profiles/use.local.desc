@@ -29,5 +29,7 @@ games-fps/quake1-zerstorer:vispatch - Adds patches for transparent water
 games-puzzle/reaction:single - Turns on computer player for singleplayer fun
 games-simulation/secondlife:elfio - Adds support for ELFIO
 games-simulation/secondlife:fmod - Adds support for fmod
+kde-misc/d3lphin:7zip - Adds support for kio_p7zip
+kde-misc/d3lphin:rar - Adds support for kio_rar
 media-video/aegisub:asa - Adds support for asa cross-platform SSA/ASS subtitles rendering library
 media-video/aegisub:libass - Adds support for libass SSA/ASS subtitles rendering portable library

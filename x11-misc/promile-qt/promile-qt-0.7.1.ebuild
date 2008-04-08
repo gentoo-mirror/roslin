@@ -17,7 +17,10 @@ IUSE=""
 DEPEND="$(qt4_min_version 4.3)"
 RDEPEND="${DEPEND}"
 
+S="${WORKDIR}/${P}"
+
 src_compile() {
+		qmake -project -o ${PN}.pro || die "qmake failed"
 		eqmake4 || die "qmake4 failed"
 		emake || die "emake failed"
 }

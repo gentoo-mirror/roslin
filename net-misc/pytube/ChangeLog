@@ -1,0 +1,7 @@
+# ChangeLog for net-misc/pytube
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  08 Apr 2008; Michał Ziąbkowski <mziab@o2.pl> +pytube-0.0.10.7.ebuild:
+  Bumped. Ebuild from homepage.
+

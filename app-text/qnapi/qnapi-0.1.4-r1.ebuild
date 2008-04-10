@@ -23,11 +23,5 @@ src_compile() {
 }
 
 src_install() {
-	dobin ${PN}
-
-	cd ${S}/doc
-	domenu ${PN}.desktop ${PN}-download.desktop
-	doman ${PN}.1
-
-	dodoc ChangeLog README
+	emake INSTALL_ROOT="${D}" install
 }

@@ -4,7 +4,7 @@
 
 DESCRIPTION="A reference utility for creating and applying UPS patches"
 HOMEPAGE="http://byuu.cinnamonpirate.com"
-MY_PV="${PV/0./}"
+MY_PV="${PV/./}"
 SRC_URI="http://byuu.cinnamonpirate.com/files/${PN}_v${MY_PV}.tar.bz2"
 
 LICENSE="public-domain"

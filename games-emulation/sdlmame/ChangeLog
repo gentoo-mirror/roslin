@@ -1,6 +1,14 @@
 # ChangeLog for games-emulation/sdlmame
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 
+  12 Apr 2008; Michał Ziąbkowski <mziab@o2.pl> sdlmame-0.123.ebuild,
+  sdlmame-0.124.ebuild, sdlmame-0.124.2.ebuild:
+  Removed minimal USE flag. It served no real purpose.
+
+  12 Apr 2008; Michał Ziąbkowski <mziab@o2.pl> -sdlmame-0.124.1.ebuild,
+  +sdlmame-0.124.2.ebuild:
+  Added new sdlmame test version, removed old one.
+
   06 Apr 2008; Michał Ziąbkowski <mziab@o2.pl> -sdlmame-0.123.2.ebuild,
   +sdlmame-0.124.1.ebuild:
   Added latest development version. Removed 0.123.2.

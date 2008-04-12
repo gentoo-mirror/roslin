@@ -16,7 +16,7 @@ SRC_URI="${MY_P}.zip"
 LICENSE="XMAME"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="minimal debug"
+IUSE="debug"
 
 DEPEND=">=media-libs/libsdl-1.2.10
         sys-libs/zlib
@@ -75,13 +75,9 @@ src_compile() {
 		enable_feature PROFILE
 	fi
 
-	local make_opts
-	use minimal && make_opts="SUBTARGET=tiny"
-
 	emake \
 		NAME=${PN} \
 		SUFFIX="" \
-		${make_opts} \
 		ARCHOPTS="${CFLAGS}" \
 		|| die "emake failed"
 }

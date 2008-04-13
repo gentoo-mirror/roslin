@@ -33,9 +33,6 @@ src_unpack() {
 
 	sed -i \
 		-e "s|CFLAGS = -Wall -pipe -fPIC -funroll-loops|CFLAGS = ${CFLAGS} -fPIC|" \
-		example/Makefile example-sdl/Makefile || die "sed failed"
-
-	sed -i \
 		-e "s|/usr/bin|${GAMES_BINDIR}|" \
 		example/Makefile example-sdl/Makefile || die "sed failed"
 }

@@ -2,6 +2,11 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  13 Apr 2008; Piotr Szymaniak <lazy_bum@o2.pl>
+  -darkplaces-20080324_beta3.ebuild, -darkplaces-20080406_beta1.ebuild,
+  +darkplaces-20080410_beta1.ebuild:
+  Version bump.
+
   09 Apr 2008; Piotr Szymaniak <lazy_bum@o2.pl>
   +darkplaces-20080406_beta1.ebuild:
   Version bump.

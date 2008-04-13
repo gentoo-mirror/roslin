@@ -131,7 +131,7 @@ src_compile() {
 	use debug && type="debug"
 
 	# Using -j1
-	opts="-j1 ${opts}"
+	# opts="-j1 ${opts}"
 
 	# Only compile a maximum of 1 client
 	if use sdl ; then

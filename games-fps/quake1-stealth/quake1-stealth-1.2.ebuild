@@ -15,10 +15,8 @@ inherit games games-mod
 
 DESCRIPTION="Stealth Quake is a retelling of Quake if it were a stealth survival horror game,"
 HOMEPAGE="http://forums.inside3d.com/viewtopic.php?p=10210"
-SRC_URI="!darkplaces? ( ${SRC_RENNYC}/${MY_PN}WQ.rar
-		${SRC_RENNYC}/${MY_PN}WQ11.rar )
-	darkplaces? ( ${SRC_RENNYC}/${MY_PN}DP.rar
-		${SRC_RENNYC}/${MY_PN}DP11.rar )"
+SRC_URI="!darkplaces? ( ${SRC_RENNYC}/${MY_PN}WQ.rar )
+	darkplaces? ( ${SRC_RENNYC}/${MY_PN}DP.rar )"
 
 DEPEND="app-arch/unrar"
 

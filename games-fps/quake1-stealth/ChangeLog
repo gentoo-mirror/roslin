@@ -2,6 +2,10 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  13 Apr 2008; Piotr Szymaniak <lazy_bum@o2.pl> -quake1-stealth-1.1.ebuild,
+  +quake1-stealth-1.2.ebuild:
+  Version bump.
+
   20 Mar 2008; Piotr Szymaniak <lazy_bum@o2.pl> -quake1-stealth-1.ebuild,
   +quake1-stealth-1.1.ebuild:
   New version released, bumped to 1.1.

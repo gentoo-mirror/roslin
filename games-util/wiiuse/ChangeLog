@@ -1,6 +1,9 @@
 # ChangeLog for games-util/wiiuse
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 
+  13 Apr 2008; Piotr Szymaniak <lazy_bum@o2.pl> +wiiuse-0.12.ebuild:
+  Major ebuild rewrite, but still some issues with sandbox.
+
 *wiiuse-0.9.ebuild (04 Nov 2007)
 
   04 Nov 2007; Piotr Szymaniak <lazy_bum@o2.pl> +wiiuse-0.9.ebuild:

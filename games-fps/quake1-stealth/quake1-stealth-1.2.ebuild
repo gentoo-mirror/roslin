@@ -45,9 +45,5 @@ src_unpack() {
 		mv StealthWQ stealth || die "mv failed"
 	fi
 
-	mv src/* stealth/src/ || die "mv failed"
-	mv progs.dat stealth/ || die "mv failed"
-	mv readme.txt stealth/ || die "mv failed"
-
 	games-mod_src_unpack_tidy
 }

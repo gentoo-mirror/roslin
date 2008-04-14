@@ -2,6 +2,10 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header
 
+  14 Apr 2008; Piotr Szymaniak <lazy_bum@o2.pl> +files/tar-1.18-lzma.patch,
+  +tar-1.19-r3.ebuild, +files/tar-1.19-lzma-man.patch:
+  Added lzma support.
+
   10 Dec 2007; Piotr Szymaniak <lazy_bum@o2.pl> tar-1.19-r2.ebuild,
   +files/tar-1.19-7zip-man.patch:
   Updated ebuild. Added 7zip info in tar manual page.

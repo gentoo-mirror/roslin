@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-inherit eutils games
+inherit eutils games flag-o-matic
 
 MY_P="${PN}_v${PV}_src"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~x86"
 IUSE="debug examples sdl"
 
 RDEPEND="net-wireless/bluez-utils
@@ -25,6 +25,11 @@ S=${WORKDIR}/${MY_P/_src/}
 src_unpack() {
 	unpack ${A}
 	cd ${S}
+	
+	epatch ${FILESDIR}/${P}-makefile.patch
+	
+	# -fomit-frame-pointer shouldn't be used with USE="debug"
+	use debug && filter-flags "-fomit-frame-pointer"
 
 	sed -i \
 		-e "s|-Wall -pipe -fPIC -funroll-loops|${CFLAGS} -fPIC|" \
@@ -43,6 +48,7 @@ src_compile() {
 	local bld="wiiuse"
 	use examples && bld="${bld} ex"
 	use sdl && bld="${bld} sdl-ex"
+	
 	use debug && opts="debug=1"
 	opts="${opts} ${bld}"
 

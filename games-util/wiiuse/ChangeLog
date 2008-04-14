@@ -1,6 +1,11 @@
 # ChangeLog for games-util/wiiuse
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 
+  14 Apr 2008; Michał Ziąbkowski <mziab@o2.pl> wiiuse-0.12.ebuild,
+  +files/wiiuse-0.12-makefile.patch:
+  Added Makefile patch. Sandbox violations should be gone now. Still need to
+  fix debug, though.
+
   13 Apr 2008; Piotr Szymaniak <lazy_bum@o2.pl> +wiiuse-0.12.ebuild:
   Major ebuild rewrite, but still some issues with sandbox.
 

@@ -1,0 +1,41 @@
+diff -Nur wiiuse_v0.12.old/example/Makefile wiiuse_v0.12/example/Makefile
+--- wiiuse_v0.12.old/example/Makefile	2008-04-02 02:45:40.000000000 +0200
++++ wiiuse_v0.12/example/Makefile	2008-04-14 15:50:00.618412701 +0200
+@@ -64,7 +64,7 @@
+ 
+ install:
+ 	@if [ -e $(BIN) ]; then \
+-		cp -v $(BIN) /usr/bin ; \
++		install -D -m 755 $(BIN) $(DESTDIR)/usr/bin/wiiuse-example ; \
+ 	fi
+ 
+ 
+Pliki wiiuse_v0.12.old/example/.Makefile.swp i wiiuse_v0.12/example/.Makefile.swp ró¿ni± siê
+diff -Nur wiiuse_v0.12.old/example-sdl/Makefile wiiuse_v0.12/example-sdl/Makefile
+--- wiiuse_v0.12.old/example-sdl/Makefile	2008-04-02 02:45:53.000000000 +0200
++++ wiiuse_v0.12/example-sdl/Makefile	2008-04-14 15:59:05.602412668 +0200
+@@ -64,7 +64,7 @@
+ 
+ install:
+ 	@if [ -e $(BIN) ]; then \
+-		cp -v $(BIN) /usr/bin ;\
++		install -D -m 755 $(BIN) $(DESTDIR)/usr/bin/wiiuse-sdl ; \
+ 	fi
+ 
+ $(BIN): mkdir $(OBJS)
+diff -Nur wiiuse_v0.12.old/src/Makefile wiiuse_v0.12/src/Makefile
+--- wiiuse_v0.12.old/src/Makefile	2008-03-03 00:30:04.000000000 +0100
++++ wiiuse_v0.12/src/Makefile	2008-04-14 15:46:45.246412684 +0200
+@@ -73,10 +73,8 @@
+ 	@-rm -r debug-* release-* 2> /dev/null
+ 
+ install:
+-	@if [ -e $(BIN) ]; then \
+-		cp -v $(BIN) /usr/lib ; \
+-	fi
+-	@cp -v wiiuse.h /usr/include
++	@install -D -m 644 $(BIN) $(DESTDIR)/usr/lib/libwiiuse.so
++	@install -D -m 644 wiiuse.h $(DESTDIR)/usr/include/wiiuse.h
+ 
+ $(BIN): mkdir $(OBJS)
+ 	$(CC) $(CFLAGS) $(LDFLAGS) $(OBJS) -o $(BIN)

@@ -56,5 +56,7 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "einstall failed"
+	local instopts
+	use debug && instopts="debug=1"
+	emake DESTDIR="${D}" ${instopts} install || die "einstall failed"
 }

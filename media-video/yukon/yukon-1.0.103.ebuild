@@ -37,7 +37,7 @@ src_install() {
 
 	for ABI in $(get_install_abis); do
 		cd "${WORKDIR}/${ABI}"
-		make DESTDIR="${D}" install
+		make DESTDIR="${D}" install || die "make install failed"
 		cp sysconf "${D}/etc/yukon/system/${ABI}"
 	done
 }

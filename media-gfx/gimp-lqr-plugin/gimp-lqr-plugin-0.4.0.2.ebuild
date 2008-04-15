@@ -22,7 +22,7 @@ DEPEND="${RDEPEND}"
 S="${WORKDIR}/${P/0.2/0}"
 
 src_install() {
-	make DESTDIR="${D}" install
+	emake DESTDIR="${D}" install || die "emake install failed"
 
 	dodoc AUTHORS BUGS ChangeLog NEWS README TODO
 }

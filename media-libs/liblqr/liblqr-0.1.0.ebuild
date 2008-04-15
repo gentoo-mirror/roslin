@@ -17,7 +17,7 @@ DEPEND="${RDEPEND}"
 S="$WORKDIR/${PN}-1-${PV}"
 
 src_install() {
-	make DESTDIR="${D}" install
+	emake DESTDIR="${D}" install || die "emake intall failed"
 
 	dodoc AUTHORS BUGS ChangeLog NEWS README TODO
 }

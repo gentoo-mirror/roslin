@@ -10,7 +10,7 @@ SRC_URI="http://www.berthels.co.uk/exmap/download/${P}.tgz"
 
 IUSE=""
 
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 LICENSE="GPL-2"
 SLOT="0"
 

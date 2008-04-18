@@ -1,6 +1,10 @@
 # ChangeLog for quake1-textures
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 
+  18 Apr 2008; Piotr Szymaniak <lazy_bum@o2.pl>
+  +quake1-textures-20071001.ebuild:
+  Version bump.
+
   04 Oct 2007; Piotr Szymaniak <lazy_bum@o2.pl> quake1-textures-20060722.ebuild:
   Fixed dead SRC_URI thanks to Paul Bredbury bug #141536.
 

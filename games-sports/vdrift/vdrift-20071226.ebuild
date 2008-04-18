@@ -26,7 +26,7 @@ RDEPEND="virtual/opengl
 	sci-physics/bullet
 	nls? ( virtual/libintl )"
 DEPEND="${RDEPEND}
-	dev-util/scons
+	>=dev-util/scons-0.97
 	nls? ( sys-devel/gettext )"
 
 S=${WORKDIR}/${PN}

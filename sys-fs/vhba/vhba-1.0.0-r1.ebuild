@@ -23,18 +23,22 @@ BUILD_TARGETS="clean modules"
 
 pkg_setup() {
 	CONFIG_CHECK="~BLK_DEV_SR ~CHR_DEV_SG"
-	check_extra_config
+	linux-info_pkg_setup
+	BUILD_PARAMS="KDIR=${KV_DIR}"
+	linux-mod_pkg_setup
 }
 
 src_unpack() {
 	unpack ${A}
         cd ${S}
-        einfo "Patching Makefile"
         epatch "${FILESDIR}"/makefile.patch || die "Failed to patch Makefile"
-        if kernel_is 2 6 24 ; then
-                einfo "Patching scatterlist"
+        if kernel_is ge 2 6 24 ; then
                 epatch "${FILESDIR}"/scatterlist.patch || die "Failed to patch scatterlist"
         fi
+	if kernel_is 2 6 25 ; then
+		einfo "Patching scsi_cmnd"
+		epatch "${FILESDIR}"/scsicmnd.patch || die "Failed to patch scsicmnd"
+	fi
 }
 
 src_compile() {

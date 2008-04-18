@@ -1,10 +1,7 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/tenebrae/tenebrae-1.04.ebuild,v 1.12 2007/07/02 17:39:11 nyhm Exp $
+# $Header: $
 
-#ECVS_SERVER="cvs.tenebrae.sourceforge.net:/cvsroot/tenebrae"
-#ECVS_MODULE="tenebrae_0"
-#inherit cvs
 inherit eutils games
 
 DESCRIPTION="adds stencil shadows and per pixel lights to quake"
@@ -40,23 +37,15 @@ src_unpack() {
 	cd tenebrae_0
 	epatch \
 		"${FILESDIR}"/${PV}-glhax.patch \
-		"${FILESDIR}"/${P}-exec-stack.patch
+		"${FILESDIR}"/${P}-exec-stack.patch \
+		"${FILESDIR}"/${P}-worldangles.patch
 	cd linux
 	sed "s:-mpentiumpro -O6:${CFLAGS}:" Makefile.i386linux > Makefile
-	#if use sdl ; then
-	#	cd ../sdl
-	#	./autogen.sh
-	#fi
 }
 
 src_compile() {
 	cd "${S}"/tenebrae_0/linux
 	make MASTER_DIR="${GAMES_DATADIR}/quake1" build_release || die
-	#if use sdl ; then
-	#	cd ${S}/tenebrae_0/sdl
-	#	egamesconf || die
-	#	make || die
-	#fi
 }
 
 src_install() {

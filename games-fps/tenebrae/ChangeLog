@@ -1,12 +1,16 @@
 # ChangeLog for games-fps/tenebrae
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: /var/cvsroot/gentoo-x86/games-fps/tenebrae/ChangeLog,v 1.10 2007/07/02 17:39:11 nyhm Exp $
+
+  18 Apr 2008; Piotr Szymaniak <lazy_bum@o2.pl> tenebrae-1.04.ebuild,
+  +files/tenebrae-1.04-worldangles.patch:
+  Added patch from bug #77471.
 
   02 Jul 2007; Tristan Heaven <nyhm@gentoo.org>
   +files/tenebrae-1.04-exec-stack.patch, tenebrae-1.04.ebuild:
   remove need for an executable stack
 
-  22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  22 Feb 2007; Piotr JaroszyĹski <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
 
   05 Dec 2006; Chris Gianelloni <wolf31o2@gentoo.org> tenebrae-1.04.ebuild:

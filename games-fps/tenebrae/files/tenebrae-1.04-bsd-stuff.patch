@@ -1,0 +1,67 @@
+diff -Naur tenebrae_0.old/common.c tenebrae_0/common.c
+--- tenebrae_0.old/common.c	2003-07-14 23:06:01.000000000 +0200
++++ tenebrae_0/common.c	2008-04-19 23:32:07.000000000 +0200
+@@ -2221,7 +2221,10 @@
+ 		if ((userdir[j-1] == '\\') || (userdir[j-1] == '/'))
+ 			userdir[j-1] = 0;
+ 	}
++
++	strncpy (com_prefdir, userdir, j);
+ 	COM_AddGameFS (userdir);
++	Sys_mkdir(com_gamedir);
+ #endif
+ 
+ 
+diff -Naur tenebrae_0.old/common.h tenebrae_0/common.h
+--- tenebrae_0.old/common.h	2003-07-14 23:06:01.000000000 +0200
++++ tenebrae_0/common.h	2008-04-19 23:30:58.000000000 +0200
+@@ -167,7 +167,11 @@
+ extern int com_filesize;
+ struct cache_user_s;
+ 
++extern char	com_prefdir[MAX_OSPATH];
++
++#ifdef  USERPREF_DIR
+ extern	char	com_gamedir[MAX_OSPATH];
++#endif
+ 
+ void COM_WriteFile (char *filename, void *data, int len);
+ int COM_OpenFile (const char *filename, int *hndl);
+diff -Naur tenebrae_0.old/snd_sdl.c tenebrae_0/snd_sdl.c
+--- tenebrae_0.old/snd_sdl.c	2003-07-14 23:06:01.000000000 +0200
++++ tenebrae_0/snd_sdl.c	2008-04-19 23:24:41.000000000 +0200
+@@ -94,7 +94,8 @@
+ 	shm = &the_shm;
+ 	shm->splitbuffer = 0;
+ 	shm->samplebits = (obtained.format & 0xFF);
+-        shm->speed = obtained.freq;
++//        shm->speed = obtained.freq;
++	shm->speed = desired.freq;
+         shm->channels = obtained.channels;
+ 	shm->samples = obtained.samples*shm->channels;
+ 	shm->samplepos = 0;
+@@ -119,3 +120,12 @@
+ 	}
+ }
+ 
++/*
++==============
++SNDDMA_Submit
++Send sound to device if buffer isn't really the dma buffer
++===============
++*/
++void SNDDMA_Submit(void)
++{
++}
+diff -Naur tenebrae_0.old/sys_linux.c tenebrae_0/sys_linux.c
+--- tenebrae_0.old/sys_linux.c	2003-07-14 23:06:01.000000000 +0200
++++ tenebrae_0/sys_linux.c	2008-04-19 23:19:45.000000000 +0200
+@@ -27,7 +27,7 @@
+ // user preference directory
+ 
+ #if defined (USERPREF_DIR)
+-char *prefdir=  ".quake";
++char *prefdir=  ".tenebrae";
+ #endif
+ 
+ #if defined (BASEDIR)

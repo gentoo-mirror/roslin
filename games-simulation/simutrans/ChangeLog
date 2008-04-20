@@ -2,6 +2,9 @@
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  20 Apr 2008; Piotr Szymaniak <lazy_bum@o2.pl> +simutrans-0.99.17.1.ebuild:
+  Bugfix release.
+
 *simutrans-0.99.17 (09 Jan 2008)
 
   09 Jan 2008; Piotr Szymaniak <lazy_bum@o2.pl> +simutrans-0.99.17.ebuild:

@@ -14,7 +14,7 @@ EGIT_REPO_URI="git://disenchant.net/${PN}"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS=""
 IUSE="X cdinstall debug dedicated opengl qwclient"
 
 S=${WORKDIR}/engine

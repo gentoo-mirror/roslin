@@ -10,10 +10,9 @@ SRC_URI="http://disenchant.net/files/engine/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS=""
-IUSE="cdinstall debug dedicated opengl X"
+KEYWORDS="x86"
+IUSE="cdinstall debug opengl"
 
-S=${WORKDIR}/${P}
 dir=${GAMES_DATADIR}/quake1
 
 # These dependencies have not been checked
@@ -37,34 +36,34 @@ DEPEND="${COMMON}
 	x11-proto/xf86vidmodeproto
 	x11-proto/xproto"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-}
-
 src_compile() {
 	yesno() { useq $1 && echo Y || echo N ; }
 
 	local apps
-	use dedicated && apps="${apps} tyr-qwsv"
-	use X && apps="${apps} tyr-quake tyr-qwcl"
+	apps="tyr-quake"
 	if use opengl || [[ -z "${apps}" ]] ; then
-		apps="${apps} tyr-glquake tyr-glqwcl"
+		apps="${apps} tyr-glquake"
 	fi
 
-	emake || die "emake prepare failed"
+	emake prepare || die "emake prepare failed"
 
 	emake \
 		USE_X86_ASM=$(yesno x86) \
 		DEBUG=$(yesno debug) \
 		QBASEDIR="${dir}" \
 		STRIP=echo \
+		V=1 \
 		${apps} \
 		|| die "emake ${apps} failed"
 }
 
 src_install() {
-	dogamesbin tyr-* || die "dogamesbin failed"
+	if use opengl; then
+		newgamesbin tyr-glquake ${PN} || die "newgamesbin failed"
+		newgamesbin tyr-quake ${PN}.x11 || die "newgamesbin failed"
+	else
+		newgamesbin tyr-quake ${PN} || die "newgamesbin failed"
+	fi
 
 	dodoc readme.txt
 

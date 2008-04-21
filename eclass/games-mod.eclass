@@ -6,7 +6,7 @@
 # Purpose: Simplify random fps games mod installation
 # 
 # Added by Piotr Szymaniak <lazy_bum@o2.pl>
-# Support for tyrquake and fteqw (quake1)
+# Support for tyrquake, tyrqw and fteqw (quake1)
 
 inherit versionator games
 
@@ -47,6 +47,7 @@ GAME=${PN%%-*}
 [[ "${GAME}" = "fuhquake" ]] && GAME="quake1"
 [[ "${GAME}" = "ezquake" ]] && GAME="quake1"
 [[ "${GAME}" = "tyrquake" ]] && GAME="quake1"
+[[ "${GAME}" = "tyrqw" ]] && GAME="quake1"
 [[ "${GAME}" = "kmquake2" ]] && GAME="quake2"
 [[ "${GAME}" = "qudos" ]] && GAME="quake2"
 #[[ "${GAME}" = "quetoo" ]] && GAME="quake2"
@@ -123,9 +124,14 @@ case "${GAME}" in
 				RDEPEND="${RDEPEND} fuhquake? ( || ( games-fps/fuhquake games-fps/fuhquake-bin )"
 			fi
 			if [[ "${MOD_USES_TYRQUAKE}" = "y" ]] ; then
-				[[ "${GAME_EXE}" = "" ]] && GAME_EXE="tyr-glquake"
+				[[ "${GAME_EXE}" = "" ]] && GAME_EXE="tyrquake"
 				IUSE="${IUSE} tyrquake"
 				RDEPEND="${RDEPEND} tyrquake? ( games-fps/tyrquake )"
+			fi
+			if [[ "${MOD_USES_TYRQW}" = "y" ]] ; then
+				[[ "${GAME_EXE}" = "" ]] && GAME_EXE="tyrqw"
+				IUSE="${IUSE} tyrqw"
+				RDEPEND="${RDEPEND} tyrqw? ( games-fps/tyrqw )"
 			fi
 		fi
 		# Ensure that GAME_EXE is set
@@ -377,7 +383,8 @@ games-mod_src_install_wrapper() {
 
 	local engine game_exe mod_cmdline mod_cmdline_wrapper mod_title mod_desktop_title game_title
 	for engine in doomsday zdoom darkplaces joequake qrack tenebrae \
-		ezquake fuhquake tyrquake kmquake2 qudos quake3 quake3-bin X ; do
+		ezquake fuhquake tyrquake tyrqw kmquake2 qudos quake3 \
+		quake3-bin X ; do
 		if has ${engine} ${IUSE} && use ${engine} ; then
 			if [[ "${MOD_CREATE_CMDLINE}" != "n" ]] ; then
 				# The setting of game_exe may be more complex in future
@@ -443,6 +450,8 @@ games-mod_src_install_wrapper() {
 								game_title="FuhQuake" ;;
 							tyrquake)
 								game_title="TyrQuake" ;;
+							tyrqw)
+								game_title="TyrQW" ;;
 							kmquake2)
 								game_title="KM Quake 2" ;;
 							qudos)

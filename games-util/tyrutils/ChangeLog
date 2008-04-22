@@ -2,6 +2,10 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  22 Apr 2008; Piotr Szymaniak <lazy_bum@o2.pl> +tyrutils-0.4-r1.ebuild,
+  +files/tyrutils-0.4-max_tstack.patch:
+  Added latest patch from git.
+
   22 Apr 2008; Piotr Szymaniak <lazy_bum@o2.pl> +tyrutils-0.4.ebuild:
   New package.
 

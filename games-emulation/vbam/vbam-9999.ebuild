@@ -4,7 +4,6 @@
 
 inherit games subversion
 
-#ESVN_REPO_URI="http://svn.bountysource.com/vbam/trunk/"
 ESVN_REPO_URI="http://${PN}.svn.sourceforge.net/svnroot/${PN}/trunk/"
 ESVN_PROJECT="vbam"
 
@@ -62,7 +61,6 @@ src_compile() {
 }
 
 src_install() {
-	#emake DESTDIR="${D}" PREFIX="${GAMES_PREFIX}" install || die "make install failed"
 	emake DESTDIR="${D}" install || die "make install failed"
 	dodoc doc/{DevInfo,ReadMe}.txt
 	

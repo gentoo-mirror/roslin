@@ -8,7 +8,7 @@ SRC_URI="http://www.hotspringsmt.net/rickest/estat/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND="app-portage/genlop

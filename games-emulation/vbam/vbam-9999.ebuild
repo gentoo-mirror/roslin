@@ -44,15 +44,18 @@ src_unpack() {
 	subversion_src_unpack
 	cd ${S}
 	
-	sed -i \
-	    -e "s|-O3|${CFLAGS}|" CMakeLists.txt \
+	epatch "${FILESDIR}/${PN}-cmake.patch"
+	sed -i CMakeLists.txt \
+	    -e "s:GAMES_DATADIR:${GAMES_DATADIR}:" \
 	    || die "sed failed"
 }
 
 src_compile() {
 	cmake \
 	-DCMAKE_INSTALL_PREFIX="${GAMES_PREFIX}" \
-	-DDATA_INSTALL_DIR="/tmp" \
+	-DCMAKE_CXX_FLAGS="${CXXFLAGS}" \
+	-DCMAKE_C_FLAGS="${CFLAGS}" \
+	-DDATA_INSTALL_DIR="${GAMES_DATADIR}" \
 	. || die "cmake failed"
 
 	emake || die "emake failed"

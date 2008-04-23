@@ -16,8 +16,6 @@ RDEPEND=">=net-im/pidgin-2.3.0"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
-DOCS="README"
-
 src_compile() {
 	make LOCALBASE="/usr" || die "Compile failed"
 }

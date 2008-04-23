@@ -16,14 +16,12 @@ RDEPEND=">=net-im/pidgin-2.3.0"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
-DOCS="README"
-
 src_compile() {
-	make LOCALBASE="/usr" || die "Compile failed"
+	emake LOCALBASE="/usr" || die "Compile failed"
 }
 
 src_install() {
-	make install LOCALBASE="/usr" DESTDIR="${D}" || die "Install failed"
+	emake install LOCALBASE="/usr" DESTDIR="${D}" || die "Install failed"
 	dodoc README
 }
 

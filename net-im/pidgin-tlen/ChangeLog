@@ -4,6 +4,10 @@
 
   23 Apr 2008; Michał Ziąbkowski <mziab@o2.pl>
   pidgin-tlen-20071216.ebuild, pidgin-tlen-20080316.ebuild:
+  Use emake instead of make. Also removed superfluous variable.
+
+  23 Apr 2008; Michał Ziąbkowski <mziab@o2.pl>
+  pidgin-tlen-20071216.ebuild, pidgin-tlen-20080316.ebuild:
   Upped required pidgin version to 2.3.0. Added ~amd64 keyword.
 
   08 Apr 2008; Michał Ziąbkowski <mziab@o2.pl>

@@ -10,7 +10,7 @@ S=${WORKDIR}/${P}
 DESCRIPTION="Kydpdict is a graphical frontend to Collins', PWN Oxford & SAP dictionaries."
 SRC_URI="http://members.elysium.pl/ytm/src/${P}.tar.bz2"
 HOMEPAGE="http://members.elysium.pl/ytm/html/kydpdict.html"
-KEYWORDS="x86"
+KEYWORDS="amd64 x86"
 SLOT="0"
 LICENSE="GPL-2"
 

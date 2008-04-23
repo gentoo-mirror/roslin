@@ -14,37 +14,54 @@ HOMEPAGE="http://vba-m.ngemu.com"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~amd64"
-IUSE="zip"
+IUSE="gtk sdl"
 
-RDEPEND="!games-emulation/visualboyadvance
-	media-libs/libpng
-	sys-libs/zlib
-	media-libs/libsdl"
+RDEPEND="gtk? ( >=dev-cpp/libglademm-2.4.0
+		>=dev-cpp/glibmm-2.4.0
+		>=dev-cpp/gtkmm-2.4.0
+		>media-libs/portaudio-18.2
+		x11-libs/libXv)
+		!games-emulation/visualboyadvance
+		media-libs/libpng
+		sys-libs/zlib
+		sdl? ( media-libs/libsdl )
+		virtual/opengl"
+
+DEPEND="${RDEPEND}
+		dev-util/cmake
+		dev-util/pkgconfig"
+		
 
 S="${WORKDIR}/${PN}"
+
+pkg_setup() {
+	if ! use sdl && ! use gtk; then
+	    die "You have to enable USE gtk or sdl, or both"
+	fi
+}
 
 src_unpack() {
 	subversion_src_unpack
 	cd ${S}
 	
 	sed -i \
-	    -e "s|-O3|${CFLAGS}|" Makefile \
+	    -e "s|-O3|${CFLAGS}|" CMakeLists.txt \
 	    || die "sed failed"
-
-	if use zip; then
-		sed -i \
-		-e "s|-DSDL|-DSDL -DUSEFEX|" Makefile \
-		|| die "sed failed"
-	fi
 }
 
 src_compile() {
+	cmake \
+	-DCMAKE_INSTALL_PREFIX="${GAMES_PREFIX}" \
+	-DDATA_INSTALL_DIR="/tmp" \
+	. || die "cmake failed"
+
 	emake || die "emake failed"
 }
 
 src_install() {
-	emake DESTDIR="${D}" PREFIX="${GAMES_PREFIX}" install || die "make install failed"
-	dodoc doc/DevInfo.txt "doc/Known Bugs.txt" doc/ReadMe.txt doc/authors.txt doc/todo.txt
+	#emake DESTDIR="${D}" PREFIX="${GAMES_PREFIX}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "make install failed"
+	dodoc doc/{DevInfo,ReadMe}.txt
 	
 	prepgamesdirs
 }

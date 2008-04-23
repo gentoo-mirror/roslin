@@ -3,6 +3,10 @@
 # $Header: $
 
   23 Apr 2008; Michał Ziąbkowski <mziab@o2.pl> vbam-9999.ebuild:
+  We now use CMake, so the thing actually compiles. Fixed deps. Gtk port needs
+  some more love.
+
+  23 Apr 2008; Michał Ziąbkowski <mziab@o2.pl> vbam-9999.ebuild:
   SVN repo moved to sf.net. Updated url.
 
   28 Mar 2008; Michał Ziąbkowski <mziab@o2.pl> vbam-9999.ebuild:

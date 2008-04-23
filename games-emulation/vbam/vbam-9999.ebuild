@@ -4,7 +4,8 @@
 
 inherit games subversion
 
-ESVN_REPO_URI="http://svn.bountysource.com/vbam/trunk/"
+#ESVN_REPO_URI="http://svn.bountysource.com/vbam/trunk/"
+ESVN_REPO_URI="http://${PN}.svn.sourceforge.net/svnroot/${PN}/trunk/"
 ESVN_PROJECT="vbam"
 
 DESCRIPTION="A VBA fork that focuses on consolidating existing ports and improving VBA in general"

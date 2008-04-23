@@ -16,8 +16,8 @@ SLOT="0"
 KEYWORDS=""
 IUSE=""
 
-RDEPEND=">=x11-libs/gtk+-2.0
-	net-libs/libsoup"
+RDEPEND=">=x11-libs/gtk+-2.6
+	>=net-libs/libsoup-2.2.7"
 DEPEND="${RDEPEND}"
 
 S=${WORKDIR}/${PN}2

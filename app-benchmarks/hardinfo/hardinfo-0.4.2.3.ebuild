@@ -8,11 +8,11 @@ SRC_URI="http://download.berlios.de/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND=">=x11-libs/gtk+-2.0
-	net-libs/libsoup"
+RDEPEND=">=x11-libs/gtk+-2.6
+	>=net-libs/libsoup-2.2.7"
 DEPEND="${RDEPEND}"
 
 # Can't compile with -O, need filter-flags and we don't have time (;

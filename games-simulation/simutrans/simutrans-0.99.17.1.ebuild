@@ -12,8 +12,12 @@ HOMEPAGE="http://www.simutrans.com/"
 # We need binary source for fonts and text
 SRC_URI="mirror://sourceforge/${PN}/${PN}-src-${MY_PV}.zip
 	mirror://sourceforge/${PN}/simulinux-${MY_PV}.zip
-	minimal? ( mirror://sourceforge/${PN}/pak64-${MY_PV}.zip )
-	!minimal? ( mirror://sourceforge/pak128-1422-99-16.zip )"
+	minimal? (
+		mirror://sourceforge/${PN}/pak64-${MY_PV}.zip
+		mirror://sourceforge/${PN}/pak64-addon-food-${MY_PV}.zip
+		http://download.simutrans.com/pak64/simupak64-waste-99-13.zip
+	)
+	!minimal? ( mirror://sourceforge/pak128_1-4-3_0-${MY_PV}.zip )"
 
 LICENSE="Artistic"
 SLOT="0"

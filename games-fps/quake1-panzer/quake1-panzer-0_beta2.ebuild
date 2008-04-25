@@ -4,7 +4,7 @@
 
 MOD_DIR="panzer"
 MOD_TITLE="Panzer"
-#MOD_MAP="5rivers_e1"
+MOD_USES_TYRQW=y
 
 inherit games games-mod
 

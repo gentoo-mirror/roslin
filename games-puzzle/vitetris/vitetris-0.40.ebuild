@@ -18,6 +18,15 @@ DEPEND="sys-libs/glibc
 	X? ( x11-libs/libX11 )"
 RDEPEND=""
 
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	sed -i \
+		-e "s|-strip --strip-all|echo|" \
+		Makefile || die "sed Makefile failed"
+}
+
 src_compile() {
 	egamesconf \
 		$(use_with X x) \

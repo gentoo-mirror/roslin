@@ -2,6 +2,10 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  28 Apr 2008; Michał Ziąbkowski <mziab@o2.pl> vbam-9999.ebuild,
+  +files/vbam-cmake.patch:
+  Rejiggered the patch. Added new dep.
+
   23 Apr 2008; Michał Ziąbkowski <mziab@o2.pl> vbam-9999.ebuild:
   Fixed gtk port after many, many tries. Ouch.
 

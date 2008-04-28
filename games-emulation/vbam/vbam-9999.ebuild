@@ -19,7 +19,8 @@ RDEPEND="gtk? ( >=dev-cpp/libglademm-2.4.0
 		>=dev-cpp/glibmm-2.4.0
 		>=dev-cpp/gtkmm-2.4.0
 		>media-libs/portaudio-18.2
-		x11-libs/libXv)
+		x11-libs/libXv
+		>=dev-cpp/gtkglextmm-1.2.0)
 		!games-emulation/visualboyadvance
 		media-libs/libpng
 		sys-libs/zlib
@@ -46,6 +47,7 @@ src_unpack() {
 	epatch "${FILESDIR}/${PN}-cmake.patch"
 	sed -i CMakeLists.txt \
 	    -e "s:GAMES_DATADIR:${GAMES_DATADIR}:" \
+		-e "/C[X]*_FLAGS/d" \
 	    || die "sed failed"
 }
 

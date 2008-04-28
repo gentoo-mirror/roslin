@@ -44,4 +44,6 @@ src_install() {
 	newgamesbin tetris ${PN} || die "dogamesbin failed"
 
 	dodoc README
+
+	prepgamesdirs
 }

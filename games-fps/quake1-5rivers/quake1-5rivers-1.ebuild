@@ -31,4 +31,6 @@ src_install() {
 	doins maps/*s_e* || die "doins failed"
 
 	games-mod_src_install_tidy
+
+	prepgamesdirs
 }

@@ -1,0 +1,7 @@
+# ChangeLog for games-puzzle/vitetris
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  28 Apr 2008; Piotr Szymaniak <lazy_bum@o2.pl> +vitetris-0.40.ebuild:
+  New package.
+

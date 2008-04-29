@@ -28,7 +28,7 @@ RDEPEND="gtk? ( >=dev-cpp/libglademm-2.4.0
 		virtual/opengl"
 
 DEPEND="${RDEPEND}
-		dev-util/cmake
+		>=dev-util/cmake-2.4.0
 		dev-util/pkgconfig"
 		
 
@@ -36,7 +36,7 @@ S="${WORKDIR}/${PN}"
 
 pkg_setup() {
 	if ! use sdl && ! use gtk; then
-	    die "You have to enable USE gtk or sdl, or both"
+	    die "You have to enable USE gtk and/or sdl"
 	fi
 }
 
@@ -44,19 +44,18 @@ src_unpack() {
 	subversion_src_unpack
 	cd ${S}
 	
-	epatch "${FILESDIR}/${PN}-cmake.patch"
 	sed -i CMakeLists.txt \
-	    -e "s:GAMES_DATADIR:${GAMES_DATADIR}:" \
-		-e "/C[X]*_FLAGS/d" \
+	    -e "/C[X]*_FLAGS/d" \
+	    -e "s:\${CMAKE_INSTALL_PREFIX}/::" \
 	    || die "sed failed"
 }
 
 src_compile() {
 	cmake \
-	-DCMAKE_INSTALL_PREFIX="${GAMES_PREFIX}" \
+	-DCMAKE_INSTALL_PREFIX:PATH="${GAMES_PREFIX}" \
 	-DCMAKE_CXX_FLAGS="${CXXFLAGS}" \
 	-DCMAKE_C_FLAGS="${CFLAGS}" \
-	-DDATA_INSTALL_DIR="${GAMES_DATADIR}" \
+	-DDATA_INSTALL_DIR:PATH="${GAMES_DATADIR}/${PN}" \
 	. || die "cmake failed"
 
 	emake || die "emake failed"

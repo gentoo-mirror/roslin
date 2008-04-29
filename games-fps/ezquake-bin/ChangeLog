@@ -2,6 +2,10 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  29 Apr 2008; Piotr Szymaniak <lazy_bum@o2.pl> ezquake-bin-1.8.3.ebuild,
+  +ezquake-bin-1.9.ebuild:
+  Version bump. Fixed some bugs with security USE flag.
+
   23 Mar 2008; Piotr Szymaniak <lazy_bum@o2.pl> +ezquake-bin-1.8.3.ebuild:
   Version bump.
 

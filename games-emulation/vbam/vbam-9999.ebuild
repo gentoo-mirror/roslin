@@ -51,6 +51,15 @@ src_unpack() {
 }
 
 src_compile() {
+	# work around unconditional building of SDL and GTK+ ports
+	use sdl || sed -i CMakeLists.txt \
+		    -e "/CAN_BUILD_VBAM 1/d" \
+		    || die "sed failed"
+	
+	use gtk || sed -i CMakeLists.txt \
+		    -e "/CAN_BUILD_GVBAM 1/d" \
+		    || die "sed failed"
+	
 	cmake \
 	-DCMAKE_INSTALL_PREFIX:PATH="${GAMES_PREFIX}" \
 	-DCMAKE_CXX_FLAGS="${CXXFLAGS}" \

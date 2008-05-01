@@ -47,7 +47,7 @@ src_install() {
 
 	newicon inGame_Bomb/inGame_HealthPotato-001.png ${MY_PN}.png || die
 	games_make_wrapper ${MY_PN} ./${exe} "${dir}"
-	make_desktop_entry ${MY_PN} "Hot Potato" ${MY_PN}.png
+	make_desktop_entry ${MY_PN} "Hot Potato" ${MY_PN}
 
 	prepgamesdirs
 }

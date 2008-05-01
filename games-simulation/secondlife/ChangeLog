@@ -2,6 +2,11 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  01 May 2008; Piotr Szymaniak <lazy_bum@o2.pl> secondlife-1.18.2.0.ebuild,
+  secondlife-1.18.3.5_rc.ebuild, secondlife-1.18.4.1_rc.ebuild,
+  secondlife-1.18.4.3.ebuild:
+  Remove icon extension from desktop entry to match Icon Theme Specification.
+
   13 Jul 2007; MATSUU Takuto <matsuu@gentoo.org>
   -files/secondlife-1.15.1.3-gentoo.patch,
   -files/llwindowssdl_16bit_depth.patch, -files/opensecondlife-svn41.patch,

@@ -154,7 +154,7 @@ src_install() {
 
 	games_make_wrapper secondlife ./secondlife "${dir}"
 	newicon res/ll_icon.ico secondlife.ico || die
-	make_desktop_entry secondlife "Second Life" secondlife.ico
+	make_desktop_entry secondlife "Second Life" secondlife
 
 	dodoc releasenotes.txt
 	newdoc licenses-linux.txt licenses.txt

@@ -45,7 +45,7 @@ src_install() {
 	make_desktop_entry ${PN} "Tile Racer" ${PN}128
 
 #	games_make_wrapper ${PN}low "${dir}/${PN}Low.sh"
-#	make_desktop_entry ${PN}low "Tile Racer - Low" ${PN}128.png
+#	make_desktop_entry ${PN}low "Tile Racer - Low" ${PN}128
 
 	prepgamesdirs
 }

@@ -30,18 +30,14 @@ src_unpack() {
 
 src_compile() {
 	emake I_AM_CONFIGURED=yes \
-		SYSTEM=\"linux\" \
-		DATADIR=\"${GAMES_DATADIR}/${PN}\" \
+		SYSTEM="linux" \
+		DATADIR="${GAMES_DATADIR}/${PN}" \
 		cdogs || die "emake failed"
 }
 
 src_install() {
-#	emake DESTDIR=\"${D}\" \
-#		BINDIR=\"${GAMES_BINDIR}\" \
-#		DOCDIR=\"/usr/share/doc/${PN}\" \
-#		install || die "emake install failed"
 	newicon ../${CDOGS_DATA}/cdogs_icon.png ${PN}.png
-	make_desktop_entry "cdogs -fullscreen" ${PN} ${PN}.png
+	make_desktop_entry "cdogs -fullscreen" ${PN} ${PN}
 
 	dobin cdogs
 

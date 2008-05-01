@@ -47,7 +47,7 @@ src_install() {
 
 	# Needs + at end of command-line
 	games_make_wrapper ${PN} "qudos +set game dday +set deathmatch 1 +"
-	make_desktop_entry ${PN} "QuDos - D-Day: Normandy" qudos.xpm
+	make_desktop_entry ${PN} "QuDos - D-Day: Normandy" qudos
 
 	prepgamesdirs
 }

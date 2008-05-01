@@ -63,7 +63,7 @@ src_install() {
 
 	echo ">>> creating icon and desktop entry ..."
 	doicon share/OpenLieroX.svg
-	make_desktop_entry openlierox OpenLieroX OpenLieroX.svg Game
+	make_desktop_entry openlierox OpenLieroX OpenLieroX Game
 
 	prepgamesdirs
 }

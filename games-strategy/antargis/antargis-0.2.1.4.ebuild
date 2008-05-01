@@ -39,6 +39,6 @@ src_install() {
 	dodoc AUTHORS ChangeLog COPYING INSTALL NEWS README || die "dodoc failed"
 	mv gui/data/sword.png "${PN}.png"
 	doicon "${PN}.png" || die "doicon failed"
-	make_desktop_entry "${PN}" "Battles of Antargis" "${PN}.png"
+	make_desktop_entry "${PN}" "Battles of Antargis" "${PN}"
 	prepgamesdirs
 }

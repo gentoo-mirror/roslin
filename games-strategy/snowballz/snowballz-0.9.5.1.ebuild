@@ -26,6 +26,6 @@ src_install() {
 	prepgamesdirs
 	dodoc README.txt
 	newicon data/snow.png ${PN}.png
-	make_desktop_entry ${PN} "Snowballz" ${PN}.png Game
+	make_desktop_entry ${PN} "Snowballz" ${PN} Game
 	games_make_wrapper ${PN} "python ./snowballz.py" "${GAMES_DATADIR}/${PN}"
 }

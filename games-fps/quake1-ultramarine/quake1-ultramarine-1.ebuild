@@ -32,7 +32,7 @@ src_install() {
 	if use X ; then
 		# Wrapper for darkplaces engine
 		games_make_wrapper darkplaces-${MY_PN} "darkplaces -game ${MOD} +map ${MOD}"
-		make_desktop_entry darkplaces-${MY_PN} "Dark Places (Ultramarine)" darkplaces.png
+		make_desktop_entry darkplaces-${MY_PN} "Dark Places (Ultramarine)" darkplaces
 	fi
 
 	dodoc "${MOD}"/*.txt

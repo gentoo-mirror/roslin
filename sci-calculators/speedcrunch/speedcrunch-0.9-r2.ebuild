@@ -49,5 +49,5 @@ src_install()
 
 	# and finally, create a desktop entry
 	newicon ${MY_ICON} ${PN}.png
-	make_desktop_entry ${MY_BIN} "SpeedCrunch" ${PN}.png "Qt;Calculator;Utility"
+	make_desktop_entry ${MY_BIN} "SpeedCrunch" ${PN} "Qt;Calculator;Utility"
 }

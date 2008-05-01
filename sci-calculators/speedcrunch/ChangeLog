@@ -2,6 +2,9 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  01 May 2008; Michał Ziąbkowski <mziab@o2.pl> speedcrunch-0.9-r2.ebuild:
+  Removed icon extension from desktop entry to match Icon Theme Specification.
+
   03 Apr 2008; Michał Ziąbkowski <mziab@o2.pl> +speedcrunch-0.9-r2.ebuild,
   +files/speedcrunch-0.9-adjust-paths.patch, +speedcrunch-0.10.ebuild:
   Added ebuild from #78113. Bumped and cleaned up while I was at it.

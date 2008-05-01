@@ -1,4 +1,4 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2008 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 
 inherit eutils games
@@ -51,7 +51,7 @@ src_install() {
 	# install icon, make desktop entry, link binary into bindir
 	newicon laby.xpm ${MY_PN}.xpm
 	games_make_wrapper ${MY_PN} "${gamedir}/laby" "${gamedir}"
-	make_desktop_entry "/usr/games/bin/${MY_PN}" "Lost Labyrinth" ${MY_PN}.xpm "Application;Game;AdventureGame;Roleplaying"
+	make_desktop_entry "/usr/games/bin/${MY_PN}" "Lost Labyrinth" ${MY_PN} "Application;Game;AdventureGame;Roleplaying"
 
 	# check and correct permissions
 	prepgamesdirs

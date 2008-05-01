@@ -22,7 +22,7 @@ SRC_URI="http://icculus.org/twilight/${PN}/files/${MY_ENGINE}
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="alsa cdinstall cdsound debug dedicated demo doe lights opengl oss sdl skins soa textures"
+IUSE="alsa cdinstall cdsound debug dedicated demo lights opengl oss sdl skins textures"
 
 UIRDEPEND="media-libs/jpeg
 	media-libs/libogg
@@ -43,9 +43,7 @@ UIDEPEND="x11-proto/xextproto
 RDEPEND="net-misc/curl
 	cdinstall? ( games-fps/quake1-data )
 	demo? ( games-fps/quake1-demodata )
-	doe? ( games-fps/quake1-doe )
 	skins? ( games-fps/quake1-skins )
-	soa? ( games-fps/quake1-soa )
 	textures? ( >=games-fps/quake1-textures-20050820 )
 	opengl? ( ${UIRDEPEND} )
 	!opengl? ( sdl? ( ${UIRDEPEND} ) )
@@ -165,7 +163,6 @@ src_install() {
 			# Full version takes precedence over demo
 			make_desktop_entry ${PN} "Dark Places"
 		fi
-		# The wrapper & desktop entry for doe & soe are in their own ebuilds
 	fi
 
 	if use dedicated ; then

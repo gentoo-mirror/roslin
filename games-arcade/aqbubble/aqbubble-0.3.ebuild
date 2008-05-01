@@ -34,7 +34,7 @@ src_install() {
 	
 	dodoc README README_ES || die "installing docs failed"
 
-	make_desktop_entry ${PN} "Aquatic Bubble" ${PN}.xpm
+	make_desktop_entry ${PN} "Aquatic Bubble" ${PN}
 
 	prepgamesdirs
 }

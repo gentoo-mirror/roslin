@@ -28,7 +28,7 @@ src_install() {
 
 	dodoc *.txt
 
-	make_desktop_entry ${PN} "Dynamite" ${PN}.ico Game
+	make_desktop_entry ${PN} "Dynamite" ${PN} Game
 	games_make_wrapper ${PN} "python ./play.py" "${GAMES_DATADIR}/${PN}"
 
 	prepgamesdirs

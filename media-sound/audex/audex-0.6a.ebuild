@@ -37,7 +37,7 @@ src_compile() {
 src_install() {
 	cd "${S}/build"
 	make DESTDIR="${D}" install || die
-	make_desktop_entry "${PN}" "Audex" /usr/share/icons/hicolor/128x128/apps/audex.png \
+	make_desktop_entry "${PN}" "Audex" audex \
 		"AudioVideo;Audio"
 }
 

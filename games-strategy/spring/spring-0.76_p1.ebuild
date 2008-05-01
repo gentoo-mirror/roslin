@@ -72,7 +72,7 @@ src_install () {
 	scons install || die "install failed"
 
 	newicon "${FILESDIR}/spring.png" ${PN}.png
-	make_desktop_entry ${PN} "Spring RTS" ${PN}.png
+	make_desktop_entry ${PN} "Spring RTS" ${PN}
 
 	insinto /etc/${PN}
 	echo '$HOME'"/.${PN}" > ${WORKDIR}/datadir

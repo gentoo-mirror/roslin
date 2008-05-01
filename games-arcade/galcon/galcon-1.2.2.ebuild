@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header:
+# $Header: $
 
 inherit games
 
@@ -33,7 +33,7 @@ src_install() {
 	newicon icon64.png ${PN}.png
 
 	games_make_wrapper ${PN} ./${PN} "${dir}" "${dir}"
+	make_desktop_entry ${PN} "Galcon" ${PN}
 
 	prepgamesdirs
-	make_desktop_entry ${PN} "Galcon" ${PN}.png
 }

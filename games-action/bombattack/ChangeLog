@@ -1,6 +1,9 @@
 # ChangeLog for games-action/bombattack
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 
+  01 May 2008; Piotr Szymaniak <lazy_bum@o2.pl> bombattack-1.0.ebuild:
+  Remove icon extension from desktop entry to match Icon Theme Specification.
+
 *bombattack-1.0.ebuild (23 Oct 2007)
 
   23 Oct 2007; Piotr Szymaniak <lazy_bum@o2.pl> +bombattack-1.0.ebuild:

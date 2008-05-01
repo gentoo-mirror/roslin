@@ -73,11 +73,11 @@ src_install() {
 
 	newicon data/icon.png ${PN}.png
 
-	make_desktop_entry ${PN} "Bomb Attack" ${PN}.png Game
+	make_desktop_entry ${PN} "Bomb Attack" ${PN} Game
 	games_make_wrapper ${PN} "./${PN}" "${GAMES_DATADIR}/${PN}"
 
 	if use editor ; then
-		make_desktop_entry ${PN} "Bomb Attack - Level Editor" ${PN}.png Game
+		make_desktop_entry ${PN} "Bomb Attack - Level Editor" ${PN} Game
 		games_make_wrapper ${PN}-leveleditor "./${PN}-leveleditor" "${GAMES_DATADIR}/${PN}"
 	fi
 

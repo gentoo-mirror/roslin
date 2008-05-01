@@ -37,7 +37,7 @@ src_install() {
 
 	# Wrapper for darkplaces engine. Will probably work with other engines.
 	games_make_wrapper darkplaces-zerstorer-demo "darkplaces -game ${MOD}"
-	make_desktop_entry darkplaces-zerstorer-demo "Dark Places (Zerstorer-demo)" darkplaces.png
+	make_desktop_entry darkplaces-zerstorer-demo "Dark Places (Zerstorer-demo)" darkplaces
 
 	dodoc *.txt
 

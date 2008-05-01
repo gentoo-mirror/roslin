@@ -55,7 +55,7 @@ src_install() {
 	make_desktop_entry ${PN} FreeLords
 	if use editor ; then
 		doicon dat/various/${PN}_editor.png
-		make_desktop_entry ${PN}_editor "LordsAWar Editor" ${PN}_editor.png
+		make_desktop_entry ${PN}_editor "LordsAWar Editor" ${PN}_editor
 	fi
 	dodoc AUTHORS ChangeLog HACKER NEWS README TODO doc/*.pdf
 	prepgamesdirs

@@ -71,7 +71,7 @@ src_install() {
 	dobin ${PN} || die "dobin ${PN} failed"
 
 	newicon packages/icons/crrcsim.xpm ${PN}.xpm || die "newicon"
-	make_desktop_entry ${PN} "CRRCsim" ${PN}.xpm
+	make_desktop_entry ${PN} "CRRCsim" ${PN}
 
 	prepgamesdirs
 }

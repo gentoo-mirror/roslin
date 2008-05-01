@@ -32,7 +32,7 @@ src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 
 	# Has no icon, so use quake2 icon if available
-	make_desktop_entry ${PN} "Quetoo" quake2.xpm
+	make_desktop_entry ${PN} "Quetoo" quake2
 
 	dodoc README
 

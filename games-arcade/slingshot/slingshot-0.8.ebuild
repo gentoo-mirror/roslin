@@ -29,7 +29,7 @@ src_install() {
 	insinto "${GAMES_DATADIR}/${PN}"
 	doins -r data *.py
 
-	make_desktop_entry ${PN} "Slingshot" ${PN}.png Game
+	make_desktop_entry ${PN} "Slingshot" ${PN} Game
 	games_make_wrapper ${PN} "python ./slingshot.py" "${GAMES_DATADIR}/${PN}"
 
 	prepgamesdirs

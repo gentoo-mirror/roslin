@@ -75,7 +75,7 @@ src_install () {
 	mv spring ${PN}
 
 	newicon "${FILESDIR}/spring.png" ${PN}.png
-	make_desktop_entry ${PN} "Spring RTS - svn" ${PN}.png
+	make_desktop_entry ${PN} "Spring RTS - svn" ${PN}
 
 	insinto /etc/${PN}
 	echo '$HOME'"/.${PN}" > ${WORKDIR}/datadir

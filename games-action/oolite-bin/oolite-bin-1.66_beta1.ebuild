@@ -115,7 +115,7 @@ src_install() {
 	doicon "${D}/${dir}/oolite.app/Contents/Resources/Textures/oolite-logo.png" \
 		|| die "doicon"
 	games_make_wrapper ${MY_PN} "${dir}/bin/${MY_PN}" "${dir}"
-	make_desktop_entry ${MY_PN} "Oolite" oolite-logo.png
+	make_desktop_entry ${MY_PN} "Oolite" oolite-logo
 
 	prepgamesdirs
 }

@@ -86,7 +86,7 @@ src_install() {
 
 	games_make_wrapper secondlife-bin ./secondlife "${dir}" "${dir}"/lib
 	newicon secondlife.ico secondlife-bin.ico
-	make_desktop_entry secondlife-bin "Second Life(bin)" secondlife-bin.ico
+	make_desktop_entry secondlife-bin "Second Life(bin)" secondlife-bin
 
 	prepgamesdirs
 }

@@ -1,4 +1,4 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -158,15 +158,15 @@ src_install() {
 
 	use opengl && \
 		dogamesbin "${MY_PN}/${PN}" && \
-		make_desktop_entry "${PN}" "KM Quake 2" "${PN}.png"
+		make_desktop_entry "${PN}" "KM Quake 2" "${PN}"
 
 	use sdl && \
 		dogamesbin "${MY_PN}/${PN}-sdl" && \
-		make_desktop_entry "${PN}-sdl" "KM Quake 2 SDL" "${PN}.png"
+		make_desktop_entry "${PN}-sdl" "KM Quake 2 SDL" "${PN}"
 
 	use demo && \
 		games_make_wrapper "${PN}-demo" "${PN} +set game demo" && \
-		make_desktop_entry "${PN}-demo" "KM Quake 2 (Demo)" "${PN}.png"
+		make_desktop_entry "${PN}-demo" "KM Quake 2 (Demo)" "${PN}"
 
 	dodoc *.{txt,unix}
 	prepgamesdirs

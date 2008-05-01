@@ -37,7 +37,7 @@ src_install() {
 
 	games_make_wrapper ${PN} "python kimboot.py" "${dir}"
 	doicon ${PN}.png || die
-	make_desktop_entry ${PN} "Kimboot" ${PN}.png
+	make_desktop_entry ${PN} "Kimboot" ${PN}
 
 	dodoc *.txt
 

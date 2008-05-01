@@ -1,0 +1,7 @@
+# ChangeLog for games-arcade/kimboot
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  01 May 2008; Piotr Szymaniak <lazy_bum@o2.pl> kimboot-1.00.ebuild:
+  Remove icon extension from desktop entry to match Icon Theme Specification.
+

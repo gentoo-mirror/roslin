@@ -170,15 +170,15 @@ src_install() {
 	rm -rf "${D}/${dir}/${PN}/doc"
 
 	if use cdinstall ; then
-		make_desktop_entry ${PN} "JoeQuake" ${PN}.png
+		make_desktop_entry ${PN} "JoeQuake" ${PN}
 	fi
 	if use doe ; then
 		games_make_wrapper ${PN}-doe "${PN} -rogue"
-		make_desktop_entry ${PN}-doe "JoeQuake - Dissolution of Eternity" ${PN}.png
+		make_desktop_entry ${PN}-doe "JoeQuake - Dissolution of Eternity" ${PN}
 	fi
 	if use soa ; then
 		games_make_wrapper ${PN}-soa "${PN} -hipnotic"
-		make_desktop_entry ${PN}-soa "JoeQuake - Scourge of Armagon" ${PN}.png
+		make_desktop_entry ${PN}-soa "JoeQuake - Scourge of Armagon" ${PN}
 	fi
 
 	dodoc "${WORKDIR}/${PN}/doc"/*

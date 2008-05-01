@@ -111,7 +111,7 @@ src_install() {
 	fi
 
 	games_make_wrapper ${PN} "./penumbrademo.bin" "${dir}" "${dir}"/lib
-	make_desktop_entry ${PN} "Penumbra: Overture (Demo)" ${PN}.png
+	make_desktop_entry ${PN} "Penumbra: Overture (Demo)" ${PN}
 
 	prepgamesdirs
 }

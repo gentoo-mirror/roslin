@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/songbird-bin
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 
+  01 May 2008; Piotr Szymaniak <lazy_bum@o2.pl> -songbird-bin-0.4.0.ebuild,
+  songbird-bin-0.5.ebuild, songbird-bin-0.5-r1.ebuild:
+  Remove icon extension from desktop entry to match Icon Theme Specification.
+
   29 Mar 2008; Piotr Szymaniak <lazy_bum@o2.pl> +songbird-bin-0.5-r1.ebuild:
   Poe fixed some stuff.
 

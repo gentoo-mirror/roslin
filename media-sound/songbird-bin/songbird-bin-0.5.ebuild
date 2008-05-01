@@ -68,7 +68,7 @@ src_install() {
    dosym /opt/songbird/songbird /opt/bin/songbird-bin
 
    newicon ${S}/chrome/icons/default/default.xpm ${PN}.xpm
-   make_desktop_entry ${PN} ${PN} ${PN}.xpm "AudioVideo;Player"
+   make_desktop_entry ${PN} ${PN} ${PN} "AudioVideo;Player"
 }
 
 pkg_postinst() {

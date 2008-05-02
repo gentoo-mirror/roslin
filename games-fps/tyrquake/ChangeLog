@@ -1,6 +1,9 @@
 # ChangeLog for games-fps/tyrquake
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 
+  02 May 2008; Piotr Szymaniak <lazy_bum@o2.pl> +tyrquake-0.59.ebuild:
+  Version bump.
+
   02 May 2008; Piotr Szymaniak <lazy_bum@o2.pl> tyrquake-9999.ebuild:
   Fixed git version.
 

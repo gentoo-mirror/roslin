@@ -6,7 +6,7 @@ inherit eutils games
 
 MY_P="${P/qw/quake}"
 
-DESCRIPTION="Conservative Quake 1 engine"
+DESCRIPTION="Conservative Quake 1 engine, QuakeWorld client/server"
 HOMEPAGE="http://disenchant.net/engine.html"
 SRC_URI="http://disenchant.net/files/engine/${MY_P}.tar.gz"
 

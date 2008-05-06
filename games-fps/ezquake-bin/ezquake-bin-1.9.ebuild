@@ -8,14 +8,15 @@ P_N="${PN/-bin/}"
 
 DESCRIPTION="Quakeworld client with mqwcl functionality and many more features."
 HOMEPAGE="http://ezquake.sf.net/"
-SRC_URI="mirror://sourceforge/${P_N}/${P_N}_linux-x86_${PV}.tar.gz
-	security? ( http://uttergrottan.localghost.net/${P_N}/security/${P_N}_security_1.8.2.zip )"
+SRC_URI="mirror://sourceforge/${P_N}/${P_N}_linux-x86_${PV}.tar.gz"
+#	security? ( http://uttergrottan.localghost.net/${P_N}/security/${P_N}_security_1.8.2.zip )
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86"
 RESTRICT="strip"
-IUSE="cdinstall opengl security svga tcl"
+IUSE="cdinstall opengl svga tcl"
+#IUSE="security"
 
 QA_EXECSTACK_x86="${GAMES_PREFIX_OPT:1}/ezquake-bin/ezquake-gl.glx
 	${GAMES_PREFIX_OPT:1}/ezquake-bin/ezquake.x11
@@ -31,8 +32,8 @@ RDEPEND=">=dev-libs/expat-2.0
 	opengl? ( virtual/opengl x11-libs/libXext )
 	cdinstall? ( games-fps/quake1-data )
 	tcl? ( dev-lang/tcl )"
-DEPEND="${RDEPEND}
-	security? ( app-arch/zip )"
+DEPEND="${RDEPEND}"
+#	security? ( app-arch/zip )"
 dir=${GAMES_PREFIX_OPT}/${PN}
 
 src_install() {
@@ -44,7 +45,7 @@ src_install() {
 	use opengl && BINS="${BINS} ezquake-gl.glx"
 
 	doexe ${BINS} || die "doexe"
-	use security && `doexe "${P_N}-security.so" || die "doexe"`
+#	use security && `doexe "${P_N}-security.so" || die "doexe"`
 	doins -r ezquake qw || die "cp dirs"
 
 	dosym "${GAMES_DATADIR}"/quake1/id1 "${dir}"/id1

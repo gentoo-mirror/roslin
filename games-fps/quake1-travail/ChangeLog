@@ -1,0 +1,8 @@
+# ChangeLog for games-fps/quake1-travail
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  11 May 2008; Piotr Szymaniak <lazy_bum@o2.pl> -quake1-travail-1.ebuild,
+  +quake1-travail-1-r1.ebuild:
+  Added "soundtrack" USE flag, removed obsolete joequake support.
+

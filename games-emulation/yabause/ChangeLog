@@ -2,6 +2,9 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  12 May 2008; Michał Ziąbkowski <mziab@o2.pl> -yabause-0.9.4.ebuild:
+  Removed. Available in portage.
+
   28 Mar 2008; Michał Ziąbkowski <mziab@o2.pl> yabause-0.9.4.ebuild:
   Fixed bad path for one of the files.
 

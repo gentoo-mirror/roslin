@@ -4,6 +4,7 @@
 
 MOD_DIR="contract"
 MOD_TITLE="Contract Revoked"
+MOD_USES_TYRQUAKE=y
 
 inherit games games-mod
 

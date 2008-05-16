@@ -2,6 +2,10 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  16 May 2008; Michał Ziąbkowski <mziab@o2.pl> +files/joymap.dat,
+  +files/mess.ini.in, +files/vector.ini:
+  Oops, forgot about the new files.
+
   27 Mar 2008; Michał Ziąbkowski <mziab@o2.pl> +sdlmess-0.124.ebuild:
   Bumped.
 

@@ -1,7 +1,3 @@
-# Copyright 1999-2008 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/sdlmame/sdlmame-0.124_p3.ebuild,v 1.6 2008/04/24 22:00:23 drac Exp $
-
 inherit eutils flag-o-matic games
 
 DESCRIPTION="Multiple Arcade Machine Emulator (SDL)"
@@ -112,7 +108,7 @@ src_compile() {
 
 	emake \
 		NAME="${PN}" \
-		OPT_FLAGS='-DINI_PATH=\"\$$HOME/.sdlmame\;'"${GAMES_SYSCONFDIR}/${PN}"'\"'" ${CFLAGS}" \
+		OPT_FLAGS='-DINI_PATH=\"\$$HOME/.sdlmess\;'"${GAMES_SYSCONFDIR}/${PN}"'\"'" ${CFLAGS}" \
 		SUFFIX="" \
 		${make_opts} \
 		-f makefile.sdl \
@@ -154,7 +150,7 @@ pkg_postinst() {
 	games_pkg_postinst
 
 	elog "It's strongly recommended that you change either the system-wide"
-	elog "mame.ini at \"${GAMES_SYSCONFDIR}/${PN}\" or use a per-user setup at \$HOME/.${PN}"
+	elog "mess.ini at \"${GAMES_SYSCONFDIR}/${PN}\" or use a per-user setup at \$HOME/.${PN}"
 
 	if use opengl; then
 		echo

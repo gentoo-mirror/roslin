@@ -1,0 +1,8 @@
+# ChangeLog for games-rpg/penumbra-blackplague-demo
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  19 May 2008; Piotr Szymaniak <lazy_bum@o2.pl>
+  +penumbra-blackplague-demo-1.0.1.ebuild:
+  New package.
+

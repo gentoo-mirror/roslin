@@ -2,6 +2,10 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  20 May 2008; Michał Ziąbkowski <mziab@o2.pl>
+  -jabbin-2.0_beta2-r1.ebuild:
+  Removed old, non-working ebuild.
+
   15 Mar 2008; Michał Ziąbkowski <mziab@o2.pl> jabbin-2.0_beta2-r2.ebuild:
   Hmm, it seems configure isn't really needed. Weird.
 

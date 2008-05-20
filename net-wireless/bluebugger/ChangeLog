@@ -1,7 +1,0 @@
-# ChangeLog for net-wireless/bluebugger
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-
-*bluebugger-0.1 (29 Dec 2007)
-
-  29 Dec 2007; Piotr Szymaniak <lazy_bum@o2.pl> +bluebugger-0.1.ebuild:
-  Initial ebuild.

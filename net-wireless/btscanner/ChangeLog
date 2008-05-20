@@ -1,7 +1,0 @@
-# ChangeLog for net-wireless/btscanner
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-
-*btscanner-2.1.ebuild (16 Nov 2007)
-
-  16 Nov 2007; Piotr Szymaniak <lazy_bum@o2.pl> +btscanner-2.1.ebuild:
-  Initial ebuild.

@@ -2,6 +2,10 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  20 May 2008; Michał Ziąbkowski <mziab@o2.pl>
+  -kadu-default_sms-0.6.0.ebuild:
+  Removed cruft.
+
   05 May 2008; Michał Ziąbkowski <mziab@o2.pl>
   +kadu-default_sms-0.6.0.1.ebuild:
   Bumped.

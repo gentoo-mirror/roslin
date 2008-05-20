@@ -13,9 +13,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="gnome"
 
-RDEPEND="gnome? ( >=gnome-base/libgnomeui-2.12.0 )
+RDEPEND="gnome? ( >=gnome-base/libgnomeui-2.14.0 )
 	>=dev-libs/glib-2.14.0
-	>=x11-libs/gtk+-2.10.0
+	>=x11-libs/gtk+-2.12.0
 	>=gnome-base/libglade-2.6.0
 	>=x11-themes/gnome-icon-theme-2.18.0
 	>=dev-db/sqlite-3.0.0

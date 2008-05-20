@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/gnome-scan
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 
+  20 May 2008; Michał Ziąbkowski <mziab@o2.pl> -gnome-scan-0.5.2.ebuild,
+  -gnome-scan-0.5.3-r461.ebuild:
+  A bit of clean-up.
+
   14 Mar 2008; Michał Ziąbkowski <mziab@o2.pl> gnome-scan-0.6.ebuild:
   Scrollkeeper wasn't needed after all. Builds fine without it.
 

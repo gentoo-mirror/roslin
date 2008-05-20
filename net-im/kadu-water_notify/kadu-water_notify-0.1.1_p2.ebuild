@@ -1,4 +1,4 @@
-SRC_URI="http://kadu.jarzebski.pl/water_notify-0.1.1-try2.tar.bz2"
+SRC_URI="http://kadu.jarzebski.pl/water_notify-${PV/_p/-try}.tar.bz2"
 
 inherit kadu
 

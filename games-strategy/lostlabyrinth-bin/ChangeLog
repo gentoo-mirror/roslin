@@ -3,6 +3,10 @@
 # $Header: $
 
   20 May 2008; Piotr Szymaniak <lazy_bum@o2.pl>
+  -lostlabyrinth-bin-2.9.0.ebuild:
+  Will be removed in a minute or so.
+
+  20 May 2008; Piotr Szymaniak <lazy_bum@o2.pl>
   +lostlabyrinth-bin-2.9.1.ebuild:
   Version bump.
 

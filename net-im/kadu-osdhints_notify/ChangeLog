@@ -2,6 +2,10 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  20 May 2008; Michał Ziąbkowski <mziab@o2.pl>
+  -kadu-osdhints_notify-0.4.1.ebuild:
+  The old version isn't available, so removing.
+
   18 May 2008; Piotr Szymaniak <lazy_bum@o2.pl>
   +kadu-osdhints_notify-0.4.2.ebuild:
   Version bump.

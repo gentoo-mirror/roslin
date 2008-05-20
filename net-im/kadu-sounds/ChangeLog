@@ -2,6 +2,9 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  20 May 2008; Michał Ziąbkowski <mziab@o2.pl> -kadu-sounds-1.1.ebuild:
+  Removed cruft.
+
   13 Mar 2008; Michał Ziąbkowski <mziab@o2.pl> +kadu-sounds-1.1-r1.ebuild:
   Fixed variable names in sound.conf, thus making the themes actually work.
   Added a small fix to kadu.eclass while I was at it.

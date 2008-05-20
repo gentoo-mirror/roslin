@@ -1,0 +1,20 @@
+--- qmc2/Makefile.orig	2008-03-26 11:34:12.000000000 +0100
++++ qmc2/Makefile	2008-03-28 19:56:53.719575780 +0100
+@@ -188,7 +188,7 @@
+ 
+ install: bin
+ 	@echo "Installing QMC2 v$(VERSION)"
+-	@$(MKDIR) $(DESTDIR)/$(PREFIX)/bin $(DESTDIR)/$(PREFIX)/share/$(PROJECT) $(DESTDIR)/$(SYSCONFDIR)/$(PROJECT)
++	@$(MKDIR) $(DESTDIR)/$(PREFIX)/bin $(DESTDIR)/$(DATADIR)/$(PROJECT) $(DESTDIR)/$(SYSCONFDIR)/$(PROJECT)
+ 	@$(RSYNC) --exclude '*svn*' ./$(PROJECT) $(DESTDIR)/$(PREFIX)/bin
+ 	@$(RSYNC) --exclude '*svn*' ./data/lng/*.qm $(DESTDIR)/$(DATADIR)/$(PROJECT)/lng/
+ 	@$(RSYNC) --exclude '*svn*' ./data/opt $(DESTDIR)/$(DATADIR)/$(PROJECT)/
+@@ -196,7 +196,7 @@
+ 	@$(RSYNC) --exclude '*svn*' ./data/doc $(DESTDIR)/$(DATADIR)/$(PROJECT)/
+ 	@$(RSYNC) --exclude '*svn*' ./data/prv $(DESTDIR)/$(DATADIR)/$(PROJECT)/
+ 	@$(RSYNC) --exclude '*svn*' ./data/fly $(DESTDIR)/$(DATADIR)/$(PROJECT)/
+-	@$(SED) -e "s_DATADIR_$(DATADIR)_g" < ./inst/$(PROJECT).ini.template > $(DESTDIR)/$(SYSCONFDIR)/$(PROJECT)/$(PROJECT).ini
++	@$(SED) -e "s:DATADIR:$(DATADIR):g" < ./inst/$(PROJECT).ini.template > $(DESTDIR)/$(SYSCONFDIR)/$(PROJECT)/$(PROJECT).ini
+ 	@echo "Installation complete"
+ 
+ clean: Makefile.qmake

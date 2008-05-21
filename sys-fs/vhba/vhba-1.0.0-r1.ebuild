@@ -30,11 +30,13 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-        cd ${S}
-        epatch "${FILESDIR}"/makefile.patch || die "Failed to patch Makefile"
-        if kernel_is ge 2 6 24 ; then
-                epatch "${FILESDIR}"/scatterlist.patch || die "Failed to patch scatterlist"
-        fi
+	cd ${S}
+	epatch "${FILESDIR}"/makefile.patch || die "Failed to patch Makefile"
+
+	if kernel_is ge 2 6 24 ; then
+		epatch "${FILESDIR}"/scatterlist.patch || die "Failed to patch scatterlist"
+	fi
+
 	if kernel_is 2 6 25 ; then
 		einfo "Patching scsi_cmnd"
 		epatch "${FILESDIR}"/scsicmnd.patch || die "Failed to patch scsicmnd"

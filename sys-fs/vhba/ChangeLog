@@ -2,6 +2,9 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  21 May 2008; Michał Ziąbkowski <mziab@o2.pl> vhba-1.0.0-r1.ebuild:
+  Cosmetic fixes.
+
   18 Apr 2008; Michał Ziąbkowski <mziab@o2.pl> vhba-1.0.0.ebuild,
   +vhba-1.0.0-r1.ebuild, +files/scsicmnd.patch:
   Added patch, so it compiles with 2.6.25. Updated ebuild and cleaned up a bit. Fixed license.

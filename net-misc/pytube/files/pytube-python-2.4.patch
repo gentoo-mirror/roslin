@@ -1,0 +1,11 @@
+--- pytube.orig	2008-05-03 04:38:54.000000000 +0200
++++ pytube.py	2008-05-21 21:44:19.619703882 +0200
+@@ -23,7 +23,7 @@
+ 	import copy
+ 	import urllib
+ 	import urllib2
+-	from xml.etree import cElementTree
++	import cElementTree as ElementTree
+ except:
+ 	sys.exit(1)
+ try:

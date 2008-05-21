@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: overlay lapis ebuild deposu Exp $
 
-inherit eutils
+inherit eutils python
 
 DESCRIPTION="PyTube is a GUI for youtube-dl and others. It allows you to do multiple tasks like downloading and converting videos from YouTube.com"
 HOMEPAGE="http://bashterritory.com/pytube"
@@ -36,8 +36,9 @@ src_unpack() {
      cd ${S}
      sed -i -e "s/\.\/pytube/python pytube/" pytube
      
-     # a quick workaround
-     sed -i -e "s/from xml.etree //" pytube.py
+     # a quick workaround for python 2.4
+     python_version
+     [ "${PYVER_MAJOR}.${PYVER_MINOR}" = "2.4" ] && epatch ${FILESDIR}/${PN}-python-2.4.patch
 }
 
 src_install() {
@@ -48,10 +49,6 @@ src_install() {
     doins pytube.desktop
        
     insinto /usr/share/pytube
-    
-    # we don't want some files to get installed in libdir
-    rm pytube pytube.png LICENSE.txt
-    
-    # copy the rest recursively
-    doins -r *
+    doins -r stream2hdd
+    doins *
 }

@@ -37,7 +37,7 @@ pkg_setup()
 		die "Please re-emerge x11-libs/qt-3.x with the 'gif' flag set"
 	fi
 	
-	if has_version "<=net-im/kadu-core-${MIN_REQ}"
+	if has_version "<net-im/kadu-core-${MIN_REQ}"
 	then
 		die "Please unmerge old Kadu before you install this version"
 	fi

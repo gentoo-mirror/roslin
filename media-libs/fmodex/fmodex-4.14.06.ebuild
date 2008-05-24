@@ -41,5 +41,5 @@ src_install() {
 	dodoc fmoddesignerapi/README.TXT
 	dodoc documentation/{LICENSE.TXT,revision.txt}
 	insinto /usr/share/doc/${P}
-	doins documentation/fmodex.pdf
+	doins documentation/fmodex.chm
 }

@@ -37,7 +37,7 @@ src_unpack() {
 		epatch "${FILESDIR}"/scatterlist.patch || die "Failed to patch scatterlist"
 	fi
 
-	if kernel_is 2 6 25 ; then
+	if kernel_is ge 2 6 25 ; then
 		einfo "Patching scsi_cmnd"
 		epatch "${FILESDIR}"/scsicmnd.patch || die "Failed to patch scsicmnd"
 	fi

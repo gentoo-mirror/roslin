@@ -3,5 +3,8 @@
 
 +libass-0.9.4.ebuild
 
+  24 May 2008; Michał Ziąbkowski <mziab@o2.pl> +libass-0.9.5.ebuild:
+  Bumped.
+
   05 Oct 2007; Piotr Szymaniak <lazy_bum@o2.pl> +libass-0.9.4.ebuild:
   New ebuild.

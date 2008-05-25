@@ -2,6 +2,10 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  25 May 2008; Michał Ziąbkowski <mziab@o2.pl>
+  +gnome-video-arcade-0.6.1.1.ebuild:
+  Bumped.
+
   20 May 2008; Michał Ziąbkowski <mziab@o2.pl>
   -gnome-video-arcade-0.5.6.ebuild, +gnome-video-arcade-0.6.1.ebuild:
   Bumped. Removed oldest ebuild.

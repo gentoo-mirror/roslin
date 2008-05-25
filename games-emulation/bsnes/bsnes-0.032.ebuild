@@ -17,6 +17,7 @@ IUSE="jma zlib"
 DEPEND="media-libs/libao
 	media-libs/libsdl
 	media-libs/openal
+	media-libs/alsa-lib
 	x11-libs/gtk+
 	x11-libs/libXtst
 	virtual/opengl"

@@ -2,6 +2,9 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  27 May 2008; Michał Ziąbkowski <mziab@o2.pl> +speedcrunch-0.10.1.ebuild:
+  Bumped.
+
   20 May 2008; Michał Ziąbkowski <mziab@o2.pl> -speedcrunch-0.9-r2.ebuild:
   Removed cruft.
 

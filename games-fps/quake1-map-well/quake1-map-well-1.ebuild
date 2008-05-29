@@ -7,7 +7,7 @@ MOD_USES_JOEQUAKE=y
 MOD_USES_TYRQUAKE=y
 
 MOD_DIR="id1"
-MOD_MAP="${PN/quake1-/}"
+MOD_MAP="${PN/quake1-map-/}"
 MOD_TITLE="The Well of Lost Souls"
 
 inherit eutils games games-mod

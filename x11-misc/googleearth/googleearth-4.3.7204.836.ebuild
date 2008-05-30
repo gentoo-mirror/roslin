@@ -71,7 +71,7 @@ src_install() {
 
 	# make sure we install with correct permissions
 	fowners -R root:root /opt/${PN}
-	fperms -R a-x,a+X /opt/googleearth/{xml,res{,ources}}
+	fperms -R a-x,a+X /opt/googleearth/{xml,resources}
 }
 
 pkg_postinst() {

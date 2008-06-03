@@ -2,6 +2,10 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  03 Jun 2008; Michał Ziąbkowski <mziab@o2.pl> -phonetooth-0.4.0.ebuild,
+  +phonetooth-0.4.0-r1.ebuild, +files/phonetooth-0.4.0-python24.patch:
+  Bumped with patch from upstream to fix compatibility with python 2.4.
+
   30 May 2008; Michał Ziąbkowski <mziab@o2.pl> +phonetooth-0.4.0.ebuild:
   Bumped. New version doesn't play nice with Python 2.4, though.
 

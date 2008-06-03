@@ -13,13 +13,19 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="gammu"
 
-RDEPEND=">=dev-lang/python-2.5.0
-     dev-python/pygtk
-     dev-python/pybluez
-     dev-python/pyserial
-     app-mobilephone/obex-data-server
-     gammu? ( dev-python/python-gammu )"
+RDEPEND="dev-python/pygtk
+         dev-python/pybluez
+	 dev-python/pyserial
+         app-mobilephone/obex-data-server
+	 gammu? ( dev-python/python-gammu )"
 DEPEND="${RDEPEND}"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	
+	epatch ${FILESDIR}/${P}-python24.patch
+}
 
 src_compile() {
 	econf

@@ -1,0 +1,9 @@
+# ChangeLog for games-emulation/ps2emu-zerogs
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  03 Jun 2008; Michał Ziąbkowski <mziab@o2.pl>
+  +files/ps2emu-zerogs-gcc43.patch, +ps2emu-zerogs-0.96.7-r1.ebuild,
+  ps2emu-zerogs-9999.ebuild:
+  Fixed compilation with gcc 4.3
+

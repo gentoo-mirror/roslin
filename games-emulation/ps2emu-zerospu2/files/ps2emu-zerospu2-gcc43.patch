@@ -1,0 +1,11 @@
+diff -Nur zerospu2.orig/SoundTouch/WavFile.h zerospu2/SoundTouch/WavFile.h
+--- zerospu2.orig/SoundTouch/WavFile.h	2008-06-03 11:50:26.000000000 +0200
++++ zerospu2/SoundTouch/WavFile.h	2008-06-03 11:52:45.000000000 +0200
+@@ -48,6 +48,7 @@
+ #define WAVFILE_H
+ 
+ #include <stdio.h>
++#include <cstring>
+ 
+ #ifndef uint
+ typedef unsigned int uint;

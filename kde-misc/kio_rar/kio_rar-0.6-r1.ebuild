@@ -11,7 +11,7 @@ SRC_URI="http://www.kde-apps.org/CONTENT/content-files/17527-${P}.tar.bz2"
 LICENSE="GPL-2"
 KEYWORDS="x86 amd64"
 
-RDEPEND="||(
+RDEPEND="|| (
          || ( app-arch/rar app-arch/unrar )
          app-arch/unrar-gpl )"
 

@@ -7,6 +7,7 @@ MOD_DEPEND="
     net-im/kadu-antistring
     net-im/kadu-auto_hide
     net-im/kadu-cenzor
+    net-im/kadu-last_seen
     net-im/kadu-parser_extender
     net-im/kadu-split_messages
     net-im/kadu-word_fix

@@ -1,0 +1,8 @@
+# ChangeLog for net-im/kadu-split_messages
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  06 Jun 2008; Michał Ziąbkowski <mziab@o2.pl>
+  kadu-split_messages-0.2.ebuild:
+  Made ebuild more beautiful.
+

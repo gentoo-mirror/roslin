@@ -1,4 +1,4 @@
-SRC_URI="http://kadu.net/~dorr/moduly/kadu-pcspeaker-${PV}.tar.bz2"
+SRC_URI="http://kadu.net/~dorr/moduly/${P}.tar.bz2"
 
 inherit kadu
 

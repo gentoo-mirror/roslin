@@ -17,11 +17,11 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 src_compile() {
-	emake LOCALBASE="/usr" || die "Compile failed"
+	make LOCALBASE="/usr" || die "Compile failed"
 }
 
 src_install() {
-	emake install LOCALBASE="/usr" DESTDIR="${D}" || die "Install failed"
+	make install LOCALBASE="/usr" DESTDIR="${D}" || die "Install failed"
 	dodoc README
 }
 

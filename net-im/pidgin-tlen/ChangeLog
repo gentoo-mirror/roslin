@@ -3,6 +3,10 @@
 # $Header: $
 
   06 Jun 2008; Michał Ziąbkowski <mziab@o2.pl>
+  pidgin-tlen-20080316.ebuild, pidgin-tlen-20080602.ebuild:
+  s/make/emake/g
+
+  06 Jun 2008; Michał Ziąbkowski <mziab@o2.pl>
   -pidgin-tlen-20071216.ebuild, +pidgin-tlen-20080602.ebuild:
   Bumped. Removed oldest version.
 

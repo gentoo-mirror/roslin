@@ -1,4 +1,4 @@
-SRC_URI="http://www.kadu.net/~dorr/moduly/kadu-firewall-${PV}.tar.bz2"
+SRC_URI="http://www.kadu.net/~dorr/moduly/${P}.tar.bz2"
 
 MOD_TYPE="ext"
 

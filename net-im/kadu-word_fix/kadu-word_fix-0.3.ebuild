@@ -1,4 +1,4 @@
-SRC_URI="http://www.kadu.net/~dorr/moduly/kadu-word_fix-${PV}.tar.bz2"
+SRC_URI="http://www.kadu.net/~dorr/moduly/${P}.tar.bz2"
 
 MOD_TYPE="ext"
 

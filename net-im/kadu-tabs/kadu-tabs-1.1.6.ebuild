@@ -1,4 +1,4 @@
-SRC_URI="http://kadu.net/~arvenil/tabs/download/0.6.0/kadu-tabs-${PV}.tar.bz2"
+SRC_URI="http://kadu.net/~arvenil/tabs/download/0.6.0/${P}.tar.bz2"
 
 MOD_TYPE="ext"
 

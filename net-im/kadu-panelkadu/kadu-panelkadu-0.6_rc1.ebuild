@@ -1,3 +1,4 @@
+MOD_LDFLAGS="-lX11 -lXtst"
 MOD_TYPE="ext"
 
 inherit kadu-module

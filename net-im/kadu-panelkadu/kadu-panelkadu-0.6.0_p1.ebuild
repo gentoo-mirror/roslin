@@ -1,3 +1,4 @@
+MOD_LDFLAGS="-L/usr/X11R6/lib -lX11 -lXtst"
 MOD_TYPE="ext"
 
 inherit kadu-module

@@ -1,0 +1,26 @@
+diff -Nur USBlinuz.orig/Linux/conf.c USBlinuz/Linux/conf.c
+--- USBlinuz.orig/Linux/conf.c	2007-11-11 03:55:00.000000000 +0100
++++ USBlinuz/Linux/conf.c	2008-06-08 14:00:28.425324088 +0200
+@@ -48,7 +48,7 @@
+ 
+ 	if (msg[strlen(msg)-1] == '\n') msg[strlen(msg)-1] = 0;
+ 
+-	MsgDlg = gtk_window_new (GTK_WINDOW_DIALOG);
++	MsgDlg = gtk_window_new (GTK_WINDOW_TOPLEVEL);
+ 	gtk_window_set_position(GTK_WINDOW(MsgDlg), GTK_WIN_POS_CENTER);
+ 	gtk_window_set_title(GTK_WINDOW(MsgDlg), "USB Msg");
+ 	gtk_container_set_border_width(GTK_CONTAINER(MsgDlg), 5);
+diff -Nur USBlinuz.orig/Linux/Makefile USBlinuz/Linux/Makefile
+--- USBlinuz.orig/Linux/Makefile	2007-11-11 03:55:00.000000000 +0100
++++ USBlinuz/Linux/Makefile	2008-06-08 13:59:59.837324168 +0200
+@@ -7,8 +7,8 @@
+ CFGOBJS = conf.o interface.o support.o Config.o
+ DEPS:= $(OBJS:.o=.d)
+ LIBS = -lpthread
+-CFLAGS+= $(shell gtk-config --cflags) -D__LINUX__
+-CFGLIBS = $(shell gtk-config --libs) 
++CFLAGS+= $(shell pkg-config gtk+-2.0 --cflags) -D__LINUX__
++CFGLIBS = $(shell pkg-config gtk+-2.0 --libs) 
+ 
+ CC = gcc
+ 

@@ -1,0 +1,26 @@
+diff -Nur FWlinuz.orig/Linux/conf.c FWlinuz/Linux/conf.c
+--- FWlinuz.orig/Linux/conf.c	2007-11-11 03:55:00.000000000 +0100
++++ FWlinuz/Linux/conf.c	2008-06-08 14:02:13.249324089 +0200
+@@ -48,7 +48,7 @@
+ 
+ 	if (msg[strlen(msg)-1] == '\n') msg[strlen(msg)-1] = 0;
+ 
+-	MsgDlg = gtk_window_new (GTK_WINDOW_DIALOG);
++	MsgDlg = gtk_window_new (GTK_WINDOW_TOPLEVEL);
+ 	gtk_window_set_position(GTK_WINDOW(MsgDlg), GTK_WIN_POS_CENTER);
+ 	gtk_window_set_title(GTK_WINDOW(MsgDlg), "FireWire Msg");
+ 	gtk_container_set_border_width(GTK_CONTAINER(MsgDlg), 5);
+diff -Nur FWlinuz.orig/Linux/Makefile FWlinuz/Linux/Makefile
+--- FWlinuz.orig/Linux/Makefile	2007-11-11 03:55:00.000000000 +0100
++++ FWlinuz/Linux/Makefile	2008-06-08 14:01:48.809324060 +0200
+@@ -8,8 +8,8 @@
+ DEPS:= $(OBJS:.o=.d)
+ CFGDEPS:= $(CFGOBJS:.o=.d)
+ LIBS = -lpthread
+-CFLAGS+= $(shell gtk-config --cflags) -D__LINUX__
+-CFGLIBS = $(shell gtk-config --libs) 
++CFLAGS+= $(shell pkg-config gtk+-2.0 --cflags) -D__LINUX__
++CFGLIBS = $(shell pkg-config gtk+-2.0 --libs) 
+ 
+ CC = gcc
+ 

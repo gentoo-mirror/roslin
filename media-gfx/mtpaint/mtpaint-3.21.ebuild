@@ -6,7 +6,7 @@ DESCRIPTION="Simple gtk+ painting program"
 HOMEPAGE="http://mtpaint.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
-LICENSE="GPL-2"
+LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="gif jpeg tiff"
@@ -32,13 +32,6 @@ src_compile() {
 	# build manuals
 	myconf="${myconf} man --mandir=\$(DESTDIR)/usr/share/man"
 
-	# We will not support that crap anymore
-#	if use gtk2 ; then
-#		myconf="${myconf} gtk2"
-#	else
-#		myconf="${myconf} gtk"
-#	fi
-
 	if use gif ; then
 		myconf="${myconf} GIF"
 	else
@@ -60,10 +53,11 @@ src_compile() {
 	myconf="${myconf} cflags gtk2"
 
 	# run configure
-	sh configure ${myconf} || die "configure failed"
+	econf ${myconf} || die "configure failed"
 	emake || die "emake failed"
 }
 
 src_install() {
-	make DESTDIR=${D} install || die "einstall failed"
+	emake DESTDIR=${D} install || die "einstall failed"
+	dodoc README NEWS
 }

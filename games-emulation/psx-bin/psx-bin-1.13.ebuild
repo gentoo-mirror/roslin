@@ -1,4 +1,4 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -8,7 +8,7 @@ DESCRIPTION="An easy, self-contained Sony Playstation emulator"
 HOMEPAGE="http://psxemulator.gazaxian.com/"
 SRC_URI="http://psxemulator.gazaxian.com/pSX_linux_${PV/./_}.tar.bz2"
 
-LICENSE="GPL-2"
+LICENSE="pSX-unknown-license"
 SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
@@ -19,13 +19,12 @@ DEPEND=""
 RDEPEND="dev-libs/libxml2
 	virtual/opengl
 	media-libs/alsa-lib
-	x11-libs/gtk+
+	>=x11-libs/gtk+-2.10.14
 	x11-libs/gtkglext"
 
 S=${WORKDIR}/pSX
 
-src_install()
-{
+src_install() {
 	local dir="${GAMES_PREFIX_OPT}"/${PN}
 
 	insinto "${dir}"

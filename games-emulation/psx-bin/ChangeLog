@@ -1,0 +1,7 @@
+# ChangeLog for games-emulation/psx-bin
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  09 Jun 2008; Piotr Szymaniak <lazy_bum@o2.pl> psx-bin-1.13.ebuild:
+  Fixed LICENSE and gtk+ dependency.
+

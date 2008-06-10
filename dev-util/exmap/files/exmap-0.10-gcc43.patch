@@ -1,0 +1,13 @@
+diff -Nur exmap.orig/jutil/jutil.hpp exmap-0.10/jutil/jutil.hpp
+--- exmap.orig/jutil/jutil.hpp	2006-09-28 18:52:25.000000000 +0200
++++ exmap-0.10/jutil/jutil.hpp	2008-06-10 15:41:34.000000000 +0200
+@@ -6,6 +6,9 @@
+ #include <list>
+ #include <map>
+ 
++#include <cstdlib>
++#include <cstring>
++
+ #include <stdio.h>
+ 
+ // For getuid/setuid

@@ -11,7 +11,7 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64 ~ia64"
 IUSE="dbus nls"
 RDEPEND=">=dev-libs/glib-2.0
-		||	( >=x11-libs/qt-4.2
+		||	( ( $(qt4_min_version 4.2) )
 			x11-libs/qt-gui:4 )"
 DEPEND="${RDEPEND}"
 PROVIDE="virtual/stardict"

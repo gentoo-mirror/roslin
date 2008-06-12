@@ -14,7 +14,8 @@ KEYWORDS="~amd64 x86"
 IUSE=""
 
 RDEPEND="app-arch/p7zip
-	$(qt4_min_version 4.3)"
+	|| ( $(qt4_min_version 4.3) 
+	    x11-libs/qt-gui:4 )"
 DEPEND="${RDEPEND}"
 
 src_compile() {

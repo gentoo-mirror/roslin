@@ -4,6 +4,8 @@
 
 inherit qt4
 
+EAPI="1"
+
 DESCRIPTION="A simple frontend for CDemu"
 HOMEPAGE="http://my.opera.com/mziab/blog/"
 SRC_URI="http://195.68.226.253/mziab/${P}.tar.gz"

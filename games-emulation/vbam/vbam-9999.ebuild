@@ -28,6 +28,7 @@ RDEPEND="gtk? ( >=dev-cpp/libglademm-2.4.0
 		virtual/opengl"
 
 DEPEND="${RDEPEND}
+		dev-lang/nasm
 		>=dev-util/cmake-2.4.0
 		dev-util/pkgconfig"
 		
@@ -73,6 +74,7 @@ src_compile() {
 src_install() {
 	emake DESTDIR="${D}" install || die "make install failed"
 	dodoc doc/{DevInfo,ReadMe}.txt
+	doman debian/${PN}.1
 	
 	prepgamesdirs
 }

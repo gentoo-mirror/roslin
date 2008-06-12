@@ -2,6 +2,9 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  12 Jun 2008; Michał Ziąbkowski <mziab@o2.pl> promile-qt-0.8.0-r1.ebuild:
+  Added EAPI.
+
   12 Jun 2008; Michał Ziąbkowski <mziab@o2.pl> -promile-qt-0.8.0.ebuild,
   +promile-qt-0.8.0-r1.ebuild:
   Fixed split Qt deps.

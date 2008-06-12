@@ -2,6 +2,8 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
+EAPI="1"
+
 inherit eutils qt4
 
 DESCRIPTION="A QT4 program for calculating blood alcohol level"

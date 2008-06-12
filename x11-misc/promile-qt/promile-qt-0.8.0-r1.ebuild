@@ -14,7 +14,8 @@ KEYWORDS="~x86 ~amd64"
 IUSE=""
 
 # not sure about the actual version needed
-DEPEND="$(qt4_min_version 4.3)"
+DEPEND="|| ( ( $(qt4_min_version 4.3) )
+	     x11-libs/qt-gui:4 )"
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${P}"

@@ -2,6 +2,11 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  12 Jun 2008; Michał Ziąbkowski <mziab@o2.pl> -qstardict-0.12.7.ebuild,
+  +qstardict-0.12.9.ebuild:
+  Bumped and fixed split qt deps. Cleaned up while I was at it. Removed
+  previous versions.
+
   28 Apr 2008; Michał Ziąbkowski <mziab@o2.pl> +qstardict-0.12.7.ebuild:
   Added ebuild from project's homepage.
 

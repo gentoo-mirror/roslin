@@ -1,0 +1,7 @@
+# ChangeLog for games-action/gunroar
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  14 Jun 2008; Piotr Szymaniak <lazy_bum@o2.pl> gunroar-0.15.ebuild:
+  Added ~amd64 keyword.
+

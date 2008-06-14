@@ -2,6 +2,10 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  14 Jun 2008; Michał Ziąbkowski <mziab@o2.pl>
+  +kadu-audacious_mediaplayer-20080423.ebuild:
+  Bumped.
+
   20 May 2008; Michał Ziąbkowski <mziab@o2.pl>
   -kadu-audacious_mediaplayer-20080224.ebuild:
   Removed cruft.

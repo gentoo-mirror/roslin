@@ -8,17 +8,16 @@ DESCRIPTION="Basic side-scrolling shoot 'em up '80s style arcade game"
 HOMEPAGE="http://wordwarvi.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
-# See Attribution.txt for sound files licenses
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~x86"
 IUSE="portaudio"
 
 DEPEND=">=x11-libs/gtk+-2.10.14
 	dev-libs/atk
 	portaudio? (
 		media-libs/libvorbis
-		media-libs/portaudio
+		>media-libs/portaudio-18.2
 		media-sound/vorbis-tools
 		)"
 RDEPEND="${DEPEND}"
@@ -59,4 +58,10 @@ src_install() {
 	dogamesbin ${PN} || die "dogamesbin failed"
 
 	prepgamesdirs
+}
+
+pkg_postinst() {
+	if use portaudio; then
+		einfo "See Attribution.txt for sound files licenses"
+	fi
 }

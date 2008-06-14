@@ -12,7 +12,7 @@ HOMEPAGE="http://www.mb.ccnw.ne.jp/hiz/game/tt/index_en.html"
 SRC_URI="http://www.mb.ccnw.ne.jp/hiz/game/tt//${MY_PN}${MY_PV}.zip"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 
 DEPEND="media-libs/libsdl
 	media-libs/mesa

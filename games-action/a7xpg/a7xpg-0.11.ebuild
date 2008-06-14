@@ -4,17 +4,16 @@
 
 inherit eutils games
 
-MY_PN=a7xpg
 MY_PV=${PV//./_}
 
 DESCRIPTION="The retro modern high speed shooting game"
 HOMEPAGE="http://www.asahi-net.or.jp/~cs8k-cyu/windows/a7xpg_e.html"
-SRC_URI="http://www.asahi-net.or.jp/~cs8k-cyu/windows/${MY_PN}${MY_PV}.zip"
+SRC_URI="http://www.asahi-net.or.jp/~cs8k-cyu/windows/${PN}${MY_PV}.zip"
 RESTRICT="nomirror"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 
 DEPEND="media-libs/libsdl
 	media-libs/mesa
@@ -23,7 +22,7 @@ DEPEND="media-libs/libsdl
 S=${WORKDIR}/${PN}
 
 pkg_setup() {
-        games_pkg_setup
+	games_pkg_setup
 
 	# gcc must be built with "d" USE-FLAG
 	if ! built_with_use sys-devel/gcc:4.1 d; then
@@ -41,9 +40,9 @@ src_unpack(){
 	unpack ${A}
 	epatch ${FILESDIR}/${P}.diff
 	sed -i \
-        -e 's:"\(images/[^"]*\)":"'${GAMES_DATADIR}'/'${PN}'/\1":g' -i a7xpg/src/abagames/util/sdl/Texture.d \
-        -e 's:"\(sounds/[^"]*\)":"'${GAMES_DATADIR}'/'${PN}'/\1":g' -i a7xpg/src/abagames/util/sdl/Sound.d \
-        -e 's:"\(a7xpg.prf[^"]*\)":"'${GAMES_STATEDIR}'/\1":g' -i a7xpg/src/abagames/a7xpg/A7xPrefManager.d \
+		-e 's:"\(images/[^"]*\)":"'${GAMES_DATADIR}'/'${PN}'/\1":g' -i a7xpg/src/abagames/util/sdl/Texture.d \
+		-e 's:"\(sounds/[^"]*\)":"'${GAMES_DATADIR}'/'${PN}'/\1":g' -i a7xpg/src/abagames/util/sdl/Sound.d \
+		-e 's:"\(a7xpg.prf[^"]*\)":"'${GAMES_STATEDIR}'/\1":g' -i a7xpg/src/abagames/a7xpg/A7xPrefManager.d \
 		|| die "sed failed"
 }
 
@@ -52,13 +51,13 @@ src_install() {
 
 	local datadir="${GAMES_DATADIR}"/${PN}
 	dodir ${datadir}
-        insinto "${GAMES_DATADIR}"/${PN}
+	insinto "${GAMES_DATADIR}"/${PN}
 	doins -r images sounds || die
 
 	if [ ! -e "${GAMES_STATEDIR}"/${PN}.prf ]
 	then
 		dodir "${GAMES_STATEDIR}"
-                insinto "${GAMES_STATEDIR}"
+		insinto "${GAMES_STATEDIR}"
 		doins ${FILESDIR}/a7xpg.prf  || die
 		fperms 660 ${FILESDIR}/a7xpg.prf
 	fi

@@ -1,6 +1,9 @@
 # ChangeLog for games-sports/tileracer
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 
+  15 Jun 2008; Piotr Szymaniak <lazy_bum@o2.pl> -tileracer-0.65.ebuild:
+  Removed, check out bug #201855 for updates.
+
   01 May 2008; Piotr Szymaniak <lazy_bum@o2.pl> tileracer-0.65.ebuild:
   Remove icon extension from desktop entry to match Icon Theme Specification.
 

@@ -2,6 +2,9 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  15 Jun 2008; Piotr Szymaniak <lazy_bum@o2.pl> gegl-0.0.18.ebuild:
+  Updated ebuild (bug #183425).
+
   15 Jun 2008; Piotr Szymaniak <lazy_bum@o2.pl> +gegl-0.0.18.ebuild:
   Version bump.
 

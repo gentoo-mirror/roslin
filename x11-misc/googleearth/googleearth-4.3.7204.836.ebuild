@@ -24,7 +24,8 @@ RDEPEND="x86? (
 	x11-libs/libXcursor
 	x11-libs/libXext
 	x11-libs/libXft
-	x11-libs/libXrender )
+	x11-libs/libXrender
+	x11-libs/libXinerama )
 	amd64? (
 	app-emulation/emul-linux-x86-xlibs
 	app-emulation/emul-linux-x86-baselibs

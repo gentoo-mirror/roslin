@@ -1,0 +1,7 @@
+# ChangeLog for app-office/qfaktury
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  18 Jun 2008; Michał Ziąbkowski <mziab@o2.pl> +qfaktury-0.1a_rc1.ebuild:
+  Initial ebuild.
+

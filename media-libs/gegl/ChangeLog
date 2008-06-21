@@ -2,6 +2,10 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  21 Jun 2008; Piotr Szymaniak <lazy_bum@o2.pl> +gegl-0.0.18-r1.ebuild,
+  +files/gegl-libavformat.patch:
+  Updated ebuild thanks to Geert Vanhaute (bug #183425).
+
   15 Jun 2008; Piotr Szymaniak <lazy_bum@o2.pl> gegl-0.0.18.ebuild:
   Updated ebuild (bug #183425).
 

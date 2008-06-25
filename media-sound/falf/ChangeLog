@@ -2,6 +2,9 @@
 # Copyright 2007-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  25 Jun 2008; Michał Ziąbkowski <mziab@o2.pl> +falf-1.2.ebuild:
+  Bumped.
+
 *falf-1.1 (05 Feb 2008)
 
   05 Feb 2008; Piotr Szymaniak <lazy_bum@o2.pl> +falf-1.1.ebuild:

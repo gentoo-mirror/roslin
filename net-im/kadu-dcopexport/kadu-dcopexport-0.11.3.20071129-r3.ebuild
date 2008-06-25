@@ -1,7 +1,5 @@
 SRC_URI="http://alan.umcs.lublin.pl/~pinkworm/dcopexport/dcopexport-0.11.3-20071129-0.6.0.tar.bz2"
 
-KDEDIR="`kde-config --prefix`"
-
 inherit kadu
 
 MOD_DEPEND="
@@ -11,7 +9,6 @@ MOD_DEPEND="
     >=net-im/kadu-notify-${MIN_REQ}
     >=net-im/kadu-sms-${MIN_REQ}
 "
-MOD_LDFLAGS="-L ${KDEDIR}/lib"
 MOD_TYPE="ext"
 
 inherit kadu-module kadu-module-func
@@ -22,6 +19,9 @@ KEYWORDS="amd64 x86"
 
 src_unpack()
 {
+	KDEDIR="`kde-config --prefix`"
+	MOD_LDFLAGS="-L ${KDEDIR}/lib"
+	
 	kadu-module_src_unpack
 
 	kadu-module_spec_remove INCLUDES_PATH

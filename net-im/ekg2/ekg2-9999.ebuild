@@ -1,21 +1,19 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ekg2/ekg2-20061202.ebuild,v 1.6 2007/01/09 21:09:02 swegener Exp $
 
-WANT_AUTOCONF=latest
-WANT_AUTOMAKE=latest
-
-inherit eutils subversion perl-module autotools
+inherit eutils subversion
 
 DESCRIPTION="Text based Instant Messenger and IRC client that supports protocols like Jabber and Gadu-Gadu"
 HOMEPAGE="http://pl.ekg2.org/"
 
 ESVN_REPO_URI="http://toxygen.net/svn/ekg2/trunk/"
+ESVN_PROJECT="ekg2"
+ESVN_BOOTSTRAP="./autogen.sh"
 
 LICENSE="GPL-2"
 SLOT="0"
 
-KEYWORDS=""
+KEYWORDS="~x86"
 IUSE="crypt gif gpm gsm gtk inotify jabber jpeg nls nogg perl python readline ruby spell sqlite sqlite3 ssl unicode xosd"
 
 DEPEND="crypt? ( app-crypt/gpgme )
@@ -49,31 +47,7 @@ pkg_setup() {
 
 S=${WORKDIR}/${PN}
 
-src_unpack() {
-#	unpack ${A}
-	subversion_src_unpack
-	cd ${S}
-
-	# Ekg2 has no debug configure option
-	# Instead it features a runtime option which defaults to on
-	#! use debug && epatch ${FILESDIR}/${P}-no-default-debug.patch
-
-	epatch ${FILESDIR}/0.1.1-conference-logs.patch
-	#epatch ${FILESDIR}/${P}-intl.patch
-	AT_M4DIR=m4 eautoreconf
-
-	sed -i \
-		-e "s|AM_INIT_AUTOMAKE(ekg2, CVS)|AM_INIT_AUTOMAKE(ekg2, SVN)|" \
-		configure.ac || die "sed failed"
-}
-
 src_compile() {
-#	./autogen.sh || die "autogen.sh failed"
-
-#	econf \
-#	export WANT_AUTOMAKE="1.7"
-#	./autogen.sh || die "autogen.sh failed"
-	eautoreconf || die "eautoreconf failed"
 	econf \
 		"--with-pthread" \
 		$(use_with crypt gpg) \
@@ -113,15 +87,4 @@ src_install() {
 	# einstall messes up perl
 	emake DESTDIR="${D}" install || die "einstall failed"
 	dodoc docs/*
-
-#	use perl && fixlocalpod
-}
-
-pkg_postinst() {
-	if use gtk; then
-		ewarn "Ekg2 GTK2 frontend is highly experimental."
-		ewarn "Please do not file bugs about it."
-	fi
-
-	use perl && updatepod
 }

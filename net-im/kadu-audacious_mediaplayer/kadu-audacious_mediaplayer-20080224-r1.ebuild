@@ -13,8 +13,8 @@ KEYWORDS="amd64 x86"
 
 src_compile()
 {
-	export MOD_CXXFLAGS="`pkg-config audacious --cflags` -I /usr/include/dbus-1.0"
-	export MOD_LDFLAGS="`pkg-config audacious --libs`"
+	MOD_CXXFLAGS="`pkg-config audacious --cflags` -I /usr/include/dbus-1.0"
+	MOD_LDFLAGS="`pkg-config audacious --libs`"
 
 	kadu-module_src_compile
 }

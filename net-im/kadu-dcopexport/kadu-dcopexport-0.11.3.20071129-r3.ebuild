@@ -1,6 +1,6 @@
 SRC_URI="http://alan.umcs.lublin.pl/~pinkworm/dcopexport/dcopexport-0.11.3-20071129-0.6.0.tar.bz2"
 
-inherit kadu
+inherit kadu kde
 
 MOD_DEPEND="
     kde-base/kdelibs 
@@ -12,6 +12,8 @@ MOD_DEPEND="
 MOD_TYPE="ext"
 
 inherit kadu-module kadu-module-func
+
+need-kde 3.5
 
 DESCRIPTION="Kadu module that exports many features via DCOP mechanism"
 HOMEPAGE="http://alan.umcs.lublin.pl/~pinkworm/dcopexport"

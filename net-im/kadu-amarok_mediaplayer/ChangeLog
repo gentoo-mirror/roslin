@@ -2,6 +2,11 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  29 Jun 2008; Michał Ziąbkowski <mziab@o2.pl>
+  -kadu-amarok_mediaplayer-20071220.ebuild,
+  kadu-amarok_mediaplayer-20071220-r1.ebuild:
+  Some more clean-up.
+
   28 Jun 2008; Michał Ziąbkowski <mziab@o2.pl>
   +kadu-amarok_mediaplayer-20071220-r1.ebuild:
   Moved MOD_LDFLAGS and KDEDIR.

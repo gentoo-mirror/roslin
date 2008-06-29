@@ -1,6 +1,8 @@
 SRC_URI="http://kadu.net/download/modules_extra/amarok_mediaplayer/amarok_mediaplayer-${PV}.tar.bz2"
 
-inherit kadu
+inherit kadu kde
+
+need-kde 3.5
 
 MOD_DEPEND="media-sound/amarok net-im/kadu-mediaplayer"
 MOD_TYPE="ext"
@@ -13,7 +15,6 @@ KEYWORDS="amd64 x86"
 
 src_unpack()
 {
-	KDEDIR="`kde-config --prefix`"
 	MOD_LDFLAGS="-L ${KDEDIR}/lib"
 
 	kadu-module_src_unpack

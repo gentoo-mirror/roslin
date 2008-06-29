@@ -11,7 +11,7 @@ LICENSE="GPL-2"
 IUSE="
     nodefmodules powerkadu
     emoticons icons sounds
-    alsa arts esd kde oss ssl voice
+    alsa arts dcop esd oss ssl voice
 "
 
 SLOT="0"
@@ -39,8 +39,8 @@ DEPEND="
     
     alsa? ( >=net-im/kadu-alsa_sound-${MIN_REQ} )
     arts? ( >=net-im/kadu-arts_sound-${MIN_REQ} )
+    dcop? ( net-im/kadu-dcopexport )
     esd? ( >=net-im/kadu-esd_sound-${MIN_REQ} )
-    kde? ( net-im/kadu-dcopexport )
     oss? ( >=net-im/kadu-dsp_sound-${MIN_REQ} )
     ssl? ( >=net-im/kadu-encryption-${MIN_REQ} )
     voice? ( >=net-im/kadu-voice-${MIN_REQ} )
@@ -51,7 +51,7 @@ DEPEND="
 #
 src_install()
 {
-    dosbin ${FILESDIR}/kadu_modrebuild \
+	dosbin ${FILESDIR}/kadu_modrebuild \
 	|| die "kadu_modrebuild installation failed!"
 }
 

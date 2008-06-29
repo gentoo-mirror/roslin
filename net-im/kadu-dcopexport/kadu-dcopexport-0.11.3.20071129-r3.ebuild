@@ -2,9 +2,9 @@ SRC_URI="http://alan.umcs.lublin.pl/~pinkworm/dcopexport/dcopexport-0.11.3-20071
 
 inherit kadu kde
 
-MOD_DEPEND="
-    kde-base/kdelibs 
-    >=net-im/kadu-dcc-${MIN_REQ}
+need-kde 3.5
+
+MOD_DEPEND=">=net-im/kadu-dcc-${MIN_REQ}
     >=net-im/kadu-history-${MIN_REQ}
     >=net-im/kadu-notify-${MIN_REQ}
     >=net-im/kadu-sms-${MIN_REQ}
@@ -13,15 +13,12 @@ MOD_TYPE="ext"
 
 inherit kadu-module kadu-module-func
 
-need-kde 3.5
-
 DESCRIPTION="Kadu module that exports many features via DCOP mechanism"
 HOMEPAGE="http://alan.umcs.lublin.pl/~pinkworm/dcopexport"
 KEYWORDS="amd64 x86"
 
 src_unpack()
 {
-	KDEDIR="`kde-config --prefix`"
 	MOD_LDFLAGS="-L ${KDEDIR}/lib"
 	
 	kadu-module_src_unpack

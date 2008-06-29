@@ -1,0 +1,8 @@
+# ChangeLog for dev-libs/elfhacks
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  29 Jun 2008; Piotr Szymaniak <lazy_bum@o2.pl> +elfhacks-0.4.0.ebuild,
+  +elfhacks-0.4.1.ebuild:
+  New package.
+

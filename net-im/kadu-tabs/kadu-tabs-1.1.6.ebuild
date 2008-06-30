@@ -5,5 +5,5 @@ MOD_TYPE="ext"
 inherit kadu-module
 
 DESCRIPTION="Kadu module that allows to put all chat windows in one - tabbed"
-HOMEPAGE="http://kadu.net/~arvenil/tabs"
+HOMEPAGE="http://www.kadu.net/w/Tabs"
 KEYWORDS="amd64 x86"

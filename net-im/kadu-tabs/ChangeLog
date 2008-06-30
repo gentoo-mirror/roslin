@@ -3,6 +3,9 @@
 # $Header: $
 
   30 Jun 2008; Michał Ziąbkowski <mziab@o2.pl> kadu-tabs-1.1.6.ebuild:
+  Fixed SRC_URI. Thx, badboy.
+
+  30 Jun 2008; Michał Ziąbkowski <mziab@o2.pl> kadu-tabs-1.1.6.ebuild:
   Updated homepage
 
   06 Jun 2008; Michał Ziąbkowski <mziab@o2.pl> kadu-tabs-1.1.6.ebuild:

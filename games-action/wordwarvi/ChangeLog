@@ -2,6 +2,10 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  30 Jun 2008; Piotr Szymaniak <lazy_bum@o2.pl> -wordwarvi-0.14.ebuild,
+  +wordwarvi-0.17.ebuild:
+  Version bump.
+
   26 Jun 2008; Piotr Szymaniak <lazy_bum@o2.pl> +wordwarvi-0.16.ebuild:
   Version bump.
 

@@ -3,6 +3,9 @@
 # $Header: $
 
   01 Jul 2008; Piotr Szymaniak <lazy_bum@o2.pl> quake1-e2m5rmx-1.ebuild:
+  Added second SRC_URI.
+
+  01 Jul 2008; Piotr Szymaniak <lazy_bum@o2.pl> quake1-e2m5rmx-1.ebuild:
   Removed TyrQuake from available engines.
 
   01 Jul 2008; Piotr Szymaniak <lazy_bum@o2.pl> +quake1-e2m5rmx-1.ebuild:

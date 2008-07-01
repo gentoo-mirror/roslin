@@ -10,4 +10,5 @@ inherit games games-mod
 
 DESCRIPTION="The Lizard's Trance - map evolved from Remix Quake Mapping Challenge."
 HOMEPAGE="http://www.celephais.net/board/view_thread.php?id=60227"
-SRC_URI="http://isoterra.co.uk/stuff/e2m5/${MOD_MAP}.zip"
+SRC_URI="http://isoterra.co.uk/stuff/e2m5/${MOD_MAP}.zip
+	${SRC_ADDICT}/${MOD_MAP}.zip"

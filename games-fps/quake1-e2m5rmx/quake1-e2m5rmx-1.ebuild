@@ -6,8 +6,6 @@ MOD_DIR="e2m5rmx"
 MOD_TITLE="The Lizard's Trance"
 MOD_MAP="e2m5rmx"
 
-MOD_USES_TYRQUAKE=y
-
 inherit games games-mod
 
 DESCRIPTION="The Lizard's Trance - map evolved from Remix Quake Mapping Challenge."

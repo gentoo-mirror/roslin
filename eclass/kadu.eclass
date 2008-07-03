@@ -2,7 +2,7 @@
 RESTRICT="nomirror"
 SLOT="0"
 
-MIN_REQ="0.6.0.1"
+MIN_REQ="0.6.0.2"
 
 K_PV=${PV}
 K_PV=${K_PV#*_pre}

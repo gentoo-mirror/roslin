@@ -2,6 +2,10 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  03 Jul 2008; Michał Ziąbkowski <mziab@o2.pl>
+  kadu-osdhints_notify-0.4.3.ebuild:
+  Stabled.
+
   08 Jun 2008; Michał Ziąbkowski <mziab@o2.pl>
   kadu-osdhints_notify-0.4.3.ebuild:
   Moved to ~arch for now. Will unmask once Kadu 0.6.0.2 is released.

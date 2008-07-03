@@ -9,4 +9,4 @@ inherit kadu-module
 
 DESCRIPTION="Kadu module notifying user using pretty osd widgets"
 HOMEPAGE="http://kadu.net/~dorr"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"

@@ -10,7 +10,7 @@ SRC_URI="http://nullkey.ath.cx/glc/archive/${P}.tar.gz"
 
 LICENSE="ZLIB"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~x86"
 IUSE="example-scripts"
 
 DEPEND=">=dev-libs/packetstream-0.1.3

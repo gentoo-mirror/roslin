@@ -1,0 +1,7 @@
+# ChangeLog for games-fps/quake1-dd
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  06 Jul 2008; Piotr Szymaniak <lazy_bum@o2.pl> quake1-dd-1.ebuild:
+  Added nice, new SRC_URI.
+

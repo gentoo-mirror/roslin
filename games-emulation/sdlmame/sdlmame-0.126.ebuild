@@ -19,7 +19,7 @@ SRC_URI="${MY_P}.zip
 LICENSE="XMAME"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="debug opengl"
+IUSE="debug opengl wolfmame"
 
 RESTRICT="fetch"
 
@@ -39,7 +39,7 @@ S=${WORKDIR}/${MY_P}
 
 pkg_nofetch() {
 	einfo "Please download ${MY_P}.zip"
-        einfo "from ${HOMEPAGE}"
+	einfo "from ${HOMEPAGE}"
 	einfo "and move it to ${DISTDIR}"
 }
 

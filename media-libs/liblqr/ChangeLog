@@ -2,6 +2,9 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  08 Jul 2008; Piotr Szymaniak <lazy_bum@o2.pl> liblqr-0.1.0.ebuild:
+  License change.
+
   15 Apr 2008; Piotr Szymaniak <lazy_bum@o2.pl> liblqr-0.1.0.ebuild:
   Fixed src_install.
 

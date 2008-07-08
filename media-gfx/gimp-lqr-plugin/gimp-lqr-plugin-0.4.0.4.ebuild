@@ -19,7 +19,7 @@ RDEPEND=">=media-gfx/gimp-2.3
 	media-libs/liblqr"
 DEPEND="${RDEPEND}"
 
-S="${WORKDIR}/${P/0.2/0}"
+S=${WORKDIR}/${PN}-${MY_PV/0-4/0}
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"

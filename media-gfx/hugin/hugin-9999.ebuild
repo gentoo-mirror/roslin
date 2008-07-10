@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-inherit wxwidgets eutils cmake-utils subversion
+inherit wxwidgets eutils cmake-utils subversion flag-o-matic
 
 ESVN_REPO_URI="https://hugin.svn.sourceforge.net/svnroot/hugin/hugin/trunk"
 
@@ -43,4 +43,10 @@ pkg_setup() {
 		elog "that produces control points between images in a"
 		elog "panorama."
 	fi
+}
+
+src_compile() {
+	filter-ldflags -Wl,--as-needed --as-needed
+
+	cmake-utils_src_compile
 }

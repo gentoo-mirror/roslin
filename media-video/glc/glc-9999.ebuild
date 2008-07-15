@@ -72,6 +72,7 @@ src_compile_abi() {
 		-DBINARIES:BOOL="${binaries}" \
 		-DSCRIPTS:BOOL="${scripts}" \
 		-DHEADERS:BOOL="${headers}" \
+		-DGIT_DIR:STRING="${EGIT_STORE_DIR}/${PN}-git" \
 		|| die "cmake (${abi}) failed"
 	emake || die "emake (${abi}) failed"
 }

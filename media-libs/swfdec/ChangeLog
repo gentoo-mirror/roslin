@@ -1,7 +1,0 @@
-# ChangeLog for media-libs/swfdec
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: $
-
-  03 Jun 2008; Michał Ziąbkowski <mziab@o2.pl> +swfdec-9999.ebuild:
-  Added git live ebuild.
-

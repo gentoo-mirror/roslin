@@ -1,7 +1,7 @@
 # Copyright 1999-2008 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 
-inherit eutils games subversion
+inherit eutils games subversion flag-o-matic
 
 DESCRIPTION="A roguelike roleplaying game with zelda-like graphics and very high replayability"
 HOMEPAGE="http://www.lostlabyrinth.com"
@@ -12,12 +12,13 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
 
-RDEPEND=">=media-libs/sdl-ttf-2.0
-		 >=media-libs/sdl-mixer-1.2
-		 >=media-libs/sdl-image-1.2
-		 >=media-libs/sdl-gfx-1.2"
 DEPEND="dev-ruby/racc
-		${RDEPEND}"
+		>=media-libs/sdl-ttf-2.0
+		>=media-libs/sdl-mixer-1.2
+		>=media-libs/sdl-image-1.2
+		>=media-libs/sdl-gfx-1.2
+		dev-libs/DirectFB"
+RDEPEND="${DEPEND}"
 
 pkg_setup() {
 	statedir="${GAMES_STATEDIR}/${PN}"
@@ -25,17 +26,33 @@ pkg_setup() {
 }
 
 src_compile() {
+	# -O2 optimisation level leads to excessive memory
+	# usage when compiling main program, assuming -O3
+	# does worse
+	# --as-needed linker flag causes problems
+	# which I need to work out
+	replace-flags -O3 -O2
+	filter-ldflags -Wl,--as-needed
 	cd elice
-	# firstly, build elice
-	emake || die "emake elice failed."
-	# now make sure CFLAGS and CXXFLAGS are respected in the Makefile
+	# five substitutions:
+	# - add CFLAGS, CXXFLAGS and LDFLAGS to Makefile
+	# - use CXXFLAGS when compiling with g++
+	# - use pkg-config for finding SDL lib flags
+	# - add LDFLAGS to link command line
+	# - don't assume compiler is called g++
 	sed -i  \
-		-e "s:CFLAGS=.*:CFLAGS=${CFLAGS}\nCXXFLAGS=${CXXFLAGS}:" \
+		-e "s:CFLAGS=.*:CFLAGS=${CFLAGS}\nCXXFLAGS=${CXXFLAGS}\nLDFLAGS=${LDFLAGS}:" \
 		-e 's:g++ $(CFLAGS):g++ $(CXXFLAGS):' \
+		-e 's:-I/usr/include/SDL -lSDL:`pkg-config --cflags --libs sdl`:' \
+		-e 's:-lSDL_gfx:-lSDL_gfx $(LDFLAGS):' \
 		-e "s:g++:$(tc-getCXX):" \
 		Makefile || die "sed failed."
+	# build failed on a machine dual-core machine with -j3
+	# so use -j1 for builds to be safe.
+	# firstly, build elice
+	emake -j1 || die "emake elice failed."
 	# now build lostlabyrinth
-	emake laby-svn || die "emake laby-svn failed."
+	emake -j1 laby-svn || die "emake laby-svn failed."
 }
 
 src_install() {

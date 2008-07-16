@@ -10,7 +10,7 @@ HOMEPAGE="http://www.fmod.org/"
 KEYWORDS="-* ~amd64 ~x86"
 
 SRC_URI="x86? ( http://www.fmod.org/index.php/release/version/${MY_P}.tar.gz )
-	amd64? ( http://www.fmod.org/index.php/release/version/${MY_P}64.tar.gz )"
+	amd64? ( http://www.fmod.org/index.php/release/version/${MY_P}.tar.gz )"
 RESTRICT="nostrip"
 
 LICENSE="fmod"
@@ -41,5 +41,5 @@ src_install() {
 	dodoc fmoddesignerapi/README.TXT
 	dodoc documentation/{LICENSE.TXT,revision.txt}
 	insinto /usr/share/doc/${P}
-	doins documentation/fmodex.pdf
+	doins documentation/fmodex.chm
 }

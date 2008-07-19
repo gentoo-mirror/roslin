@@ -58,8 +58,6 @@ src_unpack() {
 	# Instead it features a runtime option which defaults to on
 	#! use debug && epatch ${FILESDIR}/${P}-no-default-debug.patch
 
-	epatch ${FILESDIR}/0.1.1-conference-logs.patch
-	#epatch ${FILESDIR}/${P}-intl.patch
 	AT_M4DIR=m4 eautoreconf
 
 #	sed -i \

@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~hppa ~ppc ~x86"
 IUSE=""
 
-S="${WORKDIR}/${PN}-1.0.0"
+S="${WORKDIR}/${P}"
 DEPEND=">=dev-lang/python-2.4
 		>=dev-python/pygtk-2.6
 		>=dev-python/pygobject-2.6
@@ -22,9 +22,10 @@ DEPEND=">=dev-lang/python-2.4
 		>=dev-python/dbus-python-0.71
 		dev-util/intltool"
 RDEPEND="${DEPEND}
-		>=app-cdr/cdemud-1.0.0"
+		>=app-cdr/cdemud-1.1.0"
 
 pkg_postinst() {
+	gnome2_pkg_postinst
 	einfo "For notifications, emerge dev-python/notify-python"
 }
 

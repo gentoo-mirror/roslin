@@ -1,13 +1,11 @@
 #!/sbin/runscript
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
 depend() {
 	need dbus
-#ifdef ALSA
-	[ "${CDEMUD_BACKEND}" == ALSA ] && need alsasound
-#endif
+	[ "${CDEMUD_BACKEND}" == alsa ] && need alsasound
 }
 
 start() {
@@ -16,16 +14,12 @@ start() {
 		/sbin/modprobe vhba || eerror $? "Error loading vhba module"
 	fi
 	i=0; until [ -c /dev/vhba_ctl ]; do ((i++<=10)) || break; sleep 1; done
-#ifndef ALSA
-	CDEMUD_ARGS="-a null"
-#else
-	if [ "${CDEMUD_BACKEND}" == ALSA ]; then
-		CDEMUD_ARGS="-a ${CDEMUD_BACKEND} -o ${CDEMUD_AUDIODEV:-default}"
-	else
+	if [ "${CDEMUD_BACKEND}"x == x ]; then
 		CDEMUD_ARGS="-a null"
+	else
+		CDEMUD_ARGS="-a ${CDEMUD_BACKEND}"
 	fi
-#endif
-	CDEMUD_ARGS="-s -d -c /dev/vhba_ctl -n ${CDEMUD_DEVICES:-1} ${CDEMUD_ARGS}"
+	CDEMUD_ARGS="-d -c /dev/vhba_ctl -n ${CDEMUD_DEVICES:-1} ${CDEMUD_ARGS}"
 	start-stop-daemon --quiet --start --exec /usr/bin/cdemud -- ${CDEMUD_ARGS}
 	eend $?
 }

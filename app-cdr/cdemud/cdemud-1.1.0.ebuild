@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/cdemu/cdemu-daemon-${PV}.tar.bz2"
 LICENSE="GLP-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86 ~hppa"
-IUSE="alsa"
+IUSE="alsa ao"
 
 S="${WORKDIR}/cdemu-daemon-${PV}"
 
@@ -23,15 +23,17 @@ DEPEND=">dev-libs/dbus-glib-0.6
 		dev-util/unifdef"
 RDEPEND=">dev-libs/dbus-glib-0.6
 		>=dev-libs/libdaemon-0.10
-		>=dev-libs/libmirage-1.0.0
+		>=dev-libs/libmirage-1.1.0
 		alsa? ( >=media-libs/alsa-lib-1.0.0 
 				>=media-libs/libsndfile-1.0.0 )
-		>=sys-fs/vhba-1.0.0"
+		ao? ( >=media-libs/libao-0.8.0 )
+		>=sys-fs/vhba-1.1.0
+		sys-fs/sysfsutils"
 
 src_compile() {
 	local myconf
 
-	myconf="--sysconfdir=/etc $(use_enable alsa)"
+	myconf="--sysconfdir=/etc $(use_enable alsa) $(use_enable ao)"
 
 	econf ${myconf} || die "Error: econf failed!"
 	emake || die "Error: emake failed!"

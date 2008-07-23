@@ -1,10 +1,9 @@
 # Config file for /etc/init.d/cdemu-daemon
 
 CDEMUD_DEVICES=1
-#ifndef ALSA
-CDEMUD_BACKEND=null
+#ifdef ALSA
+CDEMUD_BACKEND=alsa
 #else
-CDEMUD_BACKEND=ALSA
-CDEMUD_AUDIODEV=default
+CDEMUD_BACKEND=null
 #endif
 

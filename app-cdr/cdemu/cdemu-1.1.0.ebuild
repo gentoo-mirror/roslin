@@ -16,7 +16,7 @@ DEPEND=">=dev-lang/python-2.4
 		dev-python/dbus-python
 		dev-util/intltool"
 RDEPEND="${DEPEND}
-		app-cdr/cdemud"
+		>=app-cdr/cdemud-1.1.0"
 
 src_install() {
 	emake install DESTDIR="${D}" || die "Error: install failed!"

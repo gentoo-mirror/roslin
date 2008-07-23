@@ -59,7 +59,7 @@ pkg_postinst() {
 	elog "${PN} to the default runlevel by"
 	elog "	# rc-update add ${PN} default"
 	elog "as root. Systembus style daemons can be configured"
-	elog "in /etc/conf.d/{PN}.conf"
+	elog "in /etc/conf.d/${PN}.conf"
 	echo
 }
 

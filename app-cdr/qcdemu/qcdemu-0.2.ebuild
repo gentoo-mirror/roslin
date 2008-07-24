@@ -18,7 +18,7 @@ IUSE=""
 DEPEND="|| ( ( $(qt4_min_version 4.3) )
 	x11-libs/qt-gui:4 )"
 RDEPEND="${DEPEND}
-	=app-cdr/cdemud-1.0.0"
+	>=app-cdr/cdemu-1.1.0"
 
 S="${WORKDIR}/${PN}"
 

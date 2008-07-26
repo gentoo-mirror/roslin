@@ -2,6 +2,9 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  26 Jul 2008; Michał Ziąbkowski <mziab@o2.pl> +oss-4.0.1016.ebuild:
+  Bumped.
+
   29 Mar 2008; Michał Ziąbkowski <mziab@o2.pl> +oss-4.0.1015.ebuild:
   Bumped.
 

@@ -2,6 +2,9 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  26 Jul 2008; Michał Ziąbkowski <mziab@o2.pl> +pytube-0.0.11.4.ebuild:
+  Bumped. Dropped patch.
+
   21 May 2008; Michał Ziąbkowski <mziab@o2.pl> pytube-0.0.10.8.ebuild,
   +files/pytube-python-2.4.patch:
   More clean-up. Now with compat patch for python 2.4.

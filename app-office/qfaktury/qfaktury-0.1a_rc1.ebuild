@@ -14,9 +14,10 @@ SRC_URI="http://www.e-linux.pl/components/com_jooget/file/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
+EAPI="1"
 IUSE="+vat vatmp"
 
-DEPEND="$(qt_min_version 3.3)"
+DEPEND=">=x11-libs/qt-3.3:3"
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${PN}"

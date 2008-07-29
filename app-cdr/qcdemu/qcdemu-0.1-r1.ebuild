@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="|| ( ( $(qt4_min_version 4.3) )
+DEPEND="|| ( >=x11-libs/qt-4.3.0:4
 	x11-libs/qt-gui:4 )"
 RDEPEND="${DEPEND}
 	=app-cdr/cdemud-1.0.0"

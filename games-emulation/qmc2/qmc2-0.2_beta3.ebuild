@@ -10,12 +10,15 @@ DESCRIPTION="An MAME frontend for SDLMAME"
 HOMEPAGE="http://www.mameworld.net/mamecat/"
 SRC_URI="mirror://sourceforge/${PN}/${PN}-${MY_PV}.tar.bz2"
 
+EAPI="1"
+
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
 IUSE="debug joystick opengl"
 
-DEPEND="$(qt4_min_version 4.3)
+DEPEND="|| ( >=x11-libs/qt-4.3.0:4
+	    x11-libs/qt-gui:4 )
 	joystick? ( media-libs/libsdl )
 	opengl? ( virtual/opengl )"
 
@@ -24,7 +27,18 @@ RDEPEND="${DEPEND}
 
 S="${WORKDIR}/${PN}"
 
-QT4_BUILT_WITH_USE_CHECK="accessibility"
+pkg_setup() {
+	if has_version ">=x11-libs/qt-4.3:4"; then
+		QT4_BUILT_WITH_USE_CHECK="accessibility"
+	else
+		if ! built_with_use "x11-libs/qt-gui:4" accessibility; then
+			eerror "You have to built x11-libs/qt-gui:4 with accessibility."
+			die "accessibility in qt-gui disabled"
+		fi
+	fi
+	qt4_pkg_setup
+}
+
 
 src_unpack() {
 	unpack ${A}

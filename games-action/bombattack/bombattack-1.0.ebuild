@@ -11,12 +11,13 @@ SRC_URI="http://axem.boo.pl/maxem/${PN}/${PN}.tar.bz2"
 LICENSE="GPL"
 SLOT="0"
 KEYWORDS="~x86"
+EAPI="1"
 IUSE="editor"
 
 DEPEND="media-libs/libsdl
 	media-libs/sdl-mixer
 	media-libs/sdl-image
-	editor? ( $(qt4_min_version 4.2) )"
+	editor? ( >=x11-libs/qt-4.2.0:4 )"
 RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${PN}

@@ -6,13 +6,16 @@ DESCRIPTION="A fast and usable calculator for power users."
 HOMEPAGE="http://speedcrunch.org/"
 SRC_URI="http://speedcrunch.googlecode.com/files/${P}.tar.gz"
 
+EAPI="1"
+
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
 IUSE="nls"
 RESTRICT="nomirror"
 
-DEPEND="$(qt4_min_version 4.2)
+DEPEND="|| ( >=x11-libs/qt-4.2.0:4
+	x11-libs/qt-gui:4 )
         >=dev-util/cmake-2.4.6"
 	
 src_compile()

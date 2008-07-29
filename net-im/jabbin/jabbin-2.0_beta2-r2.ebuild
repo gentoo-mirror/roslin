@@ -7,11 +7,12 @@ SRC_URI="mirror://sourceforge/${PN}/${PN}-${VER}.tar.bz2"
 
 LICENSE="GPL"
 SLOT="0"
+EAPI="1"
 KEYWORDS="x86 amd64"
 IUSE=""
 RESTRICT="mirror primaryuri"
 
-DEPEND="$(qt_min_version 3.1)
+DEPEND=">=x11-libs/qt-3.1:3
 	net-misc/rsync
 	>=app-crypt/qca-1.0
 	media-libs/speex

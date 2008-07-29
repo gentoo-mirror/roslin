@@ -2,6 +2,9 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  29 Jul 2008; Michał Ziąbkowski <mziab@o2.pl> -audex-0.6a.ebuild:
+  Replaced qt4_min_version. Removed cruft.
+
   08 Jun 2008; Michał Ziąbkowski <mziab@o2.pl> +audex-0.6a-r1.ebuild:
   Fixed SRC_URI and deps, so that it works with KDE 4.1 beta.
 

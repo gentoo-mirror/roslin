@@ -45,6 +45,8 @@ src_unpack() {
 	subversion_src_unpack
 	cd ${S}
 	
+	epatch "${FILESDIR}"/${PN}-lirc.patch
+	
 	sed -i CMakeLists.txt \
 	    -e "/C[X]*_FLAGS/d" \
 	    -e "s:\${CMAKE_INSTALL_PREFIX}/::" \
@@ -52,20 +54,17 @@ src_unpack() {
 }
 
 src_compile() {
-	# work around unconditional building of SDL and GTK+ ports
-	use sdl || sed -i CMakeLists.txt \
-		    -e "/CAN_BUILD_VBAM 1/d" \
-		    || die "sed failed"
-	
-	use gtk || sed -i CMakeLists.txt \
-		    -e "/CAN_BUILD_GVBAM 1/d" \
-		    || die "sed failed"
+	local my_opts
+	use sdl || my_opts="-DNO_SDL:BOOL=1"
+	use gtk || my_opts="${my_opts} -DNO_GTK:BOOL=1"
+	use lirc && my_opts="${my_opts} -DWITH_LIRC:BOOL=1"
 	
 	cmake \
 	-DCMAKE_INSTALL_PREFIX:PATH="${GAMES_PREFIX}" \
 	-DCMAKE_CXX_FLAGS="${CXXFLAGS}" \
 	-DCMAKE_C_FLAGS="${CFLAGS}" \
 	-DDATA_INSTALL_DIR:PATH="${GAMES_DATADIR}/${PN}" \
+	${my_opts} \
 	. || die "cmake failed"
 
 	emake || die "emake failed"

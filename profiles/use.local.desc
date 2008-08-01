@@ -13,10 +13,8 @@ app-portage/portage-bashrc-ng:oldtmpfs - Enable use of tmpfs (old module) in RAM
 app-portage/portage-bashrc-ng:resumemerge - Enable resumemerge module.
 app-portage/portage-bashrc-ng:tmpfs - Enable use of tmpfs in RAM to compile.
 games-action/bombattack:editor - Enable compilation of map editor
-games-action/teewars:dedicated - Install only server.
-games-action/teewars:racemod - Adds maps from racemod.
-games-action/teewars:server - Install client and server.
-games-action/teewars-jeppomaps:racemod - Adds maps from racemod.
+games-action/teeworlds:dedicated - Install only server.
+games-action/teeworlds:server - Install client and server.
 games-emulation/bsnes:jma - Adds support for reading JMA archives
 games-emulation/sdlmame:wolfmame - Adds WolfMAME patches
 games-emulation/zsnes:experimental - Enables work-in-progress code

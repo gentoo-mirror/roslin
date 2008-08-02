@@ -25,6 +25,7 @@ RDEPEND=">=dev-lang/python-2.3
 	dev-python/pygame
 	dev-python/PyAmanith
 	dev-python/imaging
+	dev-python/numpy
 	psyco? ( dev-python/psyco )
 	glew? ( dev-python/glewpy )
 	guitarhero? ( media-sound/vorbis-tools )"

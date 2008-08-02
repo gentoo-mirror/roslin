@@ -21,14 +21,7 @@ PROVIDE="virtual/stardict"
 
 pkg_setup() {
 	if use dbus; then
-		if has_version ">=x11-libs/qt-4.2:4"; then
-			QT4_BUILT_WITH_USE_CHECK="dbus"
-		else
-			if ! built_with_use "x11-libs/qt-gui:4" dbus; then
-				eerror "You have to built x11-libs/qt-gui:4 with dbus."
-				die "dbus in qt-gui disabled"
-			fi
-		fi
+		QT4_BUILT_WITH_USE_CHECK="dbus"
 	fi
 }
 

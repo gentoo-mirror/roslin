@@ -57,7 +57,6 @@ src_compile() {
 	local my_opts
 	use sdl || my_opts="-DNO_SDL:BOOL=1"
 	use gtk || my_opts="${my_opts} -DNO_GTK:BOOL=1"
-	use lirc && my_opts="${my_opts} -DWITH_LIRC:BOOL=1"
 	
 	cmake \
 	-DCMAKE_INSTALL_PREFIX:PATH="${GAMES_PREFIX}" \

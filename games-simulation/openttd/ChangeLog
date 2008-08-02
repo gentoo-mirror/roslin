@@ -2,7 +2,7 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
-  02 Aug 2008; Piotr Szymaniak <lazy_bum@o2.pl> ,openttd-0.6.1.ebuild,
+  02 Aug 2008; Piotr Szymaniak <lazy_bum@o2.pl> openttd-0.6.1.ebuild,
   -openttd-0.6.2_rc1.ebuild, -openttd-0.6.2_rc2.ebuild,
   +openttd-0.6.2.ebuild:
   Version bump.

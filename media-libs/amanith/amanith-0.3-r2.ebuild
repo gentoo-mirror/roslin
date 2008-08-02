@@ -8,6 +8,7 @@ DESCRIPTION="OpenSource C++ CrossPlatform framework designed for 2d & 3d vector 
 HOMEPAGE="http://www.amanith.org/"
 SRC_URI="http://www.amanith.org/download/files/${PN}_${PV//.}.tar.gz"
 
+EAPI="1"
 LICENSE="QPL"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
@@ -17,7 +18,8 @@ DEPEND="truetype? ( >=media-libs/freetype-2.2.1 )
 	jpeg? ( >=media-libs/jpeg-6b )
 	png? ( >=media-libs/libpng-1.2.10 )
 	opengl? ( media-libs/glew )
-	>=x11-libs/qt-4.1.0"
+	|| ( >=x11-libs/qt-4.1.0:4
+	    x11-libs/qt-gui:4 )"
 
 S=${WORKDIR}/${PN}
 

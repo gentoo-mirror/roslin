@@ -27,18 +27,7 @@ RDEPEND="${DEPEND}
 
 S="${WORKDIR}/${PN}"
 
-pkg_setup() {
-	if has_version ">=x11-libs/qt-4.3:4"; then
-		QT4_BUILT_WITH_USE_CHECK="accessibility"
-	else
-		if ! built_with_use "x11-libs/qt-gui:4" accessibility; then
-			eerror "You have to built x11-libs/qt-gui:4 with accessibility."
-			die "accessibility in qt-gui disabled"
-		fi
-	fi
-	qt4_pkg_setup
-}
-
+QT4_BUILT_WITH_USE_CHECK="accessibility"
 
 src_unpack() {
 	unpack ${A}

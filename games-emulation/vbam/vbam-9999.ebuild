@@ -13,7 +13,7 @@ HOMEPAGE="http://vba-m.ngemu.com"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~amd64"
-IUSE="gtk sdl"
+IUSE="gtk lirc sdl"
 
 RDEPEND="gtk? ( >=dev-cpp/libglademm-2.4.0
 		>=dev-cpp/glibmm-2.4.0
@@ -25,6 +25,7 @@ RDEPEND="gtk? ( >=dev-cpp/libglademm-2.4.0
 		media-libs/libpng
 		sys-libs/zlib
 		sdl? ( media-libs/libsdl )
+		lirc? ( app-misc/lirc )
 		virtual/opengl"
 
 DEPEND="${RDEPEND}
@@ -45,8 +46,6 @@ src_unpack() {
 	subversion_src_unpack
 	cd ${S}
 	
-	epatch "${FILESDIR}"/${PN}-lirc.patch
-	
 	sed -i CMakeLists.txt \
 	    -e "/C[X]*_FLAGS/d" \
 	    -e "s:\${CMAKE_INSTALL_PREFIX}/::" \
@@ -57,6 +56,7 @@ src_compile() {
 	local my_opts
 	use sdl || my_opts="-DNO_SDL:BOOL=1"
 	use gtk || my_opts="${my_opts} -DNO_GTK:BOOL=1"
+	use lirc && my_opts="${my_opts} -DWITH_LIRC:BOOL=1"
 	
 	cmake \
 	-DCMAKE_INSTALL_PREFIX:PATH="${GAMES_PREFIX}" \

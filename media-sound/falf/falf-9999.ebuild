@@ -24,7 +24,7 @@ done
 DEPEND="media-libs/taglib
 	media-libs/xine-lib"
 
-need-kde 3.3
+need-kde 3.4
 
 src_compile(){
 	# Generate translations

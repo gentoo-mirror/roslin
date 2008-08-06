@@ -17,9 +17,10 @@ for X in ${LANGS}; do
 done
 
 
-DEPEND="media-libs/taglib"
+DEPEND="media-libs/taglib
+	media-libs/xine-lib"
 
-need-kde 3.3
+need-kde 3.4
 
 src_compile(){
         # Generate translations
@@ -39,8 +40,8 @@ src_compile(){
 
 
 
-    eqmake3 ${PN}.pro
-    emake
+    eqmake3 ${PN}.pro || die "eqmake3 failed"
+    emake || die "emake failed"
 
 }
 

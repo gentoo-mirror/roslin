@@ -20,13 +20,6 @@ RDEPEND="dev-python/pygtk
 	 gammu? ( dev-python/python-gammu )"
 DEPEND="${RDEPEND}"
 
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-	
-	epatch ${FILESDIR}/${P}-python24.patch
-}
-
 src_compile() {
 	econf
 	emake || die "emake failed."

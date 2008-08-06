@@ -2,6 +2,10 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  06 Aug 2008; Michał Ziąbkowski <mziab@o2.pl> -qcdemu-0.1-r1.ebuild,
+  -qcdemu-0.2.ebuild, +qcdemu-0.2.1.ebuild:
+  Bumped. Removed previous versions.
+
   02 Aug 2008; Michał Ziąbkowski <mziab@o2.pl> qcdemu-0.1-r1.ebuild,
   qcdemu-0.2.ebuild:
   Simplified USE flag check.

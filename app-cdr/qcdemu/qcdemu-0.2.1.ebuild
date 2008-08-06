@@ -16,7 +16,8 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="|| ( >=x11-libs/qt-4.3.0:4
-	x11-libs/qt-gui:4 )"
+	( x11-libs/qt-gui:4
+	x11-libs/qt-dbus:4 ) )"
 RDEPEND="${DEPEND}
 	>=app-cdr/cdemu-1.1.0"
 

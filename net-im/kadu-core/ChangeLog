@@ -2,6 +2,11 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  07 Aug 2008; Michał Ziąbkowski <mziab@o2.pl> kadu-core-0.6.0.1.ebuild,
+  kadu-core-0.6.0.2.ebuild:
+  Added "--missing true" to USE gif check , so that it doesn't bomb out with
+  qt-3.3.8b.
+
   03 Jul 2008; Michał Ziąbkowski <mziab@o2.pl> +kadu-core-0.6.0.2.ebuild:
   Bumped.
 

@@ -32,7 +32,7 @@ module_config()
 pkg_setup()
 {
 	# Break if qt3 is compiled without gif use flag
-	if has_version '=x11-libs/qt-3*' && ! built_with_use '=x11-libs/qt-3*' gif 
+	if has_version '=x11-libs/qt-3*' && ! built_with_use --missing true '=x11-libs/qt-3*' gif 
 	then
 		die "Please re-emerge x11-libs/qt-3.x with the 'gif' flag set"
 	fi

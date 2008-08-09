@@ -23,7 +23,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	epatch ${FILESDIR}/${P}-Makefile.patch
+	epatch "${FILESDIR}"/"${P}"-Makefile.patch
 
 	if use !single ; then
 		sed -i \
@@ -40,7 +40,7 @@ src_compile() {
 src_install() {
 	insinto "${dir}"
 	doins -r data || die "doins data failed"
-	
+
 	if use single ; then
 		dodir "${dir}"/YACRAI
 		insinto "${dir}"/YACRAI

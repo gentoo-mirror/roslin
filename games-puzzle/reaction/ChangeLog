@@ -1,5 +1,8 @@
 # ChangeLog for games-puzzle/reaction
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 
+  09 Aug 2008; Piotr Szymaniak <lazy_bum@o2.pl> reaction-3.01.ebuild:
+  Fixed quoting.
+
   30 Sep 2007; Piotr Szymaniak <lazy_bum@o2.pl> reaction-3.01.ebuild:
   New ebuild.

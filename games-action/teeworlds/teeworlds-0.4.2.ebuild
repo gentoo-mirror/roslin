@@ -67,7 +67,7 @@ src_compile() {
 		-Wp,${CXXFLAGS} \
 		|| die "make_unix.sh failed"
 
-	cd ${S}
+	cd "${S}"
 
 	# set optimisation
 	sed -i \

@@ -2,6 +2,9 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  09 Aug 2008; Piotr Szymaniak <lazy_bum@o2.pl> ufo-ai-2.2.1.ebuild:
+  Revised ebuild (see bug #206145 for details).
+
   01 Aug 2008; Piotr Szymaniak <lazy_bum@o2.pl> +ufo-ai-2.2.1.ebuild:
   New package. Ebuild from Jyrki Launonen (and bug #206145) with my touch of
   magic.

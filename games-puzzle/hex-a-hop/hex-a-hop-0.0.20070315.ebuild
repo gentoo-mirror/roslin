@@ -34,11 +34,11 @@ src_unpack() {
 #	epatch ${WORKDIR}/${P/p-/p_}-${PATCH_LEVEL}.diff
 #	epatch ${WORKDIR}/hex-a-hop_0.0.20070315-2.diff
 
-	epatch ${FILESDIR}/endianess.patch
+	epatch "${FILESDIR}"/endianess.patch
 
 #	epatch ${FILESDIR}/minimal-sdl-init.patch
 
-	epatch ${FILESDIR}/proper_directories.patch
+	epatch "${FILESDIR}"/proper_directories.patch
 
 #	epatch ${FILESDIR}/gettext_i18n.patch
 #	epatch ${FILESDIR}/patch-hex-a-hop-better-than-par.diff

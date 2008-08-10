@@ -18,11 +18,7 @@ RDEPEND=""
 
 EMULTILIB_PKG="true"
 
-S="${WORKDIR}/${PN}"
-
-src_unpack() {
-	unpack ${A}
-}
+S=${WORKDIR}/${PN}
 
 src_compile_abi() {
 	local abi=$1

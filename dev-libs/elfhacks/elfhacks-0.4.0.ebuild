@@ -19,13 +19,9 @@ RDEPEND=""
 
 EMULTILIB_PKG="true"
 
-src_unpack() {
-	unpack ${A}
-}
-
 src_compile() {
 	cd "${WORKDIR}/${PN}"
-	
+
 	for ABI in $(get_install_abis); do
 		emake \
 			CC="$(tc-getCC)" \
@@ -39,7 +35,7 @@ src_compile() {
 
 src_install() {
 	cd "${WORKDIR}/${PN}"
-	
+
 	for ABI in $(get_install_abis); do
 		emake install \
 			DESTDIR="${D}" \

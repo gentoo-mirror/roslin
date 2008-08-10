@@ -22,10 +22,9 @@ RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${PN}"
 
-src_unpack()
-{
+src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	sed -e "s:qmake:${QTDIR}/bin/qmake/:" -i configure || die "sed failed"
 }
 
@@ -34,13 +33,13 @@ src_compile() {
 	use vat || myconf="--no_vat"
 	use vatmp && myconf="${myconf} --vatmp"
 	econf ${myconf} || die "econf failed"
-	
+
 	eqmake3 faktury.pro || die "qmake faktury.pro failed"
 	emake || die "emake failed"
 }
 
 src_install() {
-	emake INSTALL_ROOT=${D} install || die "make install failed"
+	emake INSTALL_ROOT="${D}" install || die "make install failed"
 	dodoc faq todo ChangeLog readme
 }
 

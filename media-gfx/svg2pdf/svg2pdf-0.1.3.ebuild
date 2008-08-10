@@ -17,5 +17,5 @@ DEPEND=">=x11-libs/libsvg-cairo-0.1.6"
 RDEPEND="${DEPEND}"
 
 src_install() {
-	emake DESTDIR=${D} install || die "einstall failed"
+	emake DESTDIR="${D}" install || die "einstall failed"
 }

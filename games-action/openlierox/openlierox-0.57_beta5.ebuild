@@ -24,14 +24,13 @@ RDEPEND="media-libs/libsdl
 DEPEND="${RDEPEND}"
 
 src_unpack() {
-	mkdir -p ${S} || die "cannot creating working-dir"
-	cd ${S}
+	cd "${S}"
 
 	unpack OpenLieroX_${PV}.src.tar.bz2 || die "cannot unpack the main archive"
 }
 
 src_compile() {
-	cd ${S}/OpenLieroX || die "some strange problems ..."
+	cd "${S}"/OpenLieroX || die "some strange problems ..."
 
 	# SYSTEM_DATA_DIR/OpenLieroX will be the search path
 	# the compile.sh will also take care of CXXFLAGS
@@ -43,7 +42,7 @@ src_compile() {
 }
 
 src_install() {
-	cd ${S}/OpenLieroX || die "some strange problems ..."
+	cd "${S}"/OpenLieroX || die "some strange problems ..."
 
 	echo ">>> copying binary ..."
 	newgamesbin bin/openlierox openlierox || die "cannot copy binary"

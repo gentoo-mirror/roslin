@@ -16,11 +16,11 @@ IUSE=""
 RDEPEND=""
 DEPEND="sys-libs/glibc"
 
-S="${WORKDIR}/${P}/source"
+S=${WORKDIR}/${P}/source
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	sed -i \
 		-e "s|OPTIMIZATIONS:= -O2|OPTIMIZATIONS:= ${CFLAGS}|" \

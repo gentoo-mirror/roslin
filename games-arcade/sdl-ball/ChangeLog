@@ -1,0 +1,7 @@
+# ChangeLog for games-arcade/sdl-ball
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  10 Aug 2008; Piotr Szymaniak <lazy_bum@o2.pl> +sdl-ball-0.08.ebuild:
+  New package.
+

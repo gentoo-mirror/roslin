@@ -2,6 +2,10 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  10 Aug 2008; Piotr Szymaniak <lazy_bum@o2.pl> -tyrqw-0.59.ebuild,
+  +tyrqw-0.60.ebuild:
+  Version bump.
+
   02 May 2008; Piotr Szymaniak <lazy_bum@o2.pl> +tyrqw-0.59.ebuild:
   Version bump.
 

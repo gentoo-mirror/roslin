@@ -38,6 +38,8 @@ DEPEND="${COMMON}
 	x11-proto/xf86vidmodeproto
 	x11-proto/xproto"
 
+S=${WORKDIR}/${MY_P}
+
 pkg_setup() {
 	games_pkg_setup
 

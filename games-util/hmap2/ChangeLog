@@ -2,6 +2,9 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  10 Aug 2008; Piotr Szymaniak <lazy_bum@o2.pl> +hmap2-20080616.ebuild:
+  Fixed missing files.
+
   01 May 2008; Piotr Szymaniak <lazy_bum@o2.pl> +hmap2-20070412.ebuild,
   +hmap2-20080423.ebuild:
   New package.

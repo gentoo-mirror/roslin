@@ -16,7 +16,7 @@ SRC_URI="http://pl.ekg2.org/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 
-KEYWORDS="~amd64 ~x86"
+KEYWORDS=""
 IUSE="crypt gif gpm gsm gtk inotify jabber jpeg nls nogg perl python readline ruby spell sqlite sqlite3 ssl unicode xosd"
 
 DEPEND="crypt? ( app-crypt/gpgme )
@@ -33,9 +33,8 @@ DEPEND="crypt? ( app-crypt/gpgme )
 	ruby? ( dev-lang/ruby )
 	spell? ( >=app-text/aspell-0.50.5 )
 	sqlite? ( !sqlite3? ( =dev-db/sqlite-2* ) )
-    sqlite3? ( >=dev-db/sqlite-3 )
-
-	ssl? ( >=dev-libs/openssl-0.9.6m \
+	sqlite3? ( >=dev-db/sqlite-3 )
+	ssl? ( >=dev-libs/openssl-0.9.6
 		jabber? ( >=net-libs/gnutls-1.0.17 ) )
 	xosd? ( x11-libs/xosd )
 	virtual/libintl"
@@ -52,7 +51,7 @@ S=${WORKDIR}/${MY_P}
 src_unpack() {
 	unpack ${A}
 #	subversion_src_unpack
-	cd ${S}
+	cd "${S}"
 
 	# Ekg2 has no debug configure option
 	# Instead it features a runtime option which defaults to on

@@ -30,9 +30,8 @@ DEPEND="crypt? ( app-crypt/gpgme )
 	ruby? ( dev-lang/ruby )
 	spell? ( >=app-text/aspell-0.50.5 )
 	sqlite? ( !sqlite3? ( =dev-db/sqlite-2* ) )
-    sqlite3? ( >=dev-db/sqlite-3 )
-
-	ssl? ( >=dev-libs/openssl-0.9.6m \
+	sqlite3? ( >=dev-db/sqlite-3 )
+	ssl? ( >=dev-libs/openssl-0.9.6
 		jabber? ( >=net-libs/gnutls-1.0.17 ) )
 	xosd? ( x11-libs/xosd )
 	virtual/libintl

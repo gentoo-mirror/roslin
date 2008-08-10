@@ -16,7 +16,7 @@ IUSE=""
 DEPEND="sys-libs/glibc"
 
 src_unpack() {
-	unpack "${A}"
+	unpack ${A}
 	cd "${S}"
 
 	epatch "${FILESDIR}"/${P}-max_tstack.patch || die "epatch failed"

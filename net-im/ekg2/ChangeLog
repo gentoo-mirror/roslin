@@ -4,7 +4,7 @@
 
   10 Aug 2008; Piotr Szymaniak <lazy_bum@o2.pl> ekg2-9999.ebuild,
   -ekg2-20080718.ebuild, -ekg2-20080720.ebuild, +ekg2-20080806.ebuild:
-  Fixed some repoman reported errors.Snapshots with missing files masked with
+  Fixed some repoman reported errors. Snapshots with missing files masked with
   no keyword.
 
   19 Jul 2008; Piotr Szymaniak <lazy_bum@o2.pl> -ekg2-20080605.ebuild,

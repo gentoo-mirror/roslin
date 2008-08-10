@@ -2,6 +2,10 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  10 Aug 2008; Piotr Szymaniak <lazy_bum@o2.pl> -slingshot-0.8.ebuild,
+  slingshot-0.8.1.ebuild:
+  Fixed some repoman reported errors.
+
   01 May 2008; Piotr Szymaniak <lazy_bum@o2.pl> +slingshot-0.8.1.ebuild:
   Version bump. Remove icon extension from desktop entry to match Icon Theme
   Specification.

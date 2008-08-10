@@ -19,8 +19,9 @@ RDEPEND="dev-lang/python
 
 DEPEND="${RDEPEND}"
 
+S=${WORKDIR}/${PN}
+
 src_install() {
-	cd ${WORKDIR}/${PN}
 	newicon data/shot.png ${PN}.png
 
 	mv ../Readme.txt readme.txt

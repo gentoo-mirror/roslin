@@ -12,17 +12,17 @@ KEYWORDS="~x86"
 IUSE=""
 
 RDEPEND=""
-
 DEPEND=""
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	sed -i \
 		-e 's:-O2:$(E_CXXFLAGS):' \
 		Makefile || die "sed Makefile failed"
 }
+
 src_compile() {
 	emake E_CXXFLAGS="${CXXFLAGS}" || die "emake failed"
 }

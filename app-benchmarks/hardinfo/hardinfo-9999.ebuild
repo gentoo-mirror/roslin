@@ -7,7 +7,7 @@ inherit subversion
 ESVN_REPO_URI="svn://svn.berlios.de/hardinfo/trunk"
 #ESVN_PROJECT="hardinfo2"
 
-DESCRIPTION="HardInfo can gather information about your system's hardware and operating system, perform benchmarks, and generate printable reports"
+DESCRIPTION="Gather information about your system, perform benchmarks, and generate printable reports."
 HOMEPAGE="http://hardinfo.berlios.de/HomePage"
 SRC_URI=""
 
@@ -25,7 +25,7 @@ S=${WORKDIR}/${PN}2
 # Can't compile with -O, need filter-flags and we don't have time (;
 src_unpack() {
 	subversion_src_unpack
-	cd ${S}
+	cd "${S}"
 	mv ${PN}2/* ./
 #	sed -i \
 #		-e "s|-fPIC -pipe -Wall -g|-fPIC ${CFLAGS}|" \
@@ -38,5 +38,5 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR=${D} install || die "einstall"
+	emake DESTDIR="${D}" install || die "einstall"
 }

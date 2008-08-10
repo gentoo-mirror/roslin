@@ -1,6 +1,10 @@
 # ChangeLog for app-benchmarks/hardinfo
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 
+  10 Aug 2008; Piotr Szymaniak <lazy_bum@o2.pl> hardinfo-0.4.2.3.ebuild,
+  hardinfo-9999.ebuild:
+  Fixed some repoman reported errors.
+
   23 Apr 2008; Michał Ziąbkowski <mziab@o2.pl> hardinfo-0.4.2.3.ebuild,
   hardinfo-9999.ebuild:
   Added ~amd64 keyword. Fixed deps.

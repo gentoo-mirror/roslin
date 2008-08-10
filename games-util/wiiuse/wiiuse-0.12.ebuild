@@ -16,18 +16,17 @@ KEYWORDS="~x86"
 IUSE="debug examples sdl"
 
 RDEPEND="net-wireless/bluez-utils
-	examples? ( sdl? ( media-libs/libsdl ))"
-DEPEND="${RDEPEND}
-	sys-apps/sed"
+	examples? ( sdl? ( media-libs/libsdl ) )"
+DEPEND="${RDEPEND}"
 
 S=${WORKDIR}/${MY_P/_src/}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	
-	epatch ${FILESDIR}/${P}-makefile.patch
-	
+	cd "${S}"
+
+	epatch "${FILESDIR}"/"${P}"-makefile.patch
+
 	# -fomit-frame-pointer shouldn't be used with USE="debug"
 	use debug && filter-flags "-fomit-frame-pointer"
 
@@ -48,7 +47,7 @@ src_compile() {
 	local bld="wiiuse"
 	use examples && bld="${bld} ex"
 	use sdl && bld="${bld} sdl-ex"
-	
+
 	use debug && opts="debug=1"
 	opts="${opts} ${bld}"
 

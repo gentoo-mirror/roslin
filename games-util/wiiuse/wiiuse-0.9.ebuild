@@ -21,7 +21,7 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	sed -i \
 		-e "s|-Wall -pipe -fPIC -funroll-loops|${CFLAGS} -fPIC|" \

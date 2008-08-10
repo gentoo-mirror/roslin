@@ -1,6 +1,10 @@
 # ChangeLog for games-util/wiiuse
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 
+  10 Aug 2008; Piotr Szymaniak <lazy_bum@o2.pl> wiiuse-0.9.ebuild,
+  wiiuse-0.12.ebuild:
+  Fixed some repoman reported errors.
+
   14 Apr 2008; Michał Ziąbkowski <mziab@o2.pl> wiiuse-0.12.ebuild:
   Okay, debug doesn't bomb out anymore.
 

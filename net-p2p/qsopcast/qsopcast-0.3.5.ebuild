@@ -1,5 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Header: $
 
 inherit eutils kde-functions qt3
 
@@ -19,24 +20,24 @@ RESTRICT="primaryuri"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	sed -i \
-		-e "s+/usr/local+/usr+" ${S}/src/${PN}.pro || die "sed failed"
+		-e "s+/usr/local+/usr+" src/${PN}.pro || die "sed failed"
 }
 
 src_compile() {
-	cd ${S}/src
+	cd "${S}"/src
 
 	eqmake3 || die "qmake failed"
 	emake || die "emake failed"
 }
 
 src_install() {
-	dobin src/${PN}
+	dobin src/"${PN}"
 
-	doicon ${FILESDIR}/sopcast.gif
+	doicon "${FILESDIR}"/sopcast.gif
 	make_desktop_entry qsopcast "QSopCast - P2P Internet TV Viewer" \
 		sopcast.gif
-	
+
 	dodoc AUTHORS README
 }

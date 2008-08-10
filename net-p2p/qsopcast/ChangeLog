@@ -1,0 +1,7 @@
+# ChangeLog for net-p2p/qsopcast
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  10 Aug 2008; Piotr Szymaniak <lazy_bum@o2.pl> qsopcast-0.3.5.ebuild:
+  Fixed some repoman reported errors.
+

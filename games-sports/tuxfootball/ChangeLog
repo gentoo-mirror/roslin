@@ -1,7 +1,0 @@
-# ChangeLog for games-sports/tuxfootball
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: $
-
-  03 Mar 2008; Piotr Szymaniak <lazy_bum@o2.pl> +tuxfootball-0.1.1.ebuild:
-  New package (bug #209032)
-

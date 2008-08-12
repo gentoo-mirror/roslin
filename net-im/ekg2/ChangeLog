@@ -2,6 +2,9 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  12 Aug 2008; Piotr Szymaniak <lazy_bum@o2.pl> +ekg2-20080810.ebuild:
+  Working snapshot (I hope ;).
+
   10 Aug 2008; Piotr Szymaniak <lazy_bum@o2.pl> ekg2-9999.ebuild,
   -ekg2-20080718.ebuild, -ekg2-20080720.ebuild, +ekg2-20080806.ebuild:
   Fixed some repoman reported errors. Snapshots with missing files masked with

@@ -4,7 +4,7 @@
 
 inherit subversion eutils
 
-DESCRIPTION="Superiotool allows you to detect which Super I/O you have on your mainboard, and it can provide detailed information about the register contents of the Super I/O."
+DESCRIPTION="Superiotool allows you to detect which Super I/O you have on your mainboard and more."
 HOMEPAGE="http://www.linuxbios.org/Superiotool"
 
 LICENSE="GPL-2"
@@ -19,7 +19,7 @@ S=${WORKDIR}/${PN}
 
 src_unpack() {
 	subversion_src_unpack
-	cd ${S}
+	cd "${S}"
 	sed -i \
 		-e "s|-O2 -Wall -Werror -Wstrict-prototypes -Wundef -Wstrict-aliasing|${CFLAGS}|" \
 		-e "s|-Werror-implicit-function-declaration -ansi||" \

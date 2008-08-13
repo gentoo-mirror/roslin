@@ -27,7 +27,7 @@ src_unpack() {
 		-e "s|-lSDL_gfx|-lSDL_gfx ${LDFLAGS}|" \
 		-e "s|-Wall -O2|${CXXFLAGS}|" \
 		Makefile
-	
+
 	to_patch=$(grep -l '"data\/' *)
 	sed -i \
 		-e "s|data/|${dir}/data/|" \

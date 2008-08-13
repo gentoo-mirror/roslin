@@ -10,10 +10,9 @@ SRC_URI="mirror://sourceforge/cdemu/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ppc ~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-S="${WORKDIR}/${P}"
 DEPEND=">=dev-lang/python-2.4
 		>=dev-python/pygtk-2.6
 		>=dev-python/pygobject-2.6

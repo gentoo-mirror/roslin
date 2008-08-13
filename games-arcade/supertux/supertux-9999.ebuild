@@ -33,16 +33,16 @@ src_unpack() {
 	subversion_src_unpack
 	cd "${S}"
 
-	epatch ${FILESDIR}/${P}-cmakelists.patch
+	epatch "${FILESDIR}"/"${P}-cmakelists.patch"
 }
 
 src_compile() {
-	cmake-utils_src_configurein || die
-	emake || die
+	cmake-utils_src_configurein || die "cmake failed"
+	emake || die "emake failed"
 }
 
 src_install() {
-	emake DESTDIR=${D} install || die "install failed"
-	dodoc README 
+	emake DESTDIR="${D}" install || die "install failed"
+	dodoc README
 	prepgamesdirs
 }

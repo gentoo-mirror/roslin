@@ -1,7 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
-# This ebuild come from http://bugs.gentoo.org/show_bug.cgi?id=158582 - The site http://gentoo.zugaina.org/ only host a copy.
 
 inherit eutils games
 
@@ -32,13 +31,13 @@ pkg_setup() {
 src_compile() {
 	egamesconf \
 		--disable-debug \
-		|| die
+		|| die "econf failed"
 	jam || die "jam failed"
 }
 
 src_install() {
-	DESTDIR=${D} jam \
+	DESTDIR="${D}" jam \
 		install || die "jam install failed"
-	dodoc README 
+	dodoc README
 	prepgamesdirs
 }

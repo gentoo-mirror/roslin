@@ -25,12 +25,12 @@ RDEPEND="${DEPEND}"
 S=${WORKDIR}/${PN}
 
 src_compile() {
-	./autogen.sh || die "autogen failed" 
+	./autogen.sh || die "autogen failed"
 	econf || die "econf failed"
 	emake || die "emake failed"
 }
 
 src_install() {
-	emake install DESTDIR=${D} || die "emake install failed"
-	dodoc AUTHORS COPYING ChangeLog INSTALL README
+	emake install DESTDIR="${D}" || die "emake install failed"
+	dodoc AUTHORS ChangeLog INSTALL README
 }

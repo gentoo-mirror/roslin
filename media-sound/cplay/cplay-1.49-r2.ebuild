@@ -31,7 +31,7 @@ S=${WORKDIR}/${PN}-${VER}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	if use musepack; then
 		epatch "${FILESDIR}"/${P}-scroll_mpc.patch
 	fi
@@ -39,7 +39,7 @@ src_unpack() {
 }
 
 src_install () {
-	make PREFIX=${D}/usr recursive-install || die "make failed"
+	make PREFIX="${D}"/usr recursive-install || die "make failed"
 
 	dosed "s:/usr/local:/usr:g" cplay
 	dobin cplay

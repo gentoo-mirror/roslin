@@ -2,6 +2,9 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  13 Aug 2008; Piotr Szymaniak <lazy_bum@o2.pl> love-0.3.2.ebuild:
+  Fixed quoting.
+
   05 Jul 2008; Piotr Szymaniak <lazy_bum@o2.pl> +love-0.3.2.ebuild:
   Initial ebuild.
 

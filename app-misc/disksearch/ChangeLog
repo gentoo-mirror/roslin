@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/disksearch
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 
+  13 Aug 2008; Piotr Szymaniak <lazy_bum@o2.pl> disksearch-1.2.1.ebuild:
+  Fixed repoman reported errors.
+
 *disksearch-1.2.1.ebuild (18 Oct 2007)
 
   18 Oct 2007; Piotr Szymaniak <lazy_bum@o2.pl> +disksearch-1.2.1.ebuild:

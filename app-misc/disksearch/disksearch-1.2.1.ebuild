@@ -20,7 +20,6 @@ RDEPEND=">=x11-libs/gtk+-2.4
 	${DEPEND}"
 
 src_compile() {
-	cd ${S}
 	epatch "${FILESDIR}/homedir.patch"
 }
 

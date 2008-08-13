@@ -2,6 +2,9 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  13 Aug 2008; Piotr Szymaniak <lazy_bum@o2.pl> openttd-0.6.2.ebuild:
+  Ebuild fixed by Tomá¹ Chvátal (bug #215776).
+
   06 Aug 2008; Piotr Szymaniak <lazy_bum@o2.pl> -openttd-0.6.2-r1.ebuild,
   -files/openttd-0.6.2-truncate-string.patch:
   False alarm, it is already fixed in 0.6.2.

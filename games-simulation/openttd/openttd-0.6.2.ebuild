@@ -19,19 +19,20 @@ SRC_URI="${SB}/${MY_P}-source.tar.bz2
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
-IUSE="alsa debug dedicated iconv png scenarios static timidity zlib"
+IUSE="alsa debug dedicated iconv png scenarios static timidity unicode zlib"
 
-DEPEND="!dedicated? ( media-libs/libsdl
-		media-libs/fontconfig
-	)
-	iconv? ( virtual/libiconv )
-	png? ( media-libs/libpng )
-	zlib? ( sys-libs/zlib )"
+DEPEND="!dedicated? (
+			media-libs/libsdl
+			media-libs/fontconfig
+		)
+		iconv? ( virtual/libiconv )
+		png? ( media-libs/libpng )
+		zlib? ( sys-libs/zlib )"
 RDEPEND="${DEPEND}
-	!dedicated? (
-		timidity? ( media-sound/timidity++ )
-		!timidity? ( alsa? ( media-sound/alsa-utils ) )
-	)"
+		!dedicated? (
+			timidity? ( media-sound/timidity++ )
+			!timidity? ( alsa? ( media-sound/alsa-utils ) )
+		)"
 
 S=${WORKDIR}/${MY_P}
 
@@ -44,27 +45,29 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${MY_P}-source.tar.bz2
+
 	if use scenarios ; then
 		cd "${S}"/bin/scenario/
 		unpack ${SCENARIOS_048}
 		unpack ${SCENARIOS_050}
 	fi
-	cd "${S}"
 
+	cd "${S}"
 	epatch "${FILESDIR}/libiconv.patch"
 }
 
 src_compile() {
 	local myopts=""
-	use debug && myopts="${myopts} --debug"
+	use debug && myopts="${myopts} --enable-debug=3"
 	use dedicated && myopts="${myopts} --enable-dedicated --without-sdl"
+	use unicode || myopts="${myopts} --disable-unicode"
 	if ! use dedicated; then
 		myopts="${myopts} --with-sdl --with-freetype --with-fontconfig"
 		if ! use timidity; then
-			#use alsa && myopts="${myopts} --with-midi=/usr/bin/aplaymidi"
-			einfo "This version of openttd does not support setting the midi-player."
+			use alsa && myopts="${myopts} --with-midi=/usr/bin/aplaymidi"
 		fi
 	fi
+
 	# configure is a hand-written sh-script, so econf will not work
 	./configure --os=UNIX --shared-dir="${GAMES_DATADIR}"/${PN}/ \
 		$(use_enable static) \
@@ -83,10 +86,6 @@ src_compile() {
 		PREFIX="${GAMES_PREFIX}" \
 		INSTALL_DATA_DIR="${GAMES_DATADIR}"/${PN}/ \
 		|| die "emake failed"
-
-#		DATA_DIR="${GAMES_DATADIR}"/${PN} \
-#		CUSTOM_LANG_DIR="${GAMES_DATADIR}"/${PN}/lang \
-
 }
 
 src_install() {

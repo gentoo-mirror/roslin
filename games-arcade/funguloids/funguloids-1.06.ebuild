@@ -66,7 +66,7 @@ src_install() {
 
 	doins bin/icon bin/*.cfg bin/*.mpk
 
-	dodoc COPYING INSTALL README
+	dodoc INSTALL README
 
 	prepgamesdirs
 }

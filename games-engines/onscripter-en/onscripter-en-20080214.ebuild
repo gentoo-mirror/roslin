@@ -18,7 +18,6 @@ DEPEND="media-libs/sdl-image
 	media-libs/sdl-ttf
 	media-libs/smpeg
 	app-arch/bzip2"
-	
 RDEPEND="${DEPEND}"
 
 pkg_setup() {
@@ -44,9 +43,9 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/configure-fix.patch
-	
+	cd "${S}"
+	epatch "${FILESDIR}"/configure-fix.patch
+
 	if use scale; then
 	sed -i \
 	    -e 's:-DLINUX:-DLINUX -DRCA_SCALE:' configure \
@@ -61,7 +60,7 @@ src_compile() {
 
 src_install() {
 	dogamesbin onscripter
-	dodoc CHANGES COPYING INSTALL README
+	dodoc CHANGES INSTALL README
 
 	prepgamesdirs
 }

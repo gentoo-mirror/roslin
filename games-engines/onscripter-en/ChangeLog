@@ -1,0 +1,8 @@
+# ChangeLog for games-engines/onscripter-en
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  13 Aug 2008; Piotr Szymaniak <lazy_bum@o2.pl>
+  onscripter-en-20080214.ebuild:
+  Fixed repoman reported errors.
+

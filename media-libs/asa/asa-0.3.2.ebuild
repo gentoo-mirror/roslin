@@ -24,7 +24,7 @@ S=${WORKDIR}/${P}
 
 src_unpack() {
 	unpack ${A}
-	cd ${WORKDIR}
+	cd "${WORKDIR}"
 	mv ${P}-${MY_PV} ${P}
 }
 

@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE="X joystick ncurses net"
 
-DEPEND="sys-libs/glibc 
+DEPEND="sys-libs/glibc
 	ncurses? ( sys-libs/ncurses )
 	X? ( x11-libs/libX11 )"
 RDEPEND=""

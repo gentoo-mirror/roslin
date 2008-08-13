@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/bsnes
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 
+  13 Aug 2008; Piotr Szymaniak <lazy_bum@o2.pl> bsnes-0.033.ebuild:
+  Fixed whitespace.
+
   20 Jul 2008; Michał Ziąbkowski <mziab@o2.pl> -bsnes-0.032a.ebuild,
   +bsnes-0.033.ebuild:
   Bumped. Removed previous version.

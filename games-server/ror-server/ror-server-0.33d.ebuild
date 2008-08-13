@@ -24,7 +24,7 @@ S=${WORKDIR}/${MY_PN}-${MY_PV}/sources
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 #	sed -i \
 #		-e "s|CFLAGS=-c|CFLAGS = ${CFLAGS}|" \
 #		Makefile || die "sed"

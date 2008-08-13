@@ -36,11 +36,10 @@ DEPEND="${RDEPEND}
 	openexr? ( media-libs/openexr )
 	svg? ( >=gnome-base/librsvg-2.14.0 )
 	ffmpeg? ( >=media-video/ffmpeg-0.4.9_p20080326 )
-        workshop? ( >=dev-lang/lua-5.1.0 ) 
+	workshop? ( >=dev-lang/lua-5.1.0 )
 	graphviz? ( media-gfx/graphviz )
 	enscript? ( app-text/enscript )
-	asciidoc? ( app-text/asciidoc )
-        "
+	asciidoc? ( app-text/asciidoc )"
 
 #
 # Meaning of the optional dependencies (from http://www.gegl.org): 
@@ -60,20 +59,21 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
-	epatch ${FILESDIR}/gegl-libavformat.patch
-	cd ${S}
+	epatch "${FILESDIR}"/gegl-libavformat.patch
+	cd "${S}"
 }
 
 src_compile() {
-	local MYCONF="$(use_enable debug) $(use_enable doc docs) \
-		$(use_enable threads mp) $(use_with jpeg libjpeg) \
+	local MYCONF="$(use_enable debug) \
+		$(use_enable doc docs) \
+		$(use_enable threads mp) \
+		$(use_with jpeg libjpeg) \
 		$(use_enable workshop) \
-                $(use_enable mmx) \
-                $(use_enable sse) \
-                "
+		$(use_enable mmx) \
+		$(use_enable sse)"
 
-	econf ${MYCONF} || die "econf failed" 
-	env GEGL_SWAP=${WORKDIR} emake || die "emake failed"
+	econf ${MYCONF} || die "econf failed"
+	env GEGL_SWAP="${WORKDIR}" emake || die "emake failed"
 }
 
 src_install() {
@@ -83,7 +83,7 @@ src_install() {
 
 	# don't know why einstall omits this?!
 	insinto /usr/include/${PN}-0.0/${PN}/buffer/
-	doins ${WORKDIR}/${P}/${PN}/buffer/*.h || die "doins buffer failed"
+	doins "${WORKDIR}/${P}/${PN}"/buffer/*.h || die "doins buffer failed"
 	insinto /usr/include/${PN}-0.0/${PN}/module/
-	doins ${WORKDIR}/${P}/${PN}/module/*.h || die "doins module failed"
+	doins "${WORKDIR}/${P}/${PN}"/module/*.h || die "doins module failed"
 }

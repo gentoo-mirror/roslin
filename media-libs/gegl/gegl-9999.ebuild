@@ -18,7 +18,7 @@ IUSE="jpeg graphviz openexr ruby sdl svg debug doc threads gtk cairo pango \
 
 RDEPEND=""
 DEPEND="${RDEPEND}
-    >=media-libs/babl-0.0.20
+	>=media-libs/babl-0.0.20
 	>=dev-libs/glib-2.14.1
 	media-libs/libpng
 	gtk? ( >=x11-libs/gtk+-2.8.6 )
@@ -35,21 +35,24 @@ DEPEND="${RDEPEND}
 	ffmpeg? ( media-video/ffmpeg )"
 
 src_compile() {
-	local MYCONF="$(use_enable debug) $(use_enable doc) \
-		$(use_enable threads mp) $(use_with jpeg libjpeg) \
+	local MYCONF="$(use_enable debug) \
+		$(use_enable doc) \
+		$(use_enable threads mp) \
+		$(use_with jpeg libjpeg) \
 		$(use_enable workshop)"
+
 	"${S}"/autogen.sh $(use_enable) || die
-	econf ${MYCONF} || die "configure failed" 
-	env GEGL_SWAP=${WORKDIR} emake || die "emake failed"
+	econf ${MYCONF} || die "configure failed"
+	env GEGL_SWAP="${WORKDIR}" emake || die "emake failed"
 }
 
 src_install() {
 	einstall || die "einstall failed"
-	dodoc AUTHORS COPYING ChangeLog INSTALL README
+	dodoc AUTHORS ChangeLog INSTALL README
 
 	# don't know why einstall omits this?!
 	insinto /usr/include/${PN}-1.0/${PN}/buffer/
-	doins ${WORKDIR}/${P}/${PN}/buffer/*.h || die "doins buffer failed"
+	doins "${WORKDIR}/${P}/${PN}"/buffer/*.h || die "doins buffer failed"
 	insinto /usr/include/${PN}-1.0/${PN}/module/
-	doins ${WORKDIR}/${P}/${PN}/module/*.h || die "doins module failed"
+	doins "${WORKDIR}/${P}/${PN}"/module/*.h || die "doins module failed"
 }

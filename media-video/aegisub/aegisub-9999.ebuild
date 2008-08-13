@@ -29,8 +29,6 @@ DEPEND=">=sys-devel/automake-1.10
 	portaudio? ( =media-libs/portaudio-18.1 )
 	pulseaudio? ( >=media-sound/pulseaudio-0.9.6 )"
 
-S=${WORKDIR}/${P}
-
 src_unpack() {
 	subversion_src_unpack
 }
@@ -53,5 +51,5 @@ src_compile() {
 
 
 src_install() {
-	emake DESTDIR=${D} install || die
+	emake DESTDIR="${D}" install || die
 }

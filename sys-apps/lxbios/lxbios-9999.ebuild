@@ -4,7 +4,7 @@
 
 inherit subversion eutils
 
-DESCRIPTION="Lxbios is a utility for reading/writing LinuxBIOS parameters and displaying information from the LinuxBIOS table in CMOS."
+DESCRIPTION="Lxbios is a utility for reading/writing/displaying LinuxBIOS parameters."
 HOMEPAGE="http://www.linuxbios.org/Lxbios"
 
 LICENSE="GPL-2"
@@ -19,7 +19,7 @@ S=${WORKDIR}/${PN}
 
 src_unpack() {
 	subversion_src_unpack
-	cd ${S}
+	cd "${S}"
 	sed -i \
 		-e "s|-O2 -W -Wall|${CFLAGS}|" \
 		Makefile || die "sed failed"

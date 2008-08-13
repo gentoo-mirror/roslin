@@ -1,8 +1,6 @@
-#From https://svn.keksbude.net/trac/keks-overlay/browser/mac/mac-3.99.4.5-r1.ebuild?rev=9
-#
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header:
+# $Header: $
 
 inherit eutils versionator
 
@@ -30,12 +28,12 @@ src_compile() {
 #       epatch ${FILESDIR}/mac-precision.patch || die
 #       epatch ${FILESDIR}/mac-pointercasting.patch || die
 
-        econf `use_enable backward-compatible backward` || die "configure failed"
-        emake || die "make failed"
+	econf `use_enable backward-compatible backward` || die "configure failed"
+	emake || die "make failed"
 }
 
 src_install() {
-        make DESTDIR=${D} install || die "make install failed"
-        dodoc AUTHORS INSTALL NEWS README TODO COPYING
-        dohtml ${S}/src/License.htm     ${S}/src/Readme.htm
+	make DESTDIR=${D} install || die "make install failed"
+	dodoc AUTHORS INSTALL NEWS README TODO COPYING
+	dohtml ${S}/src/License.htm     ${S}/src/Readme.htm
 }

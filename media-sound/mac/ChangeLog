@@ -1,0 +1,7 @@
+# ChangeLog for media-sound/mac
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  13 Aug 2008; Piotr Szymaniak <lazy_bum@o2.pl> mac-3.99.4.5-r1.ebuild:
+  Fixed some repoman reported errors.
+

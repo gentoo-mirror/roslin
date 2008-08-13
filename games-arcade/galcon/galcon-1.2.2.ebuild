@@ -28,7 +28,7 @@ src_install() {
 	doexe  ${PN} || die "doexe failed"
 	insinto ${dir}
 	doins -r data *.{so,ico,png} || die "doins failed"
-	
+
 	dodoc README.txt || die "dodoc failed"
 	newicon icon64.png ${PN}.png
 

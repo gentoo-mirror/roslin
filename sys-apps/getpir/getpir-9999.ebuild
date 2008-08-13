@@ -19,7 +19,7 @@ S=${WORKDIR}/${PN}
 
 src_unpack() {
 	subversion_src_unpack
-	cd ${S}
+	cd "${S}"
 	sed -i \
 		-e "s|-O2 -D_GNU_SOURCE -DGETPIR -Wall|-D_GNU_SOURCE -DGETPIR ${CFLAGS}|" \
 		Makefile || die "sed"

@@ -33,9 +33,8 @@ DEPEND="crypt? ( app-crypt/gpgme )
 	ruby? ( dev-lang/ruby )
 	spell? ( >=app-text/aspell-0.50.5 )
 	sqlite? ( !sqlite3? ( =dev-db/sqlite-2* ) )
-    sqlite3? ( >=dev-db/sqlite-3 )
-
-	ssl? ( >=dev-libs/openssl-0.9.6m \
+	sqlite3? ( >=dev-db/sqlite-3 )
+	ssl? ( >=dev-libs/openssl-0.9.6m
 		jabber? ( >=net-libs/gnutls-1.0.17 ) )
 	xosd? ( x11-libs/xosd )
 	virtual/libintl"
@@ -52,13 +51,13 @@ S=${WORKDIR}/${MY_P}
 src_unpack() {
 	unpack ${A}
 #	subversion_src_unpack
-	cd ${S}
+	cd "${S}"
 
 	# Ekg2 has no debug configure option
 	# Instead it features a runtime option which defaults to on
 	#! use debug && epatch ${FILESDIR}/${P}-no-default-debug.patch
 
-	epatch ${FILESDIR}/0.1.1-conference-logs.patch
+	epatch "${FILESDIR}"/0.1.1-conference-logs.patch
 	#epatch ${FILESDIR}/${P}-intl.patch
 	AT_M4DIR=m4 eautoreconf
 

@@ -20,7 +20,7 @@ S=${WORKDIR}/${PN}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	sed -i \
 		-e "s|CFLAGS  =       -g|CFLAGS = ${CFLAGS}|" \
 		Makefile || die "sed"

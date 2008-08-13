@@ -1,6 +1,10 @@
 # ChangeLog for games-server/mednafen-server
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 
+  13 Aug 2008; Piotr Szymaniak <lazy_bum@o2.pl>
+  mednafen-server-0.3.0.ebuild:
+  Fixed quoting.
+
   30 Nov 2007; Piotr Szymaniak <lazy_bum@o2.pl> mednafen-server-0.3.0.ebuild:
   Changed category to games-server.
 

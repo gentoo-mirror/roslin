@@ -22,7 +22,7 @@ S=${WORKDIR}/${PN}
 
 src_unpack() {
 	subversion_src_unpack
-	cd ${S}
+	cd "${S}"
 	sed -i \
 		-e "s|-Os -Wall -Werror -DDISABLE_DOC|${CFLAGS}|" \
 		-e "s|STRIP_ARGS = -s|STRIP_ARGS = ${PORTAGE_STRIP_FLAGS}|" \

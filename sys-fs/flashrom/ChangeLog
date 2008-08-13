@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/flashrom
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 
+  13 Aug 2008; Piotr Szymaniak <lazy_bum@o2.pl> flashrom-9999.ebuild:
+  Fixed repoman reported errors.
+
   29 Nov 2007; Piotr Szymaniak <lazy_bum@o2.pl> flashrom-9999.ebuild:
   Added ~amd64 KEYWORD.
   Added proper "|| die" to emake and dosbin, fixed description and homepage.

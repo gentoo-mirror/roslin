@@ -24,7 +24,7 @@ DEPEND="media-libs/libsdl
 S=${WORKDIR}/${MY_PN}
 
 pkg_setup() {
-        games_pkg_setup
+	games_pkg_setup
 
 	# gcc must be built with "d" USE-FLAG
 	if ! built_with_use sys-devel/gcc:4.1 d; then
@@ -39,21 +39,21 @@ pkg_setup() {
 }
 
 src_unpack(){
-	cd ${WORKDIR}
+	cd "${WORKDIR}"
 	unpack ${MY_PN}.zip
 	cd "${S}"
-        unpack ${MY_PN}_src.zip
-	epatch ${FILESDIR}/${P}.diff
+	unpack ${MY_PN}_src.zip
+	epatch "${FILESDIR}/${P}.diff"
 	sed -i \
-        -e 's:"\(icon.bmp[^"]*\)":"'${GAMES_DATADIR}'/'${PN}'/\1":g' -i a2k_src/src/util_pad.d \
-        -e 's:"\(title.bmp[^"]*\)":"'${GAMES_DATADIR}'/'${PN}'/\1":g' -i a2k_src/src/init.d \
-        -e 's:"\(stg0[^"]*\)":"'${GAMES_DATADIR}'/'${PN}'/\1":g' -i a2k_src/src/init.d \
-        -e 's:"\(boss0[^"]*\)":"'${GAMES_DATADIR}'/'${PN}'/\1":g' -i a2k_src/src/init.d \
-        -e 's:"\(se_[^"]*\)":"'${GAMES_DATADIR}'/'${PN}'/\1":g' -i a2k_src/src/init.d \
-        -e 's:"\(voice[^"]*\)":"'${GAMES_DATADIR}'/'${PN}'/\1":g' -i a2k_src/src/init.d \
-        -e 's:"\(bullet[^"]*\)":"'${GAMES_DATADIR}'/'${PN}'/\1":g' -i a2k_src/src/init.d \
-        -e 's:"\(score.dat[^"]*\)":"'${GAMES_STATEDIR}'/'a2k'\1":g' -i a2k_src/src/init.d \
-        -e 's:"\(config.dat[^"]*\)":"'${GAMES_STATEDIR}'/'a2k'\1":g' -i a2k_src/src/init.d \
+		-e 's:"\(icon.bmp[^"]*\)":"'${GAMES_DATADIR}'/'${PN}'/\1":g' -i a2k_src/src/util_pad.d \
+		-e 's:"\(title.bmp[^"]*\)":"'${GAMES_DATADIR}'/'${PN}'/\1":g' -i a2k_src/src/init.d \
+		-e 's:"\(stg0[^"]*\)":"'${GAMES_DATADIR}'/'${PN}'/\1":g' -i a2k_src/src/init.d \
+		-e 's:"\(boss0[^"]*\)":"'${GAMES_DATADIR}'/'${PN}'/\1":g' -i a2k_src/src/init.d \
+		-e 's:"\(se_[^"]*\)":"'${GAMES_DATADIR}'/'${PN}'/\1":g' -i a2k_src/src/init.d \
+		-e 's:"\(voice[^"]*\)":"'${GAMES_DATADIR}'/'${PN}'/\1":g' -i a2k_src/src/init.d \
+		-e 's:"\(bullet[^"]*\)":"'${GAMES_DATADIR}'/'${PN}'/\1":g' -i a2k_src/src/init.d \
+		-e 's:"\(score.dat[^"]*\)":"'${GAMES_STATEDIR}'/'a2k'\1":g' -i a2k_src/src/init.d \
+		-e 's:"\(config.dat[^"]*\)":"'${GAMES_STATEDIR}'/'a2k'\1":g' -i a2k_src/src/init.d \
 		|| die "sed failed"
 }
 
@@ -69,9 +69,9 @@ src_install() {
 
 
 	dodir ${datadir}
-        insinto "${GAMES_DATADIR}"/${PN}
+	insinto "${GAMES_DATADIR}"/${PN}
 	doins *.xml *.bmp *.ogg *.wav || die
-	newicon ${FILESDIR}/${PN}.png ${PN}.png
+	newicon "${FILESDIR}/${PN}.png" "${PN}.png"
 	make_desktop_entry ${PN} ${PN}
 	dodoc readme*
 	prepgamesdirs

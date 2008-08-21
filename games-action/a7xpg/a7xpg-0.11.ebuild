@@ -38,7 +38,7 @@ pkg_setup() {
 
 src_unpack(){
 	unpack ${A}
-	epatch ${FILESDIR}/${P}.diff
+	epatch "${FILESDIR}"/"${P}.diff"
 	sed -i \
 		-e 's:"\(images/[^"]*\)":"'${GAMES_DATADIR}'/'${PN}'/\1":g' -i a7xpg/src/abagames/util/sdl/Texture.d \
 		-e 's:"\(sounds/[^"]*\)":"'${GAMES_DATADIR}'/'${PN}'/\1":g' -i a7xpg/src/abagames/util/sdl/Sound.d \
@@ -58,11 +58,11 @@ src_install() {
 	then
 		dodir "${GAMES_STATEDIR}"
 		insinto "${GAMES_STATEDIR}"
-		doins ${FILESDIR}/a7xpg.prf  || die
-		fperms 660 ${FILESDIR}/a7xpg.prf
+		doins "${FILESDIR}"/a7xpg.prf || die
+		fperms 660 "${FILESDIR}"/a7xpg.prf
 	fi
 
-	newicon ${FILESDIR}/${PN}.png ${PN}.png
+	newicon "${FILESDIR}"/"${PN}.png" "${PN}.png"
 	make_desktop_entry ${PN} ${PN}
 	dodoc readme*
 	prepgamesdirs

@@ -2,6 +2,10 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  21 Aug 2008; Michał Ziąbkowski <mziab@o2.pl> phonetooth-0.5.0.ebuild,
+  +phonetooth-0.5.1.ebuild:
+  Bumped. Fixed deps.
+
   06 Aug 2008; Michał Ziąbkowski <mziab@o2.pl> -phonetooth-0.3.1.ebuild,
   -phonetooth-0.4.0-r1.ebuild, +phonetooth-0.5.0.ebuild:
   Bumped. Removed some previous versions.

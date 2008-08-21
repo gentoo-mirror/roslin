@@ -40,7 +40,7 @@ src_compile() {
 	local MY_USE
 	use zlib && MY_USE="enable_gzip=true"
 	use jma && MY_USE="${MY_USE} enable_jma=true"
-
+	
 	emake platform=x compiler=gcc ${MY_USE} || die "emake failed"
 }
 

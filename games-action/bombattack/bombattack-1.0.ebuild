@@ -25,7 +25,7 @@ dir=${GAMES_DATADIR}/${PN}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	rm ${PN} ${PN}-leveleditor
 
@@ -34,10 +34,10 @@ src_unpack() {
 	sed -i \
 		-e "s|-mtune=i686 -o2 -Wall -pedantic|${CFLAGS}|" \
 		${PN}-src/Makefile || die "sed"
-	
+
 	if use editor ; then
 		tar xvjf ${PN}-leveleditor-src.tar.bz2
-		
+
 		sed -i \
 			-e "s|-pipe -O2 -Wall -W -D_REENTRANT|FLAGI|" \
 			-e "s|CFLAGS        = FLAGI|CFLAGS = ${CFLAGS}|" \
@@ -50,11 +50,11 @@ src_unpack() {
 }
 
 src_compile() {
-	cd ${S}/${PN}-src
+	cd "${S}/${PN}-src"
 	emake || die "emake failed"
 
 	if use editor ; then
-		cd ${S}/${PN}-leveleditor-src
+		cd "${S}/${PN}-leveleditor-src"
 		emake || die "emake failed"
 	fi
 }

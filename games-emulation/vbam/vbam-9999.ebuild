@@ -50,6 +50,8 @@ src_unpack() {
 	    -e "/C[X]*_FLAGS/d" \
 	    -e "s:\${CMAKE_INSTALL_PREFIX}/::" \
 	    || die "sed failed"
+	    
+	epatch "${FILESDIR}"/${PN}-includes-fix.patch
 }
 
 src_compile() {

@@ -18,7 +18,8 @@ S="${WORKDIR}/cdemu-daemon-${PV}"
 DEPEND=">dev-libs/dbus-glib-0.6
 	>=dev-libs/libdaemon-0.10
 	>=dev-libs/libmirage-1.1.0
-	>=sys-fs/sysfsutils-2.1.0"
+	>=sys-fs/sysfsutils-2.1.0
+	media-libs/libao"
 
 RDEPEND="${DEPEND}
 	>=sys-fs/vhba-1.0.0"

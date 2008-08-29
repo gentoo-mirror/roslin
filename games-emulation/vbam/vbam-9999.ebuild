@@ -20,7 +20,7 @@ RDEPEND="gtk? ( >=dev-cpp/libglademm-2.4.0
 		>=dev-cpp/gtkmm-2.4.0
 		>=media-libs/portaudio-19_pre
 		x11-libs/libXv
-		>=dev-cpp/gtkglextmm-1.2.0)
+		>=dev-cpp/gtkglextmm-1.2.0 )
 		!games-emulation/visualboyadvance
 		media-libs/libpng
 		sys-libs/zlib

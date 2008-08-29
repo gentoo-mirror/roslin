@@ -2,6 +2,10 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  29 Aug 2008; Michał Ziąbkowski <mziab@o2.pl>
+  gnome-video-arcade-0.6.3.ebuild:
+  Give paludis some love.
+
   26 Jul 2008; Michał Ziąbkowski <mziab@o2.pl>
   -gnome-video-arcade-0.6.0.ebuild, -gnome-video-arcade-0.6.1.ebuild,
   -gnome-video-arcade-0.6.1.1.ebuild, +gnome-video-arcade-0.6.3.ebuild:

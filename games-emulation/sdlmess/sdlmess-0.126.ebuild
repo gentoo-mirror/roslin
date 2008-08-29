@@ -69,7 +69,7 @@ src_unpack() {
 		-e '/CFLAGS += -pipe/s:^:# :' \
 		-e '/LDFLAGS += -s/s:^:# :' \
 		-e 's:-Werror::' \
-		"${S}"/makefile \
+		"${S}"/makefile.sdl \
 		|| die "sed failed"
 
 	# CFLAGS and build debugging help

@@ -2,6 +2,9 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  29 Aug 2008; Michał Ziąbkowski <mziab@o2.pl> +sdlmess-0.127.ebuild:
+  Bumped.
+
   11 Jul 2008; Michał Ziąbkowski <mziab@o2.pl> +sdlmess-0.126.ebuild:
   Bumped.
 

@@ -49,7 +49,8 @@ src_unpack() {
 	sed -i CMakeLists.txt \
 	    -e "/C[X]*_FLAGS/d" \
 	    -e "s:\${CMAKE_INSTALL_PREFIX}/::" \
-	    || die "sed failed"
+	    -e "s: share: ../share:g" \
+	    	    || die "sed failed"
 	    
 	epatch "${FILESDIR}"/${PN}-includes-fix.patch
 }

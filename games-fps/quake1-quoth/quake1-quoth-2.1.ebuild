@@ -15,5 +15,5 @@ SRC_KELL="http://kell.leveldesign.org/${MOD_DIR}"
 
 DESCRIPTION="Quoth - Expansion pack for Quake 1"
 HOMEPAGE="http://kell.leveldesign.org/"
-SRC_URI="${SRC_ADDICT}/${MOD_DIR}.zip
-	${SRC_KELL}/${MOD_DIR}.zip"
+SRC_URI="${SRC_KELL}/${MOD_DIR}.zip
+	${SRC_ADDICT}/${MOD_DIR}.zip"

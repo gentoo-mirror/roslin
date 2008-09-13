@@ -1,0 +1,7 @@
+# ChangeLog for games-fps/quake1-arcade
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  13 Sep 2008; Piotr Szymaniak <lazy_bum@o2.pl> +quake1-arcade-0.1.ebuild:
+  New package (ugly ebuild ;).
+

@@ -2,6 +2,9 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  15 Sep 2008; Michał Ziąbkowski <mziab@o2.pl> +ocropus-0.2.ebuild:
+  Bumped using ebuild from bgo#185810.
+
   28 Mar 2008; Michał Ziąbkowski <mziab@o2.pl> ocropus-0.1.1.ebuild:
   Changed jam to ftjam in deps.
 

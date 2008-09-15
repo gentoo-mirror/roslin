@@ -2,6 +2,9 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  15 Sep 2008; Michał Ziąbkowski <mziab@o2.pl> +estat-1.5.ebuild:
+  Bumped.
+
   23 Apr 2008; Michał Ziąbkowski <mziab@o2.pl> estat-1.2.ebuild,
   estat-1.4.ebuild:
   Added amd64 keyword

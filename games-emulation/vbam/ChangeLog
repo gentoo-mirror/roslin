@@ -2,6 +2,9 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  15 Sep 2008; Michał Ziąbkowski <mziab@o2.pl> vbam-9999.ebuild:
+  Removed blocker on visualboyadvance.
+
   02 Sep 2008; Michał Ziąbkowski <mziab@o2.pl> vbam-9999.ebuild:
   Fixed .desktop and icon install path.
 

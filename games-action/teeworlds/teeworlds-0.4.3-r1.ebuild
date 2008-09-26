@@ -12,12 +12,13 @@ SRC_URI="http://www.teeworlds.com/files/${P}-src.tar.gz
 LICENSE="ZLIB"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="debug dedicated"
+IUSE="alsa debug dedicated oss"
 
 RDEPEND="!dedicated? (
-	media-libs/alsa-lib
-	media-libs/mesa
-	x11-libs/libX11 )"
+		alsa? ( media-libs/alsa-lib )
+		oss? ( media-sound/oss || media-sound/oss-devel )
+		media-libs/mesa
+		x11-libs/libX11 )"
 DEPEND="${RDEPEND}
 	app-arch/zip"
 
@@ -31,6 +32,9 @@ src_unpack() {
 		-e "s:data/:${GAMES_DATADIR}/${PN}/data/:g" \
 		$(grep -Rl '"data\/' *) \
 		|| die "sed failed"
+	if use oss; then
+		epatch "${FILESDIR}"/teeworlds-oss.patch
+	fi
 	rm -f license.txt
 }
 

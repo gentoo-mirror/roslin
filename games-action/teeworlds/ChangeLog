@@ -1,6 +1,11 @@
 # ChangeLog for games-action/teewars
 # Copyright 2008-2008 Gentoo Foundation; Distributed under the GPL v2
 
+  26 Sep 2008; Piotr Szymaniak <lazy_bum@o2.pl> -teeworlds-0.4.2.ebuild,
+  +teeworlds-0.4.3-r1.ebuild, +files/teeworlds-oss.patch:
+  Added experimental (?) oss support. Thanks to occulkot for patch and vln for
+  testing.
+
   02 Sep 2008; Piotr Szymaniak <lazy_bum@o2.pl> +teeworlds-0.4.3.ebuild:
   Version bump.
 

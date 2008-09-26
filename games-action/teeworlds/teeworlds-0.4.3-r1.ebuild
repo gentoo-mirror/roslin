@@ -16,7 +16,7 @@ IUSE="alsa debug dedicated oss"
 
 RDEPEND="!dedicated? (
 		alsa? ( media-libs/alsa-lib )
-		oss? ( media-sound/oss || media-sound/oss-devel )
+		oss? ( || ( media-sound/oss media-sound/oss-devel ) )
 		media-libs/mesa
 		x11-libs/libX11 )"
 DEPEND="${RDEPEND}

@@ -19,19 +19,20 @@ SRC_URI="${SB}/${MY_P}-source.tar.bz2
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
-IUSE="alsa debug dedicated iconv png scenarios static timidity zlib"
+IUSE="alsa debug dedicated iconv png scenarios static timidity unicode zlib"
 
-DEPEND="!dedicated? ( media-libs/libsdl
-		media-libs/fontconfig
-	)
-	iconv? ( virtual/libiconv )
-	png? ( media-libs/libpng )
-	zlib? ( sys-libs/zlib )"
+DEPEND="!dedicated? (
+			media-libs/libsdl
+			media-libs/fontconfig
+		)
+		iconv? ( virtual/libiconv )
+		png? ( media-libs/libpng )
+		zlib? ( sys-libs/zlib )"
 RDEPEND="${DEPEND}
-	!dedicated? (
-		timidity? ( media-sound/timidity++ )
-		!timidity? ( alsa? ( media-sound/alsa-utils ) )
-	)"
+		!dedicated? (
+			timidity? ( media-sound/timidity++ )
+			!timidity? ( alsa? ( media-sound/alsa-utils ) )
+		)"
 
 S=${WORKDIR}/${MY_P}
 
@@ -44,27 +45,29 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${MY_P}-source.tar.bz2
+
 	if use scenarios ; then
 		cd "${S}"/bin/scenario/
 		unpack ${SCENARIOS_048}
 		unpack ${SCENARIOS_050}
 	fi
-	cd "${S}"
 
+	cd "${S}"
 	epatch "${FILESDIR}/libiconv.patch"
 }
 
 src_compile() {
 	local myopts=""
-	use debug && myopts="${myopts} --debug"
+	use debug && myopts="${myopts} --enable-debug=3"
 	use dedicated && myopts="${myopts} --enable-dedicated --without-sdl"
+	use unicode || myopts="${myopts} --disable-unicode"
 	if ! use dedicated; then
 		myopts="${myopts} --with-sdl --with-freetype --with-fontconfig"
 		if ! use timidity; then
-			#use alsa && myopts="${myopts} --with-midi=/usr/bin/aplaymidi"
-			einfo "This version of openttd does not support setting the midi-player."
+			use alsa && myopts="${myopts} --with-midi=/usr/bin/aplaymidi"
 		fi
 	fi
+
 	# configure is a hand-written sh-script, so econf will not work
 	./configure --os=UNIX --shared-dir="${GAMES_DATADIR}"/${PN}/ \
 		$(use_enable static) \
@@ -83,10 +86,6 @@ src_compile() {
 		PREFIX="${GAMES_PREFIX}" \
 		INSTALL_DATA_DIR="${GAMES_DATADIR}"/${PN}/ \
 		|| die "emake failed"
-
-#		DATA_DIR="${GAMES_DATADIR}"/${PN} \
-#		CUSTOM_LANG_DIR="${GAMES_DATADIR}"/${PN}/lang \
-
 }
 
 src_install() {
@@ -133,65 +132,52 @@ src_install() {
 pkg_postinst() {
 	games_pkg_postinst
 
-	echo
-	einfo "In order to play, you must copy the following 6 files from "
-	einfo "a version of TTD to ${GAMES_DATADIR}/${PN}/data/."
-	echo
-	einfo "From the WINDOWS version you need: "
-	einfo "  sample.cat trg1r.grf trgcr.grf trghr.grf trgir.grf trgtr.grf"
-	einfo "OR from the DOS version you need: "
-	einfo "  SAMPLE.CAT TRG1.GRF TRGC.GRF TRGH.GRF TRGI.GRF TRGT.GRF"
-	echo
-	einfo "File names are case sensitive so make sure they are "
-	einfo "correct for whichever version you have."
-	echo
+	elog
+	elog "In order to play, you must copy the following 6 files from "
+	elog "a version of TTD to ${GAMES_DATADIR}/${PN}/data/."
+	elog
+	elog "From the WINDOWS version you need: "
+	elog "  sample.cat trg1r.grf trgcr.grf trghr.grf trgir.grf trgtr.grf"
+	elog "OR from the DOS version you need: "
+	elog "  SAMPLE.CAT TRG1.GRF TRGC.GRF TRGH.GRF TRGI.GRF TRGT.GRF"
+	elog
+	elog "File names are case sensitive so make sure they are "
+	elog "correct for whichever version you have."
+	elog
 
-	if ! use scenarios ; then
-		einfo "Scenarios are now included in a seperate package. To "
-		einfo "install them as well please remerge with the "
-		einfo "\"scenarios\" USE flag."
-		echo
-	else
-		einfo "Scenarios are installed to"
-		einfo "${GAMES_DATADIR}/${PN}/scenario,"
-		einfo "you will have to symlink them to ~/.openttd/scenario in order"
-		einfo "to use them."
-		einfo "Example:"
-		einfo "  mkdir -p ~/.openttd/scenario"
-		einfo "  ln -s ${GAMES_DATADIR}/${PN}/scenario/* ~/.openttd/scenario/"
-		echo
+	if use scenarios ; then
+		elog "Scenarios are installed into:"
+		elog "${GAMES_DATADIR}/${PN}/scenario,"
+		elog "you will have to symlink them to ~/.openttd/scenario in order"
+		elog "to use them."
+		elog "Example:"
+		elog " ln -s ${GAMES_DATADIR}/${PN}/scenario ~/.openttd/scenario"
+		elog
 	fi
 
 	if use dedicated ; then
-		einfo "You have chosen the dedicated USE flag which builds a "
-		einfo "version of OpenTTD to be used as a game server which "
-		einfo "does not require SDL. You will not be able to play the "
-		einfo "game, but if you don't pass this flag you can still use "
-		einfo "it as a server in the same way, but SDL will be required."
-		echo
 		ewarn "Warning: The init script will kill all running openttd"
 		ewarn "processes when run, including any running client sessions!"
-		echo
 	else
 		if use timidity || use alsa ; then
-			einfo "If you want music, you must copy the gm/ directory to"
-			einfo "${GAMES_DATADIR}/${PN}/"
-			einfo "You can enable MIDI by running:"
-			einfo "  openttd -m extmidi"
-			echo
+			elog "If you want music, you must copy the gm/ directory to"
+			elog "${GAMES_DATADIR}/${PN}/"
+			elog "You can enable MIDI by running:"
+			elog "  openttd -m extmidi"
+			elog
 			if use timidity ; then
-				einfo "You also need soundfonts for timidity, if you don't"
-				einfo "know what that is, do:"
-				echo
-				einfo "emerge media-sound/timidity-eawpatches"
+				elog "You also need soundfonts for timidity, if you don't"
+				elog "know what that is, do:"
+				elog
+				elog "emerge media-sound/timidity-eawpatches"
 			else
-				einfo "You have emerged with 'aplaymidi' for playing MIDI."
-				einfo "You have to set the environment variable ALSA_OUTPUT_PORTS."
-				einfo "Available ports can be listed by using 'aplaymidi -l'."
+				elog "You have emerged with 'aplaymidi' for playing MIDI."
+				elog "You have to set the environment variable ALSA_OUTPUT_PORTS."
+				elog "Available ports can be listed by using 'aplaymidi -l'."
 			fi
 		else
-			einfo "timidity and/or alsa not in USE so music will not be played during the game."
+			elog "timidity and/or alsa not in USE so music will not be played during the game."
 		fi
-		echo
+		elog
 	fi
 }

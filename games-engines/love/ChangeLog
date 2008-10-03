@@ -1,0 +1,7 @@
+# ChangeLog for games-engines/love
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  03 Oct 2008; Piotr Szymaniak <lazy_bum@o2.pl> +love-0.5.0.ebuild:
+  .. me, tender.
+

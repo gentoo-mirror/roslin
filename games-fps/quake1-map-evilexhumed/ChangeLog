@@ -1,0 +1,8 @@
+# ChangeLog for games-fps/quake1-map-evilexhumed
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  09 Oct 2008; Piotr Szymaniak <lazy_bum@o2.pl>
+  +quake1-map-evilexhumed-1.ebuild:
+  New package.
+

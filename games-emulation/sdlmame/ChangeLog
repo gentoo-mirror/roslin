@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/sdlmame
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 
+  09 Oct 2008; Michał Ziąbkowski <mziab@o2.pl> -sdlmame-0.127_p6.ebuild,
+  +sdlmame-0.127_p7.ebuild:
+  Bumped. Removed previous version.
+
   06 Oct 2008; Michał Ziąbkowski <mziab@o2.pl> -sdlmame-0.127_p5.ebuild,
   +sdlmame-0.127_p6.ebuild:
   Bumped. Removed previous version.

@@ -14,7 +14,7 @@ inherit kadu-mod
 
 DESCRIPTION="Automatic sender lookup module for Kadu"
 HOMEPAGE="http://kadu.net/~patryk"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 
 IUSE=""
 

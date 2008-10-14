@@ -14,7 +14,7 @@ inherit kadu-mod
 
 DESCRIPTION="Plus.pl text message module for Kadu"
 HOMEPAGE="http://kadu.net/~patryk"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 
 IUSE=""
 

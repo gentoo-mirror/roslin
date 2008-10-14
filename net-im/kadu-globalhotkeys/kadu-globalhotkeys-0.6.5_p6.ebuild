@@ -13,7 +13,7 @@ inherit kadu-mod
 
 DESCRIPTION="Global hotkey module for Kadu"
 HOMEPAGE="http://www.ultr.pl/kadu/"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 
 IUSE=""
 

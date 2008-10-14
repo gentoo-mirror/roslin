@@ -5,7 +5,7 @@ inherit kadu-base
 
 DESCRIPTION="The core of Kadu IM"
 HOMEPAGE="http://kadu.net"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 
 IUSE=""
 

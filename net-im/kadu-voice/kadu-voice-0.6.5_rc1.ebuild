@@ -12,6 +12,6 @@ inherit kadu-mod
 
 DESCRIPTION="Voice chat module for Kadu"
 HOMEPAGE="http://kadu.net"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 

@@ -11,6 +11,6 @@ inherit kadu-mod
 
 DESCRIPTION="Protection against unwanted chats for Kadu"
 HOMEPAGE="http://kadu.net"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 

@@ -13,7 +13,7 @@ inherit kadu-mod
 
 DESCRIPTION="Adds history of sent messages to Kadu chat window"
 HOMEPAGE="http://www.ultr.pl/kadu/"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 
 IUSE=""
 

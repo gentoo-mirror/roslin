@@ -10,6 +10,6 @@ inherit kadu-mod
 
 DESCRIPTION="Qt4 docking module for Kadu"
 HOMEPAGE="http://kadu.net"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 

@@ -21,7 +21,7 @@ inherit kadu-mod
 
 DESCRIPTION="A set of modules enhancing Kadu"
 HOMEPAGE="http://kadu.net/~dorr"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 
 IUSE=""
 

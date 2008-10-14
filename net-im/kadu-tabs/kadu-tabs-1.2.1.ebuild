@@ -13,7 +13,7 @@ inherit kadu-mod
 
 DESCRIPTION="Tabbed chat module for Kadu"
 HOMEPAGE="http://kadu.net/~patryk"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 
 IUSE=""
 

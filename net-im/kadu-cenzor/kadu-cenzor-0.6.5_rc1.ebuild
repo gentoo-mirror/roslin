@@ -10,6 +10,6 @@ inherit kadu-mod
 
 DESCRIPTION="Profanity filter for Kadu"
 HOMEPAGE="http://kadu.net"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 

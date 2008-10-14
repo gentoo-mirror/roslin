@@ -14,7 +14,7 @@ inherit kadu-mod
 
 DESCRIPTION="LED notification module for Kadu"
 HOMEPAGE="http://kadu.net/~blysk"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 
 IUSE=""
 

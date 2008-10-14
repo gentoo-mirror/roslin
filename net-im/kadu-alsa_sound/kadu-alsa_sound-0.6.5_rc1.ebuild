@@ -11,6 +11,6 @@ inherit kadu-mod
 
 DESCRIPTION="ALSA sound output module for Kadu"
 HOMEPAGE="http://kadu.net"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 

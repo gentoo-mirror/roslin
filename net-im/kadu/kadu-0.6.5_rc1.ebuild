@@ -8,7 +8,7 @@ HOMEPAGE="http://kadu.net"
 KEYWORDS="~amd64 ~x86"
 LICENSE="GPL-2"
 
-IUSE="powerkadu alsa esd oss ssl voice"
+IUSE="powerkadu alsa oss ssl voice"
 
 SLOT="0"
 

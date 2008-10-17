@@ -12,8 +12,7 @@ IUSE=""
 RDEPEND=">=x11-libs/qt-gui-4.4.1
 	>=x11-libs/qt-qt3support-4.4.1
 	>=x11-libs/qt-webkit-4.4.1
-	>=net-libs/libgadu-1.8.0
-	${MOD_DEPEND}"
+	>=net-libs/libgadu-1.8.0"
 
 DEPEND="${RDEPEND}
 	>=dev-util/cmake-2.6.0"

@@ -2,6 +2,10 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  17 Oct 2008; Michał Ziąbkowski <mziab@o2.pl> kadu-core-0.6.5_rc1.ebuild,
+  kadu-core-0.6.5_rc1-r1.ebuild:
+  Removed some cruft.
+
   17 Oct 2008; Michał Ziąbkowski <mziab@o2.pl>
   +kadu-core-0.6.5_rc1-r1.ebuild,
   +files/kadu-core-fix-sound-install-path.patch:

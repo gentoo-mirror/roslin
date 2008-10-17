@@ -1,0 +1,12 @@
+diff -Nur kadu.old/varia/themes/sounds/CMakeLists.txt kadu/varia/themes/sounds/CMakeLists.txt
+--- kadu.old/varia/themes/sounds/CMakeLists.txt	2008-10-09 00:02:59.000000000 +0200
++++ kadu/varia/themes/sounds/CMakeLists.txt	2008-10-17 00:33:09.638625923 +0200
+@@ -22,7 +22,7 @@
+ 	add_dependencies (kadu sound_themes)
+ 
+ 	install (DIRECTORY ${INSTALL_SOUND_THEMES}
+-		DESTINATION share/kadu/themes/sound
++		DESTINATION share/kadu/themes/sounds
+ 		PATTERN ".autodownloaded" EXCLUDE
+ 		PATTERN ".svn" EXCLUDE
+ 		PATTERN "*.wav"

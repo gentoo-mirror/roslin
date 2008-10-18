@@ -1,0 +1,8 @@
+# ChangeLog for games-fps/fitzquake-sdl
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  18 Oct 2008; Piotr Szymaniak <lazy_bum@o2.pl>
+  +fitzquake-sdl-20080705.ebuild:
+  New package.
+

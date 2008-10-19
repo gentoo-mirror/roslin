@@ -3,6 +3,10 @@
 # $Header: $
 
   19 Oct 2008; Piotr Szymaniak <lazy_bum@o2.pl>
+  +files/fitzquake-sdl-save-in-home.patch:
+  Missing patch...
+
+  19 Oct 2008; Piotr Szymaniak <lazy_bum@o2.pl>
   fitzquake-sdl-20080705.ebuild:
   Removed ~x86 keyword. Taking screenshot kills the game. Patch is work in
   progress.

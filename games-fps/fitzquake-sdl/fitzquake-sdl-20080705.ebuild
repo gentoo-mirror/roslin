@@ -13,7 +13,7 @@ SRC_URI="http://www.kristianduske.com/fitzquake/${MY_PN}_${PV}_src.zip
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS=""
 IUSE="debug"
 
 DEPEND="games-fps/quake1-data
@@ -25,6 +25,8 @@ S=${WORKDIR}/${MY_PN}_${PV}_src/Quake
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+
+	epatch "${FILESDIR}"/"${PN}"-save-in-home.patch
 
 	mv ../../Makefile ./
 

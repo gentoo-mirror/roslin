@@ -1,5 +1,5 @@
 # COMMON EBUILD VARIABLES
-RESTRICT="nomirror"
+RESTRICT="mirror"
 SLOT="0"
 
 MIN_REQ="0.6.0.2"

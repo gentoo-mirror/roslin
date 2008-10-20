@@ -2,7 +2,7 @@ inherit eutils flag-o-matic cmake-utils
 
 LICENSE="GPL-2"
 SLOT="0"
-RESTRICT="nomirror"
+RESTRICT="mirror"
 
 if [ -z "${MIN_VER}" ]
 then

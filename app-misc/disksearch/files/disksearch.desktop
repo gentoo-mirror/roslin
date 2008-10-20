@@ -1,6 +1,5 @@
 [Desktop Entry]
 Encoding=UTF-8
-Version=1.2.0
 Name=DiskSearch
 Type=Application
 Comment=
@@ -8,4 +7,4 @@ Exec=disksearch
 TryExec=disksearch
 Path=
 Icon=/usr/share/disksearch/resource/disksearch.png
-Categories=Application;Utility
+Categories=Application;Utility;

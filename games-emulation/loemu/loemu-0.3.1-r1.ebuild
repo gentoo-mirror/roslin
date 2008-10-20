@@ -11,7 +11,7 @@ HOMEPAGE="http://loemu.pegueroles.com"
 IUSE=""
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-LICENSE="GPL"
+LICENSE="GPL-2"
 
 DEPEND="dev-libs/libxml2
     dev-libs/libxslt

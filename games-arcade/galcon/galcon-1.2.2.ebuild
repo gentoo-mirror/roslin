@@ -12,7 +12,7 @@ LICENSE="As Is"
 SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
-RESTRICT="mirror nostrip"
+RESTRICT="mirror strip"
 
 DEPEND="sys-libs/glibc
 	virtual/opengl"

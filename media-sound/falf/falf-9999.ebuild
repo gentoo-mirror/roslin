@@ -9,7 +9,7 @@ HOMEPAGE="http://kde-apps.org/content/show.php/FALF+Player?content=43961"
 #SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 LICENSE="GPL-2"
 
-RESTRICT="nomirror"
+RESTRICT="mirror"
 
 SLOT="0"
 KEYWORDS=""

@@ -44,7 +44,7 @@ src_compile() {
 	# Should really use GAMES_DATADIR, but then it bombs out
 	FLAGS="QTDIR=/usr DESTDIR=${D} PREFIX=${GAMES_PREFIX} DATADIR=${GAMES_DATADIR} CTIME=0"
 
-	use debug && FLAGS="${FLAGS} DEBUG=0"
+	use debug || FLAGS="${FLAGS} DEBUG=0"
 	use joystick && FLAGS="${FLAGS} JOYSTICK=1"
 	use opengl && FLAGS="${FLAGS} OPENGL=1"
 	emake ${FLAGS} || die "make failed"

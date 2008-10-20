@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/qmc2
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 
+  20 Oct 2008; Michał Ziąbkowski <mziab@o2.pl> qmc2-0.2_beta3.ebuild,
+  qmc2-0.2_beta4.ebuild:
+  Fixed debug flag.
+
   20 Oct 2008; Michał Ziąbkowski <mziab@o2.pl> +qmc2-0.2_beta5.ebuild:
   Bumped.
 

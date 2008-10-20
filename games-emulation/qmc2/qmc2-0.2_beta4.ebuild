@@ -17,8 +17,8 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64"
 IUSE="debug joystick opengl"
 
-DEPEND="|| ( >=x11-libs/qt-4.3.0:4
-	    x11-libs/qt-gui:4 )
+DEPEND="x11-libs/qt-gui:4
+	x11-libs/qt-phonon:4
 	joystick? ( media-libs/libsdl )
 	opengl? ( virtual/opengl )"
 

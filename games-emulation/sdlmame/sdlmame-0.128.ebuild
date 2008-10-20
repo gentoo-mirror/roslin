@@ -125,7 +125,7 @@ src_install() {
 	# Follows xmame ebuild, avoiding collision on /usr/games/bin/jedutil
 	exeinto "$(games_get_libdir)/${PN}"
 	local f
-	for f in chdman makemeta jedutil romcmp testkeys; do
+	for f in chdman jedutil romcmp testkeys; do
 		doexe "${f}" || die "doexe ${f} failed"
 	done
 

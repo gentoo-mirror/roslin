@@ -9,7 +9,7 @@ MY_PV=${PV//./_}
 DESCRIPTION="The retro modern high speed shooting game"
 HOMEPAGE="http://www.asahi-net.or.jp/~cs8k-cyu/windows/a7xpg_e.html"
 SRC_URI="http://www.asahi-net.or.jp/~cs8k-cyu/windows/${PN}${MY_PV}.zip"
-RESTRICT="nomirror"
+RESTRICT="mirror"
 
 LICENSE="BSD"
 SLOT="0"

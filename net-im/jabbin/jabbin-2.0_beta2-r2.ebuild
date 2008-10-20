@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/${PN}/${PN}-${VER}.tar.bz2"
 LICENSE="GPL"
 SLOT="0"
 EAPI="1"
-KEYWORDS="x86 amd64"
+KEYWORDS="~x86 ~amd64"
 IUSE=""
 RESTRICT="mirror primaryuri"
 

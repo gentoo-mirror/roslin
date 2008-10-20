@@ -3,5 +3,8 @@
 # $Header: $
 
   20 Oct 2008; Michał Ziąbkowski <mziab@o2.pl> gens-9999.ebuild:
+  Removed COPYING.
+
+  20 Oct 2008; Michał Ziąbkowski <mziab@o2.pl> gens-9999.ebuild:
   Moved back to ~arch.
 

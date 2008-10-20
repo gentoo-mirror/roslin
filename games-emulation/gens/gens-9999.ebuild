@@ -41,6 +41,6 @@ src_compile() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die "make install failed"
-	dodoc AUTHORS BUGS COPYING INSTALL README gens.txt history.txt
+	dodoc AUTHORS BUGS INSTALL README gens.txt history.txt
 	prepgamesdirs
 }

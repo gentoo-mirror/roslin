@@ -14,10 +14,9 @@ KEYWORDS="~x86"
 IUSE=""
 RESTRICT="mirror strip"
 
-DEPEND="sys-libs/glibc
-	virtual/opengl"
-RDEPEND="${DEPEND}
+DEPEND="virtual/opengl
 	media-libs/sdl-ttf"
+RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${PN}
 

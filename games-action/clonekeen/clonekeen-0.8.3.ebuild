@@ -22,7 +22,7 @@ LICENSE="GPL-2
 SLOT="0" 
 KEYWORDS="~amd64 ~x86" 
 IUSE="" 
-RESTRICT="nostrip" 
+RESTRICT="strip" 
 
 RDEPEND=">=dev-libs/DirectFB-0.9.22 
    >=media-libs/libsdl-1.2.8-r1

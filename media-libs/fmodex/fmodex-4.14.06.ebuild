@@ -11,7 +11,7 @@ KEYWORDS="-* ~amd64 ~x86"
 
 SRC_URI="x86? ( http://www.fmod.org/index.php/release/version/${MY_P}.tar.gz )
 	amd64? ( http://www.fmod.org/index.php/release/version/${MY_P}.tar.gz )"
-RESTRICT="nostrip"
+RESTRICT="strip"
 
 LICENSE="fmod"
 SLOT="1"

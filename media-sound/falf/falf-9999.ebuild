@@ -7,7 +7,7 @@ inherit kde eutils qt3 sfsvn
 DESCRIPTION="FALF Player is brand-new, written from scratch music player for K Desktop Environment"
 HOMEPAGE="http://kde-apps.org/content/show.php/FALF+Player?content=43961"
 #SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
-LICENSE="GPL"
+LICENSE="GPL-2"
 
 RESTRICT="nomirror"
 

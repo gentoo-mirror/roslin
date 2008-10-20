@@ -2,6 +2,10 @@
 # Copyright 2007-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  20 Oct 2008; Michał Ziąbkowski <mziab@o2.pl> falf-1.2.ebuild,
+  falf-9999.ebuild:
+  Fixed license.
+
   06 Aug 2008; Michał Ziąbkowski <mziab@o2.pl> -falf-1.0.ebuild,
   -falf-1.1.ebuild, falf-1.2.ebuild, falf-9999.ebuild:
   Fixed deps and missing die statements.

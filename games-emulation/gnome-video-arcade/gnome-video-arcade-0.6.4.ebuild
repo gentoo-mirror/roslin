@@ -20,7 +20,7 @@ RDEPEND="gnome? ( >=gnome-base/libgnomeui-2.14.0 )
 	>=x11-themes/gnome-icon-theme-2.18.0
 	>=dev-db/sqlite-3.0.0
 	gnome-base/gconf
-	|| (games-emulation/sdlmame games-emulation/xmame )"
+	|| ( games-emulation/sdlmame games-emulation/xmame )"
 DEPEND="${RDEPEND}
 	app-text/scrollkeeper
 	app-text/gnome-doc-utils

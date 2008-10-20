@@ -12,7 +12,7 @@ HOMEPAGE="http://vba-m.ngemu.com"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~amd64"
+KEYWORDS="~x86 ~amd64"
 IUSE="gtk lirc sdl"
 
 RDEPEND="gtk? ( >=dev-cpp/libglademm-2.4.0

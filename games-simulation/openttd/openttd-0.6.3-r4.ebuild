@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/openttd-0.5.3.ebuild,v 1.4 2008/03/29 22:45:44 pylon Exp $
+# $Header: $
 
 EAPI="1"
 
@@ -20,15 +20,16 @@ done
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 x86"
-IUSE="+freetype alsa debug dedicated png scenarios timidity zlib"
+IUSE="alsa debug dedicated iconv +png scenarios timidity +truetype +zlib"
 
 DEPEND="!dedicated? (
 			media-libs/libsdl
-			freetype? (
+			truetype? (
 				media-libs/fontconfig
 				media-libs/freetype:2
 			)
 		)
+		iconv? ( virtual/libiconv )
 		png? ( media-libs/libpng )
 		zlib? ( sys-libs/zlib )"
 RDEPEND="${DEPEND}
@@ -50,6 +51,7 @@ src_unpack() {
 	fi
 
 	cd "${S}"
+	epatch "${FILESDIR}/libiconv.patch"
 	epatch "${FILESDIR}/install.patch"
 	epatch "${FILESDIR}/menu_name.patch"
 }
@@ -57,14 +59,14 @@ src_unpack() {
 src_compile() {
 	local myopts=""
 	use debug && myopts="${myopts} --enable-debug=3"
-	if ! use dedicated; then
-		myopts="${myopts} --with-sdl"
-		myopts="${myopts} $(use_with freetype) $(use_with freetype fontconfig)"
+	if use dedicated; then
+		myopts="${myopts} --enable-dedicated "
+	else
+		myopts="${myopts} --with-sdl $(use_with truetype freetype)
+			$(use_with truetype fontconfig)"
 		if ! use timidity; then
 			use alsa && myopts="${myopts} --with-midi=/usr/bin/aplaymidi"
 		fi
-	else
-		myopts="${myopts} --enable-dedicated --without-sdl"
 	fi
 	# configure is a hand-written sh-script, so econf will not work
 	./configure --disable-strip \
@@ -74,6 +76,7 @@ src_compile() {
 		--install-dir="${D}" \
 		--doc-dir=share/doc/${P} \
 		--menu-group="Game;Simulation;" \
+		$(use_with iconv) \
 		$(use_with png) \
 		$(use_with zlib) \
 		${myopts} \
@@ -82,7 +85,7 @@ src_compile() {
 }
 
 src_install() {
-	emake install || die "emake install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 
 	if use scenarios ; then
 		insinto "${GAMES_DATADIR}"/${PN}/scenario

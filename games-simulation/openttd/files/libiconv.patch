@@ -1,10 +1,19 @@
---- config.lib	2008-01-15 21:55:36.000000000 +0100
-+++ config.lib_new	2008-01-16 16:55:39.000000000 +0100
-@@ -1134,7 +1134,6 @@
+--- config.lib	(revision 14508)
++++ config.lib	(working copy)
+@@ -1276,10 +1276,12 @@
  
  	if [ "$with_iconv" != "0" ]; then
  		CFLAGS="$CFLAGS -DWITH_ICONV"
 -		LIBS="$LIBS -liconv"
- 		if [ "$with_iconv" != "2" ]; then
- 			CFLAGS="$CFLAGS -I$with_iconv/include"
- 			LIBS="$LIBS -L$with_iconv/lib"
+-		if [ "$with_iconv" != "2" ]; then
+-			CFLAGS="$CFLAGS -I$with_iconv/include"
+-			LIBS="$LIBS -L$with_iconv/lib"
++		if [ "$link_to_iconv" = "yes" ]; then
++			LIBS="$LIBS -liconv"
++			if [ "$with_iconv" != "2" ]; then
++				CFLAGS="$CFLAGS -I$with_iconv/include"
++				LIBS="$LIBS -L$with_iconv/lib"
++			fi
+ 		fi
+ 
+ 		if [ "$have_broken_iconv" != "no" ]; then

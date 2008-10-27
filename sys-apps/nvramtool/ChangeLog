@@ -1,0 +1,17 @@
+# ChangeLog for sys-apps/lxbios
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+
+  27 Oct 2008; Piotr Szymaniak <lazy_bum@o2.pl> -lxbios-9999.ebuild,
+  +nvramtool-9999.ebuild:
+  Updated.
+
+  13 Aug 2008; Piotr Szymaniak <lazy_bum@o2.pl> lxbios-9999.ebuild:
+  Fixed repoman reported errors.
+
+  29 Nov 2007; Piotr Szymaniak <lazy_bum@o2.pl> lxbios-9999.ebuild:
+  Fixed homepage, added ~amd64 keyword.
+
+*lxbios-9999.ebuild (06 Nov 2007)
+
+  06 Nov 2007; Piotr Szymaniak <lazy_bum@o2.pl> +lxbios-9999.ebuild:
+  Initial ebuild by Ziga Mlinar (bug #196986) with additional changes.

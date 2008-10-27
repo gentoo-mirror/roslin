@@ -5,7 +5,7 @@
 inherit subversion eutils
 
 DESCRIPTION="Superiotool allows you to detect which Super I/O you have on your mainboard and more."
-HOMEPAGE="http://www.linuxbios.org/Superiotool"
+HOMEPAGE="http://www.coreboot.org/Superiotool"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -13,7 +13,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 SRC_URI=""
-ESVN_REPO_URI="svn://linuxbios.org/repos/trunk/util/${PN}"
+ESVN_REPO_URI="svn://coreboot.org/repos/trunk/util/${PN}"
 
 S=${WORKDIR}/${PN}
 
@@ -22,7 +22,7 @@ src_unpack() {
 	cd "${S}"
 	sed -i \
 		-e "s|-O2 -Wall -Werror -Wstrict-prototypes -Wundef -Wstrict-aliasing|${CFLAGS}|" \
-		-e "s|-Werror-implicit-function-declaration -ansi||" \
+		-e "s|-Werror-implicit-function-declaration -ansi -pedantic||" \
 		Makefile || die "sed failed"
 }
 
@@ -32,5 +32,5 @@ src_compile() {
 
 src_install() {
 	dobin ${PN} || die "dobin failed"
-	doman *.8
+	doman ${PN}.8
 }

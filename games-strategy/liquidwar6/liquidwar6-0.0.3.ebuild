@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/liquidwar/liquidwar-5.6.3.ebuild,v 1.8 2006/10/30 10:47:38 nyhm Exp $
+# $Header: $
 
 inherit eutils games libtool
 
@@ -17,11 +17,11 @@ IUSE="nls"
 DEPEND="media-libs/libpng
 	dev-scheme/guile"
 
-dir="${WORKDIR}/${P}beta"
+S=${WORKDIR}/${P}beta
 
 src_unpack() {
 	unpack ${A}
-	cd "${dir}"
+	cd "${S}"
 
 	epatch ${FILESDIR}/${P}-confiugure.patch
 	epatch ${FILESDIR}/${P}-confiugure.ac.patch
@@ -31,7 +31,6 @@ src_unpack() {
 }
 
 src_compile() {
-	cd "${dir}"
 	egamesconf \
 		$(use_enable nls) || die "egamesconf failed"
 #		--enable-optimize \

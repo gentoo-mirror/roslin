@@ -13,7 +13,7 @@ DESCRIPTION="unix port of Monkey's Audio"
 HOMEPAGE="http://sourceforge.net/projects/mac-port"
 #SRC_URI="mirror://sourceforge/mac-port/${MY_P}.tar.gz"
 SRC_URI="http://www.genoetigt.de/ape/${MY_P}.tar.gz"
-RESTRICT="nomirror"
+RESTRICT="mirror"
 
 LICENSE="unknown"
 SLOT="0"

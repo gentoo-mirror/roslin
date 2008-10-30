@@ -2,6 +2,9 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  30 Oct 2008; Michał Ziąbkowski <mziab@o2.pl> mac-3.99.4.5-r1.ebuild:
+  Fixed RESTRICT.
+
   13 Aug 2008; Piotr Szymaniak <lazy_bum@o2.pl> mac-3.99.4.5-r1.ebuild:
   Fixed some repoman reported errors.
 

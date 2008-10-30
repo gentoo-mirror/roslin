@@ -12,7 +12,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
 IUSE="nls"
-RESTRICT="nomirror"
+RESTRICT="mirror"
 
 DEPEND="|| ( >=x11-libs/qt-4.2.0:4
 	x11-libs/qt-gui:4 )

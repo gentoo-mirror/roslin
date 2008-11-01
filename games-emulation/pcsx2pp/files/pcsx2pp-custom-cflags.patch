@@ -1,0 +1,18 @@
+--- pcsx2/configure.ac.orig	2008-11-01 15:47:53.000000000 +0100
++++ pcsx2/configure.ac	2008-11-01 15:52:56.855856527 +0100
+@@ -11,14 +11,9 @@
+ dnl necessary for compiling assembly
+ AM_PROG_AS
+ 
+-CFLAGS=
+-CPPFLAGS=
+-CXXFLAGS=
+-CCASFLAGS=
+-
+ WARNING_FLAGS="-Wall -Wno-format -Wno-unused-value"
+ dnl EXTRA_FLAGS = " -Xlinker -zmuldefs -fpermissive "
+-NORMAL_FLAGS="-O3 -fomit-frame-pointer ${WARNING_FLAGS}"
++NORMAL_FLAGS="-O1 -finline-functions"
+ DEBUG_FLAGS=" -g ${WARNING_FLAGS}"
+ 
+ dnl Check for debug build

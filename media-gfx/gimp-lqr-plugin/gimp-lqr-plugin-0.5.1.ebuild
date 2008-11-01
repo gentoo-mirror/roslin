@@ -2,24 +2,18 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-inherit versionator
-
-MY_PV="$(replace_version_separator 3 '-' ${PV})"
-
 DESCRIPTION="Content-aware resizing for the GIMP"
 HOMEPAGE="http://liquidrescale.wikidot.com/"
-SRC_URI="http://liquidrescale.wikidot.com/local--files/en:download-page/${PN}-${MY_PV}.tar.gz"
+SRC_URI="http://liquidrescale.wikidot.com/local--files/en:download-page/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND=">=media-gfx/gimp-2.3
-	media-libs/liblqr"
+RDEPEND=">=media-gfx/gimp-2.4
+	>=media-libs/liblqr-0.2.0"
 DEPEND="${RDEPEND}"
-
-S=${WORKDIR}/${PN}-${MY_PV/0-4/0}
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"

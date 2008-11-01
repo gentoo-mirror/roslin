@@ -11,7 +11,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND=">=media-gfx/gimp-2.3
+RDEPEND=">=media-gfx/gimp-2.4
 	>=media-libs/liblqr-0.2.0"
 DEPEND="${RDEPEND}"
 

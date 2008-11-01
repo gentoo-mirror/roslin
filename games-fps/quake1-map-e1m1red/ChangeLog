@@ -1,0 +1,8 @@
+# ChangeLog for games-fps/quake1-map-e1m1red
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  01 Nov 2008; Piotr Szymaniak <lazy_bum@o2.pl>
+  +quake1-map-e1m1red-1.ebuild:
+  New package.
+

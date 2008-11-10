@@ -38,7 +38,7 @@ src_unpack() {
 		epatch "${FILESDIR}"/${PN}-custom-cflags.patch
 
 		# Allow plugin inis to be stored in ~/.pcsx2/inis.
-		epatch "${FILESDIR}"/${PN}-plugin-inis.patch
+		#epatch "${FILESDIR}"/${PN}-plugin-inis.patch
 		
 		eautoreconf -v --install || die
 }

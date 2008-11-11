@@ -1,0 +1,7 @@
+# ChangeLog for games-fps/quake1-whiteroom
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  11 Nov 2008; Piotr Szymaniak <lazy_bum@o2.pl> +quake1-whiteroom-1.ebuild:
+  New package.
+

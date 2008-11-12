@@ -2,6 +2,9 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  12 Nov 2008; Michał Ziąbkowski <mziab@o2.pl> kadu-powerkadu-2.1.ebuild:
+  Re-added split_messages dep.
+
   13 Aug 2008; Piotr Szymaniak <lazy_bum@o2.pl> kadu-powerkadu-2.0.3.ebuild,
   kadu-powerkadu-2.0.4.ebuild:
   Fixed few repoman reported errors.

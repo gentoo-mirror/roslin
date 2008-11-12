@@ -12,8 +12,8 @@ MOD_DEPEND=">=net-im/kadu-anonymous_check-${MIN_VER}
 	    >=net-im/kadu-autostatus-${MIN_VER}
 	    >=net-im/kadu-cenzor-${MIN_VER}
 	    >=net-im/kadu-parser_extender-${MIN_VER}
-		>=net-im/kadu-word_fix-${MIN_VER}"
-	    #>=net-im/kadu-split_messages-${MIN_VER}"
+	    >=net-im/kadu-word_fix-${MIN_VER}
+	    >=net-im/kadu-split_messages-0.3"
 MOD_URI="http://www.kadu.net/~dorr/moduly/kadu-powerkadu-${PV}.tar.bz2"
 MOD_TYPE="ext"
 

@@ -2,11 +2,14 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-inherit gnome2 eutils
+inherit subversion gnome2 eutils
 
 DESCRIPTION="A SVG based generic vector-drawing program"
 HOMEPAGE="http://www.inkscape.org/"
-SRC_URI="http://${PN}.modevia.com/svn-snap/${PN}-20175.tar.bz2"
+SRC_URI=""
+
+ESVN_REPO_URI="https://inkscape.svn.sourceforge.net/svnroot/inkscape/inkscape/trunk"
+ESVN_PROJECT="inkscape"
 
 SLOT="0"
 LICENSE="GPL-2 LGPL-2.1"
@@ -60,7 +63,7 @@ DEPEND="${COMMON_DEPEND}
 	x11-libs/libX11
 	>=dev-util/intltool-0.29"
 
-S=${WORKDIR}/${PN}-20175
+S=${WORKDIR}/${PN}
 
 pkg_setup() {
 	# bug 207070
@@ -88,14 +91,18 @@ pkg_setup() {
 }
 
 src_unpack() {
-	gnome2_src_unpack
-#
-	cd "${S}"
-	epatch "${FILESDIR}"/${PN}-0.46-gcc43.patch
+	subversion_src_unpack
+#	gnome2_src_unpack
+
+#	cd "${S}"
+#	epatch "${FILESDIR}"/${PN}-0.46-gcc43.patch
 #	epatch "${FILESDIR}"/${P}-poppler-0.8.3.patch
 #	epatch "${FILESDIR}"/${P}-bug-174720-0.patch
 #	epatch "${FILESDIR}"/${P}-bug-174720-1.patch
 #	epatch "${FILESDIR}"/${P}-bug-214171.patch
+
+	# This should go to src_compile, but... (;
+	sh autogen.sh || die "autogen"
 }
 
 DOCS="AUTHORS ChangeLog NEWS README"

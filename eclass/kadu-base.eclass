@@ -21,21 +21,21 @@ kadu-disable_all()
 	
 	# Disable all modules
 	cd ${S}/modules
-	local modules=`./get-all.sh | sed -e "s/;/ /g"`
+	local modules=`./get-all.sh ON | sed -e "s/;/ /g"`
 	for i in ${modules}; do
 	    echo module_$i=n >>${S}/.config
 	done
 
 	# Disable all emoticons
 	cd ${S}/varia/themes/emoticons
-	local emoticons=`./get-all.sh | sed -e "s/;/ /g"`
+	local emoticons=`./get-all.sh ON | sed -e "s/;/ /g"`
 	for i in ${emoticons}; do
 	    echo emoticons_$i=n >>${S}/.config
 	done
 
 	# Disable all icons
 	cd ${S}/varia/themes/icons
-	local icons=`./get-all.sh | sed -e "s/;/ /g"`
+	local icons=`./get-all.sh ON | sed -e "s/;/ /g"`
 	for i in ${icons}; do
 	    echo icons_$i=n >>${S}/.config
 	done

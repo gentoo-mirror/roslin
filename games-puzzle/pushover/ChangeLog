@@ -2,6 +2,9 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  16 Nov 2008; Piotr Szymaniak <lazy_bum@o2.pl> pushover-0.0.1.ebuild:
+  Fixed missing depend.
+
   16 Nov 2008; Piotr Szymaniak <lazy_bum@o2.pl> +pushover-0.0.1.ebuild:
   New package.
 

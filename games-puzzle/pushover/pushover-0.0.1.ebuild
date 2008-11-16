@@ -13,8 +13,9 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
 
-DEPEND="media-libs/sdl-mixer
-	dev-lang/lua"
+DEPEND="dev-lang/lua
+	media-libs/sdl-mixer
+	media-libs/sdl-ttf"
 RDEPEND="${DEPEND}"
 
 src_install() {

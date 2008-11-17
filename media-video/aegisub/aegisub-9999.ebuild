@@ -29,13 +29,14 @@ DEPEND=">=sys-devel/automake-1.10
 	libass? ( >=media-libs/libass-0.9.4 )
 	nls? ( >=sys-devel/gettext-0.16.1 )
 	portaudio? ( =media-libs/portaudio-18.1 )
-	pulseaudio? ( >=media-sound/pulseaudio-0.9.6 )"
+	pulseaudio? ( >=media-sound/pulseaudio-0.9.6 )
+	openal? ( media-libs/openal )"
 
 src_unpack() {
 	subversion_src_unpack
 
 	cd ${S}
-	epatch ${FILESDIR}/${PN}-portaudio-test.patch
+	epatch ${FILESDIR}/${PN}-audio-tests.patch
 }
 
 src_compile() {

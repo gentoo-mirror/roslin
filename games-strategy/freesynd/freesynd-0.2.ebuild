@@ -40,10 +40,6 @@ src_unpack() {
 		musicmanager.cpp || die "sed musicmanager.cpp"
 }
 
-src_compile() {
-	emake || die "emake"
-}
-
 src_install() {
 	dogamesbin ${PN} || die
 	newgamesbin dump ${PN}-dump || die

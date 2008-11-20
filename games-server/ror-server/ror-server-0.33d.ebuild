@@ -31,19 +31,8 @@ src_unpack() {
 	rm -r ../win32
 }
 
-src_compile() {
-	emake || die "emake failed"
-}
-
 src_install() {
 	dodoc README
 	dohtml -r SocketW/docs
 	dobin ${MY_PN1}
 }
-
-#pkg_postinst() {
-#	einfo ""
-#	einfo "Example config file and run file can be found in"
-#	einfo "/usr/share/doc/${P}/"
-#	einfo ""
-#}

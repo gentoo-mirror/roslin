@@ -33,10 +33,6 @@ src_unpack() {
 	fi
 }
 
-src_compile() {
-	emake || die "emake failed"
-}
-
 src_install() {
 	insinto "${dir}"
 	doins -r data || die "doins data failed"

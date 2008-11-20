@@ -98,10 +98,6 @@ src_unpack() {
 	rm -r ${PN}/*/.svn ${PN}/*/*/.svn
 }
 
-src_compile() {
-	emake || die "emake failed"
-}
-
 src_install() {
 	local LANG=
 	for LANG in ${LINGUAS}; do

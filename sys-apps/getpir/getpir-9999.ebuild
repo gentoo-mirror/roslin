@@ -25,10 +25,6 @@ src_unpack() {
 		Makefile || die "sed"
 }
 
-src_compile() {
-	emake || die "emake failed"
-}
-
 src_install() {
 	dobin ${PN}
 	dodoc README

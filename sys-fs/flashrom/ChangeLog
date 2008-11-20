@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/flashrom
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 
+  20 Nov 2008; Piotr Szymaniak <lazy_bum@o2.pl> flashrom-9999.ebuild:
+  Removed useless src_compile.
+
   27 Oct 2008; Piotr Szymaniak <lazy_bum@o2.pl> flashrom-9999.ebuild:
   Updated.
 

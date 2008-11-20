@@ -29,10 +29,6 @@ src_unpack() {
 		Makefile || die "sed failed"
 }
 
-src_compile() {
-	emake || die "emake failed"
-}
-
 src_install() {
 	dosbin ${PN} || die "dosbin failed"
 	doman ${PN}.8

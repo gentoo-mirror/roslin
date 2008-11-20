@@ -48,11 +48,6 @@ src_unpack() {
 		-e "s:-llua5.1:-llua:" configure.ac || die "sed failed"
 }
 
-src_compile() {
-	econf || die "egamesconf failed"
-	emake || die "emake failed"
-}
-
 src_install() {
 	dogamesbin bin/${PN} || die "installing the binary failed"
 

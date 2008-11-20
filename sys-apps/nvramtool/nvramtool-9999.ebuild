@@ -17,10 +17,6 @@ ESVN_REPO_URI="svn://coreboot.org/repos/trunk/util/${PN}"
 
 S=${WORKDIR}/${PN}
 
-src_compile() {
-	emake || die "emake failed"
-}
-
 src_install() {
 	dobin ${PN} || die "dobin failed"
 	doman ${PN}.1

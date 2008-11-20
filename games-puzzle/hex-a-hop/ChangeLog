@@ -1,7 +1,8 @@
 # ChangeLog for games-puzzle/hex-a-hop
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 
-  20 Nov 2008; Piotr Szymaniak <lazy_bum@o2.pl> ChangeLog:
+  20 Nov 2008; Piotr Szymaniak <lazy_bum@o2.pl>
+  hex-a-hop-0.0.20070315.ebuild:
   Removed useless src_compile.
 
   09 Aug 2008; Piotr Szymaniak <lazy_bum@o2.pl>

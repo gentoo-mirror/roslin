@@ -55,10 +55,6 @@ src_unpack() {
 #	epatch ${FILESDIR}/segfault_443822.patch
 }
 
-src_compile() {
-	emake || die "emake failed"
-}
-
 src_install() {
 	insinto "$dir"
 	doins -r graphics *.dat

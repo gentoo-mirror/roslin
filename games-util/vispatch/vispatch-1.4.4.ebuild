@@ -27,10 +27,6 @@ src_unpack() {
 		makefile || die "sed failed"
 }
 
-src_compile() {
-	emake || die "emake failed"
-}
-
 src_install() {
 	dobin ${PN} || die "installing the binary failed"
 

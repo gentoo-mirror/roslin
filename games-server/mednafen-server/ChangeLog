@@ -1,6 +1,10 @@
 # ChangeLog for games-server/mednafen-server
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 
+  20 Nov 2008; Piotr Szymaniak <lazy_bum@o2.pl>
+  mednafen-server-0.3.0.ebuild:
+  Removed useless src_compile.
+
   13 Aug 2008; Piotr Szymaniak <lazy_bum@o2.pl>
   mednafen-server-0.3.0.ebuild:
   Fixed quoting.

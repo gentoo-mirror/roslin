@@ -28,10 +28,6 @@ src_unpack() {
 	mv run.sh run.sh.example
 }
 
-src_compile() {
-	emake || die "emake failed"
-}
-
 src_install() {
 	dodoc README *.example
 	dobin ${PN}

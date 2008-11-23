@@ -2,8 +2,6 @@
 # PACKAGE INFORMATION
 #
 
-MIN_VER="0.6.5_rc2"
-
 inherit kadu-base
 
 MOD_TYPE="ext"

@@ -4,12 +4,13 @@ LICENSE="GPL-2"
 SLOT="0"
 RESTRICT="mirror"
 
+# If no version was requested, default to this one
 if [ -z "${MIN_VER}" ]
 then
-	MIN_VER="${PV}"
+	MIN_VER="0.6.5_rc2"
 fi
 
-K_PV="${MIN_VER/_/-}"
+K_PV="${PV/_/-}"
 NAME="${PN#*-}"
 
 S="${WORKDIR}/kadu"

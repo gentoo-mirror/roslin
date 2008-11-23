@@ -1,3 +1,12 @@
+# Proper deps for external modules
+if [ "${MOD_TYPE}" != "ext" ]
+then
+	K_PV="${PV/_/-}"
+else
+	K_PV="${MIN_VER/_/-}"
+fi
+
+
 RDEPEND=">=net-im/kadu-core-${MIN_VER}
 		${MOD_DEPEND}"
 

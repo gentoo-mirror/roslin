@@ -19,7 +19,7 @@ RDEPEND=">=media-libs/libsdl-1.2.4
 	>=dev-games/physfs-1.0.0
 	media-libs/libvorbis
 	media-libs/libogg
-	media-libs/openal"
+	>=media-libs/openal-1.5.304"
 DEPEND="${RDEPEND}
 	x11-libs/libXt"
 

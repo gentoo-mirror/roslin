@@ -48,9 +48,6 @@ src_unpack() {
 		src/FretsOnFire.py || die "sed FretsOnFire.py failed"
 	sed -i -e "s:os.path.join(\"..\", \"\(data\)\"):\"${GAMES_DATADIR}/${PN}/\1\":" \
 		src/Version.py || die "sed Version.py failed"
-
-	has_version '=dev-python/pyxml-0.8.4' && \
-		epatch "${FILESDIR}/${PN}-pyxml.patch"
 }
 
 src_install() {
@@ -60,10 +57,10 @@ src_install() {
 	insinto "${GAMES_DATADIR}/${PN}"
 	doins -r ../FretsOnFire/data || die "doins failed (data)"
 
-	if use ghmod ; then
-	    insinto "${GAMES_DATADIR}/${PN}"
-	    doins -r "../GHmod${PV}/FretsOnFire/data" || die "doins failed (ghmod)"
-	fi
+#	if use ghmod ; then
+#	    insinto "${GAMES_DATADIR}/${PN}"
+#	    doins -r "../GHmod${PV}/FretsOnFire/data" || die "doins failed (ghmod)"
+#	fi
 
 	games_make_wrapper ${MY_PN} "python FretsOnFire.py" "$(games_get_libdir)/${PN}"
 

@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-inherit eutils games
+inherit eutils games autotools
 
 DESCRIPTION="Space-flying-mushroom-picking-simulator"
 HOMEPAGE="http://funguloids.sourceforge.net/"
@@ -14,12 +14,12 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE="fmodex mad ogg"
 
-RDEPEND=">=dev-games/ogre-1.4.1
+RDEPEND=">=dev-games/ogre-1.4.6
 	>=dev-games/ois-1.0
 	fmodex? ( >=media-libs/fmodex-4.06.16 )
-	mad? ( media-libs/openal
+	mad? ( >=media-libs/openal-1.5.304
 		media-libs/libmad )
-	ogg? ( media-libs/openal
+	ogg? ( >=media-libs/openal-1.5.304
 		media-libs/libvorbis )
 	media-libs/freealut
 	dev-lang/lua"
@@ -46,6 +46,13 @@ src_unpack() {
 	sed -i \
 		-e "s:bininstalldir="${prefix}/games":bininstalldir="${prefix}/bin":" \
 		-e "s:-llua5.1:-llua:" configure.ac || die "sed failed"
+		
+	eautoreconf
+}
+
+src_compile() {
+	econf || die "egamesconf failed"
+	emake || die "emake failed"
 }
 
 src_install() {

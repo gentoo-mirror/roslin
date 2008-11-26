@@ -47,6 +47,9 @@ src_unpack() {
 		-e "s:bininstalldir="${prefix}/games":bininstalldir="${prefix}/bin":" \
 		-e "s:-llua5.1:-llua:" configure.ac || die "sed failed"
 		
+	epatch "${FILESDIR}/${PN}-ogre-fix.patch"
+	epatch "${FILESDIR}/${PN}-alc_error.patch"
+		
 	eautoreconf
 }
 

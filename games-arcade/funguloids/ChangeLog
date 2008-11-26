@@ -2,6 +2,10 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  26 Nov 2008; Michał Ziąbkowski <mziab@o2.pl> funguloids-1.06.ebuild,
+  +files/funguloids-alc_error.patch, +files/funguloids-ogre-fix.patch:
+  This time actually include the patches...
+
   26 Nov 2008; Michał Ziąbkowski <mziab@o2.pl> funguloids-1.06.ebuild:
   Restored src_compile. Added compat patches for newer openal and ogre
   versions and set deps to those versions.

@@ -8,7 +8,7 @@ SRC_URI="http://download2.berlios.de/${PN}/${P}d.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS=""
 IUSE="debug"
 
 RDEPEND=">=media-libs/libsdl-1.2.4

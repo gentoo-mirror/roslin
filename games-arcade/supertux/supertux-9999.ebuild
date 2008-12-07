@@ -29,12 +29,12 @@ pkg_setup() {
 	games_pkg_setup
 }
 
-src_unpack() {
-	subversion_src_unpack
-	cd "${S}"
-
-	epatch "${FILESDIR}"/"${P}-cmakelists.patch"
-}
+#src_unpack() {
+#	subversion_src_unpack
+#	cd "${S}"
+#
+#	epatch "${FILESDIR}"/"${P}-cmakelists.patch"
+#}
 
 src_compile() {
 	cmake-utils_src_configurein || die "cmake failed"

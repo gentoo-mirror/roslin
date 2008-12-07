@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/supertux
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 
+  07 Dec 2008; Piotr Szymaniak <lazy_bum@o2.pl> supertux-9999.ebuild,
+  -files/supertux-9999-cmakelists.patch:
+  Patch no longer needed.
+
   06 Dec 2008; Piotr Szymaniak <lazy_bum@o2.pl> +supertux-0.3.0.ebuild,
   supertux-0.3.1.ebuild:
   Readded 0.3.0. Masked 0.3.1 due to weird, random slowdowns in game.

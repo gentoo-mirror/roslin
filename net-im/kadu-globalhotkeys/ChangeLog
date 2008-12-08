@@ -2,6 +2,10 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  08 Dec 2008; Michał Ziąbkowski <mziab@o2.pl>
+  +kadu-globalhotkeys-0.6.5_p7.ebuild:
+  Bumped.
+
   03 Jul 2008; Michał Ziąbkowski <mziab@o2.pl>
   kadu-globalhotkeys-0.6.0_p3.ebuild:
   Stabled.

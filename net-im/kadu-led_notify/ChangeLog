@@ -2,6 +2,9 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  08 Dec 2008; Michał Ziąbkowski <mziab@o2.pl> Manifest:
+  Removed remnants of rc2 from Manifest.
+
   12 Nov 2008; Michał Ziąbkowski <mziab@o2.pl>
   +kadu-led_notify-0.21.ebuild:
   Bumped.

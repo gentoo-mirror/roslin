@@ -1,4 +1,4 @@
-SRC_URI="http://kadu.net/download/modules_extra/filtering/filtering-${PV}.tar.bz2"
+SRC_URI="http://kadu.net/download/modules_extra/filtering/filtering-${PV/0./}.tar.bz2"
 
 MOD_TYPE="ext"
 

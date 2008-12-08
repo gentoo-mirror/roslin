@@ -17,7 +17,7 @@ S="${WORKDIR}"
 
 src_compile()
 {
-    einfo "Nothing to compile."
+	einfo "Nothing to compile."
 }
 
 src_install()

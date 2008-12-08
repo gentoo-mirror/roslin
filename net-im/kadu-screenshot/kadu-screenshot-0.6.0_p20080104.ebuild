@@ -1,4 +1,4 @@
-SRC_URI="http://kadu.net/download/modules_extra/screenshot/screenshot-${PV/0./}.tar.bz2"
+SRC_URI="http://kadu.net/download/modules_extra/screenshot/screenshot-${PV/0.6.0_p/}.tar.bz2"
 
 MOD_TYPE="ext"
 

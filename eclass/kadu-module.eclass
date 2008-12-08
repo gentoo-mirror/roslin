@@ -1,6 +1,6 @@
 inherit eutils flag-o-matic kadu
 
-DEPEND=">=net-im/kadu-core-${MIN_REQ} ${MOD_DEPEND}"
+DEPEND=">=net-im/kadu-core-${MIN_REQ} !>=net-im/kadu-core-0.6.5_rc ${MOD_DEPEND}"
 LICENSE="GPL-2"
 IUSE=""
 SLOT="0"

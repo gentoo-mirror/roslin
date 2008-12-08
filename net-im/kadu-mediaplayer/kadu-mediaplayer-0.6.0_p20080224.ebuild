@@ -1,4 +1,4 @@
-SRC_URI="http://www.kadu.net/download/modules_extra/mediaplayer/mediaplayer-${PV/0./}.tar.bz2"
+SRC_URI="http://www.kadu.net/download/modules_extra/mediaplayer/mediaplayer-${PV/0.6.0_p/}.tar.bz2"
 
 MOD_TYPE="ext"
 

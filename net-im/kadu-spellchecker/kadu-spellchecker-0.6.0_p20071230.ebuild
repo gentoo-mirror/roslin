@@ -1,4 +1,4 @@
-SRC_URI="http://kadu.net/download/modules_extra/spellchecker/spellchecker-${PV/0./}.tar.bz2"
+SRC_URI="http://kadu.net/download/modules_extra/spellchecker/spellchecker-${PV/0.6.0_p/}.tar.bz2"
 
 MOD_DEPEND="app-text/aspell"
 MOD_TYPE="ext"

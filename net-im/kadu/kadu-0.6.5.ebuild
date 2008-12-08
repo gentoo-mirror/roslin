@@ -3,12 +3,12 @@
 #
 inherit eutils
 
-DESCRIPTION="QT client for popular in Poland Gadu-Gadu IM Network"
+DESCRIPTION="A QT client for the popular Polish Gadu-Gadu IM network"
 HOMEPAGE="http://kadu.net"
 KEYWORDS="~amd64 ~x86"
 LICENSE="GPL-2"
 
-IUSE="emoticons icons powerkadu alsa oss ssl voice"
+IUSE="emoticons icons sounds powerkadu alsa oss ssl voice"
 
 SLOT="0"
 
@@ -31,4 +31,5 @@ DEPEND=">=net-im/kadu-core-${PV}
 	voice? ( >=net-im/kadu-voice-${PV} )
 	emoticons? ( >=net-im/kadu-emoticons-${PV} )
 	icons? ( >=net-im/kadu-icons-${PV} )
+	sounds? ( >=net-im/kadu-sounds-${PV} )
 "

@@ -3,6 +3,10 @@
 # $Header: $
 
   08 Dec 2008; Michał Ziąbkowski <mziab@o2.pl>
+  +kadu-filedesc-0.20080104.ebuild, -kadu-filedesc-20080104.ebuild:
+  Changed versioning scheme to avoid problems during update.
+
+  08 Dec 2008; Michał Ziąbkowski <mziab@o2.pl>
   -kadu-filedesc-0.6.5_rc2.ebuild, +kadu-filedesc-0.6.5.ebuild:
   Bumped. Removed previous version.
 

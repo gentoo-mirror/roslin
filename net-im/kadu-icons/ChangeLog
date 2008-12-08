@@ -2,6 +2,10 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  08 Dec 2008; Michał Ziąbkowski <mziab@o2.pl> +kadu-icons-0.6.0.ebuild,
+  -kadu-icons-1.2.ebuild:
+  Changed versioning scheme to avoid problems during update.
+
   08 Dec 2008; Michał Ziąbkowski <mziab@o2.pl>
   -kadu-icons-0.6.5_rc2.ebuild, +kadu-icons-0.6.5.ebuild:
   Bumped. Removed previous version.

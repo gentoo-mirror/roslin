@@ -11,9 +11,10 @@ SRC_URI="http://victornils.net/tetris/${P}.tar.gz"
 LICENSE=""
 SLOT="0"
 KEYWORDS="~x86"
-IUSE="X joystick ncurses net"
+IUSE="X allegro joystick ncurses net"
 
 DEPEND="sys-libs/glibc
+	allegro? ( media-libs/allegro )
 	ncurses? ( sys-libs/ncurses )
 	X? ( x11-libs/libX11 )"
 RDEPEND=""
@@ -24,15 +25,17 @@ src_unpack() {
 
 	sed -i \
 		-e "s|-strip --strip-all|echo|" \
+		-e "s|PROGNAME = tetris|PROGNAME = vitetris|" \
 		Makefile || die "sed Makefile failed"
 }
 
 src_compile() {
-	egamesconf \
-		$(use_with X x) \
+	./configure \
+		--prefix=/usr/games \
+		$(use_enable X xlib) \
 		$(use_enable joystick js) \
-		$(use_with ncurses curses) \
-		$(use_enable net) \
+		$(use_enable ncurses curses) \
+		$(use_enable net network) \
 		|| die "egamesconf failed"
 	emake \
 		LDFLAGS="${LDFLAGS}" \
@@ -41,7 +44,7 @@ src_compile() {
 }
 
 src_install() {
-	newgamesbin tetris ${PN} || die "dogamesbin failed"
+	dogamesbin vitetris || die "dogamesbin failed"
 
 	dodoc README
 

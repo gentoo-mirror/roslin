@@ -1,4 +1,4 @@
-SRC_URI="http://www.kadu.net/~dorr/moduly/${P}.tar.bz2"
+SRC_URI="http://www.kadu.net/~dorr/moduly/${PN}-0.7.5.1.tar.bz2"
 
 MOD_TYPE="ext"
 

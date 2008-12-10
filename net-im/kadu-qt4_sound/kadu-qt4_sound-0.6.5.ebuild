@@ -10,6 +10,6 @@ inherit kadu-mod
 
 DESCRIPTION="Qt4 sound output module for Kadu"
 HOMEPAGE="http://kadu.net"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 

@@ -5,7 +5,7 @@ inherit kadu-base
 
 DESCRIPTION="Extra emoticons for Kadu"
 HOMEPAGE="http://kadu.net/"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 
 IUSE=""
 DEPEND="net-im/kadu-core"

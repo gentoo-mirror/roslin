@@ -11,7 +11,7 @@ inherit kadu-mod
 
 DESCRIPTION="Makes Kadu look and behave like a panel"
 HOMEPAGE="http://www.ultr.pl/kadu/"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 
 IUSE=""
 

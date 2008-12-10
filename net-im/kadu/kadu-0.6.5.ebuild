@@ -5,7 +5,7 @@ inherit eutils
 
 DESCRIPTION="A QT client for the popular Polish Gadu-Gadu IM network"
 HOMEPAGE="http://kadu.net"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 LICENSE="GPL-2"
 
 IUSE="emoticons icons sounds powerkadu alsa oss ssl voice"

@@ -11,7 +11,7 @@ inherit kadu-mod
 
 DESCRIPTION="Mathematical TeX formula support in Kadu chats"
 HOMEPAGE="http://kadu.net/~patryk"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 
 IUSE=""
 

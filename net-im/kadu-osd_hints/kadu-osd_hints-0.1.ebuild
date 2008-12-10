@@ -12,7 +12,7 @@ inherit kadu-mod
 
 DESCRIPTION="OSD-like notification module for Kadu"
 HOMEPAGE="http://kadu.net/~dorr"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 
 IUSE=""
 

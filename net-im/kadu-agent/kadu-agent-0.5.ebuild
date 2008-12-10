@@ -12,7 +12,7 @@ inherit kadu-mod
 
 DESCRIPTION="Kadu module for checking who has you on their list"
 HOMEPAGE="http://kadu.net/~dorr"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 
 IUSE=""
 

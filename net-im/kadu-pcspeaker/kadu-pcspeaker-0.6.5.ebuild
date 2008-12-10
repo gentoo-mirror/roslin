@@ -10,6 +10,6 @@ inherit kadu-mod
 
 DESCRIPTION="PC Speaker notification for Kadu"
 HOMEPAGE="http://kadu.net"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 

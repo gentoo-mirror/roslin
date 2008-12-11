@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/supertux
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 
+  11 Dec 2008; Piotr Szymaniak <lazy_bum@o2.pl> supertux-0.3.0.ebuild:
+  Added slot 2.
+
   11 Dec 2008; Piotr Szymaniak <lazy_bum@o2.pl> -supertux-0.3.1.ebuild,
   +supertux-0.3.1d.ebuild, +files/0.3.1-fixes.patch,
   +files/0.3.1-fs-layout.patch, +files/desktop.patch:

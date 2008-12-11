@@ -10,7 +10,8 @@ fi
 RDEPEND=">=net-im/kadu-core-${MIN_VER}
 		${MOD_DEPEND}"
 
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	>=dev-util/cmake-2.6.0"
 
 SRC_URI="http://www.kadu.net/download/stable/kadu-${K_PV}.tar.bz2
 		${MOD_URI}"

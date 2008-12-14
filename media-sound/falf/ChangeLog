@@ -2,6 +2,9 @@
 # Copyright 2007-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  14 Dec 2008; Michał Ziąbkowski <mziab@o2.pl> +falf-1.3.ebuild:
+  Bumped.
+
   20 Oct 2008; Michał Ziąbkowski <mziab@o2.pl> falf-1.2.ebuild,
   falf-9999.ebuild:
   Fixed RESTRICT.

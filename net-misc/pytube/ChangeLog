@@ -2,6 +2,10 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  15 Dec 2008; Michał Ziąbkowski <mziab@o2.pl> -pytube-0.0.10.8.ebuild,
+  pytube-0.0.11.4.ebuild, pytube-0.0.11.4-r1.ebuild:
+  Changed URI to local mirror. Fixed indentation. Removed oldest version.
+
   06 Aug 2008; Michał Ziąbkowski <mziab@o2.pl>
   +files/pytube-0.0.11.4-updconfig.patch:
   Committed the patch this time :)

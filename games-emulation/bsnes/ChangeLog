@@ -1,6 +1,11 @@
 # ChangeLog for games-emulation/bsnes
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 
+  15 Dec 2008; Michał Ziąbkowski <mziab@o2.pl> -bsnes-0.037a.ebuild,
+  +bsnes-0.038.ebuild, +files/bsnes-makefile.patch:
+  Bumped. Added USE flags for enabling video/audio modules. Changed deps.
+  Replaced sed with patch.
+
   06 Nov 2008; Michał Ziąbkowski <mziab@o2.pl> -bsnes-0.036.ebuild,
   +bsnes-0.037a.ebuild:
   Bumped. Removed previous version.

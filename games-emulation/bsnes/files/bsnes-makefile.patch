@@ -1,0 +1,11 @@
+--- Makefile.orig	2008-12-15 06:55:43.000000000 +0100
++++ Makefile	2008-12-15 15:28:44.033626960 +0100
+@@ -6,7 +6,7 @@
+ ################
+ 
+ ifneq ($(findstring gcc,$(compiler)),) # GCC family
+-  flags = -O3 -fomit-frame-pointer $(if $(call streq,$(platform),x),-mtune=native,) -Ilib
++  flags = $(CXXFLAGS) -Ilib
+   c = $(compiler) $(flags)
+   cpp = $(subst cc,++,$(compiler)) $(flags)
+   obj = o

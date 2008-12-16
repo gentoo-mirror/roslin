@@ -35,7 +35,7 @@ src_unpack() {
 		cd ${S}
 
 		# Preserve custom CFLAGS passed to configure.
-		epatch "${FILESDIR}"/${PN}-custom-cflags.patch
+		#epatch "${FILESDIR}"/${PN}-custom-cflags.patch
 
 		# Allow plugin inis to be stored in ~/.pcsx2/inis.
 		#epatch "${FILESDIR}"/${PN}-plugin-inis.patch
@@ -57,6 +57,7 @@ src_compile() {
 		$(use_enable debug) \
 		$(use_enable sse3) \
 		$(use_enable vmbuild) \
+		$(use_enable custom-cflags customcflags) \
 		|| die
 
 	emake || die

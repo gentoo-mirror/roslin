@@ -3,6 +3,9 @@
 # $Header: $
 
   16 Dec 2008; Michał Ziąbkowski <mziab@o2.pl> pcsx2pp-9999.ebuild:
+  Added missing flag to IUSE
+
+  16 Dec 2008; Michał Ziąbkowski <mziab@o2.pl> pcsx2pp-9999.ebuild:
   Dropped cflags patch in favour of the new configure switch.
 
   12 Nov 2008; Michał Ziąbkowski <mziab@o2.pl>

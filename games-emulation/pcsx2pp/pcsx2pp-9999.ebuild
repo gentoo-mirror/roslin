@@ -12,7 +12,7 @@ ESVN_REPO_URI="http://pcsx2-playground.googlecode.com/svn/trunk/pcsx2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS=""
-IUSE="debug devbuild sse3 vmbuild"
+IUSE="custom-cflags debug devbuild sse3 vmbuild"
 
 CDEPEND="sys-libs/zlib
 		>=x11-libs/gtk+-2"

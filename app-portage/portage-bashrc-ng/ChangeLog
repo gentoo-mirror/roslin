@@ -2,6 +2,11 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  17 Dec 2008; Michał Ziąbkowski <mziab@o2.pl>
+  +portage-bashrc-ng-0.14.1-r2.ebuild,
+  +files/portage-bashrc-ng-0.14.1-autopatch-eapi-fix.patch:
+  Fixed issues with EAPI=2 and autopatch.
+
   24 May 2008; Michał Ziąbkowski <mziab@o2.pl>
   -portage-bashrc-ng-0.12_beta.ebuild, -portage-bashrc-ng-0.14.1.ebuild:
   Removed cruft.

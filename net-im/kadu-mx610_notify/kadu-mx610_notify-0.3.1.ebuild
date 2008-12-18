@@ -1,4 +1,4 @@
-SRC_URI="http://kadu.jarzebski.pl/mx610_notify-${PV}.tar.bz2"
+SRC_URI="http://kadu.net/~dorr/moduly/mx610_notify-${PV}.tar.bz2"
 
 inherit kadu
 

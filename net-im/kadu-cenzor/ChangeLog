@@ -2,6 +2,9 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  18 Dec 2008; Michał Ziąbkowski <mziab@o2.pl> +kadu-cenzor-0.2.1.ebuild:
+  Bumped.
+
   08 Dec 2008; Michał Ziąbkowski <mziab@o2.pl>
   -kadu-cenzor-0.6.5_rc2.ebuild, +kadu-cenzor-0.6.5.ebuild:
   Bumped. Removed previous version.

@@ -1,4 +1,4 @@
-SRC_URI="http://alan.umcs.lublin.pl/~pinkworm/dcopexport/dcopexport-0.11.3-20071129-0.6.0.tar.bz2"
+SRC_URI="http://kadu.net/~dorr/moduly/dcopexport-0.11.3-20071129-0.6.0.tar.bz2"
 
 inherit kadu kde
 

@@ -2,6 +2,10 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  18 Dec 2008; Michał Ziąbkowski <mziab@o2.pl>
+  +kadu-filedesc-0.6.0_p20080906.ebuild:
+  Bumped.
+
   08 Dec 2008; Michał Ziąbkowski <mziab@o2.pl>
   +kadu-filedesc-0.6.0_p20080104.ebuild, -kadu-filedesc-0.20080104.ebuild:
   Fixed version AGAIN.

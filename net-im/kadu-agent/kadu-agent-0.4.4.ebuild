@@ -1,5 +1,4 @@
-#SRC_URI="http://misiek.jah.pl/assets/2008/2/8/agent-0.4.4.tar.gz"
-SRC_URI="http://neuromancer.openbsd.pl/~lazy_bum/random/agent-0.4.4.tar.gz"
+SRC_URI="http://kadu.net/~dorr/moduly/${P}.tar.gz"
 
 inherit kadu
 

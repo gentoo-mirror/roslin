@@ -9,4 +9,4 @@ inherit kadu-module
 
 DESCRIPTION="A module providing extended contact information support"
 HOMEPAGE="http://www.ultr.pl/kadu"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"

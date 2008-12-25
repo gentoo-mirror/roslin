@@ -3,6 +3,9 @@
 # $Header: $
 
   25 Dec 2008; Piotr Szymaniak <lazy_bum@o2.pl> freesynd-0.2.ebuild:
+  Cleanup as suggested in bug #159251.
+
+  25 Dec 2008; Piotr Szymaniak <lazy_bum@o2.pl> freesynd-0.2.ebuild:
   Added ~amd64 keyword.
 
   20 Nov 2008; Piotr Szymaniak <lazy_bum@o2.pl> freesynd-0.2.ebuild:

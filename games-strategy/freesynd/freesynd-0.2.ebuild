@@ -13,12 +13,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND="
-	x86? (
-		media-libs/libpng
-		media-libs/libsdl
-		media-libs/sdl-mixer )
-	amd64? ( app-emulation/emul-linux-x86-sdl )"
+RDEPEND="media-libs/libpng
+	media-libs/libsdl
+	media-libs/sdl-mixer"
 DEPEND="${RDEPEND}
 	app-arch/unzip"
 

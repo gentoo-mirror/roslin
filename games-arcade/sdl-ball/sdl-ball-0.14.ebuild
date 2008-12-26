@@ -11,29 +11,33 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~x86"
-IUSE=""
+IUSE="wiiuse"
 
 DEPEND="media-libs/sdl-ttf
-	media-libs/sdl-image"
+	media-libs/sdl-image
+	media-libs/sdl-mixer
+	wiiuse? ( games-util/wiiuse )"
 RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${PN}
-
 dir=${GAMES_DATADIR}/${PN}
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	to_patch=$(grep -Rl '"data\/' *)
 	sed -i \
-		-e "s!data/!${dir}/data/!" \
-		$to_patch || die "sed failed"
-
-	sed -i \
+		-e "s!themes/!${dir}/themes/!" \
 		-e "s!-c -Wall!${CFLAGS} -c -Wall!" \
 		-e "s!-lSDL_ttf!-lSDL_ttf ${LDFLAGS}!" \
 		Makefile || die "sed Makefile failed"
+
+	if use wiiuse; then
+		sed -i \
+			-e "s!CC=g++!CC=g++ -DWITH_WIIUSE!" \
+			-e "s!-c -Wall!-lwiiuse -c -Wall!" \
+			Makefile || die "sed wiiuse Makefile failed"
+	fi
 }
 
 src_install() {

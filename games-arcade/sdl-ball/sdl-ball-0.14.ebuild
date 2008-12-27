@@ -2,6 +2,8 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
+EAPI=2
+
 inherit eutils flag-o-matic games
 
 DESCRIPTION="Arkanoid/Breakout clone with pretty graphics."
@@ -15,7 +17,7 @@ IUSE="sound wiiuse"
 
 DEPEND="media-libs/sdl-ttf
 	media-libs/sdl-image
-	sound? ( media-libs/sdl-mixer )
+	sound? ( media-libs/sdl-mixer[vorbis] )
 	wiiuse? ( games-util/wiiuse )"
 RDEPEND="${DEPEND}"
 

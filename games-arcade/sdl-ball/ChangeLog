@@ -3,6 +3,9 @@
 # $Header: $
 
   27 Dec 2008; Piotr Szymaniak <lazy_bum@o2.pl> sdl-ball-0.14.ebuild:
+  Sound should be enabled by default.
+
+  27 Dec 2008; Piotr Szymaniak <lazy_bum@o2.pl> sdl-ball-0.14.ebuild:
   Fixed some sound issue and added EAPI=2.
 
   27 Dec 2008; Piotr Szymaniak <lazy_bum@o2.pl> +files/0.14-Makefile.patch,

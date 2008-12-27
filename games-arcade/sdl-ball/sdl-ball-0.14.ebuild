@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="sound wiiuse"
+IUSE="+sound wiiuse"
 
 DEPEND="media-libs/sdl-ttf
 	media-libs/sdl-image
@@ -27,6 +27,10 @@ dir=${GAMES_DATADIR}/${PN}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+
+	if use !sound; then
+		rm -r themes/snd || die "rm failed"
+	fi
 
 	epatch "${FILESDIR}/${PV}-Makefile.patch"
 }

@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-inherit games
+inherit eutils flag-o-matic games
 
 DESCRIPTION="Arkanoid/Breakout clone with pretty graphics."
 HOMEPAGE="https://sourceforge.net/projects/sdl-ball"
@@ -10,12 +10,12 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~x86"
-IUSE="wiiuse"
+KEYWORDS="~amd64 ~x86"
+IUSE="sound wiiuse"
 
 DEPEND="media-libs/sdl-ttf
 	media-libs/sdl-image
-	media-libs/sdl-mixer
+	sound? ( media-libs/sdl-mixer )
 	wiiuse? ( games-util/wiiuse )"
 RDEPEND="${DEPEND}"
 
@@ -26,22 +26,32 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	sed -i \
-		-e "s!themes/!${dir}/themes/!" \
-		-e "s!-c -Wall!${CFLAGS} -c -Wall!" \
-		-e "s!-lSDL_ttf!-lSDL_ttf ${LDFLAGS}!" \
-		Makefile || die "sed Makefile failed"
+	epatch "${FILESDIR}/${PV}-Makefile.patch"
+}
+
+src_compile() {
+	export LIBS
+
+	if use sound; then
+		LIBS+=" -lSDL_mixer"
+	else
+		append-flags "-DNOSOUND"
+	fi
 
 	if use wiiuse; then
-		sed -i \
-			-e "s!CC=g++!CC=g++ -DWITH_WIIUSE!" \
-			-e "s!-c -Wall!-lwiiuse -c -Wall!" \
-			Makefile || die "sed wiiuse Makefile failed"
+		append-flags "-DWITH_WIIUSE"
+		LIBS+=" -lwiiuse"
 	fi
+
+	emake DATADIR="${dir}/themes/" || die "emake failed"
 }
 
 src_install() {
-	dobin ${PN}
-	insinto ${dir}
-	doins -r data
+	dogamesbin ${PN} || die "dogamesbin failed"
+
+	insinto "${dir}"
+	doins -r themes/ || die "doins failed"
+
+	dodoc README || die "dodoc failed"
+	prepgamesdirs
 }

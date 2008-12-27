@@ -2,6 +2,10 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  27 Dec 2008; Piotr Szymaniak <lazy_bum@o2.pl> +files/0.14-Makefile.patch,
+  sdl-ball-0.14.ebuild, +metadata.xml:
+  Updated ebuild.
+
   26 Dec 2008; Piotr Szymaniak <lazy_bum@o2.pl> -sdl-ball-0.08.ebuild,
   +sdl-ball-0.14.ebuild:
   Version bump.

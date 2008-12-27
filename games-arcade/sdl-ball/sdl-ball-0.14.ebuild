@@ -15,7 +15,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="+sound wiiuse"
 
-DEPEND="media-libs/sdl-ttf
+DEPEND="media-libs/libsdl[opengl]
+	media-libs/sdl-ttf
 	media-libs/sdl-image
 	sound? ( media-libs/sdl-mixer[vorbis] )
 	wiiuse? ( games-util/wiiuse )"

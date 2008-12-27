@@ -29,7 +29,7 @@ src_unpack() {
 	cd "${S}"
 
 	if use !sound; then
-		rm -r themes/snd || die "rm failed"
+		rm -r themes/default/snd || die "rm failed"
 	fi
 
 	epatch "${FILESDIR}/${PV}-Makefile.patch"

@@ -1,7 +1,0 @@
-# ChangeLog for games-strategy/liquidwar6
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: $
-
-  27 Oct 2008; Piotr Szymaniak <lazy_bum@o2.pl> liquidwar6-0.0.3.ebuild:
-  Fixed a bit.
-

@@ -1,6 +1,10 @@
 # ChangeLog for net-im/kadu-window_notify
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+
+  01 Jan 2009; Michał Ziąbkowski <mziab@o2.pl>
+  -kadu-window_notify-0.6.0.2.ebuild, +kadu-window_notify-0.6.0.3.ebuild:
+  Bumped. Removed previous version.
 
   08 Dec 2008; Michał Ziąbkowski <mziab@o2.pl>
   -kadu-window_notify-0.6.5_rc2.ebuild, +kadu-window_notify-0.6.5.ebuild:

@@ -1,5 +1,8 @@
 # ChangeLog for games-action/bombattack
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+
+  02 Jan 2009; Piotr Szymaniak <lazy_bum@o2.pl> +metadata.xml:
+  Use flags now in metadata (GLEP 56).
 
   21 Aug 2008; Piotr Szymaniak <lazy_bum@o2.pl> bombattack-1.0.ebuild:
   Fixed repoman reported errors.

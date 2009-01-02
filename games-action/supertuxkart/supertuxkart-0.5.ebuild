@@ -1,4 +1,4 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -23,17 +23,14 @@ DEPEND=">=media-libs/plib-1.8.4
 	media-libs/libsdl"
 
 src_compile() {
-	cd ${S}
 	egamesconf \
-	--disable-dependency-tracking \
-	--datadir="${GAMES_DATADIR_BASE}" \
-	|| die "configuration failed"
+		--disable-dependency-tracking \
+		--datadir="${GAMES_DATADIR_BASE}" \
+			|| die "configuration failed"
 	emake || die "emake failed"
 }
 
 src_install() {
-	#emake DESTDIR="${D}" install || die "emake install failed"
-
 	#data install
 	dodir "/${GAMES_DATADIR}/${PN}/data"
 	insinto "/${GAMES_DATADIR}/${PN}/data"
@@ -47,10 +44,10 @@ src_install() {
 	doins ./*
 
 	#binary install
-	cd ${S}
-	dogamesbin src/supertuxkart
-	
-	doicon "${DISTDIR}"/"${PN}".png
+	cd "${S}"
+	dogamesbin src/"${PN}"
+
+	doicon "${DISTDIR}/${PN}.png"
 	make_desktop_entry "${PN}" SuperTuxKart
 	dodoc AUTHORS ChangeLog README TODO
 	prepgamesdirs

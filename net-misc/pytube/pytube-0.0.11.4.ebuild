@@ -1,4 +1,4 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: overlay lapis ebuild deposu Exp $
 
@@ -7,7 +7,7 @@ inherit eutils python
 DESCRIPTION="PyTube is a GUI for youtube-dl and others. It allows you to do multiple tasks like downloading and converting videos from YouTube.com"
 HOMEPAGE="http://bashterritory.com/pytube"
 #SRC_URI="http://www.bashterritory.com/${PN}/releases/${P}.tar.bz2"    
-SRC_URI="http://mlodyinteligent.pl/~lazy_bum/random/${P}.tar.bz2"
+SRC_URI="http://files.myopera.com/lazy_bum/tmp/${P}.tar.bz2"
 
 LICENSE="GPL-3"
 SLOT="0"
@@ -27,25 +27,25 @@ DEPEND=">=x11-libs/gtk+-2.0
 RDEPEND="${DEPEND}"
 
 pkg_setup() {
-    if ! built_with_use media-video/mplayer encode ; then
-	die "media-video/mplayer needs to be built with USE=\"encode\""
-    fi
+	if ! built_with_use media-video/mplayer encode ; then
+		die "media-video/mplayer needs to be built with USE=\"encode\""
+	fi
 }
 
 src_unpack() {
-     unpack ${A}
-     cd ${S}
-     sed -i -e "s/\.\/pytube/python pytube/" pytube
+	unpack ${A}
+	cd ${S}
+	sed -i -e "s/\.\/pytube/python pytube/" pytube
 }
 
 src_install() {
-    dobin pytube
-    doicon pytube.png
-       
-    insinto /usr/share/applications/
-    doins pytube.desktop
-       
-    insinto /usr/share/pytube
-    doins -r stream2hdd
-    doins *
+	dobin pytube
+	doicon pytube.png
+
+	insinto /usr/share/applications/
+	doins pytube.desktop
+
+	insinto /usr/share/pytube
+	doins -r stream2hdd
+	doins *
 }

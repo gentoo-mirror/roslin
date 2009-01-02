@@ -16,8 +16,9 @@ KEYWORDS="~x86"
 IUSE="debug examples sdl"
 
 RDEPEND="net-wireless/bluez-utils
-	virtual/glut
-	examples? ( sdl? ( media-libs/libsdl ) )"
+	examples? (
+		sdl? ( media-libs/libsdl
+			virtual/glut ) )"
 DEPEND="${RDEPEND}"
 
 S=${WORKDIR}/${MY_P/_src/}

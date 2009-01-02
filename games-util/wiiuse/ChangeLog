@@ -2,6 +2,9 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 
   02 Jan 2009; Piotr Szymaniak <lazy_bum@o2.pl> wiiuse-0.12.ebuild:
+  glut should depend on sdl use flag.
+
+  02 Jan 2009; Piotr Szymaniak <lazy_bum@o2.pl> wiiuse-0.12.ebuild:
   Fixed some repoman reported errors.
 
   26 Dec 2008; Piotr Szymaniak <lazy_bum@o2.pl>

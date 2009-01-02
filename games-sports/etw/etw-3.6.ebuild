@@ -1,4 +1,4 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -7,7 +7,7 @@ inherit eutils games
 DESCRIPTION="Arcade-style soccer game"
 HOMEPAGE="http://etw.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/ETW-${PV}-src.tar.gz
-	mirror://sourceforge/${PN}/EatTheWhistle-linux-x86.tar.gz"	
+	mirror://sourceforge/${PN}/EatTheWhistle-linux-x86.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -45,7 +45,7 @@ src_install() {
 	insinto "${dir}"
 	doins -r "${WORKDIR}"/ETW/* || die "doins failed"
 
-	games_make_wrapper ${PN} ${GAMES_BINDIR}/${PN}.bin "${dir}"
+	games_make_wrapper "${PN}" "${GAMES_BINDIR}/${PN}.bin" "${dir}"
 	make_desktop_entry ${PN} "Eat The Whistle"
 
 	dodoc bugs.txt

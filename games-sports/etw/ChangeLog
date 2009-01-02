@@ -1,6 +1,9 @@
 # ChangeLog for games-sports/etw
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+
+  02 Jan 2009; Piotr Szymaniak <lazy_bum@o2.pl> etw-3.6.ebuild:
+  Fixed some repoman reported errors.
 
   26 May 2008; Piotr Szymaniak <lazy_bum@o2.pl> +etw-3.6.ebuild:
   New package (thanks to Richie, bug #130952).

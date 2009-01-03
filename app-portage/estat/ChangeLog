@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/estat
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+
+  03 Jan 2009; Piotr Szymaniak <lazy_bum@o2.pl> -estat-1.2.ebuild,
+  estat-1.4.ebuild, estat-1.5.ebuild:
+  Cleanup, fixed repoman reported errors.
 
   15 Sep 2008; Michał Ziąbkowski <mziab@o2.pl> +estat-1.5.ebuild:
   Bumped.

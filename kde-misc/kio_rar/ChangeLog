@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/kio_rar
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+
+  03 Jan 2009; Piotr Szymaniak <lazy_bum@o2.pl> kio_rar-0.6.ebuild,
+  kio_rar-0.6-r1.ebuild:
+  Fixed lack of IUSE and leading spaces.
 
   13 Aug 2008; Piotr Szymaniak <lazy_bum@o2.pl> kio_rar-0.6.ebuild,
   kio_rar-0.6-r1.ebuild:

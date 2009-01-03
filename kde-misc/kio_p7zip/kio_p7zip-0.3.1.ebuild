@@ -1,4 +1,4 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -7,6 +7,7 @@ inherit kde
 DESCRIPTION="A kioslave for 7-Zip archives"
 HOMEPAGE="http://www.kde-apps.org/content/show.php?content=17829"
 SRC_URI="http://www.kde-apps.org/CONTENT/content-files/17829-${P}.tar.bz2"
+IUSE=""
 
 LICENSE="GPL-2"
 KEYWORDS="x86 amd64"

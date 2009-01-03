@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<herd></herd>
+	<maintainer>
+		<email>mziab@o2.pl</email>
+		<name>Michał Ziąbkowski</name>
+	</maintainer>
+	<use>
+		<flag name='7zip'>Adds support for <pkg>kde-misc/kio_p7zip</pkg></flag>
+		<flag name='rar'>Adds support for <pkg>kde-misc/kio_rar</pkg></flag>
+	</use>
+</pkgmetadata>
+

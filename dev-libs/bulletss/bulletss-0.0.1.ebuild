@@ -1,4 +1,4 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -19,11 +19,11 @@ DEPEND="sys-devel/gcc
 	app-arch/unzip
 	sys-devel/bison"
 
-S=${WORKDIR}/bulletss
+S=${WORKDIR}/${PN}
 
 src_unpack() {
 	unpack ${A}
-	cd ${WORKDIR}/bulletss/
+	cd "${S}"
 
 	epatch "${FILESDIR}"/fix.diff
 }
@@ -35,7 +35,7 @@ src_compile() {
 src_install() {
 	dodoc README*
 
-	cd ${S}/bulletml
+	cd "${S}"/bulletml
 	dolib.a libbulletml_d.a
 
 	insinto /usr/include/bulletml-d

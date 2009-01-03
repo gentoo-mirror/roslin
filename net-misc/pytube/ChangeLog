@@ -2,6 +2,10 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  03 Jan 2009; Piotr Szymaniak <lazy_bum@o2.pl> pytube-0.0.11.4.ebuild,
+  pytube-0.0.11.4-r1.ebuild:
+  Fixed repoman reported errors.
+
   02 Jan 2009; Piotr Szymaniak <lazy_bum@o2.pl> pytube-0.0.11.4.ebuild,
   pytube-0.0.11.4-r1.ebuild:
   Again fixed SRC_URI again.

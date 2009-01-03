@@ -4,7 +4,7 @@
 
 inherit eutils python
 
-DESCRIPTION="PyTube is a GUI for youtube-dl and others. It allows you to do multiple tasks like downloading and converting videos from YouTube.com"
+DESCRIPTION="a GUI for youtube-dl and others."
 HOMEPAGE="http://bashterritory.com/pytube"
 #SRC_URI="http://www.bashterritory.com/${PN}/releases/${P}.tar.bz2"	
 SRC_URI="http://files.myopera.com/lazy_bum/tmp/${P}.tar.bz2"
@@ -34,18 +34,18 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch "${FILESDIR}"/${P}-updconfig.patch
-	sed -i -e "s/\.\/pytube/python pytube/" pytube
+	cd "${S}"
+	epatch "${FILESDIR}"/"${P}"-updconfig.patch
+	sed -i -e "s/\.\/pytube/python pytube/" pytube || die "sed failed"
 }
 
 src_install() {
-	dobin pytube
-	doicon pytube.png
-	   
+	dobin "${PN}"
+	doicon "${PN}".png
+
 	insinto /usr/share/applications/
-	doins pytube.desktop
-	   
+	doins "${PN}".desktop
+
 	insinto /usr/share/pytube
 	doins -r stream2hdd
 	doins *

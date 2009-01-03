@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libgadu
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 
+  03 Jan 2009; Piotr Szymaniak <lazy_bum@o2.pl> libgadu-9999.ebuild:
+  Fixed repoman reported errors.
+
   01 Jan 2009; Piotr Szymaniak <lazy_bum@o2.pl> +libgadu-1.8.2.ebuild:
   Added temporary libgadu version with security fix (gentoo bug #244888).
 

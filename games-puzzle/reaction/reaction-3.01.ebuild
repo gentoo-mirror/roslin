@@ -48,7 +48,7 @@ src_install() {
 
 	dodoc CHANGELOG README
 
-	games_make_wrapper ${PN} ./${PN} ${dir}
+	games_make_wrapper ${PN} ./${PN} "${dir}"
 
 	make_desktop_entry ${PN} "Reaction"
 

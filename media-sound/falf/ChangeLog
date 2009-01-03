@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/falf
-# Copyright 2007-2008 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 2007-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+
+  03 Jan 2009; Piotr Szymaniak <lazy_bum@o2.pl> -falf-1.2.ebuild,
+  falf-1.3.ebuild, falf-9999.ebuild:
+  Fixed some repoman reported errors.
 
   14 Dec 2008; Michał Ziąbkowski <mziab@o2.pl> +falf-1.3.ebuild:
   Bumped.

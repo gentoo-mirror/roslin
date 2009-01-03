@@ -1,4 +1,4 @@
-# Copyright 2007-2008 Gentoo Foundation
+# Copyright 2007-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -64,16 +64,16 @@ src_install() {
 
 	insinto ${KDEDIR}/share/icons/default.kde
 	doins -r icons/*
-	
+
 	insinto ${KDEDIR}/share/applnk/Multimedia
 	doins applnk/falf.desktop
-	
+
 	insinto ${KDEDIR}/share/apps/konqueror/servicemenus
 	doins applnk/falf_mnu.desktop
-	
+
 	insinto ${KDEDIR}/share/apps/dolphin/servicemenus
 	doins applnk/falf_mnu.desktop
-	
+
 	exeinto ${KDEDIR}/bin/
 	doexe bin/falf
 }

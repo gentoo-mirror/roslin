@@ -43,7 +43,7 @@ pkg_nofetch() {
 disable_feature() {
 	sed -i \
 		-e "/$1.*=/s:^:# :" \
-		"${S}"/makefile \
+		"${S}"/makefile.sdl \
 		|| die "sed failed"
 }
 
@@ -51,7 +51,7 @@ disable_feature() {
 enable_feature() {
 	sed -i \
 		-e "/^#.*$1.*=/s:^# ::"  \
-		"${S}"/makefile \
+		"${S}"/makefile.sdl \
 		|| die "sed failed"
 }
 
@@ -121,7 +121,7 @@ src_install() {
 	# Follows xmame ebuild, avoiding collision on /usr/games/bin/jedutil
 	exeinto "$(games_get_libdir)/${PN}"
 	local f
-	for f in chdman imgtool jedutil romcmp testkeys; do
+	for f in chdman ldverify imgtool jedutil romcmp testkeys; do
 		doexe "${f}" || die "doexe ${f} failed"
 	done
 

@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/sdlmess
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+
+  07 Jan 2009; Michał Ziąbkowski <mziab@o2.pl> -sdlmess-0.127.ebuild,
+  -sdlmess-0.128.ebuild, +sdlmess-0.129.ebuild:
+  Bumped. Removed older versions.
 
   30 Oct 2008; Michał Ziąbkowski <mziab@o2.pl> -sdlmess-0.126.ebuild:
   Removed oldest version.

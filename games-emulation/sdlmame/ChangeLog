@@ -1,5 +1,10 @@
 # ChangeLog for games-emulation/sdlmame
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+
+  07 Jan 2009; Michał Ziąbkowski <mziab@o2.pl> -sdlmame-0.128.ebuild,
+  -sdlmame-0.128_p7.ebuild, -files/joymap.dat, -files/mame.ini.in,
+  -files/vector.ini:
+  Removed, newer version in portage.
 
   28 Dec 2008; Michał Ziąbkowski <mziab@o2.pl> -sdlmame-0.128_p6.ebuild,
   +sdlmame-0.128_p7.ebuild:

@@ -6,4 +6,4 @@ inherit kadu-module
 
 DESCRIPTION="Kadu module allowing taking description from file"
 HOMEPAGE="http://kadu.net"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"

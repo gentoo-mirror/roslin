@@ -4,8 +4,8 @@
 
 inherit kadu-base
 
-MOD_DEPEND=">=net-im/kadu-dcc-${PV}
-	    >=net-im/kadu-sound-${PV}"
+MOD_DEPEND="~net-im/kadu-dcc-${PV}
+	    ~net-im/kadu-sound-${PV}"
 MOD_PATCHES="${PN}-libgsm.patch"
 
 inherit kadu-mod

@@ -4,7 +4,7 @@
 
 inherit kadu-base
 
-MOD_DEPEND=">=net-im/kadu-notify-${PV}"
+MOD_DEPEND="~net-im/kadu-notify-${MIN_VER}"
 
 inherit kadu-mod
 

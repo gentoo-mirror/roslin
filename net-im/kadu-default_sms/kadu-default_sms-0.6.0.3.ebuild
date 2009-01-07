@@ -1,6 +1,6 @@
 inherit kadu
 
-MOD_DEPEND=">=net-im/kadu-sms-${MIN_REQ}"
+MOD_DEPEND="~net-im/kadu-sms-${MIN_REQ}"
 
 inherit kadu-module
 

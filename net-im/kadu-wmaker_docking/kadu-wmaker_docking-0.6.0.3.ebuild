@@ -1,6 +1,6 @@
 inherit kadu
 
-MOD_DEPEND=">=net-im/kadu-docking-${MIN_REQ} x11-wm/windowmaker"
+MOD_DEPEND="~net-im/kadu-docking-${MIN_REQ} x11-wm/windowmaker"
 
 inherit kadu-module
 

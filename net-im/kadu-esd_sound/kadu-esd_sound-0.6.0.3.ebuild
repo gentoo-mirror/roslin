@@ -1,6 +1,6 @@
 inherit kadu
 
-MOD_DEPEND="media-sound/esound >=net-im/kadu-sound-${MIN_REQ}"
+MOD_DEPEND="media-sound/esound ~net-im/kadu-sound-${MIN_REQ}"
 
 inherit kadu-module
 

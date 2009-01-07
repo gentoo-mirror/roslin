@@ -1,6 +1,6 @@
 inherit kadu
 
-MOD_DEPEND="media-libs/alsa-lib >=net-im/kadu-sound-${MIN_REQ}"
+MOD_DEPEND="media-libs/alsa-lib ~net-im/kadu-sound-${MIN_REQ}"
 
 inherit kadu-module
 

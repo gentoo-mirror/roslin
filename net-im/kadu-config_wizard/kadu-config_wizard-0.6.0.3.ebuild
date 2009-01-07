@@ -1,6 +1,6 @@
 inherit kadu
 
-MOD_DEPEND=">=net-im/kadu-account_management-${MIN_REQ} >=net-im/kadu-sound-${MIN_REQ}"
+MOD_DEPEND="~net-im/kadu-account_management-${MIN_REQ} ~net-im/kadu-sound-${MIN_REQ}"
 
 inherit kadu-module
 

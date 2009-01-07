@@ -2,7 +2,7 @@ SRC_URI="http://kadu.net/~patryk/miastoplusa_sms/miastoplusa_sms-0.6-${PV}.tar.g
 
 inherit kadu
 
-MOD_DEPEND=">=net-im/kadu-sms-${MIN_REQ}"
+MOD_DEPEND="~net-im/kadu-sms-${MIN_REQ}"
 MOD_PATCHES="miastoplusa_sms-fix-includes.patch"
 MOD_TYPE="ext"
 

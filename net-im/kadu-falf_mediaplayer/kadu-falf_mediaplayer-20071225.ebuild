@@ -2,7 +2,7 @@ SRC_URI="http://kadu.net/download/modules_extra/falf_mediaplayer/falf_mediaplaye
 
 inherit kadu
 
-MOD_DEPEND="media-sound/falf net-im/kadu-mediaplayer"
+MOD_DEPEND="media-sound/falf ~net-im/kadu-mediaplayer-${MIN_REQ}"
 MOD_TYPE="ext"
 
 inherit kadu-module

@@ -1,6 +1,6 @@
 inherit kadu
 
-MOD_DEPEND="kde-base/arts >=net-im/kadu-sound-${MIN_REQ}"
+MOD_DEPEND="kde-base/arts ~net-im/kadu-sound-${MIN_REQ}"
 
 inherit kadu-module kadu-module-func
 

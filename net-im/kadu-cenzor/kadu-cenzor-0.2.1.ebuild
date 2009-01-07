@@ -6,4 +6,4 @@ inherit kadu-module
 
 DESCRIPTION="Kadu module that warns contacts about swearing"
 HOMEPAGE="http://kadu.net"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"

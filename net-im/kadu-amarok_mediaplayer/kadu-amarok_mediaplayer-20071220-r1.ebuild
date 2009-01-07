@@ -4,7 +4,7 @@ inherit kadu kde
 
 need-kde 3.5
 
-MOD_DEPEND="media-sound/amarok net-im/kadu-mediaplayer"
+MOD_DEPEND="media-sound/amarok ~net-im/kadu-mediaplayer-${MIN_REQ}"
 MOD_TYPE="ext"
 
 inherit kadu-module kadu-module-func

@@ -1,6 +1,6 @@
 inherit kadu
 
-MOD_DEPEND=">=net-im/kadu-dcc-${MIN_REQ} >=net-im/kadu-sound-${MIN_REQ}"
+MOD_DEPEND="~net-im/kadu-dcc-${MIN_REQ} ~net-im/kadu-sound-${MIN_REQ}"
 MOD_LDFLAGS="voice/libgsm/lib/libgsm.a"
 
 inherit kadu-module kadu-module-func

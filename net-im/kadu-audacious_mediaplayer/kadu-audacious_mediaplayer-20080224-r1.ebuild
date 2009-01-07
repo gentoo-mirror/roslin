@@ -2,7 +2,7 @@ SRC_URI="http://kadu.net/download/modules_extra/audacious_mediaplayer/audacious_
 
 inherit kadu
 
-MOD_DEPEND="media-sound/audacious net-im/kadu-mediaplayer"
+MOD_DEPEND="media-sound/audacious ~net-im/kadu-mediaplayer-${MIN_REQ}"
 MOD_TYPE="ext"
 
 inherit kadu-module

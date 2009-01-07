@@ -4,10 +4,10 @@ inherit kadu kde
 
 need-kde 3.5
 
-MOD_DEPEND=">=net-im/kadu-dcc-${MIN_REQ}
-    >=net-im/kadu-history-${MIN_REQ}
-    >=net-im/kadu-notify-${MIN_REQ}
-    >=net-im/kadu-sms-${MIN_REQ}
+MOD_DEPEND="~net-im/kadu-dcc-${MIN_REQ}
+    ~net-im/kadu-history-${MIN_REQ}
+    ~net-im/kadu-notify-${MIN_REQ}
+    ~net-im/kadu-sms-${MIN_REQ}
 "
 MOD_TYPE="ext"
 

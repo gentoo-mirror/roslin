@@ -1,6 +1,6 @@
 inherit kadu
 
-MOD_DEPEND=">=net-im/kadu-docking-${MIN_REQ}"
+MOD_DEPEND="~net-im/kadu-docking-${MIN_REQ}"
 
 inherit kadu-module
 

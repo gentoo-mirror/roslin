@@ -17,33 +17,33 @@ IUSE="
 SLOT="0"
 
 DEPEND="
-    >=net-im/kadu-core-${MIN_REQ}
+    ~net-im/kadu-core-${MIN_REQ}
 
     !nodefmodules? (
-	>=net-im/kadu-account_management-${MIN_REQ}
-	>=net-im/kadu-config_wizard-${MIN_REQ}
-	>=net-im/kadu-default_sms-${MIN_REQ}
-	>=net-im/kadu-dcc-${MIN_REQ}
-	>=net-im/kadu-hints-${MIN_REQ}
-	>=net-im/kadu-history-${MIN_REQ}
-	>=net-im/kadu-migration-${MIN_REQ}
-	>=net-im/kadu-notify-${MIN_REQ}
-	>=net-im/kadu-x11_docking-${MIN_REQ}
+	~net-im/kadu-account_management-${MIN_REQ}
+	~net-im/kadu-config_wizard-${MIN_REQ}
+	~net-im/kadu-default_sms-${MIN_REQ}
+	~net-im/kadu-dcc-${MIN_REQ}
+	~net-im/kadu-hints-${MIN_REQ}
+	~net-im/kadu-history-${MIN_REQ}
+	~net-im/kadu-migration-${MIN_REQ}
+	~net-im/kadu-notify-${MIN_REQ}
+	~net-im/kadu-x11_docking-${MIN_REQ}
     )
     
-    powerkadu? ( net-im/kadu-powerkadu )
+    powerkadu? ( <net-im/kadu-powerkadu-2.1 )
 
-    emoticons? ( net-im/kadu-emoticons )
-    icons? ( net-im/kadu-icons )
-    sounds? ( net-im/kadu-sounds )
+    emoticons? ( ~net-im/kadu-emoticons-0.6.0 )
+    icons? ( ~net-im/kadu-icons-0.6.0 )
+    sounds? ( ~net-im/kadu-sounds-0.6.0 )
     
-    alsa? ( >=net-im/kadu-alsa_sound-${MIN_REQ} )
-    arts? ( >=net-im/kadu-arts_sound-${MIN_REQ} )
+    alsa? ( ~net-im/kadu-alsa_sound-${MIN_REQ} )
+    arts? ( ~net-im/kadu-arts_sound-${MIN_REQ} )
     dcop? ( net-im/kadu-dcopexport )
-    esd? ( >=net-im/kadu-esd_sound-${MIN_REQ} )
-    oss? ( >=net-im/kadu-dsp_sound-${MIN_REQ} )
-    ssl? ( >=net-im/kadu-encryption-${MIN_REQ} )
-    voice? ( >=net-im/kadu-voice-${MIN_REQ} )
+    esd? ( ~net-im/kadu-esd_sound-${MIN_REQ} )
+    oss? ( ~net-im/kadu-dsp_sound-${MIN_REQ} )
+    ssl? ( ~net-im/kadu-encryption-${MIN_REQ} )
+    voice? ( ~net-im/kadu-voice-${MIN_REQ} )
 "
 
 #

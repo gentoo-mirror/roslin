@@ -4,7 +4,7 @@
 
 inherit kadu-base
 
-MOD_DEPEND=">=net-im/kadu-sms-${PV}"
+MOD_DEPEND="~net-im/kadu-sms-${PV}"
 
 inherit kadu-mod
 

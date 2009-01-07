@@ -1,6 +1,6 @@
 inherit kadu
 
-MOD_DEPEND=">=net-im/kadu-notify-${MIN_REQ} x11-libs/xosd x11-apps/xfontsel"
+MOD_DEPEND="~net-im/kadu-notify-${MIN_REQ} x11-libs/xosd x11-apps/xfontsel"
 
 inherit kadu-module kadu-module-func
 

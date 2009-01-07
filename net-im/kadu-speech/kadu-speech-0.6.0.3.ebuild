@@ -1,6 +1,6 @@
 inherit kadu
 
-MOD_DEPEND="app-accessibility/powiedz >=net-im/kadu-notify-${MIN_REQ}"
+MOD_DEPEND="app-accessibility/powiedz ~net-im/kadu-notify-${MIN_REQ}"
 
 inherit kadu-module
 

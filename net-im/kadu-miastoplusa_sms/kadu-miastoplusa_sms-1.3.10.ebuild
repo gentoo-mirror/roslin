@@ -2,7 +2,7 @@ SRC_URI="http://kadu.net/~patryk/miastoplusa_sms/miastoplusa_sms-0.6-${PV}.tar.b
 
 inherit kadu
 
-MOD_DEPEND=">=net-im/kadu-sms-${MIN_REQ}"
+MOD_DEPEND="~net-im/kadu-sms-${MIN_REQ}"
 MOD_PATCHES="miastoplusa_sms-fix-includes.patch"
 MOD_TYPE="ext"
 
@@ -10,7 +10,7 @@ inherit kadu-module kadu-module-func
 
 DESCRIPTION="Kadu module that supports sending sms via miastoplusa gateway"
 HOMEPAGE="http://kadu.net/~patryk"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 
 pkg_setup()
 {

@@ -1,5 +1,8 @@
 # ChangeLog for gnome-extra/gnome-scan
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+
+  08 Jan 2009; Michał Ziąbkowski <mziab@o2.pl> +gnome-scan-0.6.1.ebuild:
+  Bumped.
 
   20 May 2008; Michał Ziąbkowski <mziab@o2.pl> -gnome-scan-0.5.2.ebuild,
   -gnome-scan-0.5.3-r461.ebuild:

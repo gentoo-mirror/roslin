@@ -1,0 +1,7 @@
+# ChangeLog for media-libs/gegl
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  08 Jan 2009; Michał Ziąbkowski <mziab@o2.pl> +gegl-0.0.22.ebuild:
+  Bumped from portage with fixed deps and dropped patches.
+

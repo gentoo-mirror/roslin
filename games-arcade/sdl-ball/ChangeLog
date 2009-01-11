@@ -3,6 +3,9 @@
 # $Header: $
 
   11 Jan 2009; Piotr Szymaniak <lazy_bum@o2.pl> sdl-ball-1.0.ebuild:
+  Updated again (Christian Ruppert (idl0r)).
+
+  11 Jan 2009; Piotr Szymaniak <lazy_bum@o2.pl> sdl-ball-1.0.ebuild:
   Now using src_prepare (suggested by Tomáš Chvátal).
 
   11 Jan 2009; Piotr Szymaniak <lazy_bum@o2.pl> sdl-ball-1.0.ebuild:

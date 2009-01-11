@@ -13,13 +13,13 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="leveleditor sound wiiuse"
+IUSE="leveleditor sound wiimote"
 
 DEPEND="media-libs/libsdl[opengl]
 	media-libs/sdl-ttf
 	media-libs/sdl-image
 	sound? ( media-libs/sdl-mixer[vorbis] )
-	wiiuse? ( games-util/wiiuse )"
+	wiimote? ( games-util/wiiuse )"
 RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${PN}
@@ -35,11 +35,10 @@ src_prepare() {
 }
 
 src_compile() {
-	export LIBS
-
-	if use wiiuse; then
+	if use wiimote; then
 		append-flags "-DWITH_WIIUSE"
 		LIBS+=" -lwiiuse"
+		export LIBS
 	fi
 
 	emake DATADIR="${dir}/themes/" || die "emake failed"
@@ -52,7 +51,12 @@ src_install() {
 	doins -r themes/ || die "doins failed"
 
 	if use leveleditor; then
-		doins -r leveleditor || die "doins failed"
+		cd "${S}/leveleditor/gimp-leveleditor"
+		newdoc readme README.gimp-leveleditor || die "newdoc failed"
+		rm readme || die "removing readme failed"
+		cd "${S}"
+
+		doins -r leveleditor/ || die "doins failed"
 	fi
 
 	dodoc changelog.txt README || die "dodoc failed"
@@ -65,7 +69,7 @@ pkg_postinst() {
 		einfo "a html/javascript leveleditor has been installed to ${dir}/leveleditor"
 		einfo "just point your browser to this location to use the leveleditor."
 		einfo "there is additionally a gimp plugin."
-		einfo "for futher instructions please see ${dir}/leveleditor/gimp-leveleditor/readme"
+		einfo "for futher instructions please read README.gimp-leveleditor"
 		einfo
 	fi
 }

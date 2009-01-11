@@ -10,7 +10,9 @@
 	</longdescription>
 	<use>
 		<flag name='sound'>Enables sound</flag>
-		<flag name='wiiuse'>Enables Wiiuse support</flag>
+		<flag name='wiimote'>Enables wiimote support with
+			<pkg>games-util/wiiuse</pkg>
+		</flag>
 	</use>
 </pkgmetadata>
 

@@ -2,6 +2,9 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  11 Jan 2009; Piotr Szymaniak <lazy_bum@o2.pl> metadata.xml:
+  Updated metadata.
+
   11 Jan 2009; Piotr Szymaniak <lazy_bum@o2.pl> sdl-ball-1.0.ebuild:
   Updated again (Christian Ruppert (idl0r)).
 

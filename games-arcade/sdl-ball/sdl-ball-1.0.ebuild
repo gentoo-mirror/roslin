@@ -4,7 +4,7 @@
 
 EAPI=2
 
-inherit eutils flag-o-matic games
+inherit flag-o-matic games
 
 DESCRIPTION="Arkanoid/Breakout clone with pretty graphics."
 HOMEPAGE="https://sourceforge.net/projects/sdl-ball"
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="+sound wiiuse"
+IUSE="leveleditor sound wiiuse"
 
 DEPEND="media-libs/libsdl[opengl]
 	media-libs/sdl-ttf
@@ -30,18 +30,15 @@ src_unpack() {
 	cd "${S}"
 
 	if use !sound; then
-		rm -r themes/default/snd || die "rm failed"
+		sed -i -e 's:-lSDL_mixer::' Makefile
+		rm -r themes/default/snd || die "removing soundfiles failed"
+		rm -r themes/dio-sound-theme || die "removing soundfiles failed"
+		append-flags "-DNOSOUND"
 	fi
 }
 
 src_compile() {
 	export LIBS
-
-	if use sound; then
-		LIBS+=" -lSDL_mixer"
-	else
-		append-flags "-DNOSOUND"
-	fi
 
 	if use wiiuse; then
 		append-flags "-DWITH_WIIUSE"
@@ -57,6 +54,21 @@ src_install() {
 	insinto "${dir}"
 	doins -r themes/ || die "doins failed"
 
-	dodoc README || die "dodoc failed"
+	if use leveleditor; then
+		doins -r leveleditor || die "doins failed"
+	fi
+
+	dodoc changelog.txt README || die "dodoc failed"
 	prepgamesdirs
+}
+
+pkg_postinst() {
+	if use leveleditor; then
+		einfo
+		einfo "a html/javascript leveleditor has been installed to ${dir}/leveleditor"
+		einfo "just point your browser to this location to use the leveleditor."
+		einfo "there is additionally a gimp plugin."
+		einfo "for futher instructions please see ${dir}/leveleditor/gimp-leveleditor/readme"
+		einfo
+	fi
 }

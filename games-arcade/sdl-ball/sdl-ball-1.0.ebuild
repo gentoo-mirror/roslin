@@ -25,10 +25,7 @@ RDEPEND="${DEPEND}"
 S=${WORKDIR}/${PN}
 dir=${GAMES_DATADIR}/${PN}
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	if use !sound; then
 		sed -i -e 's:-lSDL_mixer::' Makefile
 		rm -r themes/default/snd || die "removing soundfiles failed"

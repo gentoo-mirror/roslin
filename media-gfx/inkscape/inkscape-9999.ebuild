@@ -1,4 +1,4 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -34,7 +34,7 @@ COMMON_DEPEND="
 	media-libs/fontconfig
 	>=media-libs/freetype-2
 	media-libs/libpng
-	virtual/xft
+	x11-libs/libXft
 	>=x11-libs/gtk+-2.10.7
 	>=x11-libs/pango-1.4.0
 	sci-libs/gsl

@@ -1,4 +1,4 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: /var/cvsroot/gentoo-x86/games-emulation/visualboyadvance/visualboyadvance-1.7.2.ebuild,v 1.3 2004/11/22 20:37:06 plasmaroo Exp $
 
@@ -31,7 +31,6 @@ DEPEND="${RDEPEND}
 		dev-lang/nasm
 		>=dev-util/cmake-2.4.0
 		dev-util/pkgconfig"
-		
 
 S="${WORKDIR}/${PN}"
 
@@ -43,14 +42,14 @@ pkg_setup() {
 
 src_unpack() {
 	subversion_src_unpack
-	cd ${S}
-	
+	cd "${S}"
+
 	sed -i CMakeLists.txt \
 	    -e "/C[X]*_FLAGS/d" \
 	    -e "s:\${CMAKE_INSTALL_PREFIX}/::" \
 	    -e "s: share: ../share:g" \
 	    	    || die "sed failed"
-	    
+
 	epatch "${FILESDIR}"/${PN}-includes-fix.patch
 }
 
@@ -59,7 +58,7 @@ src_compile() {
 	use sdl || my_opts="-DNO_SDL:BOOL=1"
 	use gtk || my_opts="${my_opts} -DNO_GTK:BOOL=1"
 	use lirc && my_opts="${my_opts} -DWITH_LIRC:BOOL=1"
-	
+
 	cmake \
 	-DCMAKE_INSTALL_PREFIX:PATH="${GAMES_PREFIX}" \
 	-DCMAKE_CXX_FLAGS="${CXXFLAGS}" \
@@ -75,6 +74,6 @@ src_install() {
 	emake DESTDIR="${D}" install || die "make install failed"
 	dodoc doc/{DevInfo,ReadMe}.txt
 	doman debian/${PN}.1
-	
+
 	prepgamesdirs
 }

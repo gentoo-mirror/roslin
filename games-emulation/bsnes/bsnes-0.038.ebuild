@@ -1,4 +1,4 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -39,7 +39,7 @@ pkg_setup() {
 	then
 	    die "You need to select at least one audio backend."
 	fi
-	
+
 	if ! use xv && ! use opengl && ! use sdl
 	then
 	    die "You need to select at least one video backend."
@@ -49,7 +49,7 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	
+
 	epatch "${FILESDIR}"/${PN}-makefile.patch
 }
 

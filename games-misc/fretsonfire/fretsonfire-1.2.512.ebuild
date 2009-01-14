@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
+
+EAPI=2
 
 inherit eutils python games
 
@@ -28,20 +30,12 @@ RDEPEND=">=dev-lang/python-2.3
 	dev-python/numpy
 	psyco? ( dev-python/psyco )
 	glew? ( dev-python/glewpy )
-	guitarhero? ( media-sound/vorbis-tools )"
+	guitarhero? ( media-sound/vorbis-tools )
+	media-libs/sdl-mixer[vorbis]"
 
 S="${WORKDIR}/${MY_PN}-src-${PV}"
 
-pkg_setup() {
-	if ! built_with_use media-libs/sdl-mixer vorbis ; then
-		die "Please emerge media-libs/sdl-mixer with USE=vorbis"
-	fi
-	games_pkg_setup
-}
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	rm -f Makefile
 
 	sed -i -e "s:\(FretsOnFire.py\):$(games_get_libdir)/${PN}/\1:" \

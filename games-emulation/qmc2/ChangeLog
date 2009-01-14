@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/qmc2
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 
+  14 Jan 2009; Michał Ziąbkowski <mziab@o2.pl> qmc2-0.2_beta6.ebuild:
+  Ported to EAPI 2
+
   09 Jan 2009; Michał Ziąbkowski <mziab@o2.pl> +qmc2-0.2_beta6.ebuild,
   +files/qmc2-0.2_beta6-makefile.patch, -files/qmc2-makefile.patch:
   Bumped. Removed cruft.

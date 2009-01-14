@@ -2,6 +2,8 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
+EAPI=2
+
 inherit eutils qt4 games
 
 MY_PV=${PV/_beta/.b}
@@ -10,14 +12,12 @@ DESCRIPTION="An MAME frontend for SDLMAME"
 HOMEPAGE="http://www.mameworld.net/mamecat/"
 SRC_URI="mirror://sourceforge/${PN}/${PN}-${MY_PV}.tar.bz2"
 
-EAPI="1"
-
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
 IUSE="debug joystick opengl phonon"
 
-DEPEND="x11-libs/qt-gui:4
+DEPEND="x11-libs/qt-gui:4[accessibility]
 	phonon? ( x11-libs/qt-phonon:4 )
 	joystick? ( media-libs/libsdl )
 	opengl? ( virtual/opengl )"
@@ -27,20 +27,15 @@ RDEPEND="${DEPEND}
 
 S="${WORKDIR}/${PN}"
 
-QT4_BUILT_WITH_USE_CHECK="accessibility"
-
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-	
+src_prepare() {
 	epatch "${FILESDIR}/${P}-makefile.patch"
-}
 
-src_compile() {
 	## This is not as it appears, ARCH means something different to qmc2's Makefile
 	## then it means to the portage/portage-compatible package manager
 	sed -ie 's%ifndef ARCH%ifdef ARCH%' Makefile
+}
 
+src_compile() {
 	# Should really use GAMES_DATADIR, but then it bombs out
 	FLAGS="QTDIR=/usr DESTDIR=${D} PREFIX=${GAMES_PREFIX} DATADIR=${GAMES_DATADIR} CTIME=0"
 

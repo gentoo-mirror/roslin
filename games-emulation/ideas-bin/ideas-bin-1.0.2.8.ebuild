@@ -17,6 +17,9 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
 
+RESTRICT="mirror strip"
+QA_EXECSTACK="${GAMES_PREFIX_OPT:1}/${PN}/ideas"
+
 DEPEND="app-arch/unzip"
 RDEPEND=">=x11-libs/gtk+-2
 		virtual/opengl"

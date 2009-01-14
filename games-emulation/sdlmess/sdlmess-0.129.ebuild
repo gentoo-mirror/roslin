@@ -1,3 +1,5 @@
+EAPI=2
+
 inherit eutils flag-o-matic games
 
 DESCRIPTION="Multiple Arcade Machine Emulator (SDL)"
@@ -18,7 +20,7 @@ IUSE="debug opengl"
 
 RESTRICT="fetch"
 
-RDEPEND=">=media-libs/libsdl-1.2.10
+RDEPEND=">=media-libs/libsdl-1.2.10[opengl?]
 	sys-libs/zlib
 	dev-libs/expat
 	x11-libs/libXinerama
@@ -34,7 +36,7 @@ S=${WORKDIR}/${MY_P}
 
 pkg_nofetch() {
 	einfo "Please download ${MY_P}.zip"
-        einfo "from ${HOMEPAGE}"
+	einfo "from ${HOMEPAGE}"
 	einfo "and move it to ${DISTDIR}"
 }
 
@@ -55,15 +57,7 @@ enable_feature() {
 		|| die "sed failed"
 }
 
-pkg_setup() {
-	if use opengl && ! built_with_use media-libs/libsdl opengl ; then
-		die "Please emerge media-libs/libsdl with USE=opengl"
-	fi
-	games_pkg_setup
-}
-
-src_unpack() {
-	unpack ${A}
+src_prepare() {
 	sed -i \
 		-e '/CFLAGS += -O$(OPTIMIZE)/s:^:# :' \
 		-e '/CFLAGS += -pipe/s:^:# :' \
@@ -76,10 +70,6 @@ src_unpack() {
 	#sed -i \
 	#	-e "/^\(AR\|CC\|LD\|RM\) =/s:@::" \
 	#	-i "${S}"/makefile
-}
-
-src_compile() {
-	local make_opts
 
 	# Don't compile zlib and expat
 	einfo "Disabling embedded libraries: zlib and expat"
@@ -104,6 +94,10 @@ src_compile() {
 		enable_feature DEBUGGER
 	fi
 
+}
+
+src_compile() {
+	local make_opts
 	use opengl || make_opts="${make_opts} NO_OPENGL=1"
 
 	emake \

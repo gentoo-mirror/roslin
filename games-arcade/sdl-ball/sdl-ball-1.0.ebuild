@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="leveleditor sound wiimote"
+IUSE="leveleditor +sound wiimote"
 
 DEPEND="media-libs/libsdl[opengl]
 	media-libs/sdl-ttf

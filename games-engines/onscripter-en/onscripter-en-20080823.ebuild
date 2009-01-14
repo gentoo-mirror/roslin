@@ -2,6 +2,8 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
+EAPI=2
+
 inherit eutils games
 
 DESCRIPTION="A fork of the ONScripter engine with added English support"
@@ -13,38 +15,14 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE="scale"
 
-DEPEND="media-libs/sdl-image
-	media-libs/sdl-mixer
+DEPEND="media-libs/sdl-image[jpeg,png]
+	media-libs/sdl-mixer[mp3,vorbis]
 	media-libs/sdl-ttf
 	media-libs/smpeg
 	app-arch/bzip2"
 RDEPEND="${DEPEND}"
 
-pkg_setup() {
-	games_pkg_setup
-
-	if ! built_with_use "media-libs/sdl-image" png ; then
-		die "media-libs/sdl-image has to be compiled with USE='png'"
-	fi
-
-	if ! built_with_use "media-libs/sdl-image" jpeg ; then
-		die "media-libs/sdl-image has to be compiled with USE='jpeg'"
-	fi
-
-	if ! built_with_use "media-libs/sdl-mixer" vorbis ; then
-		die "media-libs/sdl-mixer has to be compiled with USE='vorbis'"
-	fi
-
-	if ! built_with_use "media-libs/sdl-mixer" mp3 ; then
-		die "media-libs/sdl-mixer has to be compiled with USE='mp3'"
-	fi
-}
-
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	epatch "${FILESDIR}"/cxxflags.patch
 
 	if use scale; then
@@ -52,11 +30,6 @@ src_unpack() {
 	    -e 's:-DLINUX:-DLINUX -DRCA_SCALE:' configure \
 	    || die "sed failed"
 	fi
-}
-
-src_compile() {
-	econf || die "econf failed"
-	emake || die "emake failed"
 }
 
 src_install() {

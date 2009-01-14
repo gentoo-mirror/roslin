@@ -2,6 +2,10 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  14 Jan 2009; Michał Ziąbkowski <mziab@o2.pl>
+  onscripter-en-20080214.ebuild, onscripter-en-20080823.ebuild:
+  Ported to EAPI 2
+
   03 Jan 2009; Piotr Szymaniak <lazy_bum@o2.pl>
   onscripter-en-20080823.ebuild:
   Fixed trailing whitespace error.

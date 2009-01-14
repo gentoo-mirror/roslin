@@ -1,10 +1,10 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-inherit qt4
+EAPI=2
 
-EAPI="1"
+inherit qt4
 
 DESCRIPTION="A simple frontend for CDemu"
 HOMEPAGE="http://my.opera.com/mziab/blog/"
@@ -15,15 +15,13 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="|| ( >=x11-libs/qt-4.3.0:4
+DEPEND="|| ( >=x11-libs/qt-4.3.0:4[dbus]
 	( x11-libs/qt-gui:4
 	x11-libs/qt-dbus:4 ) )"
 RDEPEND="${DEPEND}
 	>=app-cdr/cdemu-1.1.0"
 
 S="${WORKDIR}/${PN}"
-
-QT4_BUILT_WITH_USE_CHECK="dbus"
 
 src_compile() {
 	eqmake4 || die "eqmake4 failed"

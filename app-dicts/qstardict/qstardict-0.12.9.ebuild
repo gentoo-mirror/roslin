@@ -1,8 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI="1"
+EAPI=2
 
 inherit eutils qt4
 
@@ -14,15 +14,10 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64 ~ia64"
 IUSE="dbus nls"
 RDEPEND=">=dev-libs/glib-2.0
-		||	( >=x11-libs/qt-4.2.0:4
-			x11-libs/qt-gui:4 )"
+		||	( >=x11-libs/qt-4.2.0:4[dbus?]
+			( x11-libs/qt-gui:4
+			dbus? ( x11-libs/qt-dbus:4 ) ) )"
 DEPEND="${RDEPEND}"
-
-pkg_setup() {
-	if use dbus; then
-		QT4_BUILT_WITH_USE_CHECK="dbus"
-	fi
-}
 
 src_compile() {
 	QMAKE_FLAGS=""

@@ -15,13 +15,12 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE="debug opengl"
 
-DEPEND=">=dev-util/cmake-2.6
-	media-libs/libsdl[opengl?]
-	sys-libs/zlib
-	opengl? ( virtual/opengl )"
 RDEPEND="media-libs/libsdl[opengl?]
 	sys-libs/zlib
 	opengl? ( virtual/opengl )"
+
+DEPEND="${RDEPEND}
+	>=dev-util/cmake-2.6"
 
 S="${WORKDIR}/fceu"
 

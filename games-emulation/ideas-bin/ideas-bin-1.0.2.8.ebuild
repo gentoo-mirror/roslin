@@ -6,7 +6,7 @@ EAPI=2
 
 MY_PV="${PV//./}"
 
-inherit games
+inherit multilib games
 
 DESCRIPTION="iDeaS is a closed-source Nintendo DS emulator using GTK+"
 HOMEPAGE="http://www.ideasemu.org/"
@@ -14,15 +14,23 @@ SRC_URI="http://www.ideasemu.org/ideas_scripts/resolve_link.php?link=ideas${MY_P
 
 LICENSE="freedist"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RESTRICT="mirror strip"
 QA_EXECSTACK="${GAMES_PREFIX_OPT:1}/${PN}/ideas"
 
 DEPEND="app-arch/unzip"
-RDEPEND=">=x11-libs/gtk+-2
-		virtual/opengl"
+RDEPEND="amd64? ( app-emulation/emul-linux-x86-gtklibs )
+	x86? ( >=x11-libs/gtk+-2 )
+	virtual/opengl"
+
+pkg_setup() {
+	# x86 binary package, ABI=x86
+	has_multilib_profile && ABI="x86"
+
+	games_pkg_setup
+}
 
 src_install() {
 	local dir="${GAMES_PREFIX_OPT}"/${PN}

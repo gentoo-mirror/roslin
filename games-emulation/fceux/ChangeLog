@@ -3,6 +3,9 @@
 # $Header: $
 
   15 Jan 2009; Michał Ziąbkowski <mziab@o2.pl> fceux-2.0.3.ebuild:
+  Added ~amd64 keyword.
+
+  15 Jan 2009; Michał Ziąbkowski <mziab@o2.pl> fceux-2.0.3.ebuild:
   Simplified deps.
 
   14 Jan 2009; Michał Ziąbkowski <mziab@o2.pl> +fceux-2.0.3.ebuild,

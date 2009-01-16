@@ -18,17 +18,15 @@ KEYWORDS="~x86"
 IUSE=""
 
 DEPEND="media-libs/libsdl[opengl]
-		sys-libs/zlib
-		virtual/opengl"
+	sys-libs/zlib
+	virtual/opengl"
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/Osmose-${MY_PV}-source"
 
 src_prepare() {
-	sed -i Makefile \
-	    -e "s/-O3/${CFLAGS}/" \
-	    -e "s/ stripexe//" \
-	    || die "sed failed"
+	epatch "${FILESDIR}/${P}-gcc43.patch"
+	epatch "${FILESDIR}/${PN}-makefile.patch"
 }
 
 src_install() {

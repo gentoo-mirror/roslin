@@ -14,7 +14,7 @@ SRC_URI="http://bcz.emu-france.com/${PN}/Osmose${MY_PV}-source.zip"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="media-libs/libsdl[opengl]

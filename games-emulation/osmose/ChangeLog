@@ -2,6 +2,9 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  16 Jan 2009; Michał Ziąbkowski <mziab@o2.pl> osmose-0.8.5b.ebuild:
+  Added ~amd64 keyword.
+
   16 Jan 2009; Michał Ziąbkowski <mziab@o2.pl> osmose-0.8.5b.ebuild,
   +files/osmose-0.8.5b-gcc43.patch, +files/osmose-makefile.patch:
   Fixed parallel make. Replaced sed with patch. Added gcc-4.3 compilation fix.

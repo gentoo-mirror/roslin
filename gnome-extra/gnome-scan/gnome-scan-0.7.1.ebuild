@@ -1,4 +1,4 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -14,7 +14,7 @@ IUSE="debug doc"
 
 RDEPEND=">=x11-libs/gtk+-2.12
 	media-gfx/sane-backends
-	>=media-libs/gegl-0.0.16
+	>=media-libs/gegl-0.0.21
 	>=media-gfx/gimp-2.3
 	>=gnome-base/libglade-2.6"
 

@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/bsnes
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 
+  19 Jan 2009; Michał Ziąbkowski <mziab@o2.pl> -bsnes-0.038.ebuild,
+  +bsnes-0.039.ebuild, files/bsnes-makefile.patch:
+  Bumped. Removed previous version. Updated patch.
+
   12 Jan 2009; Piotr Szymaniak <lazy_bum@o2.pl> ChangeLog:
   Fixed typo. :P
 

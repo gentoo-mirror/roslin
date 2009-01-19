@@ -4,7 +4,7 @@
  ################
  
  ifneq ($(findstring gcc,$(compiler)),) # GCC family
--  flags = -O3 -fomit-frame-pointer $(if $(call streq,$(platform),x),-mtune=native,) -Ilib
+-  flags = -O3 -fomit-frame-pointer -Ilib
 +  flags = $(CXXFLAGS) -Ilib
    c = $(compiler) $(flags)
    cpp = $(subst cc,++,$(compiler)) $(flags)

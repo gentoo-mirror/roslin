@@ -48,6 +48,6 @@ src_install() {
 	emake DESTDIR="${D}" install \
 	|| die "install failed"
 	dodoc AUTHORS doc/README
-	
+
 	prepgamesdirs
 }

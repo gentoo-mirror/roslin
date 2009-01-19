@@ -21,5 +21,5 @@ DEPEND="media-sound/cdparanoia
 RDEPEND="${DEPEND}"
 
 src_prepare() {
-    epatch "${FILESDIR}/${P}-include.patch"
+	epatch "${FILESDIR}/${P}-include.patch"
 }

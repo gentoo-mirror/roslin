@@ -2,6 +2,9 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  19 Jan 2009; Michał Ziąbkowski <mziab@o2.pl> audex-0.62b.ebuild:
+  Fixed indentation.
+
   19 Jan 2009; Michał Ziąbkowski <mziab@o2.pl> +audex-0.62b.ebuild,
   +files/audex-0.62b-include.patch:
   New ebuild.

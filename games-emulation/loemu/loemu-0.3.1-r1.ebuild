@@ -1,4 +1,4 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 inherit distutils
@@ -17,3 +17,5 @@ DEPEND="dev-libs/libxml2
     dev-libs/libxslt
     dev-python/pygtk
     gnome-base/libglade"
+
+RDEPEND="${DEPEND}"

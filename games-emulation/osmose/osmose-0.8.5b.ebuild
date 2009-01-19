@@ -9,7 +9,7 @@ inherit games
 MY_PV="${PV//./-}"
 
 DESCRIPTION="Osmose is a GPL'd Sega Master System/Gamegear emulator"
-HOMEPAGE=""
+HOMEPAGE="http://bcz.emu-france.com/"
 SRC_URI="http://bcz.emu-france.com/${PN}/Osmose${MY_PV}-source.zip"
 
 LICENSE="GPL-2"

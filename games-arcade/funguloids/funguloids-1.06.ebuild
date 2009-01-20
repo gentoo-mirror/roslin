@@ -13,11 +13,11 @@ SRC_URI="mirror://sourceforge/${PN}/${PN}-linux-${PV}.tar.bz2"
 LICENSE="ZLIB"
 SLOT="0"
 KEYWORDS="~x86"
-IUSE="fmodex mad ogg"
+IUSE="fmod mad ogg"
 
 RDEPEND="dev-games/ogre[cg,devil]
 	>=dev-games/ois-1.0
-	fmodex? ( >=media-libs/fmodex-4.06.16 )
+	fmod? ( >=media-libs/fmodex-4.06.16 )
 	mad? ( >=media-libs/openal-1.5.304
 		media-libs/libmad )
 	ogg? ( >=media-libs/openal-1.5.304

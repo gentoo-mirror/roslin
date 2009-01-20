@@ -2,7 +2,9 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-inherit games eutils
+EAPI=2
+
+inherit eutils games
 
 DESCRIPTION="Addictive, multi-player 'board' game. It's easy to learn to play."
 HOMEPAGE="http://fruise.googlepages.com/reaction.html"
@@ -19,11 +21,8 @@ RDEPEND="${DEPEND}"
 
 dir=${GAMES_DATADIR}/${PN}
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
-	epatch "${FILESDIR}"/"${P}"-Makefile.patch
+src_prepare() {
+	epatch "${FILESDIR}/${P}-Makefile.patch"
 
 	if use !single ; then
 		sed -i \
@@ -40,16 +39,15 @@ src_install() {
 	if use single ; then
 		dodir "${dir}"/YACRAI
 		insinto "${dir}"/YACRAI
-		doins YACRAI/libyacrai*
+		doins YACRAI/libyacrai* || die "doins failed"
 	fi
 
 	exeinto "${dir}"
-	doexe ${PN}
+	doexe ${PN} || die "doexe failed"
 
-	dodoc CHANGELOG README
+	dodoc CHANGELOG README || die "dodoc failed"
 
 	games_make_wrapper ${PN} ./${PN} "${dir}"
-
 	make_desktop_entry ${PN} "Reaction"
 
 	prepgamesdirs

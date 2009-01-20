@@ -28,7 +28,6 @@ RDEPEND="dev-games/ogre[cg,devil]
 DEPEND="${RDEPEND}"
 
 S=${WORKDIR}/${PN}
-dir=${GAMES_DATADIR}/${PN}
 
 src_prepare() {
 	sed -i \
@@ -44,25 +43,24 @@ src_prepare() {
 	eautoreconf
 }
 
-src_compile() {
-	econf || die "egamesconf failed"
-	emake || die "emake failed"
+src_configure() {
+	econf || die "econf failed"
 }
 
 src_install() {
-	dogamesbin bin/${PN} || die "installing the binary failed"
+	dogamesbin bin/${PN} || die "dogamesbin failed"
 
-	insinto "${dir}"
+	insinto "${GAMES_DATADIR}/${PN}"
 	rm -r bin/docs
 	rm bin/music/Makefile* bin/music/playlist.lua.in
 
 	if use ogg ; then
-		doins -r bin/music
+		doins -r bin/music || die "doins music failed"
 	fi
 
-	doins bin/icon bin/*.cfg bin/*.mpk
+	doins bin/icon bin/*.cfg bin/*.mpk || die "doins failed"
 
-	dodoc INSTALL README
+	dodoc INSTALL README || die "dodoc failed"
 
 	prepgamesdirs
 }

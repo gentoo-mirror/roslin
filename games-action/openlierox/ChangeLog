@@ -1,6 +1,10 @@
 # ChangeLog for games-action/openlierox
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+
+  20 Jan 2009; Piotr Szymaniak <lazy_bum@o2.pl>
+  -openlierox-0.57_beta5.ebuild, openlierox-0.57_beta8.ebuild:
+  Ported to EAPI=2.
 
   12 Oct 2008; Piotr Szymaniak <lazy_bum@o2.pl>
   +openlierox-0.57_beta8.ebuild:

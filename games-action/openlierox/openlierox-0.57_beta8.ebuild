@@ -1,8 +1,10 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-inherit eutils games toolchain-funcs
+EAPI=2
+
+inherit eutils toolchain-funcs games
 
 DESCRIPTION="A real-time excessive Worms-clone"
 HOMEPAGE="http://openlierox.sourceforge.net/"
@@ -20,23 +22,14 @@ RDEPEND="media-libs/libsdl
 	media-libs/gd
 	dev-libs/libxml2
 	dev-libs/libzip
-	X? ( x11-libs/libX11 )"
+	X? ( x11-libs/libX11
+		media-libs/libsdl[X] )"
 
 DEPEND="${RDEPEND}"
 
-MY_PN="OpenLieroX"
-MY_P="${MY_PN}_${PV}"
-S="${WORKDIR}/${MY_PN}"
-
-pkg_setup() {
-	if use X && ! built_with_use media-libs/libsdl X; then
-		ewarn "You have enabled X support but media-libs/libsdl"
-		ewarn "was compiled without X USE-flag set."
-		ewarn "Please recompile media-libs/libsdl with X enabled."
-		die "media-libs/libsdl has to be emerged with X support"
-	fi
-	games_pkg_setup
-}
+MY_PN=OpenLieroX
+MY_P=${MY_PN}_${PV}
+S=${WORKDIR}/${MY_PN}
 
 src_compile() {
 	# SYSTEM_DATA_DIR/OpenLieroX will be the search path

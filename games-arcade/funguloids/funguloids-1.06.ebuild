@@ -1,8 +1,10 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-inherit eutils games autotools
+EAPI=2
+
+inherit eutils autotools games
 
 DESCRIPTION="Space-flying-mushroom-picking-simulator"
 HOMEPAGE="http://funguloids.sourceforge.net/"
@@ -14,7 +16,7 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE="fmodex mad ogg"
 
-RDEPEND=">=dev-games/ogre-1.4.6
+RDEPEND=">=dev-games/ogre-1.4.6[cg devil]
 	>=dev-games/ois-1.0
 	fmodex? ( >=media-libs/fmodex-4.06.16 )
 	mad? ( >=media-libs/openal-1.5.304
@@ -28,18 +30,7 @@ DEPEND="${RDEPEND}"
 S=${WORKDIR}/${PN}
 dir=${GAMES_DATADIR}/${PN}
 
-pkg_setup() {
-	if ! built_with_use dev-games/ogre cg && ! built_with_use \
-		dev-games/ogre devil ; then
-			einfo "Please rebuild ogre with USE=\"cg devil\""
-			die "dev-games/ogre missing cg or devil support"
-	fi
-}
-
-src_unpack() {
-	unpack ${PN}-linux-${PV}.tar.bz2
-	cd "${S}"
-
+src_prepare() {
 	sed -i \
 		-e "s:bininstalldir="${prefix}/games":bininstalldir="${prefix}/bin":" \
 		-e "s:-llua5.1:-llua:" configure || die "sed failed"

@@ -2,7 +2,9 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-inherit eutils games flag-o-matic
+EAPI=2
+
+inherit eutils flag-o-matic games
 
 MY_P="${PN}_v${PV}_src"
 
@@ -23,11 +25,8 @@ DEPEND="${RDEPEND}"
 
 S=${WORKDIR}/${MY_P/_src/}
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
-	epatch "${FILESDIR}"/"${P}"-makefile.patch
+src_prepare() {
+	epatch "${FILESDIR}/${P}-makefile.patch"
 
 	# -fomit-frame-pointer shouldn't be used with USE="debug"
 	use debug && filter-flags "-fomit-frame-pointer"

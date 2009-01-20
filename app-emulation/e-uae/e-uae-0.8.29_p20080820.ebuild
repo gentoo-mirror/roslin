@@ -1,4 +1,4 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -9,8 +9,8 @@ HOMEPAGE="http://www.rcdrummond.net/uae/"
 # We support _rcX for WIPX versions and _preYYYYMMDD for CVS snapshots.
 if [[ "${PV%%_rc*}" = "${PV}" ]] ; then
 	# _pre is used, cvs version
-	my_ver=${PV%%_pre*}
-	snap_ver=${PV##*_pre}
+	my_ver=${PV%%_p*}
+	snap_ver=${PV##*_p}
 	S="${WORKDIR}"/${PN}-${my_ver}-${snap_ver}
 	SRC_URI="http://www.rcdrummond.net/uae/test/${snap_ver}/${PN}-${my_ver}-${snap_ver}.tar.bz2"
 else

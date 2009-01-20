@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-inherit eutils games versionator
+inherit eutils versionator games
 
 MY_PV=$(replace_version_separator 2 '')
 DESCRIPTION="A kart racing game starring Tux, the linux penguin (TuxKart fork)"
@@ -10,7 +10,7 @@ HOMEPAGE="http://supertuxkart.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${PN}-${MY_PV}-src.tar.bz2
 	mirror://gentoo/${PN}.png"
 
-S="${WORKDIR}/${PN}-${MY_PV}"
+S=${WORKDIR}/${PN}-${MY_PV}
 
 LICENSE="GPL-2"
 SLOT="0"

@@ -7,7 +7,8 @@ inherit games subversion autotools flag-o-matic
 DESCRIPTION="Playstation2 emulator"
 HOMEPAGE="http://www.pcsx2.net/"
 
-ESVN_REPO_URI="https://pcsx2.svn.sourceforge.net/svnroot/pcsx2"
+PCSX2_SVN_URI="https://${PN}.svn.sourceforge.net/svnroot/${PN}"
+ESVN_REPO_URI="${PCSX2_SVN_URI}/${PN}"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -33,7 +34,7 @@ RDEPEND="${CDEPEND}
 		ieee1394? ( =games-emulation/ps2emu-fwlinuz-9999 )
 		usb? ( =games-emulation/ps2emu-usblinuz-9999 )"
 
-S=${WORKDIR}
+S=${WORKDIR}/${PN}
 
 LANGS="ar bg cz de du el es fr hb it ja pe pl po po_BR ro ru sh sw tc tr"
 
@@ -61,11 +62,10 @@ pkg_setup() {
 
 src_unpack() {
 		# Download just the dirs we need, not the whole repo
-		subversion_fetch ${ESVN_REPO_URI}/pcsx2 pcsx2
-		subversion_fetch ${ESVN_REPO_URI}/bin bin
+		subversion_src_unpack
+		subversion_fetch ${PCSX2_SVN_URI}/bin ../bin
 		
-		# An ugly hack, so that we're at the right place
-		cd ${S}/${PN}
+		cd ${S}
 
 		# Preserve custom CFLAGS passed to configure.
 		epatch "${FILESDIR}"/${PN}-0.9.4-custom-cflags.patch
@@ -83,8 +83,6 @@ src_unpack() {
 }
 
 src_compile() {
-	cd ${S}/${PN}
-
 	local myconf
 	filter-flags -O0
 	
@@ -93,7 +91,7 @@ src_compile() {
 		myconf=" --disable-recbuild"
 	fi
 
-	egamesconf  \
+	egamesconf \
 		$(use_enable devbuild) \
 		$(use_enable debug) \
 		$(use_enable nls) \
@@ -106,7 +104,6 @@ src_compile() {
 }
 
 src_install() {
-	cd ${S}/${PN}
 	local x
 
 	keepdir "`games_get_libdir`/ps2emu/plugins"

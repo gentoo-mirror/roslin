@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/pcsx2pp
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+
+  20 Jan 2009; Michał Ziąbkowski <mziab@o2.pl> pcsx2pp-9999.ebuild:
+  First attempt to fix the ebuild. Still doesn't compile for me.
 
   16 Dec 2008; Michał Ziąbkowski <mziab@o2.pl> pcsx2pp-9999.ebuild:
   Added missing flag to IUSE

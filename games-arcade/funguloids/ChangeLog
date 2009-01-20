@@ -3,6 +3,9 @@
 # $Header: $
 
   20 Jan 2009; Piotr Szymaniak <lazy_bum@o2.pl> funguloids-1.06.ebuild:
+  Fixed depends.
+
+  20 Jan 2009; Piotr Szymaniak <lazy_bum@o2.pl> funguloids-1.06.ebuild:
   Ported to EAPI=2, moved games to the end of inherit line.
 
   26 Nov 2008; Michał Ziąbkowski <mziab@o2.pl> funguloids-1.06.ebuild,

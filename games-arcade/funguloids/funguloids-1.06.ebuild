@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE="fmodex mad ogg"
 
-RDEPEND=">=dev-games/ogre-1.4.6[cg devil]
+RDEPEND="dev-games/ogre[cg devil]
 	>=dev-games/ois-1.0
 	fmodex? ( >=media-libs/fmodex-4.06.16 )
 	mad? ( >=media-libs/openal-1.5.304

@@ -3,6 +3,9 @@
 # $Header: $
 
   20 Jan 2009; Piotr Szymaniak <lazy_bum@o2.pl> funguloids-1.06.ebuild:
+  Fixed depends again.
+
+  20 Jan 2009; Piotr Szymaniak <lazy_bum@o2.pl> funguloids-1.06.ebuild:
   Fixed depends.
 
   20 Jan 2009; Piotr Szymaniak <lazy_bum@o2.pl> funguloids-1.06.ebuild:

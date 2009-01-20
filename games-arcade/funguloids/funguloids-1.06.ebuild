@@ -10,8 +10,7 @@ DESCRIPTION="Space-flying-mushroom-picking-simulator"
 HOMEPAGE="http://funguloids.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${PN}-linux-${PV}.tar.bz2"
 
-# See COPYING for details
-LICENSE="zlib/libpng"
+LICENSE="ZLIB"
 SLOT="0"
 KEYWORDS="~x86"
 IUSE="fmodex mad ogg"

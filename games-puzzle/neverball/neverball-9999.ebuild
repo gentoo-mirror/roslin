@@ -20,7 +20,7 @@ DEPEND="media-libs/libsdl
 	media-libs/sdl-image
 	media-libs/sdl-ttf
 	virtual/opengl"
-	
+
 RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${PN}

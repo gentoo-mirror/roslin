@@ -5,6 +5,8 @@
 <maintainer>
   <email>mziab@o2.pl</email>
   <name>Michał Ziąbkowski</name>
-  <flag name='scale'>Enables experimental scaling support</flag>
 </maintainer>
+<use>
+  <flag name='scale'>Enables experimental scaling support</flag>
+</use>
 </pkgmetadata>

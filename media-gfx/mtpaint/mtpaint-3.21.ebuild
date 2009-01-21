@@ -1,4 +1,4 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -21,6 +21,8 @@ DEPEND="
 	gif? ( >=media-libs/giflib-4.1.4 )
 	jpeg? ( >=media-libs/jpeg-6b )
 	tiff? ( >=media-libs/tiff-3.6.1 )"
+
+RDEPEND="${DEPEND}"
 
 src_compile() {
 	local myconf res conffile

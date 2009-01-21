@@ -2,6 +2,8 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
+EAPI=2
+
 inherit games
 
 DESCRIPTION="Terminal-based Tetris clone by Victor Nilsson."
@@ -19,10 +21,7 @@ DEPEND="sys-libs/glibc
 	X? ( x11-libs/libX11 )"
 RDEPEND=""
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	sed -i \
 		-e "s|-strip --strip-all|echo|" \
 		-e "s|PROGNAME = tetris|PROGNAME = vitetris|" \
@@ -46,7 +45,7 @@ src_compile() {
 src_install() {
 	dogamesbin vitetris || die "dogamesbin failed"
 
-	dodoc README
+	dodoc README || die "dodoc failed"
 
 	prepgamesdirs
 }

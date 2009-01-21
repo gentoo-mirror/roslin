@@ -39,6 +39,8 @@ DEPEND="crypt? ( app-crypt/gpgme )
 	xosd? ( x11-libs/xosd )
 	virtual/libintl"
 
+RDEPEND="${DEPEND}"
+
 pkg_setup() {
 	if use unicode && ! built_with_use sys-libs/ncurses unicode; then
 		eerror "Ekg2 requires ncurses built with unicode support for unicode"

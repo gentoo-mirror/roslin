@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
+
+EAPI=2
 
 inherit games
 
@@ -22,11 +24,6 @@ DEPEND="dev-games/physfs
 RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${MY_P}
-
-src_compile() {
-	econf || die "econf failed"
-	emake || die "emake failed"
-}
 
 src_install() {
 	emake DESTDIR="${D}" install || die "einstall failed"

@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmirage/libmirage-1.1.0.ebuild,v 1.1 2008/08/03 21:01:18 vanquirius Exp $
+# $Header: $
 
 DESCRIPTION="libMirage is a CD-ROM image access library"
 HOMEPAGE="http://cdemu.org"
@@ -11,8 +11,10 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc"
 
-DEPEND=">=dev-libs/glib-2.6
-	>=media-libs/libsndfile-1.0
+RDEPEND=">=dev-libs/glib-2.6
+	>=media-libs/libsndfile-1.0"
+
+DEPEND="${RDEPEND}
 	>=sys-devel/flex-2.5.33
 	sys-devel/bison
 	doc? ( dev-util/gtk-doc )"
@@ -25,7 +27,7 @@ src_compile() {
 	fi
 
 	econf ${myconf} || die "econf failed"
-	emake -j1 || die "emake failed"
+	emake || die "emake failed"
 }
 
 src_install() {

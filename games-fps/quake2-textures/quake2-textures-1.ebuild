@@ -53,12 +53,11 @@ src_unpack() {
 }
 
 src_install() {
-
 	insinto ${GAMES_DATADIR}/quake2/baseq2
 	# Is unzipped, so >quake2-icculus-0.16.1-r1 can read the textures
 	doins -r models textures || die "doins -r failed"
 
-	dodoc Readme.txt
+	dodoc Readme.txt || die "dodoc failed"
 
 	prepgamesdirs
 }

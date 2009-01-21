@@ -34,7 +34,7 @@ src_install() {
 	# Has no icon, so use quake2 icon if available
 	make_desktop_entry ${PN} "Quetoo" quake2
 
-	dodoc README
+	dodoc README || die "dodoc failed"
 
 	prepgamesdirs
 }

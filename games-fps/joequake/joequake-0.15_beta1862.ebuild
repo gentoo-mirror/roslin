@@ -181,7 +181,7 @@ src_install() {
 		make_desktop_entry ${PN}-soa "JoeQuake - Scourge of Armagon" ${PN}
 	fi
 
-	dodoc "${WORKDIR}/${PN}/doc"/*
+	dodoc "${WORKDIR}/${PN}/doc"/* || die "dodoc failed"
 
 	prepgamesdirs
 }

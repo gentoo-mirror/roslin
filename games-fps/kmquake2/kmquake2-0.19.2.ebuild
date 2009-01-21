@@ -2,6 +2,8 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
+EAPI=2
+
 inherit eutils toolchain-funcs flag-o-matic toolchain-funcs games
 
 MY_PN="quake2"
@@ -83,26 +85,23 @@ pkg_setup() {
 	fi
 }
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	# Fix for amd64 - http://bugs.gentoo.org/show_bug.cgi?id=158415
-	epatch "${FILESDIR}"/${PN}-${PV}-remaping_amd64.patch
+	epatch "${FILESDIR}"/${P}-remaping_amd64.patch
 
 	# Fix directory search for the game API
-	epatch "${FILESDIR}"/${PN}-${PV}-search_path.patch
+	epatch "${FILESDIR}"/${P}-search_path.patch
 
 	# Now we can safely reemerge it and play further
-	epatch 	"${FILESDIR}"/${PN}-${PV}-safe_saving.patch
+	epatch 	"${FILESDIR}"/${P}-safe_saving.patch
 
 	# Use alsa by default
 	use alsa && \
-	epatch "${FILESDIR}"/${PN}-${PV}-alsa.patch
+	epatch "${FILESDIR}"/${P}-alsa.patch
 
 	# Without cd-audio by default
 	use cdsound || \
-	epatch "${FILESDIR}"/${PN}-${PV}-nocd.patch
+	epatch "${FILESDIR}"/${P}-nocd.patch
 
 	rm gnu.txt
 	mv "${WORKDIR}/${DATA_STEM}/${PN}.png" "${WORKDIR}"
@@ -168,6 +167,6 @@ src_install() {
 		games_make_wrapper "${PN}-demo" "${PN} +set game demo" && \
 		make_desktop_entry "${PN}-demo" "KM Quake 2 (Demo)" "${PN}"
 
-	dodoc *.{txt,unix}
+	dodoc *.{txt,unix} || die "dodoc failed"
 	prepgamesdirs
 }

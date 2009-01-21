@@ -30,25 +30,25 @@ S=${WORKDIR}/tenebrae_0
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	epatch \
-		"${FILESDIR}"/${PV}-glhax.patch \
-		"${FILESDIR}"/${P}-exec-stack.patch \
-		"${FILESDIR}"/${P}-worldangles.patch \
-		"${FILESDIR}"/${P}-bsd-stuff.patch
+		"${FILESDIR}/${PV}-glhax.patch" \
+		"${FILESDIR}/${P}-exec-stack.patch" \
+		"${FILESDIR}/${P}-worldangles.patch" \
+		"${FILESDIR}/${P}-bsd-stuff.patch"
 	cd linux
 	sed "s:-mpentiumpro -O6:${CFLAGS}:" Makefile.i386linux > Makefile
 }
 
 src_compile() {
 	cd "${S}"/linux
-	make MASTER_DIR="${GAMES_DATADIR}/quake1" build_release || die
+	emake MASTER_DIR="${GAMES_DATADIR}/quake1" build_release || die "emake failed"
 }
 
 src_install() {
 	newgamesbin linux/release*/bin/tenebrae.run tenebrae || die "newgamesbin"
 	insinto "${GAMES_DATADIR}/quake1/tenebrae"
 	doins "${WORKDIR}"/tenebrae/* || die "doins data"
-	dodoc linux/README "${WORKDIR}"/Tenebrae_Readme.txt
+	dodoc linux/README "${WORKDIR}"/Tenebrae_Readme.txt || die "dodoc failed"
 	prepgamesdirs
 }

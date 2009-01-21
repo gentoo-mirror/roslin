@@ -39,7 +39,7 @@ src_install() {
 	games_make_wrapper darkplaces-zerstorer-demo "darkplaces -game ${MOD}"
 	make_desktop_entry darkplaces-zerstorer-demo "Dark Places (Zerstorer-demo)" darkplaces
 
-	dodoc *.txt
+	dodoc *.txt || die "dodoc failed"
 
 	prepgamesdirs
 }

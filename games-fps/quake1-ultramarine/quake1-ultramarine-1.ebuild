@@ -35,7 +35,7 @@ src_install() {
 		make_desktop_entry darkplaces-${MY_PN} "Dark Places (Ultramarine)" darkplaces
 	fi
 
-	dodoc "${MOD}"/*.txt
+	dodoc "${MOD}"/*.txt || die "dodoc failed"
 
 	prepgamesdirs
 }

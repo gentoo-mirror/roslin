@@ -55,7 +55,7 @@ src_install() {
 	doins -r * || die "doins -r failed"
 
 	rm "${D}/${dir}"/*.txt
-	dodoc *.txt
+	dodoc *.txt || die "dodoc failed"
 
 	# These map packs use code from the official expansion pack mods
 	local game

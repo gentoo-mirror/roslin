@@ -85,7 +85,7 @@ src_install() {
 		newgamesbin tyr-qwsv ${PN}.srv || die "newgamesbin failed"
 	fi
 
-	dodoc readme.txt
+	dodoc readme.txt || die "dodoc failed"
 
 	prepgamesdirs
 }

@@ -2,6 +2,8 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
+EAPI=2
+
 inherit eutils games
 
 DESCRIPTION="quake1 utilizing a hand drawn engine"
@@ -23,10 +25,7 @@ S=${WORKDIR}/NPRQuake
 GENTOO_LIBDIR=$(games_get_libdir)/${PN}
 GENTOO_DATADIR=${GAMES_DATADIR}/quake1
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	epatch \
 		"${FILESDIR}"/${PN}-save-in-home.patch \
 		"${FILESDIR}"/${PN}-exec-stack.patch \
@@ -66,12 +65,12 @@ src_compile() {
 }
 
 src_install() {
-	dodoc README CHANGELOG
+	dodoc README CHANGELOG || die "dodoc failed"
 
 	newgamesbin NPRQuakeSrc/release*/bin/* nprquake-sdl \
 		|| die "newgamesbin failed"
 
-	mv build/dr_default.so build/default.so
+	mv build/dr_default.so build/default.so || die "mv failed"
 
 	insinto "${GENTOO_LIBDIR}"
 	doins -r \

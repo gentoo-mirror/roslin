@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header
 
-inherit eutils games subversion
+inherit eutils subversion games
 
 DESCRIPTION="You control a psychic bodyguard, and try to protect the VIP"
 HOMEPAGE="http://home.gna.org/blackshadeselite/"
@@ -36,7 +36,8 @@ src_install() {
 	newgamesbin objs/blackshades ${PN} || die "newgamesbin failed"
 	insinto "${GAMES_DATADIR}"/${PN}
 	doins -r Data || die "doins failed"
-	dodoc IF_THIS_IS_A_README_YOU_HAVE_WON Readme TODO uDevGame_Readme
+	dodoc IF_THIS_IS_A_README_YOU_HAVE_WON Readme TODO uDevGame_Readme \
+		 || die "dodoc failed"
 	make_desktop_entry ${PN} "Black Shades Elite"
 	prepgamesdirs
 }

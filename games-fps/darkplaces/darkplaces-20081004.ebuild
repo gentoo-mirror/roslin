@@ -169,7 +169,7 @@ src_install() {
 		newgamesbin ${PN}-dedicated ${PN}-ded || die "newgamesbin ded failed"
 	fi
 
-	dodoc *.txt ChangeLog todo "${WORKDIR}"/*.txt
+	dodoc *.txt ChangeLog todo "${WORKDIR}"/*.txt || die "dodoc failed"
 
 	if use lights ; then
 		insinto "${dir}"/id1

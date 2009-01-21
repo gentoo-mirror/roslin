@@ -1,4 +1,4 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -15,7 +15,7 @@ IUSE=""
 
 RDEPEND=">=media-libs/allegro-4.2
 	>=media-libs/allegrogl-0.4.0
-	media-libs/fmodex"
+	media-libs/fmod:1"
 DEPEND="${RDEPEND}
 	app-arch/p7zip"
 

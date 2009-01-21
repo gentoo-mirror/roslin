@@ -1,4 +1,4 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -17,20 +17,18 @@ IUSE=""
 
 # not sure about the actual version needed
 DEPEND="|| ( >=x11-libs/qt-4.3.0:4
-	     x11-libs/qt-gui:4 )"
+     x11-libs/qt-gui:4 )"
 RDEPEND="${DEPEND}"
 
-S="${WORKDIR}/${P}"
-
 src_compile() {
-		qmake -project -o ${PN}.pro || die "qmake failed"
-		eqmake4 || die "qmake4 failed"
-		emake || die "emake failed"
+	qmake -project -o ${PN}.pro || die "qmake failed"
+	eqmake4 || die "qmake4 failed"
+	emake || die "emake failed"
 }
 
 src_install() {
-		dobin ${PN}
-		dodoc README TODO changelog
-		make_desktop_entry ${PN}
+	dobin ${PN} || die "dobin failed"
+	dodoc README TODO changelog || die "dodoc failed"
+	make_desktop_entry ${PN}
 }
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ekg2/ekg2-20061202.ebuild,v 1.6 2007/01/09 21:09:02 swegener Exp $
+# $Header: $
 
 WANT_AUTOCONF=latest
 #WANT_AUTOMAKE=1.7

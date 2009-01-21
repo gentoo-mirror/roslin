@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
+
+EAPI=2
 
 inherit games
 
@@ -19,19 +21,17 @@ RDEPEND="${DEPEND}"
 S=${WORKDIR}
 dir=${GAMES_DATADIR}/${PN}
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	rm make.depend
 	sed -i \
 		-e "s|-lSDL_gfx|-lSDL_gfx ${LDFLAGS}|" \
 		-e "s|-Wall -O2|${CXXFLAGS}|" \
-		Makefile
+		Makefile || die "sed Makefile failed"
 
 	to_patch=$(grep -l '"data\/' *)
 	sed -i \
 		-e "s|data/|${dir}/data/|" \
-		$to_patch || die "sed Makefile failed"
+		$to_patch || die "sed failed"
 }
 
 src_install() {

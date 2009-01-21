@@ -1,4 +1,4 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -61,7 +61,7 @@ src_install() {
 	insinto "${dir}"
 	doins -r $(find . -maxdepth 1 -type d -name 'qd100*') || die "doins -r failed"
 
-	dodoc *.txt
+	dodoc *.txt || die "dodoc failed"
 
 	prepgamesdirs
 }

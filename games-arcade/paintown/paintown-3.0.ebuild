@@ -1,4 +1,4 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -35,20 +35,20 @@ src_unpack() {
 }
 
 src_compile() {
-	cmake ../${P} || die "cmake"
-	emake || die "emake"
+	cmake ../${P} || die "cmake failed"
+	emake || die "emake failed"
 }
 
 src_install() {
-	dogamesbin bin/${PN} || die
+	dogamesbin bin/${PN} || die "dogamesbin failed"
 
-	cd ../${P} || die
+	cd ../${P}
 	insinto "${dir}"
-	doins -r data/* || die
+	doins -r data/* || die "doins failed"
 
 	make_desktop_entry ${PN} Paintown
 
-	dodoc "${WORKDIR}/${P}"/{README,TODO}
+	dodoc "${WORKDIR}/${P}"/{README,TODO} || die "dodoc failed"
 
 	prepgamesdirs
 }

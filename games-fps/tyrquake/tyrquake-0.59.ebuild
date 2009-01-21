@@ -1,4 +1,4 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -10,7 +10,7 @@ SRC_URI="http://disenchant.net/files/engine/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~x86"
 IUSE="cdinstall debug opengl"
 
 dir=${GAMES_DATADIR}/quake1
@@ -65,7 +65,7 @@ src_install() {
 		newgamesbin tyr-quake ${PN} || die "newgamesbin failed"
 	fi
 
-	dodoc readme.txt
+	dodoc readme.txt || die "dodoc failed"
 
 	prepgamesdirs
 }

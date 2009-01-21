@@ -16,8 +16,8 @@ KEYWORDS="~x86"
 IUSE="fmod mad ogg"
 
 RDEPEND="dev-games/ogre[cg,devil]
-	>=dev-games/ois-1.0
-	fmod? ( >=media-libs/fmodex-4.06.16 )
+	dev-games/ois
+	fmod? ( media-libs/fmod:1 )
 	mad? ( >=media-libs/openal-1.5.304
 		media-libs/libmad )
 	ogg? ( >=media-libs/openal-1.5.304
@@ -35,10 +35,10 @@ src_prepare() {
 	sed -i \
 		-e "s:bininstalldir="${prefix}/games":bininstalldir="${prefix}/bin":" \
 		-e "s:-llua5.1:-llua:" configure.ac || die "sed failed"
-		
+
 	epatch "${FILESDIR}/${PN}-ogre-fix.patch"
 	epatch "${FILESDIR}/${PN}-alc_error.patch"
-		
+
 	eautoreconf
 }
 
@@ -47,7 +47,7 @@ src_configure() {
 }
 
 src_install() {
-	dogamesbin bin/${PN} || die "dogamesbin failed"
+	dogamesbin bin/"${PN}" || die "dogamesbin failed"
 
 	insinto "${GAMES_DATADIR}/${PN}"
 	rm -r bin/docs

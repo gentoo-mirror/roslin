@@ -1,4 +1,4 @@
-# Copyright 2007-2008 Gentoo Foundation
+# Copyright 2007-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -18,5 +18,5 @@ DEPEND="${RDEPEND}"
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 
-	dodoc AUTHORS BUGS ChangeLog NEWS README TODO
+	dodoc AUTHORS BUGS ChangeLog NEWS README TODO || die "dodoc failed"
 }

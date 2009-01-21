@@ -33,9 +33,9 @@ src_prepare() {
 }
 
 src_install() {
-	dogamesbin onscripter
-	dodoc CHANGES INSTALL README
-	dosym onscripter "${GAMES_BINDIR}/${PN}"
+	dogamesbin onscripter || die "dogamesbin failed"
+	dodoc CHANGES INSTALL README || die "dodoc failed"
+	dosym onscripter "${GAMES_BINDIR}/${PN}" || die "dosym failed"
 
 	prepgamesdirs
 }

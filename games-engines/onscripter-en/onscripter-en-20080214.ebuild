@@ -33,8 +33,8 @@ src_prepare() {
 }
 
 src_install() {
-	dogamesbin onscripter
-	dodoc CHANGES INSTALL README
+	dogamesbin onscripter || die "dogamesbin failed"
+	dodoc CHANGES INSTALL README || die "dodoc failed"
 
 	prepgamesdirs
 }

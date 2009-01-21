@@ -10,8 +10,6 @@ HOMEPAGE="http://supertuxkart.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${PN}-${MY_PV}-src.tar.bz2
 	mirror://gentoo/${PN}.png"
 
-S=${WORKDIR}/${PN}-${MY_PV}
-
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
@@ -23,10 +21,12 @@ DEPEND=">=media-libs/plib-1.8.4
 	media-libs/openal
 	media-libs/libsdl"
 
+S=${WORKDIR}/${PN}-${MY_PV}
+
 src_compile() {
 	egamesconf \
-	--disable-dependency-tracking \
-	--datadir="${GAMES_DATADIR_BASE}"
+		--disable-dependency-tracking \
+		--datadir="${GAMES_DATADIR_BASE}" || die "econf failed"
 	emake || die "emake failed"
 }
 
@@ -36,21 +36,21 @@ src_install() {
 	#data install
 	dodir "/${GAMES_DATADIR}/${PN}/data"
 	insinto "/${GAMES_DATADIR}/${PN}/data"
-	doins -r data/*
+	doins -r data/* || die "doins failed"
 
 	#doc install
 	cd "${S}"/doc/players_manual/
 	rm Makefile*
 	dodir "/${GAMES_DATADIR_BASE}/doc/${P}"
 	insinto "/${GAMES_DATADIR_BASE}/doc/${P}"
-	doins ./*
+	doins ./* || die "doins failed"
 
 	#binary install
 	cd "${S}"
-	dogamesbin src/supertuxkart
+	dogamesbin src/supertuxkart || die "dogamesbin failed"
 
 	doicon "${DISTDIR}"/"${PN}".png
 	make_desktop_entry "${PN}" SuperTuxKart
-	dodoc AUTHORS ChangeLog README TODO
+	dodoc AUTHORS ChangeLog README TODO || die "dodoc failed"
 	prepgamesdirs
 }

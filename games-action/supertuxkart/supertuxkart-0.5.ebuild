@@ -34,21 +34,21 @@ src_install() {
 	#data install
 	dodir "/${GAMES_DATADIR}/${PN}/data"
 	insinto "/${GAMES_DATADIR}/${PN}/data"
-	doins -r data/*
+	doins -r data/* || die "doins failed"
 
 	#doc install
 	cd "${S}"/doc/players_manual/
 	rm Makefile*
 	dodir "/${GAMES_DATADIR_BASE}/doc/${P}"
 	insinto "/${GAMES_DATADIR_BASE}/doc/${P}"
-	doins ./*
+	doins ./* || die "doins failed"
 
 	#binary install
 	cd "${S}"
-	dogamesbin src/"${PN}"
+	dogamesbin src/"${PN}" || die "dogamesbin failed"
 
 	doicon "${DISTDIR}/${PN}.png"
 	make_desktop_entry "${PN}" SuperTuxKart
-	dodoc AUTHORS ChangeLog README TODO
+	dodoc AUTHORS ChangeLog README TODO || die "dodoc failed"
 	prepgamesdirs
 }

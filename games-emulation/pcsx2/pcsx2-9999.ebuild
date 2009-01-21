@@ -64,8 +64,8 @@ src_unpack() {
 		# Download just the dirs we need, not the whole repo
 		subversion_src_unpack
 		subversion_fetch ${PCSX2_SVN_URI}/bin ../bin
-		
-		cd ${S}
+
+		cd "${S}"
 
 		# Preserve custom CFLAGS passed to configure.
 		epatch "${FILESDIR}"/${PN}-0.9.4-custom-cflags.patch
@@ -75,7 +75,7 @@ src_unpack() {
 
 		# Allow plugin inis to be stored in ~/.pcsx2/inis.
 		epatch "${FILESDIR}"/${PN}-0.9.4-plugin-inis.patch
-		
+
 		# GCC 4.3 fix
 		epatch "${FILESDIR}"/${PN}-gcc43.patch
 
@@ -85,7 +85,7 @@ src_unpack() {
 src_compile() {
 	local myconf
 	filter-flags -O0
-	
+
 	if ! use x86 && ! use amd64; then
 		einfo "Recompiler not supported on this architecture. Disabling."
 		myconf=" --disable-recbuild"

@@ -78,7 +78,7 @@ src_unpack() {
 src_compile() {
 	local myconf
 	filter-flags -O0
-	
+
 	if ! use x86 && ! use amd64; then
 		einfo "Recompiler not supported on this architecture. Disabling."
 		myconf=" --disable-recbuild"

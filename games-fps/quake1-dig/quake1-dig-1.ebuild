@@ -1,4 +1,4 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -17,14 +17,14 @@ dir=${GAMES_DATADIR}/quake1/${MOD_DIR}
 
 src_unpack() {
 	unpack ${A}
-	mv dig29\ readme.txt readme.txt
+	mv dig29\ readme.txt readme.txt || die "mv failed"
 }
 
 src_install() {
 	insinto "${dir}"
-	doins -r maps progs sound progs.dat
+	doins -r maps progs sound progs.dat || die "doins failed"
 
-	dodoc *.txt
+	dodoc *.txt || die "dodoc failed"
 
 	if use darkplaces ; then
 		games_make_wrapper darkplaces-${MOD_DIR} \

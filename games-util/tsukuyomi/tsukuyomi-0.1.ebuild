@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="x11-libs/gtk+
+DEPEND=">=x11-libs/gtk+-2
 	x11-libs/libXtst"
 RDEPEND="${DEPEND}"
 

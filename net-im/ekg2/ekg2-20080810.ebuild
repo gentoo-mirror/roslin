@@ -16,7 +16,7 @@ SRC_URI="http://pl.ekg2.org/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="crypt gif gpm gsm gtk inotify jabber jpeg nls nogg perl python readline ruby spell sqlite sqlite3 ssl unicode xosd"
 
 DEPEND="crypt? ( app-crypt/gpgme )

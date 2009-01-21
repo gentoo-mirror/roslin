@@ -1,4 +1,4 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -16,8 +16,7 @@ IUSE="vispatch"
 
 DEPEND="vispatch? (
 		games-util/vispatch
-		app-arch/zip
-	)"
+		app-arch/zip )"
 
 pkg_setup() {
 	games_pkg_setup
@@ -46,9 +45,9 @@ src_install() {
 
 	# CDROM_SET starts at 0
 	if [[ "${CDROM_SET}" = "0" ]] ; then
-		dodoc "${CDROM_ROOT}"/Eternity/*.TXT
+		dodoc "${CDROM_ROOT}"/Eternity/*.TXT || die "dodoc failed"
 	else
-		dodoc "${CDROM_ROOT}"/*.txt
+		dodoc "${CDROM_ROOT}"/*.txt || die "dodoc failed"
 	fi
 
 	games-mod_src_install_tidy

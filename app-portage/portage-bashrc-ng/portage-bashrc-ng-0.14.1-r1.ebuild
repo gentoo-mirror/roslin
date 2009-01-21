@@ -1,4 +1,4 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header$
 
@@ -9,28 +9,28 @@ MY_PN=${MY_PN/-ng}
 MY_PV=${PV/_beta}
 MY_SF=${PN/-ng}
 
-DESCRIPTION="A pluggable Portage add-on. Included: tmpfs, autopatch, localepurge, perpackage, resumemerge, distclean"
+DESCRIPTION="A pluggable Portage add-on"
 HOMEPAGE="http://portage-bashrc.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${MY_SF}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
 
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc-macos ~ppc64 ~s390 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
 
 IUSE="tmpfs perpackage localepurge autopatch resumemerge distclean"
 
 RESTRICT="mirror"
 
-DEPEND=">=sys-apps/portage-2.1
+RDEPEND=">=sys-apps/portage-2.1
 	>=sys-apps/coreutils-5.94-r1
 	autopatch?	( >=sys-devel/patch-2.5.9 )
 	localepurge?	( >=app-admin/localepurge-0.5-r1 )"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${P}-name-collision-filter-flags-fix.patch
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-name-collision-filter-flags-fix.patch"
 	sed -e "s/CONFFILE/BASHRC_CONFFILE/g" -i bashrc || die "sed failed"
 }
 
@@ -57,50 +57,50 @@ pkg_postinst() {
 	einfo "emerge --config =${PF}"
 	einfo ""
 	einfo "If you want to configure ${PF} manually, please do:"
-	einfo "cp ${ROOT}etc/portage/bashrc-ng/bashrc-ng.conf.example ${ROOT}etc/portage/bashrc-ng/bashrc-ng.conf"
-	einfo "${EDITOR} ${ROOT}etc/portage/bashrc-ng/bashrc-ng.conf"
+	einfo "cp "${ROOT}"etc/portage/bashrc-ng/bashrc-ng.conf.example "${ROOT}"etc/portage/bashrc-ng/bashrc-ng.conf"
+	einfo "${EDITOR} "${ROOT}"etc/portage/bashrc-ng/bashrc-ng.conf"
 	echo ""
 	echo ""
 }
 
 pkg_config() {
-	cp ${ROOT}etc/portage/bashrc-ng/bashrc-ng.conf.example ${ROOT}etc/portage/bashrc-ng/bashrc-ng.conf
+	cp "${ROOT}"etc/portage/bashrc-ng/bashrc-ng.conf.example "${ROOT}"etc/portage/bashrc-ng/bashrc-ng.conf
 
 	if use autopatch; then
 		ebegin "Activating AutoPatch module"
 			sed -i -e "s:#autopatch=on:autopatch=on:" \
 			       -e "s:#PATCH_OVERLAY=\/usr\/portage\/local\/patches\/$:PATCH_OVERLAY=\/usr\/portage\/local\/patches\/:" \
-				   ${ROOT}etc/portage/bashrc-ng/bashrc-ng.conf || die
-			mkdir -p ${ROOT}usr/portage/local/patches
+				   "${ROOT}"etc/portage/bashrc-ng/bashrc-ng.conf || die
+			mkdir -p "${ROOT}"usr/portage/local/patches
 		eend $?
 	fi;
 
 	if use localepurge; then
 		ebegin "Activating LocalePurge module"
 			sed -i -e "s:#localepurge=on:localepurge=on:" \
-				${ROOT}etc/portage/bashrc-ng/bashrc-ng.conf || die
+				"${ROOT}"etc/portage/bashrc-ng/bashrc-ng.conf || die
 		eend $?
 	fi;
 
 	if use resumemerge; then
 		ebegin "Activating ResumeMerge module"
 			sed -i -e "s:#resumemerge=on:resumemerge=on:" \
-				${ROOT}etc/portage/bashrc-ng/bashrc-ng.conf || die
+				"${ROOT}"etc/portage/bashrc-ng/bashrc-ng.conf || die
 		eend $?
 	fi;
 
 	if use perpackage; then
 		ebegin "Activating PerPackage module"
 			sed -i -e "s:#perpackage=on:perpackage=on:" \
-				${ROOT}etc/portage/bashrc-ng/bashrc-ng.conf || die
-			touch ${ROOT}etc/portage/package.cflags
-			touch ${ROOT}etc/portage/package.cxxflags
-			touch ${ROOT}etc/portage/package.features
-			touch ${ROOT}etc/portage/package.ldflags
-			touch ${ROOT}etc/portage/package.nocflags
-			touch ${ROOT}etc/portage/package.nocxxflags
-			touch ${ROOT}etc/portage/package.nofeatures
-			touch ${ROOT}etc/portage/package.noldflags
+				"${ROOT}"etc/portage/bashrc-ng/bashrc-ng.conf || die
+			touch "${ROOT}"etc/portage/package.cflags
+			touch "${ROOT}"etc/portage/package.cxxflags
+			touch "${ROOT}"etc/portage/package.features
+			touch "${ROOT}"etc/portage/package.ldflags
+			touch "${ROOT}"etc/portage/package.nocflags
+			touch "${ROOT}"etc/portage/package.nocxxflags
+			touch "${ROOT}"etc/portage/package.nofeatures
+			touch "${ROOT}"etc/portage/package.noldflags
 		eend $?
 	fi;
 
@@ -108,15 +108,15 @@ pkg_config() {
 		ebegin "Activating tmpFS module"
 			sed -i -e "s:#tmpfs=on:tmpfs=on:" \
 			       -e "s:#PORTAGE_MEMSIZE=500M:PORTAGE_MEMSIZE=500M:" \
-					${ROOT}etc/portage/bashrc-ng/bashrc-ng.conf || die
-			touch ${ROOT}etc/portage/package.mem
+					"${ROOT}"etc/portage/bashrc-ng/bashrc-ng.conf || die
+			touch "${ROOT}"etc/portage/package.mem
 		eend $?
 	fi;
-	
+
 	if use distclean; then
 		ebegin "Activating DistClean module"
 			sed -i -e "s:#distclean=on:distclean=on:" \
-				${ROOT}etc/portage/bashrc-ng/bashrc-ng.conf || die
+				"${ROOT}"etc/portage/bashrc-ng/bashrc-ng.conf || die
 		eend $?
 	fi;
 }

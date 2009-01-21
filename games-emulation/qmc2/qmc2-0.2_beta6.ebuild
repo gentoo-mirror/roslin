@@ -50,9 +50,9 @@ src_install() {
 	emake ${FLAGS} install || die "make install failed"
 
 	## Not a big fan of doing this, but it's necessary due to build system
-	sed -ie "s%${D}%/%g" "${D}etc/${PN}/${PN}.ini" 
+	sed -ie "s%${D}%/%g" "${D}etc/${PN}/${PN}.ini"
 	rm "${D}etc/${PN}/${PN}.inie"
 	make_desktop_entry ${PN}
-	
+
 	prepgamesdirs
 }

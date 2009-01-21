@@ -1,4 +1,4 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: /var/cvsroot/gentoo-x86/games-emulation/ps2emu-cddvdlinuz/ps2emu-cddvdlinuz-0.3-r1.ebuild,v 1.7 2007/04/06 18:56:48 nyhm Exp $
 
@@ -22,10 +22,10 @@ S="${WORKDIR}/${PCSX2}/plugins/fw/FWlinuz/Linux"
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	
+
 	# fix some bad includes
 	epatch "${FILESDIR}/fix-includes.patch"
-	
+
 	# use gtk2
 	epatch "${FILESDIR}/${PN}-use-gtk2.patch"
 
@@ -34,7 +34,7 @@ src_unpack() {
 		-e '/\bstrip\b/d' \
 		-e 's/-O[0-9]\b//g' \
 		-e 's/-fomit-frame-pointer\b//g' \
-		Makefile || die	
+		Makefile || die
 }
 
 src_install() {

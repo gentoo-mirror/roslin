@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/ps2emu-fwlinuz
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+
+  21 Jan 2009; Michał Ziąbkowski <mziab@o2.pl> ps2emu-fwlinuz-0.1.ebuild,
+  ps2emu-fwlinuz-0.1-r1.ebuild, ps2emu-fwlinuz-9999.ebuild:
+  Fixed errors reported by repoman.
 
   08 Jun 2008; Michał Ziąbkowski <mziab@o2.pl>
   +files/ps2emu-fwlinuz-use-gtk2.patch, +ps2emu-fwlinuz-0.1-r1.ebuild,

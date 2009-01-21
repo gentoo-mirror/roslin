@@ -14,10 +14,11 @@ SLOT="0"
 LICENSE="BSD"
 KEYWORDS="ppc x86 ~alpha"
 
-DEPEND="sys-devel/gcc
-	dev-lang/perl
+DEPEND="dev-lang/perl
 	app-arch/unzip
 	sys-devel/bison"
+
+RDEPEND=""
 
 S=${WORKDIR}/${PN}
 
@@ -25,7 +26,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	epatch "${FILESDIR}"/fix.diff
+	epatch "${FILESDIR}"/${P}-fix.diff
 }
 
 src_compile() {

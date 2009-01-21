@@ -1,4 +1,4 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -40,7 +40,7 @@ src_unpack() {
 		cd "${S}"
 		unpack soa.zip
 		mkdir -p hipnotic/maps
-		mv *rtlights hipnotic/maps
+		mv *rtlights hipnotic/maps || die "mv failed"
 	fi
 }
 
@@ -60,9 +60,9 @@ src_install() {
 
 	# CDROM_SET starts at 0
 	if [[ "${CDROM_SET}" = "0" ]] ; then
-		dodoc "${CDROM_ROOT}"/Armagon/*.{TXT,txt}
+		dodoc "${CDROM_ROOT}"/Armagon/*.{TXT,txt} || die "dodoc failed"
 	else
-		dodoc "${CDROM_ROOT}"/*.txt
+		dodoc "${CDROM_ROOT}"/*.txt || die "dodoc failed"
 	fi
 
 	games-mod_src_install_tidy

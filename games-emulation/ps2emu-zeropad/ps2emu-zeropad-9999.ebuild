@@ -1,4 +1,4 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -23,14 +23,14 @@ S="${WORKDIR}/zeropad"
 src_unpack() {
 	subversion_src_unpack
 	cd "${S}"
-	
+
 	sed -r -i \
 		-e '/C(..)?FLAGS=/d' \
 		-e 's/-O[0-9]\b//g' \
 		-e 's/-fomit-frame-pointer\b//g' \
 		-e 's/C(..)?FLAGS\+="/C\1FLAGS+=" /' \
 		configure.ac || die
-	
+
 	eautoreconf -v --install || die
 }
 

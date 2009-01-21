@@ -1,5 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Header: $
 
 inherit eutils
 
@@ -13,8 +14,9 @@ KEYWORDS="~x86"
 IUSE=""
 
 DEPEND="dev-libs/libevent
-	dev-libs/openssl
-	sys-devel/make"
+	dev-libs/openssl"
+
+RDEPEND="${DEPEND}"
 
 src_install() {
 	dobin ${PN} || die "dobin failed"

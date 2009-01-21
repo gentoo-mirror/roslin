@@ -10,6 +10,7 @@ app-portage/portage-bashrc-ng:autopatch - Enable autopatch module.
 app-portage/portage-bashrc-ng:distclean - Enable distclean module.
 app-portage/portage-bashrc-ng:localepurge - Enable localepurge module.
 app-portage/portage-bashrc-ng:oldtmpfs - Enable old tmpfs module.
+app-portage/portage-bashrc-ng:perpackage - Enable perpackage module.
 app-portage/portage-bashrc-ng:resumemerge - Enable resumemerge module.
 app-portage/portage-bashrc-ng:tmpfs - Enable tmpfs module.
 games-emulation/bsnes:jma - Adds support for reading JMA archives

@@ -1,4 +1,4 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -30,15 +30,12 @@ DEPEND="${RDEPEND}
 	x11-proto/xproto"
 
 src_unpack() {
-
 	subversion_src_unpack
 	cd "${S}"
 	eautoreconf
-
 }
 
 src_compile() {
-
 	local myconf
 
 	# if you want to pass any other flags, use EXTRA_ECONF.
@@ -88,21 +85,17 @@ src_compile() {
 		${myconf} || die
 
 	emake || die
-
 }
 
 src_install() {
-
 	make DESTDIR="${D}" docdir=/usr/share/doc/${PF} install || die
 	# Give mrxvt perms to update utmp
 	fowners root:utmp /usr/bin/mrxvt
 	fperms g+s /usr/bin/mrxvt
-	dodoc AUTHORS CREDITS ChangeLog FAQ NEWS README* TODO
-
+	dodoc AUTHORS CREDITS ChangeLog FAQ NEWS README* TODO || die "dodoc failed"
 }
 
 pkg_postinst() {
-
 	if [[ -z $RXVT_TERM ]]; then
 		einfo
 		einfo "If you experience problems with curses programs, then this is"
@@ -117,5 +110,4 @@ pkg_postinst() {
 		einfo "in your ~/.mrxvtrc, or /etc/mrxvt/mrxvtrc."
 		einfo
 	fi
-
 }

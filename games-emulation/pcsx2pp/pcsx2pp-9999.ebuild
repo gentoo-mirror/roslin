@@ -51,21 +51,21 @@ src_unpack() {
 		subversion_src_unpack
 		subversion_fetch "${PCSX2_SVN_URI}/bin" "../bin"
 		subversion_fetch "${PCSX2_SVN_URI}/common" "../common"
-		cd ${S}
-		
+		cd "${S}"
+
 		# Preserve custom CFLAGS passed to configure.
 		#epatch "${FILESDIR}"/${PN}-custom-cflags.patch
 
 		# Allow plugin inis to be stored in ~/.pcsx2/inis.
 		#epatch "${FILESDIR}"/${PN}-plugin-inis.patch
-		
+
 		eautoreconf -v --install || die
 }
 
 src_compile() {
 	local myconf
 	filter-flags -O0
-	
+
 	egamesconf  \
 		$(use_enable devbuild) \
 		$(use_enable debug) \

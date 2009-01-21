@@ -1,4 +1,4 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -63,7 +63,7 @@ src_install() {
 		dosym "${dir}/id1/textures" "${dir}/fuhquake/textures"
 	fi
 
-	dodoc *.txt
+	dodoc *.txt || die "dodoc"
 
 	prepgamesdirs
 }

@@ -1,4 +1,4 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -56,7 +56,7 @@ src_unpack() {
 
 	ln -s "${DISTDIR}"/${RYGEL_F} ${RYGEL_F}.zip || die "ln rygel"
 	unpack ${QRP_F}
-	mv -f qrp*.pk3 qrp.zip || die
+	mv -f qrp*.pk3 qrp.zip || die "mv failed"
 
 	if use rygel ; then
 		# Rygel's textures take precedence over QRP textures
@@ -94,8 +94,8 @@ src_install() {
 		dosym "${dir}/id1/textures" "${dir}/fuhquake/textures"
 	fi
 
-	dodoc *.txt
-	dohtml *.html
+	dodoc *.txt || die "dodoc failed"
+	dohtml *.html || die "dohtml failed"
 
 	prepgamesdirs
 }

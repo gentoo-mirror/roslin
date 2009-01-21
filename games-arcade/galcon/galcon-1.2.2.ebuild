@@ -8,7 +8,7 @@ DESCRIPTION="Awesome high-paced multi-player galactic action-strategy game."
 HOMEPAGE="http://www.galcon.com/"
 SRC_URI="http://www.imitationpickles.org/galcon/files/${PN}.tgz"
 
-LICENSE="As Is"
+LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~x86"
 IUSE=""

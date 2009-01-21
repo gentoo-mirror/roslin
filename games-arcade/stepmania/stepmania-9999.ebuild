@@ -1,4 +1,4 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 inherit eutils cvs games autotools eutils
@@ -29,7 +29,7 @@ DEPEND="gtk? ( >=x11-libs/gtk+-2.0 )
 	theora? ( media-libs/libtheora )
 	virtual/opengl"
 
-S=${WORKDIR}/${ECVS_MODULE}							
+S=${WORKDIR}/${ECVS_MODULE}
 
 src_unpack() {
 	cvs_src_unpack ${A}
@@ -39,7 +39,6 @@ src_unpack() {
 }
 
 src_compile() {
-
 	econf \
 		--disable-dependency-tracking \
 		$(use_with debug) \
@@ -61,8 +60,8 @@ src_compile() {
 src_install() {
 	local dir=${GAMES_DATADIR}/${PN}
 
-	dodir ${dir}
-	exeinto ${dir}
+	dodir "${dir}"
+	exeinto "${dir}"
 	doexe src/stepmania || die "Install failed"
 	if use gtk; then
 		doexe src/GtkModule.so || die "Install failed"
@@ -70,21 +69,19 @@ src_install() {
 
 	cd "${WORKDIR}"/stepmania
 
-	insinto ${dir}
+	insinto "${dir}"
 
-	
 	doins -r Announcers BackgroundEffects BackgroundTransitions BGAnimations \
 		CDTitles Characters Courses Data Docs \
 		NoteSkins Packages RandomMovies Songs \
 		Themes || die "Install failed"
 
 	make_desktop_entry "${PN}" Stepmania
-	
-	newicon "Themes/default/Graphics/Common window icon.png" ${PN}.png
-		 
-	games_make_wrapper ${PN} "${dir}"/"${PN}" "${dir}" 
-			 
-	prepgamesdirs
 
+	newicon "Themes/default/Graphics/Common window icon.png" ${PN}.png
+
+	games_make_wrapper ${PN} "${dir}"/"${PN}" "${dir}"
+
+	prepgamesdirs
 }
 

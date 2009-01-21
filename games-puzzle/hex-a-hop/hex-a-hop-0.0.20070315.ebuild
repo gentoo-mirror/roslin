@@ -1,14 +1,14 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
+
+EAPI=2
 
 inherit eutils games
 
 DESCRIPTION="The objective is simply to destroy all the green hexagonal tiles"
 HOMEPAGE="http://www.aceinternet.co.uk/~mokona/"
 SRC_URI="mirror://debian/pool/main/h/${PN}/${P/p-/p_}.orig.tar.gz"
-#	http://archive.ubuntu.com/ubuntu/pool/universe/h/hex-a-hop/hex-a-hop_0.0.20070315-2.diff.gz"
-#	mirror://debian/pool/main/h/${PN}/${P/p-/p_}-${PATCH_LEVEL}.diff.gz
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -23,9 +23,7 @@ DEPEND="${RDEPEND}"
 S=${WORKDIR}/${PN}
 dir=${GAMES_DATADIR}/${PN}
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	sed -i \
 		-e "s|= Hex-a-hop|= hex-a-hop|" Makefile || die "sed"
 
@@ -57,10 +55,12 @@ src_unpack() {
 
 src_install() {
 	insinto "$dir"
-	doins -r graphics *.dat
+	doins -r graphics *.dat || die "doins failed"
 
 	exeinto "$dir"
-	doexe ${PN}
+	doexe ${PN} || die "doexe failed"
 
 	games_make_wrapper ${PN} "./${PN}" "${GAMES_DATADIR}/${PN}"
+
+	prepgamesdirs
 }

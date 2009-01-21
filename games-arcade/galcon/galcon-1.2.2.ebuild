@@ -1,11 +1,11 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
 inherit games
 
-DESCRIPTION="Pogo jumping arcade game"
-HOMEPAGE="http://jet.ro/feats"
+DESCRIPTION="Awesome high-paced multi-player galactic action-strategy game."
+HOMEPAGE="http://www.galcon.com/"
 SRC_URI="http://www.imitationpickles.org/galcon/files/${PN}.tgz"
 
 LICENSE="As Is"
@@ -21,11 +21,11 @@ RDEPEND="${DEPEND}"
 S=${WORKDIR}/${PN}
 
 src_install() {
-	local dir=${GAMES_PREFIX_OPT}/${PN}
+	local dir="${GAMES_PREFIX_OPT}/${PN}"
 
-	exeinto ${dir}
-	doexe  ${PN} || die "doexe failed"
-	insinto ${dir}
+	exeinto "${dir}"
+	doexe ${PN} || die "doexe failed"
+	insinto "${dir}"
 	doins -r data *.{so,ico,png} || die "doins failed"
 
 	dodoc README.txt || die "dodoc failed"

@@ -21,8 +21,8 @@ IUSE="dedicated"
 RDEPEND="dev-lang/lua
 	!dedicated? (
 		media-libs/libsdl[X,alsa,opengl]
-		sys-libs/zlib
-	)"
+		sys-libs/zlib )"
+
 # has modified wavpack and pnglite in its sources
 # not worth of effort patching up to system ones
 DEPEND="${RDEPEND}
@@ -79,6 +79,6 @@ src_install() {
 		doins data/maps/* || die "doins failed"
 	fi
 
-	dodoc *.txt
+	dodoc *.txt || die "dodoc failed"
 	prepgamesdirs
 }

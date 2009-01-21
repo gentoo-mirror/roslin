@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
+
+EAPI=2
 
 inherit toolchain-funcs eutils games
 
@@ -23,9 +25,7 @@ DEPEND="${RDEPEND}
 
 S=${WORKDIR}/${P}-src
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	# the data-dir needs to be patched in some files
 	sed -i \
 		-e "s:data/:${GAMES_DATADIR}/${PN}/data/:g" \
@@ -67,12 +67,6 @@ src_install() {
 		doins -r data || die "doins failed"
 		make_desktop_entry ${PN} "Teeworlds"
 	fi
-	dodoc *.txt
+	dodoc *.txt || die "dodoc failed"
 	prepgamesdirs
-}
-
-pkg_postinst() {
-	games_pkg_postinst
-	elog "For more information about server setup read:"
-	elog "http://www.teeworlds.com/?page=docs"
 }

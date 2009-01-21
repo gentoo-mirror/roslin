@@ -1,5 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Header: $
 
 inherit eutils cvs games autotools eutils
 
@@ -28,6 +29,8 @@ DEPEND="gtk? ( >=x11-libs/gtk+-2.0 )
 	vorbis? ( media-libs/libvorbis )
 	theora? ( media-libs/libtheora )
 	virtual/opengl"
+
+RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${ECVS_MODULE}
 

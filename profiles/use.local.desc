@@ -18,3 +18,10 @@ games-emulation/zsnes:experimental - Enables work-in-progress code
 games-engines/onscripter-en:scale - Enables experimental scaling support
 games-fps/quake1-soa:vispatch - Adds patches for transparent water
 games-fps/quake1-zerstorer:vispatch - Adds patches for transparent water
+net-im/kadu:dcop - Installs dcop export module
+net-im/kadu:emoticons - Installs additional emoticon themes
+net-im/kadu:icons - Installs additional icon themes
+net-im/kadu:nodefmodules - Disables default modules
+net-im/kadu:powerkadu - Installs powerkadu modules
+net-im/kadu:sounds - Installs additional sound themes
+net-im/kadu:voice - Installs voice chat module

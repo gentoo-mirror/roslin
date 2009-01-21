@@ -1,4 +1,4 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -12,6 +12,8 @@ HOMEPAGE="http://members.elysium.pl/ytm/html/kydpdict.html"
 KEYWORDS="amd64 x86"
 SLOT="0"
 LICENSE="GPL-2"
+
+IUSE=""
 
 need-qt 3
 

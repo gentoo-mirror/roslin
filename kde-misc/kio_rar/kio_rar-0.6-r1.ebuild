@@ -18,4 +18,4 @@ RDEPEND="|| (
 
 need-kde 3
 
-PATCHES="${FILESDIR}/${PN}-bugfix.patch"
+PATCHES[0]="${FILESDIR}/${PN}-bugfix.patch"

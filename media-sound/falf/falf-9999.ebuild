@@ -23,7 +23,7 @@ done
 
 DEPEND="media-libs/taglib
 	media-libs/xine-lib"
-	
+
 RDEPEND="${DEPEND}"
 
 need-kde 3.4

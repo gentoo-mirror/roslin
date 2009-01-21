@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
+
+EAPI=2
 
 inherit eutils kde-functions qt3
 
@@ -18,9 +20,7 @@ RDEPEND="${DEPEND}"
 
 RESTRICT="primaryuri"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	sed -i \
 		-e "s+/usr/local+/usr+" src/${PN}.pro || die "sed failed"
 }
@@ -33,11 +33,11 @@ src_compile() {
 }
 
 src_install() {
-	dobin src/"${PN}"
+	dobin src/"${PN}" || die "dobin failed"
 
 	doicon "${FILESDIR}"/sopcast.gif
 	make_desktop_entry qsopcast "QSopCast - P2P Internet TV Viewer" \
 		sopcast.gif
 
-	dodoc AUTHORS README
+	dodoc AUTHORS README || die "dodoc failed"
 }

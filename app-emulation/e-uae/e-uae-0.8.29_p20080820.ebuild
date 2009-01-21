@@ -113,7 +113,7 @@ src_compile() {
 		--with-libscg-includedir=/usr/include/scsilib \
 		|| die "./configure failed"
 
-	emake -j1 || die "emake failed"
+	emake || die "emake failed"
 }
 
 src_install() {

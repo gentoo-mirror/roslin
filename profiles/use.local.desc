@@ -17,6 +17,7 @@ games-emulation/snes9x-gtk:jma - Adds support for reading JMA archives
 games-emulation/snes9x-gtk:netplay - Adds network play support
 games-emulation/snes9x-gtk:xrandr - Enables XRandR support
 games-emulation/sdlmame:wolfmame - Adds WolfMAME patches
+games-emulation/zsnes:custom-cflags - Enables compilation with custom CFLAGS
 games-emulation/zsnes:experimental - Enables work-in-progress code
 games-engines/onscripter-en:scale - Enables experimental scaling support
 games-fps/quake1-soa:vispatch - Adds patches for transparent water

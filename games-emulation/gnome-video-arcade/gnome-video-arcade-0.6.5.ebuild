@@ -1,8 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-inherit games gnome2
+inherit gnome2 games
 
 DESCRIPTION="A simple MAME front-end for the GNOME Desktop Environment"
 HOMEPAGE="http://sourceforge.net/projects/gva/"
@@ -30,7 +30,7 @@ DOCS="AUTHORS ChangeLog INSTALL NEWS README"
 
 src_unpack() {
 	gnome2_src_unpack
-	cd ${S}
+	cd "${S}"
 
 	# change search patch to include /usr/games/bin
 	sed -e "s:/usr/games:${GAMES_BINDIR}:g" \
@@ -40,13 +40,11 @@ src_unpack() {
 src_compile() {
 	local MY_USE
 	use gnome || MY_USE="--without-gnome"
-	
-	gnome2_src_compile --bindir=${GAMES_BINDIR} ${MY_USE} || die "compile failed"
+
+	gnome2_src_compile --bindir="${GAMES_BINDIR}" ${MY_USE} || die "compile failed"
 }
 
 src_install() {
 	gnome2_src_install || die "install failed"
 	prepgamesdirs
 }
-
-	

@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/zidrav4unix
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+
+  21 Jan 2009; Piotr Szymaniak <lazy_bum@o2.pl> zidrav4unix-1.2.0.ebuild:
+  Added missing || die.
 
   10 Aug 2008; Piotr Szymaniak <lazy_bum@o2.pl> zidrav4unix-1.2.0.ebuild:
   Fixed some repoman reported errors.

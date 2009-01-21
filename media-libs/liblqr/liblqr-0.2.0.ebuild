@@ -1,4 +1,4 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -14,10 +14,10 @@ IUSE=""
 RDEPEND="dev-libs/glib"
 DEPEND="${RDEPEND}"
 
-S="$WORKDIR/${PN}-1-${PV}"
+S=${WORKDIR}/${PN}-1-${PV}
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake intall failed"
 
-	dodoc AUTHORS BUGS ChangeLog NEWS README TODO
+	dodoc AUTHORS BUGS ChangeLog NEWS README TODO || die "dodoc failed"
 }

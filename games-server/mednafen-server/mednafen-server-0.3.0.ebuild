@@ -2,6 +2,8 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: /var/cvsroot/gentoo-x86/games-emulation/mednafen/mednafen-0.8.1.ebuild,v 1.1 2007/07/04 01:25:10 mr_bones_ Exp $
 
+EAPI=2
+
 inherit games
 
 DESCRIPTION="Server for Mednafen emulator"
@@ -18,9 +20,7 @@ DEPEND="sys-devel/gcc"
 
 S=${WORKDIR}/${PN}
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	sed -i \
 		-e "s|CFLAGS  =       -g|CFLAGS = ${CFLAGS}|" \
 		Makefile || die "sed"
@@ -29,14 +29,12 @@ src_unpack() {
 }
 
 src_install() {
-	dodoc README *.example
-	dobin ${PN}
+	dodoc README *.example || die "dodoc failed"
+	dogamesbin ${PN} || die "dogamesbin failed"
 	prepgamesdirs
 }
 
 pkg_postinst() {
-	einfo ""
 	einfo "Example config file and run file can be found in"
 	einfo "/usr/share/doc/${P}/"
-	einfo ""
 }

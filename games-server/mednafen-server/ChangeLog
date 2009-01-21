@@ -1,6 +1,10 @@
 # ChangeLog for games-server/mednafen-server
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 
+  21 Jan 2009; Piotr Szymaniak <lazy_bum@o2.pl>
+  mednafen-server-0.3.0.ebuild:
+  Ported to EAPI 2, added missing || die.
+
   21 Jan 2009; Michał Ziąbkowski <mziab@o2.pl>
   mednafen-server-0.3.0.ebuild:
   Removed redundant inherit.

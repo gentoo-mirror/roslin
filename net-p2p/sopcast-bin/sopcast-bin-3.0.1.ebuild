@@ -1,4 +1,4 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -19,7 +19,7 @@ RESTRICT="strip"
 
 # All dependencies might not be listed, since the binary blob's homepage only lists libstdc++
 RDEPEND="amd64? ( app-emulation/emul-linux-x86-compat )
-		x86? ( >=virtual/libstdc++-3.3 )"
+	x86? ( >=virtual/libstdc++-3.3 )"
 
 DEPEND="${RDEPEND}"
 
@@ -35,7 +35,7 @@ src_unpack() {
 
 src_install() {
 	exeinto /opt/${PN}
-	doexe sp-sc-auth
+	doexe sp-sc-auth || die "doexe failed"
 	dosym /opt/${PN}/sp-sc-auth /usr/bin/sp-sc
-	dodoc Readme
+	dodoc Readme || die "dodoc failed"
 }

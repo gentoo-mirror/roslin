@@ -1,10 +1,10 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
 inherit eutils
 
-DESCRIPTION="E-Book Reader. Supports several e-book formats: fb2 (fictionbook), html, chm, plucker, palmdoc, zTxt, tcr, rtf, oeb, openreader, mpbipocket and plain text. Also provides direct reading from tar, zip, gzip and bzip2 archives, including support of multiple books in one archive"
+DESCRIPTION="E-Book Reader that supports several e-book formats"
 HOMEPAGE="http://www.fbreader.org/"
 SRC_URI="http://www.fbreader.org/${PN}-sources-${PV}.tgz"
 
@@ -44,14 +44,14 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	sed -i -e "s:FBReader.png:fbreader.png:" fbreader/desktop/Makefile
-	sed -i -e "s:@install -m 0644 desktop \$(DESTDIR)/usr/share/applications/\$(TARGET).desktop::" fbreader/desktop/Makefile
+	cd "${S}"
+	sed -i -e "s:FBReader.png:fbreader.png:" \
+		fbreader/desktop/Makefile || die "sed failed"
+	sed -i -e "s:@install -m 0644 desktop \$(DESTDIR)/usr/share/applications/\$(TARGET).desktop::" \
+		fbreader/desktop/Makefile || die "sed failed"
 }
 
 src_compile () {
-	
-	cd ${S}
 	sed -i "s:INSTALLDIR=/usr/local:INSTALLDIR=/usr:" makefiles/arch/desktop.mk || die "updating desktop.mk failed"
 	echo "TARGET_ARCH = desktop" > makefiles/target.mk
 
@@ -70,14 +70,13 @@ src_compile () {
 		sed -i "s:MOC = moc-qt3:MOC = ${QTDIR}/bin/moc:" makefiles/arch/desktop.mk || die "updating desktop.mk failed"
 		sed -i "s:QTINCLUDE = -I /usr/include/qt3:QTINCLUDE = -I ${QTDIR}/include:" makefiles/arch/desktop.mk || die "updating desktop.mk failed"
 		sed -i "s:UILIBS = -lqt-mt:UILIBS = -L${QTDIR}/lib -lqt-mt:" makefiles/arch/desktop.mk
-
 	fi
-	
+
 	if use gtk ; then
 	# gtk
 		echo "UI_TYPE = gtk" >> makefiles/target.mk
 	fi
-	
+
 	if use debug ; then
 		echo "TARGET_STATUS = debug" >> makefiles/target.mk
 	else
@@ -87,10 +86,9 @@ src_compile () {
 	emake || die "emake failed"
 }
 
-src_install()
-{
-	emake DESTDIR=${D} install || die "install failed"
-	
+src_install() {
+	emake DESTDIR="${D}" install || die "install failed"
+
 	for res in 16 32 48; do
 		insinto /usr/share/icons/hicolor/${res}x${res}/apps/
 		newins "${S}"/fbreader/icons/application/${res}x${res}.png fbreader.png
@@ -117,13 +115,11 @@ src_install()
 		Type=Application
 		Categories=Application;Office;Viewer;
 	EOF
-	
+
 	insinto /usr/share/mimelnk/application
-	doins x-fb2.desktop
+	doins x-fb2.desktop || die "doins failed"
 	insinto /usr/share/applications/
-	doins fbreader.desktop
+	doins fbreader.desktop || die "doins failed"
 
 	dosym /usr/bin/FBReader /usr/bin/fbreader
 }
-
-

@@ -27,12 +27,12 @@ S="${WORKDIR}/fceu"
 src_prepare() {
 	epatch "${FILESDIR}/${P}-cmakelists.patch"
 	epatch "${FILESDIR}/${P}-build-fix.patch"
-	
+
 	local build_type
-	
+
 	use debug && build_type="debug"
 	use debug || build_type="release"
-	
+
 	echo "add_subdirectory(${build_type})" \
 	> cmake/native/CMakeLists.txt
 }
@@ -47,11 +47,11 @@ src_configure() {
 src_install() {
 	use debug && newgamesbin bin/${PN}DBG fceux
 	use debug || newgamesbin bin/${PN}REL fceux
-	
+
 	dodoc AUTHORS TODO-PROJECT changelog.txt \
 	    documentation/*.txt documentation/*.html \
 	    documentation/faq documentation/todo
 	doman documentation/fceux.6
-	
+
 	prepgamesdirs
 }

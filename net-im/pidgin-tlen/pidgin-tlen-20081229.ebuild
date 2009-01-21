@@ -22,6 +22,6 @@ src_compile() {
 
 src_install() {
 	emake install LOCALBASE="/usr" DESTDIR="${D}" || die "Install failed"
-	dodoc README
+	dodoc README || die "dodoc failed"
 }
 

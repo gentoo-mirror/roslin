@@ -43,8 +43,8 @@ src_compile() {
 }
 
 src_install() {
-	dobin src/jabbin
-	dodoc README INSTALL COPYING
+	dobin src/jabbin || die "dobin failed"
+	dodoc README INSTALL COPYING || die "dodoc failed"
 	dodir /usr/share/jabbin
 	rsync -rlptDv --exclude=.svn --exclude=readme sound iconsets "${D}"/usr/share/jabbin/
 }

@@ -14,6 +14,7 @@ KEYWORDS="~x86"
 IUSE=""
 
 DEPEND="app-arch/zip"
+RDEPEND=""
 
 S=${WORKDIR}/${PN}
 

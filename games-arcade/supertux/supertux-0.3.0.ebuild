@@ -18,12 +18,12 @@ IUSE="debug"
 RDEPEND=">=media-libs/libsdl-1.2.4
 	>=media-libs/sdl-image-1.2.2
 	sys-libs/zlib
-	dev-util/ftjam
 	>=dev-games/physfs-1.0.0
 	media-libs/libvorbis
 	media-libs/libogg
 	>=media-libs/openal-1.5.304"
 DEPEND="${RDEPEND}
+	dev-util/ftjam
 	x11-libs/libXt"
 
 src_compile() {

@@ -1,4 +1,4 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -8,7 +8,7 @@ DESCRIPTION="Terminal-based Tetris clone by Victor Nilsson."
 HOMEPAGE="http://victornils.net/tetris/"
 SRC_URI="http://victornils.net/tetris/${P}.tar.gz"
 
-LICENSE=""
+LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~x86"
 IUSE="X allegro joystick ncurses net"

@@ -1,4 +1,4 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -58,10 +58,10 @@ src_install() {
 	if use oss; then
 		newexe libspu2PeopsOSS.so.* libspu2PeopsOSS.so.${PV} || die
 	fi
-	
+
 	if use alsa; then
 		newexe libspu2PeopsALSA.so.* libspu2PeopsALSA.so.${PV} || die
 	fi
-	
+
 	prepgamesdirs
 }

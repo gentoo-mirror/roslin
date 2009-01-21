@@ -15,6 +15,7 @@ HOMEPAGE="http://sourceforge.net/projects/mac-port"
 SRC_URI="http://www.genoetigt.de/ape/${MY_P}.tar.gz"
 RESTRICT="mirror"
 
+# See License.htm
 LICENSE="unknown"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
@@ -33,7 +34,7 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die "make install failed"
-	dodoc AUTHORS INSTALL NEWS README TODO COPYING
-	dohtml ${S}/src/License.htm ${S}/src/Readme.htm
+	make DESTDIR="${D}" install || die "make install failed"
+	dodoc AUTHORS INSTALL NEWS README TODO || die "dodoc failed"
+	dohtml src/License.htm src/Readme.htm || die "dohtml failed"
 }

@@ -1,22 +1,25 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-inherit base games
-inherit cmake-utils
+EAPI=2
+
+inherit base cmake-utils games
 
 DESCRIPTION="Classic 2D jump'n run sidescroller game similar to SuperMario: Milestone 2"
 HOMEPAGE="http://supertux.lethargik.org/"
-SRC_URI="http://download.berlios.de/${PN}/${P}.tar.bz2"
+SRC_URI="mirror://berlios//${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="2"
-KEYWORDS="amd64 x86"
+KEYWORDS="~x86"
+IUSE=""
 
 DEPEND="virtual/opengl
 	media-libs/libsdl
 	media-libs/sdl-image
 	dev-games/physfs
 	media-libs/openal"
+RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${PN}-${PV%[a-z]}"
 RESTRICT="mirror"

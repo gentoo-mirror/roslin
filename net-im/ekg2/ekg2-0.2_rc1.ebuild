@@ -109,7 +109,7 @@ src_install() {
 
 	# einstall messes up perl
 	emake DESTDIR="${D}" install || die "einstall failed"
-	dodoc docs/*
+	dodoc docs/* || die "dodoc failed"
 
 	use perl && fixlocalpod
 }

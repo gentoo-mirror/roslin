@@ -25,7 +25,7 @@ src_prepare() {
 	sed -i nesemu.defs \
 	    -e "s/-O3 -fomit-frame-pointer -funroll-loops/${CFLAGS}/" \
 	    || die "sed failed"
-	    
+
 	sed -i Makefile.linux \
 	    -e "s/CFLAGS =/CFLAGS +=/" \
 	    || die "sed failed"
@@ -38,6 +38,6 @@ src_compile() {
 src_install() {
 	newgamesbin ${PN}.linux.elf ${PN}
 	dodoc README
-	
+
 	prepgamesdirs
 }

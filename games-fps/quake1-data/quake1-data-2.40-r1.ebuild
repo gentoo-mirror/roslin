@@ -63,14 +63,14 @@ src_install() {
 	insinto "${GAMES_DATADIR}"/quake1/id1
 	case "${CDROM_SET}" in
 		0)  doins "${CDROM_ROOT}"/id1/pak1.pak || die "doins pak1.pak"
-		    dodoc "${CDROM_ROOT}"/*.txt
+			dodoc "${CDROM_ROOT}"/*.txt || die "dodoc failed"
 		    ;;
 		1|3)doins id1/pak1.pak || die "doins pak1.pak"
-		    dodoc *.txt
+			dodoc *.txt || die "dodoc failed"
 		    ;;
 		2)  newins "${CDROM_ROOT}"/Setup/ID1/PAK1.PAK pak1.pak \
 				|| die "newins pak1.pak"
-		    dodoc "${CDROM_ROOT}"/Docs/*
+			dodoc "${CDROM_ROOT}"/Docs/* || die "dodoc failed"
 		    ;;
 	esac
 

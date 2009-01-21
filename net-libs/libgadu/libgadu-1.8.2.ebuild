@@ -15,6 +15,7 @@ KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="ssl threads"
 
 DEPEND="ssl? ( >=dev-libs/openssl-0.9.6m )"
+RDEPEND="${DEPEND}"
 
 src_compile() {
 	econf \

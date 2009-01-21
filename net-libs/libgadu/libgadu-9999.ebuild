@@ -19,6 +19,7 @@ KEYWORDS=""
 IUSE="ssl threads"
 
 DEPEND="ssl? ( >=dev-libs/openssl-0.9.6m )"
+RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${PN}
 

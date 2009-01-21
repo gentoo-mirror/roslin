@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ekg/ekg-1.7.ebuild,v 1.6 2007/10/11 19:26:05 pylon Exp $
+# $Header: $
 
 inherit cvs eutils
 
@@ -38,7 +38,7 @@ S=${WORKDIR}/${PN}
 src_unpack() {
 #	unpack ${A}
 	cvs_src_unpack
-	cd ${S}
+	cd "${S}"
 #	epatch ${FILESDIR}/${PN}-1.6_rc3-libgadu.patch
 #	epatch ${FILESDIR}/${PN}-1.7_rc2-giflib.patch
 #	eautoreconf

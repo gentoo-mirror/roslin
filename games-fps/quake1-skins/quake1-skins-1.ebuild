@@ -1,4 +1,4 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -24,7 +24,7 @@ dir=${GAMES_DATADIR}/quake1
 src_unpack() {
 	echo ">>> Unpacking ${PAKFILE} to ${PWD}"
 	unzip -qo "${DISTDIR}/${PAKFILE}" || die "unzip failed"
-	mv progs/*.txt .
+	mv progs/*.txt . || die "mv failed"
 }
 
 src_install() {
@@ -37,7 +37,7 @@ src_install() {
 	# Set up symlink, for the demo levels to include the skins
 	dosym "${dir}/id1/${subdir}" "${dir}/demo/${subdir}"
 
-	dodoc *.txt
+	dodoc *.txt || die "dodoc failed"
 
 	prepgamesdirs
 }
@@ -46,5 +46,4 @@ pkg_postinst() {
 	games_pkg_postinst
 
 	elog "Use a Quake 1 client (e.g. darkplaces) to take advantage of these."
-	echo
 }

@@ -1,7 +1,0 @@
-# ChangeLog for net-wireless/rt73-firmware
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: $
-
-  11 Aug 2008; Piotr Szymaniak <lazy_bum@o2.pl> +rt73-firmware-1.8.ebuild:
-  New package, ebuild thanks to Davide Pesavento (bug #204314).
-

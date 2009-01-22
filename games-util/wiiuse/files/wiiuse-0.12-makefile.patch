@@ -1,6 +1,6 @@
 diff -Nur wiiuse_v0.12.old/example/Makefile wiiuse_v0.12/example/Makefile
 --- wiiuse_v0.12.old/example/Makefile	2008-04-02 02:45:40.000000000 +0200
-+++ wiiuse_v0.12/example/Makefile	2008-04-14 15:50:00.618412701 +0200
++++ wiiuse_v0.12/example/Makefile	2009-01-22 16:32:34.343707633 +0100
 @@ -64,7 +64,7 @@
  
  install:
@@ -10,10 +10,9 @@ diff -Nur wiiuse_v0.12.old/example/Makefile wiiuse_v0.12/example/Makefile
  	fi
  
  
-Pliki wiiuse_v0.12.old/example/.Makefile.swp i wiiuse_v0.12/example/.Makefile.swp ró¿ni± siê
 diff -Nur wiiuse_v0.12.old/example-sdl/Makefile wiiuse_v0.12/example-sdl/Makefile
 --- wiiuse_v0.12.old/example-sdl/Makefile	2008-04-02 02:45:53.000000000 +0200
-+++ wiiuse_v0.12/example-sdl/Makefile	2008-04-14 15:59:05.602412668 +0200
++++ wiiuse_v0.12/example-sdl/Makefile	2009-01-22 16:32:34.343707633 +0100
 @@ -64,7 +64,7 @@
  
  install:
@@ -23,9 +22,25 @@ diff -Nur wiiuse_v0.12.old/example-sdl/Makefile wiiuse_v0.12/example-sdl/Makefil
  	fi
  
  $(BIN): mkdir $(OBJS)
+diff -Nur wiiuse_v0.12.old/Makefile wiiuse_v0.12/Makefile
+--- wiiuse_v0.12.old/Makefile	2008-02-26 02:18:47.000000000 +0100
++++ wiiuse_v0.12/Makefile	2009-01-22 16:33:42.855708421 +0100
+@@ -10,10 +10,10 @@
+ wiiuse:
+ 	@$(MAKE) -C src
+ 
+-ex:
++ex: wiiuse
+ 	@$(MAKE) -C example
+ 
+-sdl-ex:
++sdl-ex: wiiuse
+ 	@$(MAKE) -C example-sdl
+ 
+ distclean:
 diff -Nur wiiuse_v0.12.old/src/Makefile wiiuse_v0.12/src/Makefile
 --- wiiuse_v0.12.old/src/Makefile	2008-03-03 00:30:04.000000000 +0100
-+++ wiiuse_v0.12/src/Makefile	2008-04-14 15:46:45.246412684 +0200
++++ wiiuse_v0.12/src/Makefile	2009-01-22 16:32:34.343707633 +0100
 @@ -73,10 +73,8 @@
  	@-rm -r debug-* release-* 2> /dev/null
  

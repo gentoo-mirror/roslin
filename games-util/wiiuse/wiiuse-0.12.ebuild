@@ -52,7 +52,7 @@ src_compile() {
 	use debug && opts="debug=1"
 	opts="${opts} ${bld}"
 
-	emake -j1 ${opts} || die "emake failed"
+	emake ${opts} || die "emake failed"
 }
 
 src_install() {

@@ -21,6 +21,7 @@ DEPEND=">=media-libs/plib-1.8.4
 	media-libs/openal
 	media-libs/freealut
 	media-libs/libsdl"
+RDEPEND="${DEPEND}"
 
 src_compile() {
 	egamesconf \

@@ -20,6 +20,7 @@ DEPEND=">=media-libs/plib-1.8.4
 	media-libs/libvorbis
 	media-libs/openal
 	media-libs/libsdl"
+RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${PN}-${MY_PV}
 

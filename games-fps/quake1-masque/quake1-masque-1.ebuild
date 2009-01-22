@@ -1,4 +1,4 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -13,3 +13,4 @@ inherit games games-mod
 HOMEPAGE="http://tronyn.planetquake.gamespy.com/
 	http://underworld.planetquake.gamespy.com/quakerev051101a.html"
 DESCRIPTION="Masque of the Red Death - An atmospheric trail of medieval carnage."
+IUSE=""

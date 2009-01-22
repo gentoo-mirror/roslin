@@ -1,4 +1,4 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -12,3 +12,4 @@ DESCRIPTION="The Lizard's Trance - map evolved from Remix Quake Mapping Challeng
 HOMEPAGE="http://www.celephais.net/board/view_thread.php?id=60227"
 SRC_URI="http://isoterra.co.uk/stuff/e2m5/${MOD_MAP}.zip
 	${SRC_ADDICT}/${MOD_MAP}.zip"
+IUSE=""

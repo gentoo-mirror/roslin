@@ -1,4 +1,4 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -20,3 +20,4 @@ inherit eutils games games-mod
 DESCRIPTION="Slime Refinery Complex for Quoth"
 HOMEPAGE="http://www.celephais.net/board/view_thread.php?id=60175"
 SRC_URI="http://lambert.jeanphilippe.free.fr/DownLoad/src2.zip"
+IUSE=""

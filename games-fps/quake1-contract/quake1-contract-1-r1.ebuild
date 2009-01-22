@@ -1,4 +1,4 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -14,3 +14,4 @@ DESCRIPTION="Contract Revoked - Quake 1 single-player pack"
 HOMEPAGE="http://kell.leveldesign.org/"
 SRC_URI="${SRC_ADDICT}/${MOD_FILENAME}
 	${SRC_KELL}/${MOD_FILENAME}"
+IUSE=""

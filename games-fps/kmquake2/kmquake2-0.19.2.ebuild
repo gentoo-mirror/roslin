@@ -1,4 +1,4 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -64,7 +64,7 @@ pkg_setup() {
 		epause 5
 		die "no video renderer chosen"
 	fi
-	
+
 	if ! use alsa && ! use oss && ! use sdl && ! use dedicated; then
 		echo
 		eerror "you should choose at least one audio output:"

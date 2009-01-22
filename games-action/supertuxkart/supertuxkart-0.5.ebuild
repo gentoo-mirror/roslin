@@ -24,10 +24,7 @@ DEPEND=">=media-libs/plib-1.8.4
 RDEPEND="${DEPEND}"
 
 src_compile() {
-	egamesconf \
-		--disable-dependency-tracking \
-		--datadir="${GAMES_DATADIR_BASE}" \
-			|| die "configuration failed"
+	egamesconf --datadir="${GAMES_DATADIR_BASE}" || die "econf failed"
 	emake || die "emake failed"
 }
 

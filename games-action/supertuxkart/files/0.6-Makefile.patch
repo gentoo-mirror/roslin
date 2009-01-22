@@ -1,0 +1,22 @@
+--- src/Makefile.am.old	2009-01-22 23:26:28.000000000 +0100
++++ src/Makefile.am	2009-01-22 23:26:52.000000000 +0100
+@@ -2,7 +2,7 @@
+ 
+ SUBDIRS = ide
+ 
+-bindir=$(prefix)/games
++bindir=$(prefix)/bin
+ bin_PROGRAMS = supertuxkart
+ 
+ AM_CPPFLAGS = -DSUPERTUXKART_DATADIR="\"$(datadir)/games/$(PACKAGE)/\""  \
+--- src/Makefile.in.old	2009-01-22 23:26:22.000000000 +0100
++++ src/Makefile.in	2009-01-22 23:26:42.000000000 +0100
+@@ -224,7 +224,7 @@
+ am__quote = @am__quote@
+ am__tar = @am__tar@
+ am__untar = @am__untar@
+-bindir = $(prefix)/games
++bindir = $(prefix)/bin
+ build = @build@
+ build_alias = @build_alias@
+ build_cpu = @build_cpu@

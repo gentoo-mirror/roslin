@@ -1,4 +1,4 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -12,3 +12,4 @@ DESCRIPTION="3 Quake 1 single-player maps in an Egyptian temple"
 HOMEPAGE="http://daz.quaddicted.com/maps.html"
 # The "2" is *not* a version number
 SRC_URI="http://daz.quaddicted.com/files/${MOD_DIR}.zip"
+IUSE=""

@@ -1,4 +1,4 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -13,13 +13,13 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="+sound wiiuse"
+IUSE="+sound wiimote"
 
 DEPEND="media-libs/libsdl[opengl]
 	media-libs/sdl-ttf
 	media-libs/sdl-image
 	sound? ( media-libs/sdl-mixer[vorbis] )
-	wiiuse? ( games-util/wiiuse )"
+	wiimote? ( games-util/wiiuse )"
 RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${PN}
@@ -45,7 +45,7 @@ src_compile() {
 		append-flags "-DNOSOUND"
 	fi
 
-	if use wiiuse; then
+	if use wiimote; then
 		append-flags "-DWITH_WIIUSE"
 		LIBS+=" -lwiiuse"
 	fi

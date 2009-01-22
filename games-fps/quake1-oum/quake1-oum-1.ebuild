@@ -1,4 +1,4 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -8,4 +8,4 @@ inherit eutils games games-mod
 
 DESCRIPTION="5-level Quake 1 episode"
 HOMEPAGE="http://teamshambler.planetquake.gamespy.com/rev010727.html"
-
+IUSE=""

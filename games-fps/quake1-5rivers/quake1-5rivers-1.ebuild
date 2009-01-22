@@ -1,4 +1,4 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -15,12 +15,13 @@ DESCRIPTION="Mini campaign in DOOM 3 hell-style with three small to medium
 sized, dark and scrary maps"
 HOMEPAGE="http://lambert.jeanphilippe.free.fr/"
 SRC_URI="${SRC_ADDICT}/${MOD_DIR}.zip"
+IUSE=""
 
 dir=${GAMES_DATADIR}/quake1
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 }
 
 src_install() {

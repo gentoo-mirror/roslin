@@ -1,4 +1,4 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -16,6 +16,7 @@ DESCRIPTION="Descent into the Maelstrom"
 HOMEPAGE=""
 SRC_URI="http://www.quaddicted.com/filebase/maelstromv2.zip
 	http://shub-hub.quaddicted.com/files/maps_singleplayer/maelstromv2.zip"
+IUSE=""
 
 src_unpack() {
 	unpack ${A}

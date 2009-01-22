@@ -1,4 +1,4 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -24,6 +24,7 @@ SRC_URI="movie? ( The_Seal_Of_Nehahra.zip )
 	elek_neh_episode4.zip
 	nehupdate3.zip
 	nehmusicfix.zip"
+IUSE=""
 
 src_unpack() {
 	unpack ${A}

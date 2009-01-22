@@ -1,4 +1,4 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -15,3 +15,4 @@ inherit eutils games games-mod
 DESCRIPTION="Evil Exhumed by Willem (Warren Marshall)"
 HOMEPAGE="http://www.celephais.net/board/view_thread.php?id=60261"
 SRC_URI="http://wantonhubris.com/levels/${MOD_MAP}/EvilExhumed.zip"
+IUSE=""

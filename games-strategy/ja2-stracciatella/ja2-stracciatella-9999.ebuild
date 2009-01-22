@@ -1,4 +1,4 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -10,7 +10,7 @@ DESCRIPTION="An enhanced port of Jagged Alliance 2 to SDL"
 HOMEPAGE="http://ja2.dragonriders.de/"
 SRC_URI=""
 
-LICENSE="SFI"
+LICENSE="SFI-SCLA"
 SLOT="0"
 
 KEYWORDS=""
@@ -26,7 +26,7 @@ SGPDATADIR="${GAMES_PREFIX_OPT}/${PN}"
 
 pkg_setup() {
 	games_pkg_setup
-	
+
 	langcount=0
 	for i in ${LINGUAS}
 	do
@@ -64,7 +64,7 @@ src_install() {
 
 	doman ja2.6
 	dodoc Changelog TODO
-	
+
 	doicon "${FILESDIR}/${PN}.png"
 	make_desktop_entry "ja2 -fullscreen" "Jagged Alliance 2 - Stracciatella"
 
@@ -73,6 +73,6 @@ src_install() {
 
 pkg_postinst() {
 	elog "Remember to place your datafiles in $SGPDATADIR, converted to lowercase."
-	elog "For more information see $HOMEPAGE" 
+	elog "For more information see $HOMEPAGE"
 }
 

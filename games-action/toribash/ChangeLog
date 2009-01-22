@@ -1,6 +1,9 @@
 # ChangeLog for games-action/toribash
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+
+  22 Jan 2009; Piotr Szymaniak <lazy_bum@o2.pl> toribash-3.50.ebuild:
+  Still ugly, but a little less now.
 
   18 Dec 2008; Piotr Szymaniak <lazy_bum@o2.pl> +toribash-3.50.ebuild:
   Initial ebuild (with ugly lua fix).

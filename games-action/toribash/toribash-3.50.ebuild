@@ -1,4 +1,4 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -20,8 +20,8 @@ RDEPEND="dev-lang/lua
 	virtual/glut"
 DEPEND="povray? ( media-gfx/povray )"
 
-if use x86; then S=${WORKDIR}/${P}-i386
-else S=${WORKDIR}/${P}-amd64
+if use x86; then S="${WORKDIR}/${P}-i386"
+else S="${WORKDIR}/${P}-amd64"
 fi
 
 dir=${GAMES_PREFIX_OPT}/${PN}
@@ -35,7 +35,8 @@ src_install() {
 	doexe ${PN} || die "doexe failed"
 
 	# ugly fix for missing lua
-	dosym /usr/lib/liblua.so /usr/lib/liblua5.1.so.0
+	dosym /usr/lib/liblua.so /usr/lib/liblua5.1.so.0 \
+		|| die "dosym failed"
 
 	newicon data/textures/logo.tga ${PN}.tga
 

@@ -2,6 +2,9 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  22 Jan 2009; Michał Ziąbkowski <mziab@o2.pl> Manifest:
+  Fixed Manifest.
+
   08 Jan 2009; Piotr Szymaniak <lazy_bum@o2.pl> -darkplaces-20070927.ebuild,
   -darkplaces-20080723_beta2.ebuild, -darkplaces-20080826_beta1.ebuild,
   +darkplaces-20081004.ebuild, +darkplaces-20090106_beta1.ebuild:

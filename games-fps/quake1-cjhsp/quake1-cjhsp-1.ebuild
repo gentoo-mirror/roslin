@@ -1,4 +1,4 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -10,3 +10,4 @@ inherit eutils games games-mod
 DESCRIPTION="The Katagean Redoubt"
 HOMEPAGE="http://www.celephais.net/board/view_thread.php?id=60171"
 SRC_URI="${SRC_ADDICT}/${MOD_MAP}.zip"
+IUSE=""

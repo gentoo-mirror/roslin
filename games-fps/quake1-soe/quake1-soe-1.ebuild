@@ -1,4 +1,4 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -11,11 +11,12 @@ inherit games games-mod
 DESCRIPTION="Contract Revoked - Quake 1 single-player pack"
 HOMEPAGE="http://tronyn.planetquake.gamespy.com/"
 SRC_URI="${SRC_ADDICT}/${MOD_DIR}_full.zip"
+IUSE=""
 
 dir=${GAMES_DATADIR}/quake1
 
 src_unpack() {
-	unpack "${A}"
+	unpack ${A}
 	cd "${S}"
 
 	mkdir "${MOD_DIR}"

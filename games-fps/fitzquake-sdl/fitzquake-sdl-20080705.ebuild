@@ -1,4 +1,4 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -33,7 +33,7 @@ src_unpack() {
 	sed -i \
 		-e "s!basedir, host_parms.basedir!basedir, \"${GAMES_DATADIR}/quake1\"!" \
 		common.c || die "sed failed"
-	
+
 	sed -i \
 		-e "s!STRIP_CMD := strip!STRIP_CMD := echo!" \
 		Makefile || die "sed failed"

@@ -12,6 +12,7 @@ DESCRIPTION="The Dig - small SP episode for Quake 1"
 HOMEPAGE=""
 SRC_URI="http://shub-hub.quaddicted.com/files/maps_singleplayer/dig.zip
 	http://www.quaddicted.com/filebase/dig.zip"
+IUSE=""
 
 dir=${GAMES_DATADIR}/quake1/${MOD_DIR}
 

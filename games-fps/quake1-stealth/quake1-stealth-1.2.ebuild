@@ -1,4 +1,4 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -17,8 +17,10 @@ DESCRIPTION="Stealth Quake is a retelling of Quake if it were a stealth survival
 HOMEPAGE="http://forums.inside3d.com/viewtopic.php?p=10210"
 SRC_URI="!darkplaces? ( ${SRC_RENNYC}/${MY_PN}WQ.rar )
 	darkplaces? ( ${SRC_RENNYC}/${MY_PN}DP.rar )"
+IUSE=""
 
 DEPEND="app-arch/unrar"
+RDEPEND=""
 
 pkg_setup() {
 	games_pkg_setup
@@ -37,7 +39,7 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	cd ${WORKDIR}
+	cd "${WORKDIR}"
 
 	if use darkplaces; then
 		mv Stealth stealth || die "mv failed"

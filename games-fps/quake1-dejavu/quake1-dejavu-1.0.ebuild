@@ -1,4 +1,4 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -19,6 +19,7 @@ HOMEPAGE="http://www.celephais.net/board/view_thread.php?id=60115"
 SRC_URI="${SRC_ADDICT}/quoth.zip
 	${SRC_KELL}/quoth.zip
 	http://shub-hub.com/files/maps_singleplayer/${MY_P}.zip"
+IUSE=""
 
 src_unpack() {
 	unpack ${MY_P}.zip

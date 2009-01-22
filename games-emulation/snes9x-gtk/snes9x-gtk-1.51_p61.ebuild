@@ -20,6 +20,7 @@ IUSE="joystick +jma netplay opengl +xv +xrandr +zlib"
 RESTRICT="mirror"
 
 RDEPEND=">=x11-libs/gtk+-2.10
+	>=gnome-base/libglade-2.0
 	>=media-libs/portaudio-19_pre
 	joystick? ( >=media-libs/libsdl-1.2.12 )
 	opengl? ( >=x11-libs/gtkglext-1.0 )
@@ -30,6 +31,11 @@ DEPEND="${RDEPEND}
 	x86? ( dev-lang/nasm )"
 
 S="${WORKDIR}/snes9x-1.51-src/gtk"
+
+src_prepare() {
+	epatch "${FILESDIR}/${P}-as-needed.patch"
+	epatch "${FILESDIR}/${P}-string-literal.patch"
+}
 
 src_configure() {
 	egamesconf $(use_with opengl) \

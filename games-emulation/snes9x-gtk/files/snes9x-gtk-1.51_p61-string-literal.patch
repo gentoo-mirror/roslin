@@ -1,0 +1,22 @@
+--- gtk.orig/src/gtk_cheat.cpp	2008-12-17 19:49:06.000000000 +0100
++++ gtk/src/gtk_cheat.cpp	2009-01-06 18:57:27.000000000 +0100
+@@ -186,7 +186,7 @@
+                                                 GTK_DIALOG_MODAL,
+                                                 GTK_MESSAGE_ERROR,
+                                                 GTK_BUTTONS_OK,
+-                                                error);
++                                                "%s", error);
+     gtk_dialog_run (GTK_DIALOG (dialog));
+     gtk_widget_destroy (dialog);
+ 
+--- gtk.orig/src/gtk_config.cpp	2008-12-17 19:49:06.000000000 +0100
++++ gtk/src/gtk_config.cpp	2009-01-06 19:14:38.000000000 +0100
+@@ -1234,7 +1234,7 @@
+ 
+     for (int i = NUM_JOYPAD_LINKS; b_links[i].snes9x_name; i++)
+     {
+-        snprintf (buf, 256, b_links[i].snes9x_name);
++        snprintf (buf, 256, "%s", b_links[i].snes9x_name);
+         cmd = S9xGetPortCommandT (buf);
+         S9xMapButton (shortcut[i - NUM_JOYPAD_LINKS].base_hex (),
+                       cmd,

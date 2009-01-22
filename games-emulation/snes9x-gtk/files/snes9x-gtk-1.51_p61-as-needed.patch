@@ -1,0 +1,21 @@
+--- gtk.orig/Makefile.in	2008-12-17 19:49:10.000000000 +0100
++++ gtk/Makefile.in	2009-01-06 22:20:15.000000000 +0100
+@@ -173,7 +173,7 @@
+ snes9x_gtk_OBJECTS = $(am_snes9x_gtk_OBJECTS)
+ snes9x_gtk_DEPENDENCIES = $(am__append_7)
+ snes9x_gtk_LINK = $(CXXLD) $(snes9x_gtk_CXXFLAGS) $(CXXFLAGS) \
+-	$(AM_LDFLAGS) $(LDFLAGS) -o $@
++	$(AM_LDFLAGS) -o $@
+ DEFAULT_INCLUDES = -I.@am__isrc@
+ depcomp = $(SHELL) $(top_srcdir)/depcomp
+ am__depfiles_maybe = depfiles
+@@ -497,7 +497,8 @@
+ 	../i386/$(DEPDIR)/$(am__dirstamp)
+ snes9x-gtk$(EXEEXT): $(snes9x_gtk_OBJECTS) $(snes9x_gtk_DEPENDENCIES) 
+ 	@rm -f snes9x-gtk$(EXEEXT)
+-	$(snes9x_gtk_LINK) $(snes9x_gtk_OBJECTS) $(snes9x_gtk_LDADD) $(LIBS)
++	$(snes9x_gtk_LINK) $(snes9x_gtk_OBJECTS) \
++	$(LDFLAGS) $(snes9x_gtk_LDADD) $(LIBS)
+ 
+ mostlyclean-compile:
+ 	-rm -f *.$(OBJEXT)

@@ -1,4 +1,4 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -11,6 +11,7 @@ inherit games games-mod
 DESCRIPTION="White Room - Quake 1 SP Mod by Willem."
 HOMEPAGE="http://www.celephais.net/board/view_thread.php?id=60277"
 SRC_URI="http://wantonhubris.com/levels/WhiteRoom/${MOD_DIR}.zip"
+IUSE=""
 
 src_unpack() {
 	unpack ${A}

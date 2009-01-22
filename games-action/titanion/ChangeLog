@@ -1,7 +1,0 @@
-# ChangeLog for games-action/titanion
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: $
-
-  14 Jun 2008; Piotr Szymaniak <lazy_bum@o2.pl> titanion-0.3.ebuild:
-  Added ~amd64 keyword.
-

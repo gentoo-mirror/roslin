@@ -1,5 +1,0 @@
-# ChangeLog for games-action/psyno
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-
-  25 Sep 2007; Piotr Szymaniak <lazy_bum@o2.pl> psyno-0.3.0.ebuild:
-  Added ebuild from bug #193788. Thanks to Marcel Unbehaun.

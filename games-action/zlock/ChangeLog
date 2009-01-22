@@ -1,9 +1,0 @@
-# ChangeLog for games-action/reflectball
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-
-*zlock-0.20.ebuild (15 Oct 2007)
-
-  15 Oct 2007; Piotr Szymaniak <lazy_bum@o2.pl> +zlock-0.20.ebuild,
-  +files/zlock-0.20.diff, +files/zlock-config.dat,
-  +files/zlock-score.dat:
-  New ebuild (bug #195423). Thanks to Marcel Unbehaun.

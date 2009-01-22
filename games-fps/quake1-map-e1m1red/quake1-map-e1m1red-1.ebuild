@@ -1,4 +1,4 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -12,6 +12,7 @@ DESCRIPTION="Bloody Slipgates - map evolved from The Slipgate Duplex."
 HOMEPAGE="http://www.celephais.net/board/view_thread.php?id=60259"
 SRC_URI="http://qexpo.tastyspleen.net/uploaded/4/${MOD_MAP}.zip
 	http://shub-hub.com/files/maps_singleplayer/${MOD_MAP}.zip"
+IUSE=""
 
 dir=${GAMES_DATADIR}/quake1
 

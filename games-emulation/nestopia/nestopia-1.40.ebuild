@@ -58,7 +58,8 @@ src_install() {
 		> "${D}/${GAMES_BINDIR}/${PN}" \
 		|| die "sed failed"
 
-		dodoc README.Linux changelog.txt readme.html
+		dodoc README.Linux changelog.txt
+		dohtml -r readme.html doc/*.html doc/details
 
 		prepgamesdirs
 }

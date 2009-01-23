@@ -4,7 +4,7 @@
 
 EAPI=2
 
-inherit eutils games
+inherit eutils autotools games
 
 DESCRIPTION="A kart racing game starring Tux, the linux penguin (TuxKart fork)"
 HOMEPAGE="http://supertuxkart.sourceforge.net/"
@@ -13,8 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}-src.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-#KEYWORDS="~amd64 ~ppc ~x86"
-KEYWORDS=""
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="debug nls"
 
 DEPEND=">=media-libs/plib-1.8.4
@@ -25,6 +24,8 @@ DEPEND=">=media-libs/plib-1.8.4
 
 src_prepare() {
 	epatch "${FILESDIR}"/"${PV}"-Makefile.patch
+	
+	eautoreconf
 }
 
 src_configure() {
@@ -32,29 +33,4 @@ src_configure() {
 		--datadir="${GAMES_DATADIR_BASE}" \
 		$(use_enable debug) \
 		$(use_enable nls) || die
-}
-
-src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
-
-	#data install
-#	dodir "/${GAMES_DATADIR}/${PN}/data"
-#	insinto "/${GAMES_DATADIR}/${PN}/data"
-#	doins -r data/* || die "doins failed"
-
-	#doc install
-#	cd "${S}"/doc/players_manual/
-#	rm Makefile*
-#	dodir "/${GAMES_DATADIR_BASE}/doc/${P}"
-#	insinto "/${GAMES_DATADIR_BASE}/doc/${P}"
-#	doins ./* || die "doins failed"
-
-	#binary install
-#	cd "${S}"
-#	dogamesbin src/supertuxkart || die "dogamesbin failed"
-
-#	doicon "${DISTDIR}"/"${PN}".png
-#	make_desktop_entry "${PN}" SuperTuxKart
-#	dodoc AUTHORS ChangeLog README TODO || die "dodoc failed"
-	prepgamesdirs
 }

@@ -20,3 +20,18 @@
  build = @build@
  build_alias = @build_alias@
  build_cpu = @build_cpu@
+--- data/Makefile.am.orig	2009-01-20 00:47:50.000000000 +0100
++++ data/Makefile.am	2009-01-23 18:30:42.770579369 +0100
+@@ -13,10 +13,10 @@
+  $(shell find $(srcdir) -name "*.projectile") \
+  CREDITS
+ 
+-desktopdir = $(prefix)/share/applications
++desktopdir = $(datadir)/applications
+ desktop_DATA = supertuxkart.desktop
+ 
+-icondir = $(prefix)/share/pixmaps
++icondir = $(datadir)/pixmaps
+ dist_icon_DATA = supertuxkart_32.xpm supertuxkart_64.xpm
+ 
+ 

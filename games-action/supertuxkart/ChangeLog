@@ -2,6 +2,10 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  23 Jan 2009; Michał Ziąbkowski <mziab@o2.pl> files/0.6-Makefile.patch,
+  supertuxkart-0.6.ebuild:
+  Fixed datadir and econf warning. Reinstated keywords.
+
   22 Jan 2009; Piotr Szymaniak <lazy_bum@o2.pl> +files/0.6-Makefile.patch,
   supertuxkart-0.5.ebuild, -supertuxkart-0.6_rc1.ebuild,
   +supertuxkart-0.6.ebuild:

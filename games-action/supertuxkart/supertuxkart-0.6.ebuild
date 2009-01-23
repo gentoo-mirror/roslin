@@ -34,3 +34,8 @@ src_configure() {
 		$(use_enable debug) \
 		$(use_enable nls) || die
 }
+
+src_install() {
+	emake DESTDIR="${D}" install || die
+	dodoc AUTHORS ChangeLog NEWS README TODO
+}

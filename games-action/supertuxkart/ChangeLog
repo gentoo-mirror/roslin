@@ -4,6 +4,10 @@
 
   23 Jan 2009; Michał Ziąbkowski <mziab@o2.pl> files/0.6-Makefile.patch,
   supertuxkart-0.6.ebuild:
+  Fixed docs.
+
+  23 Jan 2009; Michał Ziąbkowski <mziab@o2.pl> files/0.6-Makefile.patch,
+  supertuxkart-0.6.ebuild:
   Fixed datadir and econf warning. Reinstated keywords.
 
   22 Jan 2009; Piotr Szymaniak <lazy_bum@o2.pl> +files/0.6-Makefile.patch,

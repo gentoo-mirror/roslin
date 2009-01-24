@@ -23,7 +23,8 @@ DEPEND=">=media-libs/plib-1.8.4
 	media-libs/libsdl"
 
 src_prepare() {
-	epatch "${FILESDIR}"/"${PV}"-Makefile.patch
+	epatch "${FILESDIR}"/"${PV}"-Makefile.patch \
+		"${FILESDIR}"/"${PV}"-desktop.patch
 	
 	eautoreconf
 }
@@ -36,6 +37,6 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
-	dodoc AUTHORS ChangeLog NEWS README TODO
+	emake DESTDIR="${D}" install || die "einstall failed"
+	dodoc AUTHORS ChangeLog NEWS README TODO || die "dodoc failed"
 }

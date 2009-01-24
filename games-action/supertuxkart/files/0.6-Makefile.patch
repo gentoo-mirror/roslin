@@ -20,21 +20,28 @@
  build = @build@
  build_alias = @build_alias@
  build_cpu = @build_cpu@
---- data/Makefile.am.orig	2009-01-20 00:47:50.000000000 +0100
-+++ data/Makefile.am	2009-01-23 18:30:42.770579369 +0100
+--- data/Makefile.am.old    2009-01-24 11:57:21.000000000 +0100
++++ data/Makefile.am    2009-01-24 12:08:55.000000000 +0100
 @@ -13,10 +13,10 @@
   $(shell find $(srcdir) -name "*.projectile") \
   CREDITS
- 
+
 -desktopdir = $(prefix)/share/applications
 +desktopdir = $(datadir)/applications
  desktop_DATA = supertuxkart.desktop
- 
+
 -icondir = $(prefix)/share/pixmaps
 +icondir = $(datadir)/pixmaps
  dist_icon_DATA = supertuxkart_32.xpm supertuxkart_64.xpm
- 
- 
+
+
+@@ -25,4 +25,5 @@
+ EXTRA_DIST = supertuxkart_desktop.template
+ CLEANFILES = supertuxkart.desktop
+ supertuxkart.desktop: Makefile supertuxkart_desktop.template
+-   sed 's#PREFIX#$(prefix)#' $(srcdir)/supertuxkart_desktop.template >supertuxkart.desktop
++   sed -e 's#PREFIXD#$(datadir)#' \
++       -e 's#PREFIX#$(prefix)#' $(srcdir)/supertuxkart_desktop.template >supertuxkart.desktop
 --- Makefile.am.orig	2009-01-20 00:48:21.000000000 +0100
 +++ Makefile.am	2009-01-23 20:29:34.878579821 +0100
 @@ -1,13 +1,11 @@

@@ -2,6 +2,9 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  24 Jan 2009; Piotr Szymaniak <lazy_bum@o2.pl> supertuxkart-0.6.ebuild:
+  Added prepgamesdirs, doh.
+
   24 Jan 2009; Michał Ziąbkowski <mziab@o2.pl> supertuxkart-0.6.ebuild:
   Fixed thinko.
 

@@ -43,4 +43,5 @@ src_configure() {
 src_install() {
 	emake DESTDIR="${D}" install || die "einstall failed"
 	dodoc AUTHORS ChangeLog NEWS README TODO || die "dodoc failed"
+	prepgamesdirs
 }

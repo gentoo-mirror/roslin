@@ -23,7 +23,10 @@ DEPEND=">=media-libs/plib-1.8.4
 	media-libs/libsdl"
 
 pkg_setup() {
-    use debug && filter-flags -fomit-frame-pointer
+    if use debug; then
+	filter-flags -fomit-frame-pointer
+	replace-flags -O? -O0
+    fi
 }
 
 src_prepare() {
@@ -37,7 +40,8 @@ src_configure() {
 	egamesconf \
 		--datadir="${GAMES_DATADIR_BASE}" \
 		$(use_enable debug) \
-		$(use_enable nls) || die
+		$(use_enable nls) \
+		--disable-optimization || die
 }
 
 src_install() {

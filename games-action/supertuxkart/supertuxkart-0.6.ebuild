@@ -4,7 +4,7 @@
 
 EAPI=2
 
-inherit eutils autotools games
+inherit eutils autotools flag-o-matic games
 
 DESCRIPTION="A kart racing game starring Tux, the linux penguin (TuxKart fork)"
 HOMEPAGE="http://supertuxkart.sourceforge.net/"
@@ -21,6 +21,10 @@ DEPEND=">=media-libs/plib-1.8.4
 	media-libs/libvorbis
 	media-libs/openal
 	media-libs/libsdl"
+
+pkg_setup() {
+    filter-flags -fomit-frame-pointer
+}
 
 src_prepare() {
 	epatch "${FILESDIR}"/"${PV}"-Makefile.patch \

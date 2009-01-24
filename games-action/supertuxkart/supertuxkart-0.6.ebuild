@@ -23,7 +23,7 @@ DEPEND=">=media-libs/plib-1.8.4
 	media-libs/libsdl"
 
 pkg_setup() {
-    filter-flags -fomit-frame-pointer
+    use debug && filter-flags -fomit-frame-pointer
 }
 
 src_prepare() {

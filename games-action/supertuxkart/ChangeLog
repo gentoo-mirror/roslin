@@ -3,6 +3,9 @@
 # $Header: $
 
   24 Jan 2009; Michał Ziąbkowski <mziab@o2.pl> supertuxkart-0.6.ebuild:
+  Fixed thinko.
+
+  24 Jan 2009; Michał Ziąbkowski <mziab@o2.pl> supertuxkart-0.6.ebuild:
   Filter out -fomit-frame-pointer when debug is enabled.
 
   24 Jan 2009; Piotr Szymaniak <lazy_bum@o2.pl> files/0.6-Makefile.patch:

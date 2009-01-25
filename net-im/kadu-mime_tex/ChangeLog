@@ -3,6 +3,11 @@
 # $Header: $
 
   25 Jan 2009; Michał Ziąbkowski <mziab@o2.pl>
+  +kadu-mime_tex-0.1.4.1-r1.ebuild, -kadu-mime_tex-1.4.1-r1.ebuild,
+  -kadu-mime_tex-1.4.1.1.ebuild:
+  Changed versioning scheme.
+
+  25 Jan 2009; Michał Ziąbkowski <mziab@o2.pl>
   kadu-mime_tex-0.6.5.1.ebuild, kadu-mime_tex-1.4.1-r1.ebuild,
   kadu-mime_tex-1.4.1.1.ebuild, +metadata.xml:
   Some repoman fixes.

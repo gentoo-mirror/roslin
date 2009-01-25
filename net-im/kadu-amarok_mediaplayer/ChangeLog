@@ -1,6 +1,10 @@
 # ChangeLog for net-im/kadu-amarok_mediaplayer
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+
+  25 Jan 2009; Michał Ziąbkowski <mziab@o2.pl>
+  kadu-amarok_mediaplayer-20071220-r1.ebuild, +metadata.xml:
+  Some repoman fixes.
 
   29 Jun 2008; Michał Ziąbkowski <mziab@o2.pl>
   -kadu-amarok_mediaplayer-20071220.ebuild,

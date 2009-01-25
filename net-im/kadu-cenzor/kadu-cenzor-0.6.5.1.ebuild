@@ -2,13 +2,14 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-SRC_URI="http://www.kadu.net/~dorr/moduly/${P}.tar.bz2"
+inherit kadu-base
 
-MOD_TYPE="ext"
+MOD_DEPEND=">=net-im/kadu-notify-${PV}"
 
-inherit kadu-module
+inherit kadu-mod
 
-DESCRIPTION="Kadu module that warns contacts about swearing"
+DESCRIPTION="Profanity filter for Kadu"
 HOMEPAGE="http://kadu.net"
 KEYWORDS="amd64 x86"
 IUSE=""
+

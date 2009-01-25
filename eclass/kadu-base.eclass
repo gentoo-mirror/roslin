@@ -7,10 +7,12 @@ RESTRICT="mirror"
 # If no version was requested, default to this one
 if [ -z "${MIN_VER}" ]
 then
-	MIN_VER="0.6.5"
+	MIN_VER="0.6.5.1"
 fi
 
-K_PV="${PV/_/-}"
+K_PV="${PV/_p/-}"
+K_PV="${K_PV/_/-}"
+
 NAME="${PN#*-}"
 
 S="${WORKDIR}/kadu"
@@ -40,10 +42,16 @@ kadu-disable_all()
 	for i in ${icons}; do
 	    echo icons_$i=n >>${S}/.config
 	done
+	
+	# Disable all sounds
+	cd ${S}/varia/themes/sounds
+	local sounds=`./get-all.sh ON | sed -e "s/;/ /g"`
+	for i in ${sounds}; do
+	    echo sound_$i=n >>${S}/.config
+	done
 }
 
-
-kadu-base_src_compile()
+kadu-base_src_configure()
 {
 	# Filter compiler flags
 	filter-flags -fno-rtti
@@ -51,6 +59,19 @@ kadu-base_src_compile()
 	local mycmakeargs="${mycmakeargs}
 		-D BUILD_DESCRIPTION:STRING=Gentoo Linux
 		-D ENABLE_AUTDOWNLOAD:BOOL=NO"
+
+	cmake-utils_src_configure
+}	
+
+kadu-base_src_compile()
+{
+	case ${EAPI} in
+	2)
+		;;
+	*)
+		cmake-utils_src_configure
+		;;
+	esac
 
 	cmake-utils_src_compile
 }
@@ -66,5 +87,13 @@ kadu-base_src_install()
 		fi
 }
 
-EXPORT_FUNCTIONS src_compile src_install
+case ${EAPI} in
+    2)
+	EXPORT_FUNCTIONS src_configure src_compile src_install
+	;;
+    *)
+	EXPORT_FUNCTIONS src_compile src_install
+	;;
+esac
+
 

@@ -1,17 +1,18 @@
 # Proper deps for external modules
 if [ "${MOD_TYPE}" != "ext" ]
 then
-	K_PV="${PV/_/-}"
+	K_PV="${PV}"
 else
-	K_PV="${MIN_VER/_/-}"
+	K_PV="${MIN_VER}"
 fi
 
+K_PV="${K_PV/_p/-}"
+K_PV="${K_PV/_/-}"
+
+DEPEND=">=dev-util/cmake-2.6.0"
 
 RDEPEND=">=net-im/kadu-core-${MIN_VER}
 		${MOD_DEPEND}"
-
-DEPEND="${RDEPEND}
-	>=dev-util/cmake-2.6.0"
 
 SRC_URI="http://www.kadu.net/download/stable/kadu-${K_PV}.tar.bz2
 		${MOD_URI}"

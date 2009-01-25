@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/ja2-stracciatella
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 
+  25 Jan 2009; Michał Ziąbkowski <mziab@o2.pl>
+  +ja2-stracciatella-0.11.ebuild:
+  Bumped.
+
   22 Jan 2009; Michał Ziąbkowski <mziab@o2.pl>
   ja2-stracciatella-0.10.ebuild, ja2-stracciatella-9999.ebuild:
   Fixed trailing whitespace and license.

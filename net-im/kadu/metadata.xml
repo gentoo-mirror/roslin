@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd></herd>
+<maintainer>
+  <email>mziab@o2.pl</email>
+  <name>Michał Ziąbkowski</name>
+</maintainer>
+<use>
+  <flag name='dcop'>Installs dcop export module</flag>
+  <flag name='emoticons'>Installs additional emoticon themes</flag>
+  <flag name='icons'>Installs additional icon themes</flag>
+  <flag name='nodefmodules'>Disables default modules</flag>
+  <flag name='powerkadu'>Installs powerkadu modules</flag>
+  <flag name='sounds'>Installs additional sound themes</flag>
+  <flag name='voice'>Installs voice chat module</flag>
+</use>
+</pkgmetadata>

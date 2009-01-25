@@ -1,6 +1,9 @@
-#
-# PACKAGE INFORMATION
-#
+# Copyright 1999-2009 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: $
+
+EAPI=2
+
 inherit kadu-base
 
 DESCRIPTION="The core of Kadu IM"
@@ -12,7 +15,8 @@ IUSE=""
 RDEPEND=">=x11-libs/qt-gui-4.4.0
 	>=x11-libs/qt-qt3support-4.4.0
 	>=x11-libs/qt-webkit-4.4.0
-	>=net-libs/libgadu-1.8.0
+	>=x11-libs/qt-dbus-4.4.0
+	>=net-libs/libgadu-1.8.0[threads]
 	!<net-im/kadu-core-0.6.5"
 
 DEPEND="${RDEPEND}
@@ -20,23 +24,8 @@ DEPEND="${RDEPEND}
 
 SRC_URI="http://www.kadu.net/download/stable/kadu-${K_PV}.tar.bz2"
 
-pkg_setup()
+src_prepare()
 {
-	# Check for pthread support in libgadu
-	if ! built_with_use net-libs/libgadu threads; then
-	    die "net-libs/libgadu needs to be built with USE=threads"
-	fi
-}
-
-src_unpack()
-{
-	# Unpack the sources
-	unpack ${A}
-	cd ${S}
-	
-	# Fix sounds
-	epatch ${FILESDIR}/${PN}-fix-sound-install-path.patch
-
 	# Disable everything besides the core
 	kadu-disable_all
 

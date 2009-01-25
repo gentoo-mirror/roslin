@@ -34,11 +34,10 @@ DEPEND="sdl? ( media-libs/libsdl
 			alsa? ( media-libs/alsa-lib )
 		  )
 	scsi? ( app-cdr/cdrtools )"
+	
+RDEPEND="${DEPEND}"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	epatch "${FILESDIR}"/uae-0.8.25-allow_spaces_in_zip_filenames.diff
 	epatch "${FILESDIR}"/uae-0.8.25-struct_uae_wrong_fields_name.diff
 	epatch "${FILESDIR}"/uae-0.8.26-uae_reset_args.diff
@@ -151,8 +150,11 @@ pkg_setup() {
 	my_config="${my_config} --enable-threads"
 }
 
-src_compile() {
+src_configure() {
 	econf ${my_config} || die "configure failed"
+}
+
+src_compile() {
 	emake -j1 || die "emake failed"
 }
 

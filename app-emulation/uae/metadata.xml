@@ -6,9 +6,4 @@
 		<email>mziab@o2.pl</email>
 		<name>Michał Ziąbkowski</name>
 	</maintainer>
-	<use>
-		<flag name='capslib'>Add CAPS library support</flag>
-		<flag name='sdl-sound'>Use <pkg>media-libs/sdl-sound</pkg> for audio
-			output</flag>
-	</use>
 </pkgmetadata>

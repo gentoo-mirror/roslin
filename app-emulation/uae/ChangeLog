@@ -2,6 +2,10 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  25 Jan 2009; Michał Ziąbkowski <mziab@o2.pl> uae-0.8.29.ebuild,
+  metadata.xml:
+  Some fixes.
+
   25 Jan 2009; Michał Ziąbkowski <mziab@o2.pl>
   +files/uae-0.8.25-allow_spaces_in_zip_filenames.diff,
   +files/uae-0.8.25-struct_uae_wrong_fields_name.diff,

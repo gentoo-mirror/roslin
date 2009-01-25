@@ -2,6 +2,11 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  25 Jan 2009; Michał Ziąbkowski <mziab@o2.pl>
+  kadu-desktop_docking-0.6.0.3.ebuild, -kadu-desktop_docking-0.6.5.ebuild,
+  +kadu-desktop_docking-0.6.5.1.ebuild, +metadata.xml:
+  Bumped. Removed previous version. Some repoman fixes.
+
   01 Jan 2009; Michał Ziąbkowski <mziab@o2.pl>
   -kadu-desktop_docking-0.6.0.2.ebuild,
   +kadu-desktop_docking-0.6.0.3.ebuild:

@@ -2,6 +2,10 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  25 Jan 2009; Michał Ziąbkowski <mziab@o2.pl> kadu-sounds-0.6.0.ebuild,
+  kadu-sounds-0.6.5.ebuild, +metadata.xml:
+  Some repoman fixes.
+
   15 Jan 2009; Piotr Szymaniak <lazy_bum@o2.pl> Manifest:
   Tarball changed, fixed Manifest.
 

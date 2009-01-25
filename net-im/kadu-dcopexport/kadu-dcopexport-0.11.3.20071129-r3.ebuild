@@ -1,14 +1,18 @@
+# Copyright 1999-2009 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: $
+
 SRC_URI="http://kadu.net/~dorr/moduly/dcopexport-0.11.3-20071129-0.6.0.tar.bz2"
 
 inherit kadu kde
 
 need-kde 3.5
 
-MOD_DEPEND="~net-im/kadu-dcc-${MIN_REQ}
-    ~net-im/kadu-history-${MIN_REQ}
-    ~net-im/kadu-notify-${MIN_REQ}
-    ~net-im/kadu-sms-${MIN_REQ}
-"
+MOD_DEPEND=">=net-im/kadu-dcc-${MIN_REQ}
+	>=net-im/kadu-history-${MIN_REQ}
+	>=net-im/kadu-notify-${MIN_REQ}
+	>=net-im/kadu-sms-${MIN_REQ}"
+
 MOD_TYPE="ext"
 
 inherit kadu-module kadu-module-func
@@ -16,11 +20,12 @@ inherit kadu-module kadu-module-func
 DESCRIPTION="Kadu module that exports many features via DCOP mechanism"
 HOMEPAGE="http://alan.umcs.lublin.pl/~pinkworm/dcopexport"
 KEYWORDS="amd64 x86"
+IUSE=""
 
 src_unpack()
 {
 	MOD_LDFLAGS="-L ${KDEDIR}/lib"
-	
+
 	kadu-module_src_unpack
 
 	kadu-module_spec_remove INCLUDES_PATH

@@ -17,7 +17,7 @@ IUSE=""
 
 # not sure about the actual version needed
 DEPEND="|| ( >=x11-libs/qt-4.3.0:4
-     x11-libs/qt-gui:4 )"
+    x11-libs/qt-gui:4 )"
 RDEPEND="${DEPEND}"
 
 src_compile() {

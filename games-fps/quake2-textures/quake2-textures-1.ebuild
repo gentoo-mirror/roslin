@@ -1,4 +1,4 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -53,7 +53,7 @@ src_unpack() {
 }
 
 src_install() {
-	insinto ${GAMES_DATADIR}/quake2/baseq2
+	insinto "${GAMES_DATADIR}"/quake2/baseq2
 	# Is unzipped, so >quake2-icculus-0.16.1-r1 can read the textures
 	doins -r models textures || die "doins -r failed"
 

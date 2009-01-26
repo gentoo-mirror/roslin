@@ -2,6 +2,8 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
+EAPI=2
+
 inherit eutils games
 
 DESCRIPTION="Arcade-style soccer game"
@@ -29,10 +31,7 @@ DEPEND="${RDEPEND}
 
 dir=${GAMES_DATADIR}/${PN}
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	mv -f Makefile.linux Makefile
 	mv "${WORKDIR}"/ETW/${PN} "${WORKDIR}"
 	find "${WORKDIR}" '(' -name CVS -o -name .cvsignore -o -name .keepme ')' \
@@ -48,7 +47,7 @@ src_install() {
 	games_make_wrapper "${PN}" "${GAMES_BINDIR}/${PN}.bin" "${dir}"
 	make_desktop_entry ${PN} "Eat The Whistle"
 
-	dodoc bugs.txt
+	dodoc bugs.txt || die "dodoc failed"
 
 	prepgamesdirs
 }

@@ -32,7 +32,7 @@ src_unpack() {
 		mkdir hipnotic
 		cp "${CDROM_ROOT}/${CDROM_MATCH}" hipnotic/pak0.pak
 		mv HIPNOTIC.VIS hipnotic.vis
-		vispatch -dir ${S}/hipnotic -data ${S}/hipnotic.vis || die "vispatch failed"
+		vispatch -dir "${S}"/hipnotic -data "${S}"/hipnotic.vis || die "vispatch failed"
 	fi
 }
 

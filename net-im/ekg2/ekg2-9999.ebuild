@@ -2,6 +2,8 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
+EAPI=2
+
 inherit eutils subversion
 
 DESCRIPTION="Text based Instant Messenger and IRC client that supports protocols like Jabber and Gadu-Gadu"
@@ -17,7 +19,7 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE="crypt gif gpm gsm gtk inotify jabber jpeg nls nogg perl python readline ruby spell sqlite sqlite3 ssl unicode xosd"
 
-DEPEND="crypt? ( app-crypt/gpgme )
+RDEPEND="crypt? ( app-crypt/gpgme )
 	gif? ( media-libs/giflib )
 	gpm? ( >=sys-libs/gpm-1.20.1 )
 	gsm? ( >=media-sound/gsm-1.0.10 )
@@ -36,20 +38,14 @@ DEPEND="crypt? ( app-crypt/gpgme )
 		jabber? ( >=net-libs/gnutls-1.0.17 ) )
 	xosd? ( x11-libs/xosd )
 	virtual/libintl
-	dev-util/cvs"
+	sys-libs/ncurses[unicode?]"
 
-RDEPEND="${DEPEND}"
-
-pkg_setup() {
-	if use unicode && ! built_with_use sys-libs/ncurses unicode; then
-		eerror "Ekg2 requires ncurses built with unicode support for unicode"
-		die
-	fi
-}
+DEPEND="${RDEPEND}
+		dev-util/cvs"
 
 S=${WORKDIR}/${PN}
 
-src_compile() {
+src_configure() {
 	econf \
 		"--with-pthread" \
 		$(use_with crypt gpg) \
@@ -76,8 +72,6 @@ src_compile() {
 		$(use_with xosd libxosd) \
 		`use jabber && use ssl && echo --with-libgnutls` \
 		|| die "econf failed"
-
-	emake || die "emake failed"
 }
 
 src_install() {

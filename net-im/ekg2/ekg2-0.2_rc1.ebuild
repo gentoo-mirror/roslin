@@ -2,6 +2,8 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
+EAPI=2
+
 WANT_AUTOCONF=latest
 #WANT_AUTOMAKE=1.7
 
@@ -37,24 +39,14 @@ DEPEND="crypt? ( app-crypt/gpgme )
 	ssl? ( >=dev-libs/openssl-0.9.6m
 		jabber? ( >=net-libs/gnutls-1.0.17 ) )
 	xosd? ( x11-libs/xosd )
+	sys-libs/ncurses[unicode?]
 	virtual/libintl"
 
 RDEPEND="${DEPEND}"
 
-pkg_setup() {
-	if use unicode && ! built_with_use sys-libs/ncurses unicode; then
-		eerror "Ekg2 requires ncurses built with unicode support for unicode"
-		die
-	fi
-}
-
 S=${WORKDIR}/${MY_P}
 
-src_unpack() {
-	unpack ${A}
-#	subversion_src_unpack
-	cd "${S}"
-
+src_prepare() {
 	# Ekg2 has no debug configure option
 	# Instead it features a runtime option which defaults to on
 	#! use debug && epatch ${FILESDIR}/${P}-no-default-debug.patch
@@ -68,7 +60,7 @@ src_unpack() {
 #		configure.ac || die "sed failed"
 }
 
-src_compile() {
+src_configure() {
 #	export WANT_AUTOMAKE="1.7"
 	export WANT_AUTOMAKE="latest"
 	econf \
@@ -97,8 +89,6 @@ src_compile() {
 		$(use_with xosd libxosd) \
 		`use jabber && use ssl && echo --with-libgnutls` \
 		|| die "econf failed"
-
-	emake || die "emake failed"
 }
 
 src_install() {

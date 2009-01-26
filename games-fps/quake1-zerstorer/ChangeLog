@@ -1,5 +1,9 @@
 # ChangeLog for games-fps/quake1-zerstorer
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+
+  26 Jan 2009; Michał Ziąbkowski <mziab@o2.pl>
+  quake1-zerstorer-1.1-r1.ebuild:
+  Fixed unquoted variable.
 
   18 Mar 2008; Piotr Szymaniak <lazy_bum@o2.pl>
   quake1-zerstorer-1.1-r1.ebuild:

@@ -1,4 +1,4 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -43,7 +43,7 @@ src_unpack() {
 
 	if use vispatch; then
 		mv PAK0.PAK pak0.pak
-		vispatch -dir ${S} -data ${S}/zer.vis \
+		vispatch -dir "${S}" -data "${S}"/zer.vis \
 			|| die "vispatch failed"
 		# Clean the vis files
 		rm zer.vis zer.dat

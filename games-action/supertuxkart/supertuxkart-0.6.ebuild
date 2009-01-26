@@ -22,6 +22,8 @@ DEPEND=">=media-libs/plib-1.8.4
 	media-libs/openal
 	media-libs/libsdl"
 
+RDEPEND="${DEPEND}"
+
 pkg_setup() {
     if use debug; then
 	filter-flags -fomit-frame-pointer
@@ -32,7 +34,7 @@ pkg_setup() {
 src_prepare() {
 	epatch "${FILESDIR}"/"${PV}"-Makefile.patch \
 		"${FILESDIR}"/"${PV}"-desktop.patch
-	
+
 	eautoreconf
 }
 

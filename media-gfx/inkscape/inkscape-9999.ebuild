@@ -2,6 +2,8 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
+EAPI=2
+
 inherit subversion gnome2 eutils
 
 DESCRIPTION="A SVG based generic vector-drawing program"
@@ -18,7 +20,7 @@ IUSE="cairo dia doc gnome inkjar jabber lcms mmx nls perl postscript python spel
 RESTRICT="test"
 
 COMMON_DEPEND="
-	>=app-text/poppler-bindings-0.8.3
+	>=app-text/poppler-bindings-0.8.3[cairo]
 	dev-cpp/glibmm
 	>=dev-cpp/gtkmm-2.10.0
 	>=dev-libs/boehm-gc-6.4
@@ -54,7 +56,7 @@ RDEPEND="
 	${COMMON_DEPEND}
 	dev-python/numpy
 	dia? ( app-office/dia )
-	postscript? ( >=media-gfx/pstoedit-3.44 media-gfx/skencil )
+	postscript? ( >=media-gfx/pstoedit-3.44[plotutils] media-gfx/skencil )
 	wmf? ( media-libs/libwmf )"
 
 DEPEND="${COMMON_DEPEND}
@@ -66,17 +68,6 @@ DEPEND="${COMMON_DEPEND}
 S=${WORKDIR}/${PN}
 
 pkg_setup() {
-	# bug 207070
-	if use postscript && ! built_with_use media-gfx/pstoedit plotutils ; then
-		eerror "you need to emerge media-gfx/pstoedit with plotutils support."
-		die "remerge media-gfx/pstoedit with USE=\"plotutils\""
-	fi
-	# bug 213026 and bug 213706
-	if ! built_with_use app-text/poppler-bindings cairo ; then
-		eerror "you need to emerge app-text/poppler-bindings with cairo	support."
-		die "remerge app-text/poppler-bindings with USE=\"cairo\""
-	fi
-
 	G2CONF="${G2CONF} --with-xft"
 	G2CONF="${G2CONF} $(use_enable cairo poppler-cairo)"
 	G2CONF="${G2CONF} $(use_with spell gtkspell)"

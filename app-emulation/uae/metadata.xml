@@ -6,4 +6,11 @@
 		<email>mziab@o2.pl</email>
 		<name>Michał Ziąbkowski</name>
 	</maintainer>
+	<use>
+		<flag name='scsi'>Enable the uaescsi.device</flag>
+		<flag name='sdl-sound'>Use <pkg>media-sound/sdl-sound</pkg> for audio
+			output</flag>
+		<flag name='ui'>Build the user interface (could be gtk or ncurses based,
+			depending on sdl, dga, svga and aalib USE flags)</flag>
+	</use>
 </pkgmetadata>

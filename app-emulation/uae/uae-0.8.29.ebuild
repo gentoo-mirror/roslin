@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/uae/uae-0.8.26-r1.ebuild,v 1.1 2007/08/13 14:00:19 pva Exp $
+# $Header: $
 
 EAPI=2
 
@@ -34,7 +34,7 @@ DEPEND="sdl? ( media-libs/libsdl
 			alsa? ( media-libs/alsa-lib )
 		  )
 	scsi? ( app-cdr/cdrtools )"
-	
+
 RDEPEND="${DEPEND}"
 
 src_prepare() {
@@ -152,10 +152,6 @@ pkg_setup() {
 
 src_configure() {
 	econf ${my_config} || die "configure failed"
-}
-
-src_compile() {
-	emake -j1 || die "emake failed"
 }
 
 src_install() {

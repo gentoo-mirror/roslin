@@ -26,10 +26,10 @@ pkg_setup() {
 
 src_unpack() {
 	if use vispatch; then
-		unpack "${A}"
+		unpack ${A}
 		mkdir rogue
 		cp "${CDROM_ROOT}/${CDROM_MATCH}" rogue/pak0.pak
-		vispatch -dir ${S}/rogue -data ${S}/rogue.vis || die "vispatch failed"
+		vispatch -dir "${S}"/rogue -data "${S}"/rogue.vis || die "vispatch failed"
 	fi
 }
 

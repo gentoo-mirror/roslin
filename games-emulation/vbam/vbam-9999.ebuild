@@ -72,7 +72,7 @@ src_compile() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die "make install failed"
-	dodoc doc/{DevInfo,ReadMe}.txt
+	dodoc doc/{DevInfo,ReadMe.SDL}.txt
 	doman debian/${PN}.1
 
 	prepgamesdirs

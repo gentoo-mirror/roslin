@@ -22,4 +22,6 @@ RDEPEND="${DEPEND}"
 
 src_prepare() {
 	epatch "${FILESDIR}/${P}-include.patch"
+	
+	kde4-base_src_prepare
 }

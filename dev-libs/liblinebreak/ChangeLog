@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/liblinebreak
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+
+  02 Feb 2009; Michał Ziąbkowski <mziab@o2.pl> liblinebreak-0.9.6.ebuild,
+  +liblinebreak-1.0.ebuild:
+  Bumped. Fixed license.
 
   23 Apr 2008; Michał Ziąbkowski <mziab@o2.pl> liblinebreak-0.9.6.ebuild:
   Silly me, forgot to add ~x86

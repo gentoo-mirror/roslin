@@ -1,6 +1,10 @@
 # ChangeLog for games-action/teewars
 # Copyright 2008-2009 Gentoo Foundation; Distributed under the GPL v2
 
+  02 Feb 2009; Piotr Szymaniak <lazy_bum@o2.pl> +teeworlds-0.5.1-r1.ebuild,
+  +files/fix_datadir_search.patch, -files/teeworlds-oss.patch:
+  Updated ebuild by Bruno Tarquini (bug #206287) with datadir fix.
+
   26 Jan 2009; Piotr Szymaniak <lazy_bum@o2.pl> -teeworlds-0.4.3.ebuild,
   -teeworlds-0.4.3-r1.ebuild, +teeworlds-0.5.1.ebuild:
   Version bump.

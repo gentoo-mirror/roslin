@@ -1,0 +1,7 @@
+# ChangeLog for games-engines/ONSlaught
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  03 Feb 2009; Michał Ziąbkowski <mziab@o2.pl> +ONSlaught-20090126.ebuild:
+  New ebuild.
+

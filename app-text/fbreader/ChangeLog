@@ -2,6 +2,10 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  07 Feb 2009; Michał Ziąbkowski <mziab@o2.pl> -fbreader-0.8.15-r1.ebuild,
+  -fbreader-0.8.17.ebuild:
+  Removed cruft.
+
   02 Feb 2009; Michał Ziąbkowski <mziab@o2.pl> +fbreader-0.10.2.ebuild:
   Bumped.
 

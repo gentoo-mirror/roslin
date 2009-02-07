@@ -15,8 +15,7 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64"
 IUSE=""
 
-# not sure about the actual version needed
-DEPEND="|| ( >=x11-libs/qt-4.3.0:4
+DEPEND="|| ( =x11-libs/qt-4.3*
     x11-libs/qt-gui:4 )"
 RDEPEND="${DEPEND}"
 

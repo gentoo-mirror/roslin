@@ -15,7 +15,7 @@ LICENSE="GPL-2"
 IUSE="debug"
 
 DEPEND="=x11-libs/qt-3*
-	!<net-libs/libgadu-1.8.0"
+	>=net-libs/libgadu-1.8.0"
 
 RDEPEND="${DEPEND}"
 
@@ -76,15 +76,7 @@ src_compile()
 	filter-flags -fno-rtti
 
 	local myconf
-	myconf="${myconf} --disable-autodownload --enable-dist-info=Gentoo"
-
-	if has_version '>=net-libs/libgadu-1.8.0'
-	then
-	    myconf="${myconf} --with-existing-libgadu"
-
-	    ewarn "Kadu will be linked against existing libgadu - dcc features may work improperly"
-	    ewarn "If you have problems, unmerge libgadu and reemerge kadu then"
-	fi
+	myconf="${myconf} --disable-autodownload --enable-dist-info=Gentoo --with-existing-libgadu"
 
 	# Compile package
 	econf \

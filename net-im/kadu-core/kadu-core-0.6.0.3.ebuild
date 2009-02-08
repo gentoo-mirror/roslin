@@ -2,6 +2,8 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
+EAPI=2
+
 inherit eutils flag-o-matic kadu
 
 DESCRIPTION="Core of Kadu IM"
@@ -12,7 +14,8 @@ LICENSE="GPL-2"
 
 IUSE="debug"
 
-DEPEND="=x11-libs/qt-3*
+DEPEND="|| ( x11-libs/qt:3[gif]
+	    x11-libs/qt:3 )
 	>=net-libs/libgadu-1.8.0"
 
 RDEPEND="${DEPEND}"
@@ -26,26 +29,8 @@ module_config()
 	sed -i -r "s/(^module_${1}\\s*=\\s*).*/\\1${2}/" .config
 }
 
-pkg_setup()
+src_prepare()
 {
-	# Break if qt3 is compiled without gif use flag
-	if has_version '=x11-libs/qt-3*' && ! built_with_use --missing true '=x11-libs/qt-3*' gif
-	then
-		die "Please re-emerge x11-libs/qt-3.x with the 'gif' flag set"
-	fi
-
-#	if has_version "<net-im/kadu-core-${MIN_REQ}"
-#	then
-#		die "Please unmerge old Kadu before you install this version"
-#	fi
-}
-
-src_unpack()
-{
-	# Unpack the sources
-	unpack ${A}
-	cd "${S}"
-
 	# Rewrite .config file to contain only internal modules defaulted to "n"
 	rm -f .config
 	for I in `find modules -maxdepth 1 -type d | grep "/[[:alnum:]_]\+" | cut -d "/" -f 2`
@@ -64,7 +49,7 @@ src_unpack()
 	epatch "${FILESDIR}/misc_opts.patch"
 }
 
-src_compile()
+src_configure()
 {
 	# Regenerate configure script
 	einfo "Reconfiguring package..."
@@ -81,15 +66,12 @@ src_compile()
 		${myconf} \
 		$(use_enable debug) \
 		|| die "Error: econf failed!"
-
-	emake \
-		|| die "Error: emake failed!"
 }
 
 src_install()
 {
 	# Install compiled package
-	make install DESTDIR="${D}" \
+	emake install DESTDIR="${D}" \
 		|| die "Error: make install failed!"
 
 	# Prepare docs

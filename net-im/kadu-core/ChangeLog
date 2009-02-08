@@ -3,6 +3,9 @@
 # $Header: $
 
   08 Feb 2009; Michał Ziąbkowski <mziab@o2.pl> kadu-core-0.6.0.3.ebuild:
+  Proper port to EAPI=2.
+
+  08 Feb 2009; Michał Ziąbkowski <mziab@o2.pl> kadu-core-0.6.0.3.ebuild:
   Removed EAPI=2. It was breaking compile.
 
   07 Feb 2009; Michał Ziąbkowski <mziab@o2.pl> kadu-core-0.6.0.3.ebuild:

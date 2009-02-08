@@ -1,5 +1,8 @@
 # ChangeLog for games-util/vispatch
-# Copyright 2007-2008 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 2007-2009 Gentoo Foundation; Distributed under the GPL v2
+
+  08 Feb 2009; Piotr Szymaniak <lazy_bum@o2.pl> +vispatch-1.4.5.ebuild:
+  Version bump.
 
   20 Nov 2008; Piotr Szymaniak <lazy_bum@o2.pl> vispatch-1.4.4.ebuild:
   Removed useless src_compile.

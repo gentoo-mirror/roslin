@@ -14,8 +14,8 @@ LICENSE="GPL-2"
 
 IUSE="debug"
 
-DEPEND="|| ( x11-libs/qt:3[gif]
-	    x11-libs/qt:3 )
+DEPEND="|| ( <x11-libs/qt-3.3.8b:3[gif]
+	    >=x11-libs/qt-3.3.8b:3 )
 	>=net-libs/libgadu-1.8.0"
 
 RDEPEND="${DEPEND}"
@@ -47,6 +47,7 @@ src_prepare()
 	# Apply patches
 	einfo "Applying patches..."
 	epatch "${FILESDIR}/misc_opts.patch"
+	epatch "${FILESDIR}/kill-strip.patch"
 }
 
 src_configure()

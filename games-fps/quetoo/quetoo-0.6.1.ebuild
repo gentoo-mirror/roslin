@@ -1,4 +1,4 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -6,8 +6,8 @@ inherit eutils games
 
 DESCRIPTION="Quake 2 performance engine"
 HOMEPAGE="http://jdolan.dyndns.org/trac/wiki/Quetoo"
-SRC_URI="http://jdolan.dyndns.org/jaydolan/files/${P}-full.tar.bz2
-	http://tastyspleen.net/~jdolan/${P}-full.tar.bz2"
+SRC_URI="http://jdolan.dyndns.org/jaydolan/files/${P}.tar.bz2
+	http://tastyspleen.net/~jdolan/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"

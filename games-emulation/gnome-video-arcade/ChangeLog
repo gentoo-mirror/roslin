@@ -2,6 +2,10 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  10 Feb 2009; Michał Ziąbkowski <mziab@o2.pl>
+  gnome-video-arcade-0.6.5.ebuild:
+  Added missing dep.
+
   21 Jan 2009; Michał Ziąbkowski <mziab@o2.pl>
   -gnome-video-arcade-0.6.3.ebuild, -gnome-video-arcade-0.6.4.ebuild,
   gnome-video-arcade-0.6.5.ebuild:

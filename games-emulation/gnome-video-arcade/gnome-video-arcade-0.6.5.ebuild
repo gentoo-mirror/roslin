@@ -19,6 +19,7 @@ RDEPEND="gnome? ( >=gnome-base/libgnomeui-2.14.0 )
 	>=gnome-base/libglade-2.6.0
 	>=x11-themes/gnome-icon-theme-2.18.0
 	>=dev-db/sqlite-3.0.0
+	>=x11-libs/libwnck-2.16
 	gnome-base/gconf
 	|| ( games-emulation/sdlmame games-emulation/xmame )"
 DEPEND="${RDEPEND}

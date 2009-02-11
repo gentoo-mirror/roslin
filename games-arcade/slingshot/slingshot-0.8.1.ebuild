@@ -21,7 +21,7 @@ RDEPEND="dev-lang/python
 	dev-python/pygame"
 DEPEND="${RDEPEND}"
 
-S=${WORKDIR}/${PN}
+S=${WORKDIR}/${MY_P}/${PN}
 
 src_install() {
 	newicon data/shot.png ${PN}.png || die "newicon failed"

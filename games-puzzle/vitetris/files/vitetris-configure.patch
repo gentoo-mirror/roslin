@@ -1,0 +1,11 @@
+diff -Nur vitetris-0.55.orig/configure vitetris-0.55/configure
+--- vitetris-0.55.orig/configure	2008-09-05 15:59:35.000000000 +0200
++++ vitetris-0.55/configure	2009-02-11 21:08:17.214874138 +0100
+@@ -159,7 +159,6 @@
+ 		PCTIMER=$with ;;
+ 	*)
+ 		echo "unrecognized option \"$arg\""
+-		exit 1
+ 	esac
+ done
+ if [ -z "$ENABLE_2P" ]; then

@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-inherit games subversion
+inherit subversion confutils games
 
 ESVN_REPO_URI="https://pcsx2.svn.sourceforge.net/svnroot/pcsx2/plugins/spu2/PeopsSPU2"
 
@@ -20,9 +20,7 @@ RDEPEND="${DEPEND}"
 S="${WORKDIR}/PeopsSPU2"
 
 pkg_setup() {
-	if ! use oss && ! use alsa; then
-		die "Either the alsa or oss USE flag must be enabled!"
-	fi
+	confutils_require_any oss alsa
 }
 
 src_unpack() {

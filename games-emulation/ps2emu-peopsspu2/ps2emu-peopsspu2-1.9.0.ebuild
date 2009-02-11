@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-inherit games
+inherit confutils games
 
 PCSX2="pcsx2-0.9.4"
 
@@ -21,9 +21,7 @@ RDEPEND="${DEPEND}"
 S="${WORKDIR}/${PCSX2}/plugins/spu2/PeopsSPU2"
 
 pkg_setup() {
-	if ! use oss && ! use alsa; then
-		die "Either the alsa or oss USE flag must be enabled!"
-	fi
+	confutils_require_any oss alsa
 }
 
 src_unpack() {

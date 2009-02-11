@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-inherit eutils games
+inherit eutils confutils games
 
 DESCRIPTION="A Super Famicom/SNES emulator written with absolute accuracy in mind"
 HOMEPAGE="http://byuu.cinnamonpirate.com/bsnes/"
@@ -35,15 +35,8 @@ disable_module() {
 }
 
 pkg_setup() {
-	if ! use ao && ! use openal && ! use alsa && ! use pulseaudio && ! use oss
-	then
-	    die "You need to select at least one audio backend."
-	fi
-
-	if ! use xv && ! use opengl && ! use sdl
-	then
-	    die "You need to select at least one video backend."
-	fi
+	confutils_require_any ao openal alsa pulseaudio oss
+	confutils_require_any xv opengl sdl
 }
 
 src_unpack() {

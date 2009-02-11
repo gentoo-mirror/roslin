@@ -28,7 +28,7 @@ src_prepare() {
 		Makefile || die "sed Makefile failed"
 }
 
-src_compile() {
+src_configure() {
 	./configure \
 		--prefix=/usr/games \
 		$(use_enable X xlib) \
@@ -36,6 +36,9 @@ src_compile() {
 		$(use_enable ncurses curses) \
 		$(use_enable net network) \
 		|| die "egamesconf failed"
+}
+
+src_compile() {
 	emake \
 		LDFLAGS="${LDFLAGS}" \
 		CCFLAGS="${CXXFLAGS}" \

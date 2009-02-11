@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: /var/cvsroot/gentoo-x86/games-emulation/visualboyadvance/visualboyadvance-1.7.2.ebuild,v 1.3 2004/11/22 20:37:06 plasmaroo Exp $
 
-inherit games subversion
+inherit subversion confutils games
 
 ESVN_REPO_URI="http://${PN}.svn.sourceforge.net/svnroot/${PN}/trunk/"
 ESVN_PROJECT="vbam"
@@ -35,9 +35,7 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}/${PN}"
 
 pkg_setup() {
-	if ! use sdl && ! use gtk; then
-	    die "You have to enable USE gtk and/or sdl"
-	fi
+	confutils_require_any sdl gtk
 }
 
 src_unpack() {

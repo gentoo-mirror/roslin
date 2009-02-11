@@ -13,7 +13,7 @@ KEYWORDS="~x86"
 IUSE=""
 
 SRC_URI=""
-ESVN_REPO_URI="svn://linuxbios.org/repos/trunk/util/${PN}"
+ESVN_REPO_URI="svn://coreboot.org/repos/trunk/util/${PN}"
 
 S=${WORKDIR}/${PN}
 

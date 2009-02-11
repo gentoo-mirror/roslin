@@ -13,12 +13,12 @@ SRC_URI="http://download.savannah.gnu.org/releases/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="editor nls pbm sound zip"
+IUSE="editor nls pbm zip"
 
 RDEPEND=">=dev-cpp/gtkmm-2.4
 	>=dev-cpp/libglademm-2.4
 	media-libs/sdl-image
-	sound? ( media-libs/sdl-mixer )
+	sound? ( media-libs/sdl-mixer[vorbis] )
 	>=net-libs/gnet-2
 	>=dev-libs/libsigc++-2
 	>=dev-libs/expat-2.0"
@@ -43,7 +43,6 @@ src_configure() {
 		--disable-sdltest \
 		$(use_enable editor) \
 		$(use_enable nls) \
-		$(use_enable sound) \
 		$(use_enable zip zipping) \
 		$(use_enable pbm) \
 		|| die

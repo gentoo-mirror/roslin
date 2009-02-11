@@ -1,0 +1,30 @@
+diff -Nur onscripter-en-20080823.orig/configure onscripter-en-20080823/configure
+--- onscripter-en-20080823.orig/configure	2008-08-23 23:21:37.000000000 +0200
++++ onscripter-en-20080823/configure	2009-02-11 01:03:54.251528085 +0100
+@@ -256,7 +256,7 @@
+ else
+     $echo_n "Checking C compiler... ${nobr}"
+     case "`($CC --version) 2>/dev/null | head -1`" in
+-    gcc* | *apple*gcc*) echo gcc ;;
++    *gcc* | *apple*gcc*) echo gcc ;;
+     icc*) echo icc ;;
+     *)  echo "error"
+         cat <<-_ERR
+@@ -281,7 +281,7 @@
+ then
+     $echo_n "Checking C++ compiler... ${nobr}"
+     case "`($CXX --version) 2>/dev/null | head -1`" in
+-    g++* | *apple*g++*) echo g++ ;;
++    *g++* | *apple*g++*) echo g++ ;;
+     icpc*) echo icpc ;;
+     *)  echo "error"
+         cat <<-_ERR
+@@ -295,7 +295,7 @@
+ fi
+ 
+ case "`($CXX --version) 2>/dev/null | head -1`" in
+-g++* | *apple*g++*) CFLAGSEXTRA=-Wall ;;
++*g++* | *apple*g++*) CFLAGSEXTRA=-Wall ;;
+ esac
+ 
+ # Make (must be GNU)

@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/quetoo
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 
+  12 Feb 2009; Michał Ziąbkowski <mziab@o2.pl> quetoo-0.6.1.ebuild,
+  +files/quetoo-cflags.patch:
+  Added cflags patch. Ported to EAPI=2.
+
   10 Feb 2009; Piotr Szymaniak <lazy_bum@o2.pl> quetoo-0.6.1.ebuild:
   Fixed Manifest.
 

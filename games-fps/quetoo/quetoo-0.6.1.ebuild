@@ -2,6 +2,8 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
+EAPI=2
+
 inherit eutils games
 
 DESCRIPTION="Quake 2 performance engine"
@@ -20,12 +22,14 @@ RDEPEND="media-libs/alsa-lib
 	mysql? ( virtual/mysql )"
 DEPEND="${RDEPEND}"
 
-src_compile() {
+src_prepare() {
+	epatch "${FILESDIR}"/${PN}-cflags.patch
+}
+
+src_configure() {
 	egamesconf \
 		$(use_with mysql) \
 		|| die "egamesconf failed"
-
-	emake || die "emake failed"
 }
 
 src_install() {

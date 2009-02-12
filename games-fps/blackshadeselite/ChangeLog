@@ -3,6 +3,10 @@
 # $Header
 
   12 Feb 2009; Michał Ziąbkowski <mziab@o2.pl>
+  +files/blackshadeselite-gcc43.patch:
+  Oops.
+
+  12 Feb 2009; Michał Ziąbkowski <mziab@o2.pl>
   blackshadeselite-9999.ebuild:
   Added gcc43 patch. Fixed docs.
 

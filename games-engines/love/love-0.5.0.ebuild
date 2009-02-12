@@ -25,6 +25,10 @@ RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${MY_P}
 
+src_prepare() {
+	epatch "${FILESDIR}"/${PN}-gcc43.patch
+}
+
 src_install() {
 	emake DESTDIR="${D}" install || die "einstall failed"
 }

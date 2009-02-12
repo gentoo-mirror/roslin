@@ -23,6 +23,8 @@ RESTRICT="primaryuri"
 src_prepare() {
 	sed -i \
 		-e "s+/usr/local+/usr+" src/${PN}.pro || die "sed failed"
+	
+	epatch "${FILESDIR}"/${PN}-gcc43.patch
 }
 
 src_compile() {

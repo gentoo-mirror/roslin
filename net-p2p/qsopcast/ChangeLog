@@ -2,6 +2,9 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  12 Feb 2009; Michał Ziąbkowski <mziab@o2.pl> qsopcast-0.3.5.ebuild:
+  Fixed whitespace.
+
   12 Feb 2009; Michał Ziąbkowski <mziab@o2.pl> qsopcast-0.3.5.ebuild,
   +files/qsopcast-gcc43.patch:
   Added gcc43 patch.

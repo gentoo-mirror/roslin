@@ -1,4 +1,4 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header
 
@@ -30,13 +30,15 @@ src_unpack() {
 	sed -i \
 		-e "s|-O2 -fstrict-aliasing -Wall|${CFLAGS}|" \
 		Makefile || die "sed"
+		
+	epatch "${FILESDIR}"/${PN}-gcc43.patch
 }
 
 src_install() {
 	newgamesbin objs/blackshades ${PN} || die "newgamesbin failed"
 	insinto "${GAMES_DATADIR}"/${PN}
 	doins -r Data || die "doins failed"
-	dodoc IF_THIS_IS_A_README_YOU_HAVE_WON Readme TODO uDevGame_Readme \
+	dodoc IF_THIS_IS_A_README_YOU_HAVE_WON Readme TODO \
 		 || die "dodoc failed"
 	make_desktop_entry ${PN} "Black Shades Elite"
 	prepgamesdirs

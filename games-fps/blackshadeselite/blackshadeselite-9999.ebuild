@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header
+# $Header: $
 
 inherit eutils subversion games
 
@@ -23,6 +23,8 @@ DEPEND="virtual/opengl
 	media-libs/freealut
 	media-libs/libsdl"
 
+RDEPEND="${DEPEND}"
+
 S=${WORKDIR}/${PN}
 
 src_unpack() {
@@ -30,7 +32,7 @@ src_unpack() {
 	sed -i \
 		-e "s|-O2 -fstrict-aliasing -Wall|${CFLAGS}|" \
 		Makefile || die "sed"
-		
+
 	epatch "${FILESDIR}"/${PN}-gcc43.patch
 }
 

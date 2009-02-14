@@ -2,11 +2,6 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
-  14 Feb 2009; Piotr Szymaniak <lazy_bum@o2.pl>
-  +worldofgoo-demo-1.40.ebuild:
-  Initial ebuild (improved Vladimir Berezhnoy ebuild from bug #258960).
-
-  14 Feb 2009; Piotr Szymaniak <lazy_bum@o2.pl>
-  +worldofgoo-demo-1.40.ebuild:
+  14 Feb 2009; Piotr Szymaniak <lazy_bum@o2.pl> ChangeLog:
   Initial ebuild (improved Vladimir Berezhnoy ebuild from bug #258960).
 

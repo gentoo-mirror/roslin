@@ -47,6 +47,6 @@ src_install() {
 	newicon icon.png ${PN}.png || die "newicon failed"
 	games_make_wrapper ${PN} ./${PN} "${dir}" "${dir}"
 	make_desktop_entry ${PN} "World Of Goo - DEMO" ${PN}
-	
+
 	prepgamesdirs
 }

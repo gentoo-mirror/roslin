@@ -18,7 +18,7 @@ KEYWORDS="~x86 ~amd64"
 IUSE="debug joystick opengl phonon"
 
 DEPEND="x11-libs/qt-gui:4[accessibility]
-	phonon? ( x11-libs/qt-phonon:4 )
+	phonon? ( media-sound/phonon )
 	joystick? ( media-libs/libsdl )
 	opengl? ( virtual/opengl )"
 

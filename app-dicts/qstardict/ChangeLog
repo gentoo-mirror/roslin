@@ -2,6 +2,9 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  15 Feb 2009; Michał Ziąbkowski <mziab@o2.pl> +qstardict-0.13.1.ebuild:
+  Bumped.
+
   07 Feb 2009; Michał Ziąbkowski <mziab@o2.pl> qstardict-0.12.9.ebuild:
   Fixed monolithic Qt4 dep.
 

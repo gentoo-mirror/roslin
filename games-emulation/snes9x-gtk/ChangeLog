@@ -2,6 +2,11 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  15 Feb 2009; Michał Ziąbkowski <mziab@o2.pl>
+  -snes9x-gtk-1.51_p61.ebuild, -snes9x-gtk-1.51_p62.ebuild,
+  -snes9x-gtk-1.51_p63.ebuild, +snes9x-gtk-1.51_p65.ebuild:
+  Bumped. Removed cruft.
+
   01 Feb 2009; Michał Ziąbkowski <mziab@o2.pl>
   +snes9x-gtk-1.51_p63.ebuild:
   Bumped. Fixed license.

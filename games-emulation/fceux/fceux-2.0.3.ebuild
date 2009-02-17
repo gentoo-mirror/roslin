@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="debug opengl"
 
-RDEPEND="media-libs/libsdl[opengl?]
+RDEPEND="media-libs/libsdl[opengl?,joystick]
 	sys-libs/zlib
 	opengl? ( virtual/opengl )"
 

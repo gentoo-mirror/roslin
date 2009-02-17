@@ -20,7 +20,7 @@ IUSE=""
 DEPEND="dev-games/physfs
 	dev-libs/boost
 	media-libs/devil
-	media-libs/libsdl"
+	media-libs/libsdl[joystick]"
 RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${MY_P}

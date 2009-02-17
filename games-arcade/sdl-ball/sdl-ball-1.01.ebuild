@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="leveleditor +sound wiimote"
 
-DEPEND="media-libs/libsdl[opengl]
+DEPEND="media-libs/libsdl[opengl,joystick]
 	media-libs/sdl-ttf
 	media-libs/sdl-image
 	sound? ( media-libs/sdl-mixer[vorbis] )

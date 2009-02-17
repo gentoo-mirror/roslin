@@ -2,6 +2,10 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  17 Feb 2009; Michał Ziąbkowski <mziab@o2.pl> sdl-ball-0.14.ebuild,
+  sdl-ball-1.0.ebuild, sdl-ball-1.01.ebuild:
+  Fixed libsdl dep.
+
   01 Feb 2009; Michał Ziąbkowski <mziab@o2.pl> +sdl-ball-1.01.ebuild:
   Bumped.
 

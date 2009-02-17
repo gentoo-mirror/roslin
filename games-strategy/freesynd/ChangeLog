@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/freesynd
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+
+  17 Feb 2009; Michał Ziąbkowski <mziab@o2.pl> freesynd-0.2.ebuild,
+  +files/freesynd-gcc43.patch:
+  Added gcc4.3 patch.
 
   25 Dec 2008; Piotr Szymaniak <lazy_bum@o2.pl> freesynd-0.2.ebuild:
   Cleanup as suggested in bug #159251.

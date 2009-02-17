@@ -1,0 +1,22 @@
+diff -Nur freesynd.orig/src/dump.cpp freesynd/src/dump.cpp
+--- freesynd.orig/src/dump.cpp	2007-04-24 07:32:24.000000000 +0200
++++ freesynd/src/dump.cpp	2009-02-17 21:31:16.000000000 +0100
+@@ -5,6 +5,7 @@
+ #include <png.h>
+ #include <sys/stat.h>
+ #include <sys/types.h>
++#include <cstdlib>
+ 
+ 
+ class App : public Singleton < App > {
+diff -Nur freesynd.orig/src/dumpmaps.cpp freesynd/src/dumpmaps.cpp
+--- freesynd.orig/src/dumpmaps.cpp	2007-04-24 07:32:24.000000000 +0200
++++ freesynd/src/dumpmaps.cpp	2009-02-17 21:52:45.000000000 +0100
+@@ -5,6 +5,7 @@
+ #include <png.h>
+ #include <sys/stat.h>
+ #include <sys/types.h>
++#include <cstdlib>
+ 
+ class App : public Singleton < App > {
+ public:

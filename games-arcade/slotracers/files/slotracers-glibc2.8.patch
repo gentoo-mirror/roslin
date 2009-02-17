@@ -1,0 +1,25 @@
+diff -Nur Atari-game.orig/main.h Atari-game/main.h
+--- Atari-game.orig/main.h	2008-04-15 15:09:19.000000000 +0200
++++ Atari-game/main.h	2009-02-17 22:52:42.000000000 +0100
+@@ -47,7 +47,7 @@
+ #define MAP_ITEM_CLEAR	0
+ #define MAP_ITEM_WALL	1
+ 
+-#define uint unsigned int
++typedef unsigned int uint;
+ 
+ using std::vector;
+ using std::string;
+diff -Nur Atari-game.orig/map.h Atari-game/map.h
+--- Atari-game.orig/map.h	2008-04-15 15:09:19.000000000 +0200
++++ Atari-game/map.h	2009-02-17 22:53:14.000000000 +0100
+@@ -4,6 +4,8 @@
+ #include <string>
+ #include <vector>
+ 
++typedef unsigned int uint;
++
+ using std::string;
+ using std::vector;
+ 
+Pliki Atari-game.orig/slotracers i Atari-game/slotracers różnią się

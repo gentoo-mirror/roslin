@@ -31,6 +31,8 @@ src_prepare() {
 	sed -i \
 		-e "s|data/|${dir}/data/|" \
 		$to_patch || die "sed failed"
+
+	epatch "${FILESDIR}/${PN}-glib2.8.ebuild"
 }
 
 src_install() {

@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64"
 IUSE=""
 
-RDEPEND="media-libs/libsdl
+RDEPEND="media-libs/libsdl[joystick]
 	>=x11-libs/gtk+-1.2
 	|| (
 		(

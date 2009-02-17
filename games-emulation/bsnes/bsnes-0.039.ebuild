@@ -2,6 +2,8 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
+EAPI=2
+
 inherit eutils confutils games
 
 DESCRIPTION="A Super Famicom/SNES emulator written with absolute accuracy in mind"
@@ -20,7 +22,7 @@ DEPEND="ao? ( media-libs/libao )
 	pulseaudio? ( media-sound/pulseaudio )
 	xv? ( x11-libs/libXv )
 	opengl? ( virtual/opengl )
-	sdl? ( media-libs/libsdl )
+	sdl? ( media-libs/libsdl[joystick] )
 	x11-libs/gtk+
 	x11-libs/libXtst"
 
@@ -39,10 +41,7 @@ pkg_setup() {
 	confutils_require_any xv opengl sdl
 }
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	epatch "${FILESDIR}"/${PN}-makefile.patch
 }
 

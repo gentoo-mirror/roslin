@@ -18,11 +18,10 @@ IUSE=""
 DEPEND="media-libs/sdl-gfx"
 RDEPEND="${DEPEND}"
 
-S=${WORKDIR}
+S=${WORKDIR}/Atari-game
 dir=${GAMES_DATADIR}/${PN}
 
 src_prepare() {
-	rm make.depend
 	sed -i \
 		-e "s|-lSDL_gfx|-lSDL_gfx ${LDFLAGS}|" \
 		-e "s|-Wall -O2|${CXXFLAGS}|" \

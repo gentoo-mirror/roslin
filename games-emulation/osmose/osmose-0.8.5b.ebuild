@@ -17,7 +17,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="media-libs/libsdl[opengl]
+DEPEND="media-libs/libsdl[opengl,joystick]
 	sys-libs/zlib
 	virtual/opengl"
 RDEPEND="${DEPEND}"

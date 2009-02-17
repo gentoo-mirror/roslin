@@ -2,6 +2,8 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: /var/cvsroot/gentoo-x86/games-emulation/visualboyadvance/visualboyadvance-1.7.2.ebuild,v 1.3 2004/11/22 20:37:06 plasmaroo Exp $
 
+EAPI=2
+
 inherit subversion confutils games
 
 ESVN_REPO_URI="http://${PN}.svn.sourceforge.net/svnroot/${PN}/trunk/"
@@ -23,7 +25,7 @@ RDEPEND="gtk? ( >=dev-cpp/libglademm-2.4.0
 		>=dev-cpp/gtkglextmm-1.2.0 )
 		media-libs/libpng
 		sys-libs/zlib
-		sdl? ( media-libs/libsdl )
+		media-libs/libsdl[joystick]
 		lirc? ( app-misc/lirc )
 		virtual/opengl"
 
@@ -51,7 +53,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${PN}-includes-fix.patch
 }
 
-src_compile() {
+src_configure() {
 	local my_opts
 	use sdl || my_opts="-DNO_SDL:BOOL=1"
 	use gtk || my_opts="${my_opts} -DNO_GTK:BOOL=1"
@@ -64,8 +66,6 @@ src_compile() {
 	-DDATA_INSTALL_DIR:PATH="${GAMES_DATADIR}/${PN}" \
 	${my_opts} \
 	. || die "cmake failed"
-
-	emake || die "emake failed"
 }
 
 src_install() {

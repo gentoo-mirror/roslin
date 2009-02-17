@@ -19,7 +19,7 @@ IUSE="debug joystick opengl phonon"
 
 DEPEND="x11-libs/qt-gui:4[accessibility]
 	phonon? ( media-sound/phonon )
-	joystick? ( media-libs/libsdl )
+	joystick? ( media-libs/libsdl[joystick] )
 	opengl? ( virtual/opengl )"
 
 RDEPEND="${DEPEND}

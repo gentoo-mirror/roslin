@@ -1,0 +1,27 @@
+--- kernel/exmap.c.orig	2006-09-28 18:52:25.000000000 +0200
++++ kernel/exmap.c	2009-01-16 19:47:29.000000000 +0100
+@@ -392,7 +392,7 @@
+ 	struct task_struct *tsk;
+ 	int errcode = -EINVAL;
+ 
+-	tsk = find_task_by_pid(pid);
++        tsk = find_task_by_vpid(pid);
+ 	if (tsk == NULL) {
+ 		printk (KERN_ALERT
+ 			"/proc/%s: can't find task for pid %d\n",
+@@ -507,7 +507,7 @@
+ 							NULL);
+ 
+ 	if (exmap_proc_file == NULL) {
+-		remove_proc_entry (PROCFS_NAME, &proc_root);
++		remove_proc_entry (PROCFS_NAME, NULL);
+ 		printk (KERN_ALERT "/proc/%s: could not initialize\n",
+ 			PROCFS_NAME);
+ 		return -ENOMEM;
+@@ -532,5 +532,5 @@
+ void cleanup_module ()
+ {
+ 	printk (KERN_INFO "/proc/%s: remove\n", PROCFS_NAME);
+-	remove_proc_entry (PROCFS_NAME, &proc_root);
++	remove_proc_entry (PROCFS_NAME, NULL);
+ }

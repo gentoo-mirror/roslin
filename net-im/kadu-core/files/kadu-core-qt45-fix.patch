@@ -1,0 +1,25 @@
+diff -Nur kadu.orig/kadu-core/main.cpp kadu/kadu-core/main.cpp
+--- kadu.orig/kadu-core/main.cpp	2009-01-04 14:18:33.000000000 +0100
++++ kadu/kadu-core/main.cpp	2009-02-19 14:03:42.202506107 +0100
+@@ -138,6 +138,10 @@
+ 	getTime(&sec, &msec);
+ 	startTime = (sec % 1000) * 1000 + msec;
+ 
++	kdebugm(KDEBUG_INFO, "before creation of new KaduApplication\n");
++	new KaduApplication(argc, argv);
++	kdebugm(KDEBUG_INFO, "after creation of new KaduApplication\n");
++
+ 	// na Windowsie to nie ma znaczenia
+ #ifndef Q_WS_WIN
+ 	char *env_lang = getenv("LANG");
+@@ -227,10 +231,6 @@
+ 		exit(10);
+ 	}
+ 
+-	kdebugm(KDEBUG_INFO, "before creation of new KaduApplication\n");
+-	new KaduApplication(argc, argv);
+-	kdebugm(KDEBUG_INFO, "after creation of new KaduApplication\n");
+-
+ 	defaultFont = new QFont(qApp->font());
+ 	defaultFontInfo = new QFontInfo(*defaultFont);
+ 	// loading translation

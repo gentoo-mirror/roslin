@@ -20,7 +20,10 @@ RDEPEND="dev-libs/libxml2
 	virtual/opengl
 	media-libs/alsa-lib
 	>=x11-libs/gtk+-2.10.14
-	x11-libs/gtkglext"
+	x11-libs/gtkglext
+	>=gnome-base/libglade-2.0
+	>=dev-libs/expat-2.0
+	sys-libs/zlib"
 
 S=${WORKDIR}/pSX
 

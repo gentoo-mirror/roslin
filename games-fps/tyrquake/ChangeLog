@@ -1,6 +1,9 @@
 # ChangeLog for games-fps/tyrquake
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 
+  19 Feb 2009; Piotr Szymaniak <lazy_bum@o2.pl> tyrquake-0.60.ebuild:
+  Added ~amd64 keyword (thanks to Francesco).
+
   21 Jan 2009; Piotr Szymaniak <lazy_bum@o2.pl> tyrquake-0.59.ebuild,
   tyrquake-0.60.ebuild, tyrquake-9999.ebuild:
   Added die to dodoc.

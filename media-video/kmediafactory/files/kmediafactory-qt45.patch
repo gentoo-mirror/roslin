@@ -1,0 +1,22 @@
+diff -Nur plugins/kross/krossjob.cpp plugins/kross/krossjob.cpp
+--- plugins/kross/krossjob.cpp	2008-12-31 13:51:00.000000000 +0100
++++ plugins/kross/krossjob.cpp	2009-02-23 19:22:40.000000000 +0100
+@@ -31,7 +31,7 @@
+ void KrossJob::run()
+ {
+   if (m_job) {
+-    m_job->callMethod("run", QVariantList() << this);
++    m_job->callMethod("run", QVariantList() << QVariant::fromValue(this));
+   }
+ }
+ 
+diff -Nur plugins/kross/krossjob.h plugins/kross/krossjob.h
+--- plugins/kross/krossjob.h	2008-12-31 13:51:00.000000000 +0100
++++ plugins/kross/krossjob.h	2009-02-23 19:31:10.000000000 +0100
+@@ -36,4 +36,6 @@
+     Kross::Object::Ptr m_job;
+ };
+ 
++Q_DECLARE_METATYPE(KrossJob*)
++
+ #endif // KROSSJOBOBJECT_H

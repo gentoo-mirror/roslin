@@ -1,0 +1,33 @@
+diff -Nur kadu.orig/kadu-core/action.cpp kadu/kadu-core/action.cpp
+--- kadu.orig/kadu-core/action.cpp	2008-10-07 22:12:22.000000000 +0200
++++ kadu/kadu-core/action.cpp	2009-02-27 21:25:12.761134225 +0100
+@@ -115,7 +115,7 @@
+ 		setIcon(icons_manager->loadIcon(Description->IconName));
+ }
+ 
+-ActionDescription::ActionDescription(ActionType Type, const QString &Name, QObject *Object, char *Slot,
++ActionDescription::ActionDescription(ActionType Type, const QString &Name, QObject *Object, const char *Slot,
+ 	const QString &IconName, const QString &Text, bool Checkable, const QString &CheckedText, ActionBoolCallback enableCallback)
+ 	: ShortcutItem(""), ShortcutContext(Qt::WidgetShortcut)
+ {
+diff -Nur kadu.orig/kadu-core/action.h kadu/kadu-core/action.h
+--- kadu.orig/kadu-core/action.h	2008-12-26 20:10:19.000000000 +0100
++++ kadu/kadu-core/action.h	2009-02-27 21:24:38.501133878 +0100
+@@ -91,7 +91,7 @@
+ 	ActionType Type;
+ 	QString Name;
+ 	QObject *Object;
+-	char *Slot;
++	const char *Slot;
+ 	QString IconName;
+ 	QString Text;
+ 	QString CheckedText;
+@@ -107,7 +107,7 @@
+ 	virtual void configurationUpdated();
+ 
+ public:
+-	ActionDescription(ActionType Type, const QString &Name, QObject *Object, char *Slot,
++	ActionDescription(ActionType Type, const QString &Name, QObject *Object, const char *Slot,
+ 		const QString &IconName, const QString &Text, bool Checkable = false, const QString &CheckedText = "", ActionBoolCallback enableCallback = 0);
+ 	virtual ~ActionDescription();
+ 

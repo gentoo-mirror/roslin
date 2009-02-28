@@ -56,9 +56,9 @@ kadu-base_src_configure()
 	# Filter compiler flags
 	filter-flags -fno-rtti
 
-	local mycmakeargs="${mycmakeargs}
-		-D BUILD_DESCRIPTION:STRING=Gentoo Linux
-		-D ENABLE_AUTDOWNLOAD:BOOL=NO"
+	local mycmakeargs="${mycmakeargs} \
+		-DBUILD_DESCRIPTION:STRING=\"Gentoo Linux\" \
+		-DENABLE_AUTDOWNLOAD:BOOL=NO"
 
 	cmake-utils_src_configure
 }	

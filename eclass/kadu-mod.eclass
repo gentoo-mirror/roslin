@@ -23,6 +23,12 @@ kadu-mod_src_unpack()
 	# Unpack the sources
 	unpack ${A}
 	cd ${S}
+	
+	# Fix a bug with GCC 4.3 and Qt 4.5
+	sed -i "kadu-core/action.cpp" \
+	    -i "kadu-core/action.h" \
+	    -e "s/char \*Slot/const char \*Slot/g" \
+	    || die "sed failed"
 
 	# Disable everything else
 	kadu-disable_all

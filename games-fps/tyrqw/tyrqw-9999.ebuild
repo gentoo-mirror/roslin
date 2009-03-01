@@ -1,4 +1,4 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -28,7 +28,6 @@ COMMON="media-libs/alsa-lib
 	virtual/opengl
 	media-libs/libsdl
 	x11-libs/libX11
-	x11-libs/libXext
 	x11-libs/libXxf86vm"
 RDEPEND="${COMMON}
 	cdinstall? ( games-fps/quake1-data )"

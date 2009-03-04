@@ -39,6 +39,8 @@ src_unpack() {
 	cd "${S}"
 
 	AT_M4DIR="autoconf/m4" eautoreconf
+
+	epatch "${FILESDIR}/${PN}-gcc43.patch"
 }
 
 src_compile() {

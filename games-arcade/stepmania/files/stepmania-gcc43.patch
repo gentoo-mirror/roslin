@@ -1,0 +1,62 @@
+diff -Nu src/EnumHelper.h /tmp/src/EnumHelper.h
+--- src/EnumHelper.h	2007-01-15 05:14:19.000000000 +0100
++++ /tmp/src/EnumHelper.h	2009-03-04 03:23:59.000000000 +0100
+@@ -4,6 +4,8 @@
+ #include "LuaReference.h"
+ #include "RageUtil.h"
+ 
++#include <memory>
++
+ extern "C"
+ {
+ #include "lua-5.1/src/lua.h"
+diff -Nu src/RageFileDriverDeflate.h /tmp/src/RageFileDriverDeflate.h
+--- src/RageFileDriverDeflate.h	2007-01-23 08:31:47.000000000 +0100
++++ /tmp/src/RageFileDriverDeflate.h	2009-03-04 03:31:16.000000000 +0100
+@@ -4,6 +4,7 @@
+ #define RAGE_FILE_DRIVER_DEFLATE_H
+ 
+ #include "RageFileBasic.h"
++#include <memory>
+ 
+ typedef struct z_stream_s z_stream;
+ 
+diff -Nu src/ScreenOptionsMasterPrefs.cpp /tmp/src/ScreenOptionsMasterPrefs.cpp
+--- src/ScreenOptionsMasterPrefs.cpp	2007-07-22 13:46:17.000000000 +0200
++++ /tmp/src/ScreenOptionsMasterPrefs.cpp	2009-03-04 03:26:45.000000000 +0100
+@@ -127,7 +127,7 @@
+ }
+ 
+ template <>
+-static void MovePref<bool>( int &iSel, bool bToSel, const ConfOption *pConfOption )
++void MovePref<bool>( int &iSel, bool bToSel, const ConfOption *pConfOption )
+ {
+ 	IPreference *pPref = IPreference::GetPreferenceByName( pConfOption->m_sPrefName );
+ 	ASSERT_M( pPref != NULL, pConfOption->m_sPrefName );
+Wspólne podkatalogi: src/smlobby i /tmp/src/smlobby
+Wspólne podkatalogi: src/smpackage i /tmp/src/smpackage
+diff -Nu src/stamp-h1 /tmp/src/stamp-h1
+--- src/stamp-h1	1970-01-01 01:00:00.000000000 +0100
++++ /tmp/src/stamp-h1	2009-03-04 03:21:59.000000000 +0100
+@@ -0,0 +1 @@
++timestamp for src/config.h
+diff -Nu src/StdString.h /tmp/src/StdString.h
+--- src/StdString.h	2007-06-12 00:41:32.000000000 +0200
++++ /tmp/src/StdString.h	2009-03-04 03:23:31.000000000 +0100
+@@ -92,7 +92,7 @@
+ typedef char*			PSTR;
+ 
+ // Standard headers needed
+-#include <string>			// basic_string
++#include <cstring>			// basic_string
+ #include <algorithm>		// for_each, etc.
+ #include <functional>		// for StdStringLessNoCase, et al
+ 
+Pliki src/stepmania i /tmp/src/stepmania ró¿ni± siê
+Wspólne podkatalogi: src/tests i /tmp/src/tests
+diff -Nu src/ver.cpp /tmp/src/ver.cpp
+--- src/ver.cpp	1970-01-01 01:00:00.000000000 +0100
++++ /tmp/src/ver.cpp	2009-03-04 03:31:21.000000000 +0100
+@@ -0,0 +1,2 @@
++extern const unsigned long version_num = 6;
++extern const char *const version_time = "¶ro, 4 mar 2009, 03:31:21 CET";

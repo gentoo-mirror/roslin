@@ -2,6 +2,9 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header
 
+  05 Mar 2009; Michał Ziąbkowski <mziab@o2.pl> +qnapi-0.1.6_rc2.ebuild:
+  Bumped.
+
   07 Feb 2009; Michał Ziąbkowski <mziab@o2.pl> qnapi-0.1.5-r1.ebuild:
   Fixed monolithic Qt4 dep.
 

@@ -33,8 +33,6 @@ diff -Nu src/ScreenOptionsMasterPrefs.cpp /tmp/src/ScreenOptionsMasterPrefs.cpp
  {
  	IPreference *pPref = IPreference::GetPreferenceByName( pConfOption->m_sPrefName );
  	ASSERT_M( pPref != NULL, pConfOption->m_sPrefName );
-Wspólne podkatalogi: src/smlobby i /tmp/src/smlobby
-Wspólne podkatalogi: src/smpackage i /tmp/src/smpackage
 diff -Nu src/stamp-h1 /tmp/src/stamp-h1
 --- src/stamp-h1	1970-01-01 01:00:00.000000000 +0100
 +++ /tmp/src/stamp-h1	2009-03-04 03:21:59.000000000 +0100
@@ -52,8 +50,6 @@ diff -Nu src/StdString.h /tmp/src/StdString.h
  #include <algorithm>		// for_each, etc.
  #include <functional>		// for StdStringLessNoCase, et al
  
-Pliki src/stepmania i /tmp/src/stepmania ró¿ni± siê
-Wspólne podkatalogi: src/tests i /tmp/src/tests
 diff -Nu src/ver.cpp /tmp/src/ver.cpp
 --- src/ver.cpp	1970-01-01 01:00:00.000000000 +0100
 +++ /tmp/src/ver.cpp	2009-03-04 03:31:21.000000000 +0100

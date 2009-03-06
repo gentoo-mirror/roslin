@@ -2,6 +2,10 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  06 Mar 2009; Michał Ziąbkowski <mziab@o2.pl>
+  files/stepmania-gcc43.patch:
+  Removed some cruft from patch.
+
   04 Mar 2009; Michał Ziąbkowski <mziab@o2.pl>
   +files/stepmania-gcc43.patch, stepmania-9999.ebuild:
   Added GCC 4.3 patch.

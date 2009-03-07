@@ -24,11 +24,10 @@ DEPEND="${RDEPEND}
 
 SRC_URI="http://www.kadu.net/download/stable/kadu-${K_PV}.tar.bz2"
 
-src_prepare()
-{
+src_prepare() {
 	# Fix input when built against Qt 4.5
-	epatch "${FILESDIR}/${PN}-qt45-fix.patch" \
-		"${FILESDIR}/${P}-const.patch"
+	epatch "${FILESDIR}/${PN}-qt45-fix.patch"
+	#	"${FILESDIR}/${P}-const.patch"
 
 	# Disable everything besides the core
 	kadu-disable_all
@@ -40,3 +39,8 @@ src_prepare()
 	echo "emoticons_penguins=y" >> ${S}/.config
 }
 
+pkg_postinst() {
+	ewarn "If you rebuilt the core by hand, recompiling the modules is advised."
+	ewarn "You may do so by using emerge -1av $\(qlist -I -C net-im/kadu-\)"
+	ewarn "This requires app-portage/portage-utils to be installed."
+}

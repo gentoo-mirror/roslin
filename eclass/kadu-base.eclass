@@ -56,6 +56,10 @@ kadu-base_src_configure()
 	# Filter compiler flags
 	filter-flags -fno-rtti
 
+	# Fix some versions of cmake-utils.eclass
+	# which set CMAKE_BUILD_TYPE to Gentoo
+	append-flags -DQT_NO_DEBUG
+
 	local mycmakeargs="${mycmakeargs} \
 		-DBUILD_DESCRIPTION:STRING=Gentoo \
 		-DENABLE_AUTDOWNLOAD:BOOL=NO"

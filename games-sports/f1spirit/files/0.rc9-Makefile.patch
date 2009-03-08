@@ -1,0 +1,77 @@
+--- build/linux/Makefile.old	2009-03-07 23:05:09.000000000 +0100
++++ build/linux/Makefile	2009-03-08 17:19:00.000000000 +0100
+@@ -1,15 +1,16 @@
+ EXE = f1spirit
+ SRC = sources
+-PREFIX = /usr
++PREFIX = $(DESTDIR)/usr
+ EXTRADIR = ./build/linux
+ 
+-GAMEDIR = $(PREFIX)/games
++GAMEDIR = $(PREFIX)/games/bin
+ STARTUP = $(GAMEDIR)/$(EXE)
+-BINDIR = $(PREFIX)/share/games/$(EXE)
++BINDIR = $(PREFIX)/games/bin
+ ICNDIR = $(PREFIX)/share/pixmaps
+ APPDIR = $(PREFIX)/share/applications
++DATADIR = $(PREFIX)/share/games/$(EXE)
+ 
+-DATA = demos graphics tracks sound readme.txt f1spirit2.cfg
++DATA = demos graphics tracks sound f1spirit2.cfg
+ ICON = f1spirit.png
+ DESKTOP = f1spirit.desktop
+ 
+@@ -40,14 +41,15 @@
+ 
+ CC = gcc
+ #CFLAGS = -g3 -O3 -Wall `sdl-config --cflags` `curl-config --cflags` -I/usr/X11R6/include
+-CFLAGS = -g3 -O3 `sdl-config --cflags` `curl-config --cflags` -I/usr/X11R6/include
+-LDFLAGS = `sdl-config --libs` `curl-config --libs` -L/usr/X11R6/lib/ -lSDL_image -lSDL_mixer -lSDL_net -lGL -lGLU
++CFLAGS += `sdl-config --cflags` `curl-config --cflags` -I/usr/X11R6/include
++LIBS = `sdl-config --libs` `curl-config --libs` -lSDL_image -lSDL_mixer -lSDL_net -lGL -lGLU
++LDFLAGS += -L/usr/X11R6/lib/
+ RM = rm -f
+ CP = cp -r
+ MD = mkdir -p
+ ECHO = echo
+ CHMOD = chmod
+-STRIP = strip
++STRIP = echo 
+ 
+ all: $(EXE)
+ 
+@@ -55,7 +57,7 @@
+ 	$(CC) $(CFLAGS) -c $< -o $@
+ 
+ $(EXE): $(OBJS)
+-	$(CC) $(LDFLAGS) $^ -o $@
++	$(CC) $(LDFLAGS) $^ -o $@ $(LIBS)
+ 	@$(STRIP) $@
+ 	@$(ECHO) " o If there are no errors, the game compiled succesfully"
+ 
+@@ -64,19 +66,14 @@
+ 	@$(RM) $(SRC)/*.o $(SRC)/*.bak core $(EXE)
+ 
+ install: all
+-	@$(ECHO) " o Creating install directory $(BINDIR)"
+-	@$(MD) "$(BINDIR)"
+-	@$(ECHO) " o Installing game and data to $(BINDIR)"
+-	@$(CP) "$(EXE)" $(DATA) "$(BINDIR)"
+-	@$(ECHO) " o Creating startup script $(STARTUP)"
+-	@$(MD) "$(GAMEDIR)"
+-	@$(ECHO) "cd \"$(BINDIR)\"; ./$(EXE); cd -" >"$(STARTUP)"
+-	@$(CHMOD) 755 "$(STARTUP)"
+-	@$(ECHO) " o Creating application menu entry"
++	@$(ECHO) " o Creating install directories"
++	@$(MD) "$(DATADIR)"
++	@$(ECHO) " o Installing game to $(DATADIR)"
++	@$(CP) "$(EXE)" "$(DATADIR)"
++	@$(ECHO) " o Installing data to $(DATADIR)"
++	@$(CP) $(DATA) "$(DATADIR)"
+ 	@$(MD) "$(ICNDIR)"
+ 	@$(CP) "$(EXTRADIR)/$(ICON)" "$(ICNDIR)"
+-	@$(MD) "$(APPDIR)"
+-	@$(CP) "$(EXTRADIR)/$(DESKTOP)" "$(APPDIR)"
+ 	@$(ECHO) ""
+ 
+ uninstall:

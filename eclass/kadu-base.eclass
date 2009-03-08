@@ -73,7 +73,7 @@ kadu-base_src_compile()
 	2)
 		;;
 	*)
-		cmake-utils_src_configure
+		kadu-base_src_configure
 		;;
 	esac
 

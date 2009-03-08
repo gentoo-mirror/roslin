@@ -2,6 +2,9 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  08 Mar 2009; Piotr Szymaniak <lazy_bum@o2.pl> f1spirit-0_rc9.ebuild:
+  Fixed KEYWORDS, added proper die.
+
   08 Mar 2009; Piotr Szymaniak <lazy_bum@o2.pl> +files/0.rc9-Makefile.patch,
   +f1spirit-0_rc9.ebuild:
   Initial ebuild (thanks to idl0r from #gentoo-sunrise for help).

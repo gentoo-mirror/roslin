@@ -58,7 +58,7 @@ kadu-base_src_configure()
 
 	# Fix some versions of cmake-utils.eclass
 	# which set CMAKE_BUILD_TYPE to Gentoo
-	append-flags -DQT_NO_DEBUG
+	append-cppflags -DQT_NO_DEBUG
 
 	local mycmakeargs="${mycmakeargs} \
 		-DBUILD_DESCRIPTION:STRING=Gentoo \

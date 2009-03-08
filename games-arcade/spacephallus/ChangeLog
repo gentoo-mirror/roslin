@@ -2,6 +2,9 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  08 Mar 2009; Piotr Szymaniak <lazy_bum@o2.pl> spacephallus-1.ebuild:
+  Improved ebuild, changed LICENSE.
+
   01 Mar 2009; Piotr Szymaniak <lazy_bum@o2.pl> +spacephallus-1.ebuild:
   Initial ebuild.
 

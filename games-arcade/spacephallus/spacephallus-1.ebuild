@@ -8,9 +8,10 @@ MY_PN=SpacePhallus
 
 DESCRIPTION="Fun shoot-em-up with a retro 8 bit theme"
 HOMEPAGE="http://www.charliesgames.com/wordpress/?page_id=65"
-SRC_URI="http://www.charliesgames.com/phallus/SpacePhallusLinux.tar.gz"
+SRC_URI="http://www.charliesgames.com/phallus/${MY_PN}Linux.tar.gz"
 
-LICENSE="as-is"
+# Space Phallus is binary blob, no license included
+LICENSE="blob"
 SLOT="0"
 KEYWORDS="~x86"
 IUSE=""

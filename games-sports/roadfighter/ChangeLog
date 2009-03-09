@@ -2,6 +2,9 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  09 Mar 2009; Piotr Szymaniak <lazy_bum@o2.pl> roadfighter-1.0.1269.ebuild:
+  Added ~amd64 keyword.
+
   08 Mar 2009; Piotr Szymaniak <lazy_bum@o2.pl>
   +files/1.0.1269-Makefile.patch, +roadfighter-1.0.1269.ebuild:
   Initial ebuild (license is a bit unclear).

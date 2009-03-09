@@ -2,6 +2,9 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  09 Mar 2009; Piotr Szymaniak <lazy_bum@o2.pl> f1spirit-0_rc9.ebuild:
+  Added ~amd64 keyword.
+
   08 Mar 2009; Piotr Szymaniak <lazy_bum@o2.pl> f1spirit-0_rc9.ebuild:
   Fixed KEYWORDS, added proper die.
 

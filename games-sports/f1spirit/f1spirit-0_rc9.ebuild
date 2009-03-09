@@ -13,7 +13,7 @@ SRC_URI="http://braingames.jorito.net/${PN}/${PN}.src_${MY_PV}-1412.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="media-libs/libsdl[opengl]

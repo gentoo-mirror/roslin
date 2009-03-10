@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND="media-libs/libsdl[opengl]
+RDEPEND="media-libs/libsdl[joystick,opengl]
 	media-libs/sdl-image
 	media-libs/sdl-mixer
 	media-libs/sdl-net

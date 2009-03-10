@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/bsnes
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 
+  10 Mar 2009; Michał Ziąbkowski <mziab@o2.pl> +bsnes-0.040.ebuild,
+  +files/bsnes-0.040-makefile.patch:
+  Bumped. Added USE flags for selecting the gui.
+
   17 Feb 2009; Michał Ziąbkowski <mziab@o2.pl> bsnes-0.039.ebuild:
   Fixed libsdl dep.
 

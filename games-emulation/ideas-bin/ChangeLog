@@ -2,6 +2,9 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  13 Mar 2009; Michał Ziąbkowski <mziab@o2.pl> +ideas-bin-1.0.3.0.ebuild:
+  Bumped.
+
   06 Feb 2009; Michał Ziąbkowski <mziab@o2.pl> +ideas-bin-1.0.2.9.ebuild:
   Bumped.
 

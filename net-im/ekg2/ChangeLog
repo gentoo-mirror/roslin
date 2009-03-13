@@ -3,6 +3,9 @@
 # $Header: $
 
   13 Mar 2009; Piotr Szymaniak <lazy_bum@o2.pl> ekg2-20090312.ebuild:
+  Removed debug useflag, it's not working anyway...
+
+  13 Mar 2009; Piotr Szymaniak <lazy_bum@o2.pl> ekg2-20090312.ebuild:
   Seems like local problems.
 
   13 Mar 2009; Piotr Szymaniak <lazy_bum@o2.pl> ekg2-20090312.ebuild:

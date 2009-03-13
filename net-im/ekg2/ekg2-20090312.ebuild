@@ -17,7 +17,7 @@ LICENSE="GPL-2"
 SLOT="0"
 
 KEYWORDS="~amd64 ~x86"
-IUSE="crypt debug gif gpm gsm gtk inotify jabber jpeg nls nogg perl python readline remote spell sqlite sqlite3 ssl unicode xosd"
+IUSE="crypt gif gpm gsm gtk inotify jabber jpeg nls nogg perl python readline remote spell sqlite sqlite3 ssl unicode xosd"
 
 DEPEND="crypt? ( app-crypt/gpgme )
 	gif? ( media-libs/giflib )
@@ -48,8 +48,6 @@ src_prepare() {
 src_configure() {
 #	export WANT_AUTOMAKE="1.7"
 	export WANT_AUTOMAKE="latest"
-
-	use debug && append-flags "-g -ggdb"
 
 	econf \
 		"--with-pthread" \

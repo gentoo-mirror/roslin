@@ -16,8 +16,8 @@ SRC_URI="http://pl.ekg2.org/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 
-KEYWORDS=""
-IUSE="crypt debug gif gpm gsm gtk inotify jabber jpeg nls nogg perl python readline ruby spell sqlite sqlite3 ssl unicode xosd"
+KEYWORDS="~amd64 ~x86"
+IUSE="crypt debug gif gpm gsm gtk inotify jabber jpeg nls nogg perl python readline remote spell sqlite sqlite3 ssl unicode xosd"
 
 DEPEND="crypt? ( app-crypt/gpgme )
 	gif? ( media-libs/giflib )
@@ -30,7 +30,6 @@ DEPEND="crypt? ( app-crypt/gpgme )
 	!nogg? ( >=net-libs/libgadu-1.7.0 )
 	perl? ( >=dev-lang/perl-5.2 )
 	python? ( >=dev-lang/python-2.3.3 )
-	ruby? ( dev-lang/ruby )
 	spell? ( >=app-text/aspell-0.50.5 )
 	sqlite? ( !sqlite3? ( =dev-db/sqlite-2* ) )
 	sqlite3? ( >=dev-db/sqlite-3 )
@@ -43,14 +42,7 @@ DEPEND="crypt? ( app-crypt/gpgme )
 RDEPEND="${DEPEND}"
 
 src_prepare() {
-	# Ekg2 has no debug configure option
-	# Instead it features a runtime option which defaults to on
-	#! use debug && epatch ${FILESDIR}/${P}-no-default-debug.patch
-
-	AT_M4DIR=m4 eautoreconf
-
-	# Hotfix
-	touch ekg/net.h
+	eautoreconf
 }
 
 src_configure() {
@@ -76,7 +68,7 @@ src_configure() {
 		$(use_with perl) \
 		$(use_with python) \
 		$(use_with readline) \
-		$(use_with ruby) \
+		$(use_enable remote) \
 		$(use_with spell aspell) \
 		$(use_with sqlite) \
 		$(use_with sqlite3) \

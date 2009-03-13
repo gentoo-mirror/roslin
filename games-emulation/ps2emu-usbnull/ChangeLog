@@ -1,8 +1,0 @@
-# ChangeLog for games-emulation/ps2emu-usbnull
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: $
-
-  21 Jan 2009; Michał Ziąbkowski <mziab@o2.pl>
-  ps2emu-usbnull-0.4-r1.ebuild, ps2emu-usbnull-9999.ebuild:
-  Fixed errors reported by repoman.
-

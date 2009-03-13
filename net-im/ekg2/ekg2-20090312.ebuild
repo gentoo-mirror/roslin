@@ -7,7 +7,7 @@ EAPI=2
 WANT_AUTOCONF=latest
 #WANT_AUTOMAKE=1.7
 
-inherit eutils perl-module autotools
+inherit eutils flag-o-matic perl-module autotools
 
 DESCRIPTION="Text based Instant Messenger and IRC client that supports protocols like Jabber and Gadu-Gadu"
 HOMEPAGE="http://pl.ekg2.org/"
@@ -16,8 +16,8 @@ SRC_URI="http://pl.ekg2.org/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 
-KEYWORDS="~amd64 ~x86"
-IUSE="crypt gif gpm gsm gtk inotify jabber jpeg nls nogg perl python readline ruby spell sqlite sqlite3 ssl unicode xosd"
+KEYWORDS=""
+IUSE="crypt debug gif gpm gsm gtk inotify jabber jpeg nls nogg perl python readline ruby spell sqlite sqlite3 ssl unicode xosd"
 
 DEPEND="crypt? ( app-crypt/gpgme )
 	gif? ( media-libs/giflib )
@@ -56,6 +56,9 @@ src_prepare() {
 src_configure() {
 #	export WANT_AUTOMAKE="1.7"
 	export WANT_AUTOMAKE="latest"
+
+	use debug && append-flags "-g -ggdb"
+
 	econf \
 		"--with-pthread" \
 		$(use_with crypt gpg) \
@@ -103,5 +106,5 @@ pkg_postinst() {
 		ewarn "Please do not file bugs about it."
 	fi
 
-	use perl && updatepod
+#	use perl && updatepod
 }

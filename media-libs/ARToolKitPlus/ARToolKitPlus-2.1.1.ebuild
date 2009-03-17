@@ -30,6 +30,12 @@ S=${WORKDIR}/${MY_PN}
 #
 #}
 
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}/gcc43.patch"
+}
+
 src_compile() {
 	export ARTKP="${S}"
 	cp -R "${S}"/src "${S}"/include/ARToolKitPlus/src

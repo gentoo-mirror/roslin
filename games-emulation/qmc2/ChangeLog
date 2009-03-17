@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/qmc2
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 
+  17 Mar 2009; Michał Ziąbkowski <mziab@o2.pl> +qmc2-0.2_beta7.ebuild,
+  +files/qmc2-0.2_beta7-makefile.patch:
+  Bumped. Will revisit sdlmess support later.
+
   17 Feb 2009; Michał Ziąbkowski <mziab@o2.pl> qmc2-0.2_beta6.ebuild:
   Fixed libsdl dep.
 

@@ -125,11 +125,7 @@ src_compile() {
 	echo "${method}"
 	sleep 2
 	if [ method="1" ] || [ method="2" ]; then
-		if linux_chkconfig_present 64BIT; then
 			echo n
-		else
-			echo y
-		fi
 	fi
 	sleep 2
 	if use debug; then

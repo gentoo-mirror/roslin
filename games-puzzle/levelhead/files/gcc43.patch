@@ -10,3 +10,15 @@ Index: include/osgART/Marker
  
  // local headers
  #include "osgART/Export"
+Index: src/osgART/GenericTracker.cpp
+===================================================================
+--- src/osgART/GenericTracker.cpp	(wersja 127)
++++ src/osgART/GenericTracker.cpp	(kopia robocza)
+@@ -40,6 +40,7 @@
+ #include <osg/Notify>
+ 
+ #include <iostream>
++#include <cstring>
+ 
+ 
+ namespace osgART {

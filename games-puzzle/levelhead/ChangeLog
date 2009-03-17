@@ -2,6 +2,9 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  17 Mar 2009; Michał Ziąbkowski <mziab@o2.pl> files/gcc43.patch:
+  Updated patch.
+
   17 Mar 2009; Michał Ziąbkowski <mziab@o2.pl> +files/gcc43.patch,
   levelhead-9999.ebuild:
   Added GCC 4.3 patch.

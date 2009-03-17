@@ -21,7 +21,8 @@ S="${WORKDIR}/${MY_P}"
 
 RDEPEND="media-libs/sdl-image[jpeg,png]
 	media-libs/sdl-mixer[mp3,vorbis]
-	app-arch/bzip2"
+	app-arch/bzip2
+	media-libs/freetype"
 DEPEND="${RDEPEND}
 	>=dev-util/cmake-2.6
 	app-arch/p7zip"

@@ -46,7 +46,7 @@ src_compile() {
 	QMAKE_RPATH= \
 	"CONFIG += no_fixpath release thread" \
 	|| die "couldn't create fresh Makefiles"
-	emake || die
+	emake -j1 || die
 }
 
 src_install() {

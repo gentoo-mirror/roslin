@@ -1,0 +1,7 @@
+# ChangeLog for media-libs/ARToolKit
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  17 Mar 2009; Piotr Szymaniak <lazy_bum@o2.pl> +ARToolKit-2.72.1-r3.ebuild:
+  Initial ebuild (bug #256970).
+

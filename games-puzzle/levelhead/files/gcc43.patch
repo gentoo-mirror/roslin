@@ -1,0 +1,12 @@
+Index: include/osgART/Marker
+===================================================================
+--- include/osgART/Marker	(wersja 127)
++++ include/osgART/Marker	(kopia robocza)
+@@ -39,6 +39,7 @@
+ // STL headers
+ #include <string>
+ #include <vector>
++#include <typeinfo>
+ 
+ // local headers
+ #include "osgART/Export"

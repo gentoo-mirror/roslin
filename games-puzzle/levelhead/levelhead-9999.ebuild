@@ -27,7 +27,8 @@ S=${WORKDIR}/${PN}${MY_PV}
 src_unpack() {
 	subversion_src_unpack
 	epatch "${FILESDIR}"/makefile.diff \
-		"${FILESDIR}"/paths.diff
+		"${FILESDIR}"/paths.diff \
+		"${FILESDIR}"/gcc43.patch
 	sed -i \
 		-e "s:Data/:"${GAMES_DATADIR}"/"${PN}"/Data/:" \
 		include/osgART/GenericTracker \

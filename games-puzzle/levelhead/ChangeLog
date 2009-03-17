@@ -1,0 +1,8 @@
+# ChangeLog for games-puzzle/levelhead
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  17 Mar 2009; Piotr Szymaniak <lazy_bum@o2.pl> +levelhead-9999.ebuild,
+  +files/levelhead.png, +files/makefile.diff, +files/paths.diff:
+  Initial ebuild by Marcel Unbehaun (bug #262631).
+

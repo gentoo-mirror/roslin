@@ -14,8 +14,9 @@ IUSE=""
 CAL3D_V="0.10.0"
 
 DEPEND=">=dev-games/openscenegraph-1.2
-		>=media-libs/cal3d-${CAL3D_V}"
-RDEPEND=""
+		>=media-libs/cal3d-${CAL3D_V}
+		>=media-libs/libsdl-1.2.10"
+RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A}

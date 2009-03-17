@@ -1,0 +1,35 @@
+diff -Nur OSG_OP_OT-1.2.orig/Producer/include/Producer/KeyboardMouse OSG_OP_OT-1.2/Producer/include/Producer/KeyboardMouse
+--- OSG_OP_OT-1.2.orig/Producer/include/Producer/KeyboardMouse	2006-09-05 17:36:00.000000000 +0200
++++ OSG_OP_OT-1.2/Producer/include/Producer/KeyboardMouse	2009-03-17 16:43:22.038536184 +0100
+@@ -26,6 +26,8 @@
+ #include <Producer/InputArea>
+ #include <Producer/Keyboard>
+ 
++#include <cstring>
++
+ namespace Producer {
+ 
+ class KeyboardMouseImplementation;
+diff -Nur OSG_OP_OT-1.2.orig/Producer/include/Producer/RenderSurface OSG_OP_OT-1.2/Producer/include/Producer/RenderSurface
+--- OSG_OP_OT-1.2.orig/Producer/include/Producer/RenderSurface	2006-04-12 18:31:00.000000000 +0200
++++ OSG_OP_OT-1.2/Producer/include/Producer/RenderSurface	2009-03-17 16:42:52.606536239 +0100
+@@ -20,6 +20,8 @@
+ #include <map>
+ #include <string>
+ #include <iostream>
++#include <cstdlib>
++#include <cstring>
+ 
+ #include <Producer/RefOpenThreads>
+ #include <Producer/Block>
+diff -Nur OSG_OP_OT-1.2.orig/Producer/include/Producer/Version OSG_OP_OT-1.2/Producer/include/Producer/Version
+--- OSG_OP_OT-1.2.orig/Producer/include/Producer/Version	2004-10-27 21:16:00.000000000 +0200
++++ OSG_OP_OT-1.2/Producer/include/Producer/Version	2009-03-17 16:45:38.418536519 +0100
+@@ -16,6 +16,7 @@
+ 
+ #include <Producer/Export>
+ #include <iostream>
++#include <cstdlib>
+ 
+ namespace Producer {
+ 

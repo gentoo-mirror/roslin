@@ -2,6 +2,10 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  17 Mar 2009; Michał Ziąbkowski <mziab@o2.pl>
+  +files/openproducer-gcc43.patch, openproducer-1.1.0.ebuild:
+  Added GCC 4.3 patch.
+
   17 Mar 2009; Piotr Szymaniak <lazy_bum@o2.pl> +openproducer-1.1.0.ebuild,
   +files/openproducer-1.1.0-build.patch, +metadata.xml:
   Initial ebuild (stolen from sunrise probably ;).

@@ -30,6 +30,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-build.patch
+	epatch "${FILESDIR}"/${PN}-gcc43.patch
 
 	ht_fix_all
 }

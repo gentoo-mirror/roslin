@@ -45,7 +45,8 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	epatch "${FILESDIR}"/${P}-build.patch
+	epatch "${FILESDIR}"/${P}-build.patch \
+		"${FILESDIR}"/${PN}-gcc43.patch
 }
 
 src_compile() {

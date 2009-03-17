@@ -2,6 +2,10 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  17 Mar 2009; Michał Ziąbkowski <mziab@o2.pl>
+  +files/openscenegraph-gcc43.patch, openscenegraph-1.2.ebuild:
+  Added GCC 4.3 patch. OpenSceneGraph, I hate you.
+
   17 Mar 2009; Piotr Szymaniak <lazy_bum@o2.pl> +openscenegraph-1.2.ebuild,
   +files/openscenegraph-1.2-build.patch, +metadata.xml:
   Initial ebuild (by Marcel Unbehaun).

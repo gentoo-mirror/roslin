@@ -1,0 +1,8 @@
+# ChangeLog for dev-libs/openthreads
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  17 Mar 2009; Piotr Szymaniak <lazy_bum@o2.pl> +openthreads-1.5.0.ebuild,
+  +files/openthreads-1.5.0-build.patch:
+  Initial ebuild (by Marcel Unbehaun).
+

@@ -1,0 +1,7 @@
+# ChangeLog for media-libs/osgcal
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  17 Mar 2009; Piotr Szymaniak <lazy_bum@o2.pl> +osgcal-0.1.44.ebuild:
+  Initial ebuild (bug #110432).
+

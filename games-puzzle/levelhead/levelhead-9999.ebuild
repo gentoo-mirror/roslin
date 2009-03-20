@@ -26,9 +26,11 @@ S=${WORKDIR}/${PN}${MY_PV}
 
 src_unpack() {
 	subversion_src_unpack
+
 	epatch "${FILESDIR}"/makefile.diff \
 		"${FILESDIR}"/paths.diff \
 		"${FILESDIR}"/gcc43.patch
+
 	sed -i \
 		-e "s:Data/:"${GAMES_DATADIR}"/"${PN}"/Data/:" \
 		include/osgART/GenericTracker \
@@ -43,12 +45,16 @@ src_unpack() {
 		bin/Data/multi/marker.dat_BUP \
 		bin/Data/levelHead_markers.dat || die "sed failed"
 
+	sed -i \
+		-e "s:fonts/:"${GAMES_DATADIR}"/"${PN}"/fonts/:" \
+		-e "s:models/:"${GAMES_DATADIR}"/"${PN}"/models/:" \
+		-e "s:shaders/:"${GAMES_DATADIR}"/"${PN}"/shaders/:" \
+		src/levelHead/levelHead.cpp || die "sed failed"
 }
 
 src_compile() {
 	cd "${S}"/bin
-	emake \
-		|| die "emake failed"
+	emake || die "emake failed"
 }
 
 
@@ -57,7 +63,7 @@ src_install() {
 	dogamesbin bin/levelHead || die "dogamesbin failed"
 
 	insinto "${GAMES_DATADIR}"/${PN}
-	doins -r bin/Data || die "doins failed"
+	doins -r bin/Data bin/fonts bin/models bin/shaders || die "doins failed"
 	insinto "$(games_get_libdir)"
 	doins bin/*.so || die "doins failed"
 
@@ -69,7 +75,7 @@ src_install() {
 pkg_postinst() {
 	games_pkg_postinst
 	elog "Instructions on how to build the required cubes, including the patterns"
-	elog "can be found in /usr/share/games/levelhead/Data/images/"
+	elog "can be found in \"${GAMES_DATADIR}\"/${PN}/Data/images/"
 	elog ""
 	elog "the game is launched with the script in /usr/games/bin/levelhead"
 	elog "it also contains some variables which might not fit to your system"

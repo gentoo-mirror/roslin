@@ -7,7 +7,7 @@ EAPI=2
 inherit eutils confutils games
 
 DESCRIPTION="A Super Famicom/SNES emulator written with absolute accuracy in mind"
-HOMEPAGE="http://byuu.cinnamonpirate.com/bsnes/"
+HOMEPAGE="http://byuu.org/bsnes/"
 MY_PV="${PV/0./}"
 SRC_URI="http://byuu.org/files/${PN}_v${MY_PV}.tar.bz2"
 

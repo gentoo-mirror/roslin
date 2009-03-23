@@ -2,6 +2,10 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  23 Mar 2009; Michał Ziąbkowski <mziab@o2.pl>
+  +pidgin-tlen-20090322.ebuild:
+  Bumped.
+
   23 Feb 2009; Michał Ziąbkowski <mziab@o2.pl>
   +pidgin-tlen-20090209.ebuild:
   Bumped. Upped pidgin dep.

@@ -2,6 +2,10 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  24 Mar 2009; Piotr Szymaniak <lazy_bum@o2.pl> -ekg2-0.2_rc1.ebuild,
+  -ekg2-20081231.ebuild, -ekg2-20090227.ebuild, +ekg2-20090323.ebuild:
+  Bump. Removed readline support.
+
   13 Mar 2009; Piotr Szymaniak <lazy_bum@o2.pl> ekg2-20090312.ebuild:
   Removed debug useflag, it's not working anyway...
 

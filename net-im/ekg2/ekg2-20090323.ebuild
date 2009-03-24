@@ -7,7 +7,7 @@ EAPI=2
 WANT_AUTOCONF=latest
 #WANT_AUTOMAKE=1.7
 
-inherit eutils flag-o-matic perl-module autotools
+inherit eutils autotools
 
 DESCRIPTION="Text based Instant Messenger and IRC client that supports protocols like Jabber and Gadu-Gadu"
 HOMEPAGE="http://pl.ekg2.org/"
@@ -15,9 +15,10 @@ SRC_URI="http://pl.ekg2.org/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
+RESTRICT="strip"
 
 KEYWORDS="~amd64 ~x86"
-IUSE="crypt gif gpm gsm gtk inotify jabber jpeg nls nogg perl python remote spell sqlite sqlite3 ssl unicode xosd"
+IUSE="crypt +debug gif gpm gsm gtk inotify jabber jpeg nls nogg perl python remote spell sqlite sqlite3 ssl unicode xosd"
 
 DEPEND="crypt? ( app-crypt/gpgme )
 	gif? ( media-libs/giflib )
@@ -48,6 +49,10 @@ src_prepare() {
 src_configure() {
 #	export WANT_AUTOMAKE="1.7"
 	export WANT_AUTOMAKE="latest"
+
+	NOCONFIGURE=1 ./autogen.sh
+
+	use debug && CFLAGS="-O0 -ggdb"
 
 	econf \
 		"--with-pthread" \
@@ -86,15 +91,4 @@ src_install() {
 	# einstall messes up perl
 	emake DESTDIR="${D}" install || die "einstall failed"
 	dodoc docs/* || die "dodoc failed"
-
-	use perl && fixlocalpod
-}
-
-pkg_postinst() {
-	if use gtk; then
-		ewarn "Ekg2 GTK2 frontend is highly experimental."
-		ewarn "Please do not file bugs about it."
-	fi
-
-#	use perl && updatepod
 }

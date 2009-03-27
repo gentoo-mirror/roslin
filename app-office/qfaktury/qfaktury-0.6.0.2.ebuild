@@ -20,6 +20,12 @@ RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${PN}-0.6.0.1"
 
+src_prepare() {
+	sed -e "s:/usr/local:/usr:g" \
+	    -i Settings.h \
+	    || die "sed failed"
+}
+
 src_install() {
 	cmake-utils_src_install
 

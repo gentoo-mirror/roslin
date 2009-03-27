@@ -24,6 +24,8 @@ src_prepare() {
 	sed -e "s:/usr/local:/usr:g" \
 	    -i Settings.h \
 	    || die "sed failed"
+	    
+	epatch "${FILESDIR}"/${PN}-nip.patch
 }
 
 src_install() {

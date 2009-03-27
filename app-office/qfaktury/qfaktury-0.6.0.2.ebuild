@@ -4,7 +4,7 @@
 
 EAPI=2
 
-inherit cmake-utils
+inherit eutils cmake-utils
 
 DESCRIPTION="A Polish tool for printing and managing invoices"
 HOMEPAGE="http://e-linux.pl/"
@@ -18,7 +18,18 @@ IUSE=""
 DEPEND=">=x11-libs/qt-gui-4.4"
 RDEPEND="${DEPEND}"
 
-src_prepare() {
-	# remove some cruft
-	rm *.moc
+S="${WORKDIR}/${PN}-0.6.0.1"
+
+src_install() {
+	cmake-utils_src_install
+
+	insinto /usr/share/${PN}/templates
+	doins templates/*.css \
+		|| die "doins failed"
+
+	doicon icons/${PN}*.png \
+		|| die "doicon failed"
+
+	make_desktop_entry ${PN} QFaktury qfaktury_64
 }
+

@@ -4,9 +4,6 @@
 
 EAPI=2
 
-WANT_AUTOCONF=latest
-#WANT_AUTOMAKE=1.7
-
 inherit eutils autotools
 
 DESCRIPTION="Text based Instant Messenger and IRC client that supports protocols like Jabber and Gadu-Gadu"
@@ -47,9 +44,6 @@ src_prepare() {
 }
 
 src_configure() {
-#	export WANT_AUTOMAKE="1.7"
-	export WANT_AUTOMAKE="latest"
-
 	NOCONFIGURE=1 ./autogen.sh
 
 	use debug && CFLAGS="-O0 -ggdb"

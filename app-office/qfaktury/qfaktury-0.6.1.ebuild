@@ -4,32 +4,31 @@
 
 EAPI=2
 
-inherit eutils cmake-utils
+inherit eutils qt4
 
 DESCRIPTION="A Polish tool for printing and managing invoices"
 HOMEPAGE="http://e-linux.pl/"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/${PN}/${P}-0.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="nls"
+IUSE=""
 
 DEPEND=">=x11-libs/qt-gui-4.4"
 RDEPEND="${DEPEND}"
 
-S="${WORKDIR}/${PN}-0.6.0.1"
 
 src_prepare() {
 	sed -e "s:/usr/local:/usr:g" \
 	    -i Settings.h \
 	    || die "sed failed"
 	    
-	epatch "${FILESDIR}"/${PN}-nip.patch
+	eqmake4 || die "qmake failed"
 }
 
 src_install() {
-	cmake-utils_src_install
+	dobin ${PN}
 
 	insinto /usr/share/${PN}/templates
 	doins templates/*.css \
@@ -39,11 +38,5 @@ src_install() {
 		|| die "doicon failed"
 
 	make_desktop_entry ${PN} QFaktury qfaktury_64
-	
-	if use nls;
-	then
-	    insinto /usr/share/${PN}
-	    doins *.qm
-	fi
 }
 

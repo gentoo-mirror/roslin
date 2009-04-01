@@ -23,9 +23,7 @@ DEPEND="ao? ( media-libs/libao )
 	xv? ( x11-libs/libXv )
 	opengl? ( virtual/opengl )
 	sdl? ( media-libs/libsdl[joystick] )
-	gtk? ( x11-libs/gtk+
-	x11-libs/libXtst )
-	qt4? ( >=x11-libs/qt-gui-4.4 )"
+	>=x11-libs/qt-gui-4.4"
 
 RDEPEND="${DEPEND}"
 
@@ -40,18 +38,10 @@ disable_module() {
 pkg_setup() {
 	confutils_require_any ao openal alsa pulseaudio oss
 	confutils_require_any xv opengl sdl
-	confutils_require_one gtk qt4
 }
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-0.040-makefile.patch
-	
-	# select gui
-	if use gtk
-	then
-	    sed -e "s/ui_qt/ui_hiro/" \
-	-i Makefile || die "sed failed"
-	fi
 }
 
 

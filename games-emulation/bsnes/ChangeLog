@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/bsnes
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 
+  01 Apr 2009; Michał Ziąbkowski <mziab@o2.pl> -bsnes-0.041.ebuild,
+  +bsnes-0.042.ebuild:
+  Bumped.
+
   23 Mar 2009; Michał Ziąbkowski <mziab@o2.pl> -bsnes-0.039.ebuild,
   -bsnes-0.040.ebuild, bsnes-0.041.ebuild:
   Updated homepage. Removed cruft.

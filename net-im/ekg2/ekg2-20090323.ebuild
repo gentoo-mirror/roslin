@@ -8,7 +8,7 @@ inherit eutils autotools
 
 DESCRIPTION="Text based Instant Messenger and IRC client that supports protocols like Jabber and Gadu-Gadu"
 HOMEPAGE="http://pl.ekg2.org/"
-SRC_URI="http://pl.ekg2.org/${P}.tar.bz2"
+SRC_URI="http://pl.ekg2.org/archive/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"

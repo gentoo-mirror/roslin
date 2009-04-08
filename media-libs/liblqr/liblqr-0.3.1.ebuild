@@ -4,7 +4,7 @@
 
 DESCRIPTION="An easy to use C/C++ seam carving library"
 HOMEPAGE="http://liblqr.wikidot.com/"
-SRC_URI="http://liblqr.wikidot.com/local--files/en:download-page/${PN}-1-${PV}.tar.bz2"
+SRC_URI="${HOMEPAGE}local--files/en:download-page/${PN}-1-${PV}.tar.bz2"
 
 LICENSE="LGPL-3"
 SLOT="0"
@@ -14,7 +14,7 @@ IUSE=""
 RDEPEND="dev-libs/glib"
 DEPEND="${RDEPEND}"
 
-S=${WORKDIR}/${PN}-1-${PV}
+S=$WORKDIR/${PN}-1-${PV}
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake intall failed"

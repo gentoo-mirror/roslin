@@ -4,7 +4,7 @@
 
 DESCRIPTION="An easy to use C/C++ seam carving library"
 HOMEPAGE="http://liblqr.wikidot.com/"
-SRC_URI="${HOMEPAGE}local--files/en:download-page/${PN}-1-${PV}.tar.bz2"
+SRC_URI="http://liblqr.wikidot.com/local--files/en:download-page/${PN}-1-${PV}.tar.bz2"
 
 LICENSE="|| ( GPL-3 LGPL-3 )"
 SLOT="0"

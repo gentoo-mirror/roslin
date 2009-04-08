@@ -2,6 +2,9 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  08 Apr 2009; Piotr Szymaniak <lazy_bum@o2.pl> liblqr-0.3.1.ebuild:
+  Fixed LICENSE.
+
   08 Apr 2009; Piotr Szymaniak <lazy_bum@o2.pl> -liblqr-0.2.0.ebuild,
   -liblqr-0.2.1.ebuild, +liblqr-0.3.1.ebuild:
   Version bump to latest bugfix release.

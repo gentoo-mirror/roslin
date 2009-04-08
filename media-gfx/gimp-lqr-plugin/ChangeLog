@@ -2,6 +2,11 @@
 # Copyright 2007-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  08 Apr 2009; Piotr Szymaniak <lazy_bum@o2.pl>
+  -gimp-lqr-plugin-0.5.0.ebuild, -gimp-lqr-plugin-0.5.1.ebuild,
+  +gimp-lqr-plugin-0.6.1.ebuild:
+  Version bump.
+
   16 Feb 2009; Piotr Szymaniak <lazy_bum@o2.pl>
   +gimp-lqr-plugin-0.6.0.ebuild:
   Updated ebuild by jlec.

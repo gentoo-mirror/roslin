@@ -2,6 +2,9 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  20 Apr 2009; Michał Ziąbkowski <mziab@o2.pl> -zsnes-1.51-r2.ebuild:
+  Removed cruft.
+
   05 Mar 2009; Michał Ziąbkowski <mziab@o2.pl>
   +files/zsnes-1.51-FORTIFY_SOURCE.patch, +zsnes-1.51b-r1.ebuild:
   Added fix for -D_FORTIFY_SOURCE.

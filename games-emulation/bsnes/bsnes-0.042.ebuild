@@ -14,7 +14,7 @@ SRC_URI="http://byuu.org/files/${PN}_v${MY_PV}.tar.bz2"
 LICENSE="bsnes"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="ao alsa jma openal opengl -gtk oss pulseaudio +qt4 sdl xv zlib"
+IUSE="ao alsa jma openal opengl oss pulseaudio sdl xv zlib"
 
 DEPEND="ao? ( media-libs/libao )
 	openal? ( media-libs/openal )

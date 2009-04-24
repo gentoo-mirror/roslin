@@ -6,9 +6,11 @@ EAPI=2
 
 inherit eutils qt4
 
+MY_P="${P/_p/_}"
+
 DESCRIPTION="A Polish tool for printing and managing invoices"
 HOMEPAGE="http://e-linux.pl/"
-SRC_URI="mirror://sourceforge/${PN}/${P}-0.tar.gz"
+SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
@@ -18,6 +20,7 @@ IUSE=""
 DEPEND=">=x11-libs/qt-gui-4.4"
 RDEPEND="${DEPEND}"
 
+S="${WORKDIR}/${MY_P}"
 
 src_prepare() {
 	sed -e "s:/usr/local:/usr:g" \

@@ -2,6 +2,11 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  24 Apr 2009; Michał Ziąbkowski <mziab@o2.pl>
+  -pidgin-tlen-20081229.ebuild, -pidgin-tlen-20090209.ebuild,
+  +pidgin-tlen-20090411.ebuild:
+  Bumped. Removed cruft.
+
   23 Mar 2009; Michał Ziąbkowski <mziab@o2.pl>
   +pidgin-tlen-20090322.ebuild:
   Bumped.

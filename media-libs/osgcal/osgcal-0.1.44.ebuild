@@ -2,6 +2,8 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
+EAPI="2"
+
 DESCRIPTION="an adapter for using cal3d inside OpenSceneGraph"
 HOMEPAGE="http://osgcal.sourceforge.net/"
 SRC_URI="http://download.gna.org/underware/sources/${P}.tar.gz"
@@ -13,15 +15,12 @@ IUSE=""
 
 CAL3D_V="0.10.0"
 
-DEPEND=">=dev-games/openscenegraph-1.2
+DEPEND="=dev-games/openscenegraph-1.2[producer]
 		>=media-libs/cal3d-${CAL3D_V}
 		>=media-libs/libsdl-1.2.10"
 RDEPEND="${DEPEND}"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	# this is a bit questionable. it more or less does what the
 	# configure script should do. but since that only exists in
 	# http://cvs.gna.org/cvsweb/osgcal/?cvsroot=underware
@@ -40,8 +39,9 @@ src_unpack() {
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 
-	dodoc AUTHORS.txt Changelog COPYING.txt README.txt TODO.txt VERSION.txt docs/usage.txt
+	dodoc AUTHORS.txt Changelog README.txt TODO.txt \
+		VERSION.txt docs/usage.txt || die "dodoc failed"
 
 	insinto /usr/$(get_libdir)/pkgconfig
-	doins ${PN}.pc
+	doins ${PN}.pc || die "doins failed"
 }

@@ -2,6 +2,9 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  30 Apr 2009; Michał Ziąbkowski <mziab@o2.pl> levelhead-9999.ebuild:
+  Added missing dep
+
   20 Mar 2009; Piotr Szymaniak <lazy_bum@o2.pl> levelhead-9999.ebuild:
   Mixed our ebuild with updated (bug #262631).
 

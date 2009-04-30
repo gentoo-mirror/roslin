@@ -20,7 +20,8 @@ RDEPEND="=dev-games/openscenegraph-1.2
 	media-libs/ARToolKitPlus
 	media-libs/cal3d
 	virtual/opengl
-	virtual/glu"
+	virtual/glu
+	>=media-libs/gstreamer-0.10"
 
 S=${WORKDIR}/${PN}${MY_PV}
 

@@ -4,6 +4,8 @@
 
 EAPI="2"
 
+inherit eutils
+
 DESCRIPTION="an adapter for using cal3d inside OpenSceneGraph"
 HOMEPAGE="http://osgcal.sourceforge.net/"
 SRC_URI="http://download.gna.org/underware/sources/${P}.tar.gz"
@@ -33,14 +35,14 @@ src_prepare() {
 		-e "s:@PACKAGE_VERSION@:${PV}:" \
 		-e "s:@CAL3D_VERSION@:${CAL3D_V}:" \
 		-e "s:@GIFPLUGIN_CFLAGS@:-DSUPPORT_GIF_HLS:" \
-		"${FILESDIR}"/${PN}.pc > ${PN}.pc
+		"${FILESDIR}"/${PN}.pc > ${PN}.pc \
+		|| die "sed failed"
 }
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 
-	dodoc AUTHORS.txt Changelog README.txt TODO.txt \
-		VERSION.txt docs/usage.txt || die "dodoc failed"
+	dodoc AUTHORS ChangeLog README NEWS || die "dodoc failed"
 
 	insinto /usr/$(get_libdir)/pkgconfig
 	doins ${PN}.pc || die "doins failed"

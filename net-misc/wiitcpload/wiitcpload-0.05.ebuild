@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=2
+EAPI="2"
 
 inherit qt4
 
@@ -21,14 +21,19 @@ DEPEND="|| ( =x11-libs/qt-4.3*:4
 		x11-libs/qt-gui )"
 RDEPEND="${DEPEND}"
 
-S="${WORKDIR}/${MY_P}"
+S=${WORKDIR}/${MY_P}
 
-src_prepare() {
-	eqmake4 || die "eqmake4 failed"
+PATCHES=( "${FILESDIR}/${PN}.pro.patch" )
+
+#src_prepare() {
+#	epatch "${FILESDIR}/${PN}.pro.patch" || die "epatch failed"
+#}
+
+src_configure() {
+	eqmake4
 }
 
 src_install() {
-	emake INSTALL_ROOT="${D}" install \
-	    || die "emake failed"
+	emake INSTALL_ROOT="${D}" install || die "emake failed"
+	dodoc doc/CHANGELOG || die "dodoc failed"
 }
-	

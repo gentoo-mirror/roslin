@@ -25,10 +25,6 @@ DEPEND="${RDEPEND}
 SRC_URI="http://www.kadu.net/download/stable/kadu-${K_PV}.tar.bz2"
 
 src_prepare() {
-	# Fix input when built against Qt 4.5
-	epatch "${FILESDIR}/${PN}-qt45-fix.patch"
-	#	"${FILESDIR}/${P}-const.patch"
-
 	# Disable everything besides the core
 	kadu-disable_all
 

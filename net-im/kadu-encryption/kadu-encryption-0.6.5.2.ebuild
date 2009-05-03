@@ -2,9 +2,13 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-inherit kadu-base kadu-mod
+inherit kadu-base
 
-DESCRIPTION="Kadu module for automatic window hiding"
+MOD_DEPEND="app-crypt/qca-ossl:2"
+
+inherit kadu-mod
+
+DESCRIPTION="OpenSSL encryption module for Kadu"
 HOMEPAGE="http://kadu.net"
 KEYWORDS="amd64 x86"
 IUSE=""

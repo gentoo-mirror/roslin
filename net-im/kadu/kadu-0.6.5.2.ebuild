@@ -25,7 +25,7 @@ DEPEND=">=net-im/kadu-core-${PV}
 	>=net-im/kadu-history-${PV}
 	>=net-im/kadu-window_notify-${PV}
 	>=net-im/kadu-qt4_docking-${PV}
-	powerkadu? ( >=net-im/kadu-powerkadu-0.2.1 )
+	powerkadu? ( ~net-im/kadu-powerkadu-${PV} )
 	alsa? ( >=net-im/kadu-alsa_sound-${PV} )
 	oss? ( >=net-im/kadu-dsp_sound-${PV} )
 	ssl? ( >=net-im/kadu-encryption-${PV} )

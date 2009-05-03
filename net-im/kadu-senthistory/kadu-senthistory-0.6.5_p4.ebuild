@@ -4,14 +4,13 @@
 
 inherit kadu-base
 
+MOD_URI="http://www.ultr.pl/kadu/${NAME}-${PV/_p/-}.tar.gz"
 MOD_TYPE="ext"
-MOD_DEPEND=">=net-im/kadu-notify-${MIN_VER}"
-MOD_URI="http://kadu.net/~dorr/moduly/${P}.tar.bz2"
 
 inherit kadu-mod
 
-DESCRIPTION="Kadu module for checking who has you on their list"
-HOMEPAGE="http://kadu.net/~dorr"
+DESCRIPTION="Adds history of sent messages to Kadu chat window"
+HOMEPAGE="http://www.ultr.pl/kadu/"
 KEYWORDS="amd64 x86"
 
 IUSE=""

@@ -2,6 +2,10 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  03 May 2009; Michał Ziąbkowski <mziab@o2.pl> +kadu-agent-0.6.5.2.ebuild,
+  -kadu-agent-0.5.ebuild:
+  Bumped. Removed previous version. Now an internal module.
+
   25 Jan 2009; Michał Ziąbkowski <mziab@o2.pl> kadu-agent-0.4.4.ebuild,
   kadu-agent-0.5.ebuild, +metadata.xml:
   Some repoman fixes.

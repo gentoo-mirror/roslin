@@ -1,0 +1,8 @@
+# ChangeLog for net-im/kadu-phonon_sound
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  03 May 2009; Michał Ziąbkowski <mziab@o2.pl>
+  +kadu-phonon_sound-0.6.5.2.ebuild, +metadata.xml:
+  New ebuild.
+

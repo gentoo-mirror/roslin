@@ -2,6 +2,9 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  03 May 2009; Michał Ziąbkowski <mziab@o2.pl> +kadu-tabs-1.2.4.ebuild:
+  Bumped.
+
   25 Jan 2009; Michał Ziąbkowski <mziab@o2.pl> kadu-tabs-1.1.6-r1.ebuild,
   kadu-tabs-1.2.1.ebuild, +kadu-tabs-1.2.3.ebuild, +metadata.xml:
   Bumped. Some repoman fixes.

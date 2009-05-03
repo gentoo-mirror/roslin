@@ -2,6 +2,10 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  03 May 2009; Michał Ziąbkowski <mziab@o2.pl>
+  -kadu-profiles-0.6.5.1.ebuild, +kadu-profiles-0.6.5.2.ebuild:
+  Bumped. Removed previous version.
+
   25 Jan 2009; Michał Ziąbkowski <mziab@o2.pl> kadu-profiles-0.3.1.ebuild,
   -kadu-profiles-0.6.5.ebuild, +kadu-profiles-0.6.5.1.ebuild, +metadata.xml:
   Bumped. Removed previous version. Some repoman fixes.

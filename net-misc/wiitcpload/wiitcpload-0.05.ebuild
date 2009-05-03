@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="|| ( =x11-libs/qt-4.3*:4
@@ -24,10 +24,6 @@ RDEPEND="${DEPEND}"
 S=${WORKDIR}/${MY_P}
 
 PATCHES=( "${FILESDIR}/${PN}.pro.patch" )
-
-#src_prepare() {
-#	epatch "${FILESDIR}/${PN}.pro.patch" || die "epatch failed"
-#}
 
 src_configure() {
 	eqmake4

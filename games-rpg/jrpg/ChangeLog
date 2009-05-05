@@ -1,0 +1,8 @@
+# ChangeLog for games-rpg/jrpg
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  05 May 2009; Michał Ziąbkowski <mziab@o2.pl> +jrpg-200707041702.ebuild,
+  +files/jrpg-savedir.patch:
+  Initial ebuild.
+

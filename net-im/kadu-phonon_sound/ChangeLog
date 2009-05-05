@@ -4,6 +4,10 @@
 
   05 May 2009; Michał Ziąbkowski <mziab@o2.pl>
   kadu-phonon_sound-0.6.5.2.ebuild:
+  Removed superfluous parentheses.
+
+  05 May 2009; Michał Ziąbkowski <mziab@o2.pl>
+  kadu-phonon_sound-0.6.5.2.ebuild:
   Fixed phonon dep to work with qt-phonon.
 
   03 May 2009; Michał Ziąbkowski <mziab@o2.pl>

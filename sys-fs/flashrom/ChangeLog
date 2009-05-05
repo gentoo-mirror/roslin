@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/flashrom
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 
+  05 May 2009; Piotr Szymaniak <lazy_bum@o2.pl> flashrom-9999.ebuild:
+  Added ~x86, fixed Description.
+
   05 May 2009; Piotr Szymaniak <lazy_bum@o2.pl> flashrom-9999.ebuild,
   +files/Makefile.patch:
   Updated ebuild (thanks to Alexey Charkov, bug #196945).

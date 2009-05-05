@@ -6,14 +6,13 @@ EAPI=2
 
 inherit eutils flag-o-matic subversion
 
-DESCRIPTION="a utility which can be used to detect, read, erase, or write BIOS
-chips (DIP, PLCC, SPI)"
+DESCRIPTION="Utility to detect, read, erase or write BIOS chips (DIP, PLCC, SPI)"
 HOMEPAGE="http://www.coreboot.org/Flashrom"
 ESVN_REPO_URI="svn://coreboot.org/repos/trunk/util/${PN}"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="sys-libs/zlib

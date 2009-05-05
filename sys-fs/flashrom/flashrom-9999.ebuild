@@ -1,35 +1,33 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-inherit subversion eutils
+EAPI=2
 
-DESCRIPTION="Utility which can be used to detect, read, or write BIOS chips (DIP, PLCC, SPI)"
+inherit eutils flag-o-matic subversion
+
+DESCRIPTION="a utility which can be used to detect, read, erase, or write BIOS
+chips (DIP, PLCC, SPI)"
 HOMEPAGE="http://www.coreboot.org/Flashrom"
+ESVN_REPO_URI="svn://coreboot.org/repos/trunk/util/${PN}"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64"
 IUSE=""
 
-SRC_URI=""
-ESVN_REPO_URI="svn://coreboot.org/repos/trunk/util/${PN}"
+RDEPEND="sys-libs/zlib
+	sys-apps/pciutils"
+DEPEND="${RDEPEND}"
 
-RDEPEND="sys-apps/pciutils
-	sys-libs/zlib"
-
-S=${WORKDIR}/${PN}
-
-src_unpack() {
-	subversion_src_unpack
-	cd "${S}"
-	sed -i \
-		-e "s|-Os -Wall -Werror|${CFLAGS}|" \
-		-e "s|strip|echo|" \
-		Makefile || die "sed failed"
+src_prepare() {
+	epatch "${FILESDIR}/Makefile.patch"
+	append-flags "-D'FLASHROM_VERSION=\"${ESVN_WC_REVISION}\"'"
 }
 
 src_install() {
 	dosbin ${PN} || die "dosbin failed"
-	doman ${PN}.8
+	doman ${PN}.8 || die "doman failed"
+	dodoc README || die "dodoc failed"
 }
+

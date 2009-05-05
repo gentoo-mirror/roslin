@@ -1,0 +1,40 @@
+--- Makefile.old	2009-05-04 20:30:18.305448790 +0400
++++ Makefile	2009-05-04 20:33:19.091149978 +0400
+@@ -11,7 +11,7 @@
+ INSTALL = /usr/bin/install
+ PREFIX  = /usr/local
+ #CFLAGS  = -O2 -g -Wall -Werror
+-CFLAGS  = -Os -Wall -Werror
++CFLAGS  ?= -Os -Wall -Werror
+ LDFLAGS = 
+ 
+ OS_ARCH	= $(shell uname)
+@@ -27,7 +27,7 @@
+ LDFLAGS += -L/usr/local/lib
+ endif
+ 
+-LDFLAGS += -lpci -lz
++LIBS = -lpci -lz
+ 
+ OBJS = chipset_enable.o board_enable.o udelay.o jedec.o stm50flw0x0x.o \
+ 	sst28sf040.o am29f040b.o mx29f002.o sst39sf020.o m29f400bt.o \
+@@ -44,8 +44,8 @@
+           | sed -e "s/.*://" -e "s/\([0-9]*\).*/\1/")"'
+ 
+ $(PROGRAM): $(OBJS)
+-	$(CC) -o $(PROGRAM) $(OBJS) $(LDFLAGS)
+-	$(STRIP) $(STRIP_ARGS) $(PROGRAM)
++	$(CC) -o $(PROGRAM) $(LDFLAGS) $(OBJS) $(LIBS)
++#	$(STRIP) $(STRIP_ARGS) $(PROGRAM)
+ 
+ flashrom.o: flashrom.c
+ 	$(CC) -c $(CFLAGS) $(SVNDEF) $(CPPFLAGS) $< -o $@
+@@ -65,7 +65,7 @@
+ 		   echo "struct pci_access *pacc;";	   \
+ 		   echo "int main(int argc, char **argv)"; \
+ 		   echo "{ pacc = pci_alloc(); return 0; }"; ) > .test.c )
+-	@$(CC) $(CFLAGS) .test.c -o .test $(LDFLAGS) >/dev/null 2>&1 &&	\
++	@$(CC) $(CFLAGS) $(LDFLAGS) .test.c -o .test $(LIBS) >/dev/null 2>&1 &&	\
+ 		echo "found." || ( echo "not found."; echo;		\
+ 		echo "Please install pciutils-devel and zlib-devel.";	\
+ 		echo "See README for more information."; echo;		\

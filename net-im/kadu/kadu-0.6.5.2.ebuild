@@ -28,6 +28,7 @@ DEPEND=">=net-im/kadu-core-${PV}
 	powerkadu? ( ~net-im/kadu-powerkadu-${PV} )
 	alsa? ( >=net-im/kadu-alsa_sound-${PV} )
 	oss? ( >=net-im/kadu-dsp_sound-${PV} )
+	phonon? ( >=net-im/kadu-phonon_sound-${PV} )
 	ssl? ( >=net-im/kadu-encryption-${PV} )
 	voice? ( >=net-im/kadu-voice-${PV} )
 	emoticons? ( >=net-im/kadu-emoticons-0.6.5 )

@@ -5,7 +5,7 @@
 inherit kadu-base
 
 MOD_DEPEND=">=net-im/kadu-sound-${PV}
-	    media-sound/phonon"
+	    ( || ( media-sound/phonon x11-libs/qt-phonon ) )"
 
 inherit kadu-mod
 

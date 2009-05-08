@@ -2,6 +2,8 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: /var/cvsroot/gentoo-x86/games-puzzle/levelhead-9999.ebuild,v 1.0 2009/03/15 08:41:32 frostwork Exp $
 
+EAPI=2
+
 inherit eutils games flag-o-matic subversion
 
 ESVN_REPO_URI="http://www.inclusiva-net.es/svn/levelhead/trunk"
@@ -16,18 +18,16 @@ IUSE=""
 
 RDEPEND="=dev-games/openscenegraph-1.2
 	media-libs/osgcal
-	media-libs/ARToolKit
+	media-libs/ARToolKit[gstreamer]
 	media-libs/ARToolKitPlus
 	media-libs/cal3d
 	virtual/opengl
 	virtual/glu
-	>=media-libs/gstreamer-0.10"
+	media-libs/libv4l"
 
 S=${WORKDIR}/${PN}${MY_PV}
 
-src_unpack() {
-	subversion_src_unpack
-
+src_prepare() {
 	epatch "${FILESDIR}"/makefile.diff \
 		"${FILESDIR}"/paths.diff \
 		"${FILESDIR}"/gcc43.patch
@@ -47,10 +47,14 @@ src_unpack() {
 		bin/Data/levelHead_markers.dat || die "sed failed"
 
 	sed -i \
-		-e "s:fonts/:"${GAMES_DATADIR}"/"${PN}"/fonts/:" \
-		-e "s:models/:"${GAMES_DATADIR}"/"${PN}"/models/:" \
-		-e "s:shaders/:"${GAMES_DATADIR}"/"${PN}"/shaders/:" \
+		-e "s:fonts/:"${GAMES_DATADIR}"/"${PN}"/fonts/:g" \
+		-e "s:models/:"${GAMES_DATADIR}"/"${PN}"/models/:g" \
+		-e "s:shaders/:"${GAMES_DATADIR}"/"${PN}"/shaders/:g" \
 		src/levelHead/levelHead.cpp || die "sed failed"
+		
+	sed -i \
+		-e "s:games_libdir:$(games_get_libdir):" \
+		bin/levelhead || die "sed failed"
 }
 
 src_compile() {

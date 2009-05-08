@@ -2,6 +2,11 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  08 May 2009; Michał Ziąbkowski <mziab@o2.pl> files/gcc43.patch,
+  levelhead-9999.ebuild, files/paths.diff:
+  Require ARToolKit with gstreamer support. Preloading libv4l to enhance
+  webcame compat. New GCC 4.3 fix. Fixed lib and data paths. Works for me :)
+
   30 Apr 2009; Michał Ziąbkowski <mziab@o2.pl> levelhead-9999.ebuild:
   Added missing dep
 

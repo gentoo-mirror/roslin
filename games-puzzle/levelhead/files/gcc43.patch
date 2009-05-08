@@ -22,3 +22,15 @@ Index: src/osgART/GenericTracker.cpp
  
  
  namespace osgART {
+Index: src/osgART/Video/ARToolKit/ARToolKitVideo
+===================================================================
+--- src/osgART/Video/ARToolKit/ARToolKitVideo	(wersja 129)
++++ src/osgART/Video/ARToolKit/ARToolKitVideo	(kopia robocza)
+@@ -62,6 +62,7 @@
+ 
+ #include <iostream>
+ #include <string>
++#include <cstdlib>
+ 
+ //graphics include
+ #include <AR/video.h>

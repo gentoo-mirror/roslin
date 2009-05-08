@@ -1,0 +1,39 @@
+diff -Nur ARToolKit-2.72.1.orig/configure ARToolKit-2.72.1/configure
+--- ARToolKit-2.72.1.orig/configure	2006-12-06 01:37:23.000000000 +0100
++++ ARToolKit-2.72.1/configure	2009-05-08 01:14:36.378153343 +0200
+@@ -59,7 +59,7 @@
+         LDFLAG="-L/usr/X11R6/lib"
+         ARFLAG="rs"
+         RANLIB=""
+-        LIBS="-lglut -lGLU -lGL -lXi -lXmu -lX11 -lm"
++        LIBS="-lglut -lGLU -lGL -lXi -lXmu -lX11 -lm -ljpeg"
+         CONFIG="AR_INPUT_V4L"
+     elif [ "$ANS" = "2" ]
+     then
+@@ -91,7 +91,7 @@
+         LDFLAG="-L/usr/X11R6/lib -L/usr/local/lib"
+         ARFLAG="rs"
+         RANLIB=""
+-        LIBS="-lraw1394 -ldv -lpthread -lglut -lGLU -lGL -lXi -lXmu -lX11 -lm"
++        LIBS="-lraw1394 -ldv -lpthread -lglut -lGLU -lGL -lXi -lXmu -lX11 -lm -ljpeg"
+         CONFIG="AR_INPUT_DV"
+     elif [ "$ANS" = "4" ]
+     then
+@@ -100,7 +100,7 @@
+         LDFLAG="-L/usr/X11R6/lib"
+         ARFLAG="rs"
+         RANLIB=""
+-        LIBS="-lglut -lGLU -lGL -lXi -lXmu -lX11 -lm -lraw1394 -ldc1394_control"
++        LIBS="-lglut -lGLU -lGL -lXi -lXmu -lX11 -lm -lraw1394 -ldc1394_control -ljpeg"
+         CONFIG="AR_INPUT_1394CAM"
+     elif [ "$ANS" = "5" ]
+     then
+@@ -112,7 +112,7 @@
+         LDFLAG="$GST_LIBS -L/usr/X11R6/lib -L/usr/local/lib"
+         ARFLAG="rs"
+         RANLIB=""
+-        LIBS="-lpthread -lglut -lGLU -lGL -lXi -lX11 -lm"
++        LIBS="-lpthread -lglut -lGLU -lGL -lXi -lX11 -lm -ljpeg"
+         CONFIG="AR_INPUT_GSTREAMER"
+     else
+         echo "Please enter 1,2,3,4 or 5."

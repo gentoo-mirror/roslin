@@ -9,7 +9,8 @@ MY_PV=${PV/_rc/-rc}
 
 DESCRIPTION="Cross-platform, high performance 3D graphics toolkit"
 HOMEPAGE="http://www.openscenegraph.org/"
-SRC_URI="http://www.openscenegraph.org/downloads/stable_releases/OpenSceneGraph-1.2/source/OSG_OP_OT-${MY_PV}.zip"
+SRC_URI="http://www.openscenegraph.org/downloads/stable_releases/OpenSceneGraph-1.2/source/OSG_OP_OT-${MY_PV}.zip
+	mirror://freebsd/distfiles/OSG_OP_OT-${MY_PV}.zip"
 
 LICENSE="OSGPL"
 SLOT="0"

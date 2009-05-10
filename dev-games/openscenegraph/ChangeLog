@@ -2,6 +2,9 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  10 May 2009; Piotr Szymaniak <lazy_bum@o2.pl> openscenegraph-1.2.ebuild:
+  Added freebsd mirror (suggested by Jesús Pérez).
+
   17 Mar 2009; Michał Ziąbkowski <mziab@o2.pl>
   +files/openscenegraph-gcc43.patch, openscenegraph-1.2.ebuild:
   Added GCC 4.3 patch. OpenSceneGraph, I hate you.

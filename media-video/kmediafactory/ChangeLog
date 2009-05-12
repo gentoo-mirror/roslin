@@ -2,6 +2,12 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  12 May 2009; Michał Ziąbkowski <mziab@o2.pl>
+  -files/kmediafactory-qt45.patch, -kmediafactory-0.7.0_rc3.ebuild,
+  -kmediafactory-0.7.0_rc3-r1.ebuild, -kmediafactory-0.7.1.ebuild,
+  +kmediafactory-0.7.2.ebuild:
+  Bumped. Removed cruft.
+
   24 Apr 2009; Michał Ziąbkowski <mziab@o2.pl>
   +kmediafactory-0.7.1.ebuild:
   Bumped.

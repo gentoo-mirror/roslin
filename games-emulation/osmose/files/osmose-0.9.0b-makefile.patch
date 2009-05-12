@@ -1,0 +1,21 @@
+diff -Nur Osmose-0-9-0beta.orig/Makefile Osmose-0-9-0beta/Makefile
+--- Osmose-0-9-0beta.orig/Makefile	2009-03-18 13:11:00.000000000 +0100
++++ Osmose-0-9-0beta/Makefile	2009-05-12 20:46:51.713317390 +0200
+@@ -72,7 +72,7 @@
+ 
+ # Compiler/Linker Flags
+ # add -O3 to CFLAGS for speedup -pg on LFLAGS and CFLAGS for gprof
+-CFLAGS =  -Wall -DLINUX -O3 -I$(GUI_SRC_DIR)/
++CFLAGS +=  -Wall -DLINUX -I$(GUI_SRC_DIR)/
+ #CFLAGS =  -Wall -DLINUX -ggdb -I$(GUI_SRC_DIR)/
+ LFLAGS =  -lSDL -lGL -lz
+ AFLAGS =  -f elf
+@@ -84,7 +84,7 @@
+ .cpp.o:
+ 	$(CC) $(CFLAGS) -c $*.cpp -o $*.o
+ 
+-all:  libs osmose stripexe
++all:  libs osmose
+ 
+ osmose: $(z80_lib) $(GUI_OBJS) $(CORE_OBJS)
+ 	$(CC)  $(CFLAGS) $(GUI_OBJS) $(CORE_OBJS) $(UNZIP_LIB) -o $(OSM_EXE) $(LFLAGS)

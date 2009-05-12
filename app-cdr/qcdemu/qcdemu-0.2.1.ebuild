@@ -8,7 +8,7 @@ inherit qt4
 
 DESCRIPTION="A simple frontend for CDemu"
 HOMEPAGE="http://my.opera.com/mziab/blog/"
-SRC_URI="http://195.68.226.253/mziab/${P}.tar.gz"
+SRC_URI="http://www.jrkrpg.pl/mziab/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"

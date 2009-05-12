@@ -2,6 +2,11 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  12 May 2009; Michał Ziąbkowski <mziab@o2.pl> -ideas-bin-1.0.2.8.ebuild,
+  -ideas-bin-1.0.2.9.ebuild, -ideas-bin-1.0.3.0.ebuild,
+  +ideas-bin-1.0.3.1.ebuild:
+  Bumped. Removed cruft.
+
   13 Mar 2009; Michał Ziąbkowski <mziab@o2.pl> +ideas-bin-1.0.3.0.ebuild:
   Bumped.
 

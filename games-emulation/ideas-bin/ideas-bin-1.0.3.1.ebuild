@@ -24,6 +24,8 @@ DEPEND="app-arch/unzip"
 RDEPEND="amd64? ( app-emulation/emul-linux-x86-gtklibs )
 	x86? ( >=x11-libs/gtk+-2 )
 	virtual/opengl"
+	
+S="${WORKDIR}"
 
 pkg_setup() {
 	# x86 binary package, ABI=x86

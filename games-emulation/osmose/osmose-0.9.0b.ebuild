@@ -4,7 +4,7 @@
 
 EAPI=2
 
-inherit games
+inherit eutils games
 
 MY_PV="${PV//./-}"
 MY_PV="${MY_PV/b/beta}"
@@ -33,6 +33,7 @@ src_install() {
 	dogamesbin ${PN}
 
 	dodoc changes.txt readme.txt
+	make_desktop_entry ${PN}
 
 	prepgamesdirs
 }

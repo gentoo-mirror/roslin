@@ -41,7 +41,7 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-0.040-makefile.patch
+	epatch "${FILESDIR}"/${P}-makefile.patch
 }
 
 

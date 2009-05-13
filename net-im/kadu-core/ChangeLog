@@ -2,6 +2,10 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  13 May 2009; Michał Ziąbkowski <mziab@o2.pl> kadu-core-0.6.5.2.ebuild,
+  +files/kadu-gcc44.patch:
+  Added gcc4.4 patch.
+
   03 May 2009; Michał Ziąbkowski <mziab@o2.pl>
   -kadu-core-0.6.5.1-r3.ebuild, +kadu-core-0.6.5.2.ebuild:
   Bumped. Removed previous version.

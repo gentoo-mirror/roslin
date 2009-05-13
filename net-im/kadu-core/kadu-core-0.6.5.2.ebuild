@@ -25,6 +25,9 @@ DEPEND="${RDEPEND}
 SRC_URI="http://www.kadu.net/download/stable/kadu-${K_PV}.tar.bz2"
 
 src_prepare() {
+	# GCC4.4 fix
+	epatch "${FILESDIR}/kadu-gcc44.patch"
+
 	# Disable everything besides the core
 	kadu-disable_all
 
@@ -32,7 +35,7 @@ src_prepare() {
 	echo "icons_default=y" >> ${S}/.config
 
 	# Enable default emoticons
-	echo "emoticons_penguins=y" >> ${S}/.config
+	echo "emoticons_penguins=y" >> ${S}/.config	
 }
 
 pkg_postinst() {

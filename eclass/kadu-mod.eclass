@@ -24,6 +24,9 @@ kadu-mod_src_unpack()
 	unpack ${A}
 	cd ${S}
 	
+	# GCC4.4 fix, not a pretty sight, I know
+	epatch "${FILESDIR%%kadu*}kadu-core/files/kadu-gcc44.patch"
+	
 	# Disable everything else
 	kadu-disable_all
 

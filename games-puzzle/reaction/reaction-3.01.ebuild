@@ -16,6 +16,7 @@ KEYWORDS="~x86"
 IUSE="single"
 
 DEPEND="media-libs/libsdl
+	x11-libs/libXtst
 	single? ( dev-lang/fpc )"
 RDEPEND="${DEPEND}"
 

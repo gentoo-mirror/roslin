@@ -2,6 +2,9 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  18 May 2009; Piotr Szymaniak <lazy_bum@o2.pl> +Manifest:
+  Fixed Manifest. (;
+
   18 May 2009; Piotr Szymaniak <lazy_bum@o2.pl> +flac2mp3-0.3.0_rc1.ebuild:
   Initial ebuild (import from bug #210042).
 

@@ -2,6 +2,10 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  21 May 2009; Michał Ziąbkowski <mziab@o2.pl>
+  +kadu-weather-3.15-r1.ebuild, +files/kadu-weather-fix-segfault.patch:
+  Backported fix from trunk for segfault when locking toolbars.
+
   25 Jan 2009; Michał Ziąbkowski <mziab@o2.pl> kadu-weather-3.13.ebuild,
   +kadu-weather-3.15.ebuild, +metadata.xml:
   Bumped. Some repoman fixes.

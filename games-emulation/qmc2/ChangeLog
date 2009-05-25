@@ -2,6 +2,9 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 
   25 May 2009; Michał Ziąbkowski <mziab@o2.pl> qmc2-0.2_beta8.ebuild:
+  Fixed description, doh.
+
+  25 May 2009; Michał Ziąbkowski <mziab@o2.pl> qmc2-0.2_beta8.ebuild:
   Added proper sdlmess support.
 
   05 May 2009; Michał Ziąbkowski <mziab@o2.pl> -qmc2-0.2_beta6.ebuild,

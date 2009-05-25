@@ -8,7 +8,7 @@ inherit eutils qt4 confutils games
 
 MY_PV=${PV/_beta/.b}
 
-DESCRIPTION="An MAME frontend for SDLMAME"
+DESCRIPTION="An MAME frontend for SDLMAME/SDLMESS"
 HOMEPAGE="http://www.mameworld.net/mamecat/"
 SRC_URI="mirror://sourceforge/${PN}/${PN}-${MY_PV}.tar.bz2"
 

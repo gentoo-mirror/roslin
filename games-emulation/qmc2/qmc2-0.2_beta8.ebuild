@@ -28,7 +28,7 @@ RDEPEND="${DEPEND}
 
 S="${WORKDIR}/${PN}"
 
-pkg_config() {
+pkg_setup() {
 	# Can't select both at the same time
 	confutils_require_one sdlmame sdlmess
 }

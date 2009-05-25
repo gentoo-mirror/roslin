@@ -3,7 +3,7 @@
 # $Header: /var/cvsroot/gentoo-x86/app-office/osmo/osmo-0.2.0.ebuild,v 1.2 2008/07/24 16:00:03 armin76 Exp $
 
 DESCRIPTION="a personal organizer which includes calendar, task manager and address book."
-HOMEPAGE="http://clay.ll.pl/osmo"
+HOMEPAGE="http://clayo.org/osmo"
 SRC_URI="mirror://sourceforge/${PN}-pim/${P}.tar.gz"
 
 LICENSE="GPL-2"

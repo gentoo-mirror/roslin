@@ -2,6 +2,10 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  25 May 2009; Michał Ziąbkowski <mziab@o2.pl> -sdlmess-0.129.ebuild,
+  +sdlmess-0.131.ebuild:
+  Bumped. Removed cruft.
+
   17 Mar 2009; Michał Ziąbkowski <mziab@o2.pl> +sdlmess-0.130.ebuild:
   Bumped.
 

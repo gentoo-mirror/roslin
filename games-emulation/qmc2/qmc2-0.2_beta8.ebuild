@@ -4,7 +4,7 @@
 
 EAPI=2
 
-inherit eutils qt4 games
+inherit eutils qt4 confutils games
 
 MY_PV=${PV/_beta/.b}
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/${PN}/${PN}-${MY_PV}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
-IUSE="debug joystick opengl phonon"
+IUSE="debug joystick opengl phonon +sdlmame sdlmess"
 
 DEPEND="x11-libs/qt-gui:4[accessibility]
 	phonon? ( || ( media-sound/phonon x11-libs/qt-phonon ) )
@@ -23,9 +23,15 @@ DEPEND="x11-libs/qt-gui:4[accessibility]
 	opengl? ( virtual/opengl )"
 
 RDEPEND="${DEPEND}
-	games-emulation/sdlmame"
+	sdlmame? ( games-emulation/sdlmame )
+	sdlmess? ( games-emulation/sdlmess )"
 
 S="${WORKDIR}/${PN}"
+
+pkg_config() {
+	# Can't select both at the same time
+	confutils_require_one sdlmame sdlmess
+}
 
 src_prepare() {
 	epatch "${FILESDIR}/${PN}-0.2_beta7-makefile.patch"
@@ -36,8 +42,12 @@ src_prepare() {
 }
 
 src_compile() {
+	local BACKEND
+	use sdlmame && BACKEND="SDLMAME"
+	use sdlmess && BACKEND="SDLMESS"
+
 	# Should really use GAMES_DATADIR, but then it bombs out
-	FLAGS="QTDIR=/usr DESTDIR=${D} PREFIX=${GAMES_PREFIX} DATADIR=${GAMES_DATADIR} CTIME=0"
+	FLAGS="QTDIR=/usr DESTDIR=${D} PREFIX=${GAMES_PREFIX} DATADIR=${GAMES_DATADIR} EMULATOR=${BACKEND} CTIME=0"
 
 	use debug || FLAGS="${FLAGS} DEBUG=0"
 	use joystick && FLAGS="${FLAGS} JOYSTICK=1"

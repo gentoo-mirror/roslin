@@ -1,6 +1,11 @@
 # ChangeLog for games-emulation/qmc2
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 
+  26 May 2009; Michał Ziąbkowski <mziab@o2.pl> qmc2-0.2_beta8.ebuild:
+  Fix some build system stupidity to allow both sdlmame and sdlmess backends
+  to be enabled at the same time. Will probably need some further tweaking.
+  Not very pretty, but works for me.
+
   25 May 2009; Michał Ziąbkowski <mziab@o2.pl> qmc2-0.2_beta8.ebuild:
   Fixed thinko.
 

@@ -29,8 +29,16 @@ RDEPEND="${DEPEND}
 S="${WORKDIR}/${PN}"
 
 pkg_setup() {
-	# Can't select both at the same time
-	confutils_require_one sdlmame sdlmess
+	# Make sure at least one is selected
+	confutils_require_any sdlmame sdlmess
+
+	# Set proper parameters for make
+	FLAGS="QTDIR=/usr DESTDIR=${D} PREFIX=${GAMES_PREFIX} DATADIR=${GAMES_DATADIR} CTIME=0"
+
+	use debug || FLAGS="${FLAGS} DEBUG=0"
+	use joystick && FLAGS="${FLAGS} JOYSTICK=1"
+	use opengl && FLAGS="${FLAGS} OPENGL=1"
+	use phonon || FLAGS="${FLAGS} PHONON=0"
 }
 
 src_prepare() {
@@ -39,29 +47,42 @@ src_prepare() {
 	## This is not as it appears, ARCH means something different to qmc2's Makefile
 	## then it means to the portage/portage-compatible package manager
 	sed -ie 's%ifndef ARCH%ifdef ARCH%' Makefile
+	
+	use sdlmess && cp -r "${S}" "${WORKDIR}/${PN}-sdlmess"
 }
 
 src_compile() {
-	local BACKEND
-	use sdlmame && BACKEND="SDLMAME"
-	use sdlmess && BACKEND="SDLMESS"
-
-	# Should really use GAMES_DATADIR, but then it bombs out
-	FLAGS="QTDIR=/usr DESTDIR=${D} PREFIX=${GAMES_PREFIX} DATADIR=${GAMES_DATADIR} EMULATOR=${BACKEND} CTIME=0"
-
-	use debug || FLAGS="${FLAGS} DEBUG=0"
-	use joystick && FLAGS="${FLAGS} JOYSTICK=1"
-	use opengl && FLAGS="${FLAGS} OPENGL=1"
-	use phonon || FLAGS="${FLAGS} PHONON=0"
-	emake ${FLAGS} || die "make failed"
+	if use sdlmame
+	then
+	    emake ${FLAGS} EMULATOR=SDLMAME || die "make failed"
+	fi
+	
+	if use sdlmess
+	then
+	    cd "${WORKDIR}/${PN}-sdlmess"
+	    emake ${FLAGS} EMULATOR=SDLMESS || die "make failed"
+	fi
+	
 }
 
 src_install() {
-	emake ${FLAGS} install || die "make install failed"
+	if use sdlmame
+	then
+	    emake ${FLAGS} EMULATOR=SDLMAME install || die "make install failed"
+	fi
+	
+	if use sdlmess
+	then
+	    cd "${WORKDIR}/${PN}-sdlmess"
+	    emake ${FLAGS} EMULATOR=SDLMESS install || die "make install failed"
+	fi
 
 	## Not a big fan of doing this, but it's necessary due to build system
 	sed -ie "s%${D}%/%g" "${D}etc/${PN}/${PN}.ini"
 	rm "${D}etc/${PN}/${PN}.inie"
+	
+	# Remove symlink to avoid confusion
+	rm "${D}/${GAMES_BINDIR}/qmc2"
 
 	prepgamesdirs
 }

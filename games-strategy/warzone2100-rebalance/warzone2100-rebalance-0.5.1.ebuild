@@ -10,7 +10,7 @@ MY_GAME="warzone2100"
 
 DESCRIPTION="Warzone 2100 rebalance mod by Zarel"
 HOMEPAGE="http://wzguide.co.cc/new/"
-SRC_URI="http://wzguide.co.cc/new/rebalance_${PV}.wz"
+SRC_URI="http://guide.wz2100.net/new/rebalance_${PV}.wz"
 
 LICENSE="CC0"
 SLOT="0"

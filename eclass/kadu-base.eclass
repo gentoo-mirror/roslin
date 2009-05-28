@@ -2,7 +2,6 @@ inherit eutils flag-o-matic cmake-utils
 
 LICENSE="GPL-2"
 SLOT="0"
-RESTRICT="mirror"
 
 # If no version was requested, default to this one
 if [ -z "${MIN_VER}" ]

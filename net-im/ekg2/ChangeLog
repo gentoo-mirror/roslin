@@ -2,6 +2,9 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  31 May 2009; Piotr Szymaniak <lazy_bum@o2.pl> ekg2-99999999-r2.ebuild:
+  Removed default oss and pcm flags.
+
   02 Apr 2009; Piotr Szymaniak <lazy_bum@o2.pl> ekg2-20090323.ebuild,
   -ekg2-20090328.ebuild:
   Removed latest snapshot (possibly with memleak), fixed SRC_URI in previous one.

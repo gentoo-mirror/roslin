@@ -16,7 +16,7 @@ SLOT="0"
 
 KEYWORDS=""
 
-IUSE="autoresponder dbus nntp rss gadu gif jpeg gpg gsm gtk httprc icq ioctld irc jabber gnutls ssl jogger +logs oracle sqlite sqlite3 mail ncurses gpm spell +oss +pcm perl polchat python +rc -readline rivchat rot13 ruby sim sms pcap xmsg xosd unicode nls zlib inotify"
+IUSE="autoresponder dbus nntp rss gadu gif jpeg gpg gsm gtk httprc icq ioctld irc jabber gnutls ssl jogger +logs oracle sqlite sqlite3 mail ncurses gpm spell oss pcm perl polchat python +rc -readline rivchat rot13 ruby sim sms pcap xmsg xosd unicode nls zlib inotify"
 
 RDEPEND="dbus? ( sys-apps/dbus )
 	rss? ( >=dev-libs/expat-1.95.6 )

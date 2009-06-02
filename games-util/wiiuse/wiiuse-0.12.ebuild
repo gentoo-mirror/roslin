@@ -15,12 +15,11 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~x86"
-IUSE="debug examples sdl"
+IUSE="debug examples"
 
 RDEPEND="net-wireless/bluez-utils
-	examples? (
-		sdl? ( media-libs/libsdl
-			virtual/glut ) )"
+	examples? ( media-libs/libsdl
+		virtual/glut )"
 DEPEND="${RDEPEND}"
 
 S=${WORKDIR}/${MY_P/_src/}
@@ -43,13 +42,10 @@ src_prepare() {
 }
 
 src_compile() {
-	local opts=""
 	# set default build target
-	local bld="wiiuse"
-	use examples && bld="${bld} ex"
-	use sdl && bld="${bld} sdl-ex"
-
-	use debug && opts="debug=1"
+	local opts="wiiuse"
+	use examples && opts="${opts} ex sdl-ex"
+	use debug && opts="debug=1 ${opts}"
 	opts="${opts} ${bld}"
 
 	emake ${opts} || die "emake failed"

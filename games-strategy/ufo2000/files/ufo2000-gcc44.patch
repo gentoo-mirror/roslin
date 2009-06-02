@@ -9,3 +9,14 @@ diff -Nur ufo2000.orig/src/LuaPlus/LuaPlusCD.h ufo2000/src/LuaPlus/LuaPlusCD.h
  
  // LuaPlus Call Dispatcher
  namespace LPCD
+diff -Nur ufo2000.orig/src/server_transport.cpp ufo2000/src/server_transport.cpp
+--- ufo2000.orig/src/server_transport.cpp	2007-02-28 03:39:51.000000000 +0100
++++ ufo2000/src/server_transport.cpp	2009-06-02 17:38:38.312497385 +0200
+@@ -25,6 +25,7 @@
+ #include <vector>
+ #include <stdio.h>
+ #include <time.h>
++#include <cstdlib>
+ 
+ #ifdef WIN32
+ #include <windows.h>

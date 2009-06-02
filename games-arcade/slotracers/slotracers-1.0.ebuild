@@ -32,7 +32,7 @@ src_prepare() {
 		-e "s|data/|${dir}/data/|" \
 		$to_patch || die "sed failed"
 
-	epatch "${FILESDIR}/${PN}-glib2.8.ebuild"
+	epatch "${FILESDIR}/${PV}-glibc.patch"
 }
 
 src_install() {

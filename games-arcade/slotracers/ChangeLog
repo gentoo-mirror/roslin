@@ -2,6 +2,10 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  02 Jun 2009; Piotr Szymaniak <lazy_bum@o2.pl> slotracers-1.0.ebuild,
+  +files/1.0-glibc.patch, -files/slotracers-glibc2.8.patch:
+  Fixed some stupid errors...
+
   17 Feb 2009; Michał Ziąbkowski <mziab@o2.pl> slotracers-1.0.ebuild,
   +files/slotracers-glibc2.8.patch:
   Fixed build with newer glibc versions.

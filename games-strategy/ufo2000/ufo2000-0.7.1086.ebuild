@@ -19,7 +19,8 @@ RESTRICT="test"
 RDEPEND="dev-libs/expat
 	>=dev-games/hawknl-1.66
 	>=media-libs/allegro-4.2.0
-	>=media-libs/freetype-2"
+	>=media-libs/freetype-2
+	>=media-libs/aldumb-0.9"
 #	vorbis? ( media-libs/aldumb
 #		media-libs/dumb
 #		media-libs/libogg

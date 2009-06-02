@@ -4,7 +4,7 @@
 
 EAPI=2
 
-inherit base cmake-utils games
+inherit base games cmake-utils
 
 DESCRIPTION="Classic 2D jump'n run sidescroller game similar to SuperMario: Milestone 2"
 HOMEPAGE="http://supertux.lethargik.org/"

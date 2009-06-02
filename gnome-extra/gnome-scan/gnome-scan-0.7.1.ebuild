@@ -16,7 +16,8 @@ RDEPEND=">=x11-libs/gtk+-2.12
 	media-gfx/sane-backends
 	>=media-libs/gegl-0.0.21
 	>=media-gfx/gimp-2.3
-	>=gnome-base/libglade-2.6"
+	>=gnome-base/libglade-2.6
+	>=gnome-base/gconf-2"
 
 DEPEND="${RDEPEND}
 	sys-devel/gettext

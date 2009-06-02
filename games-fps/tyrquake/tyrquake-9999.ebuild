@@ -28,7 +28,8 @@ COMMON="media-libs/alsa-lib
 	virtual/opengl
 	media-libs/libsdl
 	x11-libs/libX11
-	x11-libs/libXxf86vm"
+	x11-libs/libXxf86vm
+	x11-libs/libXxf86dga"
 RDEPEND="${COMMON}
 	cdinstall? ( games-fps/quake1-data )"
 DEPEND="${COMMON}

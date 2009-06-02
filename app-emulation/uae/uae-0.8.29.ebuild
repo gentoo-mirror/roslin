@@ -162,6 +162,8 @@ src_install() {
 
 	insinto /usr/share/uae/amiga-tools
 	doins amiga/{*hack,trans*,uae*}
+	
+	make_desktop_entry ${PN} UAE
 }
 
 pkg_postinst() {

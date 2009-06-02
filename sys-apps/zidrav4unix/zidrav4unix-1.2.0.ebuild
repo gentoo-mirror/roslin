@@ -4,6 +4,8 @@
 
 EAPI=2
 
+inherit eutils
+
 DESCRIPTION="File corruption detection and repair program"
 HOMEPAGE="http://sourceforge.net/projects/zidrav/"
 SRC_URI="mirror://sourceforge/zidrav/${P}.tar.gz"
@@ -20,6 +22,8 @@ src_prepare() {
 	sed -i \
 		-e 's:-O2:$(E_CXXFLAGS):' \
 		Makefile || die "sed Makefile failed"
+	
+	epatch "${FILESDIR}/${PN}-gcc43.patch"
 }
 
 src_compile() {

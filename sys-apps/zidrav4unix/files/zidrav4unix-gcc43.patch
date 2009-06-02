@@ -1,0 +1,12 @@
+diff -Nur zidrav4unix-1.2.0.orig/core.h zidrav4unix-1.2.0/core.h
+--- zidrav4unix-1.2.0.orig/core.h	2005-05-19 22:58:40.000000000 +0200
++++ zidrav4unix-1.2.0/core.h	2009-06-02 15:57:04.980496989 +0200
+@@ -21,7 +21,7 @@
+ 
+ #include <iostream>
+ #include <fstream>
+-#include <string>
++#include <cstring>
+ 
+ using namespace std;
+ 

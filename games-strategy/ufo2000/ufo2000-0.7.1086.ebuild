@@ -1,8 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: /var/cvsroot/gentoo-x86/games-strategy/ufo2000/ufo2000-0.7.1062.ebuild,v 1.4 2007/03/12 18:13:00 genone Exp $
 
-inherit toolchain-funcs games
+inherit eutils toolchain-funcs games
 
 DESCRIPTION="Free multiplayer remake of X-COM (UFO: Enemy Unknown)"
 HOMEPAGE="http://ufo2000.sourceforge.net/"
@@ -36,6 +36,8 @@ src_unpack() {
 		-e "/^CC/s/gcc/$(tc-getCC)/" \
 		makefile \
 		|| die "sed failed"
+		
+	epatch "${FILESDIR}/${PN}-gcc44.patch"
 
 #	if use vorbis ; then
 #		cd "${S}/newmusic"

@@ -2,6 +2,10 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  02 Jun 2009; Michał Ziąbkowski <mziab@o2.pl>
+  +files/funguloids-gcc44.patch, funguloids-1.06.ebuild:
+  Added GCC 4.4 patch
+
   20 Jan 2009; Piotr Szymaniak <lazy_bum@o2.pl> funguloids-1.06.ebuild:
   USE fmodex -> fmod.
 

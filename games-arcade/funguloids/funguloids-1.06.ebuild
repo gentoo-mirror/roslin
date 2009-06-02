@@ -38,6 +38,7 @@ src_prepare() {
 
 	epatch "${FILESDIR}/${PN}-ogre-fix.patch"
 	epatch "${FILESDIR}/${PN}-alc_error.patch"
+	epatch "${FILESDIR}/${PN}-gcc44.patch"
 
 	eautoreconf
 }

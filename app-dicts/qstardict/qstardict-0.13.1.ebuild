@@ -19,6 +19,10 @@ RDEPEND=">=dev-libs/glib-2.0
 			dbus? ( x11-libs/qt-dbus:4 ) ) )"
 DEPEND="${RDEPEND}"
 
+src_prepare() {
+	epatch "${FILESDIR}/${P}-gcc44.patch"
+}
+
 src_compile() {
 	QMAKE_FLAGS=""
 	if ! use dbus; then

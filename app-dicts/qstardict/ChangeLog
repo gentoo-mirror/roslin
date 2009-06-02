@@ -2,6 +2,10 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  02 Jun 2009; Michał Ziąbkowski <mziab@o2.pl> -qstardict-0.12.9.ebuild,
+  qstardict-0.13.1.ebuild, +files/qstardict-0.13.1-gcc44.patch:
+  Added GCC 4.4 patch. Removed cruft.
+
   15 Feb 2009; Michał Ziąbkowski <mziab@o2.pl> +qstardict-0.13.1.ebuild:
   Bumped.
 

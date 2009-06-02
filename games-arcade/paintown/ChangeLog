@@ -3,6 +3,9 @@
 # $Header: $
 
   02 Jun 2009; Michał Ziąbkowski <mziab@o2.pl> files/3.2-gcc44.patch:
+  Updated patch AGAIN.
+
+  02 Jun 2009; Michał Ziąbkowski <mziab@o2.pl> files/3.2-gcc44.patch:
   Another missing include. Updated patch.
 
   02 Jun 2009; Piotr Szymaniak <lazy_bum@o2.pl> paintown-3.2.ebuild,

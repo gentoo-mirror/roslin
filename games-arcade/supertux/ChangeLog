@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/supertux
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 
+  02 Jun 2009; Michał Ziąbkowski <mziab@o2.pl> +files/0.3.1-gcc44.patch,
+  supertux-0.3.1d.ebuild:
+  Added GCC 4.4 patch
+
   02 Jun 2009; Michał Ziąbkowski <mziab@o2.pl> supertux-0.3.1d.ebuild:
   Fixed by switching inherit order.
 

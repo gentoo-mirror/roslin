@@ -27,7 +27,8 @@ RESTRICT="mirror"
 
 PATCHES=( "${FILESDIR}/0.3.1-fixes.patch"
 	"${FILESDIR}/0.3.1-fs-layout.patch"
-	"${FILESDIR}/desktop.patch" )
+	"${FILESDIR}/desktop.patch"
+	"${FILESDIR}/0.3.1-gcc44.patch" )
 
 src_install() {
 	cmake-utils_src_install

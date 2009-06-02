@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI="1"
+EAPI="2"
 
 inherit eutils qt4
 
@@ -18,6 +18,10 @@ IUSE=""
 DEPEND="|| ( =x11-libs/qt-4.3*
     x11-libs/qt-gui:4 )"
 RDEPEND="${DEPEND}"
+
+src_prepare() {
+	epatch "${FILESDIR}/${P}-gcc44.patch"
+}
 
 src_compile() {
 	qmake -project -o ${PN}.pro || die "qmake failed"

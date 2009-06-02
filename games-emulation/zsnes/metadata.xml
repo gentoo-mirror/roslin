@@ -7,7 +7,6 @@
   <name>Michał Ziąbkowski</name>
 </maintainer>
 <use>
-  <flag name='custom-cflags'>Enables compilation with custom CFLAGS</flag>
   <flag name='experimental'>Enables work-in-progress code</flag>
 </use>
 </pkgmetadata>

@@ -34,7 +34,7 @@ src_prepare() {
 }
 
 src_install() {
-	dogamesbin ../${PN}_build/${PN} || die "gamesbin failed"
+	dogamesbin ../${MY_P}_build/${PN} || die "gamesbin failed"
 	dodoc ChangeLog.txt KnownIssues.txt PFAQ.txt README.txt doc/*.txt
 	dohtml -r doc/ONScripter_reference
 

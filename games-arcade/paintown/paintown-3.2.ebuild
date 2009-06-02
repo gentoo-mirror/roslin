@@ -29,6 +29,8 @@ src_prepare() {
 	sed -i \
 		-e "/const char \* DATAPATH_ARG/a\\\tUtil\:\:setDataPath(\"${dir}\");" \
 		src/main-menu.cpp || die "sed main.cpp"
+	
+	epatch "${FILESDIR}/${P}-gcc4.patch"
 }
 
 src_install() {

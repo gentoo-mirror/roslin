@@ -2,6 +2,10 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  02 Jun 2009; Michał Ziąbkowski <mziab@o2.pl> -paintown-3.0.ebuild,
+  +files/paintown-gcc44.patch, paintown-3.2.ebuild:
+  Removed cruft. Added GCC 4.4 patch.
+
   02 Feb 2009; Michał Ziąbkowski <mziab@o2.pl> +paintown-3.2.ebuild:
   Bumped.
 

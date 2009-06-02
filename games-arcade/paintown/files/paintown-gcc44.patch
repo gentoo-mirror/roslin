@@ -1,0 +1,12 @@
+diff -Nur paintown-3.2.orig/src/game.cpp paintown-3.2/src/game.cpp
+--- paintown-3.2.orig/src/game.cpp	2009-01-05 01:40:39.000000000 +0100
++++ paintown-3.2/src/game.cpp	2009-06-02 16:37:35.296497163 +0200
+@@ -112,7 +112,7 @@
+ 
+ static string findNextFile( const char * name ){
+ 	char buf[ 128 ];
+-	char * extension = strchr( name, '.' );
++	const char * extension = strchr( name, '.' );
+ 	char first[ 128 ];
+ 	strncpy( first, name, extension - name );
+ 	first[ extension - name ] = '\0';

@@ -4,7 +4,7 @@
 
 EAPI="2"
 
-inherit kde4-base
+inherit kde4-base confutils
 
 DESCRIPTION="Text-based subtitles editor."
 HOMEPAGE="http://sourceforge.net/projects/subcomposer"
@@ -13,11 +13,16 @@ SRC_URI="mirror://sourceforge/subcomposer/${P}.tar.bz2"
 SLOT="4.1"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~x86"
-IUSE="gstreamer xcb xine"
+IUSE="gstreamer phonon xcb xine"
 RESTRICT="mirror"
 
 DEPEND="!kdeprefix? ( !media-video/subtitlecomposer:0 )
 	gstreamer? ( media-libs/gstreamer )
+	phonon? ( || ( media-sound/phonon
+		x11-libs/qt-phonon ) )
 	xine? ( media-libs/xine-lib[xcb?] )"
 RDEPEND="${DEPEND}"
 
+pkg_setup() {
+	confutils_require_any gstreamer phonon xine
+}

@@ -25,6 +25,7 @@ RDEPEND="${DEPEND}"
 src_prepare() {
 	epatch "${FILESDIR}"/cxxflags.patch
 	epatch "${FILESDIR}"/compiler-fix.patch
+	epatch "${FILESDIR}"/gcc44.patch
 
 	if use scale; then
 	sed -i \

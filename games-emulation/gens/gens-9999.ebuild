@@ -17,7 +17,7 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE="opengl"
 
-RDEPEND=">=media-libs/libsdl-1.2[opegl]
+RDEPEND=">=media-libs/libsdl-1.2[opengl]
 	>=x11-libs/gtk+-2.4.0
 	opengl? ( virtual/opengl )"
 DEPEND="${RDEPEND}

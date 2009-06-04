@@ -18,7 +18,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RESTRICT="mirror"
-RDEPEND=">=games-strategy/${MY_GAME}-2.1.2"
+RDEPEND="<games-strategy/${MY_GAME}-2.2"
 
 S=${WORKDIR}
 

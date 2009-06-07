@@ -1,0 +1,12 @@
+diff -Nur bsnes.orig/src/Makefile bsnes/src/Makefile
+--- bsnes.orig/src/Makefile	2009-06-07 03:56:29.000000000 +0200
++++ bsnes/src/Makefile	2009-06-07 23:11:08.080087129 +0200
+@@ -8,7 +8,7 @@
+ 
+ c     := $(compiler)
+ cpp   := $(subst cc,++,$(compiler))
+-flags := -O3 -fomit-frame-pointer -Ilib
++flags := $(CXXFLAGS) -fomit-frame-pointer -Ilib
+ link  :=
+ 
+ # profile-guided instrumentation:

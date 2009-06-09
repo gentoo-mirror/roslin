@@ -14,7 +14,7 @@ LICENSE="GPL-2"
 SLOT="0"
 RESTRICT="strip"
 
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~x86"
 IUSE="crypt +debug gif gpm gsm gtk inotify jabber jpeg nls nogg perl python remote spell sqlite sqlite3 ssl unicode xosd"
 
 DEPEND="crypt? ( app-crypt/gpgme )
@@ -77,12 +77,6 @@ src_configure() {
 }
 
 src_install() {
-	# Install plugins into proper directory
-	if use amd64; then
-		CONF_LIBDIR=$(getlib)/lib/ekg2/plugins
-	fi
-
-	# einstall messes up perl
 	emake DESTDIR="${D}" install || die "einstall failed"
 	dodoc docs/* || die "dodoc failed"
 }

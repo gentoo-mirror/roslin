@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/uniconvertor
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+
+  16 Jun 2009; Michał Ziąbkowski <mziab@o2.pl> +uniconvertor-1.1.4.ebuild:
+  Bumped.
 
   26 Jul 2008; Michał Ziąbkowski <mziab@o2.pl> +uniconvertor-1.1.3.ebuild:
   Bumped.

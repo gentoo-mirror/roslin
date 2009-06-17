@@ -2,6 +2,10 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  17 Jun 2009; Michał Ziąbkowski <mziab@o2.pl> +exmap-0.10-r3.ebuild,
+  +files/exmap-0.10-2.6.30.patch:
+  Rev-bump with 2.6.30 compat patch.
+
   17 Feb 2009; Michał Ziąbkowski <mziab@o2.pl> +exmap-0.10-r2.ebuild,
   +files/exmap-0.10-2.6.27.patch:
   Added patch for building with kernel 2.6.27+.

@@ -4,7 +4,7 @@
 
 EAPI=2
 
-inherit subversion confutils games
+inherit subversion confutils games cmake-utils
 
 ESVN_REPO_URI="http://${PN}.svn.sourceforge.net/svnroot/${PN}/trunk/"
 ESVN_PROJECT="vbam"
@@ -36,6 +36,8 @@ DEPEND="${RDEPEND}
 
 S="${WORKDIR}/${PN}"
 
+DOCS="doc/DevInfo.txt doc/ReadMe.SDL.txt"
+
 pkg_setup() {
 	confutils_require_any sdl gtk
 }
@@ -54,23 +56,17 @@ src_unpack() {
 }
 
 src_configure() {
-	local my_opts
-	use sdl || my_opts="-DNO_SDL:BOOL=1"
-	use gtk || my_opts="${my_opts} -DNO_GTK:BOOL=1"
-	use lirc && my_opts="${my_opts} -DWITH_LIRC:BOOL=1"
+	mycmakeargs="$(cmake-utils_use_no sdl SDL)
+	$(cmake-utils_use_no gtk GTK)
+	$(cmake-utils_use_with lirc LIRC)
+	-DCMAKE_INSTALL_PREFIX:PATH='${GAMES_PREFIX}'
+	-DDATA_INSTALL_DIR:PATH='${GAMES_DATADIR}/${PN}'"
 
-	cmake \
-	-DCMAKE_INSTALL_PREFIX:PATH="${GAMES_PREFIX}" \
-	-DCMAKE_CXX_FLAGS="${CXXFLAGS}" \
-	-DCMAKE_C_FLAGS="${CFLAGS}" \
-	-DDATA_INSTALL_DIR:PATH="${GAMES_DATADIR}/${PN}" \
-	${my_opts} \
-	. || die "cmake failed"
+	cmake-utils_src_configure
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "make install failed"
-	dodoc doc/{DevInfo,ReadMe.SDL}.txt
+	cmake-utils_src_install
 	doman debian/${PN}.1
 
 	prepgamesdirs

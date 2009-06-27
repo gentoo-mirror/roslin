@@ -2,6 +2,11 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  27 Jun 2009; Michał Ziąbkowski <mziab@o2.pl> -audex-0.71_beta1.ebuild,
+  -audex-0.71_beta2.ebuild, -audex-0.71_beta3.ebuild,
+  +audex-0.71_beta4.ebuild:
+  Bumped. Removed cruft.
+
   16 Jun 2009; Michał Ziąbkowski <mziab@o2.pl> +audex-0.71_beta3.ebuild:
   Bumped.
 

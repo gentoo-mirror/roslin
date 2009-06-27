@@ -10,7 +10,7 @@ DESCRIPTION="audex is a new audio grabber tool based on KDE 4"
 HOMEPAGE="http://opensource.maniatek.de/audex"
 SRC_URI="http://opensource.maniatek.de/${PN}/files/${P/_beta/b}.tar.bz2"
 
-LICENSE="GPL-2"
+LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~x86"
 IUSE=""

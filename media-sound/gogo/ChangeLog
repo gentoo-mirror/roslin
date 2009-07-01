@@ -1,0 +1,9 @@
+# ChangeLog for media-sound/gogo
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  01 Jul 2009; Michał Ziąbkowski <mziab@o2.pl> +gogo-3.10-r2.ebuild,
+  +files/gogo-makefile.patch, +files/gogo-nasm-floats.patch:
+  Brought back from the dead with a cleaner ebuild and a trivial patch do fix
+  build with nasm2.
+

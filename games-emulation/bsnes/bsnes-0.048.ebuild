@@ -32,7 +32,7 @@ RESTRICT="strip"
 S=${WORKDIR}/src
 
 disable_module() {
-	sed -i Makefile -e "s|$1 ||"
+	sed -i Makefile -e "s|$1||"
 }
 
 pkg_setup() {

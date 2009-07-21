@@ -30,7 +30,7 @@ RDEPEND="virtual/opengl
 	amd64? (
 		app-emulation/emul-linux-x86-sdl )"
 
-GAMES_CHECK_LICENSE="yes"
+#GAMES_CHECK_LICENSE="yes"
 dir=${GAMES_PREFIX_OPT}/${MY_PN}
 INSTALL_KEY_FILE=${dir}/collectionkey
 

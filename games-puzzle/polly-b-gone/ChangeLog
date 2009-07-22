@@ -1,0 +1,8 @@
+# ChangeLog for games-puzzle/polly-b-gone
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  22 Jul 2009; Piotr Szymaniak <lazy_bum@o2.pl> +files/1.0-Makefile.patch,
+  +polly-b-gone-1.0.ebuild, +files/1.0-libs.patch, +files/polly-b-gone.png:
+  Initial ebuild (thanks to Marcel Unbehaun, bug #263965).
+

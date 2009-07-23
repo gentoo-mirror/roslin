@@ -4,18 +4,17 @@
 
 EAPI="2"
 
-inherit games eutils wxwidgets subversion games
+inherit eutils wxwidgets subversion games flag-o-matic
 
 ESVN_REPO_URI="http://svn.wildfiregames.com/public/ps/trunk"
 
-DESCRIPTION="0 A.D. is a free, real-time strategy game currently under
-development by Wildfire Games."
+DESCRIPTION="0 A.D. is a free, real-time strategy game currently under development by Wildfire Games."
 HOMEPAGE="http://wildfiregames.com/0ad/"
 
 LICENSE="GPL-2 CCPL-Attribution-ShareAlike-3.0"
 SLOT="0"
-KEYWORDS=""
-IUSE=""
+KEYWORDS="~x86 ~amd64"
+IUSE="editor"
 
 RDEPEND="virtual/opengl
 		dev-lang/spidermonkey[threadsafe]
@@ -26,7 +25,7 @@ RDEPEND="virtual/opengl
 		sys-libs/zlib
 		|| ( dev-libs/libgamin app-admin/fam )
 		dev-libs/xerces-c
-		x11-libs/wxGTK:2.8
+		editor? ( x11-libs/wxGTK:2.8 )
 		media-libs/devil
 		net-libs/enet
 		media-video/ffmpeg
@@ -36,26 +35,49 @@ RDEPEND="virtual/opengl
 		media-libs/libvorbis
 		media-libs/libogg
 		dev-util/valgrind"
+
 DEPEND="${RDEPEND}
-		dev-lang/nasm"
+	dev-lang/nasm"
+
+RESTRICT="strip"
+
+dir=${GAMES_PREFIX_OPT}/0ad
 
 pkg_setup() {
+	append-ldflags -Wl,--no-as-needed
 	games_pkg_setup
 	WX_GTK_VER=2.8 need-wxwidgets unicode
 }
 
 src_unpack() {
 	subversion_src_unpack
+	rm -f "${S}"/binaries/system/*.*
 }
 
 src_compile() {
-	strip-flags
+#	strip-flags
+	if ! use editor; then
+		sed -i "s:--atlas::" "${S}/build/workspaces/update-workspaces.sh" \
+		|| die "AtlasUI sed failed"
+	fi
 
 	cd "${S}/libraries/fcollada/src"
 	emake || die "Can't build fcollada"
 	cd "${S}/build/workspaces"
 	./update-workspaces.sh
 	cd gcc
-#	sed -i "s:wx-config:${WX_CONFIG}:" AtlasUI.make || die "AtlasUI sed failed"
 	emake || die "Can't build"
+}
+
+src_install() {
+	cd "${S}"/binaries/
+	insinto "${dir}"
+	doins -r data logs || die "doins -r failed"
+
+	exeinto "${dir}"/system
+	doexe "${S}"/binaries/system/{pyrogenesis_dbg,test_dbg,*.a} || die "doexe failed"
+
+	make_desktop_entry "${dir}"/system/pyrogenesis_dbg "0 A. D."
+
+	prepgamesdirs
 }

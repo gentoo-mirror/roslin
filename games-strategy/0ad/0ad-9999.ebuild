@@ -41,7 +41,8 @@ DEPEND="${RDEPEND}
 
 RESTRICT="strip"
 
-dir=${GAMES_PREFIX_OPT}/0ad
+dir=${GAMES_PREFIX_OPT}/${PN}
+Ddir="${D}/${dir}"
 
 pkg_setup() {
 	append-ldflags -Wl,--no-as-needed
@@ -51,11 +52,10 @@ pkg_setup() {
 
 src_unpack() {
 	subversion_src_unpack
-	rm -f "${S}"/binaries/system/*.*
+	rm -rf "${S}"/binaries/system/*
 }
 
 src_compile() {
-#	strip-flags
 	if ! use editor; then
 		sed -i "s:--atlas::" "${S}/build/workspaces/update-workspaces.sh" \
 		|| die "AtlasUI sed failed"
@@ -75,9 +75,13 @@ src_install() {
 	doins -r data logs || die "doins -r failed"
 
 	exeinto "${dir}"/system
-	doexe "${S}"/binaries/system/{pyrogenesis_dbg,test_dbg,*.a} || die "doexe failed"
+	doexe "${S}"/binaries/system/{pyrogenesis_dbg,test_dbg} || die "doexe failed"
 
-	make_desktop_entry "${dir}"/system/pyrogenesis_dbg "0 A. D."
+	insinto "${dir}"/system
+	doins "${S}"/binaries/system/{*.a,*.so} || die	"doins failed"
+
+#	make_desktop_entry "${dir}"/system/pyrogenesis_dbg "0 A.D."
 
 	prepgamesdirs
+	chmod g+rw "${Ddir}/logs" "${Ddir}/data/cache"
 }

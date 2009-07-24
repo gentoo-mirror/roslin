@@ -80,6 +80,7 @@ src_install() {
 	insinto "${dir}"/system
 	doins "${S}"/binaries/system/{*.a,*.so} || die	"doins failed"
 
+	games_make_wrapper ${PN} ./system/pyrogenesis_dbg ${dir}
 #	make_desktop_entry "${dir}"/system/pyrogenesis_dbg "0 A.D."
 
 	prepgamesdirs

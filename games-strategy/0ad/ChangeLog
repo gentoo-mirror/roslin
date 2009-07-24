@@ -2,6 +2,9 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  24 Jul 2009; Piotr Szymaniak <lazy_bum@o2.pl> 0ad-9999.ebuild:
+  Added games_make_wrapper.
+
   23 Jul 2009; Piotr Szymaniak <lazy_bum@o2.pl> 0ad-9999.ebuild:
   Updated by Aleksandr Yakimov again (see bug #278541 for details).
 

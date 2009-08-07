@@ -7,8 +7,8 @@ EAPI=2
 inherit eutils games
 
 DESCRIPTION="Addictive, multi-player 'board' game. It's easy to learn to play."
-HOMEPAGE="http://fruise.googlepages.com/reaction.html"
-SRC_URI="http://fruise.googlepages.com/${P}.src.tgz"
+HOMEPAGE="http://discussionator.com/reaction.html"
+SRC_URI="http://discussionator.com/s/${P}.src.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"

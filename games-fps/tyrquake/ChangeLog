@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/tyrquake
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 
+  07 Aug 2009; Piotr Szymaniak <lazy_bum@o2.pl> -tyrquake-0.60.ebuild,
+  +tyrquake-0.61.ebuild:
+  Version bump.
+
   02 Jun 2009; Michał Ziąbkowski <mziab@o2.pl> tyrquake-0.60.ebuild,
   tyrquake-9999.ebuild:
   Added missing dep

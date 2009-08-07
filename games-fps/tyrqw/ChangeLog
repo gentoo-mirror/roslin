@@ -2,6 +2,10 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  07 Aug 2009; Piotr Szymaniak <lazy_bum@o2.pl> -tyrqw-0.60.ebuild,
+  +tyrqw-0.61.ebuild:
+  Version bump.
+
   02 Jun 2009; Michał Ziąbkowski <mziab@o2.pl> tyrqw-0.60.ebuild,
   tyrqw-9999.ebuild:
   Added missing dep

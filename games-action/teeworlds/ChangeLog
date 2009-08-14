@@ -1,6 +1,11 @@
 # ChangeLog for games-action/teewars
 # Copyright 2008-2009 Gentoo Foundation; Distributed under the GPL v2
 
+  14 Aug 2009; Piotr Szymaniak <lazy_bum@o2.pl> +teeworlds-0.5.1.ebuild,
+  -teeworlds-0.5.1-r3.ebuild, -teeworlds-0.5.1-r4.ebuild,
+  -teeworlds-0.5.1-r5.ebuild:
+  Just a name change, it's still -r5. Updated to match version from gamerlay.
+
   22 Jul 2009; Piotr Szymaniak <lazy_bum@o2.pl> +teeworlds-0.5.1-r5.ebuild:
   bam compilation should now respect LDFLAGS (thanks to scarabeus for noticing).
 

@@ -19,13 +19,9 @@ DEPEND="|| ( =x11-libs/qt-4.3*[dbus]
 	( x11-libs/qt-gui:4
 	x11-libs/qt-dbus:4 ) )"
 RDEPEND="${DEPEND}
-	>=app-cdr/cdemud-1.1.0"
+	>=app-cdr/cdemud-1.2.0"
 
 S="${WORKDIR}"
-
-src_prepare() {
-	epatch "${FILESDIR}/${PN}-mimelnk.patch"
-}
 
 src_compile() {
 	eqmake4 || die "eqmake4 failed"
@@ -34,4 +30,5 @@ src_compile() {
 
 src_install() {
 	emake INSTALL_ROOT="${D}" install || die "emake install failed"
+	dodoc ChangeLog README || die "dodoc failed"
 }

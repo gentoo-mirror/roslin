@@ -1,0 +1,8 @@
+# ChangeLog for app-cdr/cdemud
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  31 Aug 2009; Michał Ziąbkowski <mziab@o2.pl> +files/cdemud.init.d-1.1.0,
+  +files/cdemud.conf.d-1.1.0, +cdemud-1.2.0.ebuild:
+  Commit new cdemud.
+

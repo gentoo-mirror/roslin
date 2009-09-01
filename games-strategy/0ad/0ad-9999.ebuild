@@ -47,7 +47,9 @@ Ddir="${D}/${dir}"
 pkg_setup() {
 	append-ldflags -Wl,--no-as-needed
 	games_pkg_setup
-	WX_GTK_VER=2.8 need-wxwidgets unicode
+	if use editor ; then
+		WX_GTK_VER=2.8 need-wxwidgets unicode
+	fi
 }
 
 src_unpack() {
@@ -56,7 +58,7 @@ src_unpack() {
 }
 
 src_compile() {
-	if ! use editor; then
+	if ! use editor ; then
 		sed -i "s:--atlas::" "${S}/build/workspaces/update-workspaces.sh" \
 		|| die "AtlasUI sed failed"
 	fi
@@ -75,7 +77,7 @@ src_install() {
 	doins -r data logs || die "doins -r failed"
 
 	exeinto "${dir}"/system
-	doexe "${S}"/binaries/system/{pyrogenesis_dbg,test_dbg} || die "doexe failed"
+	doexe "${S}"/binaries/system/*_dbg || die "doexe failed"
 
 	insinto "${dir}"/system
 	doins "${S}"/binaries/system/{*.a,*.so} || die	"doins failed"

@@ -1,0 +1,9 @@
+diff -Nur ONSlaught-20090904-src.orig/src/IO_System/Graphics/SDL_bilinear.c ONSlaught-20090904-src/src/IO_System/Graphics/SDL_bilinear.c
+--- ONSlaught-20090904-src.orig/src/IO_System/Graphics/SDL_bilinear.c	2009-03-02 18:09:42.000000000 +0100
++++ ONSlaught-20090904-src/src/IO_System/Graphics/SDL_bilinear.c	2009-09-11 16:00:00.089713127 +0200
+@@ -1,4 +1,4 @@
+-#include "SDL_Bilinear.h"
++#include "SDL_bilinear.h"
+ 
+ SDL_Surface *SDL_Rotate(SDL_Surface *Surface, double angle) {
+     double dcos = cos(angle);

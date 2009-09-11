@@ -2,6 +2,9 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  11 Sep 2009; Michał Ziąbkowski <mziab@o2.pl> +audex-0.72_beta1.ebuild:
+  Bumped.
+
   03 Jul 2009; Michał Ziąbkowski <mziab@o2.pl> +audex-0.71_beta5.ebuild:
   Bumped.
 

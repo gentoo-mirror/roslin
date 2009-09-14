@@ -9,7 +9,7 @@ HOMEPAGE="http://kadu.net"
 KEYWORDS="amd64 x86"
 LICENSE="GPL-2"
 
-IUSE="emoticons icons sounds powerkadu alsa oss ssl voice"
+IUSE="emoticons icons sounds powerkadu alsa oss ssl voice phonon"
 
 SLOT="0"
 

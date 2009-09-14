@@ -6,7 +6,7 @@ EAPI=2
 
 inherit kadu-base
 
-MOD_DEPEND="app-crypt/qca-ossl:2"
+MOD_DEPEND="dev-libs/openssl"
 
 inherit kadu-mod
 

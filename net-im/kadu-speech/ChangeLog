@@ -2,6 +2,10 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  14 Sep 2009; Michał Ziąbkowski <mziab@o2.pl>
+  +kadu-speech-0.6.5.3.ebuild:
+  Added qt4 port.
+
   25 Jan 2009; Michał Ziąbkowski <mziab@o2.pl> kadu-speech-0.6.0.3.ebuild,
   +metadata.xml:
   Some repoman fixes.

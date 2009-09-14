@@ -2,6 +2,10 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  14 Sep 2009; Michał Ziąbkowski <mziab@o2.pl>
+  +kadu-qt4_docking_notify-0.6.5.3.ebuild:
+  Promoted to internal module.
+
   25 Jan 2009; Michał Ziąbkowski <mziab@o2.pl>
   +kadu-qt4_docking_notify-0.1.ebuild, +metadata.xml:
   New ebuild.

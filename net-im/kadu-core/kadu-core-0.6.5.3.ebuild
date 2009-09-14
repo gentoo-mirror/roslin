@@ -25,9 +25,6 @@ DEPEND="${RDEPEND}
 SRC_URI="http://www.kadu.net/download/stable/kadu-${K_PV}.tar.bz2"
 
 src_prepare() {
-	# GCC4.4 fix
-	epatch "${FILESDIR}/kadu-gcc44.patch"
-
 	# Disable everything besides the core
 	kadu-disable_all
 

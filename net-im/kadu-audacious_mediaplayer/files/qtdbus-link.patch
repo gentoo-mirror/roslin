@@ -1,0 +1,9 @@
+diff -Nur kadu.old/modules/audacious_mediaplayer/CMakeLists.txt kadu/modules/audacious_mediaplayer/CMakeLists.txt
+--- kadu.old/modules/audacious_mediaplayer/CMakeLists.txt	2009-05-15 16:40:51.000000000 +0200
++++ kadu/modules/audacious_mediaplayer/CMakeLists.txt	2009-09-16 00:41:20.899013807 +0200
+@@ -22,3 +22,5 @@
+ else (audacious_mediaplayer STREQUAL STATIC)
+ 	install (TARGETS audacious_mediaplayer DESTINATION ${MODULEDIR})
+ endif (audacious_mediaplayer STREQUAL STATIC)
++
++target_link_libraries (audacious_mediaplayer ${QT_QTDBUS_LIBRARY})

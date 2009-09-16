@@ -1,0 +1,9 @@
+diff -Nur kadu.old/modules/bmpx_mediaplayer/CMakeLists.txt kadu/modules/bmpx_mediaplayer/CMakeLists.txt
+--- kadu.old/modules/bmpx_mediaplayer/CMakeLists.txt	2009-05-15 16:40:51.000000000 +0200
++++ kadu/modules/bmpx_mediaplayer/CMakeLists.txt	2009-09-16 00:41:06.411013933 +0200
+@@ -20,3 +20,5 @@
+ else (bmpx_mediaplayer STREQUAL STATIC)
+ 	install (TARGETS bmpx_mediaplayer DESTINATION ${MODULEDIR})
+ endif (bmpx_mediaplayer STREQUAL STATIC)
++
++target_link_libraries (bmpx_mediaplayer ${QT_QTDBUS_LIBRARY})

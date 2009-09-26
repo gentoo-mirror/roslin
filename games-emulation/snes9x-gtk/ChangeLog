@@ -2,6 +2,10 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  26 Sep 2009; Michał Ziąbkowski <mziab@o2.pl> snes9x-gtk-1.51_p77.ebuild,
+  +files/snes9x-gtk-1.51_p75-no-exec-stack.patch:
+  Added patch to fix exec stacks.
+
   26 Sep 2009; Michał Ziąbkowski <mziab@o2.pl>
   +snes9x-gtk-1.51_p77.ebuild:
   Bumped. Dropped as-needed patch.

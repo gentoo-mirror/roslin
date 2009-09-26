@@ -32,6 +32,10 @@ DEPEND="${RDEPEND}
 
 S="${WORKDIR}/snes9x-1.51-src/gtk"
 
+src_prepare() {
+	epatch "${FILESDIR}/${PN}-1.51_p75-no-exec-stack.patch"
+}
+
 src_configure() {
 	egamesconf $(use_with opengl) \
 		$(use_with joystick) \

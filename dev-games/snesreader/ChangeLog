@@ -1,0 +1,7 @@
+# ChangeLog for dev-games/snesreader
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  28 Sep 2009; Michał Ziąbkowski <mziab@o2.pl> +snesreader-1.02.ebuild:
+  Initial ebuild.
+

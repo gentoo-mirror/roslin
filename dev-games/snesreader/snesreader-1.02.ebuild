@@ -1,0 +1,35 @@
+# Copyright 1999-2009 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: $
+
+EAPI=2
+
+inherit eutils
+
+DESCRIPTION="A bsnes helper library needed for extra rom load options"
+HOMEPAGE="http://byuu.org/bsnes/"
+MY_PV="${PV/./}"
+SRC_URI="http://byuu.org/files/${PN}_v${MY_PV}.tar.bz2"
+
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="~amd64 ~x86"
+IUSE=""
+
+RESTRICT="strip"
+
+S="${WORKDIR}/${PN}"
+
+#src_prepare() {
+#	sed -e "s://\(#define DEBUGGER\):\\1:" \
+#	-i "base.hpp" || die "sed failed"
+#}
+
+src_compile() {
+	emake platform=x compiler=gcc || die "emake failed"
+}
+
+src_install() {
+	dolib libsnesreader.* || die "install failed"
+}
+

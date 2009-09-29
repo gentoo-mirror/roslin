@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/bsnes
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 
+  29 Sep 2009; Michał Ziąbkowski <mziab@o2.pl> +bsnes-0.052.ebuild:
+  Bumped.
+
   28 Sep 2009; Michał Ziąbkowski <mziab@o2.pl> +bsnes-0.051.ebuild:
   Bumped. New license. Decompression moved to new helper library. Added USE
   flag for debugger.

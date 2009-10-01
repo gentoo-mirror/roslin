@@ -1,11 +1,19 @@
 --- kernel/exmap.c.orig	2006-09-28 18:52:25.000000000 +0200
 +++ kernel/exmap.c	2009-01-16 19:47:29.000000000 +0100
-@@ -392,7 +392,7 @@
+@@ -392,7 +392,15 @@
  	struct task_struct *tsk;
  	int errcode = -EINVAL;
  
 -	tsk = find_task_by_pid(pid);
-+        tsk = find_task_by_vpid(pid);
++	#if LINUX_VERSION_CODE < KERNEL_VERSION(2, 6, 26)
++	tsk = find_task_by_pid(pid);
++	#else
++	#if LINUX_VERSION_CODE < KERNEL_VERSION(2, 6, 31)
++	tsk = find_task_by_vpid(pid);
++	#else
++	tsk = pid_task(find_pid_ns(pid, &init_pid_ns), PIDTYPE_PID);
++	#endif
++	#endif
  	if (tsk == NULL) {
  		printk (KERN_ALERT
  			"/proc/%s: can't find task for pid %d\n",

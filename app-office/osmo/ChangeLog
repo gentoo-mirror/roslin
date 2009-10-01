@@ -2,6 +2,9 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  01 Oct 2009; Michał Ziąbkowski <mziab@o2.pl> +osmo-0.2.8.ebuild:
+  Bumped.
+
   25 May 2009; Michał Ziąbkowski <mziab@o2.pl> osmo-0.2.4.ebuild,
   osmo-0.2.6.ebuild:
   Updated HOMEPAGE

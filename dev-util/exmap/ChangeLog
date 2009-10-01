@@ -4,6 +4,10 @@
 
   01 Oct 2009; Michał Ziąbkowski <mziab@o2.pl>
   files/exmap-0.10-2.6.27.patch:
+  Made patch a bit simpler.
+
+  01 Oct 2009; Michał Ziąbkowski <mziab@o2.pl>
+  files/exmap-0.10-2.6.27.patch:
   Fixed build with 2.6.31... by updating 2.6.27 build patch. Um, yeah.
 
   17 Jun 2009; Michał Ziąbkowski <mziab@o2.pl> +exmap-0.10-r3.ebuild,

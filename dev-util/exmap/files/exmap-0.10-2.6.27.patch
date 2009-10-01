@@ -11,7 +11,7 @@
 +	#if LINUX_VERSION_CODE < KERNEL_VERSION(2, 6, 31)
 +	tsk = find_task_by_vpid(pid);
 +	#else
-+	tsk = pid_task(find_pid_ns(pid, &init_pid_ns), PIDTYPE_PID);
++	tsk = pid_task(find_vpid(pid), PIDTYPE_PID);
 +	#endif
 +	#endif
  	if (tsk == NULL) {

@@ -2,6 +2,9 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  01 Oct 2009; Michał Ziąbkowski <mziab@o2.pl> +kydpdict-0.9.5.ebuild:
+  Bumped.
+
   21 Jan 2009; Michał Ziąbkowski <mziab@o2.pl> kydpdict-0.9.4-r1.ebuild:
   Added missing IUSE.
 

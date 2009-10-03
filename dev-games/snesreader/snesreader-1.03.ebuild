@@ -20,6 +20,12 @@ RESTRICT="strip"
 
 S="${WORKDIR}/${PN}"
 
+src_prepare() {
+	sed -e "s/-O3/${CXXFLAGS}/" \
+	    -i Makefile \
+	    || die "sed failed"
+}
+
 src_compile() {
 	emake platform=x compiler=gcc || die "emake failed"
 }

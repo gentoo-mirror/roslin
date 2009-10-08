@@ -15,12 +15,12 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE="opengl"
 
-DEPEND="opengl? ( virtual/opengl )
+RDEPEND="opengl? ( virtual/opengl )
 	>=media-libs/libsdl-1.2[opengl?]
 	x11-libs/gtk+:2
 	virtual/libiconv
 	!games-emulation/gens"
-RDEPEND="${RDEPEND}
+DEPEND="${RDEPEND}
 	>=dev-lang/nasm-0.98"
 
 S="${WORKDIR}/${PN}-r${PV}"

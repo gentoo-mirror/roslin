@@ -28,9 +28,9 @@ src_install() {
 	mv Fusion ${PN}
 	dogamesbin ${PN} || die "dobin failed"
 	dodoc History.txt Readme.txt || die "dodoc failed"
-	
+
 	make_desktop_entry ${PN} "Kega Fusion"
-	
+
 	prepgamesdirs
 }
 

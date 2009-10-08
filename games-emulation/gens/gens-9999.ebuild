@@ -34,12 +34,9 @@ src_unpack() {
 }
 
 src_compile() {
-	local MYCONF
-	use opengl || MYCONF="--without-opengl"
-	egamesconf ${MYCONF} || die "econf failed!"
+	egamesconf $(use_with opengl) || die "econf failed!"
 	emake || die "emake failed!"
 }
-
 
 src_install() {
 	emake DESTDIR="${D}" install || die "make install failed"

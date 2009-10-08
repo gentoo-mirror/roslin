@@ -47,7 +47,7 @@ src_prepare() {
 	## This is not as it appears, ARCH means something different to qmc2's Makefile
 	## then it means to the portage/portage-compatible package manager
 	sed -ie 's%ifndef ARCH%ifdef ARCH%' Makefile
-	
+
 	use sdlmess && cp -r "${S}" "${WORKDIR}/${PN}-sdlmess"
 }
 
@@ -56,13 +56,12 @@ src_compile() {
 	then
 	    emake ${FLAGS} EMULATOR=SDLMAME || die "make failed"
 	fi
-	
+
 	if use sdlmess
 	then
 	    cd "${WORKDIR}/${PN}-sdlmess"
 	    emake ${FLAGS} EMULATOR=SDLMESS || die "make failed"
 	fi
-	
 }
 
 src_install() {
@@ -70,7 +69,7 @@ src_install() {
 	then
 	    emake ${FLAGS} EMULATOR=SDLMAME install || die "make install failed"
 	fi
-	
+
 	if use sdlmess
 	then
 	    cd "${WORKDIR}/${PN}-sdlmess"
@@ -80,7 +79,7 @@ src_install() {
 	## Not a big fan of doing this, but it's necessary due to build system
 	sed -ie "s%${D}%/%g" "${D}etc/${PN}/${PN}.ini"
 	rm "${D}etc/${PN}/${PN}.inie"
-	
+
 	# Remove symlink to avoid confusion
 	rm "${D}/${GAMES_BINDIR}/qmc2"
 

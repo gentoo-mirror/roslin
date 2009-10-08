@@ -2,6 +2,10 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  08 Oct 2009; Michał Ziąbkowski <mziab@o2.pl> ideas-bin-1.0.3.1.ebuild,
+  ideas-bin-1.0.3.2.ebuild:
+  Fixed whitespace.
+
   21 Jul 2009; Michał Ziąbkowski <mziab@o2.pl> +ideas-bin-1.0.3.2.ebuild:
   Bumped.
 

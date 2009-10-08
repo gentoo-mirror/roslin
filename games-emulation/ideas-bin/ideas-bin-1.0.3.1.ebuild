@@ -24,7 +24,7 @@ DEPEND="app-arch/unzip"
 RDEPEND="amd64? ( app-emulation/emul-linux-x86-gtklibs )
 	x86? ( >=x11-libs/gtk+-2 )
 	virtual/opengl"
-	
+
 S="${WORKDIR}"
 
 pkg_setup() {
@@ -44,4 +44,3 @@ src_install() {
 	dodoc readme.txt
 	prepgamesdirs
 }
-

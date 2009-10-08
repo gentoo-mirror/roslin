@@ -10,7 +10,6 @@ DESCRIPTION="A Sega Genesis/CD/32X emulator"
 HOMEPAGE="http://gens.consolemul.com/"
 SRC_URI=""
 
-
 ECVS_SERVER="${PN}.cvs.sourceforge.net:/cvsroot/${PN}"
 ECVS_MODULE="Gens-MultiPlatform"
 

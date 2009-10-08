@@ -30,9 +30,8 @@ RDEPEND="${DEPEND}"
 src_install() {
 	dogamesbin regen || die "dobin failed"
 	dodoc README || die "dodoc failed"
-	
+
 	make_desktop_entry regen "Regen"
-	
+
 	prepgamesdirs
 }
-

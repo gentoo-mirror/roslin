@@ -40,7 +40,7 @@ src_prepare() {
 		-e '/^\s*LDFLAGS=.* -L\/usr\/local\/lib /d'		\
 		-e 's:-O99999999:-O1:' \
 		configure.in || die
-	
+
 	epatch "${FILESDIR}/${PN}-1.51-FORTIFY_SOURCE.patch"
 
 	eautoreconf

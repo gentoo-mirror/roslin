@@ -43,9 +43,10 @@ pkg_setup() {
 }
 
 src_unpack() {
-	subversion_src_unpack
-	cd "${S}"
+    subversion_src_unpack
+}
 
+src_prepare() {
 	sed -i CMakeLists.txt \
 	    -e "/C[X]*_FLAGS/d" \
 	    -e "s:\${CMAKE_INSTALL_PREFIX}/::" \

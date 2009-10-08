@@ -52,7 +52,6 @@ src_prepare() {
 	fi
 }
 
-
 src_compile() {
 	# audio modules
 	use ao || disable_module audio.ao
@@ -80,4 +79,3 @@ src_install() {
 
 	prepgamesdirs
 }
-

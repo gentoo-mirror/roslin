@@ -44,7 +44,6 @@ pkg_nofetch() {
 	einfo "and move it to ${DISTDIR}"
 }
 
-
 # Function to disable a makefile option
 disable_feature() {
 	sed -i \

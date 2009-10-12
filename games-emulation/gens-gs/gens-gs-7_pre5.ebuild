@@ -8,7 +8,7 @@ inherit games
 
 DESCRIPTION="A Gens fork which aims to clean up the source code and combine features from other forks"
 HOMEPAGE="http://info.sonicretro.org/Gens/GS"
-SRC_URI="http://info.sonicretro.org/images/1/19/Gens-gs-r${PV}.tar.gz"
+SRC_URI="http://info.sonicretro.org/images/9/9c/Gens-gs-r${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"

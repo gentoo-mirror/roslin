@@ -20,7 +20,7 @@ RDEPEND=">dev-libs/dbus-glib-0.6
 	>=dev-libs/libdaemon-0.10
 	>=dev-libs/libmirage-1.2.0
 	media-libs/libao[alsa?,pulseaudio?]
-	>=sys-fs/vhba-1.0.0
+	>=sys-fs/vhba-1.2.1
 	>=sys-fs/sysfsutils-2.1.0"
 DEPEND="${RDEPEND}"
 
@@ -39,5 +39,5 @@ pkg_postinst() {
 	elog "${PN} to the default runlevel by"
 	elog "	# rc-update add ${PN} default"
 	elog "as root. Systembus style daemons can be configured"
-	elog "in /etc/conf.d/{PN}"
+	elog "in /etc/conf.d/${PN}"
 }

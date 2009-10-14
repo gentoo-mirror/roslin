@@ -2,7 +2,9 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-inherit distutils
+EAPI=2
+
+inherit distutils games
 
 DESCRIPTION="Loemu is a free application that provides a simple front end for
 various game emulators"
@@ -20,3 +22,19 @@ DEPEND="dev-libs/libxml2
 	gnome-base/libglade"
 
 RDEPEND="${DEPEND}"
+
+src_compile() {
+	python_version
+	distutils_src_compile
+}
+
+src_install() {
+	distutils_src_install \
+		--install-scripts="${GAMES_BINDIR}"
+	prepgamesdirs
+}
+
+pkg_postinst() {
+	games_pkg_postinst
+	distutils_pkg_postinst
+}

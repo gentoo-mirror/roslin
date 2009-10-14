@@ -6,9 +6,11 @@ EAPI=2
 
 inherit games
 
+MY_PV="r${PV}"
+
 DESCRIPTION="A Gens fork which aims to clean up the source code and combine features from other forks"
 HOMEPAGE="http://info.sonicretro.org/Gens/GS"
-SRC_URI="http://info.sonicretro.org/images/1/19/Gens-gs-r${PV}.tar.gz"
+SRC_URI="http://www.soniccenter.org/gerbilsoft/gens/${MY_PV}/${PN}-${MY_PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"

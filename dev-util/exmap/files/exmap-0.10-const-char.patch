@@ -1,0 +1,15 @@
+diff -Nur exmap-0.10.orig/src/exmtool.cpp exmap-0.10/src/exmtool.cpp
+--- exmap-0.10.orig/src/exmtool.cpp	2006-09-28 18:52:25.000000000 +0200
++++ exmap-0.10/src/exmtool.cpp	2009-10-15 00:44:40.859025385 +0200
+@@ -18,9 +18,9 @@
+ 
+ struct command
+ {
+-    char *command;
++    const char *command;
+     Handler handler;
+-    char *usage;
++    const char *usage;
+ } cmd_handles[] = {
+     { "procs",
+       do_procs,

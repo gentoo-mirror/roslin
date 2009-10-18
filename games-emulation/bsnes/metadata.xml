@@ -9,4 +9,10 @@
 <use>
   <flag name='debug'>Enables bsnes debugger</flag>
 </use>
+<use>
+  <flag name='snesfilter'>Enables additional image filters</flag>
+</use>
+<use>
+  <flag name='snesreader'>Provides extra loading features, including IPS patching and support for multiple compression formats</flag>
+</use>
 </pkgmetadata>

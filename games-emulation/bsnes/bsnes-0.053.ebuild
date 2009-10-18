@@ -14,7 +14,7 @@ SRC_URI="http://byuu.org/files/${PN}_v${MY_PV}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="ao alsa debug openal opengl oss pulseaudio sdl xv"
+IUSE="ao alsa debug openal opengl oss pulseaudio sdl snesfilter +snesreader xv"
 
 DEPEND="ao? ( media-libs/libao )
 	openal? ( media-libs/openal )
@@ -23,8 +23,9 @@ DEPEND="ao? ( media-libs/libao )
 	xv? ( x11-libs/libXv )
 	opengl? ( virtual/opengl )
 	sdl? ( media-libs/libsdl[joystick] )
+	snesfilter? ( dev-games/snesfilter )
 	>=x11-libs/qt-gui-4.4
-	dev-games/snesreader"
+	snesreader? ( >=dev-games/snesreader-0.006 )"
 
 RDEPEND="${DEPEND}"
 

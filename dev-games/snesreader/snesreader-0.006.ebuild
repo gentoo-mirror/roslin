@@ -8,13 +8,16 @@ inherit eutils
 
 DESCRIPTION="A bsnes helper library needed for extra rom load options"
 HOMEPAGE="http://byuu.org/bsnes/"
-MY_PV="${PV/./}"
+MY_PV="${PV/0./}"
 SRC_URI="http://byuu.org/files/${PN}_v${MY_PV}.tar.bz2"
 
-LICENSE="GPL-2"
+LICENSE="public-domain"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
+
+RDEPEND=">=x11-libs/qt-gui-4.4"
+DEPEND="${RDEPEND}"
 
 RESTRICT="strip"
 

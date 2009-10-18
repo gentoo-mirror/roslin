@@ -2,6 +2,11 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  18 Oct 2009; Michał Ziąbkowski <mziab@o2.pl> +snesreader-0.006.ebuild,
+  -snesreader-1.03.ebuild:
+  Bumped. Removed older version to avoid ABI and versioning problems.
+  Moreover, this version requires Qt4.
+
   03 Oct 2009; Michał Ziąbkowski <mziab@o2.pl> -snesreader-1.02.ebuild,
   snesreader-1.03.ebuild:
   Removed cruft. Fixed CFLAGS.

@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/bsnes
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 
+  19 Oct 2009; Michał Ziąbkowski <mziab@o2.pl> +bsnes-0.054.ebuild:
+  Bumped.
+
   18 Oct 2009; Michał Ziąbkowski <mziab@o2.pl> -bsnes-0.052.ebuild,
   +bsnes-0.053.ebuild, metadata.xml:
   Bumped. Removed previous version. Added snesfilter flag for enabling extra

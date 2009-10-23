@@ -2,6 +2,9 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  23 Oct 2009; Michał Ziąbkowski <mziab@o2.pl> +snesfilter-0.005.ebuild:
+  Bumped.
+
   18 Oct 2009; Michał Ziąbkowski <mziab@o2.pl> +snesfilter-0.004.ebuild:
   New ebuild.
 

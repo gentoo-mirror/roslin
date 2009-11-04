@@ -1,0 +1,7 @@
+# ChangeLog for net-misc/rsget-pl
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  04 Nov 2009; Piotr Szymaniak <lazy_bum@o2.pl> +rsget-pl-9999.ebuild:
+  Initial ebuild.
+

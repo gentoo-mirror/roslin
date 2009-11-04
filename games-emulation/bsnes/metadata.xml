@@ -10,6 +10,9 @@
   <flag name='debug'>Enables bsnes debugger</flag>
 </use>
 <use>
+  <flag name='sgb'>Enables Super Gameboy emulation</flag>
+</use>
+<use>
   <flag name='snesfilter'>Enables additional image filters</flag>
 </use>
 <use>

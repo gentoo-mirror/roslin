@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/bsnes
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 
+  04 Nov 2009; Michał Ziąbkowski <mziab@o2.pl> +bsnes-0.055.ebuild,
+  metadata.xml:
+  Bumped. Now with optional Super Gameboy support.
+
   19 Oct 2009; Michał Ziąbkowski <mziab@o2.pl> +bsnes-0.054.ebuild:
   Bumped.
 

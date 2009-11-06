@@ -2,6 +2,9 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  06 Nov 2009; Michał Ziąbkowski <mziab@o2.pl> +kadu-0.6.5.3-r1.ebuild:
+  Bumped to avoid conflict with the portage -r1.
+
   14 Sep 2009; Michał Ziąbkowski <mziab@o2.pl> kadu-0.6.5.3.ebuild:
   Doh, forgot phonon flag.
 

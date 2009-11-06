@@ -2,6 +2,10 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  06 Nov 2009; Michał Ziąbkowski <mziab@o2.pl>
+  files/osmose-0.9.1-makefile.patch:
+  Updated patch to fix parallel make warning.
+
   06 Nov 2009; Michał Ziąbkowski <mziab@o2.pl> +osmose-0.9.1.ebuild,
   +files/osmose-0.9.1-makefile.patch:
   Bumped.

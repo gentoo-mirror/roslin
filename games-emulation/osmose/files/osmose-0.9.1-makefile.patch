@@ -1,6 +1,6 @@
 diff -Nur Osmose-0-9-1.bak/Makefile Osmose-0-9-1/Makefile
 --- Osmose-0-9-1.bak/Makefile	2009-11-01 11:06:49.000000000 +0100
-+++ Osmose-0-9-1/Makefile	2009-11-06 16:17:50.603302924 +0100
++++ Osmose-0-9-1/Makefile	2009-11-06 16:42:14.000000000 +0100
 @@ -41,7 +41,7 @@
  
  # Compiler/Linker Flags
@@ -19,3 +19,12 @@ diff -Nur Osmose-0-9-1.bak/Makefile Osmose-0-9-1/Makefile
  
  osmose: $(z80_lib) $(OSM_OBJS) $(OPT_OBJS)
  	$(CC)  $(CFLAGS) $(OSM_OBJS) $(Z80_LIB) $(OPT_OBJS) $(UNZIP_LIB) $(Z_LIB) -o $(OSM_EXE) $(LFLAGS)
+@@ -72,7 +72,7 @@
+ 	rm -f *.o core $(OSM_EXE)
+ 
+ libs:
+-	cd $(UNZIP_DIR) && make unzip.a
++	cd $(UNZIP_DIR) && $(MAKE) unzip.a
+ 
+ 
+ 

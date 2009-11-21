@@ -4,19 +4,18 @@
 
 EAPI="2"
 
-inherit toolchain-funcs eutils games
+inherit confutils toolchain-funcs eutils games
 
 BAM_P="bam-0.2.0"
 DESCRIPTION="Online 2D platform shooter."
 HOMEPAGE="http://www.teeworlds.com"
 SRC_URI="http://www.teeworlds.com/files/${P}-src.tar.gz -> ${P}-src.tar.gz
-	http://teeworlds.com/trac/bam/browser/releases/bam-0.2.0.tar.gz?format=raw
-	-> ${BAM_P}.tar.gz"
+	http://teeworlds.com/trac/bam/browser/releases/bam-0.2.0.tar.gz?format=raw -> ${BAM_P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="debug dedicated"
+IUSE="debug dedicated instagib racemod"
 
 RDEPEND="dev-lang/lua
 	!dedicated? (
@@ -32,16 +31,19 @@ S=${WORKDIR}/${P}-src
 # that's a temporary fix for datadir location
 dir=${GAMES_DATADIR}/${PN}
 
+pkg_setup() {
+	confutils_use_conflict instagib racemod
+	dodir /etc/${P}
+	enewgroup games
+	enewuser teeworlds -1 -1 -1 games
+}
+
 src_prepare() {
 	rm -f license.txt
 
 	epatch "${FILESDIR}"/fix_datadir_search.patch
-}
-
-pkg_setup() {
-	dodir /etc/${P}
-	enewgroup games
-	enewuser teeworlds -1 -1 -1 games
+	use instagib && epatch "${FILESDIR}"/instagib-2.2.patch
+	use racemod && epatch "${FILESDIR}/${PV}-racemod-2.3.patch"
 }
 
 src_compile() {

@@ -2,6 +2,9 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  23 Nov 2009; Michał Ziąbkowski <mziab@o2.pl> +supergameboy-0.013.ebuild:
+  Bumped.
+
   04 Nov 2009; Michał Ziąbkowski <mziab@o2.pl> +supergameboy-0.012.ebuild:
   Initial ebuild.
 

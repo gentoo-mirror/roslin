@@ -43,7 +43,7 @@ pkg_setup() {
 }
 
 src_unpack() {
-    subversion_src_unpack
+	subversion_src_unpack
 }
 
 src_prepare() {

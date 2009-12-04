@@ -15,7 +15,7 @@ SRC_URI="http://www.soniccenter.org/gerbilsoft/gens/${MY_PV}/${PN}-${MY_PV}.tar.
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
-IUSE="opengl"
+IUSE="debug opengl"
 
 RDEPEND="opengl? ( virtual/opengl )
 	>=media-libs/libsdl-1.2[opengl?]
@@ -34,5 +34,5 @@ src_install() {
 }
 
 src_configure() {
-	egamesconf $(use_with opengl) || die "econf failed"
+	egamesconf $(use_with opengl) $(use_enable debug) || die "econf failed"
 }

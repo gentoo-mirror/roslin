@@ -23,10 +23,10 @@ DEPEND="ao? ( media-libs/libao )
 	xv? ( x11-libs/libXv )
 	opengl? ( virtual/opengl )
 	sdl? ( media-libs/libsdl[joystick] )
-	snesfilter? ( dev-games/snesfilter )
+	snesfilter? ( >=dev-games/snesfilter-0.006 )
 	>=x11-libs/qt-gui-4.4
-	snesreader? ( >=dev-games/snesreader-0.008 )
-	sgb? ( dev-games/supergameboy )"
+	snesreader? ( >=dev-games/snesreader-0.010 )
+	sgb? ( >=dev-games/supergameboy-0.014 )"
 
 RDEPEND="${DEPEND}"
 

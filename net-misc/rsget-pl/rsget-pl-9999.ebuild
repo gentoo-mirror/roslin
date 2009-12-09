@@ -15,9 +15,9 @@ KEYWORDS=""
 IUSE="captcha"
 
 DEPEND=""
-RDEPEND="dev-perl/GD
-	dev-perl/WWW-Curl
-	captcha? ( app-text/tesseract )"
+RDEPEND="dev-perl/WWW-Curl
+	captcha? ( app-text/tesseract
+	dev-perl/GD )"
 
 MY_PN="rsget.pl"
 

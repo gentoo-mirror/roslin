@@ -1,0 +1,29 @@
+--- Makefile.old	2009-12-10 19:33:32.000000000 +0100
++++ Makefile	2009-12-11 16:37:40.149997339 +0100
+@@ -42,7 +42,7 @@
+ # Compiler/Linker Flags
+ # add -O3 to CFLAGS for speedup -pg on LFLAGS and CFLAGS for gprof
+ # remove -DUSE_ISO_IEC_6429 to use a monochrom terminal.
+-CFLAGS =  -Wall -D__USE_UNIX98 -DUSE_ISO_IEC_6429 -O3
++CFLAGS +=  -Wall -D__USE_UNIX98 -DUSE_ISO_IEC_6429
+ LFLAGS =  -lSDL -lGL -lz
+ AFLAGS =  -f elf
+ CC  = g++
+@@ -51,7 +51,7 @@
+ .cpp.o:
+ 	$(CC) $(CFLAGS) -c $*.cpp -o $*.o
+ 
+-all:  libs disasm osmose stripexe
++all:  libs disasm osmose
+ 
+ osmose: $(z80_lib) $(OSM_OBJS) $(OPT_OBJS)
+ 	$(CC)  $(CFLAGS) $(OSM_OBJS) $(Z80_LIB) $(OPT_OBJS) $(UNZIP_LIB) $(Z_LIB) -o $(OSM_EXE) $(LFLAGS)
+@@ -73,7 +73,7 @@
+ 	rm -f *.o core $(OSM_EXE)
+ 
+ libs:
+-	cd $(UNZIP_DIR) && make unzip.a
++	cd $(UNZIP_DIR) && $(MAKE) unzip.a
+ 
+ 
+ 

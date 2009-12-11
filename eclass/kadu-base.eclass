@@ -6,7 +6,7 @@ SLOT="0"
 # If no version was requested, default to this one
 if [ -z "${MIN_VER}" ]
 then
-	MIN_VER="0.6.5.3"
+	MIN_VER="0.6.5.4_rc1"
 fi
 
 K_PV="${PV/_p/-}"

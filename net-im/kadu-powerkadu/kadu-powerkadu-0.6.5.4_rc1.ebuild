@@ -11,15 +11,14 @@ MOD_DEPEND=">=net-im/kadu-anonymous_check-0.6.5.1
 	    >=net-im/kadu-cenzor-0.6.5.1
 	    >=net-im/kadu-parser_extender-0.6.5.1
 	    >=net-im/kadu-word_fix-0.6.5.1
-	    >=net-im/kadu-split_messages-0.3"
-MOD_URI="http://www.kadu.net/~dorr/moduly/kadu-powerkadu-${PV}.tar.bz2"
-MOD_TYPE="ext"
+	    >=net-im/kadu-split_messages-0.3
+	    >=net-im/kadu-gg_avatars-0.6.5.2"
 
 inherit kadu-mod
 
 DESCRIPTION="A set of modules enhancing Kadu"
-HOMEPAGE="http://kadu.net/~dorr"
-KEYWORDS="amd64 x86"
+HOMEPAGE="http://kadu.net/"
+KEYWORDS="~amd64 ~x86"
 
 IUSE=""
 

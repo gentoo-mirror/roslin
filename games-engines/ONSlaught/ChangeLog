@@ -2,6 +2,10 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  15 Dec 2009; Michał Ziąbkowski <mziab@o2.pl> +ONSlaught-20091212.ebuild,
+  +files/ONSlaught-20091212-vc.patch:
+  Bumped with patch to fix build.
+
   11 Sep 2009; Michał Ziąbkowski <mziab@o2.pl> +ONSlaught-20090904.ebuild,
   +files/ONSlaught-20090904-sdl_bilinear.patch:
   Bumped with patch to fix build.

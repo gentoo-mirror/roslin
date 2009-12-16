@@ -12,7 +12,7 @@ KEYWORDS="~amd64 ~x86"
 
 IUSE=""
 
-RDEPEND=">=x11-libs/qt-gui-4.4.0[dbus]
+RDEPEND=">=x11-libs/qt-gui-4.4.0[dbus,qt3support]
 	>=x11-libs/qt-qt3support-4.4.0
 	>=x11-libs/qt-webkit-4.4.0
 	>=x11-libs/qt-dbus-4.4.0

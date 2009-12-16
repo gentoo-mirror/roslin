@@ -31,9 +31,6 @@ src_prepare() {
 
 src_install() {
 	dogamesbin ${PN}
-
 	dodoc changes.txt readme.txt
-	make_desktop_entry ${PN}
-
 	prepgamesdirs
 }

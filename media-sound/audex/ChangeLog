@@ -6,6 +6,10 @@
   -audex-0.71_beta5.ebuild:
   Removed cruft.
 
+  21 Dec 2009; Michał Ziąbkowski <mziab@o2.pl> -audex-0.71_beta4.ebuild,
+  -audex-0.71_beta5.ebuild:
+  Removed cruft.
+
   11 Sep 2009; Michał Ziąbkowski <mziab@o2.pl> +audex-0.72_beta1.ebuild:
   Bumped.
 

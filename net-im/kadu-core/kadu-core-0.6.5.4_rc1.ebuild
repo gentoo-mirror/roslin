@@ -4,6 +4,8 @@
 
 EAPI=2
 
+MIN_VER="0.6.5.4_rc1"
+
 inherit kadu-base
 
 DESCRIPTION="The core of Kadu IM"

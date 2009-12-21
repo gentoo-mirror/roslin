@@ -9,7 +9,7 @@ HOMEPAGE="http://svn.pld-linux.org/svn/toys/rsget.pl/"
 #SRC_URI=""
 ESVN_REPO_URI="http://svn.pld-linux.org/svn/toys/rsget.pl/"
 
-LICENSE=""
+LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS=""
 IUSE="captcha"

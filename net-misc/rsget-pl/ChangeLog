@@ -2,6 +2,9 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  21 Dec 2009; Michał Ziąbkowski <mziab@o2.pl> rsget-pl-9999.ebuild:
+  Fixed license.
+
   09 Dec 2009; Michał Ziąbkowski <mziab@o2.pl> rsget-pl-9999.ebuild:
   GD is only useful for captcha support.
 

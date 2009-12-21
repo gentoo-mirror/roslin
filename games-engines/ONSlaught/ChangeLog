@@ -2,6 +2,10 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  21 Dec 2009; Michał Ziąbkowski <mziab@o2.pl> -ONSlaught-20090126.ebuild,
+  -ONSlaught-20090307.ebuild, -ONSlaught-20090715.ebuild:
+  Removed cruft.
+
   15 Dec 2009; Michał Ziąbkowski <mziab@o2.pl> +ONSlaught-20091212.ebuild,
   +files/ONSlaught-20091212-vc.patch:
   Bumped with patch to fix build.

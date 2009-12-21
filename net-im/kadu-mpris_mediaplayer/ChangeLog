@@ -2,6 +2,10 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  21 Dec 2009; Michał Ziąbkowski <mziab@o2.pl>
+  kadu-mpris_mediaplayer-0.6.5.4_rc1.ebuild:
+  Fixed keywords.
+
   11 Dec 2009; Michał Ziąbkowski <mziab@o2.pl>
   +kadu-mpris_mediaplayer-0.6.5.4_rc1.ebuild, +metadata.xml:
   New ebuild.

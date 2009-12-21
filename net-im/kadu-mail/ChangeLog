@@ -2,6 +2,11 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*kadu-mail-0.3.6-r1 (21 Dec 2009)
+
+  21 Dec 2009; Michał Ziąbkowski <mziab@o2.pl> +kadu-mail-0.3.6-r1.ebuild:
+  Rev-bump with explicit deps for the ~arch crowd.
+
   04 Oct 2009; Michał Ziąbkowski <mziab@o2.pl> -kadu-mail-0.3.3.ebuild:
   Removing Kadu 0.6.0.* ebuilds.
 

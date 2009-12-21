@@ -1,7 +1,0 @@
-# ChangeLog for dev-libs/libmirage
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: $
-
-  31 Aug 2009; Michał Ziąbkowski <mziab@o2.pl> +libmirage-1.2.0.ebuild:
-  Commit new libmirage.
-

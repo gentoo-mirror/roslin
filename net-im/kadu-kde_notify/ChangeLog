@@ -2,6 +2,9 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  21 Dec 2009; Michał Ziąbkowski <mziab@o2.pl> +metadata.xml:
+  Added metadata.xml.
+
   11 Dec 2009; Michał Ziąbkowski <mziab@o2.pl>
   +kadu-kde_notify-0.3.3.ebuild:
   Bumped.

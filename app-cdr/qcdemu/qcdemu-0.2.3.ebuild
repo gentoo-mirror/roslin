@@ -25,6 +25,7 @@ S="${WORKDIR}"
 
 src_compile() {
 	eqmake4 || die "eqmake4 failed"
+	lrelease ${PN}.pro || die "lrelease failed"
 	emake || die "emake failed"
 }
 

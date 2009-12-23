@@ -1,6 +1,18 @@
+diff -Naur pushover-0.0.2/configure pushover-0.0.2.old/configure
+--- pushover-0.0.2/configure	2009-12-15 17:38:43.000000000 +0100
++++ pushover-0.0.2.old/configure	2009-12-23 23:55:28.308131752 +0100
+@@ -15323,7 +15323,7 @@
+ if test "${enable_nls+set}" = set; then
+   enableval=$enable_nls; USE_NLS=$enableval
+ else
+-  USE_NLS=yes
++  USE_NLS=no
+ fi
+ 
+   { $as_echo "$as_me:$LINENO: result: $USE_NLS" >&5
 diff -Naur pushover-0.0.2/Makefile.in pushover-0.0.2.old/Makefile.in
 --- pushover-0.0.2/Makefile.in	2009-12-15 17:38:53.000000000 +0100
-+++ pushover-0.0.2.old/Makefile.in	2009-12-23 23:51:02.587629496 +0100
++++ pushover-0.0.2.old/Makefile.in	2009-12-24 00:10:10.867728844 +0100
 @@ -36,11 +36,11 @@
  target_triplet = @target@
  bin_PROGRAMS = pushover$(EXEEXT)
@@ -26,18 +38,3 @@ diff -Naur pushover-0.0.2/Makefile.in pushover-0.0.2.old/Makefile.in
  nobase_dist_pkgdata_DATA = \
    data/ant.png \
    data/dominos.png \
-@@ -804,13 +801,7 @@
- 	-rm -f libtool config.lt
- install-dist_docDATA: $(dist_doc_DATA)
- 	@$(NORMAL_INSTALL)
--	test -z "$(docdir)" || $(MKDIR_P) "$(DESTDIR)$(docdir)"
--	@list='$(dist_doc_DATA)'; for p in $$list; do \
--	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
--	  f=$(am__strip_dir) \
--	  echo " $(dist_docDATA_INSTALL) '$$d$$p' '$(DESTDIR)$(docdir)/$$f'"; \
--	  $(dist_docDATA_INSTALL) "$$d$$p" "$(DESTDIR)$(docdir)/$$f"; \
--	done
-+	echo "Done fake distdoc."
- 
- uninstall-dist_docDATA:
- 	@$(NORMAL_UNINSTALL)

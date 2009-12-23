@@ -3,6 +3,10 @@
 # $Header: $
 
   23 Dec 2009; Piotr Szymaniak <lazy_bum@o2.pl> pushover-0.0.2.ebuild,
+  files/pushover-nodocs.patch:
+  Gha.
+
+  23 Dec 2009; Piotr Szymaniak <lazy_bum@o2.pl> pushover-0.0.2.ebuild,
   +files/pushover-nodocs.patch:
   Fixed doc installation, nls is still borked.
 

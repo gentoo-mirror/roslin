@@ -25,8 +25,10 @@ src_prepare() {
 }
 
 src_configure() {
-	egamesconf $(use_enable nls) \
-		--localedir=/usr/share/locale || die "econf failed"
+	egamesconf \
+		--disable-dependency-tracking \
+		--localedir=/usr/share/locale \
+		$(use_enable nls)
 }
 
 src_install() {

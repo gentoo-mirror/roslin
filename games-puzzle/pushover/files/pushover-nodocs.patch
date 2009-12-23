@@ -1,0 +1,43 @@
+diff -Naur pushover-0.0.2/Makefile.in pushover-0.0.2.old/Makefile.in
+--- pushover-0.0.2/Makefile.in	2009-12-15 17:38:53.000000000 +0100
++++ pushover-0.0.2.old/Makefile.in	2009-12-23 23:51:02.587629496 +0100
+@@ -36,11 +36,11 @@
+ target_triplet = @target@
+ bin_PROGRAMS = pushover$(EXEEXT)
+ subdir = .
+-DIST_COMMON = README $(am__configure_deps) $(dist_doc_DATA) \
++DIST_COMMON = $(am__configure_deps) $(dist_doc_DATA) \
+ 	$(dist_noinst_DATA) $(nobase_dist_pkgdata_DATA) \
+ 	$(srcdir)/Makefile.am $(srcdir)/Makefile.in \
+-	$(srcdir)/config.h.in $(top_srcdir)/configure ABOUT-NLS \
+-	AUTHORS COPYING ChangeLog INSTALL NEWS config_aux/config.guess \
++	$(srcdir)/config.h.in $(top_srcdir)/configure \
++	config_aux/config.guess \
+ 	config_aux/config.rpath config_aux/config.sub \
+ 	config_aux/depcomp config_aux/install-sh config_aux/ltmain.sh \
+ 	config_aux/missing
+@@ -296,9 +296,6 @@
+   src/tools.cpp src/tools.h \
+   src/window.cpp src/window.h
+ 
+-dist_doc_DATA = \
+-  readme.txt
+-
+ nobase_dist_pkgdata_DATA = \
+   data/ant.png \
+   data/dominos.png \
+@@ -804,13 +801,7 @@
+ 	-rm -f libtool config.lt
+ install-dist_docDATA: $(dist_doc_DATA)
+ 	@$(NORMAL_INSTALL)
+-	test -z "$(docdir)" || $(MKDIR_P) "$(DESTDIR)$(docdir)"
+-	@list='$(dist_doc_DATA)'; for p in $$list; do \
+-	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
+-	  f=$(am__strip_dir) \
+-	  echo " $(dist_docDATA_INSTALL) '$$d$$p' '$(DESTDIR)$(docdir)/$$f'"; \
+-	  $(dist_docDATA_INSTALL) "$$d$$p" "$(DESTDIR)$(docdir)/$$f"; \
+-	done
++	echo "Done fake distdoc."
+ 
+ uninstall-dist_docDATA:
+ 	@$(NORMAL_UNINSTALL)

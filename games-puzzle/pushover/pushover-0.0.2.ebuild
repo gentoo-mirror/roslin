@@ -2,6 +2,8 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
+EAPI="2"
+
 inherit games
 
 DESCRIPTION="Pushover is a fun puzzle game originally published by Ocean in 1992."
@@ -10,14 +12,27 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS=""
-IUSE=""
+KEYWORDS="~x86"
+IUSE="nls"
 
 DEPEND="dev-lang/lua
 	media-libs/sdl-mixer
 	media-libs/sdl-ttf"
 RDEPEND="${DEPEND}"
 
+src_prepare() {
+	epatch ${FILESDIR}/${PN}-nodocs.patch
+}
+
+src_configure() {
+	egamesconf $(use_enable nls) \
+		--localedir=/usr/share/locale || die "econf failed"
+}
+
 src_install() {
 	emake DESTDIR="${D}" install || die "einstall failed"
+
+	dodoc AUTHORS ChangeLog NEWS *txt || die "dodoc failed"
+
+	prepgamesdirs
 }

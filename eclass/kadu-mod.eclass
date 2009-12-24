@@ -12,10 +12,10 @@ K_PV="${K_PV/_/-}"
 DEPEND=">=dev-util/cmake-2.6.0"
 
 RDEPEND=">=net-im/kadu-core-${MIN_VER}
-		${MOD_DEPEND}"
+	${MOD_DEPEND}"
 
 SRC_URI="http://www.kadu.net/download/stable/kadu-${K_PV}.tar.bz2
-		${MOD_URI}"
+	${MOD_URI}"
 
 
 kadu-mod_src_unpack()

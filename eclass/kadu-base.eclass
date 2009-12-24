@@ -4,10 +4,7 @@ LICENSE="GPL-2"
 SLOT="0"
 
 # If no version was requested, default to this one
-if [ -z "${MIN_VER}" ]
-then
-	MIN_VER="0.6.5.3"
-fi
+MIN_VER="${MIN_VER:-0.6.5.3}"
 
 K_PV="${PV/_p/-}"
 K_PV="${K_PV/_/-}"

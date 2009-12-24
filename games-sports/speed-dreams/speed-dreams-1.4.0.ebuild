@@ -25,8 +25,8 @@ DEPEND="virtual/glut
 S=${WORKDIR}/${P}-beta1-src
 
 src_prepare() {
-	epatch "${FILESDIR}"/configure.patch
-	epatch "${FILESDIR}"/as-needed.patch
+	epatch "${FILESDIR}/${PV}-configure.patch"
+	epatch "${FILESDIR}/${PV}-as-needed.patch"
 }
 
 src_install() {

@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/supertux
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 
+  25 Dec 2009; Piotr Szymaniak <lazy_bum@o2.pl> +files/9999-fs-layout.patch,
+  +supertux-9999.ebuild:
+  Added WIP live ebuild.
+
   02 Jun 2009; Michał Ziąbkowski <mziab@o2.pl> files/0.3.1-gcc44.patch:
   Updated patch.
 

@@ -1,0 +1,13 @@
+diff --git a/configure b/configure
+index 2dd3fe5..ae29e61 100755
+--- a/configure
++++ b/configure
+@@ -891,7 +891,7 @@ ifdef DEBUG
+ OSCFLAGS = -O0 -g -pg -ggdb -Wpointer-arith $WERROR -pipe \$(OSCFLAGSEXTRA)
+ export LDFLAGS  := -pg \$(LDFLAGS)
+ else
+-OSCFLAGS = -O2 -Wpointer-arith $WERROR -fomit-frame-pointer -pipe \$(OSCFLAGSEXTRA)
++OSCFLAGS = \$(CXXFLAGS\) \$(OSCFLAGSEXTRA)
+ endif
+ 
+ TARGET = onscripter-en$EXE

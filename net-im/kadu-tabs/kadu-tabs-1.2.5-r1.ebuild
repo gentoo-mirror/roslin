@@ -16,4 +16,3 @@ HOMEPAGE="http://kadu.net/~weagle"
 KEYWORDS="~amd64 ~x86"
 
 IUSE=""
-

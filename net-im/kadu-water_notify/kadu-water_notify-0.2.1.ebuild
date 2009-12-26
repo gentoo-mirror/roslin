@@ -15,4 +15,3 @@ HOMEPAGE="http://kadu.net/~dorr"
 KEYWORDS="amd64 x86"
 
 IUSE=""
-

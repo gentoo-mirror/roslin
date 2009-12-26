@@ -12,4 +12,3 @@ DESCRIPTION="Amarok 1.x mediaplayer module for Kadu"
 HOMEPAGE="http://kadu.net"
 KEYWORDS="amd64 x86"
 IUSE=""
-

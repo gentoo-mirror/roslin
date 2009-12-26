@@ -14,4 +14,3 @@ HOMEPAGE="http://kadu.net/~patryk"
 KEYWORDS="amd64 x86"
 
 IUSE=""
-

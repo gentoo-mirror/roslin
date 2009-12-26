@@ -16,4 +16,3 @@ HOMEPAGE="http://www.ultr.pl/kadu/"
 KEYWORDS="~amd64 ~x86"
 
 IUSE=""
-

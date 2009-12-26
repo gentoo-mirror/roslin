@@ -38,4 +38,3 @@ src_compile() {
 src_install() {
 	emake INSTALL_ROOT="${D}" install || die "emake install filed"
 }
-

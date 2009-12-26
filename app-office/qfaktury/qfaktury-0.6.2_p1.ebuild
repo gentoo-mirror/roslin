@@ -26,7 +26,7 @@ src_prepare() {
 	sed -e "s:/usr/local:/usr:g" \
 	    -i Settings.h \
 	    || die "sed failed"
-	    
+
 	eqmake4 || die "qmake failed"
 }
 
@@ -42,4 +42,3 @@ src_install() {
 
 	make_desktop_entry ${PN} QFaktury qfaktury_64
 }
-

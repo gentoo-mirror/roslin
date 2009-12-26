@@ -36,4 +36,3 @@ src_compile() {
 src_install() {
 	dolib libsnesfilter.* || die "install failed"
 }
-

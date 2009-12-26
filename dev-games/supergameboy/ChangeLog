@@ -2,6 +2,9 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  26 Dec 2009; Michał Ziąbkowski <mziab@o2.pl> supergameboy-0.014.ebuild:
+  Fixed whitespace.
+
   21 Dec 2009; Michał Ziąbkowski <mziab@o2.pl> -supergameboy-0.012.ebuild,
   -supergameboy-0.013.ebuild, supergameboy-0.014.ebuild:
   Removed cruft. Fixed license.

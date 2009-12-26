@@ -2,6 +2,10 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  26 Dec 2009; Michał Ziąbkowski <mziab@o2.pl> snesreader-0.006.ebuild,
+  snesreader-0.008.ebuild, snesreader-0.009.ebuild, snesreader-0.010.ebuild:
+  Fixed whitespace.
+
   09 Dec 2009; Michał Ziąbkowski <mziab@o2.pl> +snesreader-0.010.ebuild:
   Bumped.
 

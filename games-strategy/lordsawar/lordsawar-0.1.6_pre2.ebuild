@@ -15,17 +15,17 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="editor nls pbm zip"
 
-DEPEND="dev-util/pkgconfig
-	dev-libs/boost
+RDEPEND="dev-libs/boost
 	nls? ( sys-devel/gettext )
 	>=dev-cpp/gtkmm-2.4
-    >=dev-cpp/libglademm-2.4
-    media-libs/sdl-image
-    sound? ( media-libs/sdl-mixer[vorbis] )
-    >=net-libs/gnet-2
-    >=dev-libs/libsigc++-2
-    >=dev-libs/expat-2.0"
-RDEPEND="${DEPEND}"
+	>=dev-cpp/libglademm-2.4
+	media-libs/sdl-image
+	sound? ( media-libs/sdl-mixer[vorbis] )
+	>=net-libs/gnet-2
+	>=dev-libs/libsigc++-2
+	>=dev-libs/expat-2.0"
+DEPEND="${DEPEND}
+	dev-util/pkgconfig"
 
 S="${WORKDIR}/${P/_pre*/}"
 

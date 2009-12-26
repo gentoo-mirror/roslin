@@ -20,7 +20,7 @@ RDEPEND="dev-python/pygtk
 	dev-python/pyserial
 	app-mobilephone/obex-data-server
 	dev-python/dbus-python
-	gammu? ( dev-python/python-gammu )"
+	gammu? ( app-mobilephone/gammu[python] )"
 DEPEND="${RDEPEND}"
 
 src_prepare() {

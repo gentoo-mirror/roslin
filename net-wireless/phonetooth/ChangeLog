@@ -2,6 +2,10 @@
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  26 Dec 2009; Michał Ziąbkowski <mziab@o2.pl> -phonetooth-0.5.0.ebuild,
+  -phonetooth-0.5.1.ebuild, phonetooth-0.5.1-r1.ebuild:
+  Fixed gammu dep. Removed old cruft.
+
   16 Sep 2009; Michał Ziąbkowski <mziab@o2.pl>
   +phonetooth-0.5.1-r1.ebuild, +files/phonetooth-0.5.1-glade-locale.patch:
   Bumped with patch to fix issues non-utf8 users (including me) were having

@@ -26,7 +26,7 @@ src_prepare() {
 		-e "s|-strip --strip-all|echo|" \
 		-e "s|PROGNAME = tetris|PROGNAME = vitetris|" \
 		Makefile || die "sed Makefile failed"
-		
+
 	epatch "${FILESDIR}"/${PN}-configure.patch
 }
 

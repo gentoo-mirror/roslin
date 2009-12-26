@@ -31,5 +31,5 @@ src_unpack() {
 
 #src_install() {
 #	insinto "${dir}/${MOD_DIR}"
-#	doins 
+#	doins
 #}

@@ -75,4 +75,3 @@ pkg_postinst() {
 	elog "Remember to place your datafiles in $SGPDATADIR, converted to lowercase."
 	elog "For more information see $HOMEPAGE"
 }
-

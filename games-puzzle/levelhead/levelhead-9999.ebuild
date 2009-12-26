@@ -51,7 +51,7 @@ src_prepare() {
 		-e "s:models/:"${GAMES_DATADIR}"/"${PN}"/models/:g" \
 		-e "s:shaders/:"${GAMES_DATADIR}"/"${PN}"/shaders/:g" \
 		src/levelHead/levelHead.cpp || die "sed failed"
-		
+
 	sed -i \
 		-e "s:games_libdir:$(games_get_libdir):" \
 		bin/levelhead || die "sed failed"
@@ -61,7 +61,6 @@ src_compile() {
 	cd "${S}"/bin
 	emake || die "emake failed"
 }
-
 
 src_install() {
 	dogamesbin bin/levelhead || die "dogamesbin failed"
@@ -85,4 +84,3 @@ pkg_postinst() {
 	elog "the game is launched with the script in /usr/games/bin/levelhead"
 	elog "it also contains some variables which might not fit to your system"
 }
-

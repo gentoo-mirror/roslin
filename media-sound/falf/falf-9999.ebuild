@@ -20,7 +20,6 @@ for X in ${LANGS}; do
 	IUSE="${IUSE} linguas_${X}"
 done
 
-
 DEPEND="media-libs/taglib
 	media-libs/xine-lib"
 

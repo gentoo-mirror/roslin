@@ -6,7 +6,6 @@ EAPI=1
 
 inherit eutils qt3
 
-
 DESCRIPTION="argumented reality tracking library plus"
 HOMEPAGE="http://studierstube.icg.tu-graz.ac.at/handheld_ar/artoolkitplus.php"
 SRC_URI="http://studierstube.icg.tu-graz.ac.at/handheld_ar/download/${PN}_${PV}.zip"
@@ -18,7 +17,6 @@ IUSE=""
 
 RDEPEND="x11-libs/qt:3"
 DEPEND=""
-
 
 S=${WORKDIR}/${MY_PN}
 

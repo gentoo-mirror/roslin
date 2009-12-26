@@ -74,4 +74,3 @@ pkg_postinst() {
 	lowercase."
 	elog "For more information see $HOMEPAGE"
 }
-

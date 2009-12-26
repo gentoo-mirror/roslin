@@ -31,7 +31,7 @@ src_prepare() {
 	sed -i CMakeLists.txt \
 	    -e "/EXECUTABLE_OUTPUT_PATH/d" \
 	    || die "sed failed"
-	    
+
 	epatch "${FILESDIR}/${P}-sdl_bilinear.patch"
 }
 

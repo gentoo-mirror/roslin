@@ -16,7 +16,7 @@ KEYWORDS="~x86 ~amd64"
 IUSE=""
 
 DEPEND="|| ( =x11-libs/qt-4.3*
-    x11-libs/qt-gui:4 )"
+	x11-libs/qt-gui:4 )"
 RDEPEND="${DEPEND}"
 
 src_prepare() {
@@ -34,4 +34,3 @@ src_install() {
 	dodoc README TODO changelog || die "dodoc failed"
 	make_desktop_entry ${PN}
 }
-

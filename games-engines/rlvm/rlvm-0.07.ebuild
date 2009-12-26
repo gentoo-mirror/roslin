@@ -52,5 +52,3 @@ src_install() {
 
 	prepgamesdirs
 }
-
-

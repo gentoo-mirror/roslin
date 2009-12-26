@@ -34,7 +34,7 @@ src_prepare() {
 	echo "icons_default=y" >> ${S}/.config
 
 	# Enable default emoticons
-	echo "emoticons_penguins=y" >> ${S}/.config	
+	echo "emoticons_penguins=y" >> ${S}/.config
 }
 
 pkg_postinst() {

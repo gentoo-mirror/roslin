@@ -23,7 +23,7 @@ RDEPEND="${DEPEND}"
 S="${WORKDIR}/${PN}"
 
 pkg_postinst() {
-    elog "If you upgraded from a version prior to 0.70,"
-    elog "please purge your old configuration file"
-    elog "located at ~/.kde/share/config/audexrc."
+	elog "If you upgraded from a version prior to 0.70,"
+	elog "please purge your old configuration file"
+	elog "located at ~/.kde/share/config/audexrc."
 }

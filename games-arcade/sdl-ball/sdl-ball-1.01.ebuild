@@ -32,7 +32,7 @@ src_prepare() {
 		rm -r themes/dio-sound-theme || die "removing soundfiles failed"
 		append-flags "-DNOSOUND"
 	fi
-	
+
 	# so we can start afresh
 	rm main.o
 }

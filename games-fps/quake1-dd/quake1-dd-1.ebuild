@@ -13,4 +13,3 @@ DESCRIPTION="Death's Dominion Level Pack for Scourge of Armagon"
 HOMEPAGE=""
 SRC_URI="${SRC_ADDICT}/dd.zip"
 IUSE=""
-

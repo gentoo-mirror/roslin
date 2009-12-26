@@ -13,7 +13,6 @@ LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE=""
 
-
 need-kde 3.5
 
 LANGS="de fr"

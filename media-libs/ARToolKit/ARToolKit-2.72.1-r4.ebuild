@@ -8,7 +8,6 @@ DESCRIPTION="The ARToolKit library"
 HOMEPAGE="http://www.hitl.washington.edu/artoolkit/"
 SRC_URI="mirror://sourceforge/artoolkit/${P}.tgz"
 
-
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 x86"
@@ -77,7 +76,7 @@ src_unpack() {
 	mv "${S:0:${old}}" "${S}"
 	cd "${S}"
 	mv Configure configure
-	
+
 	epatch "${FILESDIR}/${PN}-ljpeg.patch"
 }
 

@@ -44,4 +44,3 @@ pkg_postinst() {
 
 	games_pkg_postinst
 }
-

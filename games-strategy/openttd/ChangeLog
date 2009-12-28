@@ -1,0 +1,10 @@
+# ChangeLog for games-strategy/openttd
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  28 Dec 2009; Piotr Szymaniak <lazy_bum@o2.pl> +openttd-1.0.0_beta1.ebuild:
+  Added _beta1 for testing.
+
+  28 Dec 2009; Piotr Szymaniak <lazy_bum@o2.pl> ChangeLog:
+  Added _beta1 for testing.
+

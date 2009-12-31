@@ -7,20 +7,21 @@ EAPI="2"
 inherit games
 
 DESCRIPTION="OpenSFX data files for OpenTTD"
-HOMEPAGE="http://dev.openttdcoop.org/projects/opensfx"
-SRC_URI="http://bundles.openttdcoop.org/${PN}/releases/${P}.zip"
+HOMEPAGE="http://bundles.openttdcoop.org/opensfx/"
+SRC_URI="http://bundles.openttdcoop.org/${PN}/releases/${P}-source.tar.gz"
 
 LICENSE="CCPL-Sampling-Plus-1.0"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="~amd64"
 IUSE=""
 
-DEPEND=">=games-simulation/openttd-1.0.0_beta1"
+DEPEND=">=games-simulation/openttd-1.0.0_beta1
+	games-util/catcodec"
 RDEPEND="${DEPEND}"
 
 src_install() {
-	insinto ${GAMES_DATADIR}/openttd/data/
-	insopts -m640 -ggames
-	doins opensfx.cat opensfx.obs
-	dodoc changelog.txt readme.txt
+	insinto "${GAMES_DATADIR}/openttd/data/"
+	doins src/opensfx.cat opensfx.obs || die "doins failed in $(pwd)"
+	dodoc docs/*.txt || die "dodoc failed"
+	prepgamesdirs
 }

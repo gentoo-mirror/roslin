@@ -1,9 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/openttd-0.7.4.ebuild,v 1.1 2009/12/09 17:03:30 mr_bones_ Exp $
 
-EAPI="2"
-
+EAPI=2
 inherit eutils games
 
 DESCRIPTION="OpenTTD is a clone of Transport Tycoon Deluxe"
@@ -13,7 +12,7 @@ S=${WORKDIR}/${P/_/-}
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="alsa debug dedicated iconv icu +opengfx +opensfx +png +truetype zlib"
 RESTRICT="test"
 
@@ -35,7 +34,7 @@ RDEPEND="${DEPEND}
 		alsa? ( media-sound/alsa-utils )
 	)"
 PDEPEND="
-	opengfx? ( games-misc/opengfx ) 
+	opengfx? ( games-misc/opengfx )
 	opensfx? ( games-misc/opensfx )"
 
 src_configure() {
@@ -98,34 +97,16 @@ pkg_postinst() {
 
 	if ! use opengfx ; then
 		elog
-		elog "OpenTTD was compiled without opengfx USE flag."
-		elog 
+		elog "OpenTTD was compiled without opengfx and opensfx USE flags."
+		elog
 		elog "In order to play, you must either install games-strategy/opengfx"
-		elog "or copy the following 5 files from a version of TTD"
+		elog "or copy the following 6 files from a version of TTD"
 		elog "to ${GAMES_DATADIR}/${PN}/data/."
 		elog
 		elog "From the WINDOWS version you need: "
-		elog "  trg1r.grf trgcr.grf trghr.grf trgir.grf trgtr.grf"
+		elog "  sample.cat trg1r.grf trgcr.grf trghr.grf trgir.grf trgtr.grf"
 		elog "OR from the DOS version you need: "
-		elog "  TRG1.GRF TRGC.GRF TRGH.GRF TRGI.GRF TRGT.GRF"
-		elog
-		elog "File names are case sensitive so make sure they are "
-		elog "correct for whichever version you have."
-		elog
-	fi
-
-	if ! use opensfx ; then
-		elog
-		elog "OpenTTD was compiled without opensfx USE flag."
-		elog
-		elog "In order to play, you must either install games-strategy/opensfx"
-		elog "or copy the following file from a version of TTD"
-		elog "to ${GAMES_DATADIR}/${PN}/data/."
-		elog
-		elog "From the WINDOWS version you need: "
-		elog "  sample.cat"
-		elog "OR from the DOS version you need: "
-		elog "  SAMPLE.CAT"
+		elog "  SAMPLE.CAT TRG1.GRF TRGC.GRF TRGH.GRF TRGI.GRF TRGT.GRF"
 		elog
 		elog "File names are case sensitive so make sure they are "
 		elog "correct for whichever version you have."

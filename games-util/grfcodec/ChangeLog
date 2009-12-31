@@ -1,0 +1,8 @@
+# ChangeLog for games-util/grfcodec
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  31 Dec 2009; Piotr Szymaniak <lazy_bum@o2.pl> +grfcodec-0_pre2247.ebuild,
+  +files/Makefile.local, +files/grfcodec-r2247-gcc4.4.patch, +metadata.xml:
+  Updated ebuild, thanks goes to Locke Shinseiko.
+

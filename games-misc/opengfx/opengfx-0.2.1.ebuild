@@ -7,23 +7,28 @@ EAPI="2"
 inherit games
 
 DESCRIPTION="OpenGFX data files for OpenTTD"
-HOMEPAGE="http://dev.openttdcoop.org/projects/opengfx"
-SRC_URI="http://bundles.openttdcoop.org/${PN}/releases/${P}.zip"
+HOMEPAGE="http://bundles.openttdcoop.org/opengfx/"
+SRC_URI="http://bundles.openttdcoop.org/${PN}/releases/${P}-source.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="~amd64"
 IUSE=""
 
-DEPEND="games-simulation/openttd"
+S="${WORKDIR}/${P}-source"
+
+DEPEND=">=games-simulation/openttd-0.7.0
+	games-util/nforenum
+	games-util/grfcodec"
 RDEPEND="${DEPEND}"
 
-src_install() {
-	insinto ${GAMES_DATADIR}/openttd/data/
-	insopts -m640 -ggames
-	doins ogfx1_base.grf ogfxc_arctic.grf ogfxe_extra.grf ogfxh_tropical.grf
-	doins ogfxi_logos.grf ogfxt_toyland.grf
-	doins opengfx.obg
-	dodoc changelog.txt readme.txt
+src_compile() {
+	emake bundle
 }
 
+src_install() {
+	insinto "${GAMES_DATADIR}/openttd/data/"
+	doins *.grf opengfx.obg
+	dodoc docs/*.txt || die "dodoc failed"
+	prepgamesdirs
+}

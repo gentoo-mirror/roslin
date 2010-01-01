@@ -1,6 +1,12 @@
 # ChangeLog for net-im/kadu-desktop_docking
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+
+*kadu-desktop_docking-0.6.5.4_rc2 (01 Jan 2010)
+
+  01 Jan 2010; Michał Ziąbkowski <mziab@o2.pl>
+  +kadu-desktop_docking-0.6.5.4_rc2.ebuild:
+  Bumped.
 
   11 Dec 2009; Michał Ziąbkowski <mziab@o2.pl>
   +kadu-desktop_docking-0.6.5.4_rc1.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/promile-qt
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+
+  02 Jan 2010; Michał Ziąbkowski <mziab@o2.pl> ChangeLog:
+  Added metadata.xml.
 
   02 Jun 2009; Michał Ziąbkowski <mziab@o2.pl> promile-qt-0.8.0-r1.ebuild,
   +files/promile-qt-0.8.0-gcc44.patch:

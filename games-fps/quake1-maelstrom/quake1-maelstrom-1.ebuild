@@ -17,6 +17,7 @@ HOMEPAGE=""
 SRC_URI="http://www.quaddicted.com/filebase/maelstromv2.zip
 	http://shub-hub.quaddicted.com/files/maps_singleplayer/maelstromv2.zip"
 IUSE=""
+KEYWORDS="~x86"
 
 src_unpack() {
 	unpack ${A}

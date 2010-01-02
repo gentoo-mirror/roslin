@@ -15,6 +15,7 @@ SRC_URI="${SRC_ADDICT}/${MOD_DIR}.zip
 
 IUSE="soundtrack"
 MOD_DEPEND="soundtrack? ( media-sound/mp32ogg )"
+KEYWORDS="~x86"
 
 pkg_setup() {
 	games_pkg_setup

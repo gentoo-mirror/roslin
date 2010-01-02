@@ -3,6 +3,9 @@
 # $Header: $
 
   02 Jan 2010; Michał Ziąbkowski <mziab@o2.pl> openttd-1.0.0_beta1.ebuild:
+  Changed keywords to shut up repoman.
+
+  02 Jan 2010; Michał Ziąbkowski <mziab@o2.pl> openttd-1.0.0_beta1.ebuild:
   Fixed whitespace.
 
   28 Dec 2009; Piotr Szymaniak <lazy_bum@o2.pl> +openttd-1.0.0_beta1.ebuild:

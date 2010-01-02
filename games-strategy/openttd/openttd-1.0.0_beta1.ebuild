@@ -13,7 +13,7 @@ S=${WORKDIR}/${P/_/-}
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="alsa debug dedicated iconv icu +opengfx +opensfx +png +truetype zlib"
 RESTRICT="test"
 

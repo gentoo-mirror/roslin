@@ -1,5 +1,8 @@
 # ChangeLog for app-misc/disksearch
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+
+  02 Jan 2010; Michał Ziąbkowski <mziab@o2.pl> disksearch-1.2.1.ebuild:
+  Fixed SRC_URI.
 
   20 Oct 2008; Michał Ziąbkowski <mziab@o2.pl> files/disksearch.desktop:
   Fixed .desktop.

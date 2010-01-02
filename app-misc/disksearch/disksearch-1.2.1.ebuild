@@ -6,7 +6,7 @@ inherit eutils
 
 DESCRIPTION="Tool for searching for files on removable media disks"
 HOMEPAGE="http://disksearch.sourceforge.net"
-SRC_URI="http://dfn.dl.sourceforge.net/sourceforge/disksearch/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 
 SLOT="0"

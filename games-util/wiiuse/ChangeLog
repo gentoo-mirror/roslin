@@ -1,5 +1,8 @@
 # ChangeLog for games-util/wiiuse
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+
+  02 Jan 2010; Michał Ziąbkowski <mziab@o2.pl> Manifest:
+  Fixed Manifest.
 
   02 Jun 2009; Piotr Szymaniak <lazy_bum@o2.pl> wiiuse-0.12.ebuild:
   Fixed some stupid ideas in ebuild.

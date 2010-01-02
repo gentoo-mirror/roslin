@@ -35,7 +35,7 @@ RDEPEND="${DEPEND}
 		alsa? ( media-sound/alsa-utils )
 	)"
 PDEPEND="
-	opengfx? ( games-misc/opengfx ) 
+	opengfx? ( games-misc/opengfx )
 	opensfx? ( games-misc/opensfx )"
 
 src_configure() {
@@ -99,7 +99,7 @@ pkg_postinst() {
 	if ! use opengfx ; then
 		elog
 		elog "OpenTTD was compiled without opengfx USE flag."
-		elog 
+		elog
 		elog "In order to play, you must either install games-strategy/opengfx"
 		elog "or copy the following 5 files from a version of TTD"
 		elog "to ${GAMES_DATADIR}/${PN}/data/."

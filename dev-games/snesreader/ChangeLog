@@ -1,6 +1,10 @@
 # ChangeLog for dev-games/snesreader
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+
+  02 Jan 2010; Michał Ziąbkowski <mziab@o2.pl> -snesreader-0.006.ebuild,
+  -snesreader-0.008.ebuild:
+  Removed cruft.
 
   26 Dec 2009; Michał Ziąbkowski <mziab@o2.pl> snesreader-0.006.ebuild,
   snesreader-0.008.ebuild, snesreader-0.009.ebuild, snesreader-0.010.ebuild:

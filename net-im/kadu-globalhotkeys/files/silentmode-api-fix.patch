@@ -1,0 +1,33 @@
+diff --git a/globalhotkeys.cpp b/globalhotkeys.cpp
+index a53fbc7..6a97f6a 100644
+--- a/modules/globalhotkeys/globalhotkeys.cpp
++++ b/modules/globalhotkeys/globalhotkeys.cpp
+@@ -1330,21 +1330,21 @@ void GlobalHotkeys::checkPendingHotkeys()
+ 			}
+ 			else if( hotkey->equals( hotkeys["TurnSilentModeOn"] ) )
+ 			{
+-				notification_manager->silentActionActivated( NULL, true );
++				kadu->silentActionActivated( NULL, true );
+ 			}
+ 			else if( hotkey->equals( hotkeys["TurnSilentModeOff"] ) )
+ 			{
+-				notification_manager->silentActionActivated( NULL, false );
++				kadu->silentActionActivated( NULL, false );
+ 			}
+ 			else if( hotkey->equals( hotkeys["ToggleSilentMode"] ) )
+ 			{
+-				notification_manager->setSilentActionState();
+-				bool silentmode = notification_manager->silent_mode;
+-				if( notification_manager->silent_action->actions().count() > 0 )
++				kadu->SilentActionCreated();
++				bool silentmode = kadu->silentMode();
++				if( kadu->silentActionDescription->actions().count() > 0 )
+ 				{
+-					silentmode = notification_manager->silent_action->actions().at(0)->isChecked();
++					silentmode = kadu->silentActionDescription->actions().at(0)->isChecked();
+ 				}
+-				notification_manager->silentActionActivated( NULL, !silentmode );
++				kadu->silentActionActivated( NULL, !silentmode );
+ 			}
+ 			// <---
+ 			else

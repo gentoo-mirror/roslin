@@ -1,5 +1,9 @@
 # ChangeLog for games-fps/quake1-data
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+
+  02 Jan 2010; Michał Ziąbkowski <mziab@o2.pl> quake1-data-2.40-r1.ebuild,
+  quake1-data-2.40-r2.ebuild:
+  Changed keywords to shut up repoman.
 
   11 Nov 2009; Piotr Szymaniak <lazy_bum@o2.pl> +quake1-data-2.40-r2.ebuild:
   Fixed some issues described in bug #166704. Also thanks to James Le Cuirot.

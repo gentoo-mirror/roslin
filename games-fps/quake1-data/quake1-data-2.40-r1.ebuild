@@ -11,7 +11,7 @@ SRC_URI="mirror://idsoftware/quake/quake106.zip
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="amd64 ppc x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="vispatch"
 
 DEPEND="app-arch/lha

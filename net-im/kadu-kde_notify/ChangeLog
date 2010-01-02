@@ -2,6 +2,10 @@
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  02 Jan 2010; Michał Ziąbkowski <mziab@o2.pl>
+  -kadu-kde_notify-0.3.1.ebuild:
+  Removed cruft.
+
 *kadu-kde_notify-0.3.3-r1 (01 Jan 2010)
 
   01 Jan 2010; Michał Ziąbkowski <mziab@o2.pl>

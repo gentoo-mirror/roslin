@@ -20,3 +20,4 @@ HOMEPAGE="http://www.celephais.net/board/view_thread.php?id=60179"
 SRC_URI="http://biff.leveldesign.org/maps/q1/sp/${MOD_MAP}.zip
 	${SRC_ADDICT}/${MOD_MAP}.zip"
 IUSE=""
+KEYWORDS="~x86"

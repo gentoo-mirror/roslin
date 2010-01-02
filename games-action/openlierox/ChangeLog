@@ -1,6 +1,10 @@
 # ChangeLog for games-action/openlierox
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+
+  02 Jan 2010; Michał Ziąbkowski <mziab@o2.pl>
+  openlierox-0.58_beta3.ebuild:
+  Fixed unquoted variable.
 
   11 Oct 2009; Piotr Szymaniak <lazy_bum@o2.pl>
   +openlierox-0.58_beta3.ebuild:

@@ -38,7 +38,7 @@ src_configure() {
 	local mycmakeargs="
 		$(cmake-utils_use debug DEBUG)
 		$(cmake-utils_use X X11)
-		-D SYSTEM_DATA_DIR=${GAMES_DATADIR}
+		-D SYSTEM_DATA_DIR='${GAMES_DATADIR}'
 		-D VERSION=${PV}"
 
 	cmake-utils_src_configure

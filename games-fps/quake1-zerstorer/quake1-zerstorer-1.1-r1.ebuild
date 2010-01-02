@@ -30,6 +30,7 @@ SRC_URI="${SRC_PM}/${MOD_DIR}.zip
 	vispatch? ( http://mlodyinteligent.pl/~lazy_bum/quake-vis/zervis.zip )"
 
 IUSE="vispatch"
+KEYWORDS="~x86"
 
 DEPEND="vispatch? (
 		games-util/vispatch

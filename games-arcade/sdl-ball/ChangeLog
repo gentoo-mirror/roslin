@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/sdl-ball
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+
+  02 Jan 2010; Michał Ziąbkowski <mziab@o2.pl> -files/0.14-Makefile.patch,
+  -sdl-ball-0.14.ebuild:
+  Removed cruft.
 
   17 Feb 2009; Michał Ziąbkowski <mziab@o2.pl> sdl-ball-0.14.ebuild,
   sdl-ball-1.0.ebuild, sdl-ball-1.01.ebuild:

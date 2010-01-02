@@ -19,6 +19,7 @@ DESCRIPTION="Slave to a Machine by RickyT23 for Quoth"
 HOMEPAGE="http://www.celephais.net/board/view_thread.php?id=60184"
 SRC_URI="${SRC_ADDICT}/${MOD_MAP}.zip"
 IUSE=""
+KEYWORDS="~x86"
 
 dir=${GAMES_DATADIR}/quake1
 

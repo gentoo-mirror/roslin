@@ -6,7 +6,7 @@ EAPI=2
 
 inherit eutils games
 
-DESCRIPTION=""
+DESCRIPTION="A multi-platform remake of Total Annihilation"
 HOMEPAGE="http://ta3d.sourceforge.net/"
 SRC_URI="http://ta3d.darkstars.co.uk/releases/${PN}-v-0-4-1.7z"
 

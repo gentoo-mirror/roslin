@@ -25,6 +25,7 @@ SRC_URI="movie? ( The_Seal_Of_Nehahra.zip )
 	nehupdate3.zip
 	nehmusicfix.zip"
 IUSE=""
+KEYWORDS="~x86"
 
 src_unpack() {
 	unpack ${A}

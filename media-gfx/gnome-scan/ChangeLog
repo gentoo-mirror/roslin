@@ -1,5 +1,8 @@
 # ChangeLog for gnome-extra/gnome-scan
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+
+  02 Jan 2010; Michał Ziąbkowski <mziab@o2.pl> +metadata.xml:
+  Added metadata.xml.
 
   25 Aug 2009; Michał Ziąbkowski <mziab@o2.pl> -gnome-scan-0.6.1.ebuild:
   Removed 0.6.1. Superseded by 0.6.2 in portage.

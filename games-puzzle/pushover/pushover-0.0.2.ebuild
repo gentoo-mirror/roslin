@@ -21,7 +21,7 @@ DEPEND="dev-lang/lua
 RDEPEND="${DEPEND}"
 
 src_prepare() {
-	epatch ${FILESDIR}/${PN}-nodocs.patch
+	epatch "${FILESDIR}/${PN}-nodocs.patch"
 }
 
 src_configure() {

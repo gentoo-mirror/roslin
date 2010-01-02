@@ -24,7 +24,7 @@ RDEPEND="dev-libs/boost
 	>=net-libs/gnet-2
 	>=dev-libs/libsigc++-2
 	>=dev-libs/expat-2.0"
-DEPEND="${DEPEND}
+DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 S="${WORKDIR}/${P/_pre*/}"

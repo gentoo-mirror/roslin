@@ -2,6 +2,10 @@
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  02 Jan 2010; Michał Ziąbkowski <mziab@o2.pl>
+  -kadu-nextinfo-0.6.5_p1.ebuild:
+  Removed cruft.
+
 *kadu-nextinfo-0.6.5_p2-r2 (01 Jan 2010)
 
   01 Jan 2010; Michał Ziąbkowski <mziab@o2.pl>

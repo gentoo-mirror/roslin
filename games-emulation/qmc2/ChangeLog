@@ -2,6 +2,9 @@
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 
   02 Jan 2010; Michał Ziąbkowski <mziab@o2.pl> metadata.xml:
+  Fixed metadata structure. Oops.
+
+  02 Jan 2010; Michał Ziąbkowski <mziab@o2.pl> metadata.xml:
   Added missing flags to metadata.xml.
 
   06 Nov 2009; Michał Ziąbkowski <mziab@o2.pl> +qmc2-0.2_beta12.ebuild:

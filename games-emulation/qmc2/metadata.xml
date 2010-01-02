@@ -10,4 +10,5 @@
   <flag name='phonon'>Enables support for the Phonon media library</flag>
   <flag name='sdlmame'>Enables SDLMAME backend</flag>
   <flag name='sdlmess'>Enables SDLMESS backend</flag>
+</use>
 </pkgmetadata>

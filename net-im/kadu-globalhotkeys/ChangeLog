@@ -2,6 +2,10 @@
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  03 Jan 2010; Michał Ziąbkowski <mziab@o2.pl>
+  files/silentmode-api-fix.patch:
+  Updated to a nicer version of the patch.
+
   02 Jan 2010; Michał Ziąbkowski <mziab@o2.pl>
   kadu-globalhotkeys-0.6.5_p14.ebuild:
   Fixed copyright.

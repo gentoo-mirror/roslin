@@ -1,3 +1,10 @@
+# Copyright 1999-2010 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: $
+
+# Author: Michał "mziab" Ziąbkowski
+# Base eclass for modular Kadu ebuilds
+
 inherit eutils flag-o-matic cmake-utils
 
 LICENSE="GPL-2"

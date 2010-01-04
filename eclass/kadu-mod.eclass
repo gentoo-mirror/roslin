@@ -1,3 +1,10 @@
+# Copyright 1999-2010 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: $
+
+# Author: Michał "mziab" Ziąbkowski
+# Module-specific functions for modular Kadu ebuilds
+
 # Proper deps for external modules
 if [ "${MOD_TYPE}" != "ext" ]
 then

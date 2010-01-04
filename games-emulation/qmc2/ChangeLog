@@ -1,6 +1,11 @@
 # ChangeLog for games-emulation/qmc2
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 
+*qmc2-0.2_beta13 (04 Jan 2010)
+
+  04 Jan 2010; Michał Ziąbkowski <mziab@o2.pl> +qmc2-0.2_beta13.ebuild:
+  Bumped.
+
   02 Jan 2010; Michał Ziąbkowski <mziab@o2.pl> metadata.xml:
   Fixed metadata structure. Oops.
 

@@ -13,7 +13,7 @@ SRC_URI="http://download.savannah.gnu.org/releases/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="editor nls pbm zip"
+IUSE="editor nls pbm sound zip"
 
 RDEPEND=">=dev-cpp/gtkmm-2.4
 	>=dev-cpp/libglademm-2.4

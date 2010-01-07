@@ -1,6 +1,13 @@
 # ChangeLog for games-arcade/stepmania
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+
+  07 Jan 2010; Michał Ziąbkowski <mziab@o2.pl> stepmania-9999.ebuild,
+  +files/stepmania-9999-datadir.patch, -files/stepmania-gcc43.patch,
+  +metadata.xml:
+  Replacing with a slightly modified version of the live ebuild from Gentoo
+  bug #148787. Still needs some work, but is worlds apart from the old
+  abomination.
 
   06 Mar 2009; Michał Ziąbkowski <mziab@o2.pl>
   files/stepmania-gcc43.patch:

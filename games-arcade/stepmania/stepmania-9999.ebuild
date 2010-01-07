@@ -2,90 +2,71 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-inherit eutils cvs games autotools eutils
+EAPI=2
+
+inherit games subversion autotools eutils
 
 DESCRIPTION="An advanced DDR simulator"
 HOMEPAGE="http://www.stepmania.com/stepmania/"
+SRC_URI=""
+
+ESVN_REPO_URI="https://svn.stepmania.com/svn/trunk/stepmania"
+
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS=""
-IUSE="debug gtk jpeg mp3 ffmpeg theora vorbis force-oss net png profiling"
+KEYWORDS="~amd64 ~x86"
+IUSE="debug X gtk force-oss jpeg mp3 vorbis network ffmpeg theora"
 
-ECVS_SERVER="stepmania.cvs.sourceforge.net:/cvsroot/stepmania"
-ECVS_MODULE="stepmania"
-ECVS_AUTH="pserver"
-ECVS_USER="anonymous"
-
-RESTRICT="test"
-
-DEPEND="gtk? ( >=x11-libs/gtk+-2.0 )
+DEPEND="gtk? ( x11-libs/gtk+:2 )
+	media-libs/alsa-lib
 	mp3? ( media-libs/libmad )
-	>=dev-lang/lua-5.0
-	media-libs/libsdl
-	jpeg? ( media-libs/jpeg )
-	png? ( media-libs/libpng )
-	sys-libs/zlib
-	ffmpeg? ( >=media-video/ffmpeg-0.4.9_p20061016 )
 	vorbis? ( media-libs/libvorbis )
+	media-libs/libpng
+	jpeg? ( media-libs/jpeg )
+	ffmpeg? ( >=media-video/ffmpeg-0.5 )
 	theora? ( media-libs/libtheora )
+	>=dev-lang/lua-5
+	virtual/glu
+	x11-libs/libXrandr
 	virtual/opengl"
 
 RDEPEND="${DEPEND}"
 
-S=${WORKDIR}/${ECVS_MODULE}
-
-src_unpack() {
-	cvs_src_unpack ${A}
-	cd "${S}"
-
-	AT_M4DIR="autoconf/m4" eautoreconf
-
-	epatch "${FILESDIR}/${PN}-gcc43.patch"
+src_prepare() {
+	epatch "${FILESDIR}/${P}-datadir.patch"
 }
 
-src_compile() {
-	econf \
-		--disable-dependency-tracking \
-		$(use_with debug) \
-		$(use_with jpeg) \
-		$(use_with vorbis) \
-		$(use_with mp3) \
-		$(use_with net networking) \
-		$(use_with theora) \
-		$(use_with ffmpeg) \
-		$(use_with png) \
-		$(use_with profiling) \
-		$(use_enable gtk gtk2) \
-		$(use_enable force-oss) \
-		|| die "Configure Failed"
+src_configure() {
+sh ./autogen.sh
 
-	emake || die "emake failed"
+	egamesconf \
+	--disable-dependency-tracking \
+	$(use_enable gtk gtk2) \
+	$(use_enable force-oss) \
+	$(use_with debug) \
+	$(use_with X x) \
+	$(use_with jpeg) \
+	$(use_with mp3) \
+	$(use_with vorbis) \
+	$(use_with network) \
+	$(use_with ffmpeg) \
+	$(use_with theora)
 }
 
 src_install() {
-	local dir=${GAMES_DATADIR}/${PN}
+	dogamesbin src/${PN} || die "dogamesbin stepmania failed"
 
-	dodir "${dir}"
-	exeinto "${dir}"
-	doexe src/stepmania || die "Install failed"
-	if use gtk; then
-		doexe src/GtkModule.so || die "Install failed"
+	insinto "${GAMES_DATADIR}"/${PN}
+	if use gtk ; then
+		doins src/GtkModule.so || die "doins GtkModule.so failed"
 	fi
-
-	cd "${WORKDIR}"/stepmania
-
-	insinto "${dir}"
-
-	doins -r Announcers BackgroundEffects BackgroundTransitions BGAnimations \
-		CDTitles Characters Courses Data Docs \
-		NoteSkins Packages RandomMovies Songs \
-		Themes || die "Install failed"
-
-	make_desktop_entry "${PN}" Stepmania
+	doins -r Announcers Assets BGAnimations BackgroundEffects \
+		BackgroundTransitions CDTitles Characters Courses Data \
+		NoteSkins Packages RandomMovies Songs Themes || die "doins failed"
+	dodoc Docs/* || die "dodoc failed"
 
 	newicon "Themes/default/Graphics/Common window icon.png" ${PN}.png
-
-	games_make_wrapper ${PN} "${dir}"/"${PN}" "${dir}"
+	make_desktop_entry ${PN} StepMania
 
 	prepgamesdirs
 }

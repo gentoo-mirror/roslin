@@ -1,0 +1,13 @@
+diff --git a/src/RageFileManager.cpp b/src/RageFileManager.cpp
+index 310c42b..1f6d291 100644
+--- a/src/RageFileManager.cpp
++++ b/src/RageFileManager.cpp
+@@ -244,7 +244,7 @@ static RString GetDirOfExecutable( RString argv0 )
+ static void ChangeToDirOfExecutable( const RString &argv0 )
+ {
+ 	RageFileManagerUtil::sInitialWorkingDirectory = GetCwd();
+-	RageFileManagerUtil::sDirOfExecutable = GetDirOfExecutable( argv0 );
++	RageFileManagerUtil::sDirOfExecutable = "/usr/share/games/stepmania";
+ 
+ 	/* Set the CWD.  Any effects of this is platform-specific; most files are read and
+ 	 * written through RageFile.  See also RageFileManager::RageFileManager. */

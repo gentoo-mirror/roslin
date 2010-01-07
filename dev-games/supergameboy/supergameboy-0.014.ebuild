@@ -34,5 +34,5 @@ src_compile() {
 }
 
 src_install() {
-	dolib libsupergameboy.* || die "install failed"
+	dolib libsupergameboy.so || die "install failed"
 }

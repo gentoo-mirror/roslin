@@ -3,6 +3,11 @@
 # $Header: $
 
   07 Jan 2010; Michał Ziąbkowski <mziab@o2.pl> stepmania-9999.ebuild,
+  +files/stepmania-9999-ffmpeg.patch:
+  Added patch to fix video playback with new versions of ffmpeg. Taken from
+  http://www.stepmania.com/forums/showthread.php?t=21434
+
+  07 Jan 2010; Michał Ziąbkowski <mziab@o2.pl> stepmania-9999.ebuild,
   +files/stepmania-9999-datadir.patch, -files/stepmania-gcc43.patch,
   +metadata.xml:
   Replacing with a slightly modified version of the live ebuild from Gentoo

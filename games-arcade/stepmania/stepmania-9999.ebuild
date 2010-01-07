@@ -33,7 +33,8 @@ DEPEND="gtk? ( x11-libs/gtk+:2 )
 RDEPEND="${DEPEND}"
 
 src_prepare() {
-	epatch "${FILESDIR}/${P}-datadir.patch"
+	epatch "${FILESDIR}/${P}-datadir.patch" \
+	"${FILESDIR}/${P}-ffmpeg.patch"
 }
 
 src_configure() {

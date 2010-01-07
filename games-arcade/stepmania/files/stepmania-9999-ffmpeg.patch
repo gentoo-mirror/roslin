@@ -1,0 +1,303 @@
+Index: autoconf/m4/video.m4
+===================================================================
+--- autoconf/m4/video.m4 (revision 28234)
++++ autoconf/m4/video.m4 (working copy)
+@@ -18,51 +18,18 @@
+ 		AC_CHECK_FUNC([avcodec_init], have_libavcodec=yes, have_libavcodec=no)
+ 		LIBS="$with_ffmpeg/lib/libavformat.a $LIBS"
+ 		AC_CHECK_FUNC([guess_format], have_libavformat=yes, have_libavformat=no)
++		LIBS="$with_ffmpeg/lib/libswscale.a $LIBS"
++		AC_CHECK_FUNC([sws_scale], have_libswscale=yes, have_libswscale=no)
+ 	else
+ 		AC_SEARCH_LIBS(av_free, [avutil], have_libavutil=yes,  have_libavutil=no)
+ 		AC_SEARCH_LIBS(avcodec_init, [avcodec], have_libavcodec=yes,  have_libavcodec=no)
+ 		AC_SEARCH_LIBS(guess_format, [avformat], have_libavformat=yes,  have_libavformat=no)
++		AC_SEARCH_LIBS(sws_scale, [swscale], have_libswscale=yes,  have_libswscale=no)
+ 	fi
+-
+-if test "$have_libavcodec" = "yes"; then
+-  AC_MSG_CHECKING([for matching libavcodec headers and libs])
+-  AC_RUN_IFELSE([AC_LANG_SOURCE([[
+-	#include <ffmpeg/avcodec.h>
+-	int main()
+-	{
+-		return ( LIBAVCODEC_VERSION_INT == avcodec_version() &&
+-			 LIBAVCODEC_BUILD == avcodec_build() ) ? 0:1;
+-	}
+-	]])],[],[have_libavcodec=no],[])
+-  AC_MSG_RESULT($have_libavcodec)
+-  if test "$have_libavcodec" = "yes"; then
+-    AC_MSG_CHECKING([libavcodec revision])
+-    AC_RUN_IFELSE([AC_LANG_SOURCE([[
+-	#include <ffmpeg/avcodec.h>
+-	int main()
+-	{
+-		return ( LIBAVCODEC_VERSION_INT == 0x332800 ) ? 0:1;
+-	}
+-	]])],[],[have_libavcodec=no],[])
+-    AC_MSG_RESULT($have_libavcodec)
+-  fi
+-fi
+-
+-if test "$have_libavformat" = "yes"; then
+-  AC_MSG_CHECKING([libavformat revision])
+-  AC_RUN_IFELSE([AC_LANG_SOURCE([[
+-	#include <ffmpeg/avformat.h>
+-	int main()
+-	{
+-		return ( LIBAVFORMAT_VERSION_INT == 0x330B00 )? 0:1;
+-	}
+-	]])],[],[have_libavformat=no],[])
+-  AC_MSG_RESULT($have_libavformat)
+-fi
+ fi
+ 
+ have_ffmpeg=no
+-if test "$have_libavutil" = "yes" -a "$have_libavformat" = "yes" -a "$have_libavcodec" = "yes"; then
++if test "$have_libavutil" = "yes" -a "$have_libavformat" = "yes" -a "$have_libavcodec" = "yes" -a "$have_libswscale" = "yes"; then
+ 	have_ffmpeg=yes
+ 	AC_DEFINE(HAVE_FFMPEG, 1, [FFMPEG support available])
+ else
+Index: src/arch/ArchHooks/ArchHooks_Unix.cpp
+===================================================================
+--- src/arch/ArchHooks/ArchHooks_Unix.cpp (revision 28234)
++++ src/arch/ArchHooks/ArchHooks_Unix.cpp (working copy)
+@@ -18,7 +18,9 @@
+ #endif
+ 
+ #if defined(HAVE_FFMPEG)
+-#include <ffmpeg/avcodec.h>
++extern "C" {
++#include <libavcodec/avcodec.h>
++};
+ #endif
+ 
+ static bool IsFatalSignal( int signal )
+@@ -217,7 +219,7 @@
+ 	LOG->Info( "Runtime library: %s", LibcVersion().c_str() );
+ 	LOG->Info( "Threads library: %s", ThreadsVersion().c_str() );
+ #if defined(HAVE_FFMPEG)
+-	LOG->Info( "libavcodec: %#x (%u)", avcodec_version(), avcodec_build() );
++	LOG->Info( "libavcodec: %#x (%u)", avcodec_version(), avcodec_version() );
+ #endif
+ }
+ 
+Index: src/arch/MovieTexture/MovieTexture_FFMpeg.cpp
+===================================================================
+--- src/arch/MovieTexture/MovieTexture_FFMpeg.cpp (revision 28234)
++++ src/arch/MovieTexture/MovieTexture_FFMpeg.cpp (working copy)
+@@ -11,7 +11,10 @@
+ 
+ namespace avcodec
+ {
+-#include <ffmpeg/avformat.h>
++	extern "C" {
++#include <libavformat/avformat.h>
++#include <libswscale/swscale.h>
++	};
+ };
+ 
+ #if defined(_MSC_VER) && !defined(XBOX)
+@@ -35,6 +38,8 @@
+ 	#pragma comment(lib, "ffmpeg/lib/libgcc.a")
+ #endif
+ 
++static const int sws_flags = SWS_BICUBIC; // XXX: Reasonable default?
++
+ static struct AVPixelFormat_t
+ {
+ 	int bpp;
+@@ -270,6 +275,7 @@
+ 	avcodec::AVStream *m_pStream;
+ 	avcodec::AVFrame m_Frame;
+ 	avcodec::PixelFormat m_AVTexfmt; /* PixelFormat of output surface */
++	avcodec::SwsContext *m_swsctx;
+ 
+ 	float m_fPTS;
+ 	avcodec::AVFormatContext *m_fctx;
+@@ -311,6 +317,11 @@
+ 		avcodec::av_free_packet( &m_Packet );
+ 		m_iCurrentPacketOffset = -1;
+ 	}
++	if (m_swsctx)
++	{
++		avcodec::sws_freeContext(m_swsctx);
++		m_swsctx = NULL;
++	}
+ }
+ 
+ void MovieDecoder_FFMpeg::Init()
+@@ -322,6 +333,7 @@
+ 	m_fPTS = -1;
+ 	m_iFrameNumber = -1; /* decode one frame and you're on the 0th */
+ 	m_fTimestampOffset = 0;
++	m_swsctx = NULL;
+ 
+ 	if( m_iCurrentPacketOffset != -1 )
+ 	{
+@@ -513,9 +525,24 @@
+ 	pict.data[0] = (unsigned char *) pSurface->pixels;
+ 	pict.linesize[0] = pSurface->pitch;
+ 
+-	avcodec::img_convert( &pict, m_AVTexfmt,
+-			(avcodec::AVPicture *) &m_Frame, m_pStream->codec->pix_fmt, 
+-			m_pStream->codec->width, m_pStream->codec->height );
++	// XXX: Do this in one of the Open() methods instead?
++	// XXX: The problem of doing this in Open() is that m_AVTexfmt is not already initialized with its correct value.
++	if( m_swsctx == NULL )
++	{
++		m_swsctx = avcodec::sws_getCachedContext( m_swsctx,
++				GetWidth(), GetHeight(), m_pStream->codec->pix_fmt,
++				GetWidth(), GetHeight(), m_AVTexfmt,
++				sws_flags, NULL, NULL, NULL );
++		if( m_swsctx == NULL )
++		{
++			LOG->Warn("Cannot initialize sws conversion context for (%d,%d) %d->%d", GetWidth(), GetHeight(), m_pStream->codec->pix_fmt, m_AVTexfmt);
++			return;
++		}
++	}
++
++	avcodec::sws_scale( m_swsctx,
++			m_Frame.data, m_Frame.linesize, 0, GetHeight(),
++			pict.data, pict.linesize );
+ }
+ 
+ static avcodec::AVStream *FindVideoStream( avcodec::AVFormatContext *m_fctx )
+@@ -596,11 +623,11 @@
+ 	return f->Write( buf, size );
+ }
+ 
+-avcodec::offset_t URLRageFile_seek( avcodec::URLContext *h, avcodec::offset_t pos, int whence )
++int64_t URLRageFile_seek( avcodec::URLContext *h, int64_t pos, int whence )
+ {
+ 	RageFile *f = (RageFile *) h->priv_data;
+ 	if( whence == AVSEEK_SIZE )
+-		return f->Tell();
++		return f->GetFileSize();
+ 
+ 	if( whence != SEEK_SET && whence != SEEK_CUR && whence != SEEK_END )
+ 		return -1;
+@@ -623,6 +650,8 @@
+ 	URLRageFile_write,
+ 	URLRageFile_seek,
+ 	URLRageFile_close,
++	NULL,
++	NULL,
+ 	NULL
+ };
+ 
+Index: src/arch/MovieTexture/MovieTexture_Theora.cpp
+===================================================================
+--- src/arch/MovieTexture/MovieTexture_Theora.cpp (revision 28234)
++++ src/arch/MovieTexture/MovieTexture_Theora.cpp (working copy)
+@@ -9,7 +9,10 @@
+ 
+ namespace avcodec
+ {
+-#include <ffmpeg/avcodec.h> /* for avcodec::img_convert */
++	extern "C" {
++#include <libavcodec/avcodec.h> /* for avcodec::img_convert */
++#include <libswscale/swscale.h>
++	};
+ };
+ 
+ // #define HAVE_THEORAEXP
+@@ -22,6 +25,8 @@
+ #pragma comment(lib, OGG_LIB_DIR "theora_static.lib")
+ #endif
+ 
++static const int sws_flags = SWS_BICUBIC; // XXX: Reasonable default?
++
+ class MovieDecoder_Theora: public MovieDecoder
+ {
+ public:
+@@ -47,7 +52,8 @@
+ 	void Init();
+ 	RString ProcessHeaders();
+ 	int ReadPage( ogg_page *pOggPage, RString &sError, bool bInitializing );
+-	void ConvertToSurface( RageSurface *pSurface ) const;
++	void ConvertToSurface( RageSurface *pSurface );
++	void ConvertImage( avcodec::AVPicture &in, avcodec::AVPicture &out, int height );
+ 
+ 	RageFile m_File;
+ 
+@@ -61,6 +67,7 @@
+ 
+ 	avcodec::PixelFormat m_InputPixFmt; /* PixelFormat of YUV input surface */
+ 	avcodec::PixelFormat m_OutputPixFmt; /* PixelFormat of RGB output surface */
++	avcodec::SwsContext *m_swsctx;
+ };
+ 
+ MovieDecoder_Theora::MovieDecoder_Theora()
+@@ -71,11 +78,17 @@
+ 	memset( &m_TheoraComment, 0, sizeof(m_TheoraComment) );
+ 	memset( &m_OggStream, 0, sizeof(m_OggStream) );
+ 	memset( &m_TheoraState, 0, sizeof(m_TheoraState) );
++	m_swsctx = NULL;
+ }
+ 
+ MovieDecoder_Theora::~MovieDecoder_Theora()
+ {
+ 	Close();
++	if (m_swsctx)
++	{
++		avcodec::sws_freeContext(m_swsctx);
++		m_swsctx = NULL;
++	}
+ }
+ 
+ void MovieDecoder_Theora::Init()
+@@ -276,7 +289,30 @@
+ 	return RageMovieTextureDriver_FFMpeg::AVCodecCreateCompatibleSurface( iTextureWidth, iTextureHeight, bPreferHighColor, *ConvertValue<int>(&m_OutputPixFmt), fmtout );
+ }
+ 
+-void MovieDecoder_Theora::ConvertToSurface( RageSurface *pSurface ) const
++void MovieDecoder_Theora::ConvertImage( avcodec::AVPicture &in, avcodec::AVPicture &out, int height )
++{
++	// XXX: Do we need separate contexts for different heights?
++	// XXX: Do this in one of the Open() methods instead?
++	// XXX: The problem of doing this in Open() is that m_OutputPixFmt is not already initialized with its correct value.
++	if( m_swsctx == NULL )
++	{
++		m_swsctx = avcodec::sws_getCachedContext( m_swsctx,
++				GetWidth(), GetHeight(), m_InputPixFmt,
++				GetWidth(), GetHeight(), m_OutputPixFmt,
++				sws_flags, NULL, NULL, NULL );
++		if( m_swsctx == NULL )
++		{
++			LOG->Warn("Cannot initialize sws conversion context for (%d,%d) %d->%d", GetWidth(), GetHeight(), m_InputPixFmt, m_OutputPixFmt);
++			return;
++		}
++	}
++
++	avcodec::sws_scale( m_swsctx,
++			in.data, in.linesize, 0, height,
++			out.data, out.linesize );
++}
++
++void MovieDecoder_Theora::ConvertToSurface( RageSurface *pSurface )
+ {
+ 	yuv_buffer yuv;
+ 	theora_decode_YUVout( (theora_state *) &m_TheoraState, &yuv );
+@@ -303,9 +339,7 @@
+ 	RGBOut.data[0] = (unsigned char *) pSurface->pixels;
+ 	RGBOut.linesize[0] = pSurface->pitch;
+ 
+-	avcodec::img_convert( &RGBOut, m_OutputPixFmt,
+-			&YUVIn, m_InputPixFmt,
+-			m_TheoraInfo.frame_width, m_TheoraInfo.frame_height );
++	ConvertImage( YUVIn, RGBOut, m_TheoraInfo.frame_height );
+ }
+ 
+ float MovieDecoder_Theora::GetSourceAspectRatio() const
+@@ -655,9 +689,7 @@
+ 		RGBOut.data[0] += RGBOut.linesize[0] * yfrag0;
+ 
+ 		int iRows = (yfrag_end-yfrag0) + 1;
+-		avcodec::img_convert( &RGBOut, m_OutputPixFmt,
+-				&YUVIn, m_InputPixFmt,
+-				m_TheoraInfo.frame_width, iRows );
++		ConvertImage( YUVIn, RGBOut, iRows );
+ 	}
+ 
+ 	{

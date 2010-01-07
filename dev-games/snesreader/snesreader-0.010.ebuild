@@ -34,5 +34,5 @@ src_compile() {
 }
 
 src_install() {
-	dolib libsnesreader.* || die "install failed"
+	dolib libsnesreader.so || die "install failed"
 }

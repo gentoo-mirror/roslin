@@ -2,6 +2,12 @@
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*onscripter-en-20100107 (09 Jan 2010)
+
+  09 Jan 2010; Michał Ziąbkowski <mziab@o2.pl>
+  +onscripter-en-20100107.ebuild:
+  Bumped.
+
   07 Jan 2010; Michał Ziąbkowski <mziab@o2.pl>
   -onscripter-en-20080823.ebuild:
   Removed cruft.

@@ -13,6 +13,7 @@
 		<flag name='wiimote'>Enables wiimote support with
 			<pkg>games-util/wiiuse</pkg>
 		</flag>
+		<flag name='leveleditor'>Enables level editor</flag>
 	</use>
 </pkgmetadata>
 

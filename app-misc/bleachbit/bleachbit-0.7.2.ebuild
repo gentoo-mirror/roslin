@@ -13,9 +13,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="nls"
 
-DEPEND="dev-python/pygtk"
-RDEPEND="${DEPEND}"
-
+RDEPEND="dev-python/pygtk"
+DEPEND="sys-devel/gettext
+	${RDEPEND}"
 
 src_compile() {
 	distutils_src_compile

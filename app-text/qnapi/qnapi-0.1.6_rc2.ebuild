@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND="app-arch/p7zip
@@ -22,7 +22,7 @@ RDEPEND="app-arch/p7zip
 	    x11-libs/qt-gui:4 )"
 DEPEND="${RDEPEND}"
 
-S="${WORKDIR}/${MY_P}"
+S=${WORKDIR}/${MY_P}
 
 src_compile() {
 	eqmake4 || die "eqmake4 failed"

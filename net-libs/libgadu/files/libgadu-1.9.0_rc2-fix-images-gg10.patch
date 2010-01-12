@@ -1,16 +1,14 @@
-From 23345ac2fce4d170ce621f186f2e0665e719f116 Mon Sep 17 00:00:00 2001
+From 563b00f1ac39721bc8192369afddd8b92eeee1fe Mon Sep 17 00:00:00 2001
 From: Bartlomiej Zimon <uzi18@o2.pl>
-Date: Mon, 11 Jan 2010 20:41:49 +0100
-Subject: [PATCH] - gg10 image send and recv (different tag for image)
-   this clever hack add support for both tags by sending new after old one
+Date: Tue, 12 Jan 2010 19:26:37 +0100
+Subject: [PATCH] - gg8,9,10 uses name attribute for image
 
-Signed-off-by: Bartlomiej Zimon <uzi18@o2.pl>
 ---
- branches/1.9/src/libgadu.c |   13 +++++++++++--
- 1 files changed, 11 insertions(+), 2 deletions(-)
+ branches/1.9/src/libgadu.c |    4 ++--
+ 1 files changed, 2 insertions(+), 2 deletions(-)
 
 diff --git a/branches/1.9/src/libgadu.c b/branches/1.9/src/libgadu.c
-index ac8cd43..1231e6f 100644
+index ac8cd43..ad3c3c3 100644
 --- a/branches/1.9/src/libgadu.c
 +++ b/branches/1.9/src/libgadu.c
 @@ -1309,8 +1309,8 @@ static int gg_convert_to_html(char *dst, const char *utf_msg, const unsigned cha
@@ -19,27 +17,11 @@ index ac8cd43..1231e6f 100644
  	const int span_len = 75;
 -	const char img_fmt[] = "<img src=\"%02x%02x%02x%02x%02x%02x%02x%02x\">";
 -	const int img_len = 28;
-+	const char img_fmt[] = "<img src=\"%02x%02x%02x%02x%02x%02x%02x%02x\"><img name=\"%02x%02x%02x%02x%02x%02x%02x%02x\">";
-+	const int img_len = 28 + 29;
++	const char img_fmt[] = "<img name=\"%02x%02x%02x%02x%02x%02x%02x%02x\">";
++	const int img_len = 29;
  	int char_pos = 0;
  	int format_idx = 3;
  	unsigned char old_attr = 0;
-@@ -1383,6 +1383,15 @@ static int gg_convert_to_html(char *dst, const char *utf_msg, const unsigned cha
- 						format[format_idx + 5],
- 						format[format_idx + 4],
- 						format[format_idx + 3],
-+						format[format_idx + 2],
-+						  
-+						format[format_idx + 9],
-+						format[format_idx + 8], 
-+						format[format_idx + 7],
-+						format[format_idx + 6], 
-+						format[format_idx + 5],
-+						format[format_idx + 4],
-+						format[format_idx + 3],
- 						format[format_idx + 2]);
- 				}
- 
 -- 
 1.6.1
 

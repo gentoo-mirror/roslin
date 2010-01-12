@@ -6,7 +6,7 @@ EAPI=2
 
 inherit games
 
-DESCRIPTION="An accuracy focused emulator for Sega Genesis/MegaDrive, Sega Master System, Sega Game Gear, Sega SC-3000 and Sega SG-1000"
+DESCRIPTION="An accuracy-focused Sega Genesis/MegaDrive/Master System/Game Gear/SC-3000/SG-1000 emulator"
 HOMEPAGE="http://aamirm.hacking-cult.org/index_files/regen.htm"
 SRC_URI="http://aamirm.hacking-cult.org/regen/${P}.tar.bz2"
 

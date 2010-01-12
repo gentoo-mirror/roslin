@@ -2,9 +2,11 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-RESTRICT="mirror strip"
+EAPI=2
 
-inherit kde
+inherit eutils
+
+RESTRICT="mirror strip"
 
 DESCRIPTION="Kydpdict is a graphical frontend to Collins', PWN Oxford & SAP dictionaries."
 SRC_URI="http://members.elysium.pl/ytm/src/${P}.tar.bz2"
@@ -15,20 +17,21 @@ LICENSE="GPL-2"
 
 IUSE=""
 
-need-qt 3
+DEPEND="x11-libs/qt:3"
+RDEPEND="${DEPEND}"
 
-src_compile(){
-	myconf="$myconf --prefix=/usr --with-x --datadir=/usr/share"
-	kde_src_compile configure make
+src_prepare() {
+	epatch "${FILESDIR}/${P}-makefile.patch"
 }
 
-src_install(){
-	kde_src_install
+src_install() {
+	emake DESTDIR="${D}" install || die "install failed"
+	dodoc AUTHORS ChangeLog README TODO
 
 	make_desktop_entry ${PN} ${PN} accessories-dictionary "Dictionary;Application;Utility"
 }
 
-pkg_postinst(){
+pkg_postinst() {
 	einfo "This is only a front-end to dictionaries."
 	einfo "You need to have windows version installed. In fact you need only four files: "
 	einfo "dict100.dat, dict101.dat, dict100.idx, dict101.idx"

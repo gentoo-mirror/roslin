@@ -1,0 +1,11 @@
+diff --git a/Makefile b/Makefile
+index 10bd5ca..a0d2656 100644
+--- a/Makefile
++++ b/Makefile
+@@ -20,5 +20,5 @@ distclean:
+ install: all
+ 	mkdir -p $(DESTDIR)$(bindir)
+ 	mkdir -p $(DESTDIR)$(datadir)/doc/$(PACKAGE_NAME)-$(PACKAGE_VERSION)
+-	install -m 644 AUTHORS COPYING ChangeLog INSTALL README TODO $(DESTDIR)$(datadir)/doc/$(PACKAGE_NAME)-$(PACKAGE_VERSION)
++	install -m 644 $(DESTDIR)$(datadir)/doc/$(PACKAGE_NAME)-$(PACKAGE_VERSION)
+ 	$(MAKE) -C src install

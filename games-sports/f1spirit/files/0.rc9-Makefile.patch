@@ -1,23 +1,22 @@
---- build/linux/Makefile.old	2009-03-07 23:05:09.000000000 +0100
-+++ build/linux/Makefile	2009-03-08 17:19:00.000000000 +0100
-@@ -1,15 +1,16 @@
- EXE = f1spirit
- SRC = sources
--PREFIX = /usr
-+PREFIX = $(DESTDIR)/usr
+--- build/linux/Makefile.old	2010-01-07 14:53:44.000000000 +0200
++++ build/linux/Makefile	2010-01-07 14:26:05.000000000 +0200
+@@ -3,13 +3,14 @@
+ PREFIX = /usr
  EXTRADIR = ./build/linux
  
 -GAMEDIR = $(PREFIX)/games
-+GAMEDIR = $(PREFIX)/games/bin
++GAMEDIR = $(DESTDIR)/$(PREFIX)/games/bin
  STARTUP = $(GAMEDIR)/$(EXE)
 -BINDIR = $(PREFIX)/share/games/$(EXE)
-+BINDIR = $(PREFIX)/games/bin
- ICNDIR = $(PREFIX)/share/pixmaps
- APPDIR = $(PREFIX)/share/applications
-+DATADIR = $(PREFIX)/share/games/$(EXE)
+-ICNDIR = $(PREFIX)/share/pixmaps
+-APPDIR = $(PREFIX)/share/applications
++BINDIR = $(DESTDIR)/$(PREFIX)/share/games/$(EXE)
++ICNDIR = $(DESTDIR)/$(PREFIX)/share/pixmaps
++APPDIR = $(DESTDIR)/$(PREFIX)/share/applications
++DATADIR = $(DESTDIR)/$(PREFIX)/share/games/$(EXE)
  
--DATA = demos graphics tracks sound readme.txt f1spirit2.cfg
-+DATA = demos graphics tracks sound f1spirit2.cfg
+-DATA = demos graphics tracks sound readme.txt
++DATA = demos graphics tracks sound
  ICON = f1spirit.png
  DESKTOP = f1spirit.desktop
  
@@ -25,11 +24,11 @@
  
  CC = gcc
  #CFLAGS = -g3 -O3 -Wall `sdl-config --cflags` `curl-config --cflags` -I/usr/X11R6/include
--CFLAGS = -g3 -O3 `sdl-config --cflags` `curl-config --cflags` -I/usr/X11R6/include
+-CFLAGS = -g3 -O3 -Wno-write-strings `sdl-config --cflags` `curl-config --cflags` -I/usr/X11R6/include
 -LDFLAGS = `sdl-config --libs` `curl-config --libs` -L/usr/X11R6/lib/ -lSDL_image -lSDL_mixer -lSDL_net -lGL -lGLU
 +CFLAGS += `sdl-config --cflags` `curl-config --cflags` -I/usr/X11R6/include
-+LIBS = `sdl-config --libs` `curl-config --libs` -lSDL_image -lSDL_mixer -lSDL_net -lGL -lGLU
 +LDFLAGS += -L/usr/X11R6/lib/
++LIBS = `sdl-config --libs` `curl-config --libs` -lSDL_image -lSDL_mixer -lSDL_net -lGL -lGLU
  RM = rm -f
  CP = cp -r
  MD = mkdir -p
@@ -49,7 +48,7 @@
  	@$(STRIP) $@
  	@$(ECHO) " o If there are no errors, the game compiled succesfully"
  
-@@ -64,19 +66,14 @@
+@@ -64,21 +66,14 @@
  	@$(RM) $(SRC)/*.o $(SRC)/*.bak core $(EXE)
  
  install: all
@@ -59,7 +58,9 @@
 -	@$(CP) "$(EXE)" $(DATA) "$(BINDIR)"
 -	@$(ECHO) " o Creating startup script $(STARTUP)"
 -	@$(MD) "$(GAMEDIR)"
--	@$(ECHO) "cd \"$(BINDIR)\"; ./$(EXE); cd -" >"$(STARTUP)"
+-	@$(ECHO) "#!/bin/sh" >"$(STARTUP)"
+-	@$(ECHO) "cd \"/usr/share/games/f1spirit/\"; ./$(EXE); cd -" >>"$(STARTUP)"
+-#	@$(ECHO) "cd \"$(BINDIR)\"; ./$(EXE); cd -" >>"$(STARTUP)"
 -	@$(CHMOD) 755 "$(STARTUP)"
 -	@$(ECHO) " o Creating application menu entry"
 +	@$(ECHO) " o Creating install directories"

@@ -9,7 +9,7 @@ inherit eutils games
 
 DESCRIPTION="Konami's MSX1 classic F1-Spirit remake"
 HOMEPAGE="http://www.braingames.getput.com/f1spirit/default.asp"
-SRC_URI="http://braingames.jorito.net/${PN}/${PN}.src_${MY_PV}-1412.tgz"
+SRC_URI="http://braingames.jorito.net/${PN}/${PN}.src_${MY_PV}-1615.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -23,7 +23,7 @@ RDEPEND="media-libs/libsdl[joystick,opengl]
 	net-misc/curl"
 DEPEND="${RDEPEND}"
 
-S=${WORKDIR}/${P/_/.}
+S=${WORKDIR}/${P/_/.}.1615
 
 src_prepare() {
 	epatch "${FILESDIR}/${MY_PV}-Makefile.patch"

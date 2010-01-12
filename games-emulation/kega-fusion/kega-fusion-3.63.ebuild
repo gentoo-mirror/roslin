@@ -6,7 +6,7 @@ EAPI=2
 
 inherit games
 
-DESCRIPTION="A Sega SG1000, SC3000, Master System, Game Gear, Genesis/Megadrive, SVP, Pico, SegaCD/MegaCD and 32X emulator"
+DESCRIPTION="Sega SG1000/SC3000/Master System/Game Gear/Genesis/Megadrive/SVP/Pico/SegaCD/MegaCD/32X emulator"
 HOMEPAGE="http://www.eidolons-inn.net/tiki-index.php?page=Kega"
 SRC_URI="http://www.eidolons-inn.net/tiki-download_file.php?fileId=572 -> ${P}.tar.gz"
 

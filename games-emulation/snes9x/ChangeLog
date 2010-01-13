@@ -1,0 +1,12 @@
+# ChangeLog for games-emulation/snes9x
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*snes9x-1.52 (13 Jan 2010)
+
+  13 Jan 2010; Michał Ziąbkowski <mziab@o2.pl> +snes9x-1.52.ebuild,
+  +metadata.xml:
+  Initial ebuild for the cli port, without the old cruft present in the
+  portage ebuild. The gtk port will probably stay a separate package, since
+  integrating both ports isn't worth the increased ebuild complexity.
+

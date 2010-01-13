@@ -2,6 +2,9 @@
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  13 Jan 2010; Michał Ziąbkowski <mziab@o2.pl> snes9x-gtk-1.51_p78.ebuild:
+  Fixed license in the old ebuild.
+
 *snes9x-gtk-1.52 (13 Jan 2010)
 
   13 Jan 2010; Michał Ziąbkowski <mziab@o2.pl> +snes9x-gtk-1.52.ebuild:

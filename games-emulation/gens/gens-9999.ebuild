@@ -15,26 +15,24 @@ ECVS_MODULE="Gens-MultiPlatform"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS=""
 IUSE="opengl"
 
 RDEPEND=">=media-libs/libsdl-1.2[opengl?]
 	>=x11-libs/gtk+-2.4.0
 	opengl? ( virtual/opengl )"
 DEPEND="${RDEPEND}
-	>=dev-lang/nasm-0.98"
+	>=dev-lang/nasm-0.98
+	!games-emulation/gens-gs"
 
 S="${WORKDIR}/Gens-MultiPlatform/linux"
 
-src_unpack() {
-	cvs_src_unpack
-	cd "${S}"
+src_prepare() {
 	eautoreconf
 }
 
-src_compile() {
+src_configure() {
 	egamesconf $(use_with opengl) || die "econf failed!"
-	emake || die "emake failed!"
 }
 
 src_install() {

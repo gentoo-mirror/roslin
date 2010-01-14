@@ -16,8 +16,6 @@ fi
 K_PV="${K_PV/_p/-}"
 K_PV="${K_PV/_/-}"
 
-DEPEND=">=dev-util/cmake-2.6.0"
-
 RDEPEND=">=net-im/kadu-core-${MIN_VER}
 	${MOD_DEPEND}"
 
@@ -37,7 +35,8 @@ kadu-mod_src_unpack()
 	echo module_${NAME}=m >> "${S}/.config"
 	
 	# Remove other subdirectories
-	sed -e "/add_subdirectory/d" -i "${S}/CMakeLists.txt"
+	sed -e "/add_subdirectory/d" -i "${S}/CMakeLists.txt" \
+	    || die "sed failed"
 	echo "add_subdirectory (modules)" >>"${S}/CMakeLists.txt"
 	
 	# If external module, move its sources to kadu/modules

@@ -38,7 +38,7 @@ kadu-base_src_configure()
 	append-cppflags -DQT_NO_DEBUG
 
 	local mycmakeargs="${mycmakeargs} \
-		-DBUILD_DESCRIPTION:STRING=Gentoo \
+		-DBUILD_DESCRIPTION:STRING='Gentoo Linux' \
 		-DENABLE_AUTDOWNLOAD:BOOL=NO"
 
 	cmake-utils_src_configure

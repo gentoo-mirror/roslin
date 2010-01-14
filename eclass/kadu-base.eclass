@@ -22,36 +22,10 @@ S="${WORKDIR}/kadu"
 
 kadu-disable_all()
 {
-	# Purge .config
-	rm -f .config
-	
-	# Disable all modules
-	cd ${S}/modules
-	local modules=`./get-all.sh ON | sed -e "s/;/ /g"`
-	for i in ${modules}; do
-	    echo module_$i=n >>${S}/.config
-	done
-
-	# Disable all emoticons
-	cd ${S}/varia/themes/emoticons
-	local emoticons=`./get-all.sh ON | sed -e "s/;/ /g"`
-	for i in ${emoticons}; do
-	    echo emoticons_$i=n >>${S}/.config
-	done
-
-	# Disable all icons
-	cd ${S}/varia/themes/icons
-	local icons=`./get-all.sh ON | sed -e "s/;/ /g"`
-	for i in ${icons}; do
-	    echo icons_$i=n >>${S}/.config
-	done
-	
-	# Disable all sounds
-	cd ${S}/varia/themes/sounds
-	local sounds=`./get-all.sh ON | sed -e "s/;/ /g"`
-	for i in ${sounds}; do
-	    echo sound_$i=n >>${S}/.config
-	done
+	# Disable all modules, emoticons, icons and sounds
+	# so we have a clean state
+	sed -e "s:^\(.*\)=[my]$:\1=n:g" \
+	    -i .config || die "sed failed"
 }
 
 kadu-base_src_configure()
@@ -88,7 +62,8 @@ kadu-base_src_install()
 	cmake-utils_src_install
 
 	# if not core, delete docs
-	[ "${NAME}" != "core" ] && rm -f ${D}/usr/share/kadu/{AUTHORS,COPYING,ChangeLog,HISTORY,README,THANKS}
+	[ "${NAME}" != "core" ] && rm -f \
+	${D}/usr/share/kadu/{AUTHORS,COPYING,ChangeLog,HISTORY,README,THANKS}
 }
 
 case ${EAPI} in

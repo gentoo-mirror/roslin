@@ -85,13 +85,10 @@ kadu-base_src_compile()
 
 kadu-base_src_install()
 {
-		cmake-utils_src_install
+	cmake-utils_src_install
 
-		# if not core, delete docs files
-		if [ "${NAME}" != "core" ]
-		then
-			rm -f ${D}/usr/share/kadu/{AUTHORS,COPYING,ChangeLog,HISTORY,README,THANKS}
-		fi
+	# if not core, delete docs
+	[ "${NAME}" != "core" ] && rm -f ${D}/usr/share/kadu/{AUTHORS,COPYING,ChangeLog,HISTORY,README,THANKS}
 }
 
 case ${EAPI} in
@@ -102,5 +99,3 @@ case ${EAPI} in
 	EXPORT_FUNCTIONS src_compile src_install
 	;;
 esac
-
-

@@ -41,7 +41,8 @@ kadu-mod_src_unpack()
 	echo "add_subdirectory (modules)" >>"${S}/CMakeLists.txt"
 	
 	# If external module, move its sources to kadu/modules
-	[ "${MOD_TYPE}" = "ext" ] && mv -f "${WORKDIR}/${NAME}" "${WORKDIR}/kadu/modules"
+	[ "${MOD_TYPE}" = "ext" ] && mv -f \
+	    "${WORKDIR}/${NAME}" "${WORKDIR}/kadu/modules"
 
 	# Apply patches, if any
 	if [ ! -z "${MOD_PATCHES}" ]

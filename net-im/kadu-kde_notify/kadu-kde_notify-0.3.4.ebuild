@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-MIN_VER="0.6.5.4_rc1"
+MIN_VER="0.6.5.4_rc2"
 
 inherit kadu-base
 

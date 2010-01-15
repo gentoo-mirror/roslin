@@ -1,0 +1,10 @@
+# ChangeLog for games-strategy/warzone2100
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*warzone2100-2.3_beta7 (15 Jan 2010)
+
+  15 Jan 2010; Michał Ziąbkowski <mziab@o2.pl>
+  +warzone2100-2.3_beta7.ebuild, +metadata.xml:
+  New ebuild courtesy of shade <shade.poczta@gmail.com>. Thanks.
+

@@ -3,6 +3,10 @@
 # $Header: $
 
   16 Jan 2010; Michał Ziąbkowski <mziab@o2.pl>
+  -kadu-kde_notify-0.3.3.ebuild:
+  Removed Kadu 0.6.5.4_rc1.
+
+  16 Jan 2010; Michał Ziąbkowski <mziab@o2.pl>
   -kadu-kde_notify-0.3.3-r1.ebuild:
   Removing kde_notify-0.3.3-r1.
 

@@ -3,6 +3,7 @@
 # $Header: $
 
 MIN_VER="0.6.5.4_rc3"
+MOD_PATCHES="${PN}-linking.patch"
 
 inherit kadu-base kadu-mod
 

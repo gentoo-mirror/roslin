@@ -6,7 +6,8 @@ MIN_VER="0.6.5.4_rc3"
 
 inherit kadu-base
 
-MOD_DEPEND="app-text/aspell"
+MOD_DEPEND="|| ( app-text/enchant
+    app-text/aspell )"
 
 inherit kadu-mod
 

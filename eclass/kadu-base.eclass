@@ -9,6 +9,7 @@ inherit eutils flag-o-matic cmake-utils
 
 LICENSE="GPL-2"
 SLOT="0"
+RESTRICT="primaryuri"
 
 # If no version was requested, default to this one
 MIN_VER="${MIN_VER:-0.6.5.3}"

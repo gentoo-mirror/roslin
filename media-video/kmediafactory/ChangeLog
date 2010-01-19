@@ -2,6 +2,10 @@
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  19 Jan 2010; Michał Ziąbkowski <mziab@o2.pl> kmediafactory-0.7.2.ebuild,
+  kmediafactory-0.7.5.ebuild:
+  Switched virtual/ghostscript dep to app-text/ghostscript-gpl.
+
   02 Jan 2010; Michał Ziąbkowski <mziab@o2.pl> ChangeLog:
   Added metadata.xml.
 

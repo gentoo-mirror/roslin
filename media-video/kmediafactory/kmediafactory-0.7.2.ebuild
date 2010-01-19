@@ -28,8 +28,8 @@ RDEPEND="${DEPEND}
 	media-video/ffmpeg
 	slideshow? ( >=media-video/dvd-slideshow-0.7.2 )
 	office? ( >=virtual/ooo-2.0
-		virtual/ghostscript )
-	pdf? ( virtual/ghostscript )
+		app-text/ghostscript-gpl )
+	pdf? ( app-text/ghostscript-gpl )
 	k3b? ( app-cdr/k3b )
 	kaffeine? ( media-video/kaffeine )
 	xine? ( media-video/xine-ui )"

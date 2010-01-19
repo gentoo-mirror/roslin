@@ -9,7 +9,6 @@ HOMEPAGE="http://kadu.net/"
 KEYWORDS="amd64 x86"
 
 IUSE=""
-RDEPEND="net-im/kadu-core"
 
 SRC_URI="http://www.kadu.net/download/additions/kadu-0.6.5-theme-glass-16.tar.gz
 	http://www.kadu.net/download/additions/kadu-0.6.5-theme-glass-22.tar.gz

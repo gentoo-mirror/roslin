@@ -12,7 +12,7 @@ SRC_URI="http://snes9x-gtk.googlecode.com/files/${P}-src.tar.bz2"
 
 LICENSE="as-is GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 ~ppc64 x86 ~amd64-linux ~x86-linux ~x86-solaris"
+KEYWORDS="~amd64 ~ppc64 ~x86 ~amd64-linux ~x86-linux ~x86-solaris"
 IUSE="debug joystick jma netplay zlib"
 
 RDEPEND="x11-libs/libXext

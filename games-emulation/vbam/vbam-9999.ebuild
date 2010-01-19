@@ -4,7 +4,7 @@
 
 EAPI=2
 
-inherit subversion confutils games cmake-utils
+inherit confutils games cmake-utils subversion
 
 ESVN_REPO_URI="http://${PN}.svn.sourceforge.net/svnroot/${PN}/trunk/"
 ESVN_PROJECT="vbam"
@@ -40,10 +40,6 @@ DOCS="doc/DevInfo.txt doc/ReadMe.SDL.txt"
 
 pkg_setup() {
 	confutils_require_any sdl gtk
-}
-
-src_unpack() {
-	subversion_src_unpack
 }
 
 src_prepare() {

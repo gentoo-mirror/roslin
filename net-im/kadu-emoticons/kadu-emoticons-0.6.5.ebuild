@@ -9,7 +9,6 @@ HOMEPAGE="http://kadu.net/"
 KEYWORDS="amd64 x86"
 
 IUSE=""
-RDEPEND="net-im/kadu-core"
 
 SRC_URI="http://www.kadu.net/download/additions/kompatybilne_z_GG6.tar.gz
 	http://www.kadu.net/download/additions/tango_static.tar.gz"

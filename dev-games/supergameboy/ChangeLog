@@ -4,6 +4,10 @@
 
   20 Jan 2010; Michał Ziąbkowski <mziab@o2.pl> supergameboy-0.014.ebuild,
   supergameboy-0.015.ebuild:
+  Moved MY_PV up.
+
+  20 Jan 2010; Michał Ziąbkowski <mziab@o2.pl> supergameboy-0.014.ebuild,
+  supergameboy-0.015.ebuild:
   Fixed stripping. Tidied the ebuild up.
 
   07 Jan 2010; Michał Ziąbkowski <mziab@o2.pl> supergameboy-0.014.ebuild,

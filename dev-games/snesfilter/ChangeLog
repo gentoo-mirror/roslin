@@ -4,6 +4,10 @@
 
   20 Jan 2010; Michał Ziąbkowski <mziab@o2.pl> snesfilter-0.007.ebuild,
   snesfilter-0.008.ebuild, snesfilter-0.009.ebuild:
+  Moved MY_PV up.
+
+  20 Jan 2010; Michał Ziąbkowski <mziab@o2.pl> snesfilter-0.007.ebuild,
+  snesfilter-0.008.ebuild, snesfilter-0.009.ebuild:
   Style fixes.
 
   20 Jan 2010; Michał Ziąbkowski <mziab@o2.pl> snesfilter-0.007.ebuild,

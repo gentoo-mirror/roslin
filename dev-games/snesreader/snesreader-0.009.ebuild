@@ -6,9 +6,10 @@ EAPI=2
 
 inherit eutils
 
+MY_PV="${PV/0./}"
+
 DESCRIPTION="A bsnes helper library needed for extra rom load options"
 HOMEPAGE="http://byuu.org/bsnes/"
-MY_PV="${PV/0./}"
 SRC_URI="http://byuu.org/files/${PN}_v${MY_PV}.tar.bz2"
 
 LICENSE="public-domain"

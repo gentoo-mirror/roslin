@@ -4,6 +4,10 @@
 
   20 Jan 2010; Michał Ziąbkowski <mziab@o2.pl> snesreader-0.009.ebuild,
   snesreader-0.010.ebuild, snesreader-0.011.ebuild:
+  Moved MY_PV up.
+
+  20 Jan 2010; Michał Ziąbkowski <mziab@o2.pl> snesreader-0.009.ebuild,
+  snesreader-0.010.ebuild, snesreader-0.011.ebuild:
   Fixed stripping. Style fixes.
 
   07 Jan 2010; Michał Ziąbkowski <mziab@o2.pl> snesreader-0.009.ebuild,

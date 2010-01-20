@@ -2,11 +2,12 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=2
+EAPI="2"
 
 inherit eutils toolchain-funcs flag-o-matic toolchain-funcs games
 
 MY_PN="quake2"
+
 FILE_STEM="KMQuake2-SDL-${PV}_src_unix"
 DATA_STEM="KMQuake2_data-0.19"
 QUDOS_SRC="http://qudos.quakedev.com/linux/quake2"

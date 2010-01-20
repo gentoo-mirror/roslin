@@ -27,6 +27,7 @@ QA_PRESTRIPPED="${GAMES_PREFIX_OPT:1}/${PN}/ideas"
 DEPEND="app-arch/unzip"
 
 RDEPEND="amd64? ( app-emulation/emul-linux-x86-gtklibs
+		>=app-emulation/emul-linux-x86-baselibs-20081109
 		alsa? ( app-emulation/emul-linux-x86-soundlibs[alsa] ) )
 	x86? ( >=x11-libs/gtk+-2
 		alsa? ( media-libs/alsa-lib ) )

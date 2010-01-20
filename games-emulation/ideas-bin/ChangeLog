@@ -4,6 +4,10 @@
 
   20 Jan 2010; Michał Ziąbkowski <mziab@o2.pl>
   ideas-bin-1.0.3.2-r1.ebuild:
+  Make sure baselibs are new enough to contain libgio. amd64 testers wanted.
+
+  20 Jan 2010; Michał Ziąbkowski <mziab@o2.pl>
+  ideas-bin-1.0.3.2-r1.ebuild:
   Dropped RESTRICT=strip. Removed ~amd64 keywords until it is confirmed to
   work.
 

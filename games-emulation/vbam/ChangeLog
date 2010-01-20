@@ -2,6 +2,9 @@
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  20 Jan 2010; Michał Ziąbkowski <mziab@o2.pl> vbam-9999.ebuild:
+  Removed dual tabs and rearranged keywords as per SpanKY's suggestions.
+
   19 Jan 2010; Michał Ziąbkowski <mziab@o2.pl> vbam-9999.ebuild:
   Changed inherit order, so src_unpack can be removed.
 

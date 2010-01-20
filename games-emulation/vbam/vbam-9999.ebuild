@@ -14,25 +14,25 @@ HOMEPAGE="http://vba-m.ngemu.com"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE="gtk lirc sdl"
 
 RDEPEND="gtk? ( >=dev-cpp/libglademm-2.4.0
-		>=dev-cpp/glibmm-2.4.0
-		>=dev-cpp/gtkmm-2.4.0
-		>=media-libs/portaudio-19_pre
-		x11-libs/libXv
-		>=dev-cpp/gtkglextmm-1.2.0 )
-		media-libs/libpng
-		sys-libs/zlib
-		media-libs/libsdl[joystick]
-		lirc? ( app-misc/lirc )
-		virtual/opengl"
+	>=dev-cpp/glibmm-2.4.0
+	>=dev-cpp/gtkmm-2.4.0
+	>=media-libs/portaudio-19_pre
+	x11-libs/libXv
+	>=dev-cpp/gtkglextmm-1.2.0 )
+	media-libs/libpng
+	sys-libs/zlib
+	media-libs/libsdl[joystick]
+	lirc? ( app-misc/lirc )
+	virtual/opengl"
 
 DEPEND="${RDEPEND}
-		dev-lang/nasm
-		>=dev-util/cmake-2.4.0
-		dev-util/pkgconfig"
+	dev-lang/nasm
+	>=dev-util/cmake-2.4.0
+	dev-util/pkgconfig"
 
 S="${WORKDIR}/${PN}"
 

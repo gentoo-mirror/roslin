@@ -1,6 +1,15 @@
 # ChangeLog for games-emulation/bsnes
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 
+  20 Jan 2010; Michał Ziąbkowski <mziab@o2.pl> bsnes-0.059_p2.ebuild:
+  Fixed stripping in snapshot.
+
+  20 Jan 2010; Michał Ziąbkowski <mziab@o2.pl>
+  -files/bsnes-0.047-makefile.patch, bsnes-0.059.ebuild,
+  bsnes-0.059_p2.ebuild, +files/bsnes-0.059-makefile.patch:
+  Applied SpanKY's suggestions. Updated Makefile patch. Still need to
+  disable stripping in the plugins.
+
   14 Jan 2010; Michał Ziąbkowski <mziab@o2.pl> -bsnes-0.057.ebuild,
   -bsnes-0.058.ebuild:
   Cleaned out old versions.

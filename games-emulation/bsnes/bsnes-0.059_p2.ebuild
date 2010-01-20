@@ -6,10 +6,11 @@ EAPI=2
 
 inherit eutils confutils games
 
-DESCRIPTION="A Super Famicom/SNES emulator written with absolute accuracy in mind"
-HOMEPAGE="http://byuu.org/bsnes/"
 MY_PV="${PV/0./}"
 MY_PV="${MY_PV/_p/r0}"
+
+DESCRIPTION="A Super Famicom/SNES emulator written with absolute accuracy in mind"
+HOMEPAGE="http://byuu.org/bsnes/"
 SRC_URI="http://bsnes.googlecode.com/files/${PN}_v${MY_PV}.zip"
 
 LICENSE="GPL-2"
@@ -32,9 +33,7 @@ RDEPEND="ao? ( media-libs/libao )
 DEPEND="${DEPEND}
 	app-arch/unzip"
 
-RESTRICT="strip"
-
-S=${WORKDIR}/src
+S="${WORKDIR}/src"
 
 disable_module() {
 	sed -i Makefile -e "s|$1||"
@@ -43,8 +42,9 @@ disable_module() {
 build_plugin() {
 	einfo "Building $1..."
 	cd "${WORKDIR}/$1"
-	sed -e "s/-O3/${CXXFLAGS}/" \
-	    -i Makefile \
+	sed -i Makefile \
+		-e "s/-O3/${CXXFLAGS}/" \
+		-e "/link += -s/d" \
 	    || die "sed failed"
 
 	emake platform=x compiler=gcc || die "emake $1 failed"
@@ -60,13 +60,12 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-0.047-makefile.patch
+	epatch "${FILESDIR}"/${PN}-0.059-makefile.patch
 
-	if use debug
-	then
-	    einfo "Enabling debugger..."
-	    sed -e "s://\(#define DEBUGGER\):\\1:" -i "base.hpp" \
-	    || die "sed failed"
+	if use debug ; then
+	    sed -i "base.hpp" \
+		-e "s://\(#define DEBUGGER\):\\1:" \
+		|| die "sed failed"
 	fi
 }
 
@@ -98,7 +97,6 @@ src_compile() {
 src_install() {
 	dogamesbin ../${PN} || die "failed bin"
 	doicon data/${PN}.png || die "failed icon"
-	#dodoc ../*.txt || die "failed docs"
 	make_desktop_entry ${PN}
 
 	# install plugins

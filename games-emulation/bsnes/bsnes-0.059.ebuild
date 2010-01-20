@@ -6,9 +6,10 @@ EAPI=2
 
 inherit eutils confutils games
 
+MY_PV="${PV/0./}"
+
 DESCRIPTION="A Super Famicom/SNES emulator written with absolute accuracy in mind"
 HOMEPAGE="http://byuu.org/bsnes/"
-MY_PV="${PV/0./}"
 SRC_URI="http://byuu.org/files/${PN}_v${MY_PV}.tar.bz2"
 
 LICENSE="GPL-2"
@@ -30,9 +31,7 @@ DEPEND="ao? ( media-libs/libao )
 
 RDEPEND="${DEPEND}"
 
-RESTRICT="strip"
-
-S=${WORKDIR}/src
+S="${WORKDIR}/src"
 
 disable_module() {
 	sed -i Makefile -e "s|$1||"
@@ -44,13 +43,12 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-0.047-makefile.patch
+	epatch "${FILESDIR}"/${P}-makefile.patch
 
-	if use debug
-	then
-	    einfo "Enabling debugger..."
-	    sed -e "s://\(#define DEBUGGER\):\\1:" -i "base.hpp" \
-	    || die "sed failed"
+	if use debug ; then
+	    sed -i "base.hpp" \
+		-e "s://\(#define DEBUGGER\):\\1:" \
+		|| die "sed failed"
 	fi
 }
 
@@ -77,7 +75,6 @@ src_compile() {
 src_install() {
 	dogamesbin ../${PN} || die "failed bin"
 	doicon data/${PN}.png || die "failed icon"
-	#dodoc ../*.txt || die "failed docs"
 	make_desktop_entry ${PN}
 
 	prepgamesdirs

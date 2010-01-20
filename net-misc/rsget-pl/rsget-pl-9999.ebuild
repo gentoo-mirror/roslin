@@ -4,6 +4,8 @@
 
 inherit subversion
 
+MY_PN="rsget.pl"
+
 DESCRIPTION="Random content downloader"
 HOMEPAGE="http://svn.pld-linux.org/svn/toys/rsget.pl/"
 #SRC_URI=""
@@ -18,8 +20,6 @@ DEPEND=""
 RDEPEND="dev-perl/WWW-Curl
 	captcha? ( app-text/tesseract
 	dev-perl/GD )"
-
-MY_PN="rsget.pl"
 
 S=${WORKDIR}/${MY_PN}
 

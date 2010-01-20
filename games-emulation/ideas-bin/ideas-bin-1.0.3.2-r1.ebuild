@@ -17,11 +17,12 @@ SRC_URI="http://emucraze.com/ideas/ideas_downloads/ideas${MY_PV}.tar.bz2
 
 LICENSE="freedist"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~x86"
 IUSE="alsa mic wifi"
 
-RESTRICT="mirror strip"
+RESTRICT="mirror"
 QA_EXECSTACK="${GAMES_PREFIX_OPT:1}/${PN}/ideas"
+QA_PRESTRIPPED="${GAMES_PREFIX_OPT:1}/${PN}/ideas"
 
 DEPEND="app-arch/unzip"
 

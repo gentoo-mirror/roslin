@@ -19,13 +19,12 @@ IUSE=""
 RDEPEND=">=x11-libs/qt-gui-4.4"
 DEPEND="${RDEPEND}"
 
-RESTRICT="strip"
-
 S="${WORKDIR}/${PN}"
 
 src_prepare() {
-	sed -e "s/-O3/${CXXFLAGS}/" \
-	    -i Makefile \
+	sed -i Makefile \
+	    -e "s/-O3/${CXXFLAGS}/" \
+	    -e "s/-s //" \
 	    || die "sed failed"
 }
 

@@ -47,9 +47,9 @@ src_compile() {
 
 src_install() {
 	insinto "${GAMES_DATADIR}/${PN}"
-	doins NstDatabase.xml nstcontrols
+	doins NstDatabase.xml nstcontrols || die "doins failed"
 
-	newgamesbin nst ${PN}.bin
+	newgamesbin nst ${PN}.bin || die "dobin failed"
 
 	sed \
 	-e "s:%GAMES_DATADIR%:${GAMES_DATADIR}:g" \

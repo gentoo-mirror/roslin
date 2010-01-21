@@ -14,7 +14,8 @@ LICENSE="freedist"
 SLOT="0"
 KEYWORDS="~x86"
 IUSE="mp3"
-RESTRICT="strip"
+
+QA_PRESTRIPPED="${GAMES_BINDIR:1}/${PN}"
 
 S="${WORKDIR}/Fusion"
 

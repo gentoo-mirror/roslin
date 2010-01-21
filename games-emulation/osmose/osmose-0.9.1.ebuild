@@ -6,12 +6,11 @@ EAPI=2
 
 inherit eutils games
 
-MY_PV="${PV//./-}"
-MY_PV="${MY_PV/b/beta}"
+MY_P="Osmose-${PV//./-}"
 
 DESCRIPTION="Osmose is a GPL'd Sega Master System/Gamegear emulator"
 HOMEPAGE="http://bcz.emu-france.com/"
-SRC_URI="http://bcz.emu-france.com/${PN}/Osmose-${MY_PV}-src.zip"
+SRC_URI="http://bcz.emu-france.com/${PN}/${MY_P}-src.zip"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -23,14 +22,14 @@ DEPEND="media-libs/libsdl[opengl,joystick]
 	virtual/opengl"
 RDEPEND="${DEPEND}"
 
-S="${WORKDIR}/Osmose-${MY_PV}"
+S="${WORKDIR}/${MY_P}"
 
 src_prepare() {
 	epatch "${FILESDIR}/${P}-makefile.patch"
 }
 
 src_install() {
-	dogamesbin ${PN}
+	dogamesbin ${PN} || die "dobin failed"
 	dodoc changes.txt readme.txt
 	prepgamesdirs
 }

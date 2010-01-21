@@ -29,15 +29,10 @@ RDEPEND="${DEPEND}"
 
 S="${WORKDIR}"
 
-pkg_nofetch() {
-	einfo "Please download ${LNX_P}.zip"
-	einfo "from ${HOMEPAGE}"
-	einfo "and move it to ${DISTDIR}"
-}
-
 src_prepare() {
-	sed -i Makefile -e "s:CFLAGS = -c -O3 -g3:CFLAGS += -c:" \
-		|| die "sed failed"
+	sed -i Makefile \
+	    -e "s:CFLAGS = -c -O3 -g3:CFLAGS += -c:" \
+	    || die "sed failed"
 }
 
 src_compile() {
@@ -51,11 +46,11 @@ src_install() {
 
 	newgamesbin nst ${PN}.bin || die "dobin failed"
 
-	sed \
-	-e "s:%GAMES_DATADIR%:${GAMES_DATADIR}:g" \
-	"${FILESDIR}/${PN}" \
-	> "${D}/${GAMES_BINDIR}/${PN}" \
-	|| die "sed failed"
+	dogamesbin "${FILESDIR}"/${PN} || die
+	dosed \
+	    "s:%GAMES_DATADIR%:${GAMES_DATADIR}:g" \
+	    "${GAMES_BINDIR}/${PN}" \
+	    || die "dosed failed"
 
 	dodoc README.Linux changelog.txt
 	dohtml -r readme.html doc/*.html doc/details

@@ -4,13 +4,13 @@
 
 EAPI=2
 
+ESVN_REPO_URI="https://svn.stepmania.com/svn/trunk/stepmania"
+
 inherit games subversion autotools eutils
 
 DESCRIPTION="An advanced DDR simulator"
 HOMEPAGE="http://www.stepmania.com/stepmania/"
 SRC_URI=""
-
-ESVN_REPO_URI="https://svn.stepmania.com/svn/trunk/stepmania"
 
 LICENSE="MIT"
 SLOT="0"

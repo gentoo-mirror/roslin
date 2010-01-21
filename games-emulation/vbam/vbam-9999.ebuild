@@ -4,17 +4,17 @@
 
 EAPI=2
 
-inherit confutils games cmake-utils subversion
-
 ESVN_REPO_URI="http://${PN}.svn.sourceforge.net/svnroot/${PN}/trunk/"
 ESVN_PROJECT="vbam"
+
+inherit confutils games cmake-utils subversion
 
 DESCRIPTION="A VBA fork that focuses on consolidating existing ports and improving VBA in general"
 HOMEPAGE="http://vba-m.ngemu.com"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS=""
 IUSE="gtk lirc sdl"
 
 RDEPEND="gtk? ( >=dev-cpp/libglademm-2.4.0

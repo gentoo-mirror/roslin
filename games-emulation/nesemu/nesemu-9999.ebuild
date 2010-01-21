@@ -28,6 +28,7 @@ src_prepare() {
 
 	sed -i Makefile.linux \
 	    -e "s/CFLAGS =/CFLAGS +=/" \
+	    -e "/LDFLAGS += -s/d" \
 	    || die "sed failed"
 }
 

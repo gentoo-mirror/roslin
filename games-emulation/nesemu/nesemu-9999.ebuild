@@ -4,9 +4,9 @@
 
 EAPI=2
 
-inherit games subversion
-
 ESVN_REPO_URI="http://nesemu.googlecode.com/svn/trunk/"
+
+inherit games subversion
 
 DESCRIPTION="A cross-platform Nintendo NES emulator targeting PCs and Consoles"
 HOMEPAGE="http://code.google.com/p/nesemu/"
@@ -36,7 +36,7 @@ src_compile() {
 }
 
 src_install() {
-	newgamesbin ${PN}.linux.elf ${PN}
+	newgamesbin ${PN}.linux.elf ${PN} || die "dobin failed"
 	dodoc README
 
 	prepgamesdirs

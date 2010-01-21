@@ -14,7 +14,8 @@ LICENSE="freedist"
 SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
-RESTRICT="strip"
+
+QA_PRESTRIPPED="${GAMES_BINDIR:1}/regen"
 
 S="${WORKDIR}"
 

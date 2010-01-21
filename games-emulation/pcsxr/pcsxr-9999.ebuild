@@ -4,14 +4,14 @@
 
 EAPI=2
 
+ESVN_REPO_URI="https://pcsxr.svn.codeplex.com/svn/pcsxr"
+ESVN_PROJECT="pcsxr"
+
 inherit eutils autotools games subversion
 
 DESCRIPTION="PCSX-Reloaded: a fork of PCSX, the discontinued Playstation emulator"
 HOMEPAGE="http://pcsxr.codeplex.com"
 SRC_URI=""
-
-ESVN_REPO_URI="https://pcsxr.svn.codeplex.com/svn/pcsxr"
-ESVN_PROJECT="pcsxr"
 
 LICENSE="GPL-2"
 SLOT="0"

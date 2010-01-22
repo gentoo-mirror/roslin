@@ -12,7 +12,7 @@ SRC_URI="http://aamirm.hacking-cult.org/regen/${P}.tar.bz2"
 
 LICENSE="freedist"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 QA_PRESTRIPPED="${GAMES_BINDIR:1}/regen"

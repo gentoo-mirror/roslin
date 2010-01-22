@@ -17,7 +17,7 @@ SRC_URI="http://emucraze.com/ideas/ideas_downloads/ideas${MY_PV}.tar.bz2
 
 LICENSE="freedist"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="alsa mic wifi"
 
 RESTRICT="mirror"

@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/zsnes
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+
+  22 Jan 2010; Michał Ziąbkowski <mziab@o2.pl> zsnes-1.51b-r1.ebuild:
+  Fixed stupid thinko. Huh, how did this get past me?
 
   08 Oct 2009; Michał Ziąbkowski <mziab@o2.pl> zsnes-1.51b-r1.ebuild:
   Fixed whitespace.

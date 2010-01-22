@@ -32,7 +32,7 @@ src_prepare() {
 	sed -i -e '/^\s*CFLAGS=.* -fomit-frame-pointer /d' \
 		configure.in || die
 	append-flags -fomit-frame-pointer
-	use experimental || -D__RELEASE__
+	use experimental || append-flags -D__RELEASE__
 
 	sed -i \
 		-e 's:^\s*STRIP="-s":STRIP="":'	\

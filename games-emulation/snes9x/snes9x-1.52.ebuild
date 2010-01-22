@@ -13,13 +13,13 @@ SRC_URI="http://snes9x-gtk.googlecode.com/files/${P}-src.tar.bz2"
 LICENSE="as-is GPL-2 LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc64 ~x86 ~amd64-linux ~x86-linux ~x86-solaris"
-IUSE="debug joystick jma netplay zlib"
+IUSE="debug joystick jma netplay"
 
 RDEPEND="x11-libs/libXext
 	x11-libs/libSM
 	x11-libs/libICE
 	media-libs/libpng
-	zlib? ( sys-libs/zlib )"
+	sys-libs/zlib"
 DEPEND="${RDEPEND}"
 
 S="${WORKDIR}/${P}-src/unix"
@@ -29,7 +29,6 @@ src_configure() {
 		$(use_enable joystick gamepad) \
 		$(use_enable debug debugger) \
 		$(use_enable jma) \
-		$(use_enable zlib gzip) \
 		$(use_enable netplay) \
 		|| die
 }

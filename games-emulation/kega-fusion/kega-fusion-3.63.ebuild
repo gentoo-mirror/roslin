@@ -4,7 +4,7 @@
 
 EAPI=2
 
-inherit games
+inherit multilib games
 
 DESCRIPTION="Sega SG1000/SC3000/Master System/Game Gear/Genesis/Megadrive/SVP/Pico/SegaCD/MegaCD/32X emulator"
 HOMEPAGE="http://www.eidolons-inn.net/tiki-index.php?page=Kega"
@@ -12,7 +12,7 @@ SRC_URI="http://www.eidolons-inn.net/tiki-download_file.php?fileId=572 -> ${P}.t
 
 LICENSE="freedist"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="mp3"
 
 QA_PRESTRIPPED="${GAMES_BINDIR:1}/${PN}"
@@ -20,10 +20,19 @@ QA_PRESTRIPPED="${GAMES_BINDIR:1}/${PN}"
 S="${WORKDIR}/Fusion"
 
 DEPEND="virtual/opengl
-	x11-libs/gtk+:2[xinerama]
-	media-libs/alsa-lib
-	mp3? ( media-sound/mpg123 )"
+	x86? ( x11-libs/gtk+:2[xinerama]
+		media-libs/alsa-lib
+		mp3? ( media-sound/mpg123 ) )
+	amd64? ( app-emulation/emul-linux-x86-gtklibs
+		app-emulation/emul-linux-x86-soundlibs[alsa] )"
 RDEPEND="${DEPEND}"
+
+pkg_setup() {
+	# x86 binary package, ABI=x86
+	has_multilib_profile && ABI="x86"
+
+	games_pkg_setup
+}
 
 src_install() {
 	newgamesbin Fusion ${PN} || die "dobin failed"

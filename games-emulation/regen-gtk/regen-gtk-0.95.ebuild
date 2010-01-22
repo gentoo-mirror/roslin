@@ -4,7 +4,7 @@
 
 EAPI=2
 
-inherit games
+inherit multilib games
 
 DESCRIPTION="An accuracy-focused Sega Genesis/MegaDrive/Master System/Game Gear/SC-3000/SG-1000 emulator"
 HOMEPAGE="http://aamirm.hacking-cult.org/index_files/regen.htm"
@@ -20,13 +20,23 @@ QA_PRESTRIPPED="${GAMES_BINDIR:1}/regen"
 S="${WORKDIR}"
 
 DEPEND="virtual/opengl
-	x11-libs/gtk+:2
+	x86? ( x11-libs/gtk+:2
 	media-libs/alsa-lib
 	media-libs/libsdl[joystick]
 	sys-libs/zlib
 	x11-libs/libXrandr
-	x11-libs/libXv"
+	x11-libs/libXv )
+	amd64? ( app-emulation/emul-linux-x86-gtklibs
+		app-emulation/emul-linux-x86-soundlibs[alsa]
+		app-emulation/emul-linux-x86-sdl )"
 RDEPEND="${DEPEND}"
+
+pkg_setup() {
+	# x86 binary package, ABI=x86
+	has_multilib_profile && ABI="x86"
+
+	games_pkg_setup
+}
 
 src_install() {
 	dogamesbin regen || die "dobin failed"

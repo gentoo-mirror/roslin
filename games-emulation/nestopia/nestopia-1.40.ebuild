@@ -33,11 +33,11 @@ src_prepare() {
 	sed -i Makefile \
 	    -e "s:CFLAGS = -c -O3 -g3:CFLAGS += -c:" \
 	    || die "sed failed"
-}
-
-src_compile() {
-	# parallel make seems broken
-	emake -j1 || die "emake failed"
+	sed \
+	    "${FILESDIR}"/${PN} \
+	    -e "s:%GAMES_DATADIR%:${GAMES_DATADIR}:g" \
+	    > ${PN} \
+	    || die "sed failed"
 }
 
 src_install() {
@@ -45,12 +45,9 @@ src_install() {
 	doins NstDatabase.xml nstcontrols || die "doins failed"
 
 	newgamesbin nst ${PN}.bin || die "dobin failed"
+	dogamesbin ${PN} || die "dobin failed"
 
-	dogamesbin "${FILESDIR}"/${PN} || die
-	dosed \
-	    "s:%GAMES_DATADIR%:${GAMES_DATADIR}:g" \
-	    "${GAMES_BINDIR}/${PN}" \
-	    || die "dosed failed"
+	make_desktop_entry "${PN}" "Nestopia"
 
 	dodoc README.Linux changelog.txt
 	dohtml -r readme.html doc/*.html doc/details

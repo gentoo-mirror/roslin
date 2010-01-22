@@ -20,7 +20,8 @@ QA_PRESTRIPPED="${GAMES_BINDIR:1}/${PN}"
 S="${WORKDIR}/Fusion"
 
 DEPEND="virtual/opengl
-	x86? ( x11-libs/gtk+:2[xinerama]
+	x86? ( x11-libs/gtk+:2
+		x11-libs/libXinerama
 		media-libs/alsa-lib
 		mp3? ( media-sound/mpg123 ) )
 	amd64? ( app-emulation/emul-linux-x86-gtklibs

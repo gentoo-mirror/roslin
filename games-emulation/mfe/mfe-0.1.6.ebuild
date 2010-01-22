@@ -11,10 +11,11 @@ SRC_URI="mirror://sourceforge/project/mednafenfe/${P}.tar.gz"
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
+IUSE="doc"
 
 DEPEND="dev-python/configobj
-	dev-python/pygtk"
+	dev-python/pygtk
+	doc? ( dev-python/gtkmozembed-python )"
 RDEPEND="${DEPEND}
 	games-emulation/mednafen"
 

@@ -18,7 +18,8 @@ IUSE="debug joystick jma netplay zlib"
 RDEPEND="x11-libs/libXext
 	x11-libs/libSM
 	x11-libs/libICE
-	media-libs/libpng"
+	media-libs/libpng
+	zlib? ( sys-libs/zlib )"
 DEPEND="${RDEPEND}"
 
 S="${WORKDIR}/${P}-src/unix"

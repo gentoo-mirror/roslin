@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-QA_PRESTRIPPED="${GAMES_BINDIR:1}/regen"
+QA_PRESTRIPPED="${GAMES_PREFIX_OPT:1}/bin/regen"
 
 S="${WORKDIR}"
 
@@ -39,7 +39,8 @@ pkg_setup() {
 }
 
 src_install() {
-	dogamesbin regen || die "dobin failed"
+	exeinto "${GAMES_PREFIX_OPT}"/bin
+	doexe regen || die "doexe failed"
 	dodoc README || die "dodoc failed"
 
 	make_desktop_entry regen "Regen"

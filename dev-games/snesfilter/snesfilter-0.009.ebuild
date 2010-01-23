@@ -18,7 +18,8 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND=">=x11-libs/qt-gui-4.4"
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	sys-devel/gcc[openmp]"
 
 S="${WORKDIR}/${PN}"
 

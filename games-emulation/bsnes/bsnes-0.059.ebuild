@@ -45,14 +45,13 @@ pkg_setup() {
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-makefile.patch
 
+	# debugger
 	if use debug ; then
 	    sed -i "base.hpp" \
 		-e "s://\(#define DEBUGGER\):\\1:" \
 		|| die "sed failed"
 	fi
-}
 
-src_compile() {
 	# audio modules
 	use ao || disable_module audio.ao
 	use openal || disable_module audio.openal
@@ -68,7 +67,9 @@ src_compile() {
 
 	# input modules
 	use sdl || disable_module input.sdl
+}
 
+src_compile() {
 	emake platform=x compiler=gcc || die "emake failed"
 }
 

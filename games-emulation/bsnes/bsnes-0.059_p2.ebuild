@@ -42,10 +42,6 @@ disable_module() {
 build_plugin() {
 	einfo "Building $1..."
 	cd "${WORKDIR}/$1"
-	sed -i Makefile \
-		-e "s/-O3/${CXXFLAGS}/" \
-		-e "/link += -s/d" \
-	    || die "sed failed"
 
 	emake platform=x compiler=gcc || die "emake $1 failed"
 }
@@ -62,14 +58,13 @@ pkg_setup() {
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-0.059-makefile.patch
 
+	# debugger
 	if use debug ; then
 	    sed -i "base.hpp" \
 		-e "s://\(#define DEBUGGER\):\\1:" \
 		|| die "sed failed"
 	fi
-}
 
-src_compile() {
 	# audio modules
 	use ao || disable_module audio.ao
 	use openal || disable_module audio.openal
@@ -86,6 +81,16 @@ src_compile() {
 	# input modules
 	use sdl || disable_module input.sdl
 
+	# bundled plugins
+	for i in snesfilter snesreader supergameboy; do
+		sed -i "${WORKDIR}/$i/Makefile" \
+			-e "s/-O3/${CXXFLAGS}/" \
+			-e "/link += -s/d" \
+		|| die "sed failed"
+	done
+}
+
+src_compile() {
 	emake platform=x compiler=gcc || die "emake failed"
 
 	# build bundled plugins

@@ -2,6 +2,16 @@
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*zsnes-1.51b-r2 (23 Jan 2010)
+
+  23 Jan 2010; Michał Ziąbkowski <mziab@o2.pl>
+  +files/zsnes-1.51-CC-quotes.patch,
+  -files/zsnes-1.51-archopt-july-23-update.patch,
+  +files/zsnes-1.51-depbuild.patch, zsnes-1.51b-r1.ebuild,
+  +zsnes-1.51b-r2.ebuild:
+  Synced with portage ebuild. Dropped redundant patches. Readded
+  custom-cflags.
+
   22 Jan 2010; Michał Ziąbkowski <mziab@o2.pl> zsnes-1.51b-r1.ebuild:
   Fixed stupid thinko. Huh, how did this get past me?
 

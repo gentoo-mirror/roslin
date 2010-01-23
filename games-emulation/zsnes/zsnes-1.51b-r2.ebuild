@@ -13,7 +13,7 @@ SRC_URI="http://zsnes.sf.net/${PN}${PV//./}src.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="-* ~amd64 ~x86 ~x86-fbsd"
-IUSE="ao experimental opengl png"
+IUSE="ao custom-cflags experimental opengl png"
 
 RDEPEND="media-libs/libsdl[joystick]
 	>=sys-libs/zlib-1.2.3-r1
@@ -28,39 +28,44 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}/${PN}_${PV//./_}/src
 
 src_prepare() {
+	epatch "${FILESDIR}/${PN}-1.51-CC-quotes.patch" \
+		"${FILESDIR}/${PN}-1.51-depbuild.patch" \
+		"${FILESDIR}/${PN}-1.51-libpng.patch"
+
 	# Remove hardcoded CFLAGS and LDFLAGS
-	sed -i -e '/^\s*CFLAGS=.* -fomit-frame-pointer /d' \
-		configure.in || die
-	append-flags -fomit-frame-pointer
-	use experimental || append-flags -D__RELEASE__
-
 	sed -i \
-		-e 's:^\s*STRIP="-s":STRIP="":'	\
-		-e 's:^\s*CFLAGS=.* -I\/usr\/local\/include .*$:CFLAGS="${CFLAGS} -I.":'	\
-		-e '/^\s*LDFLAGS=.* -L\/usr\/local\/lib /d'		\
+		-e '/^CFLAGS=.*local/s:-pipe.*:-Wall -I.":' \
+		-e '/^LDFLAGS=.*local/d' \
+		-e '/\w*CFLAGS=.*fomit/s:-O3.*$STRIP::' \
 		-e 's:-O99999999:-O1:' \
-		configure.in || die
-
-	epatch "${FILESDIR}/${PN}-1.51-FORTIFY_SOURCE.patch"
-
+		configure.in \
+		|| die "sed failed"
 	eautoreconf
 }
 
 src_configure() {
 	tc-export CC
-
 	use amd64 && multilib_toolchain_setup x86
+	use custom-cflags || strip-flags
+	append-flags -U_FORTIFY_SOURCE
 
-	local myconf="--disable-cpucheck force_arch=no"
-	use experimental || myconf="${myconf} --enable-release"
+	local myconf
+	use experimental || myconf="--enable-release"
 
 	egamesconf \
 		$(use_enable ao libao) \
 		$(use_enable png libpng) \
 		$(use_enable opengl) \
 		--disable-debug \
+		--disable-cpucheck \
 		${myconf} \
+		force_arch=no \
 		|| die
+}
+
+src_compile() {
+	emake makefile.dep || die "emake makefile.dep failed"
+	emake || die "emake failed"
 }
 
 src_install() {
@@ -69,7 +74,7 @@ src_install() {
 	dodoc ../docs/{readme.1st,*.txt,README.LINUX}
 	dodoc ../docs/readme.txt/*
 	dohtml -r ../docs/readme.htm/*
-	make_desktop_entry zsnes ZSNES zsnes
+	make_desktop_entry zsnes ZSNES
 	newicon icons/48x48x32.png ${PN}.png
 	prepgamesdirs
 }

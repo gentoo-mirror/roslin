@@ -45,12 +45,17 @@ src_install() {
 }
 
 pkg_postinst() {
-	elog "If you wish for have ISO+MP3 for SegaCD games,"
-	elog "you need to set the 'mp3' flag and manually fix"
-	elog "libmpg123path in ~/.Kega Fusion/Fusion.ini."
-	elog "Moreover, if you want additional graphics filters,"
-	elog "please download them from ${HOMEPAGE} and extract"
-	elog "them to ~/.Kega Fusion/Plugins."
+	if use mp3 ; then
+	    elog "For ISO+MP3 support to work, you will"
+	    elog "need to set the right libmpg123path"
+	    elog "in ~/.Kega Fusion/Fusion.ini."
+	    elog ""
+	fi
+
+	elog "Additional graphics filters may be"
+	elog "downloaded from ${HOMEPAGE}."
+	elog "To use them, extract the filter pack"
+	elog "to ~/.Kega Fusion/Plugins."
 
 	games_pkg_postinst
 }

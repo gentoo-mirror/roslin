@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="mp3"
 
-QA_PRESTRIPPED="${GAMES_BINDIR:1}/${PN}"
+QA_PRESTRIPPED="${GAMES_PREFIX_OPT:1}/bin/${PN}"
 
 S="${WORKDIR}/Fusion"
 
@@ -36,7 +36,8 @@ pkg_setup() {
 }
 
 src_install() {
-	newgamesbin Fusion ${PN} || die "dobin failed"
+	exeinto "${GAMES_PREFIX_OPT}"/bin
+	newexe Fusion ${PN} || die "dobin failed"
 	dodoc History.txt Readme.txt || die "dodoc failed"
 
 	make_desktop_entry ${PN} "Kega Fusion"

@@ -2,6 +2,9 @@
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  24 Jan 2010; Michał Ziąbkowski <mziab@o2.pl> Manifest:
+  Upstream replaced the tarball. Fixing Manifest.
+
   18 Jan 2010; Michał Ziąbkowski <mziab@o2.pl>
   -kadu-globalhotkeys-0.6.5_p14.ebuild:
   Removed cruft.

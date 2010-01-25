@@ -20,7 +20,7 @@ IUSE="cairo dia doc gnome inkjar jabber lcms mmx nls perl postscript python spel
 RESTRICT="test"
 
 COMMON_DEPEND="
-	>=dev-libs/poppler-glib-0.8.3[cairo]
+	>=virtual/poppler-glib-0.8.3[cairo]
 	dev-cpp/glibmm
 	>=dev-cpp/gtkmm-2.10.0
 	>=dev-libs/boehm-gc-6.4

@@ -5,22 +5,21 @@
 inherit gnome2 autotools games
 
 DESCRIPTION="A simple MAME front-end for the GNOME Desktop Environment"
-HOMEPAGE="http://sourceforge.net/projects/gva/"
-SRC_URI="mirror://sourceforge/gva/${P}.tar.gz"
+HOMEPAGE="http://mbarnes.github.com/gnome-video-arcade/"
 
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="gnome"
+IUSE="dbus"
 
 RDEPEND="gnome? ( >=gnome-base/libgnomeui-2.14.0 )
 	>=dev-libs/glib-2.14.0
-	>=x11-libs/gtk+-2.12.0
-	>=gnome-base/libglade-2.6.0
+	>=x11-libs/gtk+-2.14.0
 	>=x11-themes/gnome-icon-theme-2.18.0
 	>=dev-db/sqlite-3.0.0
 	>=x11-libs/libwnck-2.16
 	gnome-base/gconf
+	dbus? ( dev-libs/dbus-glib )
 	|| ( games-emulation/sdlmame games-emulation/xmame )"
 DEPEND="${RDEPEND}
 	app-text/scrollkeeper
@@ -43,7 +42,7 @@ src_unpack() {
 src_compile() {
 	gnome2_src_compile \
 	    --bindir="${GAMES_BINDIR}" \
-	    $(use_with gnome) \
+	    $(use_with dbus) \
 	    || die "compile failed"
 }
 

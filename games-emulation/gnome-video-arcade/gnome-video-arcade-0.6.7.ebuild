@@ -18,7 +18,6 @@ RDEPEND=">=dev-libs/glib-2.14.0
 	>=dev-db/sqlite-3.0.0
 	>=x11-libs/libwnck-2.16
 	gnome-base/gconf
-	dbus? ( dev-libs/dbus-glib )
 	|| ( games-emulation/sdlmame games-emulation/xmame )"
 DEPEND="${RDEPEND}
 	app-text/scrollkeeper

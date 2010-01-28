@@ -35,6 +35,7 @@ src_install() {
 	doins -r pSX bios cdimages || die "doins failed"
 	fperms a+x "${dir}/pSX"
 	games_make_wrapper psx ./pSX "${dir}"
+	make_desktop_entry psx pSX
 	keepdir "${dir}"/{bios,cdimages}
 	dodoc readme.txt
 	prepgamesdirs

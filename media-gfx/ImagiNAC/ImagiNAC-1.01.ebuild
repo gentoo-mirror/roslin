@@ -42,6 +42,9 @@ src_install() {
 	# install dev docs into separate dir
 	dohtml -r manual/*
 	dohtml -p api -r documentation/html/*
+
+	# desktop entry
+	make_desktop_entry ${PN}
 }
 
 pkg_postinst() {

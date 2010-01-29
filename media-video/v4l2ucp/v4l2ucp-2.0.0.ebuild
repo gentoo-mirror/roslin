@@ -16,3 +16,4 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="x11-libs/qt-gui:4"
+DEPEND="${RDEPEND}"

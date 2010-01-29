@@ -3,6 +3,9 @@
 # $Header: $
 
   29 Jan 2010; Michał Ziąbkowski <mziab@o2.pl> wiitcpload-0.05.ebuild:
+  Changed PATCHES to bash array.
+
+  29 Jan 2010; Michał Ziąbkowski <mziab@o2.pl> wiitcpload-0.05.ebuild:
   Ported to qt4-r2.
 
   03 May 2009; Piotr Szymaniak <lazy_bum@o2.pl> wiitcpload-0.05.ebuild:

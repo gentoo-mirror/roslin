@@ -23,5 +23,5 @@ RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${MY_P}
 
-PATCHES="${FILESDIR}/${PN}.pro.patch"
+PATCHES=("${FILESDIR}/${PN}.pro.patch")
 DOCS="doc/CHANGELOG"

@@ -30,7 +30,7 @@ src_prepare() {
 }
 
 src_compile() {
-	./cc.sh || die "compilation failed"
+	sh cc.sh || die "compilation failed"
 }
 
 src_install() {

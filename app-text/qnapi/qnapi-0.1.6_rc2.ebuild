@@ -2,9 +2,9 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI="1"
+EAPI=2
 
-inherit qt4 eutils
+inherit qt4-r2
 
 MY_P="${P/_/-}"
 
@@ -23,12 +23,3 @@ RDEPEND="app-arch/p7zip
 DEPEND="${RDEPEND}"
 
 S=${WORKDIR}/${MY_P}
-
-src_compile() {
-	eqmake4 || die "eqmake4 failed"
-	emake || die "emake failed"
-}
-
-src_install() {
-	emake INSTALL_ROOT="${D}" install || die "emake install failed"
-}

@@ -12,7 +12,7 @@ SRC_URI="http://download.gna.org/underware/sources/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS=""
 IUSE=""
 
 CAL3D_V="0.10.0"

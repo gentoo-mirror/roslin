@@ -13,7 +13,7 @@ HOMEPAGE="http://selectparks.net/~julian/levelhead"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS=""
 IUSE=""
 
 RDEPEND="=dev-games/openscenegraph-1.2

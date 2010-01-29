@@ -4,7 +4,7 @@
 
 EAPI="2"
 
-inherit qt4
+inherit qt4-r2
 
 MY_P="${P}-source"
 
@@ -23,13 +23,5 @@ RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${MY_P}
 
-PATCHES=( "${FILESDIR}/${PN}.pro.patch" )
-
-src_configure() {
-	eqmake4
-}
-
-src_install() {
-	emake INSTALL_ROOT="${D}" install || die "emake failed"
-	dodoc doc/CHANGELOG || die "dodoc failed"
-}
+PATCHES="${FILESDIR}/${PN}.pro.patch"
+DOCS="doc/CHANGELOG"

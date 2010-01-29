@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-inherit eutils
+inherit base
 
 DESCRIPTION="MadEdit is a Cross-Platform Text/Hex Editor written in C++&wxWidgets"
 HOMEPAGE="http://madedit.sourceforge.net/"
@@ -15,8 +15,3 @@ IUSE=""
 
 DEPEND=">=x11-libs/wxGTK-2.8"
 RDEPEND="${DEPEND}"
-
-src_install() {
-	emake DESTDIR="${D}" install \
-	    || die "emake install"
-}

@@ -27,12 +27,16 @@ DEPEND="${RDEPEND}
 
 S="${WORKDIR}/${PN}-r${PV}"
 
-src_install() {
-	emake DESTDIR="${D}" install || die "install failed"
-	dodoc AUTHORS.txt ChangeLog.txt NEWS.txt README.txt
-	prepgamesdirs
+src_configure() {
+	egamesconf \
+		$(use_with opengl) \
+		$(use_enable debug) \
+		|| die "econf failed"
 }
 
-src_configure() {
-	egamesconf $(use_with opengl) $(use_enable debug) || die "econf failed"
+src_install() {
+	emake DESTDIR="${D}" install \
+		|| die "install failed"
+	dodoc AUTHORS.txt ChangeLog.txt NEWS.txt README.txt
+	prepgamesdirs
 }

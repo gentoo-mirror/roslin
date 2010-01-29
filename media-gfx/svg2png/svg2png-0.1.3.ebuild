@@ -4,7 +4,7 @@
 
 EAPI=2
 
-inherit eutils
+inherit base
 
 DESCRIPTION="Render an SVG image to a PNG image (using cairo)"
 HOMEPAGE="http://cairographics.org/"
@@ -20,8 +20,4 @@ RDEPEND="${DEPEND}"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-as-needed.patch
-}
-
-src_install() {
-	emake DESTDIR="${D}" install || die "einstall failed"
 }

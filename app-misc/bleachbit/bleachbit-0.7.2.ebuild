@@ -39,8 +39,7 @@ src_install() {
 	insinto /usr/share/data/${PN}
 	doins -r cleaners
 
-	if use nls ;
-	then
+	if use nls ; then
 	    cd "${S}/po"
 	    emake DESTDIR="${D}" install || die "translation install failed"
 	fi

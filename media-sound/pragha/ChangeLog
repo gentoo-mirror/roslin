@@ -1,0 +1,10 @@
+# ChangeLog for media-sound/pragha
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*pragha-0.7.1.1 (29 Jan 2010)
+
+  29 Jan 2010; Michał Ziąbkowski <mziab@o2.pl> +pragha-0.7.1.1.ebuild,
+  +metadata.xml:
+  Added ebuild from bgo #295323.
+

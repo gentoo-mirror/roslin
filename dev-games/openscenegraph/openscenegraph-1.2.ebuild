@@ -14,7 +14,7 @@ SRC_URI="http://www.openscenegraph.org/downloads/stable_releases/OpenSceneGraph-
 
 LICENSE="OSGPL"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS=""
 IUSE="doc examples introspection producer gdal jasper truetype xine jpeg gif tiff png coin inventor glut"
 
 RDEPEND=">=dev-libs/openproducer-1.0.2

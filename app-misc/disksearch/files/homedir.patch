@@ -1,9 +1,0 @@
---- disksearch.orig	2007-07-04 12:37:20.000000000 +0200
-+++ disksearch	2007-07-04 12:21:46.000000000 +0200
-@@ -3,5 +3,5 @@
- # to modify the name of the Python executable (e.g. "python2.2").
- # Stefan Saring & Mathias Obst, 2004/11/04
- 
--cd /usr/local/share/disksearch
-+cd /usr/share/disksearch
- python disksearch.py $*

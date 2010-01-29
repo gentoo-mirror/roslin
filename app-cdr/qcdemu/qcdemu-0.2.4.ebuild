@@ -4,7 +4,7 @@
 
 EAPI=2
 
-inherit qt4
+inherit qt4-r2
 
 DESCRIPTION="A simple frontend for CDemu"
 HOMEPAGE="http://my.opera.com/mziab/blog/"
@@ -21,17 +21,10 @@ DEPEND="|| ( =x11-libs/qt-4.3*[dbus]
 RDEPEND="${DEPEND}
 	>=app-cdr/cdemud-1.2.0"
 
-src_compile() {
-	if use nls ;
-	then
-	lrelease ${PN}.pro || die "lrelease failed"
+DOCS="ChangeLog README"
+
+src_prepare() {
+	if use nls ; then
+	    lrelease ${PN}.pro || die "lrelease failed"
 	fi
-
-	eqmake4 || die "eqmake4 failed"
-	emake || die "emake failed"
-}
-
-src_install() {
-	emake INSTALL_ROOT="${D}" install || die "emake install failed"
-	dodoc ChangeLog README || die "dodoc failed"
 }

@@ -31,7 +31,7 @@ src_prepare() {
 }
 
 src_install() {
-	dobin ${PN}
+	dobin ${PN} || die
 
 	insinto /usr/share/${PN}/templates
 	doins templates/*.css \

@@ -25,6 +25,6 @@ src_compile() {
 
 src_install() {
 	emake prefix="${D}/usr/" || die "emake failed"
-	dodir "/usr/share/applications/"
-	cp "${FILESDIR}/disksearch.desktop" "${D}/usr/share/applications"
+	insinto "/usr/share/applications/"
+	doins "${FILESDIR}/disksearch.desktop" || die
 }

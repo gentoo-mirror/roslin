@@ -44,7 +44,7 @@ src_compile() {
 	emake || die
 }
 
-src_install () {
+src_install() {
 	dodir /usr/bin
 	dodir /usr/share/man
 	dodir /usr/share/doc

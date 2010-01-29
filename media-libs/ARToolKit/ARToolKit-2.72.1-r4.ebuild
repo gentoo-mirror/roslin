@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/artoolkit/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS=""
 IUSE="debug jpeg gstreamer dv ieee1394 doc examples utils"
 #openVRML"
 RDEPEND=""

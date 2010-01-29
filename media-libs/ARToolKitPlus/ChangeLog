@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/ARToolKitPlus
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+
+  29 Jan 2010; Piotr Szymaniak <lazy_bum@o2.pl> ARToolKitPlus-2.1.1.ebuild:
+  Masked. Depends on qt3.
 
   17 Mar 2009; Michał Ziąbkowski <mziab@o2.pl> ARToolKitPlus-2.1.1.ebuild:
   Added workaround for parallel make.

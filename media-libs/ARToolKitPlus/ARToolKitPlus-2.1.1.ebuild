@@ -12,7 +12,7 @@ SRC_URI="http://studierstube.icg.tu-graz.ac.at/handheld_ar/download/${PN}_${PV}.
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS=""
 IUSE=""
 
 RDEPEND="x11-libs/qt:3"

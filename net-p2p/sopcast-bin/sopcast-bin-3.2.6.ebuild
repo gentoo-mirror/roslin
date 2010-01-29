@@ -5,7 +5,6 @@
 inherit eutils
 
 MY_P="sp-auth"
-S="${WORKDIR}/${MY_P}"
 
 DESCRIPTION="SopCast free P2P Internet TV binary"
 LICENSE="SopCast-unknown-license"
@@ -23,9 +22,11 @@ RDEPEND="amd64? ( app-emulation/emul-linux-x86-compat )
 
 DEPEND="${RDEPEND}"
 
+S=${WORKDIR}/${MY_P}
+
 src_install() {
 	exeinto /opt/${PN}
-	doexe sp-sc-auth || die "doexe failed"
-	dosym /opt/${PN}/sp-sc-auth /usr/bin/sp-sc
+	newexe sp-sc-auth ${PN} || die "newexe failed"
+	dosym /opt/${PN}/${PN} /usr/bin/${PN}
 	dodoc Readme || die "dodoc failed"
 }

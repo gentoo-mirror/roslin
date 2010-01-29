@@ -14,9 +14,9 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64 ~ia64"
 IUSE="dbus nls"
 RDEPEND=">=dev-libs/glib-2.0
-		||	( =x11-libs/qt-4.3*[dbus?]
-			( x11-libs/qt-gui:4
-			dbus? ( x11-libs/qt-dbus:4 ) ) )"
+	|| ( =x11-libs/qt-4.3*[dbus?]
+	( x11-libs/qt-gui:4
+	    dbus? ( x11-libs/qt-dbus:4 ) ) )"
 DEPEND="${RDEPEND}"
 
 src_prepare() {
@@ -24,13 +24,9 @@ src_prepare() {
 }
 
 src_compile() {
-	QMAKE_FLAGS=""
-	if ! use dbus; then
-		QMAKE_FLAGS+="NO_DBUS=1 "
-	fi
-	if ! use nls; then
-		QMAKE_FLAGS+="NO_TRANSLATIONS=1 "
-	fi
+	local QMAKE_FLAGS
+	use dbus || QMAKE_FLAGS+="NO_DBUS=1 "
+	use nls || QMAKE_FLAGS+="NO_TRANSLATIONS=1"
 	eqmake4 $QMAKE_FLAGS || die "qmake failed"
 	emake || die "emake failed"
 }

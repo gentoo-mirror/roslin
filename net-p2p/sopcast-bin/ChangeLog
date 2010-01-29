@@ -2,6 +2,10 @@
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  29 Jan 2010; Piotr Szymaniak <lazy_bum@o2.pl> sopcast-bin-3.2.6.ebuild,
+  +metadata.xml:
+  Added metadata.xml to shut up repoman a bit. (;
+
   29 Jan 2010; Piotr Szymaniak <lazy_bum@o2.pl> sopcast-bin-3.2.6.ebuild:
   Replaced sp-sc with sopcast-bin.
 

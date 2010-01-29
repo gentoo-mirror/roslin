@@ -4,7 +4,7 @@
 
 EAPI="2"
 
-inherit eutils qt4
+inherit eutils qt4-r2
 
 DESCRIPTION="A QT4 program for calculating blood alcohol level"
 HOMEPAGE="http://piro.wikidot.com/promile-qt"
@@ -21,12 +21,7 @@ RDEPEND="${DEPEND}"
 
 src_prepare() {
 	epatch "${FILESDIR}/${P}-gcc44.patch"
-}
-
-src_compile() {
 	qmake -project -o ${PN}.pro || die "qmake failed"
-	eqmake4 || die "qmake4 failed"
-	emake || die "emake failed"
 }
 
 src_install() {

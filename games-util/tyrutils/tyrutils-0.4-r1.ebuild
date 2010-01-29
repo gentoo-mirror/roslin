@@ -2,6 +2,8 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
+EAPI=2
+
 inherit eutils games
 
 DESCRIPTION="light, vis, bspinfo, bsputil and qbsp tools for quake by tyrquake author"
@@ -13,13 +15,7 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
 
-DEPEND="sys-libs/glibc"
-RDEPEND="${DEPEND}"
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	epatch "${FILESDIR}"/${P}-max_tstack.patch || die "epatch failed"
 }
 

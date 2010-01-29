@@ -2,11 +2,13 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-inherit eutils games
+EAPI=2
+
+inherit games
 
 DESCRIPTION="Maps compiler with colored lighting and lots of other features."
 HOMEPAGE="http://icculus.org/twilight/darkplaces/"
-SRC_URI="http://icculus.org/twilight/darkplaces/files/${PN}build${PV}beta1.zip"
+SRC_URI="http://icculus.org/twilight/darkplaces/files/${PN}build${PV}.zip"
 
 LICENSE="blob"
 SLOT="0"
@@ -18,13 +20,10 @@ RDEPEND=""
 
 S=${WORKDIR}/${PN}
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	sed -i \
-		-e "s|UNIX_LDFLAGS=-lm|UNIX_LDFLAGS=-lm ${LDFLAGS}|" \
-		-e "s|-MD -Wall -O2|-Wall ${CFLAGS}|" \
+		-e "s.-lpthread -lm.-lpthread -lm ${LDFLAGS}." \
+		-e "s.-MD -Wall -g -ggdb.${CFLAGS}." \
 		Makefile || die "sed Makefile failed"
 }
 

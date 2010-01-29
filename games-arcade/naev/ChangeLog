@@ -2,14 +2,14 @@
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
-  29 Jan 2010; Piotr Szymaniak <lazy_bum@o2.pl> metadata.xml:
-  Version bump and *tons* of updated in the ebuild.
+  29 Jan 2010; Piotr Szymaniak <lazy_bum@o2.pl> ChangeLog, Manifest:
+  Some cleanup after bad commits.
 
 *naev-0.4.1 (29 Jan 2010)
 
   29 Jan 2010; Piotr Szymaniak <lazy_bum@o2.pl> -files/0.3.4-Makefile.patch,
-  -naev-0.3.4.ebuild, -naev-0.3.5.ebuild, +naev-0.4.1.ebuild:
-  Version bump and *tons* of updated in the ebuild.
+  -naev-0.3.4.ebuild, -naev-0.3.5.ebuild, +naev-0.4.1.ebuild, metadata.xml:
+  Version bump and *tons* of updates in the ebuild.
 
   02 Jan 2009; Piotr Szymaniak <lazy_bum@o2.pl> +naev-0.3.5.ebuild:
   WIP version bump.

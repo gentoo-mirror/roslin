@@ -4,7 +4,7 @@
 
 EAPI=2
 
-inherit eutils qt4
+inherit qt4-r2
 
 DESCRIPTION="QStarDict is a StarDict clone written with using Qt"
 HOMEPAGE="http://qstardict.ylsoftware.com/"
@@ -19,18 +19,11 @@ RDEPEND=">=dev-libs/glib-2.0
 	    dbus? ( x11-libs/qt-dbus:4 ) ) )"
 DEPEND="${RDEPEND}"
 
-src_prepare() {
-	epatch "${FILESDIR}/${P}-gcc44.patch"
-}
+PATCHES=("${FILESDIR}/${P}-gcc44.patch")
 
-src_compile() {
+src_configure() {
 	local QMAKE_FLAGS
 	use dbus || QMAKE_FLAGS+="NO_DBUS=1 "
 	use nls || QMAKE_FLAGS+="NO_TRANSLATIONS=1"
 	eqmake4 $QMAKE_FLAGS || die "qmake failed"
-	emake || die "emake failed"
-}
-
-src_install() {
-	emake INSTALL_ROOT="${D}" install || die "emake install filed"
 }

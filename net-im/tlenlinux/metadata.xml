@@ -7,6 +7,7 @@
   <name>Michał Ziąbkowski</name>
 </maintainer>
 <use>
+<flag name="phonon">Needed for audio/video support.</flag>
 <flag name="qt-static">Uses bundled Qt4 libs. May cause problems with Phonon support.</flag>
 </use>
 </pkgmetadata>

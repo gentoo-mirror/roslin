@@ -1,0 +1,35 @@
+diff --git a/mail.cpp b/mail.cpp
+index 19407b1..89bd117 100644
+--- a/mail.cpp
++++ b/mail.cpp
+@@ -43,8 +43,8 @@ extern "C" KADU_EXPORT int mail_init(bool firstLoad)
+ 	qRegisterMetaType<QAbstractSocket::SocketError>("QAbstractSocket::SocketError");
+ 
+ 	MainConfigurationWindow::registerUiFile(dataPath("kadu/modules/configuration/mail.ui"), mail);
+-	notification_manager->registerEvent("Mail", "New mail", CallbackNotRequired);
+-	notification_manager->registerEvent("MailError", "Connection error", CallbackNotRequired);
++	notification_manager->registerEvent("Mail", QT_TRANSLATE_NOOP("@default", "New mail"), CallbackNotRequired);
++	notification_manager->registerEvent("MailError", QT_TRANSLATE_NOOP("@default", "Mail connection error"), CallbackNotRequired);
+ 	return 0;
+ }
+ 
+diff --git a/translations/mail_pl.ts b/translations/mail_pl.ts
+index 53ce629..4fa9a49 100644
+--- a/translations/mail_pl.ts
++++ b/translations/mail_pl.ts
+@@ -244,4 +244,15 @@
+         <translation>Jesteś pewny że chcesz kontynuować połączenie?</translation>
+     </message>
+ </context>
++<context>
++    <name>@default</name>
++    <message>
++        <source>New mail</source>
++        <translation>Nowa poczta</translation>
++    </message>
++    <message>
++        <source>Mail connection error</source>
++        <translation>Błąd połączenia z pocztą</translation>
++    </message>
++</context>
+ </TS>

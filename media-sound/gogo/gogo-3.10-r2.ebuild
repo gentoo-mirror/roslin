@@ -1,11 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gogo/gogo-3.10-r1.ebuild,v 1.18 2006/06/16 21:24:28 flameeyes Exp $
+# $Header: $
 
 inherit eutils
-IUSE="debug"
 
-MY_PV=310pl3
+MY_PV="310pl3"
+
 DESCRIPTION="GoGo is an assembly optimized version of LAME 3.91"
 HOMEPAGE="http://member.nifty.ne.jp/~pen/free/gogo3/mct_gogo.htm"
 SRC_URI="http://member.nifty.ne.jp/~pen/free/gogo3/down/petit${MY_PV}.tgz"
@@ -13,12 +13,12 @@ SRC_URI="http://member.nifty.ne.jp/~pen/free/gogo3/down/petit${MY_PV}.tgz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 -ppc -sparc"
+IUSE="debug"
 
 DEPEND="dev-lang/nasm"
-
 RDEPEND=""
 
-S=${WORKDIR}/petit${MY_PV}
+S="${WORKDIR}/petit${MY_PV}"
 
 src_unpack() {
 	unpack ${A}

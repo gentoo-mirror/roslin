@@ -16,7 +16,7 @@ SRC_URI="http://www.nac.gov.pl/files/${MY_P}.tar"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
+IUSE="doc"
 
 DEPEND=">=dev-lang/python-2.5
 	dev-python/PyQt4
@@ -41,7 +41,7 @@ src_install() {
 
 	# install dev docs into separate dir
 	dohtml -r manual/*
-	dohtml -p api -r documentation/html/*
+	use doc && dohtml -p api -r documentation/html/*
 
 	# desktop entry
 	make_desktop_entry ${PN}

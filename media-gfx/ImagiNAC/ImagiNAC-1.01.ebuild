@@ -7,7 +7,7 @@ EAPI=2
 inherit eutils python
 
 MY_P="${PN}_${PV}_source"
-dir="/usr/$(get_libdir)/${PN}"
+IMAGINAC_DIR="/usr/$(get_libdir)/${PN}"
 
 DESCRIPTION="Utility for batch processing images"
 HOMEPAGE="http://www.nac.gov.pl/ImagiNAC1.01"
@@ -32,12 +32,12 @@ src_prepare() {
 
 src_install() {
 	# insert files into libdir
-	insinto ${dir}
+	insinto "${IMAGINAC_DIR}"
 	doins -r filesUtils graphicsUtils gui threadUtils *.py || die
 
 	# the main script needs extra work
-	fperms a+x "${dir}/Imaginac.py" || die
-	dosym "${dir}/Imaginac.py" /usr/bin/${PN}
+	fperms a+x "${IMAGINAC_DIR}/Imaginac.py" || die
+	dosym "${IMAGINAC_DIR}/Imaginac.py" /usr/bin/${PN}
 
 	# install dev docs into separate dir
 	dohtml -r manual/*
@@ -48,10 +48,10 @@ src_install() {
 }
 
 pkg_postinst() {
-	python_mod_optimize "${dir}"
+	python_mod_optimize "${IMAGINAC_DIR}"
 	python_need_rebuild
 }
 
 pkg_postrm() {
-	python_mod_cleanup "${dir}"
+	python_mod_cleanup "${IMAGINAC_DIR}"
 }

@@ -2,6 +2,10 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
+EAPI=2
+
+inherit eutils
+
 DESCRIPTION="Simple gtk+ painting program"
 HOMEPAGE="http://mtpaint.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
@@ -24,15 +28,19 @@ DEPEND="
 
 RDEPEND="${DEPEND}"
 
-src_compile() {
-	local myconf res conffile
+src_prepare() {
+	epatch "${FILESDIR}/${PN}-nostrip.patch"
+}
 
-	myconf="${myconf} --prefix=\$(DESTDIR)/usr"
+src_configure() {
+	local myconf
+
+	myconf="${myconf} --prefix=/usr"
 
 	# build international version
-	myconf="${myconf} intl --locale=\$(DESTDIR)/usr/share/locale"
+	myconf="${myconf} intl --locale=/usr/share/locale"
 	# build manuals
-	myconf="${myconf} man --mandir=\$(DESTDIR)/usr/share/man"
+	myconf="${myconf} man --mandir=/usr/share/man"
 
 	if use gif ; then
 		myconf="${myconf} GIF"
@@ -56,7 +64,6 @@ src_compile() {
 
 	# run configure
 	econf ${myconf} || die "configure failed"
-	emake || die "emake failed"
 }
 
 src_install() {

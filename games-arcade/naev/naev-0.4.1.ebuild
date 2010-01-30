@@ -14,36 +14,22 @@ SRC_URI="http://naev.googlecode.com/files/${P}.tar.bz2
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~x86"
-IUSE="openal sdl-sound"
+IUSE="debug openal +sdl-sound"
 
 RDEPEND="dev-libs/libxml2
 	media-libs/freetype
 	media-libs/sdl-image
-	media-libs/sdl-mixer
-	virtual/opengl"
+	virtual/opengl
+	sdl-sound? ( media-libs/sdl-mixer )
+	openal? ( media-libs/openal )"
 DEPEND="${RDEPEND}"
 
-#src_unpack() {
-#	unpack ${P}.tar.bz2
-#	cp "${DISTDIR}"/ndata-"${PV}" "${T}"
-#	cd "${S}"
-	# use system png library.
-#	sed -i \
-#		-e "s:<png.h>:<libpng12/png.h>:" src/opengl.c || die "sed failed"
-
-	# fix make system
-#	epatch "${FILESDIR}/${PV}-Makefile.patch"
-
-#	if ! use debug; then
-#		sed -i -e "s!DEBUG := 1!DEBUG := 0!" Makefile || die "sed debug failed"
-#	fi
-#}
-
 src_configure() {
+	# use --disable-shave for more verbose output
 	egamesconf \
+		$(use_enable debug) \
 		$(use_with openal) \
 		$(use_with sdl-sound sdlmixer) \
-		--disable-shave \
 		|| die "egamesconf failed"
 }
 

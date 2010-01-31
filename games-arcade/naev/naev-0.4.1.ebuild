@@ -13,7 +13,7 @@ SRC_URI="http://naev.googlecode.com/files/${P}.tar.bz2
 # the second stands for data.
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="debug openal +sdl-sound"
 
 RDEPEND="dev-libs/libxml2

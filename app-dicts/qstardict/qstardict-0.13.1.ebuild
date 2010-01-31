@@ -25,5 +25,5 @@ src_configure() {
 	local QMAKE_FLAGS
 	use dbus || QMAKE_FLAGS+="NO_DBUS=1 "
 	use nls || QMAKE_FLAGS+="NO_TRANSLATIONS=1"
-	eqmake4 $QMAKE_FLAGS || die "qmake failed"
+	eqmake4 $QMAKE_FLAGS
 }

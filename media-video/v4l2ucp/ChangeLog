@@ -2,6 +2,10 @@
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  31 Jan 2010; Piotr Szymaniak <lazy_bum@o2.pl> -v4l2ucp-2.0.0.ebuild,
+  v4l2ucp-2.0.2.ebuild:
+  Added missing depend (libv4l), removed cruft.
+
 *v4l2ucp-2.0.2 (30 Jan 2010)
 
   30 Jan 2010; Michał Ziąbkowski <mziab@o2.pl> +v4l2ucp-2.0.2.ebuild:

@@ -15,5 +15,6 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND="x11-libs/qt-gui:4"
+RDEPEND="media-libs/libv4l
+	x11-libs/qt-gui:4"
 DEPEND="${RDEPEND}"

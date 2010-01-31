@@ -4,7 +4,7 @@
 
 EAPI=2
 
-inherit eutils qt4 confutils games
+inherit eutils confutils games
 
 MY_PV=${PV/_beta/.b}
 

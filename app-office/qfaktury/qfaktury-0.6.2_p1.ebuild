@@ -4,7 +4,7 @@
 
 EAPI=2
 
-inherit eutils qt4
+inherit eutils qt4-r2
 
 MY_P="${P/_p/_}"
 
@@ -26,8 +26,6 @@ src_prepare() {
 	sed -e "s:/usr/local:/usr:g" \
 	    -i Settings.h \
 	    || die "sed failed"
-
-	eqmake4 || die "qmake failed"
 }
 
 src_install() {

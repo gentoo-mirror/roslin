@@ -17,7 +17,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND=">=x11-libs/qt-gui-4.4"
+DEPEND=">=x11-libs/qt-gui-4.4[qt3support]"
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${MY_P}"

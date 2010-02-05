@@ -11,7 +11,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND=">=net-im/pidgin-2.5.3"
+RDEPEND=">=net-im/pidgin-2.6.5"
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"

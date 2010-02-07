@@ -1,0 +1,11 @@
+# ChangeLog for media-libs/libpnglite
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*libpnglite-0.1.17 (07 Feb 2010)
+
+  07 Feb 2010; Piotr Szymaniak <lazy_bum@o2.pl> +files/0.1.17-Makefile,
+  +libpnglite-0.1.17.ebuild, +files/libpnglite-0.1.17-include_stdio.patch,
+  +files/libpnglite-0.1.17-system_zlib.patch, +metadata.xml:
+  New package (teeworlds dep) from rostov overlay.
+

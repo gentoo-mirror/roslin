@@ -1,0 +1,109 @@
+From 867ae42dc44aeceb318a2970d0634766d3c19845 Mon Sep 17 00:00:00 2001
+From: =?utf-8?q?Gon=C3=A9ri=20Le=20Bouder?= <goneri@rulezlan.org>
+Date: Sat, 22 Aug 2009 14:21:39 +0200
+Subject: [PATCH 1/2] load system lib if possible
+
+---
+ default.bam                |   30 +++++++++++++++++++++++++++---
+ src/engine/client/ec_gfx.c |    2 +-
+ src/engine/client/ec_snd.c |    2 +-
+ 3 files changed, 29 insertions(+), 5 deletions(-)
+
+Index: teeworlds-0.5.1/default.bam
+===================================================================
+--- teeworlds-0.5.1.orig/default.bam	2009-08-22 14:52:11.339935327 +0200
++++ teeworlds-0.5.1/default.bam	2009-08-22 14:52:16.143931013 +0200
+@@ -7,6 +7,8 @@
+ config:Add(OptFindCompiler())
+ config:Add(OptTestCompileC("stackprotector", "int main(){return 0;}", "-fstack-protector -fstack-protector-all"))
+ config:Add(OptFindLibrary("zlib", "zlib.h", false))
++config:Add(OptFindLibrary("pnglite", "pnglite.h", false))
++config:Add(OptFindLibrary("wavpack", "wavpack/wavpack.h", false))
+ config:Add(SDL.OptFind("sdl", true))
+ config:Finalize("config.bam")
+ 
+@@ -150,9 +152,31 @@
+ 		settings.cc.includes:Add("src/engine/external/zlib")
+ 	end
+ 
+-	-- build the small libraries
+-	wavpack = Compile(settings, Collect("src/engine/external/wavpack/*.c"))
+-	pnglite = Compile(settings, Collect("src/engine/external/pnglite/*.c"))
++	-- compile pnglite if needed
++	if config.pnglite.value == 1 then
++		settings.link.libs:Add("pnglite")
++		if config.pnglite.include_path then
++			settings.cc.includes:Add(config.pnglite.include_path)
++		end
++		pnglite = {}
++	else
++	    pnglite = Compile(settings, Collect("src/engine/external/pnglite/*.c"))
++		settings.cc.includes:Add("src/engine/external/pnglite")
++	end
++
++	-- compile wavpack if needed
++	if config.wavpack.value == 1 then
++		settings.link.libs:Add("wavpack")
++		if config.wavpack.include_path then
++			settings.cc.includes:Add(config.wavpack.include_path)
++		end
++		wavpack = {}
++	else
++	    wavpack = Compile(settings, Collect("src/engine/external/wavpack/*.c"))
++		settings.cc.includes:Add("src/engine/external")
++	end
++
++
+ 	
+ 	-- build game components
+ 	engine_settings = settings:Copy()
+Index: teeworlds-0.5.1/src/engine/client/ec_gfx.c
+===================================================================
+--- teeworlds-0.5.1.orig/src/engine/client/ec_gfx.c	2009-08-22 14:52:11.491926006 +0200
++++ teeworlds-0.5.1/src/engine/client/ec_gfx.c	2009-08-22 14:52:16.143931013 +0200
+@@ -18,7 +18,7 @@
+ #endif
+ 
+ #include <base/system.h>
+-#include <engine/external/pnglite/pnglite.h>
++#include <pnglite.h>
+ 
+ #include <engine/e_client_interface.h>
+ #include <engine/e_engine.h>
+Index: teeworlds-0.5.1/src/engine/client/ec_snd.c
+===================================================================
+--- teeworlds-0.5.1.orig/src/engine/client/ec_snd.c	2009-08-22 14:52:11.439913667 +0200
++++ teeworlds-0.5.1/src/engine/client/ec_snd.c	2009-08-22 14:52:16.143931013 +0200
+@@ -6,7 +6,7 @@
+ 
+ #include "SDL.h"
+ 
+-#include <engine/external/wavpack/wavpack.h>
++#include <wavpack/wavpack.h>
+ #include <stdio.h>
+ #include <stdlib.h>
+ #include <math.h>
+Index: teeworlds-0.5.1/src/tools/dilate.c
+===================================================================
+--- teeworlds-0.5.1.orig/src/tools/dilate.c	2009-08-22 14:52:11.403909861 +0200
++++ teeworlds-0.5.1/src/tools/dilate.c	2009-08-22 14:52:16.143931013 +0200
+@@ -1,6 +1,6 @@
+ /* copyright (c) 2007 magnus auvinen, see licence.txt for more info */
+ 
+-#include "../engine/external/pnglite/pnglite.c"
++#include <pnglite.h>
+ 
+ typedef struct pixel_t
+ {
+Index: teeworlds-0.5.1/src/tools/tileset_borderfix.c
+===================================================================
+--- teeworlds-0.5.1.orig/src/tools/tileset_borderfix.c	2009-08-22 14:52:11.367913739 +0200
++++ teeworlds-0.5.1/src/tools/tileset_borderfix.c	2009-08-22 14:52:25.220912175 +0200
+@@ -1,6 +1,6 @@
+ /* copyright (c) 2007 magnus auvinen, see licence.txt for more info */
+ 
+-#include "../engine/external/pnglite/pnglite.c"
++#include <pnglite.h>
+ 
+ typedef struct pixel_t
+ {

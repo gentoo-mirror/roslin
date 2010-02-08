@@ -1,0 +1,9 @@
+# ChangeLog for games-puzzle/krank
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*krank-07 (08 Feb 2010)
+
+  08 Feb 2010; Piotr Szymaniak <lazy_bum@o2.pl> +krank-07.ebuild:
+  Updated ebuild (from rostov overlay).
+

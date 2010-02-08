@@ -16,6 +16,8 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
 
+RDEPEND="dev-python/pygame"
+
 src_prepare() {
 	rm src/*.pyc
 	rm levels/*.pyc

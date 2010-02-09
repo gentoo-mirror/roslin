@@ -1,6 +1,12 @@
 # ChangeLog for games-emulation/bsnes
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 
+*bsnes-0.060 (09 Feb 2010)
+
+  09 Feb 2010; Michał Ziąbkowski <mziab@o2.pl> -bsnes-0.059.ebuild,
+  -bsnes-0.059_p2.ebuild, -bsnes-0.059_p6.ebuild, +bsnes-0.060.ebuild:
+  Bumped. Now packaged like snapshots. Removed cruft.
+
 *bsnes-0.059_p6 (25 Jan 2010)
 
   25 Jan 2010; Michał Ziąbkowski <mziab@o2.pl> +bsnes-0.059_p6.ebuild:

@@ -11,7 +11,7 @@ MY_PV="${MY_PV/_p/r0}"
 
 DESCRIPTION="A Super Famicom/SNES emulator written with absolute accuracy in mind"
 HOMEPAGE="http://byuu.org/bsnes/"
-SRC_URI="http://bsnes.googlecode.com/files/${PN}_v${MY_PV}.zip"
+SRC_URI="http://bsnes.googlecode.com/files/${PN}_v${MY_PV}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -25,13 +25,13 @@ RDEPEND="ao? ( media-libs/libao )
 	xv? ( x11-libs/libXv )
 	opengl? ( virtual/opengl )
 	sdl? ( media-libs/libsdl[joystick] )
-	snesfilter? ( !dev-games/snesfilter )
+	snesfilter? ( !dev-games/snesfilter
+		sys-devel/gcc[openmp] )
 	>=x11-libs/qt-gui-4.4
 	snesreader? ( !dev-games/snesreader )
 	sgb? ( !dev-games/supergameboy )"
 
-DEPEND="${DEPEND}
-	app-arch/unzip"
+DEPEND="${DEPEND}"
 
 S="${WORKDIR}/src"
 

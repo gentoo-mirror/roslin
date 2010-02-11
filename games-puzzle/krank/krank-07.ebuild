@@ -14,7 +14,7 @@ IUSE=""
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 
 RDEPEND="dev-python/pygame"
 

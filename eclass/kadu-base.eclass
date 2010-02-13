@@ -21,16 +21,14 @@ NAME="${PN#*-}"
 
 S="${WORKDIR}/kadu"
 
-kadu-disable_all()
-{
+kadu-disable_all() {
 	# Disable all modules, emoticons, icons and sounds
 	# so we have a clean state
 	sed -e "s:^\(.*\)=[my]$:\1=n:g" \
 	    -i .config || die "sed failed"
 }
 
-kadu-base_src_configure()
-{
+kadu-base_src_configure() {
 	# Filter compiler flags
 	filter-flags -fno-rtti
 
@@ -43,10 +41,9 @@ kadu-base_src_configure()
 		-DENABLE_AUTDOWNLOAD:BOOL=NO"
 
 	cmake-utils_src_configure
-}	
+}
 
-kadu-base_src_compile()
-{
+kadu-base_src_compile() {
 	case ${EAPI} in
 	2)
 		;;
@@ -58,8 +55,7 @@ kadu-base_src_compile()
 	cmake-utils_src_compile
 }
 
-kadu-base_src_install()
-{
+kadu-base_src_install() {
 	cmake-utils_src_install
 
 	# if not core, delete docs

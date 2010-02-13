@@ -22,23 +22,22 @@ RDEPEND=">=net-im/kadu-core-${MIN_VER}
 SRC_URI="http://www.kadu.net/download/stable/kadu-${K_PV}.tar.bz2
 	${MOD_URI}"
 
-kadu-mod_src_unpack()
-{
+kadu-mod_src_unpack() {
 	# Unpack the sources
 	unpack ${A}
 	cd "${S}"
-	
+
 	# Disable everything else
 	kadu-disable_all
 
 	# Enable module
 	echo module_${NAME}=m >> "${S}/.config"
-	
+
 	# Remove other subdirectories
 	sed -e "/add_subdirectory/d" -i "${S}/CMakeLists.txt" \
 	    || die "sed failed"
 	echo "add_subdirectory (modules)" >>"${S}/CMakeLists.txt"
-	
+
 	# If external module, move its sources to kadu/modules
 	[ "${MOD_TYPE}" = "ext" ] && mv -f \
 	    "${WORKDIR}/${NAME}" "${WORKDIR}/kadu/modules"

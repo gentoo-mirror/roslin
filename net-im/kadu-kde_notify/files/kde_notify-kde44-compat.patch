@@ -1,0 +1,59 @@
+From 6aa4d9da9c6d48a3f029e180e6a9786ac76f6fa4 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Micha=C5=82=20Zi=C4=85bkowski?= <mziab@o2.pl>
+Date: Sat, 13 Feb 2010 19:07:14 +0100
+Subject: [PATCH] Fixed compatibility with KDE 4.4.
+
+---
+ kde_notify.cpp |    9 ++++++++-
+ kde_notify.h   |    1 +
+ 2 files changed, 9 insertions(+), 1 deletions(-)
+
+diff --git a/kde_notify.cpp b/kde_notify.cpp
+index bd5dd31..ceeb8c2 100644
+--- a/modules/kde_notify/kde_notify.cpp
++++ b/modules/kde_notify/kde_notify.cpp
+@@ -52,6 +52,8 @@ KdeNotify::KdeNotify(QObject *parent, const char *name) : Notifier(parent, name)
+ 	stripHTML.setPattern(QString::fromLatin1("<.*>"));
+ 	stripHTML.setMinimal(true);
+ 
++	has_kde44 = false;
++
+ 	knotify = new QDBusInterface("org.kde.VisualNotifications",
+ 			"/VisualNotifications", "org.kde.VisualNotifications");
+ 
+@@ -61,6 +63,7 @@ KdeNotify::KdeNotify(QObject *parent, const char *name) : Notifier(parent, name)
+ 		delete (knotify);
+ 		knotify = new QDBusInterface("org.freedesktop.Notifications",
+ 				"/org/freedesktop/Notifications", "org.freedesktop.Notifications");
++		has_kde44 = true;
+ 	}
+ 
+ 	knotify->connection().connect(knotify->service(), knotify->path(), knotify->interface(), 
+@@ -110,7 +113,11 @@ void KdeNotify::notify(Notification *notification)
+ 	QList<QVariant> args;
+ 	args.append("Kadu");
+ 	args.append(0U);
+-	args.append("");
++
++	/* the new spec doesn't have this */
++	if (!has_kde44)
++		args.append("");
++
+ 	args.append(icons_manager->iconPath(notification->icon()));
+ 
+ 	if (((notification->type() == "NewMessage") || (notification->type() == "NewChat")) && config_file.readBoolEntry("KDENotify", "ShowContentMessage"))
+diff --git a/kde_notify.h b/kde_notify.h
+index edd9baf..b9a0a62 100644
+--- a/modules/kde_notify/kde_notify.h
++++ b/modules/kde_notify/kde_notify.h
+@@ -43,6 +43,7 @@ private:
+ 	QRegExp stripHTML;
+ 	QMap <unsigned int, UserListElements> idMap;
+ 	QQueue<unsigned int> idQueue;
++	bool has_kde44;
+ 
+ 	void createDefaultConfiguration();
+ 
+-- 
+1.6.4.4
+

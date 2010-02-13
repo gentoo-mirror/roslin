@@ -6,7 +6,7 @@ MIN_VER="0.6.5.4"
 
 inherit kadu-base
 
-MOD_DEPEND=">=net-im/kadu-anonymous_check-${PV}
+MOD_DEPEND=">=net-im/kadu-anonymous_check-0.6.5.3
 	    >=net-im/kadu-antistring-${PV}
 	    >=net-im/kadu-auto_hide-${PV}
 	    >=net-im/kadu-autostatus-${PV}

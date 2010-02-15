@@ -2,6 +2,13 @@
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*exmap-0.10-r5 (15 Feb 2010)
+
+  15 Feb 2010; Michał Ziąbkowski <mziab@o2.pl> +exmap-0.10-r5.ebuild,
+  +files/exmap-0.10-fix64bit.patch, +files/exmap-0.10-gcc44.patch:
+  Bumped with patches by Lubos Lunak which fix amd64 compat and build with
+  GCC 4.4.
+
   07 Jan 2010; Michał Ziąbkowski <mziab@o2.pl> exmap-0.10-r4.ebuild:
   Fixed invalid copyright line.
 

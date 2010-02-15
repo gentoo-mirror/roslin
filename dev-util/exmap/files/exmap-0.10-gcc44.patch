@@ -1,0 +1,9 @@
+--- ./jutil/TestRunner.cpp.sav	2006-09-28 18:52:25.000000000 +0200
++++ ./jutil/TestRunner.cpp	2009-06-15 20:55:26.000000000 +0200
+@@ -1,5 +1,6 @@
+ #include "TestRunner.hpp"
+ #include "Pcre.hpp"
++#include <stdio.h>
+ 
+ using namespace std;
+ 

@@ -19,13 +19,14 @@ RDEPEND="media-libs/libsdl
 	media-libs/ftgl
 	media-libs/freetype
 	media-libs/libpng
-	dev-ruby/rake
 	virtual/opengl
 	dev-libs/boost
+	dev-ruby/rake
 	media-libs/glew
 	media-libs/freeglut
 	media-libs/sdl-mixer"
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	app-arch/unzip"
 
 S=${WORKDIR}/${PN}/src
 
@@ -43,7 +44,6 @@ src_prepare(){
 	epatch "${FILESDIR}"/disable-netplay-${PV}.patch
 	sed -i -e "s:resource/:"${GAMES_DATADIR}"/"${PN}"/resource/:" -i app.cc
 	sed -i -e "s:resource/:"${GAMES_DATADIR}"/"${PN}"/resource/:" -i resource.cc
-
 }
 
 src_compile() {
@@ -61,7 +61,7 @@ src_install() {
 
 	newicon "${FILESDIR}"/"${PN}.png" "${PN}.png"
 	make_desktop_entry "${PN}" "${PN}"
-	dodoc "${WORKDIR}"/${PN}/copyrights || die
+	dodoc "${WORKDIR}"/${PN}/copyrights || die "dodoc failed"
 	prepgamesdirs
 }
 

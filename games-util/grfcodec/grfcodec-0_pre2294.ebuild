@@ -23,7 +23,7 @@ DEPEND="app-arch/upx"
 RDEPEND="${DEPEND}"
 
 src_prepare() {
-	epatch "${FILESDIR}/${PN}-${MY_PV}-gcc4.4.patch"
+#	epatch "${FILESDIR}/${PN}-${MY_PV}-gcc4.4.patch"
 
 	cat > Makefile.local <<-__EOF__
 		CC = $(tc-getCC)

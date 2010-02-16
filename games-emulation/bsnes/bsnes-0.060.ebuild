@@ -25,11 +25,8 @@ RDEPEND="ao? ( media-libs/libao )
 	xv? ( x11-libs/libXv )
 	opengl? ( virtual/opengl )
 	sdl? ( media-libs/libsdl[joystick] )
-	snesfilter? ( !dev-games/snesfilter
-		sys-devel/gcc[openmp] )
-	>=x11-libs/qt-gui-4.4
-	snesreader? ( !dev-games/snesreader )
-	sgb? ( !dev-games/supergameboy )"
+	snesfilter? ( sys-devel/gcc[openmp] )
+	>=x11-libs/qt-gui-4.4"
 
 DEPEND="${DEPEND}"
 

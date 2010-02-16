@@ -41,6 +41,7 @@ src_install() {
 	dodoc History.txt Readme.txt || die "dodoc failed"
 
 	make_desktop_entry ${PN} "Kega Fusion"
+	doicon "${FILESDIR}/kega-fusion.png" || die
 
 	prepgamesdirs
 }

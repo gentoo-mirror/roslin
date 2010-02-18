@@ -45,12 +45,6 @@ src_unpack() {
 	ESVN_PROJECT="tkabber" subversion_export
 }
 
-src_compile() {
-	echo
-	einfo "Nothing to compile."
-	echo
-}
-
 src_install() {
 	dodir /usr/share/tkabber
 	cd "${S}"/tkabber/ || die "Can't chdir to ${S}/tkabber/"

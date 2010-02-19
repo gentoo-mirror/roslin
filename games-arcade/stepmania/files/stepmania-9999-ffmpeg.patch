@@ -1,8 +1,8 @@
-Index: autoconf/m4/video.m4
-===================================================================
---- autoconf/m4/video.m4 (revision 28234)
-+++ autoconf/m4/video.m4 (working copy)
-@@ -18,51 +18,18 @@
+diff --git a/autoconf/m4/video.m4 b/autoconf/m4/video.m4
+index 6db8e4f..f4f1554 100644
+--- a/autoconf/m4/video.m4
++++ b/autoconf/m4/video.m4
+@@ -18,51 +18,18 @@ if test "$with_ffmpeg" != "no"; then
  		AC_CHECK_FUNC([avcodec_init], have_libavcodec=yes, have_libavcodec=no)
  		LIBS="$with_ffmpeg/lib/libavformat.a $LIBS"
  		AC_CHECK_FUNC([guess_format], have_libavformat=yes, have_libavformat=no)
@@ -58,10 +58,10 @@ Index: autoconf/m4/video.m4
  	have_ffmpeg=yes
  	AC_DEFINE(HAVE_FFMPEG, 1, [FFMPEG support available])
  else
-Index: src/arch/ArchHooks/ArchHooks_Unix.cpp
-===================================================================
---- src/arch/ArchHooks/ArchHooks_Unix.cpp (revision 28234)
-+++ src/arch/ArchHooks/ArchHooks_Unix.cpp (working copy)
+diff --git a/src/arch/ArchHooks/ArchHooks_Unix.cpp b/src/arch/ArchHooks/ArchHooks_Unix.cpp
+index c6f50b0..0457485 100644
+--- a/src/arch/ArchHooks/ArchHooks_Unix.cpp
++++ b/src/arch/ArchHooks/ArchHooks_Unix.cpp
 @@ -18,7 +18,9 @@
  #endif
  
@@ -73,7 +73,7 @@ Index: src/arch/ArchHooks/ArchHooks_Unix.cpp
  #endif
  
  static bool IsFatalSignal( int signal )
-@@ -217,7 +219,7 @@
+@@ -217,7 +219,7 @@ void ArchHooks_Unix::DumpDebugInfo()
  	LOG->Info( "Runtime library: %s", LibcVersion().c_str() );
  	LOG->Info( "Threads library: %s", ThreadsVersion().c_str() );
  #if defined(HAVE_FFMPEG)
@@ -82,11 +82,11 @@ Index: src/arch/ArchHooks/ArchHooks_Unix.cpp
  #endif
  }
  
-Index: src/arch/MovieTexture/MovieTexture_FFMpeg.cpp
-===================================================================
---- src/arch/MovieTexture/MovieTexture_FFMpeg.cpp (revision 28234)
-+++ src/arch/MovieTexture/MovieTexture_FFMpeg.cpp (working copy)
-@@ -11,7 +11,10 @@
+diff --git a/src/arch/MovieTexture/MovieTexture_FFMpeg.cpp b/src/arch/MovieTexture/MovieTexture_FFMpeg.cpp
+index a25a764..2eab63e 100644
+--- a/src/arch/MovieTexture/MovieTexture_FFMpeg.cpp
++++ b/src/arch/MovieTexture/MovieTexture_FFMpeg.cpp
+@@ -12,7 +12,10 @@
  
  namespace avcodec
  {
@@ -98,7 +98,7 @@ Index: src/arch/MovieTexture/MovieTexture_FFMpeg.cpp
  };
  
  #if defined(_MSC_VER) && !defined(XBOX)
-@@ -35,6 +38,8 @@
+@@ -36,6 +39,8 @@ namespace avcodec
  	#pragma comment(lib, "ffmpeg/lib/libgcc.a")
  #endif
  
@@ -107,7 +107,7 @@ Index: src/arch/MovieTexture/MovieTexture_FFMpeg.cpp
  static struct AVPixelFormat_t
  {
  	int bpp;
-@@ -270,6 +275,7 @@
+@@ -271,6 +276,7 @@ private:
  	avcodec::AVStream *m_pStream;
  	avcodec::AVFrame m_Frame;
  	avcodec::PixelFormat m_AVTexfmt; /* PixelFormat of output surface */
@@ -115,7 +115,7 @@ Index: src/arch/MovieTexture/MovieTexture_FFMpeg.cpp
  
  	float m_fPTS;
  	avcodec::AVFormatContext *m_fctx;
-@@ -311,6 +317,11 @@
+@@ -312,6 +318,11 @@ MovieDecoder_FFMpeg::~MovieDecoder_FFMpeg()
  		avcodec::av_free_packet( &m_Packet );
  		m_iCurrentPacketOffset = -1;
  	}
@@ -127,7 +127,7 @@ Index: src/arch/MovieTexture/MovieTexture_FFMpeg.cpp
  }
  
  void MovieDecoder_FFMpeg::Init()
-@@ -322,6 +333,7 @@
+@@ -323,6 +334,7 @@ void MovieDecoder_FFMpeg::Init()
  	m_fPTS = -1;
  	m_iFrameNumber = -1; /* decode one frame and you're on the 0th */
  	m_fTimestampOffset = 0;
@@ -135,7 +135,7 @@ Index: src/arch/MovieTexture/MovieTexture_FFMpeg.cpp
  
  	if( m_iCurrentPacketOffset != -1 )
  	{
-@@ -513,9 +525,24 @@
+@@ -514,9 +526,24 @@ void MovieDecoder_FFMpeg::GetFrame( RageSurface *pSurface )
  	pict.data[0] = (unsigned char *) pSurface->pixels;
  	pict.linesize[0] = pSurface->pitch;
  
@@ -163,21 +163,16 @@ Index: src/arch/MovieTexture/MovieTexture_FFMpeg.cpp
  }
  
  static avcodec::AVStream *FindVideoStream( avcodec::AVFormatContext *m_fctx )
-@@ -596,11 +623,11 @@
+@@ -610,7 +637,7 @@ int URLRageFile_write( avcodec::URLContext *h, unsigned char *buf, int size )
  	return f->Write( buf, size );
  }
  
 -avcodec::offset_t URLRageFile_seek( avcodec::URLContext *h, avcodec::offset_t pos, int whence )
 +int64_t URLRageFile_seek( avcodec::URLContext *h, int64_t pos, int whence )
  {
- 	RageFile *f = (RageFile *) h->priv_data;
+ 	RageFileBasic *f = (RageFileBasic *) h->priv_data;
  	if( whence == AVSEEK_SIZE )
--		return f->Tell();
-+		return f->GetFileSize();
- 
- 	if( whence != SEEK_SET && whence != SEEK_CUR && whence != SEEK_END )
- 		return -1;
-@@ -623,6 +650,8 @@
+@@ -637,6 +664,8 @@ static avcodec::URLProtocol RageProtocol =
  	URLRageFile_write,
  	URLRageFile_seek,
  	URLRageFile_close,
@@ -186,10 +181,10 @@ Index: src/arch/MovieTexture/MovieTexture_FFMpeg.cpp
  	NULL
  };
  
-Index: src/arch/MovieTexture/MovieTexture_Theora.cpp
-===================================================================
---- src/arch/MovieTexture/MovieTexture_Theora.cpp (revision 28234)
-+++ src/arch/MovieTexture/MovieTexture_Theora.cpp (working copy)
+diff --git a/src/arch/MovieTexture/MovieTexture_Theora.cpp b/src/arch/MovieTexture/MovieTexture_Theora.cpp
+index d08f62b..029afea 100644
+--- a/src/arch/MovieTexture/MovieTexture_Theora.cpp
++++ b/src/arch/MovieTexture/MovieTexture_Theora.cpp
 @@ -9,7 +9,10 @@
  
  namespace avcodec
@@ -202,7 +197,7 @@ Index: src/arch/MovieTexture/MovieTexture_Theora.cpp
  };
  
  // #define HAVE_THEORAEXP
-@@ -22,6 +25,8 @@
+@@ -22,6 +25,8 @@ namespace avcodec
  #pragma comment(lib, OGG_LIB_DIR "theora_static.lib")
  #endif
  
@@ -211,7 +206,7 @@ Index: src/arch/MovieTexture/MovieTexture_Theora.cpp
  class MovieDecoder_Theora: public MovieDecoder
  {
  public:
-@@ -47,7 +52,8 @@
+@@ -47,7 +52,8 @@ private:
  	void Init();
  	RString ProcessHeaders();
  	int ReadPage( ogg_page *pOggPage, RString &sError, bool bInitializing );
@@ -221,7 +216,7 @@ Index: src/arch/MovieTexture/MovieTexture_Theora.cpp
  
  	RageFile m_File;
  
-@@ -61,6 +67,7 @@
+@@ -61,6 +67,7 @@ private:
  
  	avcodec::PixelFormat m_InputPixFmt; /* PixelFormat of YUV input surface */
  	avcodec::PixelFormat m_OutputPixFmt; /* PixelFormat of RGB output surface */
@@ -229,7 +224,7 @@ Index: src/arch/MovieTexture/MovieTexture_Theora.cpp
  };
  
  MovieDecoder_Theora::MovieDecoder_Theora()
-@@ -71,11 +78,17 @@
+@@ -71,11 +78,17 @@ MovieDecoder_Theora::MovieDecoder_Theora()
  	memset( &m_TheoraComment, 0, sizeof(m_TheoraComment) );
  	memset( &m_OggStream, 0, sizeof(m_OggStream) );
  	memset( &m_TheoraState, 0, sizeof(m_TheoraState) );
@@ -247,7 +242,7 @@ Index: src/arch/MovieTexture/MovieTexture_Theora.cpp
  }
  
  void MovieDecoder_Theora::Init()
-@@ -276,7 +289,30 @@
+@@ -276,7 +289,30 @@ RageSurface *MovieDecoder_Theora::CreateCompatibleSurface( int iTextureWidth, in
  	return RageMovieTextureDriver_FFMpeg::AVCodecCreateCompatibleSurface( iTextureWidth, iTextureHeight, bPreferHighColor, *ConvertValue<int>(&m_OutputPixFmt), fmtout );
  }
  
@@ -279,7 +274,7 @@ Index: src/arch/MovieTexture/MovieTexture_Theora.cpp
  {
  	yuv_buffer yuv;
  	theora_decode_YUVout( (theora_state *) &m_TheoraState, &yuv );
-@@ -303,9 +339,7 @@
+@@ -303,9 +339,7 @@ void MovieDecoder_Theora::ConvertToSurface( RageSurface *pSurface ) const
  	RGBOut.data[0] = (unsigned char *) pSurface->pixels;
  	RGBOut.linesize[0] = pSurface->pitch;
  
@@ -290,7 +285,7 @@ Index: src/arch/MovieTexture/MovieTexture_Theora.cpp
  }
  
  float MovieDecoder_Theora::GetSourceAspectRatio() const
-@@ -655,9 +689,7 @@
+@@ -655,9 +689,7 @@ void MovieDecoder_Theora::DecodeStripe( theora_ycbcr_buffer yuv, int yfrag0, int
  		RGBOut.data[0] += RGBOut.linesize[0] * yfrag0;
  
  		int iRows = (yfrag_end-yfrag0) + 1;

@@ -30,11 +30,15 @@ src_prepare() {
 		-e "/const char \* DATAPATH_ARG/a\\\tUtil\:\:setDataPath(\"${dir}\");" \
 		src/main-menu.cpp || die "sed main.cpp"
 
+	sed -i \
+		-e "s! -Werror!!" CMakeLists.txt || die "sed -Werror failed"
+
+
 	epatch "${FILESDIR}/${PV}-gcc44.patch"
 }
 
 src_install() {
-	dogamesbin ../${PN}_build/bin/${PN} || die "dogamesbin failed"
+	dogamesbin ../${P}_build/bin/${PN} || die "dogamesbin failed"
 
 	insinto "${dir}"
 	doins -r data/* || die "doins failed"

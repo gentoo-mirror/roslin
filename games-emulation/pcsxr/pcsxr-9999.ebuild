@@ -16,7 +16,7 @@ SRC_URI=""
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS=""
-IUSE="alsa opengl"
+IUSE="alsa opengl pulseaudio"
 
 RDEPEND="x11-libs/gtk+:2
 	gnome-base/libglade
@@ -27,7 +27,8 @@ RDEPEND="x11-libs/gtk+:2
 	x11-libs/libXtst
 	alsa? ( media-libs/alsa-lib )
 	opengl? ( virtual/opengl
-	x11-libs/libXxf86vm )"
+	x11-libs/libXxf86vm )
+	pulseaudio? ( >=media-sound/pulseaudio-0.9.16 )"
 
 DEPEND="${RDEPEND}
 	!games-emulation/pcsx
@@ -55,6 +56,7 @@ src_configure() {
 	egamesconf \
 		$(use_enable alsa) \
 		$(use_enable opengl) \
+		$(use_enable pulseaudio) \
 		|| die "econf failed"
 }
 

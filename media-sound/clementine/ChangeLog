@@ -1,0 +1,11 @@
+# ChangeLog for media-sound/clementine
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*clementine-0.1 (23 Feb 2010)
+
+  23 Feb 2010; Michał Ziąbkowski <mziab@o2.pl> +clementine-0.1.ebuild,
+  +files/clementine-0.1-desktop.patch, +files/clementine-0.1-install.patch,
+  +metadata.xml:
+  New ebuild.
+

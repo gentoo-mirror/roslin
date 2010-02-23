@@ -63,8 +63,7 @@ src_install() {
 	# Copy data
 	doins -r data/* || die
 	# Install desktop file and icon
-	insinto /usr/share/applications/
-	doins tlen.desktop || die
+	domenu tlen.desktop || die
 	newicon data/icon.png ${PN}.png || die
 	# Install mime type
 	insinto /usr/share/mime/packages/

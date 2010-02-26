@@ -16,10 +16,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 LICENSE="GPL-2"
 
-DEPEND="dev-libs/libxml2
-	dev-libs/libxslt
-	dev-python/pygtk
-	gnome-base/libglade"
+DEPEND="dev-libs/libxml2[python]
+	dev-libs/libxslt[python]
+	dev-python/pygtk"
 
 RDEPEND="${DEPEND}"
 

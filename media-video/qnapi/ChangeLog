@@ -1,6 +1,15 @@
-# ChangeLog for app-text/qnapi
+# ChangeLog for media-video/qnapi
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 # $Header
+
+  26 Feb 2010; Michał Ziąbkowski <mziab@o2.pl> -qnapi-0.1.6_rc2.ebuild:
+  Removed old ebuild.
+
+*qnapi-0.1.6_rc2-r1 (25 Feb 2010)
+
+  25 Feb 2010; Michał Ziąbkowski <mziab@o2.pl> +qnapi-0.1.6_rc2-r1.ebuild,
+  +files/qnapi-0.1.6_rc2-gentoo.patch:
+  Bumped with a port of the sunrise ebuild with some minor changes.
 
   29 Jan 2010; Michał Ziąbkowski <mziab@o2.pl> qnapi-0.1.6_rc2.ebuild:
   Ported to qt4-r2.

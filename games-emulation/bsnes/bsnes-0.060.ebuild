@@ -26,7 +26,7 @@ RDEPEND="ao? ( media-libs/libao )
 	opengl? ( virtual/opengl )
 	sdl? ( media-libs/libsdl[joystick] )
 	snesfilter? ( sys-devel/gcc[openmp] )
-	>=x11-libs/qt-gui-4.4"
+	>=x11-libs/qt-gui-4.5:4"
 
 DEPEND="${DEPEND}"
 

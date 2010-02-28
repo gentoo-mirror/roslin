@@ -2,6 +2,13 @@
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*kmquake2-0.19.2-r1 (26 Feb 2010)
+
+  26 Feb 2010; Piotr Szymaniak <lazy_bum@o2.pl> +kmquake2-0.19.2-r1.ebuild,
+  +files/kmquake2-0.19.2-jpeg8.patch:
+  Updated ebuild to work with new jpeg. Thanks to Luis M Wesolowski and
+  Sergey Kondakov.
+
   20 Jan 2010; Piotr Szymaniak <lazy_bum@o2.pl> kmquake2-0.19.2.ebuild:
   Fixed some typos. ;)
 

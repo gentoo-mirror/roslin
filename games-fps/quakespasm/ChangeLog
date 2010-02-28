@@ -2,6 +2,9 @@
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  28 Feb 2010; Piotr Szymaniak <lazy_bum@o2.pl> quakespasm-0.85.1.ebuild:
+  Fixed strip sed.
+
 *quakespasm-0.85.1 (28 Feb 2010)
 
   28 Feb 2010; Piotr Szymaniak <lazy_bum@o2.pl> +quakespasm-0.85.1.ebuild,

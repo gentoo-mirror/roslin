@@ -31,7 +31,7 @@ src_prepare() {
 		common.c || die "sed failed"
 
 	sed -i \
-		-e "s!STRIP_CMD := strip!STRIP_CMD := echo!" \
+		-e "s!STRIP ?= strip!STRIP ?= echo!" \
 		Makefile || die "sed failed"
 }
 

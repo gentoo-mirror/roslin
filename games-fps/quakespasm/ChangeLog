@@ -1,0 +1,11 @@
+# ChangeLog for games-fps/quakespasm
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*quakespasm-0.85.1 (28 Feb 2010)
+
+  28 Feb 2010; Piotr Szymaniak <lazy_bum@o2.pl> +quakespasm-0.85.1.ebuild,
+  +files/quakespasm-0.85.1-save-in-userdir.patch:
+  New package. Hardmasked for testing, still has some problems with per user
+  settings/savegames/etc.
+

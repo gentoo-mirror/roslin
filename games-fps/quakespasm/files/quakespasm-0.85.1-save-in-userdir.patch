@@ -1,0 +1,221 @@
+diff --git a/Quake/common.c b/Quake/common.c
+index 9a758c9..c4eaece 100644
+--- a/Quake/common.c
++++ b/Quake/common.c
+@@ -1340,6 +1340,7 @@ typedef struct
+ 
+ char    com_cachedir[MAX_OSPATH];
+ char    com_gamedir[MAX_OSPATH];
++char    com_basedir[MAX_OSPATH];
+ 
+ typedef struct searchpath_s
+ {
+@@ -1784,25 +1785,31 @@ pack_t *COM_LoadPackFile (char *packfile)
+ COM_AddGameDirectory -- johnfitz -- modified based on topaz's tutorial
+ =================
+ */
+-void COM_AddGameDirectory (char *dir)
++static void
++COM_AddGameDirectory (char *base, char *dir)
+ {
+ 	int i;
+ 	searchpath_t *search;
+ 	pack_t *pak;
+ 	char pakfile[MAX_OSPATH];
+ 
+-	strcpy (com_gamedir, dir);
++//	strcpy (com_gamedir, dir);
++       if (!base)
++               return;
++
++       strcpy(com_gamedir, va("%s/%s", base, dir));
++
+ 
+ 	// add the directory to the search path
+ 	search = Z_Malloc(sizeof(searchpath_t));
+-	strcpy (search->filename, dir);
++	strcpy (search->filename, com_gamedir);
+ 	search->next = com_searchpaths;
+ 	com_searchpaths = search;
+ 
+ 	// add any pak files in the format pak0.pak pak1.pak, ...
+ 	for (i = 0; ; i++)
+ 	{
+-		sprintf (pakfile, "%s/pak%i.pak", dir, i);
++		sprintf (pakfile, "%s/pak%i.pak", com_gamedir, i);
+ 		pak = COM_LoadPackFile (pakfile);
+ 		if (!pak)
+ 			break;
+@@ -1843,21 +1850,24 @@ COM_InitFilesystem
+ */
+ void COM_InitFilesystem () //johnfitz -- modified based on topaz's tutorial
+ {
++	char *home;
+ 	int i, j;
+-	char basedir[MAX_OSPATH];
++//	char basedir[MAX_OSPATH];
+ 	searchpath_t *search;
+ 
++    home = getenv("HOME");
++
+ 	i = COM_CheckParm ("-basedir");
+ 	if (i && i < com_argc-1)
+-		strcpy (basedir, com_argv[i+1]);
++		strcpy (com_basedir, com_argv[i+1]);
+ 	else
+-		strcpy (basedir, host_parms.basedir);
++		strcpy (com_basedir, host_parms.basedir);
+ 
+-	j = strlen (basedir);
++	j = strlen (com_basedir);
+ 	if (j > 0)
+ 	{
+-		if ((basedir[j-1] == '\\') || (basedir[j-1] == '/'))
+-		basedir[j-1] = 0;
++        if ((com_basedir[j-1] == '\\') || (com_basedir[j-1] == '/'))
++            com_basedir[j-1] = 0;
+ 	}
+ 
+ 	i = COM_CheckParm ("-cachedir");
+@@ -1874,8 +1884,11 @@ void COM_InitFilesystem () //johnfitz -- modified based on topaz's tutorial
+ 		com_cachedir[0] = 0;
+ 
+ 	// start up with GAMENAME by default (id1)
+-	COM_AddGameDirectory (va("%s/"GAMENAME, basedir) );
+-	strcpy (com_gamedir, va("%s/"GAMENAME, basedir));
++//	COM_AddGameDirectory (va("%s/"GAMENAME, basedir) );
++//	strcpy (com_gamedir, va("%s/"GAMENAME, basedir));
++    COM_AddGameDirectory(com_basedir, GAMENAME);
++    COM_AddGameDirectory(home, ".quakespasm/" GAMENAME);
++
+ 
+ 	if (!fitzmode)
+ 	{ /* QuakeSpasm customization: */
+@@ -1887,18 +1900,24 @@ void COM_InitFilesystem () //johnfitz -- modified based on topaz's tutorial
+ 	com_nummissionpacks = 0;
+ 	if (COM_CheckParm ("-rogue"))
+ 	{
+-		COM_AddGameDirectory (va("%s/rogue", basedir) );
+-		com_nummissionpacks++;
++//		COM_AddGameDirectory (va("%s/rogue", basedir) );
++//		com_nummissionpacks++;
++		COM_AddGameDirectory(com_basedir, "rogue");
++		COM_AddGameDirectory(home, ".quakespasm/rogue");
+ 	}
+ 	if (COM_CheckParm ("-hipnotic"))
+ 	{
+-		COM_AddGameDirectory (va("%s/hipnotic", basedir) );
+-		com_nummissionpacks++;
++//		COM_AddGameDirectory (va("%s/hipnotic", basedir) );
++//		com_nummissionpacks++;
++		COM_AddGameDirectory(com_basedir, "hipnotic");
++		COM_AddGameDirectory(home, ".quakespasm/hipnotic");
+ 	}
+ 	if (COM_CheckParm ("-quoth"))
+ 	{
+-		COM_AddGameDirectory (va("%s/quoth", basedir) );
+-		com_nummissionpacks++;
++//		COM_AddGameDirectory (va("%s/quoth", basedir) );
++//		com_nummissionpacks++;
++		COM_AddGameDirectory(com_basedir, "quoth");
++		COM_AddGameDirectory(home, ".quakespasm/quoth");
+ 	}
+ 	//johnfitz
+ 
+@@ -1906,7 +1925,15 @@ void COM_InitFilesystem () //johnfitz -- modified based on topaz's tutorial
+ 	if (i && i < com_argc-1)
+ 	{
+ 		com_modified = true;
+-		COM_AddGameDirectory (va("%s/%s", basedir, com_argv[i+1]));
++//		COM_AddGameDirectory (va("%s/%s", basedir, com_argv[i+1]));
++		COM_AddGameDirectory(com_basedir, com_argv[i + 1]);
++		COM_AddGameDirectory(home, va(".quakespasm/%s", com_argv[i + 1]));
++	}
++
++	/* If home is available, create the game directory */
++	if (home) {
++		COM_CreatePath(com_gamedir);
++		Sys_mkdir(com_gamedir);
+ 	}
+ 
+ 	i = COM_CheckParm ("-path");
+diff --git a/Quake/common.h b/Quake/common.h
+index c84856d..6e74b17 100644
+--- a/Quake/common.h
++++ b/Quake/common.h
+@@ -169,6 +169,7 @@ char	*va(char *format, ...);
+ extern int com_filesize;
+ struct cache_user_s;
+ 
++extern	char	com_basedir[MAX_OSPATH];
+ extern	char	com_gamedir[MAX_OSPATH];
+ 
+ void COM_WriteFile (char *filename, void *data, int len);
+diff --git a/Quake/gl_screen.c b/Quake/gl_screen.c
+index 1ebc225..5d2b44c 100644
+--- a/Quake/gl_screen.c
++++ b/Quake/gl_screen.c
+@@ -740,7 +740,7 @@ void SCR_ScreenShot_f (void)
+ // find a file name to save it to
+ 	for (i=0; i<10000; i++)
+ 	{
+-		sprintf (tganame, "fitz%04i.tga", i);
++		sprintf (tganame, "spasm%04i.tga", i);
+ 		sprintf (checkname, "%s/%s", com_gamedir, tganame);
+ 		if (Sys_FileTime(checkname) == -1)
+ 			break;	// file doesn't exist
+diff --git a/Quake/sys_sdl.c b/Quake/sys_sdl.c
+index b240c5a..376bcfe 100644
+--- a/Quake/sys_sdl.c
++++ b/Quake/sys_sdl.c
+@@ -20,9 +20,17 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+ 
+ */
+ 
+-#include "quakedef.h"
++#include <sys/types.h>
++#ifdef _WIN32
++#include <io.h>
++#include <direct.h>
++#else
++#include <sys/stat.h>
++#endif
+ #include "errno.h"
+ 
++#include "quakedef.h"
++
+ #define CONSOLE_ERROR_TIMEOUT	60.0	/* # of seconds to wait on Sys_Error running */
+ qboolean		isDedicated;
+ static qboolean		sc_return_on_enter = false;
+@@ -42,7 +50,7 @@ int findhandle (void)
+ 	return -1;
+ }
+ 
+-int filelength (FILE *f)
++int Sys_filelength (FILE *f)
+ {
+ 	int pos;
+ 	int end;
+@@ -72,7 +80,7 @@ int Sys_FileOpenRead (char *path, int *hndl)
+ 	{
+ 		sys_handles[i] = f;
+ 		*hndl = i;
+-		retval = filelength(f);
++		retval = Sys_filelength(f);
+ 	}
+ 
+ 	return retval;
+@@ -131,6 +139,13 @@ int Sys_FileTime (char *path)
+ 
+ void Sys_mkdir (char *path)
+ {
++#ifdef _WIN32
++	int rc = _mkdir (path);
++#else
++	int rc = mkdir (path, 0777);
++#endif
++	if (rc != 0 && errno != EEXIST)
++		Sys_Error("Unable to create directory %s", path);
+ }
+ 
+ 

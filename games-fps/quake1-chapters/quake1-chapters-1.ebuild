@@ -10,10 +10,10 @@ MOD_MAP="start"
 
 inherit games games-mod
 
-SRC_KELL="http://kell.leveldesign.org/${MOD_DIR}"
+SRC_KELL="http://kell.quaddicted.com/${MOD_DIR}"
 
 DESCRIPTION="Contract Revoked: Lost Chapters - Quake 1 single-player pack"
-HOMEPAGE="http://kell.leveldesign.org/"
+HOMEPAGE="http://kell.quaddicted.com/"
 SRC_URI="${SRC_ADDICT}/${MOD_FILENAME}
 	${SRC_KELL}/${MOD_FILENAME}"
 IUSE=""

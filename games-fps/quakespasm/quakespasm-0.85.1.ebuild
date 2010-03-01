@@ -9,11 +9,10 @@ inherit games
 DESCRIPTION="A *nix firendly FitzQuake with new features."
 HOMEPAGE="http://quakespasm.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tgz"
-#https://sourceforge.net/projects/quakespasm/files/Source/quakespasm-0.85.1.tgz/download
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 IUSE="cdinstall debug demo"
 
 DEPEND="cdinstall? ( games-fps/quake1-data )
@@ -24,7 +23,8 @@ RDEPEND="${DEPEND}"
 S=${WORKDIR}/${P}/Quake
 
 src_prepare() {
-	epatch "${FILESDIR}"/"${P}"-save-in-userdir.patch
+	epatch "${FILESDIR}"/"${P}"-missing_mkdir.patch
+	epatch "${FILESDIR}"/"${P}"-userdir.patch
 
 	sed -i \
 		-e "s!basedir, host_parms.basedir!basedir, \"${GAMES_DATADIR}/quake1\"!" \

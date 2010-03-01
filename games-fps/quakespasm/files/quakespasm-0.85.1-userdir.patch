@@ -1,0 +1,191 @@
+Index: Quake/gl_screen.c
+===================================================================
+--- Quake/gl_screen.c	(revision 91)
++++ Quake/gl_screen.c	(working copy)
+@@ -740,7 +740,7 @@
+ // find a file name to save it to
+ 	for (i=0; i<10000; i++)
+ 	{
+-		sprintf (tganame, "fitz%04i.tga", i);
++		sprintf (tganame, "spasm%04i.tga", i);
+ 		sprintf (checkname, "%s/%s", com_gamedir, tganame);
+ 		if (Sys_FileTime(checkname) == -1)
+ 			break;	// file doesn't exist
+Index: Quake/common.c
+===================================================================
+--- Quake/common.c	(revision 91)
++++ Quake/common.c	(working copy)
+@@ -1263,21 +1263,34 @@
+ ============
+ va
+ 
+-does a varargs printf into a temp buffer, so I don't need to have
+-varargs versions of all text functions.
++does a varargs printf into a temp buffer. cycles between
++4 different static buffers. the number of buffers cycled
++is defined in VA_NUM_BUFFS.
+ FIXME: make this buffer size safe someday
+ ============
+ */
++#define	VA_NUM_BUFFS	4
++#define	VA_BUFFERLEN	1024
++
++static char *get_va_buffer(void)
++{
++	static char va_buffers[VA_NUM_BUFFS][VA_BUFFERLEN];
++	static int buffer_idx = 0;
++	buffer_idx = (buffer_idx + 1) & (VA_NUM_BUFFS - 1);
++	return va_buffers[buffer_idx];
++}
++
+ char *va(char *format, ...)
+ {
+ 	va_list		argptr;
+-	static char	string[1024];
++	char		*va_buf;
+ 
++	va_buf = get_va_buffer ();
+ 	va_start (argptr, format);
+-	vsprintf (string, format, argptr);
++	vsprintf (va_buf, format, argptr);
+ 	va_end (argptr);
+ 
+-	return string;
++	return va_buf;
+ }
+ 
+ 
+@@ -1341,6 +1354,7 @@
+ 
+ char    com_cachedir[MAX_OSPATH];
+ char    com_gamedir[MAX_OSPATH];
++char    com_basedir[MAX_OSPATH];
+ 
+ typedef struct searchpath_s
+ {
+@@ -1785,25 +1799,27 @@
+ COM_AddGameDirectory -- johnfitz -- modified based on topaz's tutorial
+ =================
+ */
+-void COM_AddGameDirectory (char *dir)
++void COM_AddGameDirectory (char *base, char *dir)
+ {
+ 	int i;
+ 	searchpath_t *search;
+ 	pack_t *pak;
+ 	char pakfile[MAX_OSPATH];
+ 
+-	strcpy (com_gamedir, dir);
++	if (!base)
++		return;
++	strcpy(com_gamedir, va("%s/%s", base, dir));
+ 
+ 	// add the directory to the search path
+ 	search = Z_Malloc(sizeof(searchpath_t));
+-	strcpy (search->filename, dir);
++	strcpy (search->filename, com_gamedir);
+ 	search->next = com_searchpaths;
+ 	com_searchpaths = search;
+ 
+ 	// add any pak files in the format pak0.pak pak1.pak, ...
+ 	for (i = 0; ; i++)
+ 	{
+-		sprintf (pakfile, "%s/pak%i.pak", dir, i);
++		sprintf (pakfile, "%s/pak%i.pak", com_gamedir, i);
+ 		pak = COM_LoadPackFile (pakfile);
+ 		if (!pak)
+ 			break;
+@@ -1845,20 +1861,24 @@
+ void COM_InitFilesystem () //johnfitz -- modified based on topaz's tutorial
+ {
+ 	int i, j;
+-	char basedir[MAX_OSPATH];
++	char *home;
+ 	searchpath_t *search;
+ 
++	home = getenv("HOME");
++	if (home)
++		Sys_mkdir (va("%s/.quakespasm", home));
++
+ 	i = COM_CheckParm ("-basedir");
+ 	if (i && i < com_argc-1)
+-		strcpy (basedir, com_argv[i+1]);
++		strcpy (com_basedir, com_argv[i+1]);
+ 	else
+-		strcpy (basedir, host_parms.basedir);
++		strcpy (com_basedir, host_parms.basedir);
+ 
+-	j = strlen (basedir);
++	j = strlen (com_basedir);
+ 	if (j > 0)
+ 	{
+-		if ((basedir[j-1] == '\\') || (basedir[j-1] == '/'))
+-		basedir[j-1] = 0;
++		if ((com_basedir[j-1] == '\\') || (com_basedir[j-1] == '/'))
++			com_basedir[j-1] = 0;
+ 	}
+ 
+ 	i = COM_CheckParm ("-cachedir");
+@@ -1875,8 +1895,8 @@
+ 		com_cachedir[0] = 0;
+ 
+ 	// start up with GAMENAME by default (id1)
+-	COM_AddGameDirectory (va("%s/"GAMENAME, basedir) );
+-	strcpy (com_gamedir, va("%s/"GAMENAME, basedir));
++	COM_AddGameDirectory(com_basedir, GAMENAME);
++	COM_AddGameDirectory(home, ".quakespasm/" GAMENAME);
+ 
+ 	if (!fitzmode)
+ 	{ /* QuakeSpasm customization: */
+@@ -1888,17 +1908,20 @@
+ 	com_nummissionpacks = 0;
+ 	if (COM_CheckParm ("-rogue"))
+ 	{
+-		COM_AddGameDirectory (va("%s/rogue", basedir) );
++		COM_AddGameDirectory(com_basedir, "rogue");
++		COM_AddGameDirectory(home, ".quakespasm/rogue");
+ 		com_nummissionpacks++;
+ 	}
+ 	if (COM_CheckParm ("-hipnotic"))
+ 	{
+-		COM_AddGameDirectory (va("%s/hipnotic", basedir) );
++		COM_AddGameDirectory(com_basedir, "hipnotic");
++		COM_AddGameDirectory(home, ".quakespasm/hipnotic");
+ 		com_nummissionpacks++;
+ 	}
+ 	if (COM_CheckParm ("-quoth"))
+ 	{
+-		COM_AddGameDirectory (va("%s/quoth", basedir) );
++		COM_AddGameDirectory(com_basedir, "quoth");
++		COM_AddGameDirectory(home, ".quakespasm/quoth");
+ 		com_nummissionpacks++;
+ 	}
+ 	//johnfitz
+@@ -1907,9 +1930,14 @@
+ 	if (i && i < com_argc-1)
+ 	{
+ 		com_modified = true;
+-		COM_AddGameDirectory (va("%s/%s", basedir, com_argv[i+1]));
++		COM_AddGameDirectory(com_basedir, com_argv[i + 1]);
++		COM_AddGameDirectory(home, va(".quakespasm/%s", com_argv[i + 1]));
+ 	}
+ 
++	/* If home is available, create the game directory */
++	if (home)
++		Sys_mkdir(com_gamedir);
++
+ 	i = COM_CheckParm ("-path");
+ 	if (i)
+ 	{
+Index: Quake/common.h
+===================================================================
+--- Quake/common.h	(revision 91)
++++ Quake/common.h	(working copy)
+@@ -173,6 +173,7 @@
+ extern int com_filesize;
+ struct cache_user_s;
+ 
++extern	char	com_basedir[MAX_OSPATH];
+ extern	char	com_gamedir[MAX_OSPATH];
+ 
+ void COM_WriteFile (char *filename, void *data, int len);

@@ -8,10 +8,10 @@ MOD_USES_TYRQUAKE=y
 
 inherit games games-mod
 
-SRC_KELL="http://kell.leveldesign.org"
+SRC_KELL="http://kell.quaddicted.com/"
 
 DESCRIPTION="Contract Revoked - Quake 1 single-player pack"
-HOMEPAGE="http://kell.leveldesign.org/"
+HOMEPAGE="http://kell.quaddicted.com/"
 SRC_URI="${SRC_ADDICT}/${MOD_FILENAME}
 	${SRC_KELL}/${MOD_FILENAME}"
 IUSE=""

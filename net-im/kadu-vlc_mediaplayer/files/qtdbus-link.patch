@@ -1,9 +1,0 @@
-diff -Nur kadu.old/modules/vlc_mediaplayer/CMakeLists.txt kadu/modules/vlc_mediaplayer/CMakeLists.txt
---- kadu.old/modules/vlc_mediaplayer/CMakeLists.txt	2009-05-15 16:40:51.000000000 +0200
-+++ kadu/modules/vlc_mediaplayer/CMakeLists.txt	2009-09-16 00:42:12.599013838 +0200
-@@ -20,3 +20,5 @@
- else (vlc_mediaplayer STREQUAL STATIC)
- 	install (TARGETS vlc_mediaplayer DESTINATION ${MODULEDIR})
- endif (vlc_mediaplayer STREQUAL STATIC)
-+
-+target_link_libraries (vlc_mediaplayer ${QT_QTDBUS_LIBRARY})

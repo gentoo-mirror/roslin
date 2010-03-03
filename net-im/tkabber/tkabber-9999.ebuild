@@ -4,7 +4,7 @@
 
 inherit subversion eutils
 
-ESVN_REPO_URI="http://svn.xmpp.ru/repos/tkabber/trunk"
+ESVN_REPO_URI="http://svn.xmpp.ru/repos/tkabber/trunk/tkabber"
 ESVN_PROJECT="tkabber"
 ESVN_RESTRICT="export"
 
@@ -45,24 +45,44 @@ src_unpack() {
 	ESVN_PROJECT="tkabber" subversion_export
 }
 
-src_prepare() {
-	sed -i \
-		-e "s:svn\[get_snapshot \[fullpath ChangeLog\]\]:svn-$(get_commit_date):" \
-		|| die "Failed to fixate date of commit in tkabber.tcl"
+src_compile() {
+	echo
+	einfo "Nothing to compile."
+	echo
 }
 
 src_install() {
-	doins *.tcl || die "doins failed"
+	dodir /usr/share/tkabber
+	cd "${S}"/tkabber/ || die "Can't chdir to ${S}/tkabber/"
+
+	local x
+	local DOCSDIRS="doc examples contrib"
+
+	for x in *; do
+		[[ -d "${x}" ]] \
+			&& ! hasq "${x}" "${DOCSDIRS}" \
+			&& (cp -R "${x}" "${D}/usr/share/tkabber" \
+			|| die "Can't copy ${x} to ${D}/usr/share/tkabber")
+	done
+
+	cp *.tcl "${D}/usr/share/tkabber" \
+		|| die "Can't copy tcl files to ${D}/usr/share/tkabber"
+
+	dosed "s:svn\[get_snapshot \[fullpath ChangeLog\]\]:svn-$(get_commit_date):" \
+	/usr/share/tkabber/tkabber.tcl \
+		|| die "Failed to fixate date of commit in tkabber.tcl"
 
 	cat <<-EOF > tkabber
 	#!/bin/sh
 	exec wish /usr/share/tkabber/tkabber.tcl -name tkabber
 	EOF
 
-	dobin tkabber || die "dobin failed"
+	dobin tkabber
 
-	dodoc -r doc examples contrib || die "dodoc failed"
-	dodoc AUTHORS ChangeLog INSTALL README || die "dodoc failed"
+	dodoc AUTHORS ChangeLog INSTALL README \
+		|| die "Can't install tkabber documentation"
+	cp -R ${DOCSDIRS} ${D}/usr/share/doc/${PF} \
+		|| die "Can't copy ${DOCSDIRS} to ${D}/usr/share/doc/${PF}"
 
 	doicon "${FILESDIR}"/${PN/-svn}.png
 	make_desktop_entry ${PN/-svn} Tkabber ${PN/-svn}
@@ -82,12 +102,12 @@ src_install() {
 			local EXISTING_THIRD_PARTY_TKABBER_PLUGINS="$(dirlist "${THIRD_PARTY_TKABBER_PLUGINS_DIR}")"
 		fi
 
-#		cd "${S}" || die "Can't chdir to ${S}"
-#
-#		plugins_verify \
-#			$(use plugins && echo official) \
-#			$(use 3rd-party-plugins && echo 3rd-party)
-#
+		cd "${S}" || die "Can't chdir to ${S}"
+
+		plugins_verify \
+			$(use plugins && echo official) \
+			$(use 3rd-party-plugins && echo 3rd-party)
+
 		if use plugins; then
 			plugins_install official \
 				|| die "Failed to install official plugins"
@@ -104,7 +124,7 @@ src_install() {
 		newdoc ChangeLog ChangeLog.plugins
 		newdoc COPYING COPYING.plugins
 
-#		cd "${S}" || die "Can't chdir to ${S}"
+		cd "${S}" || die "Can't chdir to ${S}"
 
 		cat <<-EOF > 99tkabber
 		TKABBER_SITE_PLUGINS="${TKABBER_SITE_PLUGINS}"

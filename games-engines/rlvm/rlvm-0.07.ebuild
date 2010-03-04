@@ -16,7 +16,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="media-libs/libsdl[opengl]
-	>=dev-libs/boost-1.35
+	>=dev-libs/boost-1.40
 	media-libs/glew
 	media-libs/sdl-image[jpeg,png]
 	media-libs/sdl-ttf
@@ -31,11 +31,6 @@ S="${WORKDIR}/eglaysher-rlvm-55b0a78"
 src_prepare() {
 	# custom flag goodness
 	epatch "${FILESDIR}/${PN}-custom-flags.patch"
-
-	# make it build with 1.35 at our own discretion
-	sed -e "s:'1.40':'1.35':" \
-	-i SConstruct \
-	|| die "sed failed"
 }
 
 src_compile() {

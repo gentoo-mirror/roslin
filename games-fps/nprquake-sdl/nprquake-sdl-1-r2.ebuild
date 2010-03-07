@@ -8,7 +8,7 @@ inherit eutils games
 
 DESCRIPTION="quake1 utilizing a hand drawn engine"
 HOMEPAGE="http://www.cs.wisc.edu/graphics/Gallery/NPRQuake/ http://www.tempestgames.com/ryan/"
-SRC_URI="http://www.geocities.com/coolguywithgun/NPRQuake.tar.gz"
+SRC_URI="http://www.quaddicted.com/engines/files/NPRQuake.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"

@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/polly-b-gone
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+
+  07 Mar 2010; Piotr Szymaniak <lazy_bum@o2.pl> polly-b-gone-1.0.ebuild:
+  Changed tinyxml category.
 
   22 Jul 2009; Piotr Szymaniak <lazy_bum@o2.pl> +files/1.0-Makefile.patch,
   +polly-b-gone-1.0.ebuild, +files/1.0-libs.patch, +files/polly-b-gone.png:

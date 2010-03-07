@@ -12,7 +12,7 @@ SRC_URI="http://binaries.openttd.org/releases/${PV/_rc/-RC}/${P/_rc/-RC}-source.
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="alsa debug dedicated iconv icu +opengfx +opensfx +png +truetype zlib"
+IUSE="alsa debug dedicated iconv icu lzo +opengfx +opensfx +png +truetype zlib"
 RESTRICT="test"
 
 DEPEND="
@@ -26,9 +26,9 @@ DEPEND="
 		)
 	)
 	iconv? ( virtual/libiconv )
+	lzo? ( dev-libs/lzo:2 )
 	png? ( media-libs/libpng )
-	zlib? ( sys-libs/zlib )
-	dev-libs/lzo:2"
+	zlib? ( sys-libs/zlib )"
 RDEPEND="${DEPEND}
 	!dedicated? (
 		alsa? ( media-sound/alsa-utils )
@@ -51,6 +51,7 @@ src_configure() {
 		myopts="${myopts}
 			$(use_with truetype freetype)
 			$(use_with icu)
+			$(use_with lzo liblzo2)
 			--with-sdl"
 	fi
 	if use png || { use !dedicated && use truetype; } || use zlib ; then

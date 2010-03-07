@@ -2,6 +2,9 @@
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 # $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/ChangeLog,v 1.80 2009/12/09 17:03:30 mr_bones_ Exp $
 
+  07 Mar 2010; Piotr Szymaniak <lazy_bum@o2.pl> openttd-1.0.0_rc2.ebuild:
+  Changed lzo dependency logic.
+
 *openttd-1.0.0_rc2 (07 Mar 2010)
 
   07 Mar 2010; Piotr Szymaniak <lazy_bum@o2.pl> -openttd-1.0.0_beta1.ebuild,

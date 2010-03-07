@@ -2,6 +2,12 @@
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*grfcodec-0_pre2306 (07 Mar 2010)
+
+  07 Mar 2010; Piotr Szymaniak <lazy_bum@o2.pl> -grfcodec-0_pre2294.ebuild,
+  +grfcodec-0_pre2306.ebuild:
+  Bumped.
+
   16 Feb 2010; Piotr Szymaniak <lazy_bum@o2.pl>
   -files/grfcodec-r2247-gcc4.4.patch, grfcodec-0_pre2294.ebuild:
   Removed patch.

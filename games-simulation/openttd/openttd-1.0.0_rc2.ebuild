@@ -7,8 +7,7 @@ inherit eutils games
 
 DESCRIPTION="OpenTTD is a clone of Transport Tycoon Deluxe"
 HOMEPAGE="http://www.openttd.org/"
-SRC_URI="http://binaries.openttd.org/releases/${PV/_/-}/${P/_/-}-source.tar.bz2"
-S=${WORKDIR}/${P/_/-}
+SRC_URI="http://binaries.openttd.org/releases/${PV/_rc/-RC}/${P/_rc/-RC}-source.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -28,7 +27,8 @@ DEPEND="
 	)
 	iconv? ( virtual/libiconv )
 	png? ( media-libs/libpng )
-	zlib? ( sys-libs/zlib )"
+	zlib? ( sys-libs/zlib )
+	dev-libs/lzo:2"
 RDEPEND="${DEPEND}
 	!dedicated? (
 		alsa? ( media-sound/alsa-utils )
@@ -36,6 +36,8 @@ RDEPEND="${DEPEND}
 PDEPEND="
 	opengfx? ( games-misc/opengfx )
 	opensfx? ( games-misc/opensfx )"
+
+S=${WORKDIR}/${P/_rc/-RC}
 
 src_configure() {
 	local myopts

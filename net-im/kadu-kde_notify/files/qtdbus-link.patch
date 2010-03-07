@@ -1,8 +1,0 @@
-diff -Nur kadu.old/modules/kde_notify/CMakeLists.txt kadu/modules/kde_notify/CMakeLists.txt
---- kadu.old/modules/kde_notify/CMakeLists.txt	2009-08-28 20:49:42.000000000 +0200
-+++ kadu/modules/kde_notify/CMakeLists.txt	2009-09-16 00:38:31.871013846 +0200
-@@ -38,3 +38,4 @@
- 	install (TARGETS kde_notify DESTINATION ${MODULEDIR})
- endif (kde_notify STREQUAL STATIC)
- 
-+target_link_libraries (kde_notify ${QT_QTDBUS_LIBRARY})

@@ -26,7 +26,7 @@ RDEPEND="media-libs/libsdl[opengl]
 DEPEND="${RDEPEND}
 	dev-util/scons"
 
-S="${WORKDIR}/eglaysher-rlvm-55b0a78"
+S="${WORKDIR}/eglaysher-rlvm-7fea9c6"
 
 src_prepare() {
 	# custom flag goodness

@@ -12,7 +12,7 @@ SLOT="0"
 RESTRICT="primaryuri"
 
 # If no version was requested, default to this one
-MIN_VER="${MIN_VER:-0.6.5.3}"
+MIN_VER="${MIN_VER:-0.6.5.4}"
 
 K_PV="${PV/_p/-}"
 K_PV="${K_PV/_/-}"

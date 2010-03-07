@@ -1,5 +1,6 @@
-# Copyright 1999-2010 [v-fox] ftp://dfx.homeftp.net/services/GENTOO/v-fox
-# Distributed under the terms of the GNU General Public License v2 or later
+# Copyright 1999-2010 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: $
 
 EAPI="2"
 
@@ -64,7 +65,7 @@ pkg_setup() {
 		echo
 		die "no video renderer chosen"
 	fi
-	
+
 	if ! use alsa && ! use oss && ! use sdl && ! use dedicated; then
 		echo
 		eerror "you should choose at least one audio output:"
@@ -83,7 +84,6 @@ pkg_setup() {
 		epause 5
 	fi
 
-
 	# avoiding segfaults
 	if ! use custom-cflags; then
 			strip-flags
@@ -99,8 +99,6 @@ pkg_setup() {
 }
 
 src_prepare() {
-	cd "${S}"
-
 	# Fix jpeg8 bug - http://bugs.gentoo.org/show_bug.cgi?id=150865
 	epatch "${FILESDIR}"/${PN}-${PV}-jpeg8.patch
 

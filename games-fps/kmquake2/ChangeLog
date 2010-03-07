@@ -3,6 +3,9 @@
 # $Header: $
 
   07 Mar 2010; Michał Ziąbkowski <mziab@o2.pl> kmquake2-0.19.2-r1.ebuild:
+  Fixed whitespace and other repoman reported errors.
+
+  07 Mar 2010; Michał Ziąbkowski <mziab@o2.pl> kmquake2-0.19.2-r1.ebuild:
   Moved EAPI before inherit.
 
 *kmquake2-0.19.2-r1 (26 Feb 2010)

@@ -3,6 +3,9 @@
 # $Header: $
 
   07 Mar 2010; Piotr Szymaniak <lazy_bum@o2.pl> nprquake-sdl-1-r2.ebuild:
+  Updated depends. Dropped keywords as it segfaults for me.
+
+  07 Mar 2010; Piotr Szymaniak <lazy_bum@o2.pl> nprquake-sdl-1-r2.ebuild:
   Updated SRC_URI, Shub-Niggurath bless quaddicted.
 
   22 Jan 2009; Michał Ziąbkowski <mziab@o2.pl> Manifest:

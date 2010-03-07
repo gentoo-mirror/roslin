@@ -12,12 +12,14 @@ SRC_URI="http://www.quaddicted.com/engines/files/NPRQuake.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS=""
 IUSE="cdinstall"
 
 DEPEND="media-libs/libsdl
-	sys-libs/glibc"
+	sys-libs/glibc
+	x11-libs/libXxf86dga"
 RDEPEND="${DEPEND}
+	virtual/opengl
 	cdinstall? ( games-fps/quake1-data )"
 
 S=${WORKDIR}/NPRQuake
@@ -52,7 +54,7 @@ src_prepare() {
 
 	# some cleanup
 	rm -r build/id1 build/textures/CVS \
-		build/quake build/tex* || die "rm failed"
+		build/quake || die "rm failed"
 
 	edos2unix build/colors.txt
 }

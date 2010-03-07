@@ -15,10 +15,11 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="cdinstall debug demo"
 
-DEPEND="cdinstall? ( games-fps/quake1-data )
-	demo? ( games-fps/quake1-demodata )
-	media-libs/sdl-net"
-RDEPEND="${DEPEND}"
+DEPEND="media-libs/sdl-net
+	virtual/opengl"
+RDEPEND="${DEPEND}
+	cdinstall? ( games-fps/quake1-data )
+	demo? ( games-fps/quake1-demodata )"
 
 S=${WORKDIR}/${P}/Quake
 

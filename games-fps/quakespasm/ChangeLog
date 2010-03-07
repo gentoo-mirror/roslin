@@ -2,6 +2,10 @@
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  07 Mar 2010; Piotr Szymaniak <lazy_bum@o2.pl> quakespasm-0.85.1.ebuild,
+  +metadata.xml:
+  Added missing opengl depend, changed rdeps logic.
+
   01 Mar 2010; Piotr Szymaniak <lazy_bum@o2.pl> quakespasm-0.85.1.ebuild,
   +files/quakespasm-0.85.1-missing_mkdir.patch,
   -files/quakespasm-0.85.1-save-in-userdir.patch,

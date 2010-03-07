@@ -17,6 +17,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
+DEPEND="dev-libs/boost"
+
 S=${WORKDIR}/${PN}-${MY_PV}
 
 src_prepare() {

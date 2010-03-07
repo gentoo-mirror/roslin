@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI="2"
+EAPI=2
 
 inherit games
 
@@ -23,8 +23,6 @@ DEPEND="app-arch/upx"
 RDEPEND="${DEPEND}"
 
 src_prepare() {
-#	epatch "${FILESDIR}/${PN}-${MY_PV}-gcc4.4.patch"
-
 	cat > Makefile.local <<-__EOF__
 		CC = $(tc-getCC)
 		CXX = $(tc-getCXX)
@@ -41,7 +39,7 @@ src_prepare() {
 }
 
 src_compile() {
-	emake V=1 || die
+	emake || die
 }
 
 src_install() {

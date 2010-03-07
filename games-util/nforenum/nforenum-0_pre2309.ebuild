@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI="2"
+EAPI=2
 
 inherit games
 
@@ -18,6 +18,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="dev-libs/boost"
+RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${PN}-${MY_PV}
 
@@ -38,7 +39,7 @@ src_prepare() {
 }
 
 src_compile() {
-	emake V=1 || die "emake failed"
+	emake || die "emake failed"
 }
 
 src_install() {

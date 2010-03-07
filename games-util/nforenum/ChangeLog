@@ -3,6 +3,9 @@
 # $Header: $
 
   07 Mar 2010; Piotr Szymaniak <lazy_bum@o2.pl> nforenum-0_pre2309.ebuild:
+  Updated.
+
+  07 Mar 2010; Piotr Szymaniak <lazy_bum@o2.pl> nforenum-0_pre2309.ebuild:
   Added boost depend.
 
 *nforenum-0_pre2309 (07 Mar 2010)

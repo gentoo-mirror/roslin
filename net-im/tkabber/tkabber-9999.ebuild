@@ -81,7 +81,7 @@ src_install() {
 
 	dodoc AUTHORS ChangeLog INSTALL README \
 		|| die "Can't install tkabber documentation"
-	cp -R ${DOCSDIRS} "${D}/usr/share/doc/${PF}" \
+	cp -R ${DOCSDIRS} ${D}/usr/share/doc/${PF} \
 		|| die "Can't copy ${DOCSDIRS} to ${D}/usr/share/doc/${PF}"
 
 	doicon "${FILESDIR}"/${PN/-svn}.png

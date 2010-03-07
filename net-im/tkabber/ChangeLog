@@ -2,6 +2,9 @@
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  07 Mar 2010; Piotr Szymaniak <lazy_bum@o2.pl> tkabber-9999.ebuild:
+  Added orignal version again.
+
   07 Mar 2010; Michał Ziąbkowski <mziab@o2.pl> tkabber-9999.ebuild:
   Fixed unquoted variable.
 

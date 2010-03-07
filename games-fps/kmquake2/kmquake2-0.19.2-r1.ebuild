@@ -1,9 +1,10 @@
-# Copyright 2008-2010 [v-fox] ftp://dfx.homeftp.net/services/GENTOO/v-fox
+# Copyright 1999-2010 [v-fox] ftp://dfx.homeftp.net/services/GENTOO/v-fox
 # Distributed under the terms of the GNU General Public License v2 or later
+
+EAPI="2"
 
 inherit eutils toolchain-funcs flag-o-matic toolchain-funcs games
 
-EAPI="2"
 MY_PN="quake2"
 FILE_STEM="KMQuake2-SDL-${PV}_src_unix"
 DATA_STEM="KMQuake2_data-0.19"

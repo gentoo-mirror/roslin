@@ -33,7 +33,6 @@ src_prepare() {
 	sed -i \
 		-e "s! -Werror!!" CMakeLists.txt || die "sed -Werror failed"
 
-
 	epatch "${FILESDIR}/${PV}-gcc44.patch"
 }
 

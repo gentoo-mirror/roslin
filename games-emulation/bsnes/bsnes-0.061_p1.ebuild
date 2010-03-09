@@ -80,6 +80,11 @@ src_prepare() {
 	# input modules
 	use sdl || disable_module input.sdl
 
+	# workaround for snesfilter
+	sed -i "${WORKDIR}/snesfilter/Makefile" \
+		-e "s/link += -s/link += /" \
+		|| die "sed failed"
+
 	# bundled plugins
 	for i in snesfilter snesreader supergameboy; do
 		sed -i "${WORKDIR}/$i/Makefile" \

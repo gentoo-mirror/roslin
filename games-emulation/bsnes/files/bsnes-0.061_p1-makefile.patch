@@ -1,0 +1,22 @@
+diff --git a/Makefile b/Makefile
+index 816299b..1b84643 100644
+--- a/Makefile
++++ b/Makefile
+@@ -10,7 +10,7 @@ include lib/nall/qt/Makefile
+ 
+ c     := $(compiler) --std=gnu99
+ cpp   := $(subst cc,++,$(compiler)) -std=gnu++0x
+-flags := -O3 -fomit-frame-pointer -Ilib
++flags := $(CXXFLAGS) -fomit-frame-pointer -Ilib
+ link  :=
+ 
+ # profile-guided instrumentation:
+@@ -25,7 +25,7 @@ link  :=
+ ################
+ 
+ ifeq ($(platform),x)
+-  link += -s -ldl -lX11 -lXext
++  link += -ldl -lX11 -lXext
+ 
+   ruby := video.glx video.xv video.qtraster video.sdl
+   ruby += audio.alsa audio.openal audio.oss audio.pulseaudio audio.pulseaudiosimple audio.ao

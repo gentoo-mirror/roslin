@@ -1,6 +1,12 @@
 # ChangeLog for games-emulation/bsnes
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 
+*bsnes-0.061_p1 (09 Mar 2010)
+
+  09 Mar 2010; Michał Ziąbkowski <mziab@o2.pl> +bsnes-0.061_p1.ebuild,
+  +files/bsnes-0.061_p1-makefile.patch:
+  Added beta with missing keywords.
+
   22 Feb 2010; Michał Ziąbkowski <mziab@o2.pl> bsnes-0.060.ebuild:
   Upped qt dep.
 

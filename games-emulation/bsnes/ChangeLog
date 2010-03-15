@@ -1,6 +1,13 @@
 # ChangeLog for games-emulation/bsnes
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 
+*bsnes-0.062 (15 Mar 2010)
+
+  15 Mar 2010; Michał Ziąbkowski <mziab@o2.pl> -bsnes-0.061_p1.ebuild,
+  +bsnes-0.062.ebuild:
+  Previous 0.061_p1 superseded by 0.062. Upstream still considers it beta,
+  so no keywords for now.
+
   09 Mar 2010; Michał Ziąbkowski <mziab@o2.pl> bsnes-0.061_p1.ebuild:
   Fixed link flags for snesfilter.
 

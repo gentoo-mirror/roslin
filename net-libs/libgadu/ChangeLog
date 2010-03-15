@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/libgadu
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 
+  11 Mar 2010; Michał Ziąbkowski <mziab@o2.pl> -libgadu-1.9.0_rc2.ebuild,
+  -libgadu-1.9.0_rc2-r1.ebuild,
+  -files/libgadu-1.9.0_rc2-fix-images-gg10.patch:
+  Removed libgadu-1.9_rc2. Obsoleted by _rc3 from portage.
+
   12 Jan 2010; Michał Ziąbkowski <mziab@o2.pl>
   files/libgadu-1.9.0_rc2-fix-images-gg10.patch:
   Added better fix for images from

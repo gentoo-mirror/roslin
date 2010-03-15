@@ -15,16 +15,19 @@ SRC_URI="mirror://sourceforge/${PN}/${PN}-${MY_PV}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
-IUSE="debug joystick opengl phonon +sdlmame sdlmess"
+IUSE="debug joystick opengl phonon +sdlmame sdlmess sqlite"
 
 DEPEND=">=x11-libs/qt-gui-4.5:4[accessibility]
+	>=x11-libs/qt-webkit-4.5:4
 	phonon? ( || ( media-sound/phonon >=x11-libs/qt-phonon-4.5 ) )
 	joystick? ( media-libs/libsdl[joystick] )
-	opengl? ( virtual/opengl )"
+	opengl? ( >=x11-libs/qt-opengl-4.5:4 )
+	sqlite? ( >=x11-libs/qt-sql-4.5:4[sqlite] )"
 
 RDEPEND="${DEPEND}
 	sdlmame? ( games-emulation/sdlmame )
-	sdlmess? ( games-emulation/sdlmess )"
+	sdlmess? ( games-emulation/sdlmess )
+	x11-apps/xwininfo"
 
 S="${WORKDIR}/${PN}"
 
@@ -33,12 +36,13 @@ pkg_setup() {
 	confutils_require_any sdlmame sdlmess
 
 	# Set proper parameters for make
-	FLAGS="QTDIR=/usr DESTDIR=${D} PREFIX=${GAMES_PREFIX} DATADIR=${GAMES_DATADIR} CTIME=0"
+	FLAGS="DESTDIR=${D} PREFIX=\"${GAMES_PREFIX}\" DATADIR=\"${GAMES_DATADIR}\" CTIME=0"
 
 	use debug || FLAGS="${FLAGS} DEBUG=0"
-	use joystick && FLAGS="${FLAGS} JOYSTICK=1"
+	use joystick || FLAGS="${FLAGS} JOYSTICK=0"
 	use opengl && FLAGS="${FLAGS} OPENGL=1"
 	use phonon || FLAGS="${FLAGS} PHONON=0"
+	use sqlite && FLAGS="${FLAGS} DATABASE=1"
 }
 
 src_prepare() {

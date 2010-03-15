@@ -1,6 +1,15 @@
 # ChangeLog for games-emulation/qmc2
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 
+  15 Mar 2010; Michał Ziąbkowski <mziab@o2.pl> -qmc2-0.2_beta11.ebuild,
+  -qmc2-0.2_beta12.ebuild:
+  Removed cruft.
+
+*qmc2-0.2_beta14 (13 Mar 2010)
+
+  13 Mar 2010; Michał Ziąbkowski <mziab@o2.pl> +qmc2-0.2_beta14.ebuild:
+  Bumped. Fixed some missing deps. Added sqlite flag. Some minor clean-up.
+
   31 Jan 2010; Michał Ziąbkowski <mziab@o2.pl> qmc2-0.2_beta11.ebuild,
   qmc2-0.2_beta12.ebuild, qmc2-0.2_beta13.ebuild:
   We don't need to inherit qt4.

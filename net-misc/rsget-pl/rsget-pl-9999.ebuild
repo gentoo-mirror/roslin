@@ -7,7 +7,7 @@ inherit subversion
 MY_PN="rsget.pl"
 
 DESCRIPTION="Random content downloader"
-HOMEPAGE="http://svn.pld-linux.org/svn/toys/rsget.pl/"
+HOMEPAGE="http://rsget.pl/"
 #SRC_URI=""
 ESVN_REPO_URI="http://svn.pld-linux.org/svn/toys/rsget.pl/"
 

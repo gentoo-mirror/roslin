@@ -15,21 +15,24 @@ SRC_URI="http://snes9x-gtk.googlecode.com/files/snes9x-${MY_PV}.tar.bz2"
 LICENSE="as-is GPL-2 LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="joystick +jma netplay opengl +xv +xrandr +zlib"
+IUSE="joystick +jma netplay nls opengl +xv +xrandr +zlib"
 
 RESTRICT="mirror"
 
 RDEPEND=">=x11-libs/gtk+-2.10
 	>=gnome-base/libglade-2.0
 	>=media-libs/portaudio-19_pre
-	joystick? ( >=media-libs/libsdl-1.2.12 )
+	joystick? ( >=media-libs/libsdl-1.2.12[joystick] )
 	opengl? ( virtual/opengl )
 	xv? ( x11-libs/libXv )
 	xrandr? ( x11-libs/libXrandr )
 	zlib? ( sys-libs/zlib )
 	x11-misc/xdg-utils"
 DEPEND="${RDEPEND}
-	x86? ( dev-lang/nasm )"
+	x86? ( dev-lang/nasm )
+	nls? ( dev-util/intltool )
+	dev-util/pkgconfig
+	!games-emulation/snes9x[gtk]"
 
 S="${WORKDIR}/snes9x-1.51-src/gtk"
 
@@ -46,6 +49,7 @@ src_configure() {
 		$(use_with zlib) \
 		$(use_with jma jma-decomp) \
 		$(use_with x86 assembler) \
+		$(use_enable nls) \
 		--datadir=/usr/share \
 		|| die "econf failed"
 }

@@ -15,7 +15,7 @@ SRC_URI="http://snes9x-gtk.googlecode.com/files/snes9x-${MY_PV}.tar.bz2"
 LICENSE="as-is GPL-2 LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="joystick +jma netplay opengl +xv +xrandr +zlib"
+IUSE="joystick +jma netplay nls opengl +xv +xrandr +zlib"
 
 RESTRICT="mirror"
 
@@ -30,6 +30,7 @@ RDEPEND=">=x11-libs/gtk+-2.10
 	x11-misc/xdg-utils"
 DEPEND="${RDEPEND}
 	x86? ( dev-lang/nasm )
+	nls? ( dev-util/intltool )
 	dev-util/pkgconfig
 	!games-emulation/snes9x[gtk]"
 
@@ -48,6 +49,7 @@ src_configure() {
 		$(use_with zlib) \
 		$(use_with jma jma-decomp) \
 		$(use_with x86 assembler) \
+		$(use_enable nls) \
 		--datadir=/usr/share \
 		|| die "econf failed"
 }

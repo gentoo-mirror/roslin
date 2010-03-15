@@ -15,7 +15,7 @@ SRC_URI="http://snes9x-gtk.googlecode.com/files/${MY_P}.tar.bz2"
 LICENSE="as-is GPL-2 LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="+alsa oss pulseaudio portaudio joystick +jma netplay opengl +xv +xrandr +zlib"
+IUSE="+alsa oss pulseaudio portaudio joystick +jma netplay nls opengl +xv +xrandr +zlib"
 
 RESTRICT="mirror"
 
@@ -32,6 +32,7 @@ RDEPEND=">=x11-libs/gtk+-2.10
 	pulseaudio? ( media-sound/pulseaudio )"
 DEPEND="${RDEPEND}
 	x86? ( dev-lang/nasm )
+	nls? ( dev-util/intltool )
 	dev-util/pkgconfig
 	!games-emulation/snes9x[gtk]"
 
@@ -50,6 +51,7 @@ src_configure() {
 		$(use_with oss) \
 		$(use_with pulseaudio) \
 		$(use_with portaudio) \
+		$(use_enable nls) \
 		--datadir=/usr/share \
 		|| die "econf failed"
 }

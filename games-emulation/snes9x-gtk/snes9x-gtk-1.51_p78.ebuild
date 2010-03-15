@@ -29,7 +29,8 @@ RDEPEND=">=x11-libs/gtk+-2.10
 	zlib? ( sys-libs/zlib )
 	x11-misc/xdg-utils"
 DEPEND="${RDEPEND}
-	x86? ( dev-lang/nasm )"
+	x86? ( dev-lang/nasm )
+	!games-emulation/snes9x[gtk]"
 
 S="${WORKDIR}/snes9x-1.51-src/gtk"
 

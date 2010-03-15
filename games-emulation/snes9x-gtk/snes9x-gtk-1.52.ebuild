@@ -31,7 +31,8 @@ RDEPEND=">=x11-libs/gtk+-2.10
 	alsa? ( media-libs/alsa-lib )
 	pulseaudio? ( media-sound/pulseaudio )"
 DEPEND="${RDEPEND}
-	x86? ( dev-lang/nasm )"
+	x86? ( dev-lang/nasm )
+	!games-emulation/snes9x[gtk]"
 
 S="${WORKDIR}/${MY_P}/gtk"
 

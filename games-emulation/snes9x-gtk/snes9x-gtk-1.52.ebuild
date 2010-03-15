@@ -22,7 +22,7 @@ RESTRICT="mirror"
 RDEPEND=">=x11-libs/gtk+-2.10
 	>=gnome-base/libglade-2.0
 	portaudio? ( >=media-libs/portaudio-19_pre )
-	joystick? ( >=media-libs/libsdl-1.2.12 )
+	joystick? ( >=media-libs/libsdl-1.2.12[joystick] )
 	opengl? ( virtual/opengl )
 	xv? ( x11-libs/libXv )
 	xrandr? ( x11-libs/libXrandr )
@@ -32,6 +32,7 @@ RDEPEND=">=x11-libs/gtk+-2.10
 	pulseaudio? ( media-sound/pulseaudio )"
 DEPEND="${RDEPEND}
 	x86? ( dev-lang/nasm )
+	dev-util/pkgconfig
 	!games-emulation/snes9x[gtk]"
 
 S="${WORKDIR}/${MY_P}/gtk"

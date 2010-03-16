@@ -1,0 +1,12 @@
+# ChangeLog for games-sports/blobby
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  15 Mar 2010; Piotr Szymaniak <lazy_bum@o2.pl> blobby-9999.ebuild:
+  Added missing Manifest, removed keywords.
+
+*blobby-9999 (15 Mar 2010)
+
+  15 Mar 2010; Piotr Szymaniak <lazy_bum@o2.pl> +blobby-9999.ebuild:
+  Initial ebuild (bug #153718).
+

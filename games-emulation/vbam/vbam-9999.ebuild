@@ -26,6 +26,7 @@ RDEPEND="gtk? ( >=dev-cpp/libglademm-2.4.0
 	media-libs/libpng
 	sys-libs/zlib
 	media-libs/libsdl[joystick]
+	media-libs/libsfml
 	lirc? ( app-misc/lirc )
 	virtual/opengl"
 

@@ -17,11 +17,13 @@ SLOT="2"
 KEYWORDS=""
 IUSE=""
 
-DEPEND="virtual/opengl
+DEPEND="dev-games/physfs
+	dev-libs/boost
+	media-libs/glew
 	media-libs/libsdl
 	media-libs/sdl-image
-	dev-games/physfs
-	media-libs/openal"
+	media-libs/openal
+	virtual/opengl"
 RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${PN}

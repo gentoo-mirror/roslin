@@ -1,0 +1,77 @@
+diff --git a/src/SFML/Graphics/Makefile b/src/SFML/Graphics/Makefile
+index f1cc6ff..4243aa4 100755
+--- a/src/SFML/Graphics/Makefile
++++ b/src/SFML/Graphics/Makefile
+@@ -1,15 +1,7 @@
+ SRC     = $(wildcard *.cpp)
+-SRCGLEW = $(wildcard ./GLEW/*.c)
+-SRCJPEG = $(wildcard ./libjpeg/*.c)
+-SRCPNG  = $(wildcard ./libpng/*.c)
+ SRCSOIL = $(wildcard ./SOIL/*.c)
+-SRCZLIB = $(wildcard ./zlib/*.c)
+ OBJ     = $(SRC:.cpp=.o)
+-OBJGLEW = $(SRCGLEW:.c=.o)
+-OBJJPEG = $(SRCJPEG:.c=.o)
+-OBJPNG  = $(SRCPNG:.c=.o)
+ OBJSOIL = $(SRCSOIL:.c=.o)
+-OBJZLIB = $(SRCZLIB:.c=.o)
+ 
+ ifeq ($(STATIC), yes)
+     LIB     = libsfml-graphics-s.a
+@@ -24,17 +16,17 @@ ifeq ($(STATIC), yes)
+ 
+ all: $(LIB)
+ 
+-libsfml-graphics-s.a: $(OBJ) $(OBJGLEW) $(OBJJPEG) $(OBJPNG) $(OBJSOIL) $(OBJZLIB)
+-	$(AR) $(ARFLAGS) $(LIBNAME) $(OBJ) $(OBJGLEW) $(OBJJPEG) $(OBJPNG) $(OBJSOIL) $(OBJZLIB)
++libsfml-graphics-s.a: $(OBJ) $(OBJSOIL)
++	$(AR) $(ARFLAGS) $(LIBNAME) $(OBJ) $(OBJSOIL)
+ 
+-libsfml-graphics.so: $(OBJ) $(OBJGLEW) $(OBJJPEG) $(OBJPNG) $(OBJSOIL) $(OBJZLIB)
+-	$(CPP) $(LDFLAGS) -Wl,-soname,$(LIB).$(VERSION) -o $(LIBNAME) $(OBJ) $(OBJGLEW) $(OBJJPEG) $(OBJPNG) $(OBJSOIL) $(OBJZLIB) -lfreetype
++libsfml-graphics.so: $(OBJ) $(OBJSOIL)
++	$(CPP) $(LDFLAGS) -Wl,-soname,$(LIB).$(VERSION) -o $(LIBNAME) $(OBJ) $(OBJSOIL) -lGLEW -ljpeg -lpng -lz -lfreetype
+ 
+ $(OBJ): %.o: %.cpp
+ 	$(CPP) -o $@ -c $< $(CFLAGS) -I/usr/include/freetype2
+ 
+-$(OBJGLEW) $(OBJJPEG) $(OBJPNG) $(OBJSOIL) $(OBJZLIB): %.o: %.c
++$(OBJSOIL): %.o: %.c
+ 	$(CC) -o $@ -c $< $(CFLAGSEXT) -DSTBI_FAILURE_USERMSG
+ 
+ .PHONY: clean mrproper
+ 
+ clean:
+-	@rm -rf $(OBJ) $(OBJGLEW) $(OBJJPEG) $(OBJPNG) $(OBJSOIL) $(OBJZLIB)
++	@rm -rf $(OBJ) $(OBJSOIL)
+diff --git a/src/SFML/Graphics/GraphicsContext.hpp b/src/SFML/Graphics/GraphicsContext.hpp
+index 0a76001..fdfdb4b 100755
+--- a/src/SFML/Graphics/GraphicsContext.hpp
++++ b/src/SFML/Graphics/GraphicsContext.hpp
+@@ -30,7 +30,7 @@
+ ////////////////////////////////////////////////////////////
+ #include <SFML/Config.hpp>
+ #include <SFML/System/NonCopyable.hpp>
+-#include <SFML/Graphics/GLEW/glew.h>
++#include <GL/glew.h>
+ #include <iostream>
+ #include <string>
+ 
+diff --git a/src/SFML/Graphics/ImageLoader.cpp b/src/SFML/Graphics/ImageLoader.cpp
+index b9c6a1b..d045af4 100755
+--- a/src/SFML/Graphics/ImageLoader.cpp
++++ b/src/SFML/Graphics/ImageLoader.cpp
+@@ -28,10 +28,10 @@
+ #include <SFML/Graphics/ImageLoader.hpp>
+ extern "C"
+ {
+-    #include <SFML/Graphics/libjpeg/jpeglib.h>
+-    #include <SFML/Graphics/libjpeg/jerror.h>
++    #include <jpeglib.h>
++    #include <jerror.h>
+ }
+-#include <SFML/Graphics/libpng/png.h>
++#include <png.h>
+ #include <SFML/Graphics/SOIL/SOIL.h>
+ #include <iostream>
+ 

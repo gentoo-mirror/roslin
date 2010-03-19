@@ -1,0 +1,125 @@
+diff --git a/src/SFML/Audio/Makefile b/src/SFML/Audio/Makefile
+index 109a00a..f55c280 100755
+--- a/src/SFML/Audio/Makefile
++++ b/src/SFML/Audio/Makefile
+@@ -10,7 +10,7 @@ ifeq ($(STATIC), yes)
+ else
+     LIB     = libsfml-audio.so
+     LIBNAME = $(LIBPATH)/$(LIB).$(VERSION)
+-    INSTALL = && $(LN) $(LNFLAGS) $(DESTLIBDIR)/$(LIB).$(VERSION) $(DESTLIBDIR)/$(LIB)
++    INSTALL = && $(LN) $(LNFLAGS) $(LIB).$(VERSION) $(DESTDIR)/$(libdir)/$(LIB)
+ endif
+ 
+ all: $(LIB)
+@@ -36,4 +36,4 @@ mrproper: clean
+ 	@rm -rf $(LIBNAME)
+ 
+ install:
+-	@($(CP) $(LIBNAME) $(DESTLIBDIR) $(INSTALL))
++	@($(CP) $(LIBNAME) $(DESTDIR)/$(libdir) $(INSTALL))
+diff --git a/src/SFML/Graphics/Makefile b/src/SFML/Graphics/Makefile
+index f1cc6ff..a87ecda 100755
+--- a/src/SFML/Graphics/Makefile
++++ b/src/SFML/Graphics/Makefile
+@@ -18,7 +18,7 @@ ifeq ($(STATIC), yes)
+ else
+     LIB     = libsfml-graphics.so
+     LIBNAME = $(LIBPATH)/$(LIB).$(VERSION)
+-    INSTALL = && $(LN) $(LNFLAGS) $(DESTLIBDIR)/$(LIB).$(VERSION) $(DESTLIBDIR)/$(LIB)
++    INSTALL = && $(LN) $(LNFLAGS) $(LIB).$(VERSION) $(DESTDIR)/$(libdir)/$(LIB)
+ endif
+ 
+ all: $(LIB)
+@@ -44,4 +44,4 @@ mrproper: clean
+ 	@rm -rf $(LIBNAME)
+ 
+ install:
+-	@($(CP) $(LIBNAME) $(DESTLIBDIR) $(INSTALL))
++	@($(CP) $(LIBNAME) $(DESTDIR)/$(libdir) $(INSTALL))
+diff --git a/src/SFML/Makefile b/src/SFML/Makefile
+index 98617ec..b31eb6b 100755
+--- a/src/SFML/Makefile
++++ b/src/SFML/Makefile
+@@ -27,9 +27,12 @@ export LN         = ln
+ export LNFLAGS    = -s -f
+ export AR         = ar
+ export ARFLAGS    = rcs
+-export DESTDIR    = /usr
+-export DESTLIBDIR = $(DESTDIR)/lib
+-export DESTINCDIR = $(DESTDIR)/include
++
++ifeq ($(origin prefix), undefined)
++    export prefix = /usr/local
++endif
++export libdir     = $(prefix)/lib
++export includedir = $(prefix)/include
+ 
+ all: sfml-system sfml-window sfml-network sfml-graphics sfml-audio
+ 
+@@ -57,6 +60,6 @@ mrproper: clean
+ 	@(cd ./System && $(MAKE) $@	&& cd ../Window && $(MAKE) $@ && cd ../Network && $(MAKE) $@ && cd ../Graphics && $(MAKE) $@ && cd ../Audio && $(MAKE) $@)
+ 
+ install:
+-	@(mkdir -p $(DESTLIBDIR))
+-	@(mkdir -p $(DESTINCDIR))
+-	@(cd ./System && $(MAKE) $@	&& cd ../Window && $(MAKE) $@ && cd ../Network && $(MAKE) $@ && cd ../Graphics && $(MAKE) $@ && cd ../Audio && $(MAKE) $@ && $(CP) -r ../../../include/SFML/ $(DESTINCDIR)/)
++	@(mkdir -p $(DESTDIR)/$(libdir))
++	@(mkdir -p $(DESTDIR)/$(includedir))
++	@(cd ./System && $(MAKE) $@	&& cd ../Window && $(MAKE) $@ && cd ../Network && $(MAKE) $@ && cd ../Graphics && $(MAKE) $@ && cd ../Audio && $(MAKE) $@ && $(CP) -r ../../../include/SFML $(DESTDIR)/$(includedir)/)
+diff --git a/src/SFML/Network/Makefile b/src/SFML/Network/Makefile
+index d30da62..72e4c28 100755
+--- a/src/SFML/Network/Makefile
++++ b/src/SFML/Network/Makefile
+@@ -8,7 +8,7 @@ ifeq ($(STATIC), yes)
+ else
+     LIB     = libsfml-network.so
+     LIBNAME = $(LIBPATH)/$(LIB).$(VERSION)
+-    INSTALL = && $(LN) $(LNFLAGS) $(DESTLIBDIR)/$(LIB).$(VERSION) $(DESTLIBDIR)/$(LIB)
++    INSTALL = && $(LN) $(LNFLAGS) $(LIB).$(VERSION) $(DESTDIR)/$(libdir)/$(LIB)
+ endif
+ 
+ all: $(LIB)
+@@ -31,4 +31,4 @@ mrproper: clean
+ 	@rm -rf $(LIBNAME)
+ 
+ install:
+-	@($(CP) $(LIBNAME) $(DESTLIBDIR) $(INSTALL))
++	@($(CP) $(LIBNAME) $(DESTDIR)/$(libdir) $(INSTALL))
+diff --git a/src/SFML/System/Makefile b/src/SFML/System/Makefile
+index 04514f5..4c18062 100755
+--- a/src/SFML/System/Makefile
++++ b/src/SFML/System/Makefile
+@@ -8,7 +8,7 @@ ifeq ($(STATIC), yes)
+ else
+     LIB     = libsfml-system.so
+     LIBNAME = $(LIBPATH)/$(LIB).$(VERSION)
+-    INSTALL = && $(LN) $(LNFLAGS) $(DESTLIBDIR)/$(LIB).$(VERSION) $(DESTLIBDIR)/$(LIB)
++    INSTALL = && $(LN) $(LNFLAGS) $(LIB).$(VERSION) $(DESTDIR)/$(libdir)/$(LIB)
+ endif
+ 
+ all: $(LIB)
+@@ -31,4 +31,4 @@ mrproper: clean
+ 	@rm -rf $(LIBNAME)
+ 
+ install:
+-	@($(CP) $(LIBNAME) $(DESTLIBDIR) $(INSTALL))
++	@($(CP) $(LIBNAME) $(DESTDIR)/$(libdir) $(INSTALL))
+diff --git a/src/SFML/Window/Makefile b/src/SFML/Window/Makefile
+index 956b34b..2d65e76 100755
+--- a/src/SFML/Window/Makefile
++++ b/src/SFML/Window/Makefile
+@@ -9,7 +9,7 @@ ifeq ($(STATIC), yes)
+ else
+     LIB     = libsfml-window.so
+     LIBNAME = $(LIBPATH)/$(LIB).$(VERSION)
+-    INSTALL = && $(LN) $(LNFLAGS) $(DESTLIBDIR)/$(LIB).$(VERSION) $(DESTLIBDIR)/$(LIB)
++    INSTALL = && $(LN) $(LNFLAGS) $(LIB).$(VERSION) $(DESTDIR)/$(libdir)/$(LIB)
+ endif
+ 
+ all: $(LIB)
+@@ -32,4 +32,4 @@ mrproper: clean
+ 	@rm -rf $(LIBNAME)
+ 
+ install:
+-	@($(CP) $(LIBNAME) $(DESTLIBDIR) $(INSTALL))
++	@($(CP) $(LIBNAME) $(DESTDIR)/$(libdir) $(INSTALL))

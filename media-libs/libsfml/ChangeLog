@@ -1,0 +1,11 @@
+# ChangeLog for media-libs/libsfml
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*libsfml-1.4-r4 (18 Mar 2010)
+
+  18 Mar 2010; Michał Ziąbkowski <mziab@o2.pl> +libsfml-1.4-r4.ebuild,
+  +files/libsfml-1.4-deps.patch, +files/libsfml-1.4-destdir-r5.patch,
+  +metadata.xml:
+  Added ebuild from overlay-sping with slight adjustments.
+

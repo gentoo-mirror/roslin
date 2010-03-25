@@ -1,0 +1,10 @@
+# ChangeLog for games-util/upset
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*upset-0.1 (24 Mar 2010)
+
+  24 Mar 2010; Michał Ziąbkowski <mziab@o2.pl> +upset-0.1.ebuild,
+  +metadata.xml:
+  New ebuild. Meant to replace tsukuyomi as a patcher.
+

@@ -7,8 +7,8 @@ EAPI=2
 MY_PV="${PV/./}"
 
 DESCRIPTION="A reference utility for creating and applying UPS patches"
-HOMEPAGE="http://byuu.cinnamonpirate.com"
-SRC_URI="http://byuu.cinnamonpirate.com/files/${PN}_v${MY_PV}.tar.bz2"
+HOMEPAGE="http://byuu.org"
+SRC_URI="http://byuu.org/files/${PN}_v${MY_PV}.tar.bz2"
 
 LICENSE="public-domain"
 SLOT="0"

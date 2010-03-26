@@ -2,6 +2,13 @@
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*ideas-bin-1.0.3.4 (26 Mar 2010)
+
+  26 Mar 2010; Michał Ziąbkowski <mziab@o2.pl>
+  ideas-bin-1.0.3.2-r1.ebuild, ideas-bin-1.0.3.3.ebuild,
+  +ideas-bin-1.0.3.4.ebuild:
+  Bumped with added joypad flag. Updated uris.
+
 *ideas-bin-1.0.3.3 (05 Mar 2010)
 
   05 Mar 2010; Michał Ziąbkowski <mziab@o2.pl>

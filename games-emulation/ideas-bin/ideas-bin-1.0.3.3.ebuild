@@ -10,10 +10,10 @@ inherit multilib games
 
 DESCRIPTION="iDeaS is a closed-source Nintendo DS emulator using GTK+"
 HOMEPAGE="http://ideasemu.biz/"
-SRC_URI="http://actarus1000.googlepages.com/ideas${MY_PV}.tar.bz2
-	alsa? ( http://emucraze.com/ideas/ideas_downloads/audplugin.zip )
-	mic? ( http://emucraze.com/ideas/ideas_downloads/micplugin.zip )
-	wifi? ( http://emucraze.com/ideas/ideas_downloads/wifiplugin.zip )"
+SRC_URI="http://ideasemu.biz/ideas_scripts/resolve_link.php?link=ideas${MY_PV}.tar.bz2 -> ideas${MY_PV}.tar.bz2
+	alsa? ( http://ideasemu.biz/ideas_scripts/resolve_link.php?link=audplugin.zip -> audplugin.zip )
+	mic? ( http://ideasemu.biz/ideas_scripts/resolve_link.php?link=micplugin.zip -> micplugin.zip )
+	wifi? ( http://ideasemu.biz/ideas_scripts/resolve_link.php?link=wifiplugin.zip -> wifiplugin.zip )"
 
 LICENSE="freedist"
 SLOT="0"

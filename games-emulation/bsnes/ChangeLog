@@ -1,6 +1,17 @@
 # ChangeLog for games-emulation/bsnes
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 
+  28 Mar 2010; Michał Ziąbkowski <mziab@o2.pl>
+  -files/bsnes-0.059-makefile.patch, -files/bsnes-0.061_p1-makefile.patch,
+  bsnes-0.063.ebuild, +files/bsnes-0.063-makefile.patch:
+  Replaced sed magic with a new Makefile patch. Purged old patches.
+
+*bsnes-0.063 (28 Mar 2010)
+
+  28 Mar 2010; Michał Ziąbkowski <mziab@o2.pl> -bsnes-0.060.ebuild,
+  -bsnes-0.062_p4.ebuild, +bsnes-0.063.ebuild:
+  Bumped to newest stable. Cleaned out old cruft.
+
 *bsnes-0.062_p4 (16 Mar 2010)
 
   16 Mar 2010; Michał Ziąbkowski <mziab@o2.pl> -bsnes-0.062.ebuild,

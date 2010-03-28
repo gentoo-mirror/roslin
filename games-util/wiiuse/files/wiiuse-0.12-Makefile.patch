@@ -1,0 +1,48 @@
+--- wiiuse_v0.12.orig/src/Makefile	2010-03-26 22:45:36.762074033 +0100
++++ wiiuse_v0.12/src/Makefile	2010-03-26 23:06:56.158243779 +0100
+@@ -16,7 +16,8 @@ CC = gcc
+ #
+ # Universal cflags
+ #
+-CFLAGS = -Wall -pipe -fPIC -funroll-loops
++CFLAGS ?= -Wall -pipe -funroll-loops
++CFLAGS += -fPIC
+ 
+ ifeq ($(debug),1)
+ 	OBJ_PREFIX = debug
+@@ -24,7 +25,7 @@ ifeq ($(debug),1)
+ 
+ else
+ 	OBJ_PREFIX = release
+-	CFLAGS += -O2
++#	CFLAGS += -O2
+ endif
+ 
+ OBJ_DIR = $(OBJ_PREFIX)-$(shell $(CC) -v 2>&1|grep ^Target:|cut -d' ' -f2)
+@@ -32,7 +33,8 @@ OBJ_DIR = $(OBJ_PREFIX)-$(shell $(CC) -v
+ #
+ # Linking flags
+ #
+-LDFLAGS = -shared -lm -lbluetooth
++LDFLAGS += -shared -Wl,-soname,libwiiuse.so.0
++LIBS = -lm -lbluetooth
+ 
+ #
+ # Target binaries (always created as BIN)
+@@ -73,13 +75,11 @@ distclean:
+ 	@-rm -r debug-* release-* 2> /dev/null
+ 
+ install:
+-	@if [ -e $(BIN) ]; then \
+-		cp -v $(BIN) /usr/lib ; \
+-	fi
+-	@cp -v wiiuse.h /usr/include
++	install -D -m 755 $(BIN) $(DESTDIR)/usr/lib/libwiiuse.so
++	install -D -m 644 wiiuse.h $(DESTDIR)/usr/include/wiiuse.h
+ 
+ $(BIN): mkdir $(OBJS)
+-	$(CC) $(CFLAGS) $(LDFLAGS) $(OBJS) -o $(BIN)
++	$(CC) $(CFLAGS) $(LDFLAGS) $(OBJS) -o $(BIN) $(LIBS)
+ 
+ $(OBJ_DIR)/%.o: %.c
+ 	$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@

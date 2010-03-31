@@ -28,7 +28,8 @@ RDEPEND="ao? ( media-libs/libao )
 	snesfilter? ( sys-devel/gcc[openmp] )
 	>=x11-libs/qt-gui-4.5:4"
 
-DEPEND="${DEPEND}"
+DEPEND="${DEPEND}
+	>=sys-devel/gcc-4.4"
 
 S="${WORKDIR}/src"
 
@@ -53,7 +54,7 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-0.059-makefile.patch
+	epatch "${FILESDIR}"/${P}-makefile.patch
 
 	# debugger
 	if use debug ; then
@@ -77,14 +78,6 @@ src_prepare() {
 
 	# input modules
 	use sdl || disable_module input.sdl
-
-	# bundled plugins
-	for i in snesfilter snesreader supergameboy; do
-		sed -i "${WORKDIR}/$i/Makefile" \
-			-e "s/-O3/${CXXFLAGS}/" \
-			-e "/link += -s/d" \
-		|| die "sed failed"
-	done
 }
 
 src_compile() {

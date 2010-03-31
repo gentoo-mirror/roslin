@@ -1,0 +1,79 @@
+diff --git a/snesfilter/Makefile b/snesfilter/Makefile
+index 089b86e..99d22b3 100755
+--- ../snesfilter/Makefile
++++ ../snesfilter/Makefile
+@@ -5,12 +5,12 @@ include nall/qt/Makefile
+ 
+ c     := $(compiler) -std=gnu99
+ cpp   := $(subst cc,++,$(compiler)) -std=gnu++0x
+-flags := -O3 -I. -Iobj -fomit-frame-pointer $(qtinc)
++flags := $(CXXFLAGS) -I. -Iobj -fomit-frame-pointer $(qtinc)
+ link  :=
+ 
+ ifeq ($(platform),x)
+   flags := -fPIC -fopenmp $(flags)
+-  link += -s -fopenmp -lpthread -lgomp
++  link += -fopenmp -lpthread -lgomp
+ else ifeq ($(platform),osx)
+   flags := -fPIC -fopenmp $(flags)
+   link += -fopenmp -lpthread -lgomp
+diff --git a/snesreader/Makefile b/snesreader/Makefile
+index 761317b..7a7733f 100755
+--- ../snesreader/Makefile
++++ ../snesreader/Makefile
+@@ -5,12 +5,11 @@ include nall/qt/Makefile
+ 
+ c     := $(compiler) -std=gnu99
+ cpp   := $(subst cc,++,$(compiler)) -std=gnu++0x
+-flags := -O3 -I. -Iobj -fomit-frame-pointer
++flags := $(CXXFLAGS) -I. -Iobj -fomit-frame-pointer
+ link  :=
+ 
+ ifeq ($(platform),x)
+   flags := -fPIC $(flags)
+-  link += -s
+ else ifeq ($(platform),osx)
+   flags := -fPIC $(flags)
+ endif
+diff --git a/src/Makefile b/src/Makefile
+index 8a82a32..71ced85 100755
+--- Makefile
++++ Makefile
+@@ -10,7 +10,7 @@ include lib/nall/qt/Makefile
+ 
+ c     := $(compiler) --std=gnu99
+ cpp   := $(subst cc,++,$(compiler)) -std=gnu++0x
+-flags := -O3 -fomit-frame-pointer -Ilib
++flags := $(CXXFLAGS) -fomit-frame-pointer -Ilib
+ link  :=
+ 
+ # profile-guided instrumentation:
+@@ -25,7 +25,7 @@ link  :=
+ ################
+ 
+ ifeq ($(platform),x)
+-  link += -s -ldl -lX11 -lXext
++  link += -ldl -lX11 -lXext
+ 
+   ruby := video.glx video.xv video.qtraster video.sdl
+   ruby += audio.alsa audio.openal audio.oss audio.pulseaudio audio.pulseaudiosimple audio.ao
+diff --git a/supergameboy/Makefile b/supergameboy/Makefile
+index 60409af..6326f2b 100755
+--- ../supergameboy/Makefile
++++ ../supergameboy/Makefile
+@@ -2,14 +2,13 @@ include nall/Makefile
+ 
+ c     := $(compiler) -std=gnu99
+ cpp   := $(subst cc,++,$(compiler)) -std=gnu++0x
+-flags := -O3 -fomit-frame-pointer -I. -Icommon -Ilibgambatte/include -Ilibgambatte/src
++flags := $(CXXFLAGS) -fomit-frame-pointer -I. -Icommon -Ilibgambatte/include -Ilibgambatte/src
+ link  :=
+ 
+ ifeq ($(platform),osx)
+   flags := -fPIC $(flags)
+ else ifeq ($(platform),x)
+   flags := -fPIC $(flags)
+-  link += -s
+ endif
+ 
+ objects := supergameboy

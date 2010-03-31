@@ -1,0 +1,26 @@
+# ChangeLog for games-misc/openmsx
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  31 Mar 2010; Piotr Szymaniak <lazy_bum@o2.pl> +openmsx-0.2.1.ebuild,
+  +metadata.xml:
+  Stolen from gamerlay. (;
+
+*openmsx-0.2.1 (27 Mar 2010)
+
+  27 Mar 2010; Locke Shinseiko <wizzleby@gmail.com> -openmsx-0.2.0.ebuild,
+  +openmsx-0.2.1.ebuild:
+  Bump to v0.2.1
+
+  21 Mar 2010; Locke Shinseiko <locke@gentoo.org> openmsx-0.2.0.ebuild:
+  as unix2dos does not appear to be used.. at all.. Do not depend on it
+
+  19 Mar 2010; Locke Shinseiko <wizzleby@gmail.com> openmsx-0.2.0.ebuild:
+  Depend on >=openttd-1.0.0_beta1
+
+*openmsx-0.2.0 (18 Mar 2010)
+
+  18 Mar 2010; Locke Shinseiko <wizzleby@gmail.com> +openmsx-0.2.0.ebuild,
+  +metadata.xml:
+  Initial commit
+

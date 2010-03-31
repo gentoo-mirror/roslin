@@ -16,7 +16,7 @@ S=${WORKDIR}/${MY_P}
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="alsa debug dedicated iconv icu lzo +opengfx +opensfx +png +truetype zlib"
+IUSE="alsa debug dedicated iconv icu lzo +opengfx +opensfx openmsx +png +truetype zlib"
 RESTRICT="test"
 
 DEPEND="
@@ -39,7 +39,8 @@ RDEPEND="${DEPEND}
 	)"
 PDEPEND="
 	opengfx? ( games-misc/opengfx )
-	opensfx? ( games-misc/opensfx )"
+	opensfx? ( games-misc/opensfx )
+	openmsx? ( games-misc/openmsx )"
 
 src_configure() {
 	local myopts
@@ -139,8 +140,14 @@ pkg_postinst() {
 			elog "You have emerged with 'aplaymidi' for playing MIDI."
 			elog "You have to set the environment variable ALSA_OUTPUT_PORTS."
 			elog "Available ports can be listed by using 'aplaymidi -l'."
+			if ! use openmsx ; then
+				elog "You have disabled the openmsx use flag, in game music"
+				elog "will be unavailable unless you build with openmsx"
+				elog "or install a music set in ~/.openttd/gm"
+			fi
 		else
 			elog "alsa not in USE so music will not be played during the game."
+
 		fi
 	fi
 }

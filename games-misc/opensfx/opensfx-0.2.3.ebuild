@@ -19,9 +19,11 @@ DEPEND=">=games-simulation/openttd-1.0.0_beta1
 	games-util/catcodec"
 RDEPEND="${DEPEND}"
 
+S=${WORKDIR}/${P}-source
+
 src_install() {
 	insinto "${GAMES_DATADIR}/openttd/data/"
-	doins src/opensfx.cat opensfx.obs || die "doins failed in $(pwd)"
+	doins opensfx.cat opensfx.obs || die "doins failed in $(pwd)"
 	dodoc docs/*.txt || die "dodoc failed"
 	prepgamesdirs
 }

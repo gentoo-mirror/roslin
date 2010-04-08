@@ -1,7 +1,7 @@
 diff --git a/snesfilter/Makefile b/snesfilter/Makefile
-index 089b86e..99d22b3 100755
---- ../snesfilter/Makefile
-+++ ../snesfilter/Makefile
+index 089b86e..08ba81b 100755
+--- a/../snesfilter/Makefile
++++ b/../snesfilter/Makefile
 @@ -5,12 +5,12 @@ include nall/qt/Makefile
  
  c     := $(compiler) -std=gnu99
@@ -17,10 +17,22 @@ index 089b86e..99d22b3 100755
  else ifeq ($(platform),osx)
    flags := -fPIC -fopenmp $(flags)
    link += -fopenmp -lpthread -lgomp
+@@ -73,9 +73,8 @@ endif
+ 
+ install:
+ ifeq ($(platform),x)
+-	install -D -m 755 libsnesfilter.a $(DESTDIR)$(prefix)/lib
+-	install -D -m 755 libsnesfilter.so $(DESTDIR)$(prefix)/lib
+-	ldconfig -n $(DESTDIR)$(prefix)/lib
++	install -D -m 755 libsnesfilter.a $(DESTDIR)$(prefix)/lib/libsnesfilter.a
++	install -D -m 755 libsnesfilter.so $(DESTDIR)$(prefix)/lib/libsnesfilter.so
+ else ifeq ($(platform),osx)
+ 	cp libsnesfilter.dylib /usr/local/lib/libsnesfilter.dylib
+ endif
 diff --git a/snesreader/Makefile b/snesreader/Makefile
-index 761317b..7a7733f 100755
---- ../snesreader/Makefile
-+++ ../snesreader/Makefile
+index 761317b..868a0cc 100755
+--- a/../snesreader/Makefile
++++ b/../snesreader/Makefile
 @@ -5,12 +5,11 @@ include nall/qt/Makefile
  
  c     := $(compiler) -std=gnu99
@@ -35,10 +47,22 @@ index 761317b..7a7733f 100755
  else ifeq ($(platform),osx)
    flags := -fPIC $(flags)
  endif
+@@ -171,9 +170,8 @@ endif
+ 
+ install:
+ ifeq ($(platform),x)
+-	install -D -m 755 libsnesreader.a $(DESTDIR)$(prefix)/lib
+-	install -D -m 755 libsnesreader.so $(DESTDIR)$(prefix)/lib
+-	ldconfig -n $(DESTDIR)$(prefix)/lib
++	install -D -m 755 libsnesreader.a $(DESTDIR)$(prefix)/lib/libsnesreader.a
++	install -D -m 755 libsnesreader.so $(DESTDIR)$(prefix)/lib/libsnesreader.so
+ else ifeq ($(platform),osx)
+ 	cp libsnesreader.dylib /usr/local/lib/libsnesreader.dylib
+ endif
 diff --git a/src/Makefile b/src/Makefile
-index 8a82a32..71ced85 100755
---- Makefile
-+++ Makefile
+index 8a82a32..276da6e 100755
+--- a/Makefile
++++ b/Makefile
 @@ -10,7 +10,7 @@ include lib/nall/qt/Makefile
  
  c     := $(compiler) --std=gnu99
@@ -57,10 +81,21 @@ index 8a82a32..71ced85 100755
  
    ruby := video.glx video.xv video.qtraster video.sdl
    ruby += audio.alsa audio.openal audio.oss audio.pulseaudio audio.pulseaudiosimple audio.ao
+@@ -202,8 +202,8 @@ endif
+ 
+ install:
+ 	install -D -m 755 ../bsnes $(DESTDIR)$(prefix)/bin/bsnes
+-	install -D -m 644 data/bsnes.png $(DESTDIR)$(prefix)/share/pixmaps/bsnes.png
+-	install -D -m 644 data/bsnes.desktop $(DESTDIR)$(prefix)/share/applications/bsnes.desktop
++	install -D -m 644 data/bsnes.png $(DESTDIR)/usr/share/pixmaps/bsnes.png
++	install -D -m 644 data/bsnes.desktop $(DESTDIR)/usr/share/applications/bsnes.desktop
+ 
+ uninstall:
+ 	rm $(DESTDIR)$(prefix)/bin/bsnes
 diff --git a/supergameboy/Makefile b/supergameboy/Makefile
-index 60409af..6326f2b 100755
---- ../supergameboy/Makefile
-+++ ../supergameboy/Makefile
+index 60409af..cbef9ac 100755
+--- a/../supergameboy/Makefile
++++ b/../supergameboy/Makefile
 @@ -2,14 +2,13 @@ include nall/Makefile
  
  c     := $(compiler) -std=gnu99
@@ -77,3 +112,15 @@ index 60409af..6326f2b 100755
  endif
  
  objects := supergameboy
+@@ -113,9 +112,8 @@ install:
+ ifeq ($(platform),osx)
+ 	cp libsupergameboy.dylib /usr/local/lib/libsupergameboy.dylib
+ else
+-	install -D -m 755 libsupergameboy.a $(DESTDIR)$(prefix)/lib
+-	install -D -m 755 libsupergameboy.so $(DESTDIR)$(prefix)/lib
+-	ldconfig -n $(DESTDIR)$(prefix)/lib
++	install -D -m 755 libsupergameboy.a $(DESTDIR)$(prefix)/lib/libsupergameboy.a
++	install -D -m 755 libsupergameboy.so $(DESTDIR)$(prefix)/lib/libsupergameboy.so
+ endif
+ 
+ clean:

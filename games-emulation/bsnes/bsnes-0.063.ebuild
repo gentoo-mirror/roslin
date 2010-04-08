@@ -39,13 +39,20 @@ disable_module() {
 
 build_plugin() {
 	einfo "Building $1..."
-	cd "${WORKDIR}/$1"
 
-	emake platform=x compiler=gcc || die "emake $1 failed"
+	emake \
+	    -C "${WORKDIR}/$1" \
+	    platform=x \
+	    compiler=gcc \
+	    || die "emake $1 failed"
 }
 
 install_plugin() {
-	dolib "${WORKDIR}/$1/lib$1.so" || die "dolib failed"
+	emake \
+	    -C "${WORKDIR}/$1" \
+	    prefix="/usr" \
+	    DESTDIR="${D}" install \
+	    || die "install $1 failed"
 }
 
 pkg_setup() {
@@ -90,9 +97,10 @@ src_compile() {
 }
 
 src_install() {
-	dogamesbin ../${PN} || die "failed bin"
-	doicon data/${PN}.png || die "failed icon"
-	make_desktop_entry ${PN}
+	emake \
+	    DESTDIR="${D}" \
+	    prefix="${GAMES_PREFIX}" \
+	    install || die "install failed"
 
 	# install plugins
 	use snesfilter && install_plugin snesfilter

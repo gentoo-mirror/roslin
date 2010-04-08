@@ -1,6 +1,14 @@
 # ChangeLog for games-emulation/bsnes
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 
+*bsnes-0.063_p10 (08 Apr 2010)
+
+  08 Apr 2010; Michał Ziąbkowski <mziab@o2.pl> +bsnes-0.063_p10.ebuild,
+  +files/bsnes-0.063_p10-makefile.patch:
+  Added technical preview with cycle-based PPU. Not meant for mere mortals.
+  Also, no snesreader, snesfilter and sgb bundled with this release. Use
+  this only if you know what you're doing.
+
   28 Mar 2010; Michał Ziąbkowski <mziab@o2.pl>
   -files/bsnes-0.059-makefile.patch, -files/bsnes-0.061_p1-makefile.patch,
   bsnes-0.063.ebuild, +files/bsnes-0.063-makefile.patch:

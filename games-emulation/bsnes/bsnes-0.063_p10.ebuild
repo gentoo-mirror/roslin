@@ -7,7 +7,7 @@ EAPI=2
 inherit eutils confutils games
 
 MY_PV="${PV/0./}"
-MY_PV="${MY_PV/_p/r0}"
+MY_PV="${MY_PV/_p/r}"
 
 DESCRIPTION="A Super Famicom/SNES emulator written with absolute accuracy in mind"
 HOMEPAGE="http://byuu.org/bsnes/"
@@ -15,8 +15,8 @@ SRC_URI="http://bsnes.googlecode.com/files/${PN}_v${MY_PV}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
-IUSE="ao alsa debug openal opengl oss pulseaudio sdl sgb snesfilter +snesreader xv"
+KEYWORDS=""
+IUSE="ao alsa debug openal opengl oss pulseaudio sdl xv"
 
 RDEPEND="ao? ( media-libs/libao )
 	openal? ( media-libs/openal )
@@ -25,7 +25,6 @@ RDEPEND="ao? ( media-libs/libao )
 	xv? ( x11-libs/libXv )
 	opengl? ( virtual/opengl )
 	sdl? ( media-libs/libsdl[joystick] )
-	snesfilter? ( sys-devel/gcc[openmp] )
 	>=x11-libs/qt-gui-4.5:4"
 
 DEPEND="${DEPEND}
@@ -34,25 +33,7 @@ DEPEND="${DEPEND}
 S="${WORKDIR}/src"
 
 disable_module() {
-	sed -i Makefile -e "s|$1||"
-}
-
-build_plugin() {
-	einfo "Building $1..."
-
-	emake \
-	    -C "${WORKDIR}/$1" \
-	    platform=x \
-	    compiler=gcc \
-	    || die "emake $1 failed"
-}
-
-install_plugin() {
-	emake \
-	    -C "${WORKDIR}/$1" \
-	    prefix="/usr" \
-	    DESTDIR="${D}" install \
-	    || die "install $1 failed"
+	sed -i "ui_qt/Makefile" -e "s|$1||"
 }
 
 pkg_setup() {
@@ -65,7 +46,7 @@ src_prepare() {
 
 	# debugger
 	if use debug ; then
-	    sed -i "base.hpp" \
+	    sed -i "snes/snes.hpp" \
 		-e "s://\(#define DEBUGGER\):\\1:" \
 		|| die "sed failed"
 	fi
@@ -89,23 +70,12 @@ src_prepare() {
 
 src_compile() {
 	emake platform=x compiler=gcc || die "emake failed"
-
-	# build bundled plugins
-	use snesfilter && build_plugin snesfilter
-	use snesreader && build_plugin snesreader
-	use sgb && build_plugin supergameboy
 }
 
 src_install() {
-	emake \
-	    DESTDIR="${D}" \
-	    prefix="${GAMES_PREFIX}" \
-	    install || die "install failed"
-
-	# install plugins
-	use snesfilter && install_plugin snesfilter
-	use snesreader && install_plugin snesreader
-	use sgb && install_plugin supergameboy
+	emake prefix="${GAMES_PREFIX}" \
+	    DESTDIR="${D}" install \
+	    || die "install failed"
 
 	prepgamesdirs
 }

@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/bsnes
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 
+  11 Apr 2010; Michał Ziąbkowski <mziab@o2.pl> bsnes-0.063.ebuild,
+  bsnes-0.063_p10.ebuild:
+  Fixed stupid typo. Added missing dep.
+
   08 Apr 2010; Michał Ziąbkowski <mziab@o2.pl> bsnes-0.063.ebuild,
   files/bsnes-0.063-makefile.patch:
   Refactored install phase.

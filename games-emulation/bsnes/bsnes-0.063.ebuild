@@ -28,7 +28,8 @@ RDEPEND="ao? ( media-libs/libao )
 	snesfilter? ( sys-devel/gcc[openmp] )
 	>=x11-libs/qt-gui-4.5:4"
 
-DEPEND="${DEPEND}
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig
 	>=sys-devel/gcc-4.4"
 
 S="${WORKDIR}/src"

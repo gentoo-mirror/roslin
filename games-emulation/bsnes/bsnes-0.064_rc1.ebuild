@@ -16,7 +16,7 @@ SRC_URI="http://bsnes.googlecode.com/files/${PN}_v${MY_PV}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS=""
-IUSE="ao alsa openal opengl oss pulseaudio sdl xv"
+IUSE="ao alsa debug openal opengl oss pulseaudio sdl xv"
 
 RDEPEND="ao? ( media-libs/libao )
 	openal? ( media-libs/openal )
@@ -62,7 +62,8 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-makefile.patch
+	epatch "${FILESDIR}"/${P}-makefile.patch \
+		"${FILESDIR}"/${P}-debugger-fix.patch
 
 	# debugger
 	if use debug ; then

@@ -23,7 +23,6 @@ DEPEND="dev-libs/libxml2[python]
 RDEPEND="${DEPEND}"
 
 src_compile() {
-	python_version
 	distutils_src_compile
 }
 

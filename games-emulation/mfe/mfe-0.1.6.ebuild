@@ -20,7 +20,6 @@ RDEPEND="${DEPEND}
 	games-emulation/mednafen"
 
 src_compile() {
-	python_version
 	distutils_src_compile
 }
 

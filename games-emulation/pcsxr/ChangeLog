@@ -2,6 +2,9 @@
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  13 Apr 2010; Michał Ziąbkowski <mziab@o2.pl> pcsxr-9999.ebuild:
+  Dropped redundant patch in svn ebuild.
+
   21 Feb 2010; Michał Ziąbkowski <mziab@o2.pl> pcsxr-9999.ebuild:
   Added pulseaudio support to live ebuild.
 

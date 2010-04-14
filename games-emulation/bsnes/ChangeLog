@@ -1,6 +1,16 @@
 # ChangeLog for games-emulation/bsnes
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 
+*bsnes-0.064 (14 Apr 2010)
+
+  14 Apr 2010; Michał Ziąbkowski <mziab@o2.pl> -bsnes-0.063.ebuild,
+  -bsnes-0.063_p10.ebuild, -files/bsnes-0.063-makefile.patch,
+  -files/bsnes-0.063_p10-makefile.patch, -bsnes-0.064_rc1.ebuild,
+  +bsnes-0.064.ebuild, +files/bsnes-0.064-makefile.patch,
+  -files/bsnes-0.064_rc1-debugger-fix.patch,
+  -files/bsnes-0.064_rc1-makefile.patch:
+  Bumped. Removed cruft, since upstream removed the old tarballs.
+
   12 Apr 2010; Michał Ziąbkowski <mziab@o2.pl> bsnes-0.064_rc1.ebuild,
   +files/bsnes-0.064_rc1-debugger-fix.patch:
   Reinstanted debug flag in _rc1 thanks to patch.

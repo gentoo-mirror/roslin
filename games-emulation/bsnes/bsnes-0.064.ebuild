@@ -15,8 +15,8 @@ SRC_URI="http://bsnes.googlecode.com/files/${PN}_v${MY_PV}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS=""
-IUSE="ao alsa debug openal opengl oss pulseaudio sdl xv"
+KEYWORDS="~amd64 ~x86"
+IUSE="ao alsa debug openal opengl oss pulseaudio sdl sgb snesfilter +snesreader xv"
 
 RDEPEND="ao? ( media-libs/libao )
 	openal? ( media-libs/openal )
@@ -63,7 +63,6 @@ pkg_setup() {
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-makefile.patch \
-		"${FILESDIR}"/${P}-debugger-fix.patch
 
 	# debugger
 	if use debug ; then
@@ -93,9 +92,9 @@ src_compile() {
 	emake platform=x compiler=gcc || die "emake failed"
 
 	# build bundled plugins
-	#use snesfilter && build_plugin snesfilter
-	#use snesreader && build_plugin snesreader
-	#use sgb && build_plugin supergameboy
+	use snesfilter && build_plugin snesfilter
+	use snesreader && build_plugin snesreader
+	use sgb && build_plugin supergameboy
 }
 
 src_install() {
@@ -105,9 +104,9 @@ src_install() {
 	    install || die "install failed"
 
 	# install plugins
-	#use snesfilter && install_plugin snesfilter
-	#use snesreader && install_plugin snesreader
-	#use sgb && install_plugin supergameboy
+	use snesfilter && install_plugin snesfilter
+	use snesreader && install_plugin snesreader
+	use sgb && install_plugin supergameboy
 
 	prepgamesdirs
 }

@@ -60,38 +60,38 @@ index 761317b..868a0cc 100755
  	cp libsnesreader.dylib /usr/local/lib/libsnesreader.dylib
  endif
 diff --git a/src/Makefile b/src/Makefile
-index 8a82a32..276da6e 100755
+index c3c1fe9..4b5de6d 100755
 --- a/Makefile
 +++ b/Makefile
-@@ -10,7 +10,7 @@ include lib/nall/qt/Makefile
+@@ -4,7 +4,7 @@ ui := ui_qt
+ # compiler
+ c       := $(compiler) -std=gnu99
+ cpp     := $(subst cc,++,$(compiler)) -std=gnu++0x
+-flags   := -O3 -fomit-frame-pointer -I.
++flags   := $(CXXFLAGS) -fomit-frame-pointer -I.
+ link    :=
+ objects :=
  
- c     := $(compiler) --std=gnu99
- cpp   := $(subst cc,++,$(compiler)) -std=gnu++0x
--flags := -O3 -fomit-frame-pointer -Ilib
-+flags := $(CXXFLAGS) -fomit-frame-pointer -Ilib
- link  :=
+@@ -17,7 +17,7 @@ objects :=
  
- # profile-guided instrumentation:
-@@ -25,7 +25,7 @@ link  :=
- ################
- 
+ # platform
  ifeq ($(platform),x)
 -  link += -s -ldl -lX11 -lXext
 +  link += -ldl -lX11 -lXext
- 
-   ruby := video.glx video.xv video.qtraster video.sdl
-   ruby += audio.alsa audio.openal audio.oss audio.pulseaudio audio.pulseaudiosimple audio.ao
-@@ -202,8 +202,8 @@ endif
- 
+ else ifeq ($(platform),osx)
+ else ifeq ($(platform),win)
+   link += -mwindows -mthreads
+@@ -60,8 +60,8 @@ endif
  install:
+ ifeq ($(platform),x)
  	install -D -m 755 ../bsnes $(DESTDIR)$(prefix)/bin/bsnes
 -	install -D -m 644 data/bsnes.png $(DESTDIR)$(prefix)/share/pixmaps/bsnes.png
 -	install -D -m 644 data/bsnes.desktop $(DESTDIR)$(prefix)/share/applications/bsnes.desktop
 +	install -D -m 644 data/bsnes.png $(DESTDIR)/usr/share/pixmaps/bsnes.png
 +	install -D -m 644 data/bsnes.desktop $(DESTDIR)/usr/share/applications/bsnes.desktop
+ endif
  
  uninstall:
- 	rm $(DESTDIR)$(prefix)/bin/bsnes
 diff --git a/supergameboy/Makefile b/supergameboy/Makefile
 index 60409af..cbef9ac 100755
 --- a/../supergameboy/Makefile

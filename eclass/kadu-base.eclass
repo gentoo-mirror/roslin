@@ -10,6 +10,7 @@ inherit eutils flag-o-matic cmake-utils
 LICENSE="GPL-2"
 SLOT="0"
 RESTRICT="primaryuri"
+IUSE="debug"
 
 # If no version was requested, default to this one
 MIN_VER="${MIN_VER:-0.6.5.4}"
@@ -35,6 +36,8 @@ kadu-base_src_configure() {
 	# Fix some versions of cmake-utils.eclass
 	# which set CMAKE_BUILD_TYPE to Gentoo
 	append-cppflags -DQT_NO_DEBUG
+
+	use debug && local CMAKE_BUILD_TYPE="debug"
 
 	local mycmakeargs="${mycmakeargs} \
 		-DBUILD_DESCRIPTION:STRING='Gentoo Linux' \

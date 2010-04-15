@@ -55,19 +55,11 @@ kadu-base_src_compile() {
 	cmake-utils_src_compile
 }
 
-kadu-base_src_install() {
-	cmake-utils_src_install
-
-	# if not core, delete docs
-	[ "${NAME}" != "core" ] && rm -f \
-	${D}/usr/share/kadu/{AUTHORS,COPYING,ChangeLog,HISTORY,README,THANKS}
-}
-
 case ${EAPI} in
     2)
-	EXPORT_FUNCTIONS src_configure src_compile src_install
+	EXPORT_FUNCTIONS src_configure src_compile
 	;;
     *)
-	EXPORT_FUNCTIONS src_compile src_install
+	EXPORT_FUNCTIONS src_compile
 	;;
 esac

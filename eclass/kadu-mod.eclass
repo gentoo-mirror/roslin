@@ -16,10 +16,12 @@ fi
 K_PV="${K_PV/_p/-}"
 K_PV="${K_PV/_/-}"
 
+KADU_DIR="${KADU_DIR:-stable}"
+
 RDEPEND=">=net-im/kadu-core-${MIN_VER}
 	${MOD_DEPEND}"
 
-SRC_URI="http://www.kadu.net/download/stable/kadu-${K_PV}.tar.bz2
+SRC_URI="http://www.kadu.net/download/${KADU_DIR}/kadu-${K_PV}.tar.bz2
 	${MOD_URI}"
 
 kadu-mod_src_unpack() {
@@ -37,6 +39,10 @@ kadu-mod_src_unpack() {
 	sed -e "/add_subdirectory/d" -i "${S}/CMakeLists.txt" \
 	    || die "sed failed"
 	echo "add_subdirectory (modules)" >>"${S}/CMakeLists.txt"
+
+	# Disable docs install to avoid collisions
+	sed -e "/README/d" -i "${S}/CMakeLists.txt" \
+	    || die "sed failed"
 
 	# If external module, move its sources to kadu/modules
 	[ "${MOD_TYPE}" = "ext" ] && mv -f \

@@ -34,5 +34,58 @@ DEPEND=">=net-im/kadu-core-${PV}[debug?]
 	jabber? ( >=net-im/kadu-jabber_protocol-${PV}[debug?] )
 	kde? ( >=net-im/kadu-kde_notify-${PV}[debug?] )
 	spell? ( >=net-im/kadu-spellchecker-${PV}[debug?] )
+	!<net-im/kadu-account_management-0.6.6_beta
+	!<net-im/kadu-advanced_userlist-0.6.6_beta
+	!<net-im/kadu-agent-0.6.6_beta
+	!<net-im/kadu-amarok1_mediaplayer-0.6.6_beta
+	!<net-im/kadu-amarok2_mediaplayer-0.6.6_beta
+	!<net-im/kadu-anonymous_check-0.6.6_beta
+	!<net-im/kadu-antistring-0.6.6_beta
+	!<net-im/kadu-ao_sound-0.6.6_beta
+	!<net-im/kadu-audacious_mediaplayer-0.6.6_beta
+	!<net-im/kadu-autoresponder-0.6.6_beta
+	!<net-im/kadu-autostatus-0.6.6_beta
+	!<net-im/kadu-bmpx_mediaplayer-0.6.6_beta
+	!<net-im/kadu-cenzor-0.6.6_beta
+	!<net-im/kadu-dcc-0.6.6_beta
+	!<net-im/kadu-default_sms-0.6.6_beta
+	!<net-im/kadu-desktop_docking-0.6.6_beta
+	!<net-im/kadu-dragon_mediaplayer-0.6.6_beta
+	!<net-im/kadu-dsp_sound-0.6.6_beta
+	!<net-im/kadu-encryption-0.6.6_beta
+	!<net-im/kadu-encryption_old-0.6.6_beta
+	!<net-im/kadu-filedesc-0.6.6_beta
+	!<net-im/kadu-filtering-0.6.6_beta
+	!<net-im/kadu-firewall-0.6.6_beta
+	!<net-im/kadu-gg_avatars-0.6.6_beta
+	!<net-im/kadu-hints-0.6.6_beta
+	!<net-im/kadu-last_seen-0.6.6_beta
+	!<net-im/kadu-mpris_mediaplayer-0.6.6_beta
+	!<net-im/kadu-notify-0.6.6_beta
+	!<net-im/kadu-osd_hints-0.6.6_beta
+	!<net-im/kadu-pcspeaker-0.6.6_beta
+	!<net-im/kadu-powerkadu-0.6.6_beta
+	!<net-im/kadu-profiles-0.6.6_beta
+	!<net-im/kadu-qt4_sound-0.6.6_beta
+	!<net-im/kadu-single_window-0.6.6_beta
+	!<net-im/kadu-speech-0.6.6_beta
+	!<net-im/kadu-split_messages-0.6.6_beta
+	!<net-im/kadu-vlc_mediaplayer-0.6.6_beta
+	!<net-im/kadu-voice-0.6.6_beta
+	!<net-im/kadu-weather-0.6.6_beta
+	!<net-im/kadu-window_notify-0.6.6_beta
+	!<net-im/kadu-word_fix-0.6.6_beta
+	!net-im/kadu-globalhotkeys
+	!net-im/kadu-led_notify
+	!net-im/kadu-mail
+	!net-im/kadu-mime_tex
+	!net-im/kadu-mx610_notify
+	!net-im/kadu-nextinfo
+	!net-im/kadu-pajacyk
+	!net-im/kadu-panelkadu
+	!net-im/kadu-plus_pl_sms
+	!net-im/kadu-senthistory
+	!>=net-im/kadu-tabs-1.2.7
+	!net-im/kadu-water_notify
 "
 RDEPEND="${DEPEND}"

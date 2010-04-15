@@ -2,6 +2,10 @@
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  15 Apr 2010; Michał Ziąbkowski <mziab@o2.pl> kadu-0.6.6_beta1.ebuild:
+  Added blockers for unported modules. Will remove incrementally as they're
+  brought back.
+
 *kadu-0.6.5.3-r2 (10 Feb 2010)
 
   10 Feb 2010; Michał Ziąbkowski <mziab@o2.pl> -kadu-0.6.5.3-r1.ebuild,

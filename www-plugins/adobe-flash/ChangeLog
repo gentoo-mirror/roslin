@@ -2,6 +2,10 @@
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  18 Apr 2010; Piotr Szymaniak <lazy_bum@o2.pl>
+  adobe-flash-10.1.53.7.ebuild:
+  Removed cruft lines.
+
 *adobe-flash-10.1.53.7 (18 Apr 2010)
 
   18 Apr 2010; Piotr Szymaniak <lazy_bum@o2.pl>

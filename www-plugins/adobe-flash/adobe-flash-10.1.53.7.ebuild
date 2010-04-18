@@ -70,7 +70,7 @@ src_install() {
 		use x86 && popd
 
 		# 64b tarball has no readme file.
-		use x86 && dodoc "${S}/usr/share/doc/flash-plugin-${PV}/readme.txt"
+		#use x86 && dodoc "${S}/usr/share/doc/flash-plugin-${PV}/readme.txt"
 	fi
 
 	if [[ $need_lahf_wrapper ]]; then
@@ -82,8 +82,8 @@ src_install() {
 	fi
 
 	# The magic config file!
-	insinto "/etc/adobe"
-	doins "${FILESDIR}/mms.cfg"
+	#insinto "/etc/adobe"
+	#doins "${FILESDIR}/mms.cfg"
 }
 
 pkg_postinst() {

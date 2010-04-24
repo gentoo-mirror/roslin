@@ -5,11 +5,12 @@
 EAPI=1
 inherit nsplugins rpm multilib toolchain-funcs
 
+MY_URI="http://download.macromedia.com/pub/labs/flashplayer10"
+
 DESCRIPTION="Adobe Flash Player"
-SRC_URI="!debug? ( http://download.macromedia.com/pub/labs/flashplayer10/flashplayer10_1_rc_linux_040510.tar.gz )
-	debug? ( http://download.macromedia.com/pub/labs/flashplayer10/flashplayer10_1_rc_debug_linux_040510.tar.gz )"
+SRC_URI="${MY_URI}/flashplayer10_1_rc2_linux_041910.tar.gz"
 HOMEPAGE="http://www.adobe.com/"
-IUSE="debug"
+IUSE=""
 SLOT="0"
 
 KEYWORDS=""

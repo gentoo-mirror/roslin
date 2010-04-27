@@ -10,7 +10,6 @@ MOD_RESTRICT="fetch mirror"
 # Only darkplaces can run it stably
 MOD_CMDLINE_OPTIONS="-nehahra"
 
-MOD_USES_JOEQUAKE="y"
 MOD_USES_QRACK="y"
 
 inherit eutils games games-mod

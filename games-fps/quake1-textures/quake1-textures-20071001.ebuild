@@ -23,7 +23,6 @@ IUSE="demo fuhquake tenebrae rygel"
 
 RDEPEND="|| (
 		games-fps/darkplaces
-		games-fps/joequake
 		tenebrae? ( games-fps/tenebrae )
 		games-fps/ezquake-bin
 		fuhquake? ( games-fps/fuhquake-bin ) )"

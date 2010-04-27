@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/quake1-textures
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 
+  27 Apr 2010; Piotr Szymaniak <lazy_bum@o2.pl>
+  quake1-textures-20060722.ebuild, quake1-textures-20071001.ebuild:
+  Removed joequake support.
+
   02 Jan 2010; Michał Ziąbkowski <mziab@o2.pl>
   quake1-textures-20060722.ebuild, quake1-textures-20071001.ebuild:
   Changed keywords to shut up repoman.

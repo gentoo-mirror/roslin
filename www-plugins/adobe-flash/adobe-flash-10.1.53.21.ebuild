@@ -61,17 +61,9 @@ src_compile() {
 
 src_install() {
 	if [[ $native_install ]]; then
-		# 32b RPM has things hidden in funny places
-		use x86 && pushd "${S}/usr/lib/flash-plugin"
-
 		exeinto /opt/netscape/plugins
 		doexe libflashplayer.so
 		inst_plugin /opt/netscape/plugins/libflashplayer.so
-
-		use x86 && popd
-
-		# 64b tarball has no readme file.
-		#use x86 && dodoc "${S}/usr/share/doc/flash-plugin-${PV}/readme.txt"
 	fi
 
 	if [[ $need_lahf_wrapper ]]; then
@@ -81,10 +73,6 @@ src_install() {
 		doexe flashplugin-lahf-fix.so
 		inst_plugin /opt/netscape/plugins/flashplugin-lahf-fix.so
 	fi
-
-	# The magic config file!
-	#insinto "/etc/adobe"
-	#doins "${FILESDIR}/mms.cfg"
 }
 
 pkg_postinst() {

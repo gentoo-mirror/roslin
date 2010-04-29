@@ -19,7 +19,6 @@ IUSE="demo fuhquake tenebrae"
 
 RDEPEND="|| (
 		games-fps/darkplaces
-		games-fps/joequake
 		tenebrae? ( games-fps/tenebrae )
 		games-fps/ezquake-bin
 		fuhquake? ( games-fps/fuhquake-bin ) )"

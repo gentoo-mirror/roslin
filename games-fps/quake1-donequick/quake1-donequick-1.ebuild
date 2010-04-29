@@ -20,7 +20,6 @@ IUSE="cdinstall"
 # qd100qwav-ep1.zip by itself works with just the demo data
 RDEPEND="|| (
 		games-fps/darkplaces
-		games-fps/joequake
 		games-fps/tenebrae )
 	cdinstall? ( games-fps/quake1-data )
 	!cdinstall? ( || (

@@ -28,8 +28,3 @@ src_unpack() {
 
 	games-mod_src_unpack_tidy
 }
-
-#src_install() {
-#	insinto "${dir}/${MOD_DIR}"
-#	doins
-#}

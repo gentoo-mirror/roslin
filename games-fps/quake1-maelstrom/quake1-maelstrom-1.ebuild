@@ -7,7 +7,6 @@ MOD_MAP="mael"
 MOD_CMDLINE_OPTIONS="-nehahra"
 MOD_RDEPEND_EXTRA="games-fps/quake1-nehahra"
 
-MOD_USES_JOEQUAKE="y"
 MOD_USES_QRACK="y"
 
 inherit eutils games games-mod

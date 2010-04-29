@@ -1,0 +1,10 @@
+# ChangeLog for games-fps/quake1-map-grendels-keep
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*quake1-map-grendels-keep-1 (27 Apr 2010)
+
+  27 Apr 2010; Piotr Szymaniak <lazy_bum@o2.pl>
+  +quake1-map-grendels-keep-1.ebuild:
+  Initial ebuild.
+

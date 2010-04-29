@@ -3,7 +3,6 @@
 # $Header: $
 
 MOD_USES_QRACK=y
-MOD_USES_JOEQUAKE=y
 MOD_USES_TYRQUAKE=y
 
 MOD_DIR="id1"

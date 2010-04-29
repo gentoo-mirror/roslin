@@ -7,7 +7,7 @@ KADU_DIR="unstable"
 
 inherit kadu-base
 
-MOD_DEPEND="net-dns/libidn >=app-crypt/qca-2.0"
+MOD_DEPEND="net-dns/libidn >=app-crypt/qca-ossl-2.0"
 
 inherit kadu-mod
 

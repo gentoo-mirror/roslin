@@ -21,12 +21,12 @@ RESTRICT="mirror strip"
 PROPERTIES="interactive"
 
 RDEPEND="virtual/opengl
-    virtual/glu
-    x11-libs/libX11
-    media-libs/freetype:2
-    sys-libs/glibc
-    media-libs/openal
-    media-libs/libvorbis"
+	virtual/glu
+	x11-libs/libX11
+	media-libs/freetype:2
+	sys-libs/glibc
+	media-libs/openal
+	media-libs/libvorbis"
 DEPEND="${RDEPEND}"
 
 S=${WORKDIR}/${MY_PN}

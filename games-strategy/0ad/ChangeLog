@@ -1,6 +1,13 @@
 # ChangeLog for games-strategy/0ad
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+
+*0ad-7539 (14 May 2010)
+
+  14 May 2010; Piotr Szymaniak <lazy_bum@o2.pl> +0ad-7539.ebuild,
+  0ad-9999.ebuild:
+  Bump to alpha version thanks to Philip Taylor (bug #278541), masked live
+  ebuild.
 
   01 Sep 2009; Piotr Szymaniak <lazy_bum@o2.pl> 0ad-9999.ebuild:
   Updated ebuild.

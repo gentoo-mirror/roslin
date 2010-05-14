@@ -13,7 +13,7 @@ HOMEPAGE="http://wildfiregames.com/0ad/"
 
 LICENSE="GPL-2 CCPL-Attribution-ShareAlike-3.0"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS=""
 IUSE="editor"
 
 RDEPEND="virtual/opengl

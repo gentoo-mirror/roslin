@@ -8,9 +8,10 @@ inherit nsplugins rpm multilib toolchain-funcs
 MY_URI="http://download.macromedia.com/pub/labs/flashplayer10"
 
 DESCRIPTION="Adobe Flash Player"
-SRC_URI="${MY_URI}/flashplayer10_1_rc2_linux_041910.tar.gz"
+SRC_URI="!debug? ( ${MY_URI}/flashplayer10_1_rc4_linux_050510.tar.gz )
+	debug? ( ${MY_URI}/flashplayer10_1_rc4_debug_linux_050510.tar.gz )"
 HOMEPAGE="http://www.adobe.com/"
-IUSE=""
+IUSE="debug"
 SLOT="0"
 
 KEYWORDS=""
@@ -47,16 +48,6 @@ QA_DT_HASH="opt/flash-libcompat/lib.*
 
 pkg_setup() {
 	export native_install=1
-}
-
-src_compile() {
-	if [[ $need_lahf_wrapper ]]; then
-		# This experimental wrapper, from Maks Verver via bug #268336 should
-		# emulate the missing lahf instruction affected platforms.
-		$(tc-getCC) -fPIC -shared -nostdlib -lc -oflashplugin-lahf-fix.so \
-			"${FILESDIR}/flashplugin-lahf-fix.c" \
-			|| die "Compile of flashplugin-lahf-fix.so failed"
-	fi
 }
 
 src_install() {

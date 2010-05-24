@@ -3,13 +3,14 @@
 # $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/adobe-flash-10.0.45.2.ebuild,v 1.3 2010/03/04 14:11:50 pacho Exp $
 
 EAPI=1
+
 inherit nsplugins rpm multilib toolchain-funcs
 
 MY_URI="http://download.macromedia.com/pub/labs/flashplayer10"
 
 DESCRIPTION="Adobe Flash Player"
-SRC_URI="!debug? ( ${MY_URI}/flashplayer10_1_rc4_linux_050510.tar.gz )
-	debug? ( ${MY_URI}/flashplayer10_1_rc4_debug_linux_050510.tar.gz )"
+SRC_URI="!debug? ( ${MY_URI}/flashplayer10_1_rc5_linux_052010.tar.gz )
+	debug? ( ${MY_URI}/flashplayer10_1_rc5_debug_linux_052010.tar.gz )"
 HOMEPAGE="http://www.adobe.com/"
 IUSE="debug"
 SLOT="0"
@@ -18,7 +19,7 @@ KEYWORDS=""
 LICENSE="AdobeFlash-10"
 RESTRICT="strip mirror"
 
-S="${WORKDIR}"
+S=${WORKDIR}
 
 NATIVE_DEPS="x11-libs/gtk+:2
 	media-libs/fontconfig

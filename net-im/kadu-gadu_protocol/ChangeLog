@@ -1,0 +1,11 @@
+# ChangeLog for net-im/kadu-gadu_protocol
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*kadu-gadu_protocol-0.6.6_beta1-r1 (25 May 2010)
+
+  25 May 2010; Michał Ziąbkowski <mziab@o2.pl>
+  +files/0.6.6_beta1-gg_servers.patch,
+  +kadu-gadu_protocol-0.6.6_beta1-r1.ebuild:
+  Bumped with home-rolled patch for server list.
+

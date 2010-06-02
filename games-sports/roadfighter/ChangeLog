@@ -1,6 +1,10 @@
 # ChangeLog for games-sports/roadfighter
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+
+  02 Jun 2010; Piotr Szymaniak <lazy_bum@o2.pl>
+  files/1.0.1269-Makefile.patch:
+  Patch updated by Denilson Sá (bug #261827).
 
   09 Mar 2009; Piotr Szymaniak <lazy_bum@o2.pl> roadfighter-1.0.1269.ebuild:
   Added ~amd64 keyword.

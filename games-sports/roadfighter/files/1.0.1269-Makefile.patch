@@ -27,9 +27,9 @@
  CC = g++
 -CFLAGS = -g3 -O3 `sdl-config --cflags` -I/usr/X11R6/include
 -LDFLAGS = `sdl-config --libs` -L/usr/X11R6/lib/ -lSDL_image -lSDL_mixer -lSDL_sound -lSDL_ttf
-+CFLAGS = `sdl-config --cflags` -I/usr/X11R6/include
-+LIBS = `sdl-config --libs` -L/usr/X11R6/lib/ -lSDL_image -lSDL_mixer -lSDL_sound -lSDL_ttf
-+LDFLAGS += -L/usr/X11R6/lib/
++CFLAGS += `sdl-config --cflags`
++LIBS = `sdl-config --libs` -lSDL_image -lSDL_mixer -lSDL_sound -lSDL_ttf
++LDFLAGS += 
  RM = rm -f
  CP = cp -r
  MD = mkdir -p

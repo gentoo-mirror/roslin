@@ -23,7 +23,8 @@ RDEPEND="dev-libs/boost
 	sound? ( media-libs/sdl-mixer[vorbis] )
 	>=net-libs/gnet-2
 	>=dev-libs/libsigc++-2
-	>=dev-libs/expat-2.0"
+	>=dev-libs/expat-2.0
+	dev-libs/libtar"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 

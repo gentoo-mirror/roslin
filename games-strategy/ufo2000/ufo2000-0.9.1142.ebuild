@@ -37,13 +37,6 @@ src_unpack() {
 		-e "/^CC/s/gcc/$(tc-getCC)/" \
 		makefile \
 		|| die "sed failed"
-
-	epatch "${FILESDIR}/${PN}-gcc44.patch"
-
-#	if use vorbis ; then
-#		cd "${S}/newmusic"
-#		unpack ufo2000-music-20041222.zip
-#	fi
 }
 
 src_compile() {

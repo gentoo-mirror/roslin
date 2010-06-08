@@ -1,5 +1,11 @@
 # ChangeLog for games-strategy/ufo2000
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+
+*ufo2000-0.9.1142 (08 Jun 2010)
+
+  08 Jun 2010; Piotr Szymaniak <lazy_bum@o2.pl> -files/ufo2000-gcc44.patch,
+  -ufo2000-0.7.1086.ebuild, +ufo2000-0.9.1142.ebuild:
+  Version bump.
 
   02 Jun 2009; Michał Ziąbkowski <mziab@o2.pl> ufo2000-0.7.1086.ebuild,
   ufo2000-9999.ebuild:

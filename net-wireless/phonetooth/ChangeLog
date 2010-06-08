@@ -2,6 +2,12 @@
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*phonetooth-0.5.1-r2 (08 Jun 2010)
+
+  08 Jun 2010; Michał Ziąbkowski <mziab@o2.pl>
+  +phonetooth-0.5.1-r2.ebuild:
+  Ported to base.eclass and EAPI=3.
+
   07 Jan 2010; Michał Ziąbkowski <mziab@o2.pl> metadata.xml:
   Added flag description to metadata.
 

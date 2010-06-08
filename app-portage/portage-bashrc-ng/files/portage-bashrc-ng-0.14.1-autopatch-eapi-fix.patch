@@ -4,12 +4,12 @@
  # echo 'PATCH_OVERLAY=/usr/portage/local/patches/' >> /etc/make.conf
  # mkdir -p /usr/portage/local/patches/
  
-+# avoid patching twice with EAPI=2
++# avoid patching twice with EAPI>=2
  on_compile () {
-+	if [ "${EAPI}" != 2 ];
-+	then
-+		do_autopatching
-+	fi
++	case "${EAPI}" in
++	2 | 3) ;;
++	*) do_autopatching ;;
++	esac
 +}
 +
 +on_configure () {

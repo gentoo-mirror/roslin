@@ -16,12 +16,10 @@ fi
 K_PV="${K_PV/_p/-}"
 K_PV="${K_PV/_/-}"
 
-KADU_DIR="${KADU_DIR:-stable}"
-
 RDEPEND=">=net-im/kadu-core-${MIN_VER}
 	${MOD_DEPEND}"
 
-SRC_URI="http://www.kadu.net/download/${KADU_DIR}/kadu-${K_PV}.tar.bz2
+SRC_URI="http://www.kadu.net/download/${KADU_DIR:-stable}/kadu-${K_PV}.tar.bz2
 	${MOD_URI}"
 
 kadu-mod_src_unpack() {

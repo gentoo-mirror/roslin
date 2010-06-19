@@ -2,54 +2,62 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI="2"
+EAPI=2
 
-inherit eutils toolchain-funcs games
+inherit eutils flag-o-matic games
 
 MY_P="${PN}_v${PV}_src"
 
-DESCRIPTION="Library written in C that communicates with several Nintendo Wii remotes"
+DESCRIPTION="Library written in C that communicates with several Nintendo Wii remotes."
 HOMEPAGE="http://wiiuse.net/"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 
-LICENSE="GPL-3 LGPL-3"
+LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
-IUSE="debug examples"
+KEYWORDS="~x86"
+IUSE="debug examples sdl"
 
-DEPEND="net-wireless/bluez-utils"
-RDEPEND="${DEPEND}"
+RDEPEND="net-wireless/bluez
+	virtual/glut
+	examples? (
+		sdl? ( media-libs/libsdl ) )"
+DEPEND="${RDEPEND}"
 
 S=${WORKDIR}/${MY_P/_src/}
 
 src_prepare() {
-	epatch "${FILESDIR}/${P}-Makefile.patch"
+	epatch "${FILESDIR}/${P}-makefile.patch"
+	epatch "${FILESDIR}/${P}-io_nix.patch"
 
-	sed -i -e "s|/usr/lib|$(games_get_libdir)|" \
+	# -fomit-frame-pointer shouldn't be used with USE="debug"
+	use debug && filter-flags "-fomit-frame-pointer"
+
+	sed -i \
+		-e "s|-Wall -pipe -fPIC -funroll-loops|${CFLAGS} -fPIC|" \
+		-e "s|/usr/lib|`games_get_libdir`|" \
 		src/Makefile || die "sed src/Makefile failed"
+
+	sed -i \
+		-e "s|CFLAGS = -Wall -pipe -fPIC -funroll-loops|CFLAGS = ${CFLAGS} -fPIC|" \
+		-e "s|/usr/bin|${GAMES_BINDIR}|" \
+		example/Makefile example-sdl/Makefile || die "sed failed"
 }
 
 src_compile() {
-	local opts
+	local opts=""
+	# set default build target
+	local bld="wiiuse"
+	use examples && bld="${bld} ex"
+	use sdl && bld="${bld} sdl-ex"
 
 	use debug && opts="debug=1"
+	opts="${opts} ${bld}"
 
-	emake CC=$(tc-getCC) ${opts} wiiuse || die "emake failed"
+	emake ${opts} || die "emake failed"
 }
 
 src_install() {
-	local opts
-
-	use debug && opts="debug=1"
-
-	emake DESTDIR="${D}" ${opts} install || die "emake install failed"
-
-	if use examples;
-	then
-		docinto examples/example
-		dodoc example/{example.c,Makefile} || die
-
-		docinto examples/example-sdl
-		dodoc example-sdl/{sdl.c,Makefile} || die
-	fi
+	local instopts
+	use debug && instopts="debug=1"
+	emake DESTDIR="${D}" ${instopts} install || die "einstall failed"
 }

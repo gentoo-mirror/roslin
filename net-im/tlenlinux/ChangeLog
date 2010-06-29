@@ -2,6 +2,11 @@
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*tlenlinux-7.0.1.67 (29 Jun 2010)
+
+  29 Jun 2010; Michał Ziąbkowski <mziab@o2.pl> +tlenlinux-7.0.1.67.ebuild:
+  Bumped. Upped required Qt4 version.
+
 *tlenlinux-7.0.1.65 (09 May 2010)
 
   09 May 2010; Michał Ziąbkowski <mziab@o2.pl> +tlenlinux-7.0.1.65.ebuild:

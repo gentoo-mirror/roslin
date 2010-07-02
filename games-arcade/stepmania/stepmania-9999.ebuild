@@ -34,7 +34,8 @@ RDEPEND="${DEPEND}"
 
 src_prepare() {
 	epatch "${FILESDIR}/${P}-datadir.patch" \
-	"${FILESDIR}/${P}-ffmpeg.patch"
+	"${FILESDIR}/${P}-ffmpeg.patch" \
+	"${FILESDIR}/${P}-libpng14.patch"
 }
 
 src_configure() {

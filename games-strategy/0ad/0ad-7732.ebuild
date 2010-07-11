@@ -11,8 +11,8 @@ S="${WORKDIR}/${MY_P}"
 
 DESCRIPTION="0 A.D. is a free, real-time strategy game currently under development by Wildfire Games."
 HOMEPAGE="http://wildfiregames.com/0ad/"
-SRC_URI="http://releases.wildfiregames.com/${MY_P}-unix-build.tar.xz
-	http://releases.wildfiregames.com/${MY_P}-unix-data.tar.xz"
+SRC_URI="mirror://sourceforge/zero-ad/${MY_P}-unix-build.tar.xz
+	mirror://sourceforge/zero-ad/${MY_P}-unix-data.tar.xz"
 
 LICENSE="GPL-2 CCPL-Attribution-ShareAlike-3.0"
 SLOT="0"
@@ -28,7 +28,7 @@ RDEPEND="virtual/opengl
 	|| ( dev-libs/libgamin app-admin/fam )
 	editor? ( x11-libs/wxGTK:2.8 )
 	media-libs/devil
-	net-libs/enet
+	<net-libs/enet-1.3
 	media-libs/jpeg
 	media-libs/libpng
 	dev-libs/libxml2

@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/bsnes
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 
+  01 Aug 2010; Michał Ziąbkowski <mziab@o2.pl> bsnes-0.066.ebuild,
+  +files/bsnes-0.066-ppu.patch:
+  Added hotfix for sprite corruption.
+
 *bsnes-0.066 (01 Aug 2010)
 
   01 Aug 2010; Michał Ziąbkowski <mziab@o2.pl> -bsnes-0.065.ebuild,

@@ -26,12 +26,8 @@ src_prepare() {
 }
 
 src_install() {
-		linux-mod_src_install
+	linux-mod_src_install
 
-		# udev rule for vboxdrv
-		dodir /etc/udev/rules.d
-		echo 'KERNEL=="frandom", OWNER="root", GROUP="root", MODE="0660"' \
-		>> "${D}/etc/udev/rules.d/60-frandom.rules"
-		echo 'KERNEL=="erandom", OWNER="root", GROUP="root", MODE="0660"' \
-		>> "${D}/etc/udev/rules.d/60-frandom.rules"
+	insinto /etc/udev/rules.d/
+	doins "${FILESDIR}/60-${PN}.rules"
 }

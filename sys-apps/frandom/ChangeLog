@@ -1,0 +1,10 @@
+# ChangeLog for sys-apps/frandom
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*frandom-1.0 (08 Aug 2010)
+
+  08 Aug 2010; Piotr Szymaniak <lazy_bum@o2.pl> +files/60-frandom.rules,
+  +frandom-1.0.ebuild:
+  New Package (bug #325541).
+

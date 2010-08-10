@@ -1,6 +1,9 @@
 # ChangeLog for games-util/wiiuse
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 
+  10 Aug 2010; Piotr Szymaniak <lazy_bum@o2.pl> wiiuse-0.12.ebuild:
+  Masking for removal.
+
   19 Jun 2010; Piotr Szymaniak <lazy_bum@o2.pl> wiiuse-0.12.ebuild,
   files/wiiuse-0.12-Makefile.patch, +files/wiiuse-0.12-io_nix.patch:
   Updated ebuild thanks to hal, see bug #252589 for details.

@@ -1,0 +1,22 @@
+media-libs/libsdl[joystick,opengl] media-libs/sdl-image media-libs/sdl-mixer media-libs/sdl-net net-misc/curl
+media-libs/libsdl[joystick,opengl] media-libs/sdl-image media-libs/sdl-mixer media-libs/sdl-net net-misc/curl
+0
+http://braingames.jorito.net/f1spirit/f1spirit.src_0.rc9-1615.tgz
+
+http://www.braingames.getput.com/f1spirit/default.asp
+GPL-2
+Konami's MSX1 classic F1-Spirit remake
+~amd64 ~x86
+base eutils games multilib portability toolchain-funcs
+
+
+
+
+2
+
+compile configure install postinst preinst prepare setup unpack
+
+
+
+
+

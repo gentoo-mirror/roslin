@@ -1,0 +1,22 @@
+app-arch/zip
+
+0
+http://icculus.org/twilight/darkplaces/files/hmap2build20100113.zip
+
+http://icculus.org/twilight/darkplaces/
+blob
+Maps compiler with colored lighting and lots of other features.
+~x86
+base eutils games multilib portability toolchain-funcs
+
+
+
+
+2
+
+compile configure install postinst preinst prepare setup unpack
+
+
+
+
+

@@ -1,0 +1,22 @@
+app-arch/unzip
+darkplaces? ( games-fps/darkplaces ) games-fps/quake1-data
+0
+http://isoterra.co.uk/stuff/e2m5/e2m5rmx.zip http://www.quaddicted.com/filebase/e2m5rmx.zip
+strip
+http://www.celephais.net/board/view_thread.php?id=60227
+as-is
+The Lizard's Trance - map evolved from Remix Quake Mapping Challenge.
+-* ~amd64 ~x86
+base eutils games games-mod multilib portability toolchain-funcs versionator
+darkplaces
+
+
+
+
+
+compile install nofetch postinst preinst setup unpack
+
+
+
+
+

@@ -1,0 +1,22 @@
+app-arch/unzip
+darkplaces? ( games-fps/darkplaces ) qrack? ( games-fps/qrack ) games-fps/quake1-data
+0
+http://www.quaddicted.com/filebase/maelstromv2.zip http://shub-hub.quaddicted.com/files/maps_singleplayer/maelstromv2.zip
+strip
+
+as-is
+Descent into the Maelstrom
+~x86
+base eutils games games-mod multilib portability toolchain-funcs versionator
+darkplaces qrack
+
+
+
+
+
+compile install nofetch postinst preinst setup unpack
+
+
+
+
+

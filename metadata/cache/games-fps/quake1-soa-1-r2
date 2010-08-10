@@ -1,0 +1,22 @@
+vispatch? ( games-util/vispatch )
+vispatch? ( games-util/vispatch ) darkplaces? ( games-fps/darkplaces ) games-fps/quake1-data
+0
+vispatch? ( mirror://sourceforge/vispatch/hipnotic_vis.tgz ) lights? ( http://www.kgbsyndicate.com/romi/soa.zip )
+strip
+http://www.idsoftware.com/games/quake/quake-mp1/
+as-is
+Scourge of Armagon mission pack for Quake 1
+-* ~amd64 ~x86
+base eutils games games-mod multilib portability toolchain-funcs versionator
+lights vispatch darkplaces
+
+
+
+
+
+compile install nofetch postinst preinst setup unpack
+
+
+
+
+

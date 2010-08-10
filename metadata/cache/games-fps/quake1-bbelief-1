@@ -1,0 +1,22 @@
+app-arch/unzip
+darkplaces? ( games-fps/darkplaces ) games-fps/quake1-data
+0
+http://www.quaddicted.com/filebase/bbelief.zip
+strip
+http://www.worch.com/downloads/downloads.html http://retroquake.planetquake.gamespy.com/blog/?p=169
+as-is
+Single-player & co-op 9-level episode
+-* ~amd64 ~x86
+base eutils games games-mod multilib portability toolchain-funcs versionator
+darkplaces
+
+
+
+
+
+compile install nofetch postinst preinst setup unpack
+
+
+
+
+

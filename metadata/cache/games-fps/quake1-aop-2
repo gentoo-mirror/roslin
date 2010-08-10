@@ -1,0 +1,22 @@
+app-arch/unzip
+darkplaces? ( games-fps/darkplaces ) games-fps/quake1-data
+0
+http://www.quakeone.com/aop/AOP-The_Final_Mission_v2.0.rar
+strip
+http://qexpo.tastyspleen.net/booth.php?id=117
+as-is
+Abyss Of Pandemonium - The Final Mission v2.0
+-* ~amd64 ~x86
+base eutils games games-mod multilib portability toolchain-funcs versionator
+darkplaces
+
+
+
+
+
+compile install nofetch postinst preinst setup unpack
+
+
+
+
+

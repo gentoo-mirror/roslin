@@ -1,0 +1,22 @@
+>=x11-libs/gtk+-2.10 >=gnome-base/libglade-2.0 >=media-libs/portaudio-19_pre joystick? ( >=media-libs/libsdl-1.2.12[joystick] ) opengl? ( virtual/opengl ) xv? ( x11-libs/libXv ) xrandr? ( x11-libs/libXrandr ) zlib? ( sys-libs/zlib ) x11-misc/xdg-utils x86? ( dev-lang/nasm ) nls? ( dev-util/intltool ) dev-util/pkgconfig !games-emulation/snes9x[gtk]
+>=x11-libs/gtk+-2.10 >=gnome-base/libglade-2.0 >=media-libs/portaudio-19_pre joystick? ( >=media-libs/libsdl-1.2.12[joystick] ) opengl? ( virtual/opengl ) xv? ( x11-libs/libXv ) xrandr? ( x11-libs/libXrandr ) zlib? ( sys-libs/zlib ) x11-misc/xdg-utils
+0
+http://snes9x-gtk.googlecode.com/files/snes9x-1.51-src-gtk-78.tar.bz2
+mirror
+http://code.google.com/p/snes9x-gtk/
+as-is GPL-2 LGPL-2.1
+A GTK+2 port of the Snes9x emulator
+~amd64 ~x86
+base eutils games multilib portability toolchain-funcs
+joystick +jma netplay nls opengl +xv +xrandr +zlib
+
+
+
+2
+
+compile configure install postinst preinst prepare setup unpack
+
+
+
+
+

@@ -1,0 +1,22 @@
+app-arch/unzip
+darkplaces? ( games-fps/darkplaces ) qrack? ( games-fps/qrack ) tyrquake? ( games-fps/tyrquake ) games-fps/quake1-data
+0
+http://lambert.jeanphilippe.free.fr/DownLoad/src2.zip
+strip
+http://www.celephais.net/board/view_thread.php?id=60175
+as-is
+Slime Refinery Complex for Quoth
+~x86
+base eutils games games-mod multilib portability toolchain-funcs versionator
+darkplaces qrack tyrquake
+
+
+
+
+
+compile install nofetch postinst preinst setup unpack
+
+
+
+
+

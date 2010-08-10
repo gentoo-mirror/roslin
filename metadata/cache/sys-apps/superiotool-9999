@@ -1,0 +1,22 @@
+dev-vcs/subversion net-misc/rsync
+
+0
+
+
+http://www.coreboot.org/Superiotool
+GPL-2
+Superiotool allows you to detect which Super I/O you have on your mainboard and more.
+~amd64 ~x86
+eutils multilib portability subversion toolchain-funcs
+
+
+
+
+
+
+install preinst unpack
+
+
+
+
+

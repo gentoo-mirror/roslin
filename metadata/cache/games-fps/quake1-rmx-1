@@ -1,0 +1,22 @@
+app-arch/unzip
+darkplaces? ( games-fps/darkplaces ) games-fps/quake1-data
+0
+http://www.speeds.quaddicted.com/maps/rmx-pack.zip
+strip
+http://www.celephais.net/board/view_thread.php?id=60254
+as-is
+Remix Quake Mapping Challenge Pack
+-* ~amd64 ~x86
+base eutils games games-mod multilib portability toolchain-funcs versionator
+darkplaces
+
+
+
+
+
+compile install nofetch postinst preinst setup unpack
+
+
+
+
+

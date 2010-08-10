@@ -1,0 +1,22 @@
+vispatch? ( games-util/vispatch app-arch/zip )
+vispatch? ( games-util/vispatch app-arch/zip ) darkplaces? ( games-fps/darkplaces ) games-fps/quake1-data
+0
+vispatch? ( mirror://sourceforge/vispatch/rogue_vis.tgz )
+strip
+http://www.idsoftware.com/games/quake/quake-mp2/
+as-is
+Dissolution of Eternity mission pack for Quake 1
+-* ~amd64 ~x86
+base eutils games games-mod multilib portability toolchain-funcs versionator
+vispatch darkplaces
+
+
+
+
+
+compile install nofetch postinst preinst setup unpack
+
+
+
+
+

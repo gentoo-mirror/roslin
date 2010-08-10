@@ -1,0 +1,22 @@
+ssl? ( >=dev-libs/openssl-0.9.6m ) dev-vcs/subversion net-misc/rsync
+ssl? ( >=dev-libs/openssl-0.9.6m )
+0
+
+
+http://toxygen.net/libgadu/
+GPL-2
+This library implements the client side of the Gadu-Gadu protocol
+
+eutils libtool multilib portability subversion toolchain-funcs
+ssl threads
+
+
+
+
+
+compile install preinst unpack
+
+
+
+
+

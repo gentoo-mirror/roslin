@@ -1,0 +1,22 @@
+app-arch/unzip
+|| ( games-fps/darkplaces tenebrae? ( games-fps/tenebrae ) games-fps/ezquake-bin fuhquake? ( games-fps/fuhquake-bin ) )
+0
+http://facelift.quakedev.com/download/SKINSbmodels-48files-4-23-05.zip http://facelift.quakedev.com/download/qrp-maptextures-2007-10-06r2-7files.zip http://shub-hub.com/files/textures_retexture_project/qrp-maptextures-2007-10-06r2-7files.zip http://qrp.quakeonline.net/qrp-maptextures-2007-10-06r2-7files.zip http://shub-hub.com/files/textures_replacement/rygel-dp-texturepack-high.pk3
+
+http://facelift.quakedev.com/
+as-is
+Collection of graphical improvements for Quake 1
+~amd64 ~x86
+base eutils games multilib portability toolchain-funcs
+demo fuhquake tenebrae rygel
+
+
+
+
+
+compile install postinst preinst setup unpack
+
+
+
+
+

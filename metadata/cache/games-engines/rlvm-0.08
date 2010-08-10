@@ -1,0 +1,22 @@
+media-libs/libsdl[opengl] >=dev-libs/boost-1.40 media-libs/glew media-libs/sdl-image[jpeg,png] media-libs/sdl-ttf media-libs/sdl-mixer[vorbis] media-libs/libmad dev-util/scons
+media-libs/libsdl[opengl] >=dev-libs/boost-1.40 media-libs/glew media-libs/sdl-image[jpeg,png] media-libs/sdl-ttf media-libs/sdl-mixer[vorbis] media-libs/libmad
+0
+http://github.com/eglaysher/rlvm/tarball/release-0.08 -> rlvm-0.08.tar.gz
+
+http://www.elliotglaysher.org/rlvm/
+GPL-3
+An open source implementation of the RealLive virtual machine for Linux and OSX
+~amd64 ~x86
+base eutils games multilib portability toolchain-funcs
+
+
+
+
+2
+
+compile configure install postinst preinst prepare setup unpack
+
+
+
+
+

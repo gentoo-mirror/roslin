@@ -1,0 +1,22 @@
+app-arch/unzip
+darkplaces? ( games-fps/darkplaces ) games-fps/quake1-data
+0
+http://www.quaddicted.com/filebase/masque.zip
+strip
+http://tronyn.planetquake.gamespy.com/ http://underworld.planetquake.gamespy.com/quakerev051101a.html
+as-is
+Masque of the Red Death - An atmospheric trail of medieval carnage.
+-* ~amd64 ~x86
+base eutils games games-mod multilib portability toolchain-funcs versionator
+darkplaces
+
+
+
+
+
+compile install nofetch postinst preinst setup unpack
+
+
+
+
+

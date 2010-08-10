@@ -1,0 +1,22 @@
+>=net-im/pidgin-2.6.5 dev-util/pkgconfig
+>=net-im/pidgin-2.6.5
+0
+http://nic.com.pl/~alek/pidgin-tlen/pidgin-tlen-20100205.tar.gz
+
+http://nic.com.pl/~alek/pidgin-tlen
+BSD
+Tlen.pl support for Pidgin (plugin)
+~amd64 ~x86
+
+
+
+
+
+
+
+compile install
+
+
+
+
+

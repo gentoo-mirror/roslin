@@ -1,0 +1,22 @@
+>=x11-libs/qt-gui-4.5:4[accessibility] phonon? ( || ( media-sound/phonon >=x11-libs/qt-phonon-4.5 ) ) joystick? ( media-libs/libsdl[joystick] ) opengl? ( virtual/opengl )
+>=x11-libs/qt-gui-4.5:4[accessibility] phonon? ( || ( media-sound/phonon >=x11-libs/qt-phonon-4.5 ) ) joystick? ( media-libs/libsdl[joystick] ) opengl? ( virtual/opengl ) sdlmame? ( games-emulation/sdlmame ) sdlmess? ( games-emulation/sdlmess )
+0
+mirror://sourceforge/qmc2/qmc2-0.2.b13.tar.bz2
+
+http://www.mameworld.net/mamecat/
+GPL-2
+An MAME frontend for SDLMAME/SDLMESS
+~x86 ~amd64
+base confutils eutils games multilib portability toolchain-funcs
+debug joystick opengl phonon +sdlmame sdlmess
+
+
+
+2
+
+compile configure install postinst preinst prepare setup unpack
+
+
+
+
+

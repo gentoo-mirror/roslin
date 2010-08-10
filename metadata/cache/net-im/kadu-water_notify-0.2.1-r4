@@ -1,0 +1,22 @@
+>=dev-util/cmake-2.6.2-r1 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
+>=net-im/kadu-core-0.6.5.4 >=net-im/kadu-notify-0.6.5.4
+0
+http://www.kadu.net/download/stable/kadu-0.6.5.4.tar.bz2 http://www.kadu.net/~dorr/moduly/kadu-water_notify-0.2.1.tar.bz2
+primaryuri
+http://kadu.net/~dorr
+GPL-2
+Kadu notification using the water effect from Compiz
+amd64 x86
+base cmake-utils eutils flag-o-matic kadu-base kadu-mod multilib portability toolchain-funcs
+debug
+
+
+
+
+
+compile install test unpack
+
+
+
+
+

@@ -1,0 +1,22 @@
+app-arch/unzip
+darkplaces? ( games-fps/darkplaces ) games-fps/quake1-data
+0
+http://www.quaddicted.com/filebase/oum.zip
+strip
+http://teamshambler.planetquake.gamespy.com/rev010727.html
+as-is
+5-level Quake 1 episode
+-* ~amd64 ~x86
+base eutils games games-mod multilib portability toolchain-funcs versionator
+darkplaces
+
+
+
+
+
+compile install nofetch postinst preinst setup unpack
+
+
+
+
+

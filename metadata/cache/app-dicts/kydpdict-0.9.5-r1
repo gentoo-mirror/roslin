@@ -1,0 +1,22 @@
+x11-libs/qt:3
+x11-libs/qt:3
+0
+http://members.elysium.pl/ytm/src/kydpdict-0.9.5.tar.bz2
+mirror
+http://members.elysium.pl/ytm/html/kydpdict.html
+GPL-2
+Kydpdict is a graphical frontend to Collins', PWN Oxford & SAP dictionaries.
+
+eutils multilib portability toolchain-funcs
+
+
+
+
+2
+
+configure install postinst prepare
+
+
+
+
+

@@ -1,0 +1,22 @@
+|| ( =x11-libs/qt-4.3*:4 x11-libs/qt-gui )
+|| ( =x11-libs/qt-4.3*:4 x11-libs/qt-gui )
+0
+mirror://sourceforge/wiitcpload/wiitcpload-0.05-source.tar.bz2
+
+http://sourceforge.net/projects/wiitcpload/
+GPL-3
+A Qt4 program for connecting with the Wii Homebrew/TCPLoader Channel
+~amd64 ~x86
+base eutils multilib portability qt4-r2 toolchain-funcs
+
+
+
+
+2
+
+compile configure install prepare unpack
+
+
+
+
+

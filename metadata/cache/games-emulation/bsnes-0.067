@@ -1,0 +1,22 @@
+ao? ( media-libs/libao ) openal? ( media-libs/openal ) alsa? ( media-libs/alsa-lib ) pulseaudio? ( media-sound/pulseaudio ) xv? ( x11-libs/libXv ) opengl? ( virtual/opengl ) sdl? ( media-libs/libsdl[joystick] ) snesfilter? ( sys-devel/gcc[openmp] ) >=x11-libs/qt-gui-4.5:4 dev-util/pkgconfig >=sys-devel/gcc-4.4
+ao? ( media-libs/libao ) openal? ( media-libs/openal ) alsa? ( media-libs/alsa-lib ) pulseaudio? ( media-sound/pulseaudio ) xv? ( x11-libs/libXv ) opengl? ( virtual/opengl ) sdl? ( media-libs/libsdl[joystick] ) snesfilter? ( sys-devel/gcc[openmp] ) >=x11-libs/qt-gui-4.5:4
+0
+http://bsnes.googlecode.com/files/bsnes_v067.tar.bz2
+
+http://byuu.org/bsnes/
+GPL-2
+A Super Famicom/SNES emulator written with absolute accuracy in mind
+~amd64 ~x86
+base confutils eutils games multilib portability toolchain-funcs
+ao alsa debug openal opengl oss pulseaudio sdl sgb snesfilter +snesreader xv
+
+
+
+2
+
+compile configure install postinst preinst prepare setup unpack
+
+
+
+
+

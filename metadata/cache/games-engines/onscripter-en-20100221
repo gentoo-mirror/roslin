@@ -1,0 +1,22 @@
+media-libs/sdl-image[jpeg,png] media-libs/sdl-mixer[mp3,vorbis] media-libs/sdl-ttf media-libs/smpeg app-arch/bzip2
+media-libs/sdl-image[jpeg,png] media-libs/sdl-mixer[mp3,vorbis] media-libs/sdl-ttf media-libs/smpeg app-arch/bzip2
+0
+http://onscripter.denpa.mobi/pub/onscr/onscripter-en-20100221-src.tar.bz2
+
+http://onscripter.denpa.mobi/?page_id=26
+GPL-2
+A fork of the ONScripter engine with added English support
+~x86
+base eutils games multilib portability toolchain-funcs
+scale
+
+
+
+2
+
+compile configure install postinst preinst prepare setup unpack
+
+
+
+
+

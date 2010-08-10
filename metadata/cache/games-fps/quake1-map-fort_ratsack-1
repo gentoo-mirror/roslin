@@ -1,0 +1,22 @@
+app-arch/unzip
+darkplaces? ( games-fps/darkplaces ) qrack? ( games-fps/qrack ) tyrquake? ( games-fps/tyrquake ) games-fps/quake1-data
+0
+http://biff.leveldesign.org/maps/q1/sp/base_debris.zip http://www.quaddicted.com/filebase/base_debris.zip
+strip
+http://www.celephais.net/board/view_thread.php?id=60179
+as-is
+Attack On Fort Ratsack! - part of dead Base Pack for Quoth
+~x86
+base eutils games games-mod multilib portability toolchain-funcs versionator
+darkplaces qrack tyrquake
+
+
+
+
+
+compile install nofetch postinst preinst setup unpack
+
+
+
+
+

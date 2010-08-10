@@ -1,0 +1,22 @@
+net-wireless/bluez virtual/glut examples? ( sdl? ( media-libs/libsdl ) )
+net-wireless/bluez virtual/glut examples? ( sdl? ( media-libs/libsdl ) )
+0
+mirror://sourceforge/wiiuse/wiiuse_v0.12_src.tar.gz
+
+http://wiiuse.net/
+GPL-3
+Library written in C that communicates with several Nintendo Wii remotes.
+~x86
+base eutils flag-o-matic games multilib portability toolchain-funcs
+debug examples sdl
+
+
+
+2
+
+compile configure install postinst preinst prepare setup unpack
+
+
+
+
+

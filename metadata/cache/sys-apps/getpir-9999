@@ -1,0 +1,22 @@
+dev-vcs/subversion net-misc/rsync
+
+0
+
+
+http://www.linuxbios.org/
+GPL-2
+Reads PIR table from memory
+~x86
+eutils multilib portability subversion toolchain-funcs
+
+
+
+
+
+
+install preinst unpack
+
+
+
+
+

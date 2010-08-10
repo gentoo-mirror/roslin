@@ -1,0 +1,22 @@
+app-arch/unzip
+darkplaces? ( games-fps/darkplaces ) games-fps/quake1-data
+0
+http://www.quaddicted.com/filebase/chapters.zip http://kell.quaddicted.com/chapters/chapters.zip
+strip
+http://kell.quaddicted.com/
+as-is
+Contract Revoked: Lost Chapters - Quake 1 single-player pack
+-* ~amd64 ~x86
+base eutils games games-mod multilib portability toolchain-funcs versionator
+darkplaces
+
+
+
+
+
+compile install nofetch postinst preinst setup unpack
+
+
+
+
+

@@ -1,0 +1,22 @@
+dev-games/ogre[cg,devil] dev-games/ois fmod? ( media-libs/fmod:1 ) mad? ( >=media-libs/openal-1.5.304 media-libs/libmad ) ogg? ( >=media-libs/openal-1.5.304 media-libs/libvorbis ) media-libs/freealut dev-lang/lua || ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.61 >=sys-devel/libtool-2.2.6b
+dev-games/ogre[cg,devil] dev-games/ois fmod? ( media-libs/fmod:1 ) mad? ( >=media-libs/openal-1.5.304 media-libs/libmad ) ogg? ( >=media-libs/openal-1.5.304 media-libs/libvorbis ) media-libs/freealut dev-lang/lua
+0
+mirror://sourceforge/funguloids/funguloids-linux-1.06.tar.bz2
+
+http://funguloids.sourceforge.net/
+ZLIB
+Space-flying-mushroom-picking-simulator
+~x86
+autotools base eutils games libtool multilib portability toolchain-funcs
+fmod mad ogg
+
+
+
+2
+
+compile configure install postinst preinst prepare setup unpack
+
+
+
+
+

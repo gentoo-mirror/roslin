@@ -1,0 +1,22 @@
+app-arch/lha vispatch? ( games-util/vispatch )
+!games-fps/quake1-demodata[symlink]
+0
+mirror://idsoftware/quake/quake106.zip vispatch? ( mirror://sourceforge/vispatch/id1_vis.tgz )
+
+http://www.idsoftware.com/games/quake/quake/
+as-is
+iD Software's Quake 1 ... the data files
+~amd64 ~x86
+base eutils games multilib portability toolchain-funcs
+vispatch
+
+
+
+2
+
+compile configure install postinst preinst prepare setup unpack
+
+
+
+
+

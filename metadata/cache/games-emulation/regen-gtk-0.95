@@ -1,0 +1,22 @@
+virtual/opengl x86? ( x11-libs/gtk+:2 media-libs/alsa-lib media-libs/libsdl[joystick] sys-libs/zlib x11-libs/libXrandr x11-libs/libXv ) amd64? ( app-emulation/emul-linux-x86-gtklibs app-emulation/emul-linux-x86-soundlibs[alsa] app-emulation/emul-linux-x86-sdl )
+virtual/opengl x86? ( x11-libs/gtk+:2 media-libs/alsa-lib media-libs/libsdl[joystick] sys-libs/zlib x11-libs/libXrandr x11-libs/libXv ) amd64? ( app-emulation/emul-linux-x86-gtklibs app-emulation/emul-linux-x86-soundlibs[alsa] app-emulation/emul-linux-x86-sdl )
+0
+http://aamirm.hacking-cult.org/regen/regen-gtk-0.95.tar.bz2
+
+http://aamirm.hacking-cult.org/index_files/regen.htm
+freedist
+An accuracy-focused Sega Genesis/MegaDrive/Master System/Game Gear/SC-3000/SG-1000 emulator
+~amd64 ~x86
+base eutils games multilib portability toolchain-funcs
+
+
+
+
+2
+
+compile configure install postinst preinst prepare setup unpack
+
+
+
+
+

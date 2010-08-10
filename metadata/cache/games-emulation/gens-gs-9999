@@ -1,0 +1,22 @@
+dbus? ( dev-libs/dbus-glib ) opengl? ( virtual/opengl ) >=media-libs/libsdl-1.2[opengl?] x11-libs/gtk+:2 virtual/libiconv !games-emulation/gens >=dev-lang/nasm-0.98 || ( =sys-devel/automake-1.11* ) >=sys-devel/autoconf-2.61 >=sys-devel/libtool-2.2.6b >=dev-vcs/git-1.6
+dbus? ( dev-libs/dbus-glib ) opengl? ( virtual/opengl ) >=media-libs/libsdl-1.2[opengl?] x11-libs/gtk+:2 virtual/libiconv !games-emulation/gens
+0
+
+
+http://info.sonicretro.org/Gens/GS
+GPL-2
+A Gens fork which aims to clean up the source code and combine features from other forks
+
+autotools base eutils games git libtool multilib portability toolchain-funcs
+dbus debug opengl
+
+
+
+2
+
+compile configure install postinst preinst prepare setup unpack
+
+
+
+
+

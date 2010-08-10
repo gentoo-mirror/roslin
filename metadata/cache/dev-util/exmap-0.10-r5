@@ -1,0 +1,22 @@
+>=dev-cpp/gtkmm-2.4 dev-util/pkgconfig dev-libs/libpcre dev-libs/boost kernel_linux? ( virtual/modutils ) sys-apps/sed kernel_linux? ( virtual/linux-sources )
+>=dev-cpp/gtkmm-2.4 kernel_linux? ( virtual/modutils )
+0
+http://www.berthels.co.uk/exmap/download/exmap-0.10.tgz
+
+http://www.berthels.co.uk/exmap/
+GPL-2
+A memory analysis tool for Linux
+~amd64 ~x86
+eutils linux-info linux-mod multilib portability toolchain-funcs versionator
+kernel_linux
+
+
+
+
+
+compile install postinst postrm preinst setup unpack
+
+
+
+
+

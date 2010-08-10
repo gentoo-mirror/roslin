@@ -1,0 +1,22 @@
+>=dev-util/cmake-2.6.2-r1 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
+>=net-im/kadu-core-0.6.6_beta2 x11-libs/libXScrnSaver
+0
+http://www.kadu.net/download/unstable/kadu-0.6.6-beta2.tar.bz2
+primaryuri
+http://kadu.net
+GPL-2
+Kadu module for detecting idle time
+
+base cmake-utils eutils flag-o-matic kadu-base kadu-mod multilib portability toolchain-funcs
+debug
+
+
+
+
+
+compile install test unpack
+
+
+
+
+

@@ -1,0 +1,22 @@
+dev-python/pygame >=app-admin/eselect-python-20091230
+dev-python/pygame >=app-admin/eselect-python-20091230
+0
+http://taw.chaosforge.org/jrpg/jrpg-2007-07-04-17-02.tar.gz
+
+http://taw.chaosforge.org/jrpg/
+jrpg
+A kanji learning game styled after the classic SNES RPG games
+~amd64 ~x86
+base eutils games multilib portability python toolchain-funcs
+
+
+
+
+2
+
+compile configure install postinst postrm preinst prepare setup unpack
+
+
+
+
+

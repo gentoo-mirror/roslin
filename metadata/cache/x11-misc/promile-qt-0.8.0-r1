@@ -1,0 +1,22 @@
+|| ( =x11-libs/qt-4.3* x11-libs/qt-gui:4 )
+|| ( =x11-libs/qt-4.3* x11-libs/qt-gui:4 )
+0
+http://piro.wikidot.com/local--files/promile-qt/promile-qt-0.8.0-src.tar.bz2
+
+http://piro.wikidot.com/promile-qt
+GPL-3
+A QT4 program for calculating blood alcohol level
+~amd64 ~x86
+base eutils multilib portability qt4-r2 toolchain-funcs
+
+
+
+
+2
+
+compile configure install prepare unpack
+
+
+
+
+

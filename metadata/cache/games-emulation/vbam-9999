@@ -1,0 +1,22 @@
+gtk? ( >=dev-cpp/libglademm-2.4.0 >=dev-cpp/glibmm-2.4.0 >=dev-cpp/gtkmm-2.4.0 >=media-libs/portaudio-19_pre x11-libs/libXv >=dev-cpp/gtkglextmm-1.2.0 ) media-libs/libpng sys-libs/zlib media-libs/libsdl[joystick] media-libs/libsfml lirc? ( app-misc/lirc ) virtual/opengl dev-lang/nasm >=dev-util/cmake-2.4.0 dev-util/pkgconfig >=dev-util/cmake-2.6.2-r1 userland_GNU? ( >=sys-apps/findutils-4.4.0 ) dev-vcs/subversion net-misc/rsync
+gtk? ( >=dev-cpp/libglademm-2.4.0 >=dev-cpp/glibmm-2.4.0 >=dev-cpp/gtkmm-2.4.0 >=media-libs/portaudio-19_pre x11-libs/libXv >=dev-cpp/gtkglextmm-1.2.0 ) media-libs/libpng sys-libs/zlib media-libs/libsdl[joystick] media-libs/libsfml lirc? ( app-misc/lirc ) virtual/opengl
+0
+
+
+http://vba-m.ngemu.com
+GPL-2
+A VBA fork that focuses on consolidating existing ports and improving VBA in general
+
+base cmake-utils confutils eutils flag-o-matic games multilib portability subversion toolchain-funcs
+gtk lirc sdl
+
+
+
+2
+
+compile configure install postinst preinst prepare setup test unpack
+
+
+
+
+

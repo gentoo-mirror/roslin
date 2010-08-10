@@ -1,0 +1,22 @@
+media-libs/sdl-image[jpeg,png] media-libs/sdl-mixer[mp3,vorbis] app-arch/bzip2 media-libs/freetype >=dev-util/cmake-2.6 app-arch/p7zip >=dev-util/cmake-2.6.2-r1 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
+media-libs/sdl-image[jpeg,png] media-libs/sdl-mixer[mp3,vorbis] app-arch/bzip2 media-libs/freetype
+0
+mirror://sourceforge/onslaught-vn/ONSlaught-20090904-src.7z
+
+http://sourceforge.net/projects/onslaught-vn/
+GPL-2
+An ONScripter clone with Unicode support and other features
+~amd64 ~x86
+base cmake-utils eutils flag-o-matic games multilib portability toolchain-funcs
+
+
+
+
+2
+
+compile configure install postinst preinst prepare setup test unpack
+
+
+
+
+

@@ -1,0 +1,22 @@
+
+dev-perl/Audio-FLAC-Header dev-perl/MP3-Tag dev-perl/File-Which dev-perl/File-Find-Rule dev-perl/Text-Glob dev-perl/Number-Compare media-libs/flac media-sound/lame
+0
+http://robinbowes.com/download/flac2mp3/flac2mp3-0.3.0rc1.tar.gz
+
+http://robinbowes.com/projects/flac2mp3/
+Artistic
+A perl script to convert FLAC files to mp3 files.
+~x86 ~amd64
+eutils multilib portability toolchain-funcs versionator
+
+
+
+
+
+
+install
+
+
+
+
+

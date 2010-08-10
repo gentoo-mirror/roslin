@@ -1,0 +1,22 @@
+>=dev-lang/python-2.5 dev-python/PyQt4 dev-python/imaging >=app-admin/eselect-python-20091230
+>=dev-lang/python-2.5 dev-python/PyQt4 dev-python/imaging media-gfx/exiv2 >=app-admin/eselect-python-20091230
+0
+http://www.nac.gov.pl/files/ImagiNAC_1.01_source.tar
+
+http://www.nac.gov.pl/ImagiNAC1.01
+GPL-3
+Utility for batch processing images
+~amd64 ~x86
+eutils multilib portability python toolchain-funcs
+doc
+
+
+
+2
+
+install postinst postrm prepare
+
+
+
+
+

@@ -1,0 +1,22 @@
+app-arch/unzip
+darkplaces? ( games-fps/darkplaces ) qrack? ( games-fps/qrack ) tyrquake? ( games-fps/tyrquake ) games-fps/quake1-data games-fps/quake1-warpspasm
+0
+http://www.quaddicted.com/filebase/qt_pre02.zip
+strip
+http://qexpo.tastyspleen.net/booth.php?id=77&page=354
+as-is
+Travail prequel level Grendel's Keep
+~x86
+base eutils games games-mod multilib portability toolchain-funcs versionator
+darkplaces qrack tyrquake
+
+
+
+
+
+compile install nofetch postinst preinst setup unpack
+
+
+
+
+

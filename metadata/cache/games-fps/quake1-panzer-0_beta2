@@ -1,0 +1,22 @@
+app-arch/unzip
+darkplaces? ( games-fps/darkplaces ) tyrqw? ( games-fps/tyrqw ) games-fps/quake1-data
+0
+http://quakematt.quakedev.com/downloads/panzer_beta2.zip
+strip
+http://quakematt.quakedev.com/panzer.php
+as-is
+Team-based mild strategy game.
+-* ~amd64 ~x86
+base eutils games games-mod multilib portability toolchain-funcs versionator
+darkplaces tyrqw
+
+
+
+
+
+compile install nofetch postinst preinst setup unpack
+
+
+
+
+

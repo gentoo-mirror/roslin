@@ -1,0 +1,22 @@
+app-arch/unzip
+darkplaces? ( games-fps/darkplaces ) qrack? ( games-fps/qrack ) games-fps/quake1-data
+0
+movie? ( The_Seal_Of_Nehahra.zip ) nehahra1.zip nehahra2.zip nehahra3.zip elek_neh_episode4.zip nehupdate3.zip nehmusicfix.zip
+fetch mirror strip
+http://nehahra.planetquake.gamespy.com/
+as-is
+Classic story-driven mission & movie pack
+~x86
+base eutils games games-mod multilib portability toolchain-funcs versionator
+movie darkplaces qrack
+
+
+
+
+
+compile install nofetch postinst preinst setup unpack
+
+
+
+
+

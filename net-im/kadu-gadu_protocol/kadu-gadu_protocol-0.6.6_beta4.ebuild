@@ -4,7 +4,7 @@
 
 EAPI=2
 
-MIN_VER="0.6.6_beta3"
+MIN_VER="0.6.6_beta4"
 KADU_DIR="unstable"
 
 inherit kadu-base

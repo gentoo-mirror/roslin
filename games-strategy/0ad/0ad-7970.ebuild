@@ -6,7 +6,7 @@ EAPI="3"
 
 inherit eutils wxwidgets games
 
-MY_P="0ad-r0${PV}-pre-alpha"
+MY_P="0ad-r0${PV}-alpha"
 S="${WORKDIR}/${MY_P}"
 
 DESCRIPTION="0 A.D. is a free, real-time strategy game currently under development by Wildfire Games."
@@ -21,14 +21,13 @@ IUSE="debug +editor test"
 
 RDEPEND="virtual/opengl
 	media-libs/openal
-	dev-libs/crypto++
 	media-libs/libsdl
 	dev-libs/boost
 	sys-libs/zlib
 	|| ( dev-libs/libgamin app-admin/fam )
 	editor? ( x11-libs/wxGTK:2.8 )
 	media-libs/devil
-	<net-libs/enet-1.3
+	net-libs/enet:0
 	media-libs/jpeg
 	media-libs/libpng
 	dev-libs/libxml2
@@ -37,7 +36,8 @@ RDEPEND="virtual/opengl
 
 DEPEND="${RDEPEND}
 	dev-lang/nasm
-	app-arch/xz-utils"
+	app-arch/xz-utils
+	app-arch/zip"
 
 RESTRICT="strip mirror"
 
@@ -110,7 +110,8 @@ src_install() {
 	doexe "${S}"/binaries/system/${EXE_NAME} || die "doexe failed"
 
 	games_make_wrapper ${PN} ./system/${EXE_NAME} ${dir}
-#	make_desktop_entry "${dir}"/system/${EXE_NAME} "0 A.D."
+	doicon "${S}"/build/resources/0ad.png
+	make_desktop_entry "${dir}"/system/${EXE_NAME} "0 A.D."
 
 	prepgamesdirs
 }

@@ -1,6 +1,14 @@
 # ChangeLog for games-emulation/bsnes
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 
+*bsnes-0.068 (21 Aug 2010)
+
+  21 Aug 2010; Michał Ziąbkowski <mziab@o2.pl> -bsnes-0.067.ebuild,
+  +bsnes-0.068.ebuild, +files/bsnes-0.068-makefile.patch:
+  Bumped. This version adds selectable cpu cores and a launcher. The ebuild
+  compiles all of them, so build times will be longer than in previous
+  versions.
+
 *bsnes-0.067 (01 Aug 2010)
 
   01 Aug 2010; Michał Ziąbkowski <mziab@o2.pl> -bsnes-0.066.ebuild,

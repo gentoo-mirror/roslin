@@ -32,10 +32,10 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	>=sys-devel/gcc-4.4"
 
-S="${WORKDIR}/src"
+S="${WORKDIR}/${PN}"
 
 disable_module() {
-	sed -i "ui_qt/Makefile" -e "s|$1||"
+	sed -i "qt/Makefile" -e "s|$1||"
 }
 
 build_plugin() {
@@ -62,7 +62,7 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-0.064-makefile.patch
+	epatch "${FILESDIR}"/${P}-makefile.patch
 
 	# debugger
 	if use debug ; then
@@ -89,7 +89,12 @@ src_prepare() {
 }
 
 src_compile() {
-	emake platform=x compiler=gcc || die "emake failed"
+	for i in accuracy compatibility performance; do
+		emake platform=x compiler=gcc profile=$i || die "emake failed"
+		make clean
+	done
+
+	cd launcher && sh cc.sh || die
 
 	# build bundled plugins
 	use snesfilter && build_plugin snesfilter
@@ -98,10 +103,15 @@ src_compile() {
 }
 
 src_install() {
-	emake \
-	    DESTDIR="${D}" \
-	    prefix="${GAMES_PREFIX}" \
-	    install || die "install failed"
+	for i in accuracy compatibility performance; do
+		emake \
+			DESTDIR="${D}" \
+			prefix="${GAMES_PREFIX}" \
+			profile=$i \
+			install || die "install failed"
+	done
+
+	dogamesbin out/bsnes || die
 
 	# install plugins
 	use snesfilter && install_plugin snesfilter

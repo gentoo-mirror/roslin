@@ -2,6 +2,10 @@
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  22 Aug 2010; Michał Ziąbkowski <mziab@o2.pl>
+  kadu-core-0.6.5.4-r1.ebuild:
+  Stabled -r1 with patched server list.
+
 *kadu-core-0.6.5.4-r2 (22 Aug 2010)
 
   22 Aug 2010; Michał Ziąbkowski <mziab@o2.pl>

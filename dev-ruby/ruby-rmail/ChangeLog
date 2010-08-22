@@ -1,0 +1,9 @@
+# ChangeLog for dev-ruby/ruby-rmail
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*ruby-rmail-1.0.0 (22 Aug 2010)
+
+  22 Aug 2010; Piotr Szymaniak <lazy_bum@o2.pl> +ruby-rmail-1.0.0.ebuild:
+  New Package (for mail-client/sup).
+

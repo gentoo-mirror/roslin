@@ -1,0 +1,12 @@
+diff --git a/kadu-core/main.cpp b/kadu-core/main.cpp
+index 4788ba2..8b5f1c5 100644
+--- a/kadu-core/main.cpp
++++ b/kadu-core/main.cpp
+@@ -15,6 +15,7 @@
+ #include <errno.h>
+ #ifndef Q_WS_WIN
+ #include <sys/file.h>
++#include <sys/stat.h>
+ #include <pwd.h>
+ #else
+ #include <winsock2.h>

@@ -2,6 +2,13 @@
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*kadu-core-0.6.5.4-r2 (22 Aug 2010)
+
+  22 Aug 2010; Michał Ziąbkowski <mziab@o2.pl>
+  +kadu-core-0.6.5.4-r2.ebuild, +files/0.6.5.4-glibc-2.12.patch:
+  Bumped with patch to hopefully fix an issue with glibc 2.12 and openssl
+  1.0 reported by shade.
+
 *kadu-core-0.6.6_beta5 (16 Aug 2010)
 
   16 Aug 2010; Michał Ziąbkowski <mziab@o2.pl>

@@ -38,7 +38,7 @@ src_prepare() {
 
 	# Patch in the new server list
 	epatch "${FILESDIR}/${PV}-gg_servers.patch" \
-		"${FILESDIR}${PV}-glibc-2.12.patch"
+		"${FILESDIR}/${PV}-glibc-2.12.patch"
 }
 
 pkg_postinst() {

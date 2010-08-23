@@ -4,7 +4,7 @@
 
 EAPI=2
 
-inherit eutils games cmake-utils
+inherit eutils games
 
 DESCRIPTION="Side-scrolling beat-em-up in the style of Beats of Rage"
 HOMEPAGE="http://paintown.sourceforge.net/"
@@ -24,30 +24,16 @@ DEPEND="${RDEPEND}
 
 dir=${GAMES_DATADIR}/${PN}
 
-src_prepare() {
-	# Set default datapath
-	sed -i \
-		-e "/const char \* DATAPATH_ARG/a\\\tUtil\:\:setDataPath(\"${dir}\");" \
-		src/main-menu.cpp || die "sed main.cpp"
-
-	sed -i \
-		-e "s! -Werror!!" CMakeLists.txt || die "sed -Werror failed"
-}
-
-# seems to be broken with -j above 1.
-src_compile() {
-	emake -j1 || die "emake failed"
-}
-
 src_install() {
-	dogamesbin ../${P}_build/bin/${PN} || die "dogamesbin failed"
+	emake DESTDIR="${D}" install || die
+#	dogamesbin ../${P}_build/bin/${PN} || die "dogamesbin failed"
 
-	insinto "${dir}"
-	doins -r data/* || die "doins failed"
+#	insinto "${dir}"
+#	doins -r data/* || die "doins failed"
 
-	make_desktop_entry ${PN} Paintown
+#	make_desktop_entry ${PN} Paintown
 
-	dodoc "${WORKDIR}/${P}"/{README,TODO} || die "dodoc failed"
+#	dodoc "${WORKDIR}/${P}"/{README,TODO} || die "dodoc failed"
 
 	prepgamesdirs
 }

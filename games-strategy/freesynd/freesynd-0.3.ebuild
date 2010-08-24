@@ -6,7 +6,7 @@ inherit eutils games
 
 DESCRIPTION="Remake of the classic Syndicate game by Bullfrog"
 HOMEPAGE="http://freesynd.sourceforge.net/"
-SRC_URI="mirror://sourceforge/${PN}/${P}.zip"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -19,12 +19,12 @@ RDEPEND="media-libs/libpng
 DEPEND="${RDEPEND}
 	app-arch/unzip"
 
-S=${WORKDIR}/${PN}/src
+S=${WORKDIR}/${PN}
 dir=${GAMES_DATADIR}/${PN}
 
 src_unpack() {
 	unpack ${A}
-	cd "${S}"
+	cd "${S}"/src
 
 	# Customize directory
 	sed -i \
@@ -35,19 +35,24 @@ src_unpack() {
 		-e "s:loadMusicFile(\":loadMusicFile(\"${dir}/:" \
 		musicmanager.cpp || die "sed musicmanager.cpp"
 
-	epatch "${FILESDIR}/${PN}-gcc43.patch"
+#	epatch "${FILESDIR}/${PN}-gcc43.patch"
+}
+
+src_compile() {
+	cd "${S}"/src
+	emake
 }
 
 src_install() {
-	dogamesbin ${PN} || die
-	newgamesbin dump ${PN}-dump || die
-	newgamesbin dumpmaps ${PN}-dumpmaps || die
+	dogamesbin "${S}/src/${PN}" || die
+#	newgamesbin dump ${PN}-dump || die
+#	newgamesbin dumpmaps ${PN}-dumpmaps || die
 
 	insinto "${dir}"
-	doins ../*.mp3 || die
-	doins -r ../data || die
+#	doins ../*.mp3 || die
+	doins -r "${S}/bin/data" || die
 
-	dodoc ../*.txt
+	dodoc R*txt
 
 	make_desktop_entry ${PN} "Free Syndicate"
 

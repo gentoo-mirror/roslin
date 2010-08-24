@@ -2,6 +2,8 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
+EAPI="2"
+
 inherit eutils games
 
 DESCRIPTION="Remake of the classic Syndicate game by Bullfrog"
@@ -22,20 +24,15 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}/${PN}
 dir=${GAMES_DATADIR}/${PN}
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"/src
-
+src_prepare() {
 	# Customize directory
 	sed -i \
 		-e "s:\"./:\"${dir}/:" \
-		file.cpp || die "sed file.cpp"
+		"${S}"/src/file.cpp || die "sed file.cpp"
 
 	sed -i \
 		-e "s:loadMusicFile(\":loadMusicFile(\"${dir}/:" \
-		musicmanager.cpp || die "sed musicmanager.cpp"
-
-#	epatch "${FILESDIR}/${PN}-gcc43.patch"
+		"${S}"/src/musicmanager.cpp || die "sed musicmanager.cpp"
 }
 
 src_compile() {
@@ -45,11 +42,8 @@ src_compile() {
 
 src_install() {
 	dogamesbin "${S}/src/${PN}" || die
-#	newgamesbin dump ${PN}-dump || die
-#	newgamesbin dumpmaps ${PN}-dumpmaps || die
 
 	insinto "${dir}"
-#	doins ../*.mp3 || die
 	doins -r "${S}/bin/data" || die
 
 	dodoc R*txt

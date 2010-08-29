@@ -1,11 +1,9 @@
-# Copyright 1999-2010 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: $
-
-EAPI="2"
+# Copyright 2008-2010 [v-fox] ftp://dfx.homeftp.net/services/GENTOO/v-fox
+# Distributed under the terms of the GNU General Public License v2 or later
 
 inherit eutils toolchain-funcs flag-o-matic toolchain-funcs games
 
+EAPI="2"
 MY_PN="quake2"
 FILE_STEM="KMQuake2-SDL-${PV}_src_unix"
 DATA_STEM="KMQuake2_data-0.19"
@@ -84,6 +82,7 @@ pkg_setup() {
 		epause 5
 	fi
 
+
 	# avoiding segfaults
 	if ! use custom-cflags; then
 			strip-flags
@@ -99,6 +98,8 @@ pkg_setup() {
 }
 
 src_prepare() {
+	cd "${S}"
+
 	# Fix jpeg8 bug - http://bugs.gentoo.org/show_bug.cgi?id=150865
 	epatch "${FILESDIR}"/${PN}-${PV}-jpeg8.patch
 
@@ -163,20 +164,24 @@ src_install() {
 	doicon "${WORKDIR}/${PN}.png" || die "doicon failed"
 
 	use dedicated && \
-		newgamesbin "${MY_PN}/${PN}_netserver" "${PN}-ded"
+		$(newgamesbin "${MY_PN}/${PN}_netserver" "${PN}-ded" || \
+			die "failded to install server binary")
 
 	use opengl && \
-		dogamesbin "${MY_PN}/${PN}" && \
-		make_desktop_entry "${PN}" "KM Quake 2" "${PN}.png"
+		$(dogamesbin "${MY_PN}/${PN}" && \
+			make_desktop_entry "${PN}" "KM Quake 2" "${PN}.png" || \
+			die "failed to install main client executable")
 
 	use sdl && \
-		dogamesbin "${MY_PN}/${PN}-sdl" && \
-		make_desktop_entry "${PN}-sdl" "KM Quake 2 SDL" "${PN}.png"
+		$(dogamesbin "${MY_PN}/${PN}-sdl" && \
+			make_desktop_entry "${PN}-sdl" "KM Quake 2 SDL" "${PN}.png" || \
+			die "failed to install sdl client executable)")
 
 	use demo && \
-		games_make_wrapper "${PN}-demo" "${PN} +set game demo" && \
-		make_desktop_entry "${PN}-demo" "KM Quake 2 (Demo)" "${PN}.png"
+		$(games_make_wrapper "${PN}-demo" "${PN} +set game demo" && \
+			make_desktop_entry "${PN}-demo" "KM Quake 2 (Demo)" "${PN}.png" ||
+			die "failed to make demo wrapper")
 
-	dodoc *.{txt,unix}
+	dodoc *.{txt,unix} || die "dodoc failed"
 	prepgamesdirs
 }

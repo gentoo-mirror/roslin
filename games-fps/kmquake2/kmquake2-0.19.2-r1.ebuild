@@ -1,4 +1,4 @@
-# Copyright 2008-2010 [v-fox] ftp://dfx.homeftp.net/services/GENTOO/v-fox
+# Copyright 1999-2010 [v-fox] ftp://dfx.homeftp.net/services/GENTOO/v-fox
 # Distributed under the terms of the GNU General Public License v2 or later
 
 inherit eutils toolchain-funcs flag-o-matic toolchain-funcs games
@@ -119,6 +119,9 @@ src_prepare() {
 	# Without cd-audio by default
 	use cdsound || \
 	epatch "${FILESDIR}"/${PN}-${PV}-nocd.patch
+
+	# Fix build with libpng-1.4
+	epatch "${FILESDIR}"/${P}-libpng14.patch
 
 	rm gnu.txt
 	mv "${WORKDIR}/${DATA_STEM}/${PN}.png" "${WORKDIR}"

@@ -1,9 +1,11 @@
-# Copyright 1999-2010 [v-fox] ftp://dfx.homeftp.net/services/GENTOO/v-fox
-# Distributed under the terms of the GNU General Public License v2 or later
+# Copyright 1999-2010 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: $
+
+EAPI="2"
 
 inherit eutils toolchain-funcs flag-o-matic toolchain-funcs games
 
-EAPI="2"
 MY_PN="quake2"
 FILE_STEM="KMQuake2-SDL-${PV}_src_unix"
 DATA_STEM="KMQuake2_data-0.19"
@@ -82,7 +84,6 @@ pkg_setup() {
 		epause 5
 	fi
 
-
 	# avoiding segfaults
 	if ! use custom-cflags; then
 			strip-flags
@@ -98,27 +99,25 @@ pkg_setup() {
 }
 
 src_prepare() {
-	cd "${S}"
-
 	# Fix jpeg8 bug - http://bugs.gentoo.org/show_bug.cgi?id=150865
-	epatch "${FILESDIR}"/${PN}-${PV}-jpeg8.patch
+	epatch "${FILESDIR}"/${P}-jpeg8.patch
 
 	# Fix for amd64 - http://bugs.gentoo.org/show_bug.cgi?id=158415
-	epatch "${FILESDIR}"/${PN}-${PV}-remaping_amd64.patch
+	epatch "${FILESDIR}"/${P}-remaping_amd64.patch
 
 	# Fix directory search for the game API
-	epatch "${FILESDIR}"/${PN}-${PV}-search_path.patch
+	epatch "${FILESDIR}"/${P}-search_path.patch
 
 	# Now we can safely reemerge it and play further
-	epatch 	"${FILESDIR}"/${PN}-${PV}-safe_saving.patch
+	epatch 	"${FILESDIR}"/${P}-safe_saving.patch
 
 	# Use alsa by default
 	use alsa && \
-	epatch "${FILESDIR}"/${PN}-${PV}-alsa.patch
+	epatch "${FILESDIR}"/${P}-alsa.patch
 
 	# Without cd-audio by default
 	use cdsound || \
-	epatch "${FILESDIR}"/${PN}-${PV}-nocd.patch
+	epatch "${FILESDIR}"/${P}-nocd.patch
 
 	# Fix build with libpng-1.4
 	epatch "${FILESDIR}"/${P}-libpng14.patch

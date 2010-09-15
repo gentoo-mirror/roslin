@@ -27,11 +27,6 @@ kadu-disable_all() {
 	# so we have a clean state
 	sed -e "s:^\(.*\)=[my]$:\1=n:g" \
 	    -i .config || die "sed failed"
-
-	# Workaround: Fix compiler flags in Kadu 0.6.6
-	sed -e "s:CMAKE_\(C\|CXX\)_FLAGS \":CMAKE_\\1_FLAGS \"\${CMAKE_\\1_FLAGS} :g" \
-		-i CMakeLists.txt \
-		|| die "sed failed"
 }
 
 kadu-base_src_configure() {

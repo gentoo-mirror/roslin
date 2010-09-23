@@ -1,0 +1,9 @@
+# ChangeLog for x11-misc/qtfm
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*qtfm-3.1 (23 Sep 2010)
+
+  23 Sep 2010; Michał Ziąbkowski <mziab@o2.pl> +qtfm-3.1.ebuild:
+  New ebuild.
+

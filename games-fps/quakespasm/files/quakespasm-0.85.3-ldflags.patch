@@ -1,0 +1,13 @@
+diff --git a/Makefile b/Makefile
+index 62db1e9..11c1400 100644
+--- a/Makefile
++++ b/Makefile
+@@ -213,7 +213,7 @@ OBJS := \
+ # ------------------------
+ 
+ quakespasm:	$(OBJS)
+-	$(CC) $(CFLAGS) -o quakespasm $(OBJS) $(X11_LFLAGS) $(SDL_LFLAGS) $(LIBS)
++	$(CC) $(CFLAGS) $(LDFLAGS) -o quakespasm $(OBJS) $(X11_LFLAGS) $(SDL_LFLAGS) $(LIBS)
+ 	$(call do_strip,$@)
+ 
+ release:	quakespasm

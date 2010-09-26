@@ -120,3 +120,4 @@ src_install() {
 
 	prepgamesdirs
 }
+

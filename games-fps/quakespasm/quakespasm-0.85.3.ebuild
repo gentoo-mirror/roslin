@@ -13,10 +13,10 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tgz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="cdinstall debug demo"
+IUSE="cdinstall debug demo sdl-net"
 
-DEPEND="media-libs/sdl-net
-	virtual/opengl"
+DEPEND="virtual/opengl
+	sdl-net? ( media-libs/sdl-net )"
 RDEPEND="${DEPEND}
 	cdinstall? ( games-fps/quake1-data )
 	demo? ( games-fps/quake1-demodata )"
@@ -36,11 +36,11 @@ src_prepare() {
 }
 
 src_compile() {
-	if use debug; then
-		emake DEBUG=1 || die "emake failed"
-	else
-		emake || die "emake failed"
-	fi
+	local opts=""
+	use debug && opts="DEBUG=1"
+	use sdl-net && opts="${opts} SDLNET=1"
+
+	emake ${opts} || die "emake failed"
 }
 
 src_install() {

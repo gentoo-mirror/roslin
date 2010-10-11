@@ -2,6 +2,12 @@
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*amnesia-tdd-demo-1.0.1 (11 Oct 2010)
+
+  11 Oct 2010; Piotr Szymaniak <lazy_bum@o2.pl>
+  +amnesia-tdd-demo-1.0.1.ebuild:
+  Updated ebuild.
+
   21 Sep 2010; Piotr Szymaniak <lazy_bum@o2.pl> amnesia-tdd-demo-1.0.ebuild:
   Missing Manifest added.
 

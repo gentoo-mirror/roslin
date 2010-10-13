@@ -2,6 +2,13 @@
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*onscripter-en-20101010 (13 Oct 2010)
+
+  13 Oct 2010; Michał Ziąbkowski <mziab@o2.pl>
+  -onscripter-en-20100221.ebuild, -onscripter-en-20100307.ebuild,
+  -onscripter-en-20100309.ebuild, +onscripter-en-20101010.ebuild:
+  Bumped. Cleaned out some cruft.
+
 *onscripter-en-20100915 (19 Sep 2010)
 
   19 Sep 2010; Michał Ziąbkowski <mziab@o2.pl>

@@ -62,7 +62,7 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-makefile.patch
+	epatch "${FILESDIR}"/${PN}-0.071-makefile.patch
 
 	# debugger
 	if use debug ; then

@@ -5,9 +5,10 @@
 EAPI="2"
 
 MY_PN=hexahop
+
 inherit games
 
-DESCRIPTION="a hexagonal tile-based puzzle game"
+DESCRIPTION="Hexagonal tile-based puzzle game"
 HOMEPAGE="http://hexahop.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${MY_PN}/${PN}/${PV}/${P}.tar.gz"
 
@@ -21,3 +22,9 @@ RDEPEND="media-libs/libsdl
 	media-libs/sdl-pango
 	media-libs/sdl-ttf"
 DEPEND="${RDEPEND}"
+
+src_install() {
+	emake DESTDIR="${D}" install
+
+	prepgamesdirs
+}

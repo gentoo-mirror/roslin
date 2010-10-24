@@ -1,6 +1,16 @@
 # ChangeLog for games-emulation/qmc2
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 
+  24 Oct 2010; Michał Ziąbkowski <mziab@o2.pl> qmc2-0.2_beta17.ebuild,
+  +files/qmc2-0.2_beta17-makefile.patch:
+  Updated Makefile patch.
+
+*qmc2-0.2_beta17 (24 Oct 2010)
+
+  24 Oct 2010; Michał Ziąbkowski <mziab@o2.pl> -qmc2-0.2_beta13.ebuild,
+  -qmc2-0.2_beta14.ebuild, +qmc2-0.2_beta17.ebuild:
+  Bumped. Removed cruft.
+
 *qmc2-0.2_beta16 (01 Aug 2010)
 
   01 Aug 2010; Michał Ziąbkowski <mziab@o2.pl> +qmc2-0.2_beta16.ebuild:

@@ -2,6 +2,12 @@
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*freesynd-0.4 (24 Oct 2010)
+
+  24 Oct 2010; Piotr Szymaniak <lazy_bum@o2.pl> -freesynd-0.3.ebuild,
+  +freesynd-0.4.ebuild:
+  Doesn't work here (libpng12 missing). Masked.
+
   24 Aug 2010; Piotr Szymaniak <lazy_bum@o2.pl> -files/freesynd-gcc43.patch,
   freesynd-0.3.ebuild:
   Updated ebuild, removed obsolete patch, added src_prepare thanks to

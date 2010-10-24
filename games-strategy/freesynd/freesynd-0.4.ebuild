@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS=""
 IUSE=""
 
 RDEPEND="media-libs/libpng
@@ -41,10 +41,7 @@ src_compile() {
 }
 
 src_install() {
-	dogamesbin "${S}/src/${PN}" || die
-
-	insinto "${dir}"
-	doins -r "${S}/bin/data" || die
+	dogamesbin "${S}/bin/${PN}" || die
 
 	dodoc R*txt
 

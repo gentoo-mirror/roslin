@@ -5,7 +5,11 @@
 MIN_VER="0.6.6_beta8"
 KADU_DIR="unstable"
 
-inherit kadu-base kadu-mod
+inherit kadu-base
+
+MOD_DEPEND=">=net-im/kadu-gadu_protocol-${PV}"
+
+inherit kadu-mod
 
 DESCRIPTION="Server monitor module for Kadu"
 HOMEPAGE="http://kadu.net"

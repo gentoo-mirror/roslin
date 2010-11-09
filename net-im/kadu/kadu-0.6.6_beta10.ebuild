@@ -41,7 +41,6 @@ DEPEND=">=net-im/kadu-core-${PV}[debug?]
 	!<net-im/kadu-ao_sound-0.6.6_beta
 	!<net-im/kadu-audacious_mediaplayer-0.6.6_beta
 	!<net-im/kadu-bmpx_mediaplayer-0.6.6_beta
-	!<net-im/kadu-cenzor-0.6.6_beta
 	!<net-im/kadu-dcc-0.6.6_beta
 	!<net-im/kadu-default_sms-0.6.6_beta
 	!<net-im/kadu-dragon_mediaplayer-0.6.6_beta
@@ -49,23 +48,18 @@ DEPEND=">=net-im/kadu-core-${PV}[debug?]
 	!<net-im/kadu-encryption-0.6.6_beta
 	!<net-im/kadu-encryption_old-0.6.6_beta
 	!<net-im/kadu-filtering-0.6.6_beta
-	!<net-im/kadu-firewall-0.6.6_beta
 	!<net-im/kadu-gg_avatars-0.6.6_beta
 	!<net-im/kadu-mpris_mediaplayer-0.6.6_beta
 	!<net-im/kadu-notify-0.6.6_beta
 	!<net-im/kadu-osd_hints-0.6.6_beta
-	!<net-im/kadu-pcspeaker-0.6.6_beta
 	!<net-im/kadu-powerkadu-0.6.6_beta
 	!<net-im/kadu-profiles-0.6.6_beta
 	!<net-im/kadu-qt4_sound-0.6.6_beta
-	!<net-im/kadu-single_window-0.6.6_beta
-	!<net-im/kadu-speech-0.6.6_beta
 	!<net-im/kadu-split_messages-0.6.6_beta
 	!<net-im/kadu-vlc_mediaplayer-0.6.6_beta
 	!<net-im/kadu-voice-0.6.6_beta
 	!<net-im/kadu-weather-0.6.6_beta
 	!<net-im/kadu-window_notify-0.6.6_beta
-	!<net-im/kadu-word_fix-0.6.6_beta
 	!net-im/kadu-globalhotkeys
 	!net-im/kadu-led_notify
 	!net-im/kadu-mail

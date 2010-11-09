@@ -28,11 +28,11 @@ RDEPEND="virtual/opengl
 	editor? ( x11-libs/wxGTK:2.8 )
 	media-libs/devil
 	net-libs/enet:0
-	media-libs/jpeg
 	media-libs/libpng
 	dev-libs/libxml2
 	media-libs/libvorbis
-	media-libs/libogg"
+	media-libs/libogg
+	virtual/jpeg"
 
 DEPEND="${RDEPEND}
 	dev-lang/nasm

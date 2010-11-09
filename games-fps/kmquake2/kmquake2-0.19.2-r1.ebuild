@@ -43,15 +43,15 @@ RDEPEND="opengl? ( ${UIRDEPEND} )
 	demo? ( games-fps/quake2-demodata )
 	maps? ( games-fps/kmquake2-shanmaps )
 	mods? ( games-fps/kmquake2-mods )"
-DEPEND="opengl? ( ${UIDEPEND} )
-	!opengl? ( sdl? ( ${UIDEPEND} ) )
-	alsa? ( media-libs/alsa-lib )
-	media-libs/openal
-	media-libs/jpeg
+DEPEND="alsa? ( media-libs/alsa-lib )
+	app-arch/unzip
 	media-libs/libogg
 	media-libs/libpng
 	media-libs/libvorbis
-	app-arch/unzip"
+	media-libs/openal
+	opengl? ( ${UIDEPEND} )
+	!opengl? ( sdl? ( ${UIDEPEND} ) )
+	virtual/jpeg"
 
 S=${WORKDIR}/${FILE_STEM}
 

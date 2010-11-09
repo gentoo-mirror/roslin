@@ -2,6 +2,9 @@
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  09 Nov 2010; Piotr Szymaniak <lazy_bum@o2.pl> kmquake2-0.19.2-r1.ebuild:
+  Changed deps: media-libs/jpeg -> virtual/jpeg
+
   30 Aug 2010; Michał Ziąbkowski <mziab@o2.pl> kmquake2-0.19.2-r1.ebuild:
   Fixed some errors reported by repoman.
 

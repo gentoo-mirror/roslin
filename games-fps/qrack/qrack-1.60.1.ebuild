@@ -23,10 +23,10 @@ SLOT="0"
 KEYWORDS="-* ~x86"
 IUSE="debug doe dzip lights sdl skins soa textures"
 
-UIRDEPEND="media-libs/jpeg
-	media-libs/libpng
-	virtual/opengl
+UIRDEPEND="media-libs/libpng
 	sdl? ( media-libs/libsdl )
+	virtual/jpeg
+	virtual/opengl
 	x11-libs/libX11
 	x11-libs/libXext
 	x11-libs/libXxf86dga

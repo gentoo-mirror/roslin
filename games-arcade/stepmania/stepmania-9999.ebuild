@@ -22,7 +22,7 @@ DEPEND="gtk? ( x11-libs/gtk+:2 )
 	mp3? ( media-libs/libmad )
 	vorbis? ( media-libs/libvorbis )
 	media-libs/libpng
-	jpeg? ( media-libs/jpeg )
+	jpeg? ( virtual/jpeg )
 	ffmpeg? ( >=media-video/ffmpeg-0.5 )
 	theora? ( media-libs/libtheora )
 	>=dev-lang/lua-5

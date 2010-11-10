@@ -22,12 +22,12 @@ SLOT="0"
 KEYWORDS=""
 IUSE="alsa cdinstall cdsound debug dedicated demo doe lights opengl oss sdl skins soa textures"
 
-UIRDEPEND="media-libs/jpeg
-	media-libs/libogg
+UIRDEPEND="media-libs/libogg
 	media-libs/libvorbis
 	virtual/opengl
 	alsa? ( media-libs/alsa-lib )
 	sdl? ( media-libs/libsdl )
+	virtual/jpeg
 	x11-libs/libX11
 	x11-libs/libXau
 	x11-libs/libXdmcp

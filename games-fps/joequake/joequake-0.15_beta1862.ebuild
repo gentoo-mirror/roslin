@@ -28,8 +28,8 @@ KEYWORDS="-* ~x86"
 # Is not compatible with the demo data.
 IUSE="cdinstall cdsound doe lights skins soa textures"
 
-UIDEPEND="media-libs/jpeg
-	media-libs/libpng
+UIDEPEND="media-libs/libpng
+	virtual/jpeg
 	virtual/opengl
 	x11-libs/libX11
 	x11-libs/libXau

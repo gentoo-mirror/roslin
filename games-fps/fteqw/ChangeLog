@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/fteqw
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+
+  09 Nov 2010; Piotr Szymaniak <lazy_bum@o2.pl> fteqw-3343.ebuild,
+  fteqw-9999.ebuild:
+  Changed deps: media-libs/jpeg -> virtual/jpeg
 
   26 Jan 2009; Michał Ziąbkowski <mziab@o2.pl> fteqw-3343.ebuild:
   Fixed quoted variable.

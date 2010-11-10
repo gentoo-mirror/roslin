@@ -17,11 +17,11 @@ S=${WORKDIR}
 dir=${GAMES_DATADIR}/quake1
 
 RDEPEND="media-libs/alsa-lib
-	media-libs/jpeg
 	media-libs/libogg
 	media-libs/libpng
 	media-libs/libvorbis
 	net-libs/gnutls
+	virtual/jpeg
 	virtual/opengl
 	media-libs/libsdl
 	x11-libs/libX11

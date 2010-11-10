@@ -29,12 +29,12 @@ RDEPEND="virtual/opengl
 		media-libs/devil
 		net-libs/enet
 		media-video/ffmpeg
-		media-libs/jpeg
 		media-libs/libpng
 		dev-libs/libxml2
 		media-libs/libvorbis
 		media-libs/libogg
-		dev-util/valgrind"
+		dev-util/valgrind
+		virtual/jpeg"
 
 DEPEND="${RDEPEND}
 	dev-lang/nasm"

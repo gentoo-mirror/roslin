@@ -23,7 +23,7 @@ DEPEND="
 	>=x11-libs/gtk+-2.6.4
 	>=x11-libs/pango-1.8.0
 	gif? ( >=media-libs/giflib-4.1.4 )
-	jpeg? ( >=media-libs/jpeg-6b )
+	jpeg? ( >=virtual/jpeg-6b )
 	tiff? ( >=media-libs/tiff-3.6.1 )"
 
 RDEPEND="${DEPEND}"

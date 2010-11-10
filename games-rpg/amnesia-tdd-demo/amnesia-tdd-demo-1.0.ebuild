@@ -23,7 +23,7 @@ IUSE="doc linguas_de linguas_en linguas_es linguas_fr linguas_it"
 DEPEND="app-arch/xz-utils"
 RDEPEND="media-libs/freealut
 	media-libs/glew
-	media-libs/jpeg:62
+	virtual/jpeg:62
 	media-libs/libogg
 	media-libs/libvorbis
 	media-libs/libpng:1.2

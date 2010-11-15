@@ -11,11 +11,10 @@ SLOT="0"
 IUSE=""
 RESTRICT="primaryuri"
 
-SRC_URI="http://www.kadu.net/download/additions/kadu-0.6.6-theme-glass-16.tar.gz
-	http://www.kadu.net/download/additions/kadu-0.6.6-theme-glass-22.tar.gz
+SRC_URI="http://www.kadu.net/download/additions/kadu-0.6.6-theme-glass.tar.gz
 	http://www.kadu.net/download/additions/kadu-0.6.5-theme-kadu05.tar.gz
-	http://www.kadu.net/download/additions/kadu-0.6.5.4-theme-oxygen-16.tar.gz
-	http://www.kadu.net/download/additions/kadu-0.6.5.4-theme-tango-16.tar.gz"
+	http://www.kadu.net/download/additions/kadu-0.6.6-theme-oxygen.tar.gz
+	http://www.kadu.net/download/additions/kadu-0.6.6-theme-tango.tar.gz"
 
 S="${WORKDIR}"
 

@@ -5,7 +5,7 @@
 inherit eutils multilib games
 
 DESCRIPTION="An enhanced port of Jagged Alliance 2 to SDL"
-HOMEPAGE="http://ja2.dragonriders.de/"
+HOMEPAGE="http://tron.homeunix.org/ja2"
 SRC_URI="http://tron.homeunix.org/ja2/ja2-${PV}-source.tar.bz2"
 
 LICENSE="SFI-SCLA"

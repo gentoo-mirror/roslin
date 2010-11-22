@@ -7,7 +7,7 @@ inherit eutils multilib games subversion
 ESVN_REPO_URI="svn://tron.homeunix.org/ja2/trunk"
 
 DESCRIPTION="An enhanced port of Jagged Alliance 2 to SDL"
-HOMEPAGE="http://ja2.dragonriders.de/"
+HOMEPAGE="http://tron.homeunix.org/ja2"
 SRC_URI=""
 
 LICENSE="SFI-SCLA"

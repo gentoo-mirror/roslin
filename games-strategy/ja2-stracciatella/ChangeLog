@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/ja2-stracciatella
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 
+  22 Nov 2010; Piotr Szymaniak <lazy_bum@o2.pl>
+  ja2-stracciatella-0.12.1.ebuild, ja2-stracciatella-9999.ebuild:
+  Updated homepage.
+
 *ja2-stracciatella-0.12.1 (08 Jun 2010)
 
   08 Jun 2010; Piotr Szymaniak <lazy_bum@o2.pl>

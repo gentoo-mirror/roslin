@@ -2,6 +2,11 @@
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*pidgin-tlen-20101112 (23 Nov 2010)
+
+  23 Nov 2010; Michał Ziąbkowski <mziab@o2.pl> +pidgin-tlen-20101112.ebuild:
+  Bumped.
+
 *pidgin-tlen-20100205 (05 Feb 2010)
 
   05 Feb 2010; Michał Ziąbkowski <mziab@o2.pl>

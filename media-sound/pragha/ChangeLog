@@ -2,6 +2,11 @@
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*pragha-0.8.3 (28 Nov 2010)
+
+  28 Nov 2010; Michał Ziąbkowski <mziab@o2.pl> +pragha-0.8.3.ebuild:
+  Bumped.
+
 *pragha-0.7.4 (01 May 2010)
 
   01 May 2010; Michał Ziąbkowski <mziab@o2.pl> +pragha-0.7.4.ebuild:

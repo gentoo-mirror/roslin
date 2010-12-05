@@ -9,8 +9,8 @@ inherit eutils
 RESTRICT="mirror"
 
 DESCRIPTION="Kydpdict is a graphical frontend to Collins', PWN Oxford & SAP dictionaries."
-SRC_URI="http://members.elysium.pl/ytm/src/${P}.tar.bz2"
-HOMEPAGE="http://members.elysium.pl/ytm/html/kydpdict.html"
+SRC_URI="http://ytm.bossstation.dnsalias.org/src/${P}.tar.bz2"
+HOMEPAGE="http://ytm.bossstation.dnsalias.org/html/kydpdict.html"
 KEYWORDS=""
 SLOT="0"
 LICENSE="GPL-2"

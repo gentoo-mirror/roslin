@@ -11,4 +11,3 @@ DESCRIPTION="Kadu parser extension module"
 HOMEPAGE="http://kadu.net"
 KEYWORDS=""
 IUSE=""
-

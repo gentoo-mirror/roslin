@@ -11,5 +11,3 @@ DESCRIPTION="Profanity filter for Kadu"
 HOMEPAGE="http://kadu.net"
 KEYWORDS=""
 IUSE=""
-
-

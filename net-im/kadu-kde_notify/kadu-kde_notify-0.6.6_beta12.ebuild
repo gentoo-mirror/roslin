@@ -16,4 +16,3 @@ HOMEPAGE="http://kadu.net/~dorr"
 KEYWORDS=""
 
 IUSE=""
-

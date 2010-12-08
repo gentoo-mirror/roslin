@@ -10,4 +10,3 @@ DESCRIPTION="Adds single-window mode"
 HOMEPAGE="http://kadu.net"
 KEYWORDS=""
 IUSE=""
-

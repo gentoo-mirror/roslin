@@ -14,4 +14,3 @@ DESCRIPTION="Protection against unwanted chats for Kadu"
 HOMEPAGE="http://kadu.net"
 KEYWORDS=""
 IUSE=""
-

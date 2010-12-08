@@ -15,4 +15,3 @@ DESCRIPTION="Sound support module for Kadu"
 HOMEPAGE="http://kadu.net"
 KEYWORDS=""
 IUSE=""
-

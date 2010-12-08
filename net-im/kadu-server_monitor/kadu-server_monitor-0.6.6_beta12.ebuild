@@ -15,4 +15,3 @@ DESCRIPTION="Server monitor module for Kadu"
 HOMEPAGE="http://kadu.net"
 KEYWORDS=""
 IUSE=""
-

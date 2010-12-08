@@ -14,7 +14,6 @@ KEYWORDS=""
 
 IUSE=""
 
-
 RDEPEND=">=x11-libs/qt-gui-4.5.0[qt3support]
 	>=x11-libs/qt-qt3support-4.5.0
 	>=x11-libs/qt-webkit-4.5.0

@@ -11,4 +11,3 @@ DESCRIPTION="Last seen module for Kadu"
 HOMEPAGE="http://kadu.net"
 KEYWORDS=""
 IUSE=""
-

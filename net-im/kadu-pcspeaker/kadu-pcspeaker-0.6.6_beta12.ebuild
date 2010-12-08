@@ -10,4 +10,3 @@ DESCRIPTION="PC Speaker notification for Kadu"
 HOMEPAGE="http://kadu.net"
 KEYWORDS=""
 IUSE=""
-

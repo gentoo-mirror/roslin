@@ -15,4 +15,3 @@ DESCRIPTION="Amarok 2.x mediaplayer module for Kadu"
 HOMEPAGE="http://kadu.net"
 KEYWORDS=""
 IUSE=""
-

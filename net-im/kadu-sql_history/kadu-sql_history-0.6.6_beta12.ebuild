@@ -17,4 +17,3 @@ DESCRIPTION="SQL history module for Kadu"
 HOMEPAGE="http://kadu.net"
 KEYWORDS=""
 IUSE=""
-

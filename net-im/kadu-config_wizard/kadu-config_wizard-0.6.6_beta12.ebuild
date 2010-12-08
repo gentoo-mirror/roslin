@@ -15,4 +15,3 @@ DESCRIPTION="Configuration wizard for Kadu"
 HOMEPAGE="http://kadu.net"
 KEYWORDS=""
 IUSE=""
-

@@ -15,4 +15,3 @@ DESCRIPTION="Autoaway module for Kadu"
 HOMEPAGE="http://kadu.net"
 KEYWORDS=""
 IUSE=""
-

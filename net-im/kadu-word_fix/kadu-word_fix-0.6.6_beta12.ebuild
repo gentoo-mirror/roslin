@@ -10,4 +10,3 @@ DESCRIPTION="Word replacement module for Kadu"
 HOMEPAGE="http://kadu.net"
 KEYWORDS=""
 IUSE=""
-

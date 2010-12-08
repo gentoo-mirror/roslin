@@ -12,4 +12,3 @@ HOMEPAGE="http://kadu.net/~weagle"
 KEYWORDS=""
 
 IUSE=""
-

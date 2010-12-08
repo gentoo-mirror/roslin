@@ -15,4 +15,3 @@ DESCRIPTION="Kadu module for desktop docking"
 HOMEPAGE="http://kadu.net"
 KEYWORDS=""
 IUSE=""
-

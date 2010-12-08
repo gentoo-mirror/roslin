@@ -16,4 +16,3 @@ HOMEPAGE="http://kadu.net/~blysk"
 KEYWORDS=""
 
 IUSE=""
-

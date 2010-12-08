@@ -15,4 +15,3 @@ DESCRIPTION="Kadu module for automatic window hiding"
 HOMEPAGE="http://kadu.net"
 KEYWORDS=""
 IUSE=""
-

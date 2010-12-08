@@ -17,4 +17,3 @@ HOMEPAGE="http://kadu.net"
 KEYWORDS=""
 IUSE=""
 
-S="${WORKDIR}/kadu-${K_PV}"

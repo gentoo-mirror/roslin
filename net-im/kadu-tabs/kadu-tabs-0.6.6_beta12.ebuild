@@ -13,4 +13,3 @@ KEYWORDS=""
 
 IUSE=""
 
-S="${WORKDIR}/kadu-${K_PV}"

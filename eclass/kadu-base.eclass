@@ -20,7 +20,11 @@ K_PV="${K_PV/_/-}"
 
 NAME="${PN#*-}"
 
-S="${WORKDIR}/kadu"
+if [ "${K_PV:0:5}" == "0.6.6" ]; then
+	S="${WORKDIR}/kadu-${K_PV}"
+else
+	S="${WORKDIR}/kadu"
+fi
 
 kadu-disable_all() {
 	# Disable all modules, emoticons, icons and sounds

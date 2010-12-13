@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/slotracers
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+
+  13 Dec 2010; Piotr Szymaniak <lazy_bum@o2.pl> files/1.0-glibc.patch,
+  slotracers-1.0.ebuild:
+  Updated SRC_URI and other cosmetic changes.
 
   02 Jun 2009; Piotr Szymaniak <lazy_bum@o2.pl> slotracers-1.0.ebuild,
   +files/1.0-glibc.patch, -files/slotracers-glibc2.8.patch:

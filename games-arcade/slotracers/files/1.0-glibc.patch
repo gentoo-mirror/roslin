@@ -21,5 +21,3 @@ diff -Nur Atari-game.orig/map.h Atari-game/map.h
 +
  using std::string;
  using std::vector;
- 
-Pliki Atari-game.orig/slotracers i Atari-game/slotracers różnią się

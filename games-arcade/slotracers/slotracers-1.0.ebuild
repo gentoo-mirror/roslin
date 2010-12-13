@@ -7,8 +7,8 @@ EAPI=2
 inherit games
 
 DESCRIPTION="Slot racers is a race-and-shooting game based on Slot Racers for Atari"
-HOMEPAGE="http://www.zillode.be/"
-SRC_URI="http://zillode.be/projects/Atari-game/atari-game.tar.gz"
+HOMEPAGE="http://zillode.be/"
+SRC_URI="http://zillode.be/portfolio/projects/Atari-game/atari-game.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"

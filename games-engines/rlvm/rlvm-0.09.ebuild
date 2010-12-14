@@ -16,7 +16,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="media-libs/libsdl[opengl]
-	>=dev-libs/boost-1.40
+	>=dev-libs/boost-1.42
 	media-libs/glew
 	media-libs/sdl-image[jpeg,png]
 	media-libs/sdl-ttf

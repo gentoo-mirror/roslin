@@ -2,6 +2,9 @@
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  14 Dec 2010; Michał Ziąbkowski <mziab@o2.pl> rlvm-0.09.ebuild:
+  boost-1.42 contains a relevant fix, so let's depend on that.
+
 *rlvm-0.09 (14 Dec 2010)
 
   14 Dec 2010; Michał Ziąbkowski <mziab@o2.pl> +rlvm-0.09.ebuild:

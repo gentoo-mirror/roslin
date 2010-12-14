@@ -6,12 +6,12 @@ EAPI=2
 
 inherit eutils python
 
-MY_P="${PN}_${PV}_source"
+MY_P="${PN}_${PV}_source_1.0"
 IMAGINAC_DIR="/usr/$(get_libdir)/${PN}"
 
 DESCRIPTION="Utility for batch processing images"
 HOMEPAGE="http://www.nac.gov.pl/ImagiNAC1.01"
-SRC_URI="http://www.nac.gov.pl/files/${MY_P}.tar"
+SRC_URI="http://www.nac.gov.pl/files/${MY_P}.zip"
 
 LICENSE="GPL-3"
 SLOT="0"
@@ -25,10 +25,6 @@ RDEPEND="${DEPEND}
 	media-gfx/exiv2"
 
 S="${WORKDIR}/${MY_P}"
-
-src_prepare() {
-	esvn_clean
-}
 
 src_install() {
 	# insert files into libdir

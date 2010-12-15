@@ -2,6 +2,12 @@
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*upset-0.4 (15 Dec 2010)
+
+  15 Dec 2010; Michał Ziąbkowski <mziab@o2.pl> -upset-0.1.ebuild,
+  +upset-0.4.ebuild, +files/upset-0.4-build.patch:
+  Removed old unsupported version. Initial ebuild for the most recent one.
+
 *upset-0.1 (24 Mar 2010)
 
   24 Mar 2010; Michał Ziąbkowski <mziab@o2.pl> +upset-0.1.ebuild,

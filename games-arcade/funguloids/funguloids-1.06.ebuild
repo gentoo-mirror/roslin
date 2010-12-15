@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${PN}-linux-${PV}.tar.bz2"
 
 LICENSE="ZLIB"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS=""
 IUSE="fmod mad ogg"
 
 RDEPEND="dev-games/ogre[cg,devil]

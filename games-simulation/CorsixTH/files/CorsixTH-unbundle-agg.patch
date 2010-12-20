@@ -1,0 +1,103 @@
+commit 57e0f15a4aad589ca10335b9f42d2eef0ac1f124
+Author: Michał Ziąbkowski <mziab@o2.pl>
+Date:   Mon Dec 20 20:08:08 2010 +0100
+
+    Use system AGG.
+
+diff --git a/CorsixTH/CMakeLists.txt b/CorsixTH/CMakeLists.txt
+index f245254..034c689 100755
+--- a/CorsixTH/CMakeLists.txt
++++ b/CorsixTH/CMakeLists.txt
+@@ -36,7 +36,6 @@ ENDIF(UNIX)
+ # Modify the config.h based upon our selection of options
+ CONFIGURE_FILE(${CMAKE_SOURCE_DIR}/CorsixTH/Src/config.h.in ${CMAKE_BINARY_DIR}/CorsixTH/Src/config.h)
+ INCLUDE_DIRECTORIES(${CMAKE_BINARY_DIR}/CorsixTH/Src/)
+-INCLUDE_DIRECTORIES(${CMAKE_SOURCE_DIR}/agg/include/)
+ 
+ # Generate source files list
+ # Note: Done after generating config.h
+@@ -54,7 +53,6 @@ FILE(GLOB_RECURSE corsixth_source_files
+   ${CMAKE_SOURCE_DIR}/CorsixTH/CorsixTH.rc
+   ${CMAKE_SOURCE_DIR}/LFS/*.c
+   ${CMAKE_SOURCE_DIR}/LPEG/*.c
+-  ${CMAKE_SOURCE_DIR}/agg/src/agg_image_filters.cpp
+ )
+ 
+ # Declaration of the executable
+@@ -120,6 +118,17 @@ IF(CORSIX_TH_USE_OGL_RENDERER)
+   ENDIF(OPENGL_FOUND)
+ ENDIF(CORSIX_TH_USE_OGL_RENDERER)
+ 
++# Find AGG
++set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake_modules/")
++
++FIND_PACKAGE(AGG REQUIRED)
++IF(AGG_FOUND)
++	TARGET_LINK_LIBRARIES(CorsixTH ${AGG_LIBRARIES})
++	INCLUDE_DIRECTORIES(${AGG_INCLUDE_DIR})
++ELSE(AGG_FOUND)
++	message(FATAL_ERROR "Error: AGG library not found, but required to build")
++ENDIF(AGG_FOUND)
++
+ # Declaration of the install process
+ install(TARGETS CorsixTH RUNTIME DESTINATION CorsixTH)
+ install(DIRECTORY Lua DESTINATION CorsixTH PATTERN "*svn" EXCLUDE)
+diff --git a/cmake_modules/FindAGG.cmake b/cmake_modules/FindAGG.cmake
+new file mode 100644
+index 0000000..86d5618
+--- /dev/null
++++ b/cmake_modules/FindAGG.cmake
+@@ -0,0 +1,53 @@
++# - Try to find the AGG graphics library
++# Once done this will define
++#
++#  AGG_FOUND - system has AGG
++#  AGG_INCLUDE_DIR - the AGG include directory
++#  AGG_LIBRARIES - Link these to use AGG
++#  AGG_DEFINITIONS - Compiler switches required for using AGG
++
++# Copyright (c) 2006, Alexander Neundorf, <neundorf@kde.org>
++#
++# Redistribution and use is allowed according to the terms of the BSD license.
++# For details see the accompanying COPYING-CMAKE-SCRIPTS file.
++
++if (AGG_INCLUDE_DIR AND AGG_LIBRARIES)
++
++  # in cache already
++  set(AGG_FOUND TRUE)
++
++else (AGG_INCLUDE_DIR AND AGG_LIBRARIES)
++  if (NOT WIN32)
++    # use pkg-config to get the directories and then use these values
++    # in the FIND_PATH() and FIND_LIBRARY() calls
++    find_package(PkgConfig)
++    pkg_check_modules(PC_AGG QUIET libagg) 
++
++    set(AGG_DEFINITIONS ${PC_AGG_CFLAGS_OTHER})
++  endif (NOT WIN32)
++
++  find_path(AGG_INCLUDE_DIR agg2/agg_pixfmt_gray.h
++    PATHS ${PC_AGG_INCLUDEDIR} ${PC_AGG_INCLUDE_DIRS}
++  )
++  
++  find_library(AGG_LIBRARIES NAMES agg
++    PATHS ${PC_AGG_LIBDIR} ${PC_AGG_LIBRARY_DIRS}
++  )
++  
++  if (AGG_INCLUDE_DIR AND AGG_LIBRARIES)
++     set(AGG_FOUND TRUE)
++  endif (AGG_INCLUDE_DIR AND AGG_LIBRARIES)
++  
++  if (AGG_FOUND)
++    if (NOT AGG_FIND_QUIETLY)
++      message(STATUS "Found AGG: ${AGG_LIBRARIES}")
++    endif (NOT AGG_FIND_QUIETLY)
++  else (AGG_FOUND)
++    if (AGG_FIND_REQUIRED)
++      message(FATAL_ERROR "Could NOT find AGG")
++    endif (AGG_FIND_REQUIRED)
++  endif (AGG_FOUND)
++  
++  mark_as_advanced(AGG_INCLUDE_DIR AGG_LIBRARIES)
++  
++endif (AGG_INCLUDE_DIR AND AGG_LIBRARIES)

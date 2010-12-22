@@ -2,6 +2,12 @@
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*kadu-config_wizard-0.6.6_beta13 (22 Dec 2010)
+
+  22 Dec 2010; Michał Ziąbkowski <mziab@o2.pl>
+  +kadu-config_wizard-0.6.6_beta13.ebuild:
+  Bumped.
+
 *kadu-config_wizard-0.6.6_beta12 (07 Dec 2010)
 
   07 Dec 2010; Michał Ziąbkowski <mziab@o2.pl>

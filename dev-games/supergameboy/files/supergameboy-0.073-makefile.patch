@@ -1,0 +1,32 @@
+diff --git a/supergameboy/Makefile b/supergameboy/Makefile
+index 60409af..cbef9ac 100755
+--- a/supergameboy/Makefile
++++ b/supergameboy/Makefile
+@@ -2,14 +2,13 @@ include nall/Makefile
+ 
+ c     := $(compiler) -std=gnu99
+ cpp   := $(subst cc,++,$(compiler)) -std=gnu++0x
+-flags := -O3 -fomit-frame-pointer -I. -Icommon -Ilibgambatte/include -Ilibgambatte/src
++flags := $(CXXFLAGS) -fomit-frame-pointer -I. -Icommon -Ilibgambatte/include -Ilibgambatte/src
+ link  :=
+ 
+ ifeq ($(platform),osx)
+   flags := -fPIC $(flags)
+ else ifeq ($(platform),x)
+   flags := -fPIC $(flags)
+-  link += -s
+ endif
+ 
+ objects := supergameboy
+@@ -113,9 +112,8 @@ install:
+ ifeq ($(platform),osx)
+ 	cp libsupergameboy.dylib /usr/local/lib/libsupergameboy.dylib
+ else
+-	install -D -m 755 libsupergameboy.a $(DESTDIR)$(prefix)/lib
+-	install -D -m 755 libsupergameboy.so $(DESTDIR)$(prefix)/lib
+-	ldconfig -n $(DESTDIR)$(prefix)/lib
++	install -D -m 755 libsupergameboy.a $(DESTDIR)$(prefix)/lib/libsupergameboy.a
++	install -D -m 755 libsupergameboy.so $(DESTDIR)$(prefix)/lib/libsupergameboy.so
+ endif
+ 
+ clean:

@@ -74,7 +74,7 @@ src_prepare() {
 
 src_compile() {
 	for i in accuracy compatibility performance; do
-		emake platform=x compiler=gcc profile=$i || die "emake failed"
+		emake platform=x compiler=gcc profile=$i ui=ui-qt || die "emake failed"
 		make clean
 	done
 

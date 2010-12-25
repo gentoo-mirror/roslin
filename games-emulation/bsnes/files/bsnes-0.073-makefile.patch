@@ -1,0 +1,58 @@
+diff --git a/bsnes/Makefile b/bsnes/Makefile
+index a820d46..d760a97 100755
+--- a/Makefile
++++ b/Makefile
+@@ -1,12 +1,12 @@
+ include nall/Makefile
+ snes := snes
+ profile := accuracy
+-ui := ui-phoenix
++ui := ui-qt
+ 
+ # compiler
+ c       := $(compiler) -std=gnu99
+ cpp     := $(subst cc,++,$(compiler)) -std=gnu++0x
+-flags   := -O3 -fomit-frame-pointer -I. -I$(snes)
++flags   := $(CXXFLAGS) -fomit-frame-pointer -I. -I$(snes)
+ link    :=
+ objects :=
+ 
+@@ -19,7 +19,7 @@ objects :=
+ 
+ # platform
+ ifeq ($(platform),x)
+-  link += -s -ldl -lX11 -lXext
++  link += -ldl -lX11 -lXext
+ else ifeq ($(platform),osx)
+ else ifeq ($(platform),win)
+   link += -mwindows
+@@ -56,17 +56,14 @@ ifeq ($(platform),osx)
+ 	test -d ../bsnes.app || mkdir -p ../bsnes.app/Contents/MacOS
+ 	$(strip $(cpp) -o ../bsnes.app/Contents/MacOS/bsnes $(objects) $(link))
+ else
+-	$(strip $(cpp) -o out/bsnes $(objects) $(link))
++	$(strip $(cpp) -o out/bsnes-$(profile) $(objects) $(link))
+ endif
+ 
+ install:
+ ifeq ($(platform),x)
+-	install -D -m 755 out/bsnes $(DESTDIR)$(prefix)/bin/bsnes
+-	install -D -m 644 data/bsnes.png $(DESTDIR)$(prefix)/share/pixmaps/bsnes.png
+-	install -D -m 644 data/bsnes.desktop $(DESTDIR)$(prefix)/share/applications/bsnes.desktop
+-	test -d ~/.bsnes || mkdir ~/.bsnes
+-	cp data/cheats.xml ~/.bsnes/cheats.xml
+-	chmod 777 ~/.bsnes ~/.bsnes/cheats.xml
++	install -D -m 755 out/bsnes-$(profile) $(DESTDIR)$(prefix)/bin/bsnes-$(profile)
++	install -D -m 644 data/bsnes.png $(DESTDIR)/usr/share/pixmaps/bsnes.png
++	install -D -m 644 data/bsnes.desktop $(DESTDIR)/usr/share/applications/bsnes.desktop
+ endif
+ 
+ uninstall:
+diff --git a/bsnes/launcher/cc.sh b/bsnes/launcher/cc.sh
+index 964034d..c9a92d8 100755
+--- a/launcher/cc.sh
++++ b/launcher/cc.sh
+@@ -1,2 +1 @@
+-clear
+-g++ -std=gnu++0x -s -O3 -fomit-frame-pointer -I.. -o ../out/bsnes launcher.cpp
++g++ -std=gnu++0x ${CXXFLAGS} -fomit-frame-pointer -I.. -o ../out/bsnes launcher.cpp

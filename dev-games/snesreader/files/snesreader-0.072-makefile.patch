@@ -1,0 +1,31 @@
+diff --git a/snesreader/Makefile b/snesreader/Makefile
+index 761317b..868a0cc 100755
+--- a/snesreader/Makefile
++++ b/snesreader/Makefile
+@@ -5,12 +5,11 @@ include nall/qt/Makefile
+ 
+ c     := $(compiler) -std=gnu99
+ cpp   := $(subst cc,++,$(compiler)) -std=gnu++0x
+-flags := -O3 -I. -Iobj -fomit-frame-pointer
++flags := $(CXXFLAGS) -I. -Iobj -fomit-frame-pointer
+ link  :=
+ 
+ ifeq ($(platform),x)
+   flags := -fPIC $(flags)
+-  link += -s
+ else ifeq ($(platform),osx)
+   flags := -fPIC $(flags)
+ endif
+@@ -171,9 +170,8 @@ endif
+ 
+ install:
+ ifeq ($(platform),x)
+-	install -D -m 755 libsnesreader.a $(DESTDIR)$(prefix)/lib
+-	install -D -m 755 libsnesreader.so $(DESTDIR)$(prefix)/lib
+-	ldconfig -n $(DESTDIR)$(prefix)/lib
++	install -D -m 755 libsnesreader.a $(DESTDIR)$(prefix)/lib/libsnesreader.a
++	install -D -m 755 libsnesreader.so $(DESTDIR)$(prefix)/lib/libsnesreader.so
+ else ifeq ($(platform),osx)
+ 	cp libsnesreader.dylib /usr/local/lib/libsnesreader.dylib
+ endif
+

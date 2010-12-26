@@ -25,6 +25,7 @@ RDEPEND="ao? ( media-libs/libao )
 	xv? ( x11-libs/libXv )
 	opengl? ( virtual/opengl )
 	sdl? ( media-libs/libsdl[joystick] )
+	sgb? ( dev-games/supergameboy )
 	snesfilter? ( dev-games/snesfilter )
 	snesreader? ( dev-games/snesreader )
 	>=x11-libs/qt-gui-4.5:4"

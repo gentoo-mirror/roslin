@@ -25,6 +25,7 @@ RDEPEND="ao? ( media-libs/libao )
 	xv? ( x11-libs/libXv )
 	opengl? ( virtual/opengl )
 	sdl? ( media-libs/libsdl[joystick] )
+	sgb? ( dev-games/supergameboy )
 	x11-libs/gtk+:2"
 
 DEPEND="${RDEPEND}

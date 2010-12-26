@@ -2,6 +2,9 @@
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  26 Dec 2010; Michał Ziąbkowski <mziab@o2.pl> bsnes-phoenix-0.073.ebuild:
+  Added missing supergameboy dep.
+
 *bsnes-phoenix-0.073 (25 Dec 2010)
 
   25 Dec 2010; Michał Ziąbkowski <mziab@o2.pl> +bsnes-phoenix-0.073.ebuild,

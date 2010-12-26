@@ -33,7 +33,8 @@ RDEPEND="ao? ( media-libs/libao )
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	>=sys-devel/gcc-4.4
-	!games-emulation/bsnes-phoenix"
+	!games-emulation/bsnes-phoenix
+	!games-emulation/bsnes-qt"
 
 S="${WORKDIR}/${PN}"
 

@@ -20,8 +20,7 @@ IUSE="sgb"
 
 RDEPEND="sgb? ( dev-games/supergameboy )"
 
-DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+DEPEND="dev-util/pkgconfig
 	>=sys-devel/gcc-4.4"
 
 S="${WORKDIR}/bsnes"

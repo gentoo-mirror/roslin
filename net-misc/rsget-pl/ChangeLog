@@ -2,6 +2,9 @@
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  31 Dec 2010; Piotr Szymaniak <lazy_bum@o2.pl> rsget-pl-9999.ebuild:
+  Updated install path.
+
   15 Mar 2010; Michał Ziąbkowski <mziab@o2.pl> rsget-pl-9999.ebuild:
   Updated HOMEPAGE.
 

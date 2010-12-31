@@ -23,6 +23,10 @@ RDEPEND="dev-perl/WWW-Curl
 
 S=${WORKDIR}/${MY_PN}
 
+src_prepare() {
+	sed -i -e "s:/usr/local:/usr:" || die "sed failed"
+}
+
 src_install() {
 	emake DESTDIR="${D}" install || die "install failed"
 

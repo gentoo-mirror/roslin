@@ -25,12 +25,14 @@ RDEPEND="ao? ( media-libs/libao )
 	xv? ( x11-libs/libXv )
 	opengl? ( virtual/opengl )
 	sdl? ( media-libs/libsdl[joystick] )
+	sgb? ( dev-games/supergameboy )
 	x11-libs/gtk+:2"
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	>=sys-devel/gcc-4.5
-	!games-emulation/bsnes"
+	!games-emulation/bsnes
+	!games-emulation/bsnes-qt"
 
 S="${WORKDIR}/bsnes"
 

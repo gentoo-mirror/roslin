@@ -9,14 +9,14 @@ inherit eutils confutils games
 MY_PV="${PV/0./}"
 MY_PV="${MY_PV/_/}"
 
-DESCRIPTION="A Super Famicom/SNES emulator written with absolute accuracy in mind"
+DESCRIPTION="Feature-oriented bsnes fork utilizing libsnes"
 HOMEPAGE="http://byuu.org/bsnes/"
-SRC_URI="http://bsnes.googlecode.com/files/${PN}_v${MY_PV}.tar.bz2"
+SRC_URI="http://byuu.org/files/${PN}_v${MY_PV}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="ao alsa debug openal opengl oss pulseaudio sdl sgb snesfilter +snesreader xv"
+IUSE="ao alsa debug openal opengl oss pulseaudio sdl snesfilter +snesreader xv"
 
 RDEPEND="ao? ( media-libs/libao )
 	openal? ( media-libs/openal )
@@ -25,21 +25,21 @@ RDEPEND="ao? ( media-libs/libao )
 	xv? ( x11-libs/libXv )
 	opengl? ( virtual/opengl )
 	sdl? ( media-libs/libsdl[joystick] )
-	sgb? ( dev-games/supergameboy )
 	snesfilter? ( dev-games/snesfilter )
 	snesreader? ( dev-games/snesreader )
+	dev-games/libsnes
 	>=x11-libs/qt-gui-4.5:4"
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	>=sys-devel/gcc-4.4
-	!games-emulation/bsnes-phoenix
-	!games-emulation/bsnes-qt"
+	!games-emulation/bsnes
+	!games-emulation/bsnes-phoenix"
 
-S="${WORKDIR}/${PN}"
+S="${WORKDIR}/bsnes.qt"
 
 disable_module() {
-	sed -i "ui-qt/Makefile" -e "s|$1||"
+	sed -i "Makefile" -e "s|$1||"
 }
 
 pkg_setup() {
@@ -49,13 +49,6 @@ pkg_setup() {
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-0.073-makefile.patch
-
-	# debugger
-	if use debug ; then
-	    sed -i "snes/snes.hpp" \
-		-e "s://\(#define DEBUGGER\):\\1:" \
-		|| die "sed failed"
-	fi
 
 	# audio modules
 	use ao || disable_module audio.ao
@@ -75,24 +68,14 @@ src_prepare() {
 }
 
 src_compile() {
-	for i in accuracy compatibility performance; do
-		emake platform=x compiler=gcc profile=$i ui=ui-qt || die "emake failed"
-		make clean
-	done
-
-	cd launcher && sh cc.sh || die
+	emake platform=x compiler=gcc || die "emake failed"
 }
 
 src_install() {
-	for i in accuracy compatibility performance; do
-		emake \
-			DESTDIR="${D}" \
-			prefix="${GAMES_PREFIX}" \
-			profile=$i \
-			install || die "install failed"
-	done
-
-	dogamesbin out/bsnes || die
+	emake \
+		DESTDIR="${D}" \
+		prefix="${GAMES_PREFIX}" \
+		install || die "install failed"
 
 	prepgamesdirs
 }

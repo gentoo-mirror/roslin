@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libsfml
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+
+*libsfml-2_pre20101226 (03 Jan 2011)
+
+  03 Jan 2011; Piotr Szymaniak <lazy_bum@o2.pl> +libsfml-2_pre20101226.ebuild:
+  Snapshot for testing only.
 
   10 Nov 2010; Michał Ziąbkowski <mziab@o2.pl> libsfml-1.6.ebuild:
   Switched to virtual/jpeg

@@ -1,0 +1,24 @@
+diff --git a/gui/Makefile.am b/gui/Makefile.am
+index 1594f1c..8cb0f27 100644
+--- a/gui/Makefile.am
++++ b/gui/Makefile.am
+@@ -1,5 +1,5 @@
+ AM_CPPFLAGS = -DPACKAGE_DATA_DIR=\"${datadir}/pcsx/\" \
+-	-DPIXMAPDIR=\"${datadir}/pixmaps/\" \
++	-DPIXMAPDIR=\"/usr/share/pixmaps/\" \
+ 	-DLOCALE_DIR=\"${datadir}/locale/\" \
+ 	$(GTK2_CFLAGS) $(GLADE2_CFLAGS) \
+ 	-I$(top_srcdir)/libpcsxcore -I$(top_srcdir)/include \
+diff --git a/pixmaps/Makefile.am b/pixmaps/Makefile.am
+index ea6e2d2..2f04173 100644
+--- a/pixmaps/Makefile.am
++++ b/pixmaps/Makefile.am
+@@ -1,7 +1,7 @@
+ pixmapdir = "$(datadir)/pcsx"
+ pixmap_DATA = pcsx.jpg
+ 
+-icondir = "$(datadir)/pixmaps"
++icondir = "/usr/share/pixmaps"
+ icon_DATA = pcsx-icon.png
+ 
+ EXTRA_DIST = pcsx.jpg pcsx-icon.png

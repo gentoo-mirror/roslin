@@ -45,7 +45,7 @@ src_prepare() {
 	done
 
 	# fix icon and .desktop path
-	epatch "${FILESDIR}/${PN}-datadir.patch"
+	epatch "${FILESDIR}/${P}-datadir.patch"
 
 	# regenerate for changes to spread
 	eautoreconf

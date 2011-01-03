@@ -1,5 +1,5 @@
 # ChangeLog for media-gfx/mtpaint
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 
   10 Nov 2010; Michał Ziąbkowski <mziab@o2.pl> mtpaint-3.31-r1.ebuild:
   Switched to virtual/jpeg

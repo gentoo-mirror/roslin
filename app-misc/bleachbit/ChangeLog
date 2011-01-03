@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/bleachbit
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+
+*bleachbit-0.8.5 (02 Jan 2011)
+
+  02 Jan 2011; Michał Ziąbkowski <mziab@o2.pl> +bleachbit-0.8.5.ebuild:
+  Bumped.
 
 *bleachbit-0.8.4 (18 Dec 2010)
 

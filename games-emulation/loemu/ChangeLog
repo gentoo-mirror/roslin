@@ -1,5 +1,5 @@
 # ChangeLog for games-emulation/loemu
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 
   12 Apr 2010; Michał Ziąbkowski <mziab@o2.pl> loemu-0.3.1-r1.ebuild:
   Removed deprecated python_version instance.

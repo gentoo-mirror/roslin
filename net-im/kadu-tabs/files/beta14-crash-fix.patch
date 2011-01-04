@@ -1,0 +1,104 @@
+From ef038442f4835ad86d33fb2c48381ae81e70b86d Mon Sep 17 00:00:00 2001
+From: Bartosz Brachaczek <b.brachaczek@gmail.com>
+Date: Tue, 4 Jan 2011 20:22:30 +0100
+Subject: [PATCH] tabs: Move actions creation after creating TabWidget (#1906)
+
+I guess it's because of commit 0e348fea4a5bb5a3df7d55712af457f17b2e6ff2
+(ActionDescription::connectNotify()).
+
+Signed-off-by: Bartosz Brachaczek <b.brachaczek@gmail.com>
+---
+ ChangeLog             |    1 +
+ modules/tabs/tabs.cpp |   41 +++++++++++++++++++----------------------
+ modules/tabs/tabs.h   |    2 +-
+ 3 files changed, 21 insertions(+), 23 deletions(-)
+
+diff --git a/modules/tabs/tabs.cpp b/modules/tabs/tabs.cpp
+index d12c486..b0b9e21 100644
+--- a/modules/tabs/tabs.cpp
++++ b/modules/tabs/tabs.cpp
+@@ -77,7 +77,7 @@ extern "C" KADU_EXPORT void tabs_close()
+ 	tabs_manager = 0;
+ }
+ 
+-void disableNewTab(Action *action)
++static void disableNewTab(Action *action)
+ {
+ 	action->setEnabled(action->chat());
+ 
+@@ -89,7 +89,8 @@ void disableNewTab(Action *action)
+ 	kdebugf2();
+ }
+ 
+-TabsManager::TabsManager(bool firstload)
++TabsManager::TabsManager(bool firstLoad) :
++		NoTabs(false), ForceTabs(false), TargetTabs(-1)
+ {
+ 	kdebugf();
+ 
+@@ -106,23 +107,6 @@ TabsManager::TabsManager(bool firstload)
+ 
+ 	connect(&Timer, SIGNAL(timeout()), this, SLOT(onTimer()));
+ 
+-	OpenInNewTabActionDescription = new ActionDescription(this,
+-		ActionDescription::TypeUser, "openInNewTabAction",
+-		this, SLOT(onNewTab(QAction *, bool)),
+-		"internet-group-chat", tr("Chat in New Tab"), false, disableNewTab
+-	);
+-	BuddiesListViewMenuManager::instance()->addActionDescription(OpenInNewTabActionDescription, BuddiesListViewMenuItem::MenuCategoryChat, 200);
+-
+-	AttachToTabsActionDescription = new ActionDescription(this,
+-		ActionDescription::TypeChat, "attachToTabsAction",
+-		this, SLOT(onTabAttach(QAction *, bool)),
+-		"kadu_icons/tab-detach", tr("Attach Chat to Tabs"), true
+-	);
+-	connect(AttachToTabsActionDescription, SIGNAL(actionCreated(Action *)), this, SLOT(attachToTabsActionCreated(Action *)));
+-
+-	if (firstload)
+-		ChatEditBox::addAction("attachToTabsAction");
+-
+ 	TabDialog = new TabWidget();
+ 	TabDialog->setContextMenuPolicy(Qt::CustomContextMenu);
+ 	connect(TabDialog, SIGNAL(currentChanged(int)), this, SLOT(onTabChange(int)));
+@@ -145,9 +129,22 @@ TabsManager::TabsManager(bool firstload)
+ 	// pozycja tabów
+ 	configurationUpdated();
+ 
+-	NoTabs = false;
+-	ForceTabs = false;
+-	TargetTabs = -1;
++	OpenInNewTabActionDescription = new ActionDescription(this,
++		ActionDescription::TypeUser, "openInNewTabAction",
++		this, SLOT(onNewTab(QAction *, bool)),
++		"internet-group-chat", tr("Chat in New Tab"), false, disableNewTab
++	);
++	BuddiesListViewMenuManager::instance()->addActionDescription(OpenInNewTabActionDescription, BuddiesListViewMenuItem::MenuCategoryChat, 200);
++
++	AttachToTabsActionDescription = new ActionDescription(this,
++		ActionDescription::TypeChat, "attachToTabsAction",
++		this, SLOT(onTabAttach(QAction *, bool)),
++		"kadu_icons/tab-detach", tr("Attach Chat to Tabs"), true
++	);
++	connect(AttachToTabsActionDescription, SIGNAL(actionCreated(Action *)), this, SLOT(attachToTabsActionCreated(Action *)));
++
++	if (firstLoad)
++		ChatEditBox::addAction("attachToTabsAction");
+ 
+ 	if (config_file.readBoolEntry("Chat", "SaveOpenedWindows", true))
+ 		ensureLoaded(); //loadTabs();
+diff --git a/modules/tabs/tabs.h b/modules/tabs/tabs.h
+index 1ccedff..feab575 100644
+--- a/modules/tabs/tabs.h
++++ b/modules/tabs/tabs.h
+@@ -94,7 +94,7 @@ protected:
+ 	virtual void load();
+ 
+ public:
+-	explicit TabsManager(bool firstload);
++	explicit TabsManager(bool firstLoad);
+ 	virtual ~TabsManager();
+ 
+ 	virtual void mainConfigurationWindowCreated(MainConfigurationWindow *mainConfigurationWindow);
+-- 
+1.6.1
+

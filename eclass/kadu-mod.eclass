@@ -44,12 +44,12 @@ kadu-mod_src_unpack() {
 
 	# If external module, move its sources to kadu/modules
 	[ "${MOD_TYPE}" = "ext" ] && mv -f \
-	    "${WORKDIR}/${NAME}" "${WORKDIR}/kadu/modules"
+	    "${WORKDIR}/${NAME}" "${S}/modules"
 
 	# Apply patches, if any
 	if [ ! -z "${MOD_PATCHES}" ]
 	then
-		cd "${WORKDIR}/kadu/modules/${NAME}"
+		cd "${S}/modules/${NAME}"
 		for i in ${MOD_PATCHES}
 		do
 			epatch "${FILESDIR}/${i}"

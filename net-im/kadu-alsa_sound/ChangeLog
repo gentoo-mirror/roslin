@@ -2,6 +2,12 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*kadu-alsa_sound-0.6.6_beta14_p2 (04 Jan 2011)
+
+  04 Jan 2011; Michał Ziąbkowski <mziab@o2.pl>
+  +kadu-alsa_sound-0.6.6_beta14_p2.ebuild:
+  Bumped.
+
 *kadu-alsa_sound-0.6.6_beta14 (04 Jan 2011)
 
   04 Jan 2011; Michał Ziąbkowski <mziab@o2.pl>

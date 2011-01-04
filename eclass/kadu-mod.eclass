@@ -13,7 +13,7 @@ else
 	K_PV="${MIN_VER}"
 fi
 
-K_PV="${K_PV/_p/-}"
+K_PV="${K_PV/_p/.}"
 K_PV="${K_PV/_/-}"
 
 RDEPEND=">=net-im/kadu-core-${MIN_VER}

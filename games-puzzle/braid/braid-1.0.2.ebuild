@@ -49,8 +49,8 @@ src_install() {
 	exeinto "${dir}"
 
 	doins -r gamedata/data || die "doins failed"
-	if x86; then doexe x86/"${PN}" || die "doexe failed"; fi
-	if amd64; then doexe amd64/"${PN}" || die "doexe failed"; fi
+	if use x86; then doexe x86/"${PN}" || die "doexe failed"; fi
+	if use amd64; then doexe amd64/"${PN}" || die "doexe failed"; fi
 
 	doicon gamedata/"${PN}.png" || die "doicon failed"
 

@@ -13,7 +13,9 @@ SRC_URI="${PN}-linux-build${PV/1.0./}.run.bin"
 LICENSE="Arphic CCPL-Attribution-ShareAlike-NonCommercial-1.0 MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="video_cards_nvidia"
+
+#IUSE="video_cards_nvidia"
+IUSE=""
 RESTRICT="strip fetch"
 
 DEPEND="app-arch/unzip"
@@ -24,7 +26,8 @@ RDEPEND="media-libs/libsdl[audio,joystick,video]
 	x11-libs/libXdmcp
 	x11-libs/libXext
 	virtual/opengl
-	video_cards_nvidia? ( media-gfx/nvidia-cg-toolkit )"
+	media-gfx/nvidia-cg-toolkit"
+#	video_cards_nvidia? ( media-gfx/nvidia-cg-toolkit )"
 
 S=${WORKDIR}/data
 

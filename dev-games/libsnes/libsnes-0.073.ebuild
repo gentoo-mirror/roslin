@@ -16,7 +16,7 @@ SRC_URI="http://bsnes.googlecode.com/files/bsnes_v${MY_PV}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="sgb"
+IUSE="profile_accuracy +profile_compatibility profile_performance sgb"
 
 RDEPEND="sgb? ( dev-games/supergameboy )"
 
@@ -27,6 +27,7 @@ S="${WORKDIR}/bsnes"
 
 pkg_setup() {
 	use amd64 && append-cxxflags -fPIC
+	confutils_require_one profile_accuracy profile_compatibility profile_performance
 }
 
 src_prepare() {
@@ -34,10 +35,22 @@ src_prepare() {
 }
 
 src_compile() {
-	emake platform=x compiler=gcc library || die "emake failed"
+	local myprofile
+
+	if use profile_accuracy; then
+		myprofile="accuracy"
+	elif use profile_compatibility; then
+		myprofile="compatibility"
+	else
+		myprofile="performance"
+	fi
+
+	emake compiler=gcc profile=${myprofile} library || die "emake failed"
 }
 
 src_install() {
 	dolib.so out/libsnes.so || die
 	dolib.a out/libsnes.a || die
+	insinto /usr/include
+	doins snes/libsnes/libsnes.hpp || die
 }

@@ -2,6 +2,12 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*bsnes-phoenix-0.074 (11 Jan 2011)
+
+  11 Jan 2011; Michał Ziąbkowski <mziab@o2.pl> +bsnes-phoenix-0.074.ebuild,
+  +files/bsnes-phoenix-0.074-makefile.patch:
+  Bumped.
+
   26 Dec 2010; Michał Ziąbkowski <mziab@o2.pl> bsnes-phoenix-0.073.ebuild:
   Block on bsnes-qt.
 

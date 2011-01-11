@@ -16,7 +16,7 @@ SRC_URI="http://bsnes.googlecode.com/files/bsnes_v${MY_PV}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="ao alsa openal opengl oss pulseaudio sdl sgb xv"
+IUSE="ao alsa openal opengl oss profile_accuracy +profile_compatibility profile_performance pulseaudio sdl sgb xv"
 
 RDEPEND="ao? ( media-libs/libao )
 	openal? ( media-libs/openal )
@@ -43,6 +43,7 @@ disable_module() {
 pkg_setup() {
 	confutils_require_any ao openal alsa pulseaudio oss
 	confutils_require_any xv opengl sdl
+	confutils_require_one profile_accuracy profile_compatibility profile_performance
 }
 
 src_prepare() {
@@ -66,7 +67,17 @@ src_prepare() {
 }
 
 src_compile() {
-	emake platform=x compiler=gcc || die "emake failed"
+	local myprofile
+
+	if use profile_accuracy; then
+		myprofile="accuracy"
+	elif use profile_compatibility; then
+		myprofile="compatibility"
+	else
+		myprofile="performance"
+	fi
+
+	emake platform=x compiler=gcc profile=${myprofile} || die "emake failed"
 }
 
 src_install() {

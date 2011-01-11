@@ -7,6 +7,9 @@
   <name>Michał Ziąbkowski</name>
 </maintainer>
 <use>
-  <flag name='sgb'>Enables Super Gameboy emulation</flag>
+	<flag name='profile_accuracy'>Enables the 'accuracy' emulation core</flag>
+	<flag name='profile_compatibility'>Enables the 'compatibility' emulation core</flag>
+	<flag name='profile_performance'>Enables the 'performance' emulation core</flag>
+	<flag name='sgb'>Enables Super Gameboy emulation</flag>
 </use>
 </pkgmetadata>

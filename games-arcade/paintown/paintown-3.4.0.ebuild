@@ -2,9 +2,9 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=2
+EAPI="3"
 
-inherit eutils games
+inherit cmake-utils games
 
 DESCRIPTION="Side-scrolling beat-em-up in the style of Beats of Rage"
 HOMEPAGE="http://paintown.sourceforge.net/"
@@ -24,16 +24,16 @@ DEPEND="${RDEPEND}
 
 dir=${GAMES_DATADIR}/${PN}
 
+src_configure() {
+	cmake-utils_src_configure
+}
+
+src_compile() {
+	cmake-utils_src_compile
+}
+
 src_install() {
-	emake DESTDIR="${D}" install || die
-#	dogamesbin ../${P}_build/bin/${PN} || die "dogamesbin failed"
-
-#	insinto "${dir}"
-#	doins -r data/* || die "doins failed"
-
-#	make_desktop_entry ${PN} Paintown
-
-#	dodoc "${WORKDIR}/${P}"/{README,TODO} || die "dodoc failed"
-
+	DOCS="README LEGAL doc/* TODO" cmake-utils_src_install
 	prepgamesdirs
 }
+

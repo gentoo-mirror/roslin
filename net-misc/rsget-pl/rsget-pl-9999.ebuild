@@ -2,6 +2,8 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
+EAPI="3"
+
 inherit subversion
 
 MY_PN="rsget.pl"
@@ -24,7 +26,8 @@ RDEPEND="dev-perl/WWW-Curl
 S=${WORKDIR}/${MY_PN}
 
 src_prepare() {
-	sed -i -e "s:/usr/local:/usr:" || die "sed failed"
+	sed -i \
+		-e "s./usr/local./usr." Makefile || die "sed failed"
 }
 
 src_install() {

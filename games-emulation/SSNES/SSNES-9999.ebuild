@@ -35,7 +35,8 @@ pkg_config() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}/${PN}-build.patch"
+	epatch "${FILESDIR}/${PN}-build.patch" \
+		"${FILESDIR}/${PN}-cflags.patch"
 }
 
 src_configure() {

@@ -2,9 +2,6 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
-  15 Jan 2011; Michał Ziąbkowski <mziab@o2.pl> SSNES-9999.ebuild:
-  Use default src_install instead of kludge.
-
   15 Jan 2011; Michał Ziąbkowski <mziab@o2.pl> SSNES-9999.ebuild,
   +files/SSNES-build.patch:
   Patched build system and removed the kludge in src_install.

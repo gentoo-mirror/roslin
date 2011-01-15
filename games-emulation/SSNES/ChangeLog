@@ -2,6 +2,9 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  15 Jan 2011; Michał Ziąbkowski <mziab@o2.pl> files/SSNES-build.patch:
+  Fixed man install path.
+
   15 Jan 2011; Michał Ziąbkowski <mziab@o2.pl> SSNES-9999.ebuild:
   Forgot about prepgamesdirs. Not in the default src_install, so reverted the
   last change.

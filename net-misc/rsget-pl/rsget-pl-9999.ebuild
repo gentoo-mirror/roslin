@@ -4,9 +4,7 @@
 
 EAPI="3"
 
-inherit subversion
-
-MY_PN="rsget.pl"
+inherit base subversion
 
 DESCRIPTION="Random content downloader"
 HOMEPAGE="http://rsget.pl/"
@@ -23,15 +21,11 @@ RDEPEND="dev-perl/WWW-Curl
 	captcha? ( app-text/tesseract
 	dev-perl/GD )"
 
-S=${WORKDIR}/${MY_PN}
+S=${WORKDIR}/${PN/-/.}
+
+DOCS=("README" "README.config" "README.dev" "README.requirements")
 
 src_prepare() {
 	sed -i \
 		-e "s./usr/local./usr." Makefile || die "sed failed"
-}
-
-src_install() {
-	emake DESTDIR="${D}" install || die "install failed"
-
-	dodoc README* || die "dodoc failed"
 }

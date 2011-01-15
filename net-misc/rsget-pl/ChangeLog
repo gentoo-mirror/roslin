@@ -2,6 +2,9 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  15 Jan 2011; Piotr Szymaniak <szarpaj@grubelek.pl> rsget-pl-9999.ebuild:
+  Now we use some EAPI=3 features.
+
   14 Jan 2011; Piotr Szymaniak <szarpaj@grubelek.pl> rsget-pl-9999.ebuild,
   +metadata.xml:
   Updated ebuild.

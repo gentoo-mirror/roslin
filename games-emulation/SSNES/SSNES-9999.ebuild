@@ -34,8 +34,12 @@ pkg_config() {
 	confutils_require_any alsa jack openal oss
 }
 
+src_prepare() {
+	epatch "${FILESDIR}/${PN}-build.patch"
+}
+
 src_configure() {
-	./configure \
+	egamesconf \
 		$(use_enable alsa) \
 		$(use_enable ffmpeg) \
 		$(use_enable jack) \
@@ -47,11 +51,6 @@ src_configure() {
 }
 
 src_install() {
-	dogamesbin ssnes tools/ssnes-joyconfig || die
-
-	insinto /etc
-	doins ssnes.cfg || die
-
-	doman docs/{ssnes,ssnes-joyconfig}.1 || die
+	emake DESTDIR="${D}" install || die
 	dodoc README.md AUTHORS || die
 }

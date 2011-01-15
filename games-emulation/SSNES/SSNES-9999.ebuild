@@ -53,6 +53,6 @@ src_configure() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die
-	dodoc README.md AUTHORS
+	dodoc README.md AUTHORS || die
 	prepgamesdirs
 }

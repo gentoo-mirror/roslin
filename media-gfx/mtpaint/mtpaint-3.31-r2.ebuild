@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=2
+EAPI=3
 
 inherit eutils
 
@@ -23,13 +23,14 @@ DEPEND="
 	>=x11-libs/gtk+-2.6.4
 	>=x11-libs/pango-1.8.0
 	gif? ( >=media-libs/giflib-4.1.4 )
-	jpeg? ( >=virtual/jpeg-6b )
+	jpeg? ( virtual/jpeg )
 	tiff? ( >=media-libs/tiff-3.6.1 )"
 
 RDEPEND="${DEPEND}"
 
 src_prepare() {
-	epatch "${FILESDIR}/${PN}-nostrip.patch"
+	epatch "${FILESDIR}/${PN}-nostrip.patch" \
+		"${FILESDIR}/${PN}-libpng14.patch"
 }
 
 src_configure() {
@@ -66,7 +67,3 @@ src_configure() {
 	econf ${myconf} || die "configure failed"
 }
 
-src_install() {
-	emake DESTDIR="${D}" install || die "einstall failed"
-	dodoc README NEWS
-}

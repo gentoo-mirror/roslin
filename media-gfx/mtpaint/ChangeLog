@@ -1,6 +1,15 @@
 # ChangeLog for media-gfx/mtpaint
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 
+  15 Jan 2011; Michał Ziąbkowski <mziab@o2.pl> -mtpaint-3.31-r1.ebuild:
+  Removed old broken rev.
+
+*mtpaint-3.31-r2 (15 Jan 2011)
+
+  15 Jan 2011; Michał Ziąbkowski <mziab@o2.pl> +files/mtpaint-libpng14.patch,
+  +mtpaint-3.31-r2.ebuild:
+  Bumped with fixed jpeg dep and libpng14 patch.
+
   10 Nov 2010; Michał Ziąbkowski <mziab@o2.pl> mtpaint-3.31-r1.ebuild:
   Switched to virtual/jpeg
 

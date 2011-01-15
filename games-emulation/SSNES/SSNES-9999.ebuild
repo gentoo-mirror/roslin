@@ -29,6 +29,8 @@ RDEPEND="dev-games/libsnes
 DEPEND="dev-util/pkgconfig
 	${RDEPEND}"
 
+DOCS=("README.md" "AUTHORS")
+
 pkg_config() {
 	games-pkg_setup
 	confutils_require_any alsa jack openal oss
@@ -48,9 +50,4 @@ src_configure() {
 		$(use_enable cg) \
 		$(use_enable xml) \
 		|| die
-}
-
-src_install() {
-	emake DESTDIR="${D}" install || die
-	dodoc README.md AUTHORS || die
 }

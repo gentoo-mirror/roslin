@@ -4,7 +4,7 @@
 
 EAPI=3
 
-inherit eutils
+inherit eutils base
 
 DESCRIPTION="Simple gtk+ painting program"
 HOMEPAGE="http://mtpaint.sourceforge.net/"
@@ -27,6 +27,8 @@ DEPEND="
 	tiff? ( >=media-libs/tiff-3.6.1 )"
 
 RDEPEND="${DEPEND}"
+
+DOCS=("README" "NEWS")
 
 src_prepare() {
 	epatch "${FILESDIR}/${PN}-nostrip.patch" \

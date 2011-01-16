@@ -1,0 +1,12 @@
+diff --git a/cc-gtk.sh b/cc-gtk.sh
+index 3d1ce69..b5dc6f8 100755
+--- a/cc-gtk.sh
++++ b/cc-gtk.sh
+@@ -1,4 +1,4 @@
+-g++-4.5 -std=gnu++0x -I. -O3 -fomit-frame-pointer -c phoenix/phoenix.cpp `pkg-config --cflags gtk+-2.0` -DPHOENIX_GTK
+-g++-4.5 -std=gnu++0x -I. -O3 -fomit-frame-pointer -c snespurify.cpp -DPHOENIX_GTK
+-g++-4.5 -s -o snespurify snespurify.o phoenix.o `pkg-config --libs gtk+-2.0`
++g++ -std=gnu++0x -I. -O3 ${CXXFLAGS} -fomit-frame-pointer -c phoenix/phoenix.cpp `pkg-config --cflags gtk+-2.0` -DPHOENIX_GTK
++g++ -std=gnu++0x -I. -O3 ${CXXFLAGS} -fomit-frame-pointer -c snespurify.cpp -DPHOENIX_GTK
++g++ -o snespurify snespurify.o phoenix.o `pkg-config --libs gtk+-2.0`
+ rm *.o

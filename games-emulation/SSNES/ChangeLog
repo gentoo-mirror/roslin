@@ -2,6 +2,10 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  25 Jan 2011; Michał Ziąbkowski <mziab@o2.pl> SSNES-9999.ebuild,
+  files/SSNES-build.patch, metadata.xml:
+  Updated build patch. Added filters and truetype flags.
+
   15 Jan 2011; Michał Ziąbkowski <mziab@o2.pl> SSNES-9999.ebuild:
   dodoc is still non-fatal in EAPI=3.
 

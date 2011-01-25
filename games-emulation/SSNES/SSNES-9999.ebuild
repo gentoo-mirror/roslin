@@ -15,7 +15,7 @@ EGIT_REPO_URI="git://github.com/Themaister/${PN}.git"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS=""
-IUSE="alsa cg ffmpeg jack openal oss xml"
+IUSE="alsa cg filters ffmpeg jack openal oss truetype xml"
 
 RDEPEND="dev-games/libsnes
 	media-libs/libsdl[joystick]
@@ -25,7 +25,8 @@ RDEPEND="dev-games/libsnes
 	ffmpeg? ( media-video/ffmpeg )
 	jack? ( media-sound/jack-audio-connection-kit )
 	openal? ( media-libs/openal )
-	xml? ( dev-libs/libxml2 )"
+	xml? ( dev-libs/libxml2 )
+	truetype? ( media-libs/freetype:2 )"
 DEPEND="dev-util/pkgconfig
 	${RDEPEND}"
 
@@ -48,6 +49,8 @@ src_configure() {
 		$(use_enable oss) \
 		$(use_enable cg) \
 		$(use_enable xml) \
+		$(use_enable truetype freetype) \
+		$(use_enable filters filter) \
 		|| die
 }
 

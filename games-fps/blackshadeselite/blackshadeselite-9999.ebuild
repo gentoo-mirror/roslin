@@ -13,7 +13,7 @@ ESVN_PROJECT="blackshadeselite"
 
 LICENSE="blackshades"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS=""
 IUSE=""
 
 DEPEND="virtual/opengl

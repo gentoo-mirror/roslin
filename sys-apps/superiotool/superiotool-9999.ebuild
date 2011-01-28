@@ -9,7 +9,7 @@ HOMEPAGE="http://www.coreboot.org/Superiotool"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS=""
 IUSE=""
 
 SRC_URI=""

@@ -1,5 +1,9 @@
 # ChangeLog for sys-apps/getpir
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+
+  28 Jan 2011; Piotr Szymaniak <szarpaj@grubelek.pl> getpir-9999.ebuild,
+  +metadata.xml:
+  Removed ~keywords, added metadata.
 
   11 Feb 2009; Michał Ziąbkowski <mziab@o2.pl> getpir-9999.ebuild:
   Updated repo.

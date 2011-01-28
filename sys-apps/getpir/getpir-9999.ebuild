@@ -9,7 +9,7 @@ HOMEPAGE="http://www.linuxbios.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS=""
 IUSE=""
 
 SRC_URI=""

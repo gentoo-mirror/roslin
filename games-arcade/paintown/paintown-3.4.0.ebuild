@@ -36,4 +36,3 @@ src_install() {
 	DOCS="README LEGAL doc/* TODO" cmake-utils_src_install
 	prepgamesdirs
 }
-

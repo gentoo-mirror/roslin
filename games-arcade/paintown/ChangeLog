@@ -2,6 +2,9 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  28 Jan 2011; Piotr Szymaniak <szarpaj@grubelek.pl> paintown-3.4.0.ebuild:
+  Fixed useless line.
+
 *paintown-3.4.0 (14 Jan 2011)
 
   14 Jan 2011; Piotr Szymaniak <szarpaj@grubelek.pl> -paintown-3.3.1.ebuild,

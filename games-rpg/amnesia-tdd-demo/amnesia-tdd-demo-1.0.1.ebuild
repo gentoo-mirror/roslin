@@ -8,7 +8,7 @@ inherit eutils games
 
 MY_PN="${PN//-/_}"
 
-DESCRIPTION="Amnesia: The Dark Descent is a first person survival horror. A game about immersion, discovery and living through a nightmare."
+DESCRIPTION="Amnesia: The Dark Descent is a first person survival horror."
 HOMEPAGE="http://www.amnesiagame.com"
 SRC_URI="http://www.thedarkswarm.com/downloads/demo/${MY_PN}_${PV}.sh"
 
@@ -196,7 +196,6 @@ src_install() {
 
 	doins *.cfg || die "doins \".cfg\" files failed"
 
-
 	# Install libraries and executables
 	einfo " Installing libraries and executables ..."
 	if use amd64
@@ -214,7 +213,6 @@ src_install() {
 	exeinto "${GAMEDIR}" || die "exeinto \"${GAMEDIR}\" failed"
 	doexe *.bin || die "doexe \".bin\" binaries failed"
 
-
 	# Make game wrapper
 	mkdir -p "${D}/${GAMES_BINDIR}" || die "mkdir \"${D}/${GAMES_BINDIR}\" failed"
 
@@ -226,17 +224,15 @@ src_install() {
 cd "${GAMEDIR}"
 if [[ -w "\${HOME}/.frictionalgames/Amnesia/MainDemo/main_settings.cfg" ]]
 then
-  exec ./Amnesia.bin "\${@}"
+	exec ./Amnesia.bin "\${@}"
 else
-  exec ./Launcher.bin "\${@}"
+	exec ./Launcher.bin "\${@}"
 fi
 EOF
-
 
 	# Install icon and desktop file
 	doicon "../${PN}.xpm" || die "newicon \"icon.xpm\" failed"
 	make_desktop_entry "${PN}" "Amnesia: The Dark Descent - Demo" || die "make_desktop_entry failed"
-
 
 	# Install documentation
 	if use doc
@@ -244,7 +240,6 @@ EOF
 		docinto ${PN}
 		dodoc *.rtf *.pdf || die "dodoc failed"
 	fi
-
 
 	# Setting permissions.
 	einfo " Setting permissions ..."

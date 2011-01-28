@@ -2,6 +2,10 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  28 Jan 2011; Piotr Szymaniak <szarpaj@grubelek.pl>
+  amnesia-tdd-demo-1.0.ebuild, amnesia-tdd-demo-1.0.1.ebuild:
+  Fixed some repoman reported errors.
+
   10 Nov 2010; Michał Ziąbkowski <mziab@o2.pl>
   amnesia-tdd-demo-1.0.ebuild, amnesia-tdd-demo-1.0.1.ebuild:
   Switched to virtual/jpeg

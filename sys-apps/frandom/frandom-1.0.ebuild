@@ -22,7 +22,7 @@ BUILD_TARGET_ARCH="${ARCH}"
 MODULE_NAMES="frandom(misc)"
 
 src_prepare() {
-	sed -i -e "s:\$(shell uname -r):${KV_FULL}:" "${S}"/Makefile || die "sed failed" 
+	sed -i -e "s:\$(shell uname -r):${KV_FULL}:" "${S}"/Makefile || die "sed failed"
 }
 
 src_install() {

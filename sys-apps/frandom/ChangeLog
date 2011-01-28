@@ -2,6 +2,10 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  28 Jan 2011; Piotr Szymaniak <szarpaj@grubelek.pl> frandom-1.0.ebuild,
+  +metadata.xml:
+  Added metadata, removed trailing whitespace.
+
   08 Aug 2010; Piotr Szymaniak <lazy_bum@o2.pl> frandom-1.0.ebuild:
   Ooops, updated version.
 

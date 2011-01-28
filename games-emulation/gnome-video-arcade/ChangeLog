@@ -2,6 +2,10 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  28 Jan 2011; Piotr Szymaniak <szarpaj@grubelek.pl>
+  gnome-video-arcade-0.6.8.ebuild:
+  Added missing IUSE flag.
+
 *gnome-video-arcade-0.7.1 (08 Jun 2010)
 
   08 Jun 2010; Michał Ziąbkowski <mziab@o2.pl>

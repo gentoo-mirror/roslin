@@ -3,17 +3,14 @@
 <pkgmetadata>
 	<herd></herd>
 	<maintainer>
-		<email>lazy_bum@o2.pl</email>
+		<email>szarpaj@grubelek.pl</email>
 		<name>Piotr Szymaniak</name>
 	</maintainer>
 	<longdescription lang="en">
 	</longdescription>
 	<use>
 		<flag name='sound'>Enables sound</flag>
-		<flag name='wiimote'>Enables wiimote support with
-			<pkg>games-util/wiiuse</pkg>
-		</flag>
-		<flag name='leveleditor'>Enables level editor</flag>
+		<flag name='leveleditor'>Install level editor</flag>
 	</use>
 </pkgmetadata>
 

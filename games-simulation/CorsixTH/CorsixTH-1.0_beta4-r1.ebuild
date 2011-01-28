@@ -51,4 +51,3 @@ src_install() {
 	games_make_wrapper ${PN} "${GAMES_DATADIR}/${PN}/${PN}" || die
 	prepgamesdirs
 }
-

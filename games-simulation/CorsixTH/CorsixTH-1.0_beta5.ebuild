@@ -52,4 +52,3 @@ src_install() {
 	make_desktop_entry ${PN}
 	prepgamesdirs
 }
-

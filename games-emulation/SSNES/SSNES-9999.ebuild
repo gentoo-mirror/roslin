@@ -2,9 +2,9 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=3
+EAPI=4
 
-inherit games confutils git
+inherit games git
 
 DESCRIPTION="Simple SNES emulator frontend based on libsnes"
 HOMEPAGE="https://github.com/Themaister/SSNES"
@@ -16,6 +16,8 @@ LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS=""
 IUSE="alsa cg filters ffmpeg jack openal oss pulseaudio truetype xml"
+
+REQUIRED_USE="|| ( alsa jack openal oss )"
 
 RDEPEND="dev-games/libsnes
 	media-libs/libsdl[joystick]
@@ -30,11 +32,6 @@ RDEPEND="dev-games/libsnes
 	pulseaudio? ( media-sound/pulseaudio )"
 DEPEND="dev-util/pkgconfig
 	${RDEPEND}"
-
-pkg_config() {
-	games-pkg_setup
-	confutils_require_any alsa jack openal oss
-}
 
 src_prepare() {
 	epatch "${FILESDIR}/${PN}-build.patch" \
@@ -58,6 +55,6 @@ src_configure() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die
-	dodoc README.md AUTHORS || die
+	dodoc README.md AUTHORS
 	prepgamesdirs
 }

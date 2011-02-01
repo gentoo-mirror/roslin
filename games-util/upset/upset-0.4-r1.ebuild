@@ -2,9 +2,9 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=2
+EAPI=4
 
-inherit confutils
+inherit eutils
 
 MY_PV="${PV/./}"
 
@@ -17,6 +17,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="gtk qt4"
 
+REQUIRED_USE="^^ ( gtk qt4 )"
+
 RDEPEND="gtk? ( x11-libs/gtk+:2 )
 	qt4? ( >=x11-libs/qt-gui-4.5:4 )"
 DEPEND="${RDEPEND}
@@ -24,10 +26,6 @@ DEPEND="${RDEPEND}
 	>=sys-devel/gcc-4.5"
 
 S="${WORKDIR}/${PN}"
-
-pkg_setup() {
-	confutils_require_one gtk qt4
-}
 
 src_prepare() {
 	epatch "${FILESDIR}/${P}-build.patch"

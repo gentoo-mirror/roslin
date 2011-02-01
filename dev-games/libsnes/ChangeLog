@@ -2,6 +2,11 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*libsnes-0.075-r1 (01 Feb 2011)
+
+  01 Feb 2011; Michał Ziąbkowski <mziab@o2.pl> +libsnes-0.075-r1.ebuild:
+  Ported to EAPI4. Purged sgb from IUSE.
+
 *libsnes-0.075 (25 Jan 2011)
 
   25 Jan 2011; Michał Ziąbkowski <mziab@o2.pl> +libsnes-0.075.ebuild,

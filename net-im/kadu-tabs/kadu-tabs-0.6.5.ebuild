@@ -6,7 +6,7 @@ MIN_VER="0.6.5.4"
 
 inherit kadu-base
 
-MOD_URI="http://www.kadu.net/~weagle/${NAME}/${P}.tar.bz2"
+MOD_URI="http://www.kadu.net/~weagle/${NAME}/${PN}-1.2.7.tar.bz2"
 MOD_TYPE="ext"
 
 inherit kadu-mod

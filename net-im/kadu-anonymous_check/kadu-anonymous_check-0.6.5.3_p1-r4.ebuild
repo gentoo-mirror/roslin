@@ -7,7 +7,7 @@ MIN_VER="0.6.5.4"
 inherit kadu-base
 
 MOD_DEPEND=">=net-im/kadu-notify-${MIN_VER}"
-MOD_URI="http://kadu.net/~patryk/${NAME}/${NAME}-${PV/_p/-}.tar.bz2"
+MOD_URI="http://grubelek.pl/mziab/${NAME}-${PV/_p/-}.tar.bz2"
 MOD_TYPE="ext"
 
 inherit kadu-mod

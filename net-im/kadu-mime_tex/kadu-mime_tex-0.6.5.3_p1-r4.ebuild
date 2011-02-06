@@ -6,7 +6,7 @@ MIN_VER="0.6.5.4"
 
 inherit kadu-base
 
-MOD_URI="http://kadu.net/~patryk/${NAME}/${NAME}-${NAME}-${PV/_p/-}.tar.bz2"
+MOD_URI="http://grubelek.pl/mziab/${NAME}-${NAME}-${PV/_p/-}.tar.bz2"
 MOD_TYPE="ext"
 
 inherit kadu-mod

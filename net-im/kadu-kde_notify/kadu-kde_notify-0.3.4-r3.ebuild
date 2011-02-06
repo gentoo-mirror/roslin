@@ -9,7 +9,7 @@ inherit kadu-base
 MOD_TYPE="ext"
 MOD_DEPEND=">=net-im/kadu-notify-${MIN_VER}
 	    >=kde-base/knotify-4.2"
-MOD_URI="http://kadu.net/~dorr/moduly/${NAME}-${PV}.tar.gz"
+MOD_URI="http://grubelek.pl/mziab/${NAME}-${PV}.tar.gz"
 MOD_PATCHES="${NAME}-kde44-compat.patch"
 
 inherit kadu-mod

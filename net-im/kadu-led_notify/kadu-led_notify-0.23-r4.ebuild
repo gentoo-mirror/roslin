@@ -8,7 +8,7 @@ inherit kadu-base
 
 MOD_TYPE="ext"
 MOD_DEPEND=">=net-im/kadu-notify-${MIN_VER}"
-MOD_URI="http://kadu.net/~blysk/${NAME}-${PV}.tar.bz2"
+MOD_URI="http://grubelek.pl/mziab/${NAME}-${PV}.tar.bz2"
 
 inherit kadu-mod
 

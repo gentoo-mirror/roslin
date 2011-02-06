@@ -15,13 +15,12 @@ EGIT_REPO_URI="git://github.com/Themaister/${PN}.git"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS=""
-IUSE="alsa cg filters ffmpeg jack openal oss pulseaudio truetype xml"
+IUSE="alsa cg filters ffmpeg jack libsamplerate openal oss pulseaudio truetype xml"
 
 REQUIRED_USE="|| ( alsa jack openal oss )"
 
 RDEPEND="dev-games/libsnes
 	media-libs/libsdl[joystick]
-	media-libs/libsamplerate
 	alsa? ( media-libs/alsa-lib )
 	cg? ( media-gfx/nvidia-cg-toolkit )
 	ffmpeg? ( media-video/ffmpeg )
@@ -29,7 +28,8 @@ RDEPEND="dev-games/libsnes
 	openal? ( media-libs/openal )
 	xml? ( dev-libs/libxml2 )
 	truetype? ( media-libs/freetype:2 )
-	pulseaudio? ( media-sound/pulseaudio )"
+	pulseaudio? ( media-sound/pulseaudio )
+	libsamplerate? ( media-libs/libsamplerate )"
 DEPEND="dev-util/pkgconfig
 	${RDEPEND}"
 
@@ -50,6 +50,7 @@ src_configure() {
 		$(use_enable truetype freetype) \
 		$(use_enable filters filter) \
 		$(use_enable pulseaudio pulse) \
+		$(use_enable libsamplerate src) \
 		|| die
 }
 

@@ -2,6 +2,16 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  06 Feb 2011; Michał Ziąbkowski <mziab@o2.pl>
+  +kadu-core-0.6.6_beta15.ebuild:
+  Changed URI due to server problems.
+
+*kadu-core-0.6.6_beta15 (06 Feb 2011)
+
+  06 Feb 2011; Michał Ziąbkowski <mziab@o2.pl>
+  +kadu-core-0.6.6_beta15.ebuild:
+  Bumped.
+
 *kadu-core-0.6.6_beta14_p2 (04 Jan 2011)
 
   04 Jan 2011; Michał Ziąbkowski <mziab@o2.pl>

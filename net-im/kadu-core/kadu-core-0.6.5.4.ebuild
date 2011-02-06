@@ -24,7 +24,7 @@ RDEPEND=">=x11-libs/qt-gui-4.4.0[dbus,qt3support]
 DEPEND="${RDEPEND}
 	>=dev-util/cmake-2.6.0"
 
-SRC_URI="http://www.kadu.net/download/stable/kadu-${K_PV}.tar.bz2"
+SRC_URI="mirror://gentoo/kadu-${K_PV}.tar.bz2"
 
 src_prepare() {
 	# Disable everything besides the core

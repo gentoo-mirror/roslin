@@ -2,6 +2,10 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  06 Feb 2011; Michał Ziąbkowski <mziab@o2.pl> kadu-core-0.6.5.4.ebuild,
+  kadu-core-0.6.5.4-r1.ebuild, kadu-core-0.6.5.4-r2.ebuild:
+  Made Kadu 0.6.5.4 use Gentoo mirrors for now.
+
   06 Feb 2011; Michał Ziąbkowski <mziab@o2.pl>
   +kadu-core-0.6.6_beta15.ebuild:
   Changed URI due to server problems.

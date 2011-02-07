@@ -14,9 +14,9 @@ KEYWORDS=""
 
 IUSE=""
 
-RDEPEND=">=x11-libs/qt-gui-4.5.0[qt3support]
-	>=x11-libs/qt-qt3support-4.5.0
-	>=x11-libs/qt-webkit-4.5.0
+RDEPEND=">=x11-libs/qt-gui-4.6.1[qt3support]
+	>=x11-libs/qt-qt3support-4.6.1
+	>=x11-libs/qt-webkit-4.6.1
 	x11-libs/libXfixes
 	!<net-im/kadu-core-0.6.5"
 

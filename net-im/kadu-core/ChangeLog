@@ -3,6 +3,9 @@
 # $Header: $
 
   07 Feb 2011; Michał Ziąbkowski <mziab@o2.pl> kadu-core-0.6.6_beta15.ebuild:
+  qt-dbus is now required.
+
+  07 Feb 2011; Michał Ziąbkowski <mziab@o2.pl> kadu-core-0.6.6_beta15.ebuild:
   Bumped required Qt version.
 
   06 Feb 2011; Michał Ziąbkowski <mziab@o2.pl> kadu-core-0.6.5.4.ebuild,

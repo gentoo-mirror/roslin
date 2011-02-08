@@ -39,7 +39,7 @@ kadu-base_src_configure() {
 
 	# Fix some versions of cmake-utils.eclass
 	# which set CMAKE_BUILD_TYPE to Gentoo
-	append-cppflags -DQT_NO_DEBUG -Wno-error
+	append-cflags -DQT_NO_DEBUG -Wno-error
 
 	use debug && local CMAKE_BUILD_TYPE="debug"
 

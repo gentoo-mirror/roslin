@@ -2,6 +2,13 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*kadu-gadu_protocol-0.6.6_beta15-r1 (08 Feb 2011)
+
+  08 Feb 2011; Michał Ziąbkowski <mziab@o2.pl>
+  +files/0.6.6_beta15-charset_fix.patch,
+  +kadu-gadu_protocol-0.6.6_beta15-r1.ebuild:
+  Backported gg charset decoding fix from upstream.
+
 *kadu-gadu_protocol-0.6.6_beta15 (06 Feb 2011)
 
   06 Feb 2011; Michał Ziąbkowski <mziab@o2.pl>

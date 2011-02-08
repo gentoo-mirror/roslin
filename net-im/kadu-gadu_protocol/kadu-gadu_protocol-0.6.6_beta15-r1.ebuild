@@ -1,0 +1,20 @@
+# Copyright 1999-2011 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: $
+
+EAPI=2
+
+MIN_VER="0.6.6_beta15"
+KADU_DIR="unstable"
+
+inherit kadu-base
+
+MOD_DEPEND=">=net-libs/libgadu-1.9.0_rc2[threads] >=app-crypt/qca-2.0"
+MOD_PATCHES="0.6.6_beta15-charset_fix.patch"
+
+inherit kadu-mod
+
+DESCRIPTION="GaduGadu support module for Kadu"
+HOMEPAGE="http://kadu.net"
+KEYWORDS=""
+IUSE=""

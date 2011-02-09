@@ -16,7 +16,7 @@ SRC_URI=""
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS=""
-IUSE="alsa opengl pulseaudio"
+IUSE="alsa cdio opengl oss pulseaudio +sdl-sound"
 
 RDEPEND="x11-libs/gtk+:2
 	gnome-base/libglade
@@ -28,12 +28,31 @@ RDEPEND="x11-libs/gtk+:2
 	alsa? ( media-libs/alsa-lib )
 	opengl? ( virtual/opengl
 	x11-libs/libXxf86vm )
-	pulseaudio? ( >=media-sound/pulseaudio-0.9.16 )"
+	pulseaudio? ( >=media-sound/pulseaudio-0.9.16 )
+	cdio? ( dev-libs/libcdio )"
 
 DEPEND="${RDEPEND}
 	!games-emulation/pcsx
 	!games-emulation/pcsx-df
 	x86? ( dev-lang/nasm )"
+
+
+pkg_setup() {
+	if use sdl-sound; then
+		sound_backend="sdl"
+	elif use pulseaudio; then
+		sound_backend="pulseaudio"
+	elif use alsa; then
+		sound_backend="alsa"
+	elif use oss; then
+		sound_backend="oss"
+	else
+		sound_backend="null"
+	fi
+
+	elog "Using ${sound_backend} sound"
+	games_pkg_setup
+}
 
 src_prepare() {
 	# fix plugin path
@@ -53,9 +72,9 @@ src_prepare() {
 
 src_configure() {
 	egamesconf \
-		$(use_enable alsa) \
+		$(use_enable cdio libcdio) \
 		$(use_enable opengl) \
-		$(use_enable pulseaudio) \
+		--enable-sound=${sound_backend} \
 		|| die "econf failed"
 }
 

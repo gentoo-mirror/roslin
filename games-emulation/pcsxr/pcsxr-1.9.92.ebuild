@@ -46,7 +46,7 @@ pkg_setup() {
 	else
 		sound_backend="null"
 	fi
-	
+
 	elog "Using ${sound_backend} sound"
 	games_pkg_setup
 }

@@ -19,7 +19,8 @@ IUSE="alsa cg filters ffmpeg jack libsamplerate openal oss pulseaudio truetype x
 
 REQUIRED_USE="|| ( alsa jack openal oss )"
 
-RDEPEND="dev-games/libsnes
+RDEPEND="|| ( dev-games/libsnes
+	dev-games/snes9x-libsnes )
 	media-libs/libsdl[joystick]
 	alsa? ( media-libs/alsa-lib )
 	cg? ( media-gfx/nvidia-cg-toolkit )

@@ -21,8 +21,7 @@ IUSE="profile_accuracy +profile_compatibility profile_performance sgb"
 
 RDEPEND="sgb? ( dev-games/supergameboy )"
 
-DEPEND="dev-util/pkgconfig
-	>=sys-devel/gcc-4.4"
+DEPEND=">=sys-devel/gcc-4.4"
 
 S="${WORKDIR}/${MY_P}/bsnes"
 

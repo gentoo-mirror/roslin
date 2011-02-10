@@ -2,6 +2,10 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  10 Feb 2011; Michał Ziąbkowski <mziab@o2.pl> libsnes-0.073.ebuild,
+  libsnes-0.075.ebuild, libsnes-0.075-r1.ebuild:
+  pkg-config is not needed.
+
   09 Feb 2011; Michał Ziąbkowski <mziab@o2.pl> libsnes-0.075-r1.ebuild:
   Block on snes9x-libsnes.
 

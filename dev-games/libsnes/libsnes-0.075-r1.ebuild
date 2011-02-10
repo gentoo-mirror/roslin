@@ -23,8 +23,7 @@ REQUIRED_USE="^^ ( profile_accuracy profile_compatibility profile_performance )"
 
 RDEPEND=""
 
-DEPEND="dev-util/pkgconfig
-	>=sys-devel/gcc-4.4
+DEPEND=">=sys-devel/gcc-4.4
 	!dev-games/snes9x-libsnes"
 
 S="${WORKDIR}/${MY_P}/bsnes"

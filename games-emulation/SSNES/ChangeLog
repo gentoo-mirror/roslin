@@ -2,6 +2,13 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  10 Feb 2011; Michał Ziąbkowski <mziab@o2.pl> SSNES-9999.ebuild:
+  Made libsnes dep optional when using USE=dynamic.
+
+  10 Feb 2011; Michał Ziąbkowski <mziab@o2.pl> SSNES-9999.ebuild,
+  metadata.xml:
+  Added pulseaudio to REQUIRED_USE. Added dynamic flag.
+
   09 Feb 2011; Michał Ziąbkowski <mziab@o2.pl> SSNES-9999.ebuild,
   files/SSNES-build.patch:
   Updated build patch and added option to use snes9x-libsnes.

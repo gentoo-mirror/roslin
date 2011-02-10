@@ -8,6 +8,7 @@
 </maintainer>
 <use>
   <flag name='cg'>Enables support for NVidia CG shaders</flag>
+  <flag name='dynamic'>Enables libsnes hot-swapping via the config</flag>
   <flag name='filters'>Enables extra image filters</flag>
   <flag name='xml'>Enables support for bsnes xml-style shaders</flag>
 </use>

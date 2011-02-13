@@ -4,7 +4,7 @@
 
 MIN_VER="0.6.5.4"
 MOD_TYPE="ext"
-MOD_URI="http://grubelek.pl/mziab/${P}.tar.bz2"
+MOD_URI="http://www.kadu.net/~dorr/moduly/${P}.tar.bz2"
 
 inherit kadu-base kadu-mod
 

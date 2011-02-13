@@ -7,7 +7,7 @@ MIN_VER="0.6.5.4"
 inherit kadu-base
 
 MOD_DEPEND=">=net-im/kadu-notify-${MIN_VER}"
-MOD_URI="http://grubelek.pl/mziab/${NAME}-${PV}.tar.bz2"
+MOD_URI="http://kadu.net/~michal/${NAME}/${NAME}-${PV}.tar.bz2"
 MOD_TYPE="ext"
 MOD_PATCHES="missing-header.patch translations.patch"
 

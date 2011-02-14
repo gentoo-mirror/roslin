@@ -2,6 +2,11 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*tlenlinux-7.0.1.72 (14 Feb 2011)
+
+  14 Feb 2011; Michał Ziąbkowski <mziab@o2.pl> +tlenlinux-7.0.1.72.ebuild:
+  Bumped.
+
   09 Jan 2011; Michał Ziąbkowski <mziab@o2.pl> -tlenlinux-7.0.1.65.ebuild,
   -tlenlinux-7.0.1.67.ebuild, tlenlinux-7.0.1.68.ebuild,
   tlenlinux-7.0.1.71.ebuild:

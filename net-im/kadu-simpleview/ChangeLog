@@ -2,6 +2,12 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*kadu-simpleview-0.6.6_beta16 (17 Feb 2011)
+
+  17 Feb 2011; Michał Ziąbkowski <mziab@o2.pl>
+  +kadu-simpleview-0.6.6_beta16.ebuild:
+  Bumped.
+
 *kadu-simpleview-0.6.6_beta15 (06 Feb 2011)
 
   06 Feb 2011; Michał Ziąbkowski <mziab@o2.pl>

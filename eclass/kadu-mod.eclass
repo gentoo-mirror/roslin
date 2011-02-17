@@ -23,7 +23,7 @@ if [ "${KADU_DIR}" = "unstable" ]
 then
 	KADU_URI="http://kadu.googlecode.com/files/"
 else
-	KADU_URI="mirror://gentoo/"
+	KADU_URI="http://kadu.net/download/stable/"
 fi
 
 SRC_URI="${KADU_URI}kadu-${K_PV}.tar.bz2

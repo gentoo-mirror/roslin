@@ -1,0 +1,19 @@
+Index: kadu-core/pending_msgs.cpp
+===================================================================
+--- kadu-core/pending_msgs.cpp	(revision 7354)
++++ kadu-core/pending_msgs.cpp	(working copy)
+@@ -195,14 +195,12 @@ bool PendingMsgs::loadFromFile()
+ 		// message class
+ 		if (f.readBlock((char*)&e.msgclass, sizeof(int)) <= 0) {
+ 			--msgs_size;
+-			delete [] buf;
+ 			return false;
+ 		}
+ 
+ 		// and time
+ 		if (f.readBlock((char*)&e.time, sizeof(time_t)) <= 0) {
+ 			--msgs_size;
+-			delete [] buf;
+ 			return false;
+ 		}
+ 

@@ -2,6 +2,12 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*kadu-core-0.6.5.4-r3 (19 Feb 2011)
+
+  19 Feb 2011; Michał Ziąbkowski <mziab@o2.pl>
+  +files/0.6.5.4-fix-double-free.patch, +kadu-core-0.6.5.4-r3.ebuild:
+  Rev-bumped 0.6.5.4 with crash fix.
+
 *kadu-core-0.6.6_beta17 (18 Feb 2011)
 
   18 Feb 2011; Michał Ziąbkowski <mziab@o2.pl>

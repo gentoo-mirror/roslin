@@ -1,0 +1,10 @@
+# ChangeLog for games-emulation/SSNES-Phoenix
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*SSNES-Phoenix-9999 (23 Feb 2011)
+
+  23 Feb 2011; Michał Ziąbkowski <mziab@o2.pl> +SSNES-Phoenix-9999.ebuild,
+  +files/SSNES-Phoenix-makefile.patch, +metadata.xml:
+  New ebuild.
+

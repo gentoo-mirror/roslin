@@ -2,7 +2,9 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-inherit base
+EAPI=3
+
+inherit base wxwidgets
 
 DESCRIPTION="MadEdit is a Cross-Platform Text/Hex Editor written in C++&wxWidgets"
 HOMEPAGE="http://madedit.sourceforge.net/"
@@ -13,5 +15,5 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
 
-DEPEND=">=x11-libs/wxGTK-2.8"
+DEPEND="x11-libs/wxGTK:2.8"
 RDEPEND="${DEPEND}"

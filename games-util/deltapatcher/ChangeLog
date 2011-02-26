@@ -2,6 +2,9 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  26 Feb 2011; Michał Ziąbkowski <mziab@o2.pl> deltapatcher-1.0.ebuild:
+  Added wxwidgets inherit. Tweaked wxGTK dep.
+
 *deltapatcher-1.0 (26 Feb 2011)
 
   26 Feb 2011; Michał Ziąbkowski <mziab@o2.pl> +deltapatcher-1.0.ebuild,

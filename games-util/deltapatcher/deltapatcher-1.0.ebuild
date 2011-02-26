@@ -4,7 +4,7 @@
 
 EAPI=3
 
-inherit eutils
+inherit eutils wxwidgets
 
 DESCRIPTION="A frontend for the xdelta patching utility"
 HOMEPAGE="http://www.sadnescity.it/utilita.php"
@@ -15,10 +15,10 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
 
-DEPEND=">=x11-libs/wxGTK-2.8
+DEPEND="x11-libs/wxGTK:2.8
 	app-arch/p7zip"
 
-RDEPEND=">=x11-libs/wxGTK-2.8
+RDEPEND="x11-libs/wxGTK:2.8
 	dev-util/xdelta:3"
 
 S="${WORKDIR}/DeltaPatcher/src"
@@ -33,4 +33,3 @@ src_install() {
 	newicon gui/icon.xpm ${PN}.xpm
 	make_desktop_entry ${PN} DeltaPatcher
 }
-

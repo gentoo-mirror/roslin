@@ -1,0 +1,33 @@
+diff --git a/src/Makefile b/src/Makefile
+new file mode 100644
+index 0000000..ab38f2c
+--- /dev/null
++++ Makefile
+@@ -0,0 +1,27 @@
++CXX = $(shell wx-config --cxx)
++CXXFLAGS += -I. -I ../include $(shell wx-config --cxxflags)
++DEFINES =
++PREFIX = /usr/local
++PROGRAM = deltapatcher
++OBJECTS = DPApp.o \
++		  patcher/XDeltaPatch.o \
++		  gui/dpgui.o \
++		  gui/DeltaPatcherAboutDialog.o \
++		  gui/DeltaPatcherDecodePanel.o \
++		  gui/DeltaPatcherDropTarget.o \
++		  gui/DeltaPatcherEncodePanel.o \
++		  gui/DeltaPatcherMainDialog.o
++
++.SUFFIXES: .o .cpp
++
++.cpp.o :
++	$(CXX) -c $(CXXFLAGS) $(DEFINES) -o $@ $<
++
++all: $(PROGRAM)
++
++$(PROGRAM): $(OBJECTS)
++	$(CXX) -o $@ $(OBJECTS) $(shell wx-config --libs) $(LDFLAGS)
++
++clean:
++	rm -f $(OBJECTS) $(PROGRAM)
++

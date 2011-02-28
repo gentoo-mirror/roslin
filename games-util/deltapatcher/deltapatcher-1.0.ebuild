@@ -4,7 +4,7 @@
 
 EAPI=3
 
-inherit eutils wxwidgets
+inherit eutils wxwidgets fdo-mime
 
 DESCRIPTION="A frontend for the xdelta patching utility"
 HOMEPAGE="http://www.sadnescity.it/utilita.php"
@@ -28,8 +28,14 @@ src_prepare() {
 }
 
 src_install() {
-	dobin ${PN} || die
+	emake install \
+		DESTDIR="${D}" \
+		PREFIX="/usr/" || die
+
 	dodoc "${WORKDIR}/readme.txt"
 	newicon gui/icon.xpm ${PN}.xpm
-	make_desktop_entry ${PN} DeltaPatcher
+}
+
+pkg_postinst() {
+	fdo-mime_mime_database_update
 }

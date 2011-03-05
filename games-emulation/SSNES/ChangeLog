@@ -2,6 +2,10 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  05 Mar 2011; Michał Ziąbkowski <mziab@o2.pl> SSNES-9999.ebuild,
+  -files/SSNES-cflags.patch:
+  Dropped obsolete patch.
+
   10 Feb 2011; Michał Ziąbkowski <mziab@o2.pl> SSNES-9999.ebuild:
   Made libsnes dep optional when using USE=dynamic.
 

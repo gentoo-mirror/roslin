@@ -35,8 +35,7 @@ DEPEND="dev-util/pkgconfig
 	${RDEPEND}"
 
 src_prepare() {
-	epatch "${FILESDIR}/${PN}-build.patch" \
-		"${FILESDIR}/${PN}-cflags.patch"
+	epatch "${FILESDIR}/${PN}-build.patch"
 }
 
 src_configure() {

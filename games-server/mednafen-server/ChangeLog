@@ -1,5 +1,11 @@
 # ChangeLog for games-server/mednafen-server
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+
+*mednafen-server-0.4.1 (08 Mar 2011)
+
+  08 Mar 2011; Piotr Szymaniak <szarpaj@grubelek.pl>
+  +mednafen-server-0.4.1.ebuild:
+  Quick and dirty version bump.
 
   21 Jan 2009; Piotr Szymaniak <lazy_bum@o2.pl>
   mednafen-server-0.3.0.ebuild:

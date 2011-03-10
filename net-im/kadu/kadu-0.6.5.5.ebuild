@@ -9,7 +9,7 @@ HOMEPAGE="http://kadu.net"
 KEYWORDS="amd64 x86"
 LICENSE="GPL-2"
 
-IUSE="emoticons icons sounds powerkadu alsa oss ssl voice phonon dbus"
+IUSE="emoticons icons sound powerkadu alsa oss ssl voice phonon dbus"
 
 SLOT="0"
 
@@ -33,7 +33,7 @@ DEPEND=">=net-im/kadu-core-${PV}
 	voice? ( >=net-im/kadu-voice-${PV} )
 	emoticons? ( >=net-im/kadu-emoticons-0.6.5 )
 	icons? ( >=net-im/kadu-icons-0.6.5 )
-	sounds? ( >=net-im/kadu-sounds-0.6.5 )
+	sound? ( >=net-im/kadu-sounds-0.6.5 )
 	dbus? ( >=net-im/kadu-dbus-${PV} )
 "
 RDEPEND="${DEPEND}"

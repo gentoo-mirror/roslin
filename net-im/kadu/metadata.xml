@@ -10,7 +10,7 @@
   <flag name='emoticons'>Installs additional emoticon themes</flag>
   <flag name='icons'>Installs additional icon themes</flag>
   <flag name='powerkadu'>Installs powerkadu modules</flag>
-  <flag name='sounds'>Installs additional sound themes</flag>
+  <flag name='sound'>Installs additional sound themes</flag>
   <flag name='voice'>Installs voice chat module</flag>
   <flag name='phonon'>Install phonon audio plugin</flag>
 </use>

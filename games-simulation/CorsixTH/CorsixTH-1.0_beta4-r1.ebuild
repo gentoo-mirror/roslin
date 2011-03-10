@@ -17,13 +17,13 @@ SRC_URI="http://corsix-th.googlecode.com/files/${MY_P}.tar.gz"
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~x86"
-IUSE="+audio opengl sdl"
+IUSE="opengl sdl +sound"
 
 RDEPEND=">=dev-lang/lua-5.1
 	x11-libs/agg
-	audio? ( media-libs/sdl-mixer[timidity] )
 	opengl? ( virtual/opengl )
-	sdl? ( media-libs/libsdl )"
+	sdl? ( media-libs/libsdl )
+	sound? ( media-libs/sdl-mixer[timidity] )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
@@ -41,7 +41,7 @@ src_prepare() {
 src_configure() {
 	local mycmakeargs="$(cmake-utils_use_with opengl OPENGL) \
 		$(cmake-utils_use_with sdl SDL) \
-		$(cmake-utils_use_with audio AUDIO) \
+		$(cmake-utils_use_with sound AUDIO) \
 		-DCMAKE_INSTALL_PREFIX=${GAMES_DATADIR}"
 	cmake-utils_src_configure
 }

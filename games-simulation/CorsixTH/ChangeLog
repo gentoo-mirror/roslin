@@ -2,6 +2,13 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  09 Mar 2011; Piotr Szymaniak <szarpaj@grubelek.pl> CorsixTH-1.0_beta4.ebuild,
+  CorsixTH-1.0_beta4-r1.ebuild, CorsixTH-1.0_beta5.ebuild:
+  Updated ebuild with new Gentoo USE flags policy.
+  See following discussion in gentoo-dev for details:
+  http://archives.gentoo.org/gentoo-dev/msg_e4e4974dcb53f9fc606cbe95f172f9c8.xm
+  l
+
   28 Jan 2011; Piotr Szymaniak <szarpaj@grubelek.pl> CorsixTH-1.0_beta4.ebuild,
   CorsixTH-1.0_beta4-r1.ebuild, CorsixTH-1.0_beta5.ebuild:
   Fixed some repoman reported errors.

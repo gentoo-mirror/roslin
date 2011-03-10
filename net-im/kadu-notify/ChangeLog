@@ -2,6 +2,11 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*kadu-notify-0.6.5.5 (09 Mar 2011)
+
+  09 Mar 2011; Michał Ziąbkowski <mziab@o2.pl> +kadu-notify-0.6.5.5.ebuild:
+  Bumped.
+
 *kadu-notify-0.6.5.4 (08 Feb 2010)
 
   08 Feb 2010; Michał Ziąbkowski <mziab@o2.pl>

@@ -2,6 +2,12 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*kadu-powerkadu-0.6.5.5 (09 Mar 2011)
+
+  09 Mar 2011; Michał Ziąbkowski <mziab@o2.pl>
+  +kadu-powerkadu-0.6.5.5.ebuild:
+  Bumped.
+
   13 Feb 2010; Michał Ziąbkowski <mziab@o2.pl>
   kadu-powerkadu-0.6.5.3.ebuild, kadu-powerkadu-0.6.5.4.ebuild:
   Fixed deps. Forgot anonymous_check had different versioning.

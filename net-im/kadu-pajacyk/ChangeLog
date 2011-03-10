@@ -2,6 +2,11 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*kadu-pajacyk-0.2.1-r1 (09 Mar 2011)
+
+  09 Mar 2011; Michał Ziąbkowski <mziab@o2.pl> +kadu-pajacyk-0.2.1-r1.ebuild:
+  Bumped.
+
   03 Jul 2010; Michał Ziąbkowski <mziab@o2.pl> Manifest:
   Seems like the tarball was silently updated. Fixed Manifest.
 

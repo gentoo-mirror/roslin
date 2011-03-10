@@ -2,6 +2,11 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*kadu-dbus-0.6.5.5 (09 Mar 2011)
+
+  09 Mar 2011; Michał Ziąbkowski <mziab@o2.pl> +kadu-dbus-0.6.5.5.ebuild:
+  Bumped.
+
 *kadu-dbus-0.6.6_beta8 (12 Oct 2010)
 
   12 Oct 2010; Michał Ziąbkowski <mziab@o2.pl>

@@ -2,6 +2,11 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*kadu-sms-0.6.6_rc3 (12 Mar 2011)
+
+  12 Mar 2011; Michał Ziąbkowski <mziab@o2.pl> +kadu-sms-0.6.6_rc3.ebuild:
+  Bumped.
+
 *kadu-sms-0.6.5.5 (09 Mar 2011)
 
   09 Mar 2011; Michał Ziąbkowski <mziab@o2.pl> +kadu-sms-0.6.5.5.ebuild:

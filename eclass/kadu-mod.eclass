@@ -19,7 +19,14 @@ K_PV="${K_PV/_/-}"
 RDEPEND=">=net-im/kadu-core-${MIN_VER}
 	${MOD_DEPEND}"
 
-SRC_URI="http://www.kadu.net/download/${KADU_DIR:-stable}/kadu-${K_PV}.tar.bz2
+if [ "${KADU_DIR}" = "unstable" ]
+then
+	KADU_URI="http://kadu.googlecode.com/files/"
+else
+	KADU_URI="http://kadu.net/download/stable/"
+fi
+
+SRC_URI="${KADU_URI}kadu-${K_PV}.tar.bz2
 	${MOD_URI}"
 
 kadu-mod_src_unpack() {

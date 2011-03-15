@@ -23,7 +23,6 @@ DEPEND="media-libs/sdl-image[jpeg,png]
 RDEPEND="${DEPEND}"
 
 src_prepare() {
-	#epatch "${FILESDIR}"/${PN}-20091215-cxxflags.patch
 	epatch "${FILESDIR}"/${PN}-20091215-compiler.patch
 
 	if use scale; then

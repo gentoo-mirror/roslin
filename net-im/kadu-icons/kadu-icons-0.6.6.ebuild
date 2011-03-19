@@ -12,7 +12,6 @@ IUSE=""
 RESTRICT="primaryuri"
 
 SRC_URI="http://www.kadu.net/download/additions/kadu-0.6.6-theme-glass.tar.gz
-	http://www.kadu.net/download/additions/kadu-0.6.5-theme-kadu05.tar.gz
 	http://www.kadu.net/download/additions/kadu-0.6.6-theme-oxygen.tar.gz
 	http://www.kadu.net/download/additions/kadu-0.6.6-theme-tango.tar.gz"
 

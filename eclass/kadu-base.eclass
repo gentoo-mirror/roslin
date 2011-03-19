@@ -12,18 +12,16 @@ SLOT="0"
 RESTRICT="primaryuri"
 IUSE="debug"
 
-# If no version was requested, default to this one
-MIN_VER="${MIN_VER:-0.6.5.4}"
-
-K_PV="${PV/_p/.}"
+K_PV="${MIN_VER:-${PV}}"
+K_PV="${K_PV/_p/.}"
 K_PV="${K_PV/_/-}"
 
 NAME="${PN#*-}"
 
-if [ "${K_PV:0:5}" == "0.6.6" ]; then
-	S="${WORKDIR}/kadu-${K_PV}"
-else
+if [ "${K_PV:0:5}" == "0.6.5" ]; then
 	S="${WORKDIR}/kadu"
+else
+	S="${WORKDIR}/kadu-${K_PV}"
 fi
 
 kadu-disable_all() {

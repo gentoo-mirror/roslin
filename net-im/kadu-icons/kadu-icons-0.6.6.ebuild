@@ -4,7 +4,7 @@
 
 DESCRIPTION="Extra icon themes for Kadu"
 HOMEPAGE="http://kadu.net/"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 
 LICENSE="GPL-2"
 SLOT="0"

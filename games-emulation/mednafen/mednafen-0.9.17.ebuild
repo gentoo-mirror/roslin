@@ -3,11 +3,12 @@
 # $Header: /var/cvsroot/gentoo-x86/games-emulation/mednafen/mednafen-0.8.13.3.ebuild,v 1.5 2011/01/15 15:54:40 maekke Exp $
 
 EAPI=2
+
 inherit autotools eutils games
 
 DESCRIPTION="An advanced NES, GB/GBC/GBA, TurboGrafx 16/CD, NGPC and Lynx emulator"
 HOMEPAGE="http://mednafen.sourceforge.net/"
-SRC_URI="http://forum.fobby.net/index.php?t=getfile&id=227 -> ${P}.tar.bz2"
+SRC_URI="http://forum.fobby.net/index.php?t=getfile&id=258 -> ${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"

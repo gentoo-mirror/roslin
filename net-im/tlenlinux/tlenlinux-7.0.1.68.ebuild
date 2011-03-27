@@ -21,7 +21,7 @@ RESTRICT="strip"
 RDEPEND="!qt-static? ( >=x11-libs/qt-gui-4.6:4
 	phonon? (
 		|| ( >=x11-libs/qt-phonon-4.6:4
-	        media-sound/phonon )
+	        media-libs/phonon )
 	        )
 	)
 	x11-misc/xdg-utils"

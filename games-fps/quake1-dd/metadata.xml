@@ -6,5 +6,8 @@
 		<email>lazy_bum@o2.pl</email>
 		<name>Piotr Szymaniak</name>
 	</maintainer>
+	<use>
+		<flag name='darkplaces'>Make Darkplaces wrapper.</flag>
+	</use>
 </pkgmetadata>
 

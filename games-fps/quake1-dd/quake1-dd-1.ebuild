@@ -10,6 +10,7 @@ MOD_RDEPEND_EXTRA="games-fps/quake1-soa"
 inherit eutils games games-mod
 
 DESCRIPTION="Death's Dominion Level Pack for Scourge of Armagon"
-HOMEPAGE=""
+# no homepage, but we will use this
+HOMEPAGE="http://www.quaddicted.com/reviews/dd.html"
 SRC_URI="${SRC_ADDICT}/dd.zip"
 IUSE=""

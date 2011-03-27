@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/quake1-dd
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+
+  27 Mar 2011; Piotr Szymaniak <szarpaj@grubelek.pl> quake1-dd-1.ebuild,
+  metadata.xml:
+  Updated homepage, added use description.
 
   22 Jan 2009; Michał Ziąbkowski <mziab@o2.pl> quake1-dd-1.ebuild:
   Added missing IUSE.

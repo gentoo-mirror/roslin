@@ -7,7 +7,7 @@ MIN_VER="0.6.5.4"
 inherit kadu-base
 
 MOD_DEPEND=">=net-im/kadu-sound-${PV}
-	    || ( media-sound/phonon x11-libs/qt-phonon )"
+	    || ( media-libs/phonon x11-libs/qt-phonon )"
 
 inherit kadu-mod
 

@@ -19,7 +19,7 @@ KEYWORDS="~x86 ~amd64"
 DEPEND="sys-devel/gettext
 	media-libs/fontconfig
 	dvdread? ( media-libs/libdvdread )
-	|| ( media-sound/phonon
+	|| ( media-libs/phonon
 	    x11-libs/qt-phonon )"
 
 RDEPEND="${DEPEND}

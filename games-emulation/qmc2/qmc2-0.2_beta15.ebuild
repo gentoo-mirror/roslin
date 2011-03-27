@@ -19,7 +19,7 @@ IUSE="debug joystick opengl phonon +sdlmame sdlmess sqlite"
 
 DEPEND=">=x11-libs/qt-gui-4.5:4[accessibility]
 	>=x11-libs/qt-webkit-4.5:4
-	phonon? ( || ( media-sound/phonon >=x11-libs/qt-phonon-4.5 ) )
+	phonon? ( || ( media-libs/phonon >=x11-libs/qt-phonon-4.5 ) )
 	joystick? ( media-libs/libsdl[joystick] )
 	opengl? ( >=x11-libs/qt-opengl-4.5:4 )
 	sqlite? ( >=x11-libs/qt-sql-4.5:4[sqlite] )"

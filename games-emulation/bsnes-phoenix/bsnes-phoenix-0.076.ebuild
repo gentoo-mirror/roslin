@@ -2,9 +2,9 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=4
+EAPI=2
 
-inherit eutils games
+inherit eutils confutils games
 
 MY_PV="${PV/0./}"
 MY_PV="${MY_PV/_/}"
@@ -18,11 +18,6 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="ao alsa debug +gtk openal opengl oss profile_accuracy +profile_compatibility profile_performance pulseaudio qt4 sdl sgb xv"
-
-REQUIRED_USE="|| ( ao openal alsa pulseaudio oss )
-	|| ( xv opengl sdl )
-	^^ ( profile_accuracy profile_compatibility profile_performance )
-	^^ ( gtk qt4 )"
 
 RDEPEND="ao? ( media-libs/libao )
 	openal? ( media-libs/openal )
@@ -45,6 +40,13 @@ S="${WORKDIR}/${MY_P}/bsnes"
 
 disable_module() {
 	sed -i "ui/Makefile" -e "s|$1||"
+}
+
+pkg_setup() {
+	confutils_require_any ao openal alsa pulseaudio oss
+	confutils_require_any xv opengl sdl
+	confutils_require_one profile_accuracy profile_compatibility profile_performance
+	confutils_require_one gtk qt4
 }
 
 src_prepare() {

@@ -2,6 +2,9 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  27 Mar 2011; Michał Ziąbkowski <mziab@o2.pl> kmediafactory-0.8.0.ebuild:
+  Updated phonon dep.
+
 *kmediafactory-0.8.0 (12 Apr 2010)
 
   12 Apr 2010; Michał Ziąbkowski <mziab@o2.pl>

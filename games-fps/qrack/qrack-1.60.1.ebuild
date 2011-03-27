@@ -20,7 +20,7 @@ SRC_URI="http://qudos.quakedev.com/linux/quake1/${P}-src.tar.bz2
 LICENSE="GPL-2"
 SLOT="0"
 # Has assembler code in e.g. gl_draw.c
-KEYWORDS="-* ~x86"
+KEYWORDS="~x86"
 IUSE="debug doe dzip lights sdl skins soa textures"
 
 UIRDEPEND="media-libs/libpng

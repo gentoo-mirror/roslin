@@ -2,6 +2,13 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  27 Mar 2011; Piotr Szymaniak <szarpaj@grubelek.pl> qrack-1.60.1.ebuild,
+  metadata.xml:
+  Updated keywords, added use description.
+
+  27 Mar 2011; Piotr Szymaniak <szarpaj@grubelek.pl> qrack-1.60.1.ebuild:
+  Updated keywords.
+
   09 Nov 2010; Piotr Szymaniak <lazy_bum@o2.pl> qrack-1.60.1.ebuild:
   Changed deps: media-libs/jpeg -> virtual/jpeg
 

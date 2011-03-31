@@ -1,8 +1,8 @@
 diff --git a/Makefile b/Makefile
-index d965fbd..61d0de3 100644
+index 3535b6d..952be8f 100644
 --- a/Makefile
 +++ b/Makefile
-@@ -136,11 +136,11 @@ tools/ssnes-joyconfig: $(JOYCONFIG_OBJ)
+@@ -151,11 +151,11 @@ tools/ssnes-joyconfig: $(JOYCONFIG_OBJ)
  install: $(TARGET)
  	mkdir -p $(DESTDIR)$(PREFIX)/bin
  	mkdir -p $(DESTDIR)/etc
@@ -14,9 +14,9 @@ index d965fbd..61d0de3 100644
 -	install -m644 docs/ssnes-joyconfig.1 $(DESTDIR)$(PREFIX)/share/man/man1
 +	install -m644 docs/ssnes.1 $(DESTDIR)/usr/share/man/man1
 +	install -m644 docs/ssnes-joyconfig.1 $(DESTDIR)/usr/share/man/man1
+ 	install -m755 ssnes-zip $(DESTDIR)$(PREFIX)/bin
  
  uninstall:
- 	rm -f $(DESTDIR)$(PREFIX)/bin/{ssnes,ssnes-joyconfig}
 diff --git a/qb/qb.params.sh b/qb/qb.params.sh
 index 55f0e49..e3a0db3 100644
 --- a/qb/qb.params.sh

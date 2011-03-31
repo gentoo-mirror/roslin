@@ -15,7 +15,7 @@ HOMEPAGE="http://vba-m.ngemu.com"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS=""
-IUSE="gtk lirc sdl"
+IUSE="gbalink gtk lirc nls sdl"
 
 RDEPEND="gtk? ( >=dev-cpp/libglademm-2.4.0
 	>=dev-cpp/glibmm-2.4.0
@@ -26,14 +26,15 @@ RDEPEND="gtk? ( >=dev-cpp/libglademm-2.4.0
 	media-libs/libpng
 	sys-libs/zlib
 	media-libs/libsdl[joystick]
-	media-libs/libsfml
+	gbalink? ( media-libs/libsfml )
 	lirc? ( app-misc/lirc )
 	virtual/opengl"
 
 DEPEND="${RDEPEND}
 	dev-lang/nasm
 	>=dev-util/cmake-2.4.0
-	dev-util/pkgconfig"
+	gtk? ( dev-util/pkgconfig
+	sys-devel/gettext )"
 
 S="${WORKDIR}/${PN}"
 
@@ -49,14 +50,14 @@ src_prepare() {
 	    -e "s:\${CMAKE_INSTALL_PREFIX}/::" \
 	    -e "s: share: ../share:g" \
 	    	    || die "sed failed"
-
-	epatch "${FILESDIR}"/${PN}-includes-fix.patch
 }
 
 src_configure() {
 	mycmakeargs="$(cmake-utils_use_no sdl SDL)
-	$(cmake-utils_use_no gtk GTK)
-	$(cmake-utils_use_with lirc LIRC)
+	$(cmake-utils_use_enable gtk GTK)
+	$(cmake-utils_use_enable lirc LIRC)
+	$(cmake-utils_use_enable nls NLS)
+	$(cmake-utils_use_enable gbalink LINK)
 	-DCMAKE_INSTALL_PREFIX:PATH='${GAMES_PREFIX}'
 	-DDATA_INSTALL_DIR:PATH='${GAMES_DATADIR}/${PN}'"
 

@@ -2,6 +2,10 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  31 Mar 2011; Michał Ziąbkowski <mziab@o2.pl> vbam-9999.ebuild,
+  -files/vbam-includes-fix.patch, metadata.xml:
+  Updated ebuild. Purged old patch.
+
   18 Mar 2010; Michał Ziąbkowski <mziab@o2.pl> vbam-9999.ebuild:
   SFML is now required. Fixed deps.
 

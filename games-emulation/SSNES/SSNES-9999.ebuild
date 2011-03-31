@@ -20,7 +20,7 @@ IUSE="alsa cg dynamic filters ffmpeg jack libsamplerate openal oss pulseaudio tr
 RDEPEND="media-libs/libsdl[joystick]
 	alsa? ( media-libs/alsa-lib )
 	cg? ( media-gfx/nvidia-cg-toolkit )
-	ffmpeg? ( media-video/ffmpeg )
+	ffmpeg? ( virtual/ffmpeg )
 	jack? ( media-sound/jack-audio-connection-kit )
 	openal? ( media-libs/openal )
 	xml? ( dev-libs/libxml2 )

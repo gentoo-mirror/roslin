@@ -2,6 +2,9 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  31 Mar 2011; Michał Ziąbkowski <mziab@o2.pl> SSNES-9999.ebuild:
+  Updated ffmpeg dep.
+
   31 Mar 2011; Michał Ziąbkowski <mziab@o2.pl> files/SSNES-build.patch:
   Updated Makefile patch.
 

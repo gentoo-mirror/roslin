@@ -28,7 +28,7 @@ RDEPEND="virtual/opengl
 		editor? ( x11-libs/wxGTK:2.8 )
 		media-libs/devil
 		net-libs/enet
-		media-video/ffmpeg
+		virtual/ffmpeg
 		media-libs/libpng
 		dev-libs/libxml2
 		media-libs/libvorbis

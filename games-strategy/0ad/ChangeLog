@@ -2,6 +2,9 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  31 Mar 2011; Michał Ziąbkowski <mziab@o2.pl> 0ad-9999.ebuild:
+  Updated ffmpeg dep.
+
   09 Nov 2010; Piotr Szymaniak <lazy_bum@o2.pl> -0ad-7970.ebuild,
   0ad-8413.ebuild, 0ad-9999.ebuild:
   Changed deps: media-libs/jpeg -> virtual/jpeg

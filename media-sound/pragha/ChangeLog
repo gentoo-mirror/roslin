@@ -2,6 +2,10 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  01 Apr 2011; Michał Ziąbkowski <mziab@o2.pl> -pragha-0.7.1.1.ebuild,
+  -pragha-0.7.4.ebuild:
+  Removed cruft.
+
 *pragha-0.8.5 (16 Feb 2011)
 
   16 Feb 2011; Michał Ziąbkowski <mziab@o2.pl> +pragha-0.8.5.ebuild:

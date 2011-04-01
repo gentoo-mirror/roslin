@@ -23,7 +23,8 @@ DEPEND="media-libs/sdl-image[jpeg,png]
 RDEPEND="${DEPEND}"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-20091215-compiler.patch
+	edos2unix configure
+	epatch "${FILESDIR}"/${PN}-20110314-compiler.patch
 
 	if use scale; then
 	sed -i \

@@ -2,6 +2,14 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*onscripter-en-20110331 (01 Apr 2011)
+
+  01 Apr 2011; Michał Ziąbkowski <mziab@o2.pl>
+  -onscripter-en-20100518.ebuild, -onscripter-en-20100915.ebuild,
+  -onscripter-en-20101010.ebuild, -onscripter-en-20110305.ebuild,
+  +onscripter-en-20110331.ebuild:
+  Bumped. Removed cruft.
+
 *onscripter-en-20110321 (27 Mar 2011)
 
   27 Mar 2011; Michał Ziąbkowski <mziab@o2.pl>

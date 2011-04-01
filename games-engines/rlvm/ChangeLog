@@ -2,6 +2,10 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  01 Apr 2011; Michał Ziąbkowski <mziab@o2.pl> -rlvm-0.07.ebuild,
+  -rlvm-0.08.ebuild:
+  Removed cruft.
+
 *rlvm-0.11 (07 Mar 2011)
 
   07 Mar 2011; Michał Ziąbkowski <mziab@o2.pl> +rlvm-0.11.ebuild:

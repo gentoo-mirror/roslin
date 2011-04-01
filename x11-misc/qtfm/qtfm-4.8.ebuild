@@ -7,8 +7,8 @@ EAPI=3
 inherit qt4-r2
 
 DESCRIPTION="A lightweight file manager"
-HOMEPAGE="http://www.wittfella.com/"
-SRC_URI="http://www.wittfella.com/${P}.tar.gz"
+HOMEPAGE="http://www.qtfm.org"
+SRC_URI="http://www.qtfm.org/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"

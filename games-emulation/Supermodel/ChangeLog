@@ -1,0 +1,10 @@
+# ChangeLog for games-emulation/Supermodel
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*Supermodel-0.1.2a (04 Apr 2011)
+
+  04 Apr 2011; Michał Ziąbkowski <mziab@o2.pl> +Supermodel-0.1.2a.ebuild,
+  +metadata.xml:
+  Initial ebuild.
+

@@ -13,10 +13,12 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tgz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="cdinstall debug demo"
+IUSE="cdinstall debug demo mp3 ogg sdl-net"
 
-DEPEND="media-libs/sdl-net
-	virtual/opengl"
+DEPEND="virtual/opengl
+	mp3? ( || ( media-libs/libmad media-sound/mpg123 ) )
+	ogg? ( media-libs/libvorbis )
+	sdl-net? ( media-libs/sdl-net )"
 RDEPEND="${DEPEND}
 	cdinstall? ( games-fps/quake1-data )
 	demo? ( games-fps/quake1-demodata )"
@@ -24,28 +26,25 @@ RDEPEND="${DEPEND}
 S=${WORKDIR}/${P}/Quake
 
 src_prepare() {
-	epatch "${FILESDIR}"/"${P}"-missing_mkdir.patch
-	epatch "${FILESDIR}"/"${P}"-userdir.patch
+	epatch "${FILESDIR}/${PV}"-makefile.patch
 
 	sed -i \
 		-e "s!basedir, host_parms.basedir!basedir, \"${GAMES_DATADIR}/quake1\"!" \
 		common.c || die "sed failed"
-
-	sed -i \
-		-e "s!STRIP ?= strip!STRIP ?= echo!" \
-		Makefile || die "sed failed"
 }
 
 src_compile() {
-	if use debug; then
-		emake DEBUG=1 || die "emake failed"
-	else
-		emake || die "emake failed"
-	fi
+	local opts=""
+	use debug && opts="DEBUG=1"
+	use mp3 && opts="${opts} USE_CODEC_MP3=1"
+	use ogg && opts="${opts} USE_CODEC_VORBIS=1"
+	use sdl-net && opts="${opts} SDLNET=1"
+
+	emake ${opts} || die "emake failed"
 }
 
 src_install() {
-	dogamesbin ${PN} || die "dogamesbin failed"
+	dogamesbin "${PN}" || die "dogamesbin failed"
 
 	prepgamesdirs
 }

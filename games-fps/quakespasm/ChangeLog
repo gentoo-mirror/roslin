@@ -2,6 +2,16 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*quakespasm-0.85.4 (09 Apr 2011)
+
+  09 Apr 2011; Piotr Szymaniak <szarpaj@grubelek.pl>
+  +files/0.85.4-makefile.patch, -quakespasm-0.85.1.ebuild,
+  -files/quakespasm-0.85.1-missing_mkdir.patch,
+  -files/quakespasm-0.85.1-userdir.patch, -quakespasm-0.85.3.ebuild,
+  -files/quakespasm-0.85.3-ldflags.patch, +quakespasm-0.85.4.ebuild,
+  metadata.xml:
+  Updated ebuild, version bump, removed cruft, updated metadata.
+
   02 Oct 2010; Piotr Szymaniak <lazy_bum@o2.pl> quakespasm-0.85.3.ebuild:
   Updated ebuild.
 

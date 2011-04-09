@@ -1,0 +1,35 @@
+diff --git a/Quake/Makefile b/Quake/Makefile
+index c58a37a..a1da902 100644
+--- a/Quake/Makefile
++++ b/Quake/Makefile
+@@ -15,9 +15,9 @@ USE_QS_CONBACK=1
+ # OGG (vorbis) playback requires libvorbis and libogg
+ # MP3 playback requires libmad or libmpg123 (see MP3LIB below)
+ 
+-USE_CODEC_WAVE=1
+-USE_CODEC_MP3=1
+-USE_CODEC_VORBIS=1
++USE_CODEC_WAVE=0
++USE_CODEC_MP3=0
++USE_CODEC_VORBIS=0
+ 
+ # which library to use for mp3 decoding: mad or mpg123
+ MP3LIB=mad
+@@ -62,7 +62,7 @@ endif
+ 
+ CC ?= gcc
+ WINDRES ?= windres
+-STRIP ?= strip
++STRIP ?= echo
+ 
+ #CPUFLAGS= -mtune=i686
+ #CPUFLAGS= -march=pentium4
+@@ -257,7 +257,7 @@ OBJS := \
+ # ------------------------
+ 
+ quakespasm:	$(OBJS)
+-	$(CC) $(CFLAGS) -o quakespasm $(OBJS) $(X11_LFLAGS) $(SDL_LFLAGS) $(LIBS)
++	$(CC) $(CFLAGS) $(LDFLAGS) -o quakespasm $(OBJS) $(X11_LFLAGS) $(SDL_LFLAGS) $(LIBS)
+ 	$(call do_strip,$@)
+ 
+ release:	quakespasm

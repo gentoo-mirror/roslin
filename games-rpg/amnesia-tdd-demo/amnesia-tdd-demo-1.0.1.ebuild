@@ -22,7 +22,6 @@ IUSE="doc linguas_de linguas_en linguas_es linguas_fr linguas_it"
 DEPEND="app-arch/xz-utils"
 RDEPEND="media-libs/freealut
 	media-libs/glew
-	virtual/jpeg:62
 	media-libs/libogg
 	media-libs/libvorbis
 	media-libs/libpng:1.2
@@ -31,16 +30,17 @@ RDEPEND="media-libs/freealut
 	media-libs/sdl-image
 	media-libs/sdl-ttf
 	sys-libs/zlib
-	x11-libs/fltk:1.1
+	x11-libs/fltk:1
 	x11-libs/libX11
 	x11-libs/libXau
 	x11-libs/libxcb
 	x11-libs/libXdmcp
 	x11-libs/libXext
 	virtual/glu
+	virtual/jpeg
 	virtual/opengl"
 
-S="${WORKDIR}/${PN}"
+S=${WORKDIR}/${PN}
 
 GAMEDIR="${GAMES_PREFIX_OPT}/${PN}"
 

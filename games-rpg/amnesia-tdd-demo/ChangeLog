@@ -2,6 +2,10 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  09 Apr 2011; Piotr Szymaniak <szarpaj@grubelek.pl>
+  -amnesia-tdd-demo-1.0.ebuild, amnesia-tdd-demo-1.0.1.ebuild, +metadata.xml:
+  Updated deps (bug #343495), removed cruft.
+
   28 Jan 2011; Piotr Szymaniak <szarpaj@grubelek.pl>
   amnesia-tdd-demo-1.0.ebuild, amnesia-tdd-demo-1.0.1.ebuild:
   Fixed some repoman reported errors.

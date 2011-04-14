@@ -4,7 +4,7 @@
 
 EAPI=3
 
-inherit distutils
+inherit eutils distutils
 
 DESCRIPTION="Free disk space and maintain privacy"
 HOMEPAGE="http://bleachbit.sourceforge.net/"

@@ -1,0 +1,10 @@
+# ChangeLog for net-libs/ntrack
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*ntrack-0.14 (29 Apr 2011)
+
+  29 Apr 2011; Michał Ziąbkowski <mziab@o2.pl> +ntrack-0.14.ebuild,
+  +files/ntrack-0.14-docs.patch, +metadata.xml:
+  Initial ebuild.
+

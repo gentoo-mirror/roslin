@@ -1,0 +1,10 @@
+# ChangeLog for dev-util/icmake
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*icmake-7.15.00 (29 Apr 2011)
+
+  29 Apr 2011; Michał Ziąbkowski <mziab@o2.pl> +icmake-7.15.00.ebuild,
+  +files/icmake-7.15.00-compile-flags.patch, +metadata.xml:
+  Initial ebuild.
+

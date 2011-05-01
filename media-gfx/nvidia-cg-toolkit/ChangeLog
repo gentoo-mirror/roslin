@@ -1,0 +1,10 @@
+# ChangeLog for media-gfx/nvidia-cg-toolkit
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*nvidia-cg-toolkit-2.1.0017 (01 May 2011)
+
+  01 May 2011; Piotr Szymaniak <szarpaj@grubelek.pl>
+  +nvidia-cg-toolkit-2.1.0017.ebuild, +metadata.xml:
+  Initial ebuild (by Beresk Leth, bug #349136).
+

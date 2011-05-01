@@ -2,6 +2,11 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*bsnes-phoenix-0.078 (30 Apr 2011)
+
+  30 Apr 2011; Michał Ziąbkowski <mziab@o2.pl> +bsnes-phoenix-0.078.ebuild:
+  Bumped.
+
   01 Apr 2011; Michał Ziąbkowski <mziab@o2.pl> -bsnes-phoenix-0.073.ebuild,
   -bsnes-phoenix-0.074.ebuild, -bsnes-phoenix-0.074_p11.ebuild:
   Removed cruft.

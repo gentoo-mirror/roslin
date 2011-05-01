@@ -1,0 +1,52 @@
+--- icm_bootstrap	2010-05-11 03:05:39.000000000 +0200
++++ icm_bootstrap	2010-05-11 03:08:20.000000000 +0200
+@@ -55,41 +55,41 @@
+   
+ echo Creating tmp/libicrss.a
+ try cd rss
+-try gcc -c -O2 -g -Wall -DHAVE_GLOB *.c
++try gcc -c ${CFLAGS} -Wall -DHAVE_GLOB *.c
+ try ar rs ../tmp/libicrss.a *.o
+ rm *.o
+ cd ..
+ 
+ echo Creating tmp/${BINDIR}/icmake${EXTENSION}
+ try cd make
+-try gcc -O2 -g -Wall -DHAVE_GLOB -o ../tmp/${BINDIR}/icmake${EXTENSION} *.c ../tmp/libicrss.a
++try gcc ${CFLAGS} -Wall -DHAVE_GLOB -o ../tmp/${BINDIR}/icmake${EXTENSION} *.c ../tmp/libicrss.a
+ cd ..
+ 
+ echo Creating tmp/${BINDIR}/icmun${EXTENSION}
+ try cd un
+-try gcc -O2 -g -Wall -DHAVE_GLOB -o ../tmp/${BINDIR}/icmun${EXTENSION} *.c ../tmp/libicrss.a
++try gcc ${CFLAGS} -Wall -DHAVE_GLOB -o ../tmp/${BINDIR}/icmun${EXTENSION} *.c ../tmp/libicrss.a
+ cd ..  
+ 
+ echo Creating tmp/${LIBDIR}/icm-pp${EXTENSION}
+ try cd pp
+-try gcc -O2 -g -Wall -DHAVE_GLOB -o ../tmp/${LIBDIR}/icm-pp${EXTENSION} *.c ../tmp/libicrss.a
++try gcc ${CFLAGS} -Wall -DHAVE_GLOB -o ../tmp/${LIBDIR}/icm-pp${EXTENSION} *.c ../tmp/libicrss.a
+ cd ..
+ 
+ echo Creating tmp/${LIBDIR}/icm-comp${EXTENSION}
+ try cd comp
+-try gcc -O2 -g -Wall -DHAVE_GLOB -o ../tmp/${LIBDIR}/icm-comp${EXTENSION} *.c ../tmp/libicrss.a
++try gcc ${CFLAGS} -Wall -DHAVE_GLOB -o ../tmp/${LIBDIR}/icm-comp${EXTENSION} *.c ../tmp/libicrss.a
+ cd ..
+ 
+ echo Creating tmp/${LIBDIR}/icm-exec${EXTENSION}
+ try cd exec
+-try gcc -O2 -g -Wall -DHAVE_GLOB -c *.c 
++try gcc ${CFLAGS} -Wall -DHAVE_GLOB -c *.c 
+ for x in auks var virtual int list string stack opcodefun builtin
+ do
+     try cd $x
+-    try gcc -O2 -g -Wall -DHAVE_GLOB -c *.c
++    try gcc ${CFLAGS} -Wall -DHAVE_GLOB -c *.c
+     try cd ..
+ done
+-try gcc -o ../tmp/${LIBDIR}/icm-exec${EXTENSION} *.o */*.o ../tmp/libicrss.a
++try gcc ${LDFLAGS} -o ../tmp/${LIBDIR}/icm-exec${EXTENSION} *.o */*.o ../tmp/libicrss.a
+ rm *.o */*.o
+ cd ..
+ 

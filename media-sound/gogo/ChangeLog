@@ -2,6 +2,10 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  04 May 2011; Michał Ziąbkowski <mziab@o2.pl> gogo-3.10-r2.ebuild,
+  gogo-3.10-r3.ebuild:
+  Updated HOMEPAGE and SRC_URI.
+
 *gogo-3.10-r3 (24 Feb 2010)
 
   24 Feb 2010; Michał Ziąbkowski <mziab@o2.pl> +files/gogo-gcc44.patch,

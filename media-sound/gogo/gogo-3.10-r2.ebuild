@@ -7,8 +7,8 @@ inherit eutils
 MY_PV="310pl3"
 
 DESCRIPTION="GoGo is an assembly optimized version of LAME 3.91"
-HOMEPAGE="http://member.nifty.ne.jp/~pen/free/gogo3/mct_gogo.htm"
-SRC_URI="http://member.nifty.ne.jp/~pen/free/gogo3/down/petit${MY_PV}.tgz"
+HOMEPAGE="http://homepage2.nifty.com/kei-i/"
+SRC_URI="http://homepage2.nifty.com/kei-i/petit/petit${MY_PV}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"

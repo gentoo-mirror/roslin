@@ -2,6 +2,9 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  04 May 2011; Piotr Szymaniak <szarpaj@grubelek.pl> slotracers-1.0.ebuild:
+  Added amd64 keyword.
+
   13 Dec 2010; Piotr Szymaniak <lazy_bum@o2.pl> files/1.0-glibc.patch,
   slotracers-1.0.ebuild:
   Updated SRC_URI and other cosmetic changes.

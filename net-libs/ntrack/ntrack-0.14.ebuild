@@ -14,7 +14,7 @@ SRC_URI="http://launchpad.net/${PN}/main/${MY_PV}/+download/ntrack-${MY_PV}.tar.
 
 LICENSE="|| ( GPL-3 LGPL-3 )"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="glib qt4"
 
 DEPEND="dev-libs/libnl

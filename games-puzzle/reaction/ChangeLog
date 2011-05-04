@@ -1,5 +1,8 @@
 # ChangeLog for games-puzzle/reaction
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+
+  04 May 2011; Piotr Szymaniak <szarpaj@grubelek.pl> reaction-3.01.ebuild:
+  Added amd64 keyword.
 
   07 Aug 2009; Piotr Szymaniak <lazy_bum@o2.pl> reaction-3.01.ebuild:
   Updated homepage and src_uri.

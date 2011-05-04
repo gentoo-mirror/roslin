@@ -6,5 +6,9 @@
 		<email>lazy_bum@o2.pl</email>
 		<name>Piotr Szymaniak</name>
 	</maintainer>
+	<use>
+		<flag name="allegro">Enable media-libs/allegro support</flag>
+		<flag name="net">Enable netplay</flag>
+	</use>
 </pkgmetadata>
 

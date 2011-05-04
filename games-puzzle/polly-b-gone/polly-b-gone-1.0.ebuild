@@ -14,7 +14,7 @@ SRC_URI="http://graphics.stanford.edu/~mbostock/${MY_PN}.zip"
 
 LICENSE="LGPL-3"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="media-libs/libsdl

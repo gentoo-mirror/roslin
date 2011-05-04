@@ -12,7 +12,7 @@ SRC_URI="http://victornils.net/tetris/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="X allegro joystick ncurses net"
 
 DEPEND="sys-libs/glibc

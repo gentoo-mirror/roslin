@@ -2,6 +2,11 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  04 May 2011; Michał Ziąbkowski <mziab@o2.pl> -kmediafactory-0.7.2.ebuild,
+  -kmediafactory-0.7.5.ebuild, -kmediafactory-0.8.0.ebuild,
+  kmediafactory-0.8.0-r1.ebuild:
+  Removed cruft. Bumped EAPI to appease kde4-base.eclass.
+
 *kmediafactory-0.8.0-r1 (31 Mar 2011)
 
   31 Mar 2011; Michał Ziąbkowski <mziab@o2.pl>

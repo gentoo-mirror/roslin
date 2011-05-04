@@ -10,9 +10,9 @@ DESCRIPTION="Maps compiler with colored lighting and lots of other features."
 HOMEPAGE="http://icculus.org/twilight/darkplaces/"
 SRC_URI="http://icculus.org/twilight/darkplaces/files/${PN}build${PV}.zip"
 
-LICENSE="blob"
+LICENSE="public-domain"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="app-arch/zip"

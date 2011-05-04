@@ -1,6 +1,10 @@
 # ChangeLog for games-server/mednafen-server
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 
+  04 May 2011; Piotr Szymaniak <szarpaj@grubelek.pl>
+  -mednafen-server-0.3.0.ebuild, mednafen-server-0.4.1.ebuild:
+  Added amd64 keyword, removed cruft.
+
 *mednafen-server-0.4.1 (08 Mar 2011)
 
   08 Mar 2011; Piotr Szymaniak <szarpaj@grubelek.pl>

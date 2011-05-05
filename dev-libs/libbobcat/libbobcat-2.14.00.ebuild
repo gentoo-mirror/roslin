@@ -30,10 +30,12 @@ src_prepare() {
 }
 
 src_compile() {
-	./build libraries all lcgen
-	use milter && ./build all
+	./build libraries all lcgen || die
+	if use milter; then
+	    ./build all || die
+	fi
 }
 
 src_install() {
-	./build install "${D}" "${D}"
+	./build install "${D}" "${D}" || die
 }

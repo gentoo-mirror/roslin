@@ -19,8 +19,8 @@ DEPEND="
 	>=sys-libs/zlib-1.2.1
 	>=media-libs/libpng-1.2.7
 	>=sys-devel/gettext-0.14.1
-	>=dev-libs/glib-2.6.4
-	>=x11-libs/gtk+-2.6.4
+	>=dev-libs/glib-2.6.4:2
+	>=x11-libs/gtk+-2.6.4:2
 	>=x11-libs/pango-1.8.0
 	gif? ( >=media-libs/giflib-4.1.4 )
 	jpeg? ( virtual/jpeg )

@@ -17,6 +17,7 @@ DEPEND="dev-games/physfs
 	dev-libs/boost
 	media-libs/glew
 	media-libs/libsdl
+	media-libs/libvorbis
 	media-libs/sdl-image
 	media-libs/openal
 	virtual/opengl"

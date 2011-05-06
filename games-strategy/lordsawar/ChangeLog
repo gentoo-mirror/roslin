@@ -2,6 +2,16 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  06 May 2011; Piotr Szymaniak <szarpaj@grubelek.pl> lordsawar-0.1.9.ebuild:
+  Changed deps again, it should work with the old deps and new src_configure.
+
+  06 May 2011; Piotr Szymaniak <szarpaj@grubelek.pl> lordsawar-0.1.9.ebuild:
+  Included sound enable/disable in src_configure.
+
+  06 May 2011; Piotr Szymaniak <szarpaj@grubelek.pl> lordsawar-0.1.9.ebuild,
+  metadata.xml:
+  Updated deps, updated metadata info.
+
 *lordsawar-0.1.9 (10 Aug 2010)
 
   10 Aug 2010; Piotr Szymaniak <lazy_bum@o2.pl> -lordsawar-0.1.8.ebuild,

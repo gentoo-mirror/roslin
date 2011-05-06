@@ -12,8 +12,9 @@ SRC_URI="http://download.savannah.gnu.org/releases/${PN}/${P/_/-}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
-IUSE="editor nls pbm sound zip"
+#KEYWORDS="~amd64 ~x86"
+KEYWORDS=""
+IUSE="dedicated editor netplay nls pbm sound"
 
 RDEPEND="dev-libs/boost
 	dev-cpp/gtkmm:2.4
@@ -34,23 +35,29 @@ src_configure() {
 	egamesconf \
 		--disable-dependency-tracking \
 		--disable-sdltest \
+		$(use_enable dedicated ghs) \
 		$(use_enable editor) \
+		$(use_enable netplay gls) \
 		$(use_enable nls) \
 		$(use_enable pbm) \
 		$(use_enable sound) \
-		$(use_enable zip zipping) \
 		|| die
 }
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
-	rm -f "${D}"/usr/share/locale/locale.alias
-	doicon dat/various/${PN}.png
-	make_desktop_entry ${PN} LordsAWar
+
+	#	rm -f "${D}"/usr/share/locale/locale.alias
+
+	doicon dat/icons/64x64/${PN}.png
+	make_desktop_entry ${PN} LordsAWar ${PN}.png
+
 	if use editor ; then
-		doicon dat/various/${PN}_editor.png
-		make_desktop_entry ${PN}_editor "LordsAWar Editor" ${PN}_editor
+		newicon dat/icons/64x64/${PN}.png ${PN}_editor.png
+		make_desktop_entry ${PN}_editor "LordsAWar Editor" ${PN}_editor.png
 	fi
+
 	dodoc AUTHORS ChangeLog NEWS README TODO || die "dodoc failed"
+
 	prepgamesdirs
 }

@@ -22,10 +22,10 @@ RESTRICT="test"
 COMMON_DEPEND="
 	>=virtual/poppler-glib-0.8.3[cairo]
 	dev-cpp/glibmm
-	>=dev-cpp/gtkmm-2.10.0
+	>=dev-cpp/gtkmm-2.10.0:2.4
 	>=dev-libs/boehm-gc-6.4
 	dev-libs/boost
-	>=dev-libs/glib-2.6.5
+	>=dev-libs/glib-2.6.5:2
 	>=dev-libs/libsigc++-2.0.12
 	>=dev-libs/libxml2-2.6.20
 	>=dev-libs/libxslt-1.0.15
@@ -37,7 +37,7 @@ COMMON_DEPEND="
 	>=media-libs/freetype-2
 	media-libs/libpng
 	x11-libs/libXft
-	>=x11-libs/gtk+-2.10.7
+	>=x11-libs/gtk+-2.10.7:2
 	>=x11-libs/pango-1.4.0
 	sci-libs/gsl
 	gnome? ( >=gnome-base/gnome-vfs-2.0 )

@@ -2,6 +2,10 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  06 May 2011; Michał Ziąbkowski <mziab@o2.pl> pragha-0.8.3.ebuild,
+  pragha-0.8.4.ebuild, pragha-0.8.5.ebuild, pragha-0.8.6.ebuild:
+  Fixed gtk+ dep.
+
 *pragha-0.8.6 (01 Apr 2011)
 
   01 Apr 2011; Michał Ziąbkowski <mziab@o2.pl> +pragha-0.8.6.ebuild:

@@ -27,7 +27,7 @@ RDEPEND="dev-db/sqlite
 	media-libs/libvorbis
 	media-libs/taglib
 	net-misc/curl
-	>=x11-libs/gtk+-2.14
+	>=x11-libs/gtk+-2.14:2
 	x11-libs/libnotify"
 DEPEND="${RDEPEND}
 	sys-devel/gettext"

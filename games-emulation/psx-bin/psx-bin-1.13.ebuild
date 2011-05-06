@@ -2,6 +2,8 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
+EAPI=3
+
 inherit games
 
 DESCRIPTION="An easy, self-contained Sony Playstation emulator"
@@ -20,7 +22,7 @@ DEPEND=""
 RDEPEND="dev-libs/libxml2
 	virtual/opengl
 	media-libs/alsa-lib
-	>=x11-libs/gtk+-2.10.14
+	>=x11-libs/gtk+-2.10.14:2
 	x11-libs/gtkglext
 	>=gnome-base/libglade-2.0
 	>=dev-libs/expat-2.0

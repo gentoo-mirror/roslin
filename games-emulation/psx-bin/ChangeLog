@@ -2,6 +2,9 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  06 May 2011; Michał Ziąbkowski <mziab@o2.pl> psx-bin-1.13.ebuild:
+  Fixed gtk+ dep.
+
   28 Jan 2010; Michał Ziąbkowski <mziab@o2.pl> psx-bin-1.13.ebuild:
   Make desktop entry.
 

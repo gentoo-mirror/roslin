@@ -2,6 +2,8 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
+EAPI=3
+
 inherit gnome2 autotools games
 
 DESCRIPTION="A simple MAME front-end for the GNOME Desktop Environment"
@@ -12,7 +14,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="dbus gstreamer"
 
-RDEPEND=">=x11-libs/gtk+-2.18.0
+RDEPEND=">=x11-libs/gtk+-2.18.0:2
 	>=x11-themes/gnome-icon-theme-2.18.0
 	>=dev-db/sqlite-3.0.0
 	>=x11-libs/libwnck-2.16

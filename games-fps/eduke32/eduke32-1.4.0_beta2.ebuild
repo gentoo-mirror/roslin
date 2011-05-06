@@ -2,6 +2,8 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
+EAPI=3
+
 inherit eutils games
 
 DATE="20060718"
@@ -27,7 +29,7 @@ IUSE="demo editor"
 
 RDEPEND=">=media-libs/libsdl-1.2.9
 	virtual/libstdc++
-	>=x11-libs/gtk+-2.4.0"
+	>=x11-libs/gtk+-2.4.0:2"
 DEPEND="${RDEPEND}
 	dev-lang/nasm
 	app-arch/unzip"

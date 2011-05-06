@@ -1,6 +1,9 @@
 # ChangeLog for games-fps/eduke32
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+
+  06 May 2011; Michał Ziąbkowski <mziab@o2.pl> eduke32-1.4.0_beta2.ebuild:
+  Fixed gtk+ dep.
 
   17 Feb 2009; Michał Ziąbkowski <mziab@o2.pl> -estat-1.2.tgz:
   Huh, how did that get here?

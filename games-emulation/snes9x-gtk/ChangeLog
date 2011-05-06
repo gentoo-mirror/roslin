@@ -2,6 +2,9 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  06 May 2011; Michał Ziąbkowski <mziab@o2.pl> snes9x-gtk-1.51_p78.ebuild:
+  Fixed gtk+ dep.
+
   26 Jul 2010; Michał Ziąbkowski <mziab@o2.pl> -snes9x-gtk-1.52.ebuild:
   Removing snes9x-gtk-1.52, since you can get the same effect by installing
   the newest snes9x from portage with the gtk flag. Leaving the latest 1.51

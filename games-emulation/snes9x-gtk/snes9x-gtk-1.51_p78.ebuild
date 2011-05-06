@@ -19,7 +19,7 @@ IUSE="joystick +jma netplay nls opengl +xv +xrandr +zlib"
 
 RESTRICT="mirror"
 
-RDEPEND=">=x11-libs/gtk+-2.10
+RDEPEND=">=x11-libs/gtk+-2.10:2
 	>=gnome-base/libglade-2.0
 	>=media-libs/portaudio-19_pre
 	joystick? ( >=media-libs/libsdl-1.2.12[joystick] )

@@ -29,7 +29,7 @@ RDEPEND="dev-libs/boost
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
-S="${WORKDIR}/${P/_pre*/}"
+S=${WORKDIR}/${P/_pre*/}
 
 src_configure() {
 	egamesconf \
@@ -37,8 +37,9 @@ src_configure() {
 		--disable-sdltest \
 		$(use_enable editor) \
 		$(use_enable nls) \
-		$(use_enable zip zipping) \
 		$(use_enable pbm) \
+		$(use_enable sound) \
+		$(use_enable zip zipping) \
 		|| die
 }
 

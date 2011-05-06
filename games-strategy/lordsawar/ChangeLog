@@ -2,6 +2,9 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  06 May 2011; Piotr Szymaniak <szarpaj@grubelek.pl> lordsawar-0.1.9.ebuild:
+  Included sound enable/disable in src_configure.
+
   06 May 2011; Piotr Szymaniak <szarpaj@grubelek.pl> lordsawar-0.1.9.ebuild,
   metadata.xml:
   Updated deps, updated metadata info.

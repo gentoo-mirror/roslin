@@ -2,6 +2,9 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  06 May 2011; Michał Ziąbkowski <mziab@o2.pl> gmameui-0.2.12.ebuild:
+  Fixed gtk+ dep.
+
 *gmameui-0.2.12 (19 Jan 2010)
 
   19 Jan 2010; Michał Ziąbkowski <mziab@o2.pl> +gmameui-0.2.12.ebuild,

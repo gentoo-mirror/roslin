@@ -20,7 +20,6 @@ RDEPEND="dev-libs/boost
 	>=dev-cpp/gtkmm-2.4
 	>=dev-cpp/libglademm-2.4
 	media-libs/sdl-image
-	media-libs/sdl-mixer
 	sound? ( media-libs/sdl-mixer[vorbis] )
 	>=net-libs/gnet-2
 	>=dev-libs/libsigc++-2

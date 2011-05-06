@@ -13,11 +13,11 @@ SRC_URI="mirror://sourceforge/${PN}/ETW-${PV}-src.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="media-libs/libsdl[joystick]
-	>=x11-libs/gtk+-1.2
+	>=x11-libs/gtk+-2.6.4:2
 	|| (
 		(
 			x11-libs/libX11

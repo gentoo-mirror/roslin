@@ -3,6 +3,9 @@
 # $Header: $
 
   06 May 2011; Piotr Szymaniak <szarpaj@grubelek.pl> lordsawar-0.1.9.ebuild:
+  Reinvented deps.
+
+  06 May 2011; Piotr Szymaniak <szarpaj@grubelek.pl> lordsawar-0.1.9.ebuild:
   Changed deps again, it should work with the old deps and new src_configure.
 
   06 May 2011; Piotr Szymaniak <szarpaj@grubelek.pl> lordsawar-0.1.9.ebuild:

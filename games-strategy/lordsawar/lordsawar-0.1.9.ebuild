@@ -12,19 +12,19 @@ SRC_URI="http://download.savannah.gnu.org/releases/${PN}/${P/_/-}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="editor nls pbm sound zip"
 
 RDEPEND="dev-libs/boost
-	nls? ( sys-devel/gettext )
-	>=dev-cpp/gtkmm-2.4
-	>=dev-cpp/libglademm-2.4
+	dev-cpp/gtkmm:2.4
+	dev-cpp/libglademm
+	dev-libs/expat
+	dev-libs/libsigc++:2
+	dev-libs/libtar
 	media-libs/sdl-image
-	sound? ( media-libs/sdl-mixer[vorbis] )
-	>=net-libs/gnet-2
-	>=dev-libs/libsigc++-2
-	>=dev-libs/expat-2.0
-	dev-libs/libtar"
+	net-libs/gnet
+	nls? ( sys-devel/gettext )
+	sound? ( media-libs/sdl-mixer[vorbis] )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 

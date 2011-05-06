@@ -18,8 +18,8 @@ KEYWORDS=""
 IUSE="gbalink gtk lirc nls sdl"
 
 RDEPEND="gtk? ( >=dev-cpp/libglademm-2.4.0
-	>=dev-cpp/glibmm-2.4.0
-	>=dev-cpp/gtkmm-2.4.0
+	>=dev-cpp/glibmm-2.4.0:2
+	>=dev-cpp/gtkmm-2.4.0:2.4
 	>=media-libs/portaudio-19_pre
 	x11-libs/libXv
 	>=dev-cpp/gtkglextmm-1.2.0 )

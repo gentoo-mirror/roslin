@@ -2,6 +2,11 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*kadu-kde_notify-0.9.2 (08 May 2011)
+
+  08 May 2011; Michał Ziąbkowski <mziab@o2.pl> +kadu-kde_notify-0.9.2.ebuild:
+  Bumped.
+
 *kadu-kde_notify-0.9.1 (09 Apr 2011)
 
   09 Apr 2011; Michał Ziąbkowski <mziab@o2.pl> +kadu-kde_notify-0.9.1.ebuild:

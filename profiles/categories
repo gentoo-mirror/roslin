@@ -1,6 +1,6 @@
 app-cdr
 app-dicts
-app-emulation
+app-doc
 app-misc
 app-office
 app-portage
@@ -8,12 +8,10 @@ app-text
 dev-games
 dev-libs
 dev-util
-games-action
 games-arcade
 games-emulation
 games-engines
 games-fps
-games-misc
 games-puzzle
 games-rpg
 games-server
@@ -22,8 +20,8 @@ games-sports
 games-strategy
 games-util
 media-gfx
-media-libs
 media-sound
+media-tv
 media-video
 net-im
 net-libs
@@ -31,4 +29,5 @@ net-misc
 net-p2p
 net-wireless
 sys-apps
+sys-libs
 x11-misc

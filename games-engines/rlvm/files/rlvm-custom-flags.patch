@@ -1,5 +1,5 @@
 --- SConstruct	2009-11-15 23:05:14.000000000 +0100
-+++ ../SConstruct	2009-11-23 22:05:32.000000000 +0100
++++ SConstruct	2009-11-23 22:05:32.000000000 +0100
 @@ -95,6 +95,12 @@
    env['RANLIBCOMSTR'] = 'Indexing $TARGET ...'
    env['SHLINKCOMSTR'] = 'Linking $TARGET ...'

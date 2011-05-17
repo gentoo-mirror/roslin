@@ -2,6 +2,9 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  17 May 2011; Michał Ziąbkowski <mziab@o2.pl> ureadahead-0.100.0.ebuild:
+  Fixed elog message.
+
 *ureadahead-0.100.0 (17 May 2011)
 
   17 May 2011; Michał Ziąbkowski <mziab@o2.pl> +ureadahead-0.100.0.ebuild,

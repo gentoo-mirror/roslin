@@ -42,7 +42,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	elog "ureadahead need some kernel tuning to work"
+	elog "ureadahead needs some kernel tuning to work"
 	elog "Kernel hacking -> Tracers (FTRACE)"
 	elog "Kernel hacking -> Tracers -> Trace process context switches and events (ENABLE_DEFAULT_TRACERS)"
 	elog "which should also select 'Kernel hacking -> Debug Filesystem' (DEBUG_FS))"

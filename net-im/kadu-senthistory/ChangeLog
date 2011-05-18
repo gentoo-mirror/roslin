@@ -2,6 +2,12 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*kadu-senthistory-0.9.0_p8 (18 May 2011)
+
+  18 May 2011; Michał Ziąbkowski <mziab@o2.pl>
+  +kadu-senthistory-0.9.0_p8.ebuild:
+  Bumped.
+
 *kadu-senthistory-0.6.5_p5-r5 (09 Mar 2011)
 
   09 Mar 2011; Michał Ziąbkowski <mziab@o2.pl>

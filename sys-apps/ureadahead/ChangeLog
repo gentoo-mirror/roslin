@@ -2,6 +2,9 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  18 May 2011; Michał Ziąbkowski <mziab@o2.pl> ureadahead-0.100.0.ebuild:
+  Confirmed to work on amd64. Adding keyword.
+
   17 May 2011; Michał Ziąbkowski <mziab@o2.pl> ureadahead-0.100.0.ebuild:
   Fixed elog message.
 

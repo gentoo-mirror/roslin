@@ -8,7 +8,7 @@ inherit autotools eutils games
 
 DESCRIPTION="An advanced NES, GB/GBC/GBA, TurboGrafx 16/CD, NGPC and Lynx emulator"
 HOMEPAGE="http://mednafen.sourceforge.net/"
-SRC_URI="http://forum.fobby.net/index.php?t=getfile&id=258 -> ${P}.tar.bz2"
+SRC_URI="http://forum.fobby.net/index.php?t=getfile&id=267 -> ${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"

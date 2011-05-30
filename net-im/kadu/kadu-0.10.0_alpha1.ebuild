@@ -35,6 +35,7 @@ RDEPEND=">=net-im/kadu-core-${PV}[debug?]
 	!net-im/kadu-audacious_mediaplayer
 	!net-im/kadu-bmpx_mediaplayer
 	!net-im/kadu-dragon_mediaplayer
+	!net-im/kadu-mpris_mediaplayer
 	!net-im/kadu-globalhotkeys
 	!net-im/kadu-kde_notify
 	!net-im/kadu-lednotify

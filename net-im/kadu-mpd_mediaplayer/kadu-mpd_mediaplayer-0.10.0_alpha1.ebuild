@@ -14,3 +14,5 @@ DEPEND=">=x11-libs/qt-gui-4.7.0
 	media-libs/libmpdclient"
 RDEPEND="${DEPEND}
 	~net-im/kadu-mediaplayer-${PV}"
+
+PATCHES=( "${FILESDIR}/${P}-cmake.patch" )

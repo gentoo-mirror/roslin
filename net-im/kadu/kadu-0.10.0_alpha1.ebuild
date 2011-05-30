@@ -29,34 +29,6 @@ RDEPEND=">=net-im/kadu-core-${PV}[debug?]
 	jabber? ( >=net-im/kadu-jabber_protocol-${PV}[debug?] )
 	spell? ( >=net-im/kadu-spellchecker-${PV}[debug?] )
 	ssl? ( >=net-im/kadu-encryption_ng_simlite-${PV}[debug?] )
-	!net-im/kadu-advanced_userlist
-	!net-im/kadu-account_management
-	!net-im/kadu-agent
-	!net-im/kadu-amarok1_mediaplayer
-	!net-im/kadu-ao_sound
-	!net-im/kadu-dbus
-	!net-im/kadu-dcc
-	!net-im/kadu-default_sms
-	!net-im/kadu-dsp_sound
-	!net-im/kadu-encryption
-	!net-im/kadu-encryption_old
-	!net-im/kadu-filtering
-	!net-im/kadu-gg_avatars
-	!net-im/kadu-led_notify
-	!net-im/kadu-mail
-	!net-im/kadu-mx610_notify
-	!net-im/kadu-notify
-	!net-im/kadu-osd_hints
-	!net-im/kadu-pajacyk
-	!net-im/kadu-plus_pl_sms
-	!net-im/kadu-powerkadu
-	!net-im/kadu-profiles
-	!net-im/kadu-qt4_sound
-	!net-im/kadu-split_messages
-	!net-im/kadu-voice
-	!net-im/kadu-water_notify
-	!net-im/kadu-weather
-	!net-im/kadu-window_notify
 	!net-im/kadu-alsa_sound
 	!net-im/kadu-amarok2_mediaplayer
 	!net-im/kadu-anonymous_check

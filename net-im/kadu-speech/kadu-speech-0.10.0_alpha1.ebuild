@@ -13,3 +13,5 @@ DEPEND=">=x11-libs/qt-gui-4.7.0
 	~net-im/kadu-core-${PV}"
 RDEPEND="${DEPEND}
 	app-accessibility/powiedz"
+
+PATCHES=( "${FILESDIR}/${P}-cmake.patch" )

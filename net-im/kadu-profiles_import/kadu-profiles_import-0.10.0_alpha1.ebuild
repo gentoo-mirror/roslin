@@ -14,3 +14,5 @@ DEPEND=">=x11-libs/qt-gui-4.7.0
 RDEPEND="${DEPEND}
 	~net-im/kadu-gadu_protocol-${PV}
     ~net-im/kadu-history_migration-${PV}"
+
+PATCHES=( "${FILESDIR}/${P}-build.patch")

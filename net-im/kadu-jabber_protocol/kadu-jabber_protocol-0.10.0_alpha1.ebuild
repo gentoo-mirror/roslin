@@ -16,3 +16,5 @@ RDEPEND=">=x11-libs/qt-gui-4.7.0
 	sys-libs/zlib"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
+
+PATCHES=( "${FILESDIR}/${P}-include-install.patch" )

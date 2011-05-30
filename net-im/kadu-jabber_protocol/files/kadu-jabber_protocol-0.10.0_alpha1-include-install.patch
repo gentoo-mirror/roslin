@@ -1,0 +1,13 @@
+diff --git a/plugins/jabber_protocol/CMakeLists.txt b/plugins/jabber_protocol/CMakeLists.txt
+index effc4ca..1f12730 100644
+--- a/plugins/jabber_protocol/CMakeLists.txt
++++ b/plugins/jabber_protocol/CMakeLists.txt
+@@ -52,7 +52,7 @@ if (APPLE)
+ 	endif (QCA_FRAMEWORK_DIR)
+ endif (APPLE)
+ 
+-kadu_api_directories (plugins/jabber-protocol
++kadu_api_directories (plugins/jabber_protocol
+ 	actions
+ 	certificates
+ 	client

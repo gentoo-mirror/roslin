@@ -12,7 +12,7 @@ IUSE=""
 CDEPEND=">=x11-libs/qt-gui-4.7.0
 	~net-im/kadu-core-${PV}
 	|| ( media-libs/phonon x11-libs/qt-phonon )"
-RDEPEND="${CDEPEND}
-	dev-util/pkgconfig"
 DEPEND="${CDEPEND}
+	dev-util/pkgconfig"
+RDEPEND="${CDEPEND}
 	~net-im/kadu-sound-${PV}"

@@ -2,6 +2,9 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  30 May 2011; Michał Ziąbkowski <mziab@o2.pl> kadu-0.10.0_alpha1.ebuild:
+  Temporarily disable emoticons, icons and sound flags.
+
 *kadu-0.10.0_alpha1 (30 May 2011)
 
   30 May 2011; Michał Ziąbkowski <mziab@o2.pl> +kadu-0.10.0_alpha1.ebuild:

@@ -9,7 +9,7 @@ HOMEPAGE="http://kadu.net"
 KEYWORDS="~amd64 ~x86"
 LICENSE="GPL-2"
 
-IUSE="alsa debug emoticons +gadu icons +jabber +phonon sound spell ssl"
+IUSE="alsa debug +gadu +jabber +phonon spell ssl"
 
 SLOT="0"
 
@@ -25,9 +25,6 @@ RDEPEND=">=net-im/kadu-core-${PV}[debug?]
 	>=net-im/kadu-sql_history-${PV}[debug?]
 	>=net-im/kadu-qt4_docking-${PV}[debug?]
 	phonon? ( >=net-im/kadu-phonon_sound-${PV}[debug?] )
-	emoticons? ( >=net-im/kadu-emoticons-0.6.5 )
-	icons? ( >=net-im/kadu-icons-0.6.6 )
-	sound? ( >=net-im/kadu-sounds-0.6.5 )
 	gadu? ( >=net-im/kadu-gadu_protocol-${PV}[debug?] )
 	jabber? ( >=net-im/kadu-jabber_protocol-${PV}[debug?] )
 	spell? ( >=net-im/kadu-spellchecker-${PV}[debug?] )
@@ -78,6 +75,8 @@ RDEPEND=">=net-im/kadu-core-${PV}[debug?]
 	!net-im/kadu-splitmessages
 	!net-im/kadu-split_messages
 	!net-im/kadu-vlc_mediaplayer
+	!net-im/kadu-icons
+	!net-im/kadu-emoticons
 "
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"

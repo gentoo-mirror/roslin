@@ -11,12 +11,11 @@ HOMEPAGE="http://kadu.net"
 KEYWORDS=""
 IUSE=""
 
-CDEPEND=">=x11-libs/qt-gui-4.7.0
+RDEPEND=">=x11-libs/qt-gui-4.7.0
 	~net-im/kadu-core-${PV}
-    app-crypt/qca-ossl:2"
-DEPEND="${CDEPEND}
-    !net-im/kadu-encryption
-    !net-im/kadu-ecnryption_old
-	dev-util/pkgconfig"
-RDEPEND="${CDEPEND}
+    app-crypt/qca-ossl:2
 	~net-im/kadu-encryption_ng-${PV}"
+DEPEND="${RDEPEND}
+    !net-im/kadu-encryption
+    !net-im/kadu-encryption_old
+	dev-util/pkgconfig"

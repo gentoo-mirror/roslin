@@ -10,7 +10,7 @@ KEYWORDS=""
 IUSE=""
 
 DEPEND=">=x11-libs/qt-gui-4.7.0
-	~net-im/kadu-core-${PV}"
-RDEPEND="${DEPEND}
+	~net-im/kadu-core-${PV}
 	~net-im/kadu-sql_history-${PV}
 	~net-im/kadu-gadu_protocol-${PV}"
+RDEPEND="${DEPEND}"

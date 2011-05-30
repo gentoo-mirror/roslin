@@ -13,6 +13,6 @@ IUSE=""
 
 DEPEND=">=x11-libs/qt-gui-4.7.0
 	~net-im/kadu-core-${PV}
-	 >=x11-libs/qt-sql-4.5.0[sqlite]"
-RDEPEND="${DEPEND}
-	~net-im/kadu-history-${PV}"
+	 >=x11-libs/qt-sql-4.5.0[sqlite]
+	 ~net-im/kadu-history-${PV}"
+RDEPEND="${DEPEND}"

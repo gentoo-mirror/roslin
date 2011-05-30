@@ -3,6 +3,14 @@
 # $Header: $
 
   30 May 2011; Michał Ziąbkowski <mziab@o2.pl>
+  kadu-qt4_docking-0.10.0_alpha1.ebuild:
+  Reorganized deps.
+
+  30 May 2011; Michał Ziąbkowski <mziab@o2.pl>
+  kadu-qt4_docking-0.10.0_alpha1.ebuild:
+  Reorganized deps.
+
+  30 May 2011; Michał Ziąbkowski <mziab@o2.pl>
   kadu-qt4_docking-0.10.0_alpha1.ebuild,
   +files/kadu-qt4_docking-0.10.0_alpha1-cmake.patch:
   Install includes. Needed for qt4_docking-notify.

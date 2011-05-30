@@ -11,8 +11,8 @@ IUSE=""
 
 DEPEND=">=x11-libs/qt-gui-4.7.0
 	~net-im/kadu-core-${PV}
-	media-libs/libmpdclient"
-RDEPEND="${DEPEND}
+	media-libs/libmpdclient
 	~net-im/kadu-mediaplayer-${PV}"
+RDEPEND="${DEPEND}"
 
 PATCHES=( "${FILESDIR}/${P}-cmake.patch" )

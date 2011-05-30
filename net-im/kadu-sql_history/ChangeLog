@@ -4,6 +4,14 @@
 
   30 May 2011; Michał Ziąbkowski <mziab@o2.pl>
   kadu-sql_history-0.10.0_alpha1.ebuild:
+  Reorganized deps.
+
+  30 May 2011; Michał Ziąbkowski <mziab@o2.pl>
+  kadu-sql_history-0.10.0_alpha1.ebuild:
+  Reorganized deps.
+
+  30 May 2011; Michał Ziąbkowski <mziab@o2.pl>
+  kadu-sql_history-0.10.0_alpha1.ebuild:
   Fixed EAPI.
 
 *kadu-sql_history-0.10.0_alpha1 (30 May 2011)

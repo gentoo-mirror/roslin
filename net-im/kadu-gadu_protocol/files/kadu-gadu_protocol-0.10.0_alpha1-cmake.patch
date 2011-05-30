@@ -1,0 +1,12 @@
+diff --git a/plugins/gadu_protocol/CMakeLists.txt b/plugins/gadu_protocol/CMakeLists.txt
+index a8fee80..3c69ec9 100644
+--- a/plugins/gadu_protocol/CMakeLists.txt
++++ b/plugins/gadu_protocol/CMakeLists.txt
+@@ -1,5 +1,7 @@
+ project (gadu_protocol)
+ 
++include (FindPkgConfig)
++
+ # minimal required versions
+ cmake_minimum_required (VERSION 2.8)
+ set (QT_MIN_VERSION "4.7.0")

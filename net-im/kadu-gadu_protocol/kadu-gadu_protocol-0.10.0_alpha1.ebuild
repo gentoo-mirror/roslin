@@ -16,3 +16,5 @@ DEPEND=">=x11-libs/qt-gui-4.7.0
 	>=net-libs/libgadu-1.11.0[threads]
 	>=app-crypt/qca-2.0"
 RDEPEND="${DEPEND}"
+
+PATCHES=( "${FILESDIR}/${P}-cmake.patch" )

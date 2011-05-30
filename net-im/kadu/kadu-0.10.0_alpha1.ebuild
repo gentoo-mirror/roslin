@@ -9,7 +9,7 @@ HOMEPAGE="http://kadu.net"
 KEYWORDS="~amd64 ~x86"
 LICENSE="GPL-2"
 
-IUSE="alsa debug +gadu +jabber +phonon spell ssl"
+IUSE="debug +gadu +jabber +phonon spell ssl"
 
 SLOT="0"
 

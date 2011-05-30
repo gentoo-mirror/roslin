@@ -19,16 +19,3 @@ index 4284b1e..c55259b 100644
  set (SOURCES
  	gui/windows/import-profile-window.cpp
  	gui/windows/import-profiles-window.cpp
-diff --git a/plugins/profiles_import/profile-importer.cpp b/plugins/profiles_import/profile-importer.cpp
-index 4a6de79..69cfd31 100644
---- a/plugins/profiles_import/profile-importer.cpp
-+++ b/plugins/profiles_import/profile-importer.cpp
-@@ -26,7 +26,7 @@
- #include "core/core.h"
- #include "identities/identity-manager.h"
- 
--#include "plugins/gadu_protocol/helpers/gadu-importer.h"
-+#include "plugins/gadu-protocol/helpers/gadu-importer.h"
- 
- #include "profile-importer.h"
- 

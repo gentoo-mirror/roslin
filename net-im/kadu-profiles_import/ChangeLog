@@ -3,6 +3,11 @@
 # $Header: $
 
   30 May 2011; Michał Ziąbkowski <mziab@o2.pl>
+  files/kadu-profiles_import-0.10.0_alpha1-build.patch:
+  Now that gadu_protocol installs its includes in the proper place, we can
+  retract the second half of the patch.
+
+  30 May 2011; Michał Ziąbkowski <mziab@o2.pl>
   kadu-profiles_import-0.10.0_alpha1.ebuild,
   +files/kadu-profiles_import-0.10.0_alpha1-build.patch:
   Fixed missing declarations in CMakeLists.txt and include path.

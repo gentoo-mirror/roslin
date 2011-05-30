@@ -18,6 +18,8 @@ RDEPEND=">=x11-libs/qt-gui-4.7.0
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
+PATCHES=( "${FILESDIR}/${P}-include.patch" )
+
 src_configure() {
 	local mycmakeargs="${mycmakeargs} \
 		$(cmake-utils_use_with aspell ASPELL)

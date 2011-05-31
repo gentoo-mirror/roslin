@@ -15,7 +15,12 @@ IUSE="debug"
 K_PV="${PV/_p/.}"
 K_PV="${K_PV/_/-}"
 
-SRC_URI="http://kadu.net/download/unstable/kadu-${K_PV}.tar.bz2"
+case ${PV} in
+	*alpha*|*beta*|*rc*) KADU_SRC_DIR="unstable" ;;
+	*) KADU_SRC_DIR="stable" ;;
+esac
+
+SRC_URI="http://kadu.net/download/${KADU_SRC_DIR}/kadu-${K_PV}.tar.bz2"
 
 NAME="${PN#*-}"
 

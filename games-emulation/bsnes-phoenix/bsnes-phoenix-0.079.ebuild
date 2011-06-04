@@ -50,8 +50,8 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-0.075-makefile.patch \
-		"${FILESDIR}"/${PN}-0.075-toolkit.patch
+	epatch "${FILESDIR}"/${PN}-0.077-makefile.patch \
+		"${FILESDIR}"/${PN}-0.076-toolkit.patch
 
 	# audio modules
 	use ao || disable_module audio.ao
@@ -68,9 +68,6 @@ src_prepare() {
 
 	# input modules
 	use sdl || disable_module input.sdl
-
-	# debugger
-	use debug && echo "flags += -DDEBUGGER" >>Makefile
 }
 
 src_compile() {
@@ -91,11 +88,15 @@ src_compile() {
 		mytoolkit="qt"
 	fi
 
+	local myoptions
+	use debug && myoptions="debugger"
+
 	emake \
 		platform=x \
 		compiler=gcc \
 		profile=${myprofile} \
-		toolkit=${mytoolkit} || die "emake failed"
+		toolkit=${mytoolkit} \
+		options=${myoptions} || die "emake failed"
 }
 
 src_install() {

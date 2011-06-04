@@ -2,6 +2,13 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*libsnes-0.079 (04 Jun 2011)
+
+  04 Jun 2011; Michał Ziąbkowski <mziab@o2.pl> -libsnes-0.073.ebuild,
+  -libsnes-0.075.ebuild, -libsnes-0.075-r1.ebuild, -libsnes-0.076.ebuild,
+  -libsnes-0.076-r1.ebuild, +libsnes-0.079.ebuild:
+  Bumped. Removed cruft.
+
 *libsnes-0.078 (30 Apr 2011)
 
   30 Apr 2011; Michał Ziąbkowski <mziab@o2.pl> +libsnes-0.078.ebuild:

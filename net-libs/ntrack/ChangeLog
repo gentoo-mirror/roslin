@@ -2,6 +2,12 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*ntrack-0.14-r1 (11 Jun 2011)
+
+  11 Jun 2011; Michał Ziąbkowski <mziab@o2.pl> +ntrack-0.14-r1.ebuild,
+  +files/ntrack-0.14-module-loading.patch:
+  Rev-bumped with patch to fix undefined symbol if loaded dynamically.
+
   04 May 2011; Piotr Szymaniak <szarpaj@grubelek.pl> ntrack-0.14.ebuild:
   Added amd64 keyword.
 

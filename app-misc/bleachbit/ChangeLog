@@ -2,6 +2,11 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*bleachbit-0.8.8 (15 Jun 2011)
+
+  15 Jun 2011; Michał Ziąbkowski <mziab@o2.pl> +bleachbit-0.8.8.ebuild:
+  Bumped.
+
   14 Apr 2011; Michał Ziąbkowski <mziab@o2.pl> bleachbit-0.8.5.ebuild,
   bleachbit-0.8.6.ebuild, bleachbit-0.8.7.ebuild:
   Added inherit which was previously implied.

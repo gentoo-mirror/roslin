@@ -2,6 +2,10 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  27 Jun 2011; Piotr Szymaniak <szarpaj@grubelek.pl>
+  kadu-mpd_mediaplayer-0.10.0_beta1.ebuild:
+  Bumped.
+
 *kadu-mpd_mediaplayer-0.10.0_beta1 (27 Jun 2011)
 
   27 Jun 2011; Piotr Szymaniak <szarpaj@grubelek.pl>

@@ -2,6 +2,10 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  28 Jun 2011; Piotr Szymaniak <szarpaj@grubelek.pl>
+  kadu-core-0.10.0_beta1.ebuild:
+  Added qca depend.
+
   27 Jun 2011; Piotr Szymaniak <szarpaj@grubelek.pl>
   kadu-core-0.10.0_beta1.ebuild:
   Bumped.

@@ -12,7 +12,8 @@ KEYWORDS=""
 
 IUSE="+ntrack"
 
-RDEPEND=">=x11-libs/qt-gui-4.7.0
+RDEPEND="app-crypt/qca:2
+	>=x11-libs/qt-gui-4.7.0
 	>=x11-libs/qt-webkit-4.7.0
 	>=x11-libs/qt-dbus-4.7.0
 	>=x11-libs/qt-svg-4.7.0

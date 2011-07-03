@@ -2,6 +2,11 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  03 Jul 2011; Piotr Szymaniak <szarpaj@grubelek.pl>
+  -gnome-video-arcade-0.6.8.ebuild, gnome-video-arcade-0.7.0.ebuild,
+  gnome-video-arcade-0.7.1.ebuild:
+  Updated depends.
+
   06 May 2011; Michał Ziąbkowski <mziab@o2.pl>
   gnome-video-arcade-0.6.8.ebuild, gnome-video-arcade-0.7.0.ebuild,
   gnome-video-arcade-0.7.1.ebuild:

@@ -14,11 +14,11 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="dbus gstreamer"
 
-RDEPEND=">=x11-libs/gtk+-2.18.0:2
-	>=x11-themes/gnome-icon-theme-2.18.0
-	>=dev-db/sqlite-3.0.0
+RDEPEND="x11-libs/gtk+:2
+	x11-themes/gnome-icon-theme
+	dev-db/sqlite:3
 	>=x11-libs/libwnck-2.16
-	gnome-base/gconf
+	gnome-base/gconf:2
 	dbus? ( dev-libs/dbus-glib )
 	gstreamer? ( >=media-libs/gst-plugins-base-0.10 )
 	|| ( games-emulation/sdlmame games-emulation/xmame )"

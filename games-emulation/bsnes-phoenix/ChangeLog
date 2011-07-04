@@ -2,6 +2,14 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  04 Jul 2011; Michał Ziąbkowski <mziab@o2.pl>
+  -files/bsnes-phoenix-0.073-makefile.patch,
+  -files/bsnes-phoenix-0.074-makefile.patch,
+  -files/bsnes-phoenix-0.074_p11-makefile.patch,
+  -files/bsnes-phoenix-0.075-makefile.patch,
+  -files/bsnes-phoenix-0.075-toolkit.patch:
+  Removed old patches.
+
 *bsnes-phoenix-0.080 (03 Jul 2011)
 
   03 Jul 2011; Michał Ziąbkowski <mziab@o2.pl> +bsnes-phoenix-0.080.ebuild:

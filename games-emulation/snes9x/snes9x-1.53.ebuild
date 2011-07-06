@@ -11,7 +11,7 @@ SRC_URI="http://snes9x-gtk.googlecode.com/files/${P}-src.tar.bz2"
 
 LICENSE="as-is GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 ppc ppc64 x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="alsa debug gtk +hq2x joystick multilib netplay nls opengl oss png pulseaudio portaudio +xv +xrandr zlib"
 
 RDEPEND="x11-libs/libX11

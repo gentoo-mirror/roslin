@@ -8,15 +8,16 @@ inherit eutils confutils games
 
 MY_PV="${PV/0./}"
 MY_PV="${MY_PV/_/}"
+MY_P="${PN}_v${MY_PV}-source"
 
 DESCRIPTION="A Super Famicom/SNES emulator written with absolute accuracy in mind"
 HOMEPAGE="http://byuu.org/bsnes/"
-SRC_URI="http://bsnes.googlecode.com/files/${PN}_v${MY_PV}.tar.bz2"
+SRC_URI="http://bsnes.googlecode.com/files/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="ao alsa debug openal opengl oss pulseaudio sdl sgb snesfilter +snesreader xv"
+IUSE="ao alsa debug +gtk openal opengl oss profile_accuracy +profile_compatibility profile_performance pulseaudio qt4 sdl sgb xv"
 
 RDEPEND="ao? ( media-libs/libao )
 	openal? ( media-libs/openal )
@@ -26,34 +27,29 @@ RDEPEND="ao? ( media-libs/libao )
 	opengl? ( virtual/opengl )
 	sdl? ( media-libs/libsdl[joystick] )
 	sgb? ( dev-games/supergameboy )
-	snesfilter? ( dev-games/snesfilter )
-	snesreader? ( dev-games/snesreader )
-	>=x11-libs/qt-gui-4.5:4"
+	gtk? ( x11-libs/gtk+:2 )
+	qt4? ( >=x11-libs/qt-gui-4.5:4 )"
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
-	>=sys-devel/gcc-4.4"
+	>=sys-devel/gcc-4.5"
 
-S="${WORKDIR}/${PN}"
+S="${WORKDIR}/${MY_P}/bsnes"
 
 disable_module() {
-	sed -i "ui-qt/Makefile" -e "s|$1||"
+	sed -i "ui/Makefile" -e "s|$1||"
 }
 
 pkg_setup() {
 	confutils_require_any ao openal alsa pulseaudio oss
 	confutils_require_any xv opengl sdl
+	confutils_require_one profile_accuracy profile_compatibility profile_performance
+	confutils_require_one gtk qt4
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-0.073-makefile.patch
-
-	# debugger
-	if use debug ; then
-	    sed -i "snes/snes.hpp" \
-		-e "s://\(#define DEBUGGER\):\\1:" \
-		|| die "sed failed"
-	fi
+	epatch "${FILESDIR}"/${PN}-0.077-makefile.patch \
+		"${FILESDIR}"/${PN}-0.076-toolkit.patch
 
 	# audio modules
 	use ao || disable_module audio.ao
@@ -73,22 +69,39 @@ src_prepare() {
 }
 
 src_compile() {
-	for i in accuracy compatibility performance; do
-		emake platform=x compiler=gcc profile=$i ui=ui-qt || die "emake failed"
-		make clean
-	done
+	local myprofile
 
-	cd launcher && sh cc.sh || die
+	if use profile_accuracy; then
+		myprofile="accuracy"
+	elif use profile_compatibility; then
+		myprofile="compatibility"
+	else
+		myprofile="performance"
+	fi
+
+	local mytoolkit
+	if use gtk; then
+		mytoolkit="gtk"
+	else
+		mytoolkit="qt"
+	fi
+
+	local myoptions
+	use debug && myoptions="debugger"
+
+	emake \
+		platform=x \
+		compiler=gcc \
+		profile=${myprofile} \
+		toolkit=${mytoolkit} \
+		options=${myoptions} || die "emake failed"
 }
 
 src_install() {
-	for i in accuracy compatibility performance; do
-		emake \
-			DESTDIR="${D}" \
-			prefix="${GAMES_PREFIX}" \
-			profile=$i \
-			install || die "install failed"
-	done
+	emake \
+		DESTDIR="${D}" \
+		prefix="${GAMES_PREFIX}" \
+		install || die "install failed"
 
 	dogamesbin out/bsnes || die
 

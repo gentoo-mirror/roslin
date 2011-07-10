@@ -8,7 +8,7 @@ inherit eutils confutils games
 
 MY_PV="${PV/0./}"
 MY_PV="${MY_PV/_/}"
-MY_P="bsnes_v${MY_PV}-source"
+MY_P="${PN}_v${MY_PV}-source"
 
 DESCRIPTION="A Super Famicom/SNES emulator written with absolute accuracy in mind"
 HOMEPAGE="http://byuu.org/bsnes/"
@@ -32,9 +32,7 @@ RDEPEND="ao? ( media-libs/libao )
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
-	>=sys-devel/gcc-4.5
-	!games-emulation/bsnes
-	!games-emulation/bsnes-qt"
+	>=sys-devel/gcc-4.5"
 
 S="${WORKDIR}/${MY_P}/bsnes"
 

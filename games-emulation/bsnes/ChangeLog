@@ -1,6 +1,24 @@
 # ChangeLog for games-emulation/bsnes
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 
+*bsnes-0.080 (04 Jul 2011)
+*bsnes-0.079 (04 Jul 2011)
+*bsnes-0.078 (04 Jul 2011)
+*bsnes-0.077 (04 Jul 2011)
+
+  04 Jul 2011; Michał Ziąbkowski <mziab@o2.pl> bsnes-0.073.ebuild,
+  +files/bsnes-0.076-toolkit.patch, +bsnes-0.077.ebuild,
+  +files/bsnes-0.077-makefile.patch, +bsnes-0.078.ebuild, +bsnes-0.079.ebuild,
+  +bsnes-0.080.ebuild, metadata.xml:
+  Merged back bsnes-phoenix with some minor clean-up.
+
+  04 Jul 2011; Michał Ziąbkowski <mziab@o2.pl>
+  -files/bsnes-0.064-makefile.patch, -files/bsnes-0.068-makefile.patch,
+  -files/bsnes-0.069-makefile.patch, -bsnes-0.070.ebuild,
+  -files/bsnes-0.070-makefile.patch, -bsnes-0.071.ebuild,
+  -files/bsnes-0.071-makefile.patch, -bsnes-0.072.ebuild:
+  Removed old patches.
+
   26 Dec 2010; Michał Ziąbkowski <mziab@o2.pl> bsnes-0.073.ebuild:
   Block on bsnes-qt.
 

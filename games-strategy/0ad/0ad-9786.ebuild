@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=3
+EAPI="3"
 
 inherit eutils wxwidgets games
 
@@ -27,12 +27,13 @@ RDEPEND="virtual/opengl
 	|| ( dev-libs/libgamin app-admin/fam )
 	editor? ( x11-libs/wxGTK:2.8 )
 	media-libs/devil
-	net-libs/enet:0
+	net-libs/enet:1.3
+	virtual/jpeg
 	media-libs/libpng
 	dev-libs/libxml2
 	media-libs/libvorbis
 	media-libs/libogg
-	virtual/jpeg"
+	net-misc/curl"
 
 DEPEND="${RDEPEND}
 	dev-lang/nasm
@@ -52,13 +53,14 @@ pkg_setup() {
 }
 
 src_compile() {
+	UPDATE_ARGS="--with-system-enet"
+
 	if ! use editor ; then
-		sed -i "s:--atlas::" "${S}/build/workspaces/update-workspaces.sh" \
-		|| die "AtlasUI sed failed"
+		UPDATE_ARGS="${UPDATE_ARGS} --disable-atlas"
 	fi
 
 	cd "${S}/build/workspaces"
-	./update-workspaces.sh || die "update-workspaces.sh failed"
+	./update-workspaces.sh ${UPDATE_ARGS} || die "update-workspaces.sh failed"
 	cd gcc
 
 	TARGETS="pyrogenesis Collada"

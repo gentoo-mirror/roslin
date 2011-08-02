@@ -2,6 +2,12 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*kadu-desktop_docking-0.10.0_rc1 (02 Aug 2011)
+
+  02 Aug 2011; Piotr Szymaniak <szarpaj@grubelek.pl>
+  +kadu-desktop_docking-0.10.0_rc1.ebuild:
+  Bumped.
+
 *kadu-desktop_docking-0.10.0_beta2 (11 Jul 2011)
 
   11 Jul 2011; Michał Ziąbkowski <mziab@o2.pl>

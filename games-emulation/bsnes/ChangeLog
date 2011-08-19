@@ -1,6 +1,11 @@
 # ChangeLog for games-emulation/bsnes
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 
+*bsnes-0.081 (19 Aug 2011)
+
+  19 Aug 2011; Michał Ziąbkowski <mziab@o2.pl> +bsnes-0.081.ebuild:
+  Bumped.
+
 *bsnes-0.080 (04 Jul 2011)
 *bsnes-0.079 (04 Jul 2011)
 *bsnes-0.078 (04 Jul 2011)

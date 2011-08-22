@@ -4,13 +4,14 @@
 
 EAPI=2
 
-inherit eutils autotools git
+inherit eutils autotools git-2
 
 DESCRIPTION="libsnes implementation utilizing the snes9x core"
 HOMEPAGE="https://github.com/Themaister/snes9x-libsnes/"
 SRC_URI=""
 
 EGIT_REPO_URI="git://github.com/Themaister/snes9x-libsnes.git"
+EGIT_SOURCEDIR="${WORKDIR}/${P}"
 
 LICENSE="as-is GPL-2 LGPL-2.1"
 SLOT="0"
@@ -22,10 +23,6 @@ RDEPEND=""
 DEPEND="!dev-games/libsnes"
 
 S="${WORKDIR}/${P}/unix"
-
-src_unpack() {
-	S="${WORKDIR}/${P}" git_fetch
-}
 
 src_prepare() {
 	epatch "${FILESDIR}/${PN}-build.patch"

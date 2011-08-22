@@ -6,7 +6,7 @@ EAPI=2
 
 EGIT_REPO_URI="git://gs_server.gerbilsoft.ddns.info/srv/git/gens.git"
 
-inherit autotools games git
+inherit autotools games git-2
 
 DESCRIPTION="A Gens fork which aims to clean up the source code and combine features from other forks"
 HOMEPAGE="http://info.sonicretro.org/Gens/GS"

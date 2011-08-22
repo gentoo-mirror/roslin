@@ -2,6 +2,9 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  22 Aug 2011; Michał Ziąbkowski <mziab@o2.pl> SSNES-Phoenix-9999.ebuild:
+  Migrated to git-2.eclass.
+
 *SSNES-Phoenix-9999 (23 Feb 2011)
 
   23 Feb 2011; Michał Ziąbkowski <mziab@o2.pl> +SSNES-Phoenix-9999.ebuild,

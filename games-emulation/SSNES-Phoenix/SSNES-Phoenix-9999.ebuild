@@ -4,7 +4,7 @@
 
 EAPI=3
 
-inherit games git
+inherit games git-2
 
 DESCRIPTION="A simple GUI for SSNES using the phoenix toolkit"
 HOMEPAGE="https://github.com/Themaister/SSNES-Phoenix"

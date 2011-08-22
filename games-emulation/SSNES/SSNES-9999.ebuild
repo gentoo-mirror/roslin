@@ -4,7 +4,7 @@
 
 EAPI=2
 
-inherit games confutils git
+inherit games confutils git-2
 
 DESCRIPTION="Simple SNES emulator frontend based on libsnes"
 HOMEPAGE="https://github.com/Themaister/SSNES"
@@ -15,7 +15,7 @@ EGIT_REPO_URI="git://github.com/Themaister/${PN}.git"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS=""
-IUSE="alsa cg dynamic filters ffmpeg jack libsamplerate openal oss pulseaudio truetype xml"
+IUSE="alsa cg dynamic ffmpeg jack libsamplerate netplay openal oss pulseaudio truetype xml"
 
 RDEPEND="media-libs/libsdl[joystick]
 	alsa? ( media-libs/alsa-lib )
@@ -50,10 +50,10 @@ src_configure() {
 		$(use_enable cg) \
 		$(use_enable xml) \
 		$(use_enable truetype freetype) \
-		$(use_enable filters filter) \
 		$(use_enable pulseaudio pulse) \
 		$(use_enable libsamplerate src) \
 		$(use_enable dynamic) \
+		$(use_enable netplay) \
 		|| die
 }
 

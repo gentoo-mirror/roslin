@@ -15,7 +15,7 @@ HOMEPAGE="http://vba-m.ngemu.com"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS=""
-IUSE="gbalink gtk lirc nls sdl"
+IUSE="ffmpeg gbalink gtk lirc nls sdl wxwidgets"
 
 RDEPEND="gtk? ( >=dev-cpp/libglademm-2.4.0
 	>=dev-cpp/glibmm-2.4.0:2
@@ -28,10 +28,12 @@ RDEPEND="gtk? ( >=dev-cpp/libglademm-2.4.0
 	media-libs/libsdl[joystick]
 	gbalink? ( media-libs/libsfml )
 	lirc? ( app-misc/lirc )
+	ffmpeg? ( virtual/ffmpeg )
+	wxwidgets? ( x11-libs/wxGTK )
 	virtual/opengl"
 
 DEPEND="${RDEPEND}
-	dev-lang/nasm
+	x86? ( dev-lang/nasm )
 	>=dev-util/cmake-2.4.0
 	gtk? ( dev-util/pkgconfig
 	sys-devel/gettext )"
@@ -41,7 +43,7 @@ S="${WORKDIR}/${PN}"
 DOCS="doc/DevInfo.txt doc/ReadMe.SDL.txt"
 
 pkg_setup() {
-	confutils_require_any sdl gtk
+	confutils_require_any sdl gtk wxwidgets
 }
 
 src_prepare() {
@@ -50,6 +52,8 @@ src_prepare() {
 	    -e "s:\${CMAKE_INSTALL_PREFIX}/::" \
 	    -e "s: share: ../share:g" \
 	    	    || die "sed failed"
+
+	epatch "${FILESDIR}"/${PN}-build.patch
 }
 
 src_configure() {
@@ -58,6 +62,10 @@ src_configure() {
 	$(cmake-utils_use_enable lirc LIRC)
 	$(cmake-utils_use_enable nls NLS)
 	$(cmake-utils_use_enable gbalink LINK)
+	$(cmake-utils_use_enable ffmpeg FFMPEG)
+	$(cmake-utils_use_enable x86 ASM_CORE)
+	$(cmake-utils_use_enable x86 ASM_SCALERS)
+	$(cmake-utils_use_enable wxwidgets WX)
 	-DCMAKE_INSTALL_PREFIX:PATH='${GAMES_PREFIX}'
 	-DDATA_INSTALL_DIR:PATH='${GAMES_DATADIR}/${PN}'"
 

@@ -2,6 +2,10 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  22 Aug 2011; Michał Ziąbkowski <mziab@o2.pl> vbam-9999.ebuild,
+  +files/vbam-build.patch:
+  Updated. Doesn't work due to missing source files, though.
+
   06 May 2011; Michał Ziąbkowski <mziab@o2.pl> vbam-9999.ebuild:
   Fixed gtk+ dep.
 

@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-inherit eutils games git
+inherit eutils games git-2
 
 DESCRIPTION="Conservative Quake 1 engine, QuakeWorld client/server"
 HOMEPAGE="http://disenchant.net/engine.html"

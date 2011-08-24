@@ -2,6 +2,11 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*kadu-0.10.0 (24 Aug 2011)
+
+  24 Aug 2011; Michał Ziąbkowski <mziab@o2.pl> +kadu-0.10.0.ebuild:
+  Bumped.
+
 *kadu-0.10.0_rc1 (02 Aug 2011)
 
   02 Aug 2011; Piotr Szymaniak <szarpaj@grubelek.pl> +kadu-0.10.0_rc1.ebuild:

@@ -20,7 +20,8 @@ case ${PV} in
 	*) KADU_SRC_DIR="stable" ;;
 esac
 
-SRC_URI="http://kadu.net/download/${KADU_SRC_DIR}/kadu-${K_PV}.tar.bz2"
+SRC_URI="http://download.kadu.im/${KADU_SRC_DIR}/kadu-${K_PV}.tar.bz2
+	http://kadu.net/download/${KADU_SRC_DIR}/kadu-${K_PV}.tar.bz2"
 
 NAME="${PN#*-}"
 

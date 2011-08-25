@@ -32,19 +32,12 @@ RDEPEND=">=net-im/kadu-core-${PV}[debug?]
 	ssl? ( >=net-im/kadu-encryption_ng_simlite-${PV}[debug?] )
 	!net-im/kadu-alsa_sound
 	!net-im/kadu-amarok2_mediaplayer
-	!net-im/kadu-anonymous_check
 	!net-im/kadu-audacious_mediaplayer
 	!net-im/kadu-bmpx_mediaplayer
 	!net-im/kadu-dragon_mediaplayer
 	!net-im/kadu-mpris_mediaplayer
-	!net-im/kadu-globalhotkeys
 	!net-im/kadu-kde_notify
-	!net-im/kadu-lednotify
-	!net-im/kadu-mime_tex
-	!net-im/kadu-nextinfo
-	!net-im/kadu-panelkadu
 	!net-im/kadu-parser_extender
-	!net-im/kadu-senthistory
 	!net-im/kadu-server_monitor
 	!net-im/kadu-splitmessages
 	!net-im/kadu-split_messages

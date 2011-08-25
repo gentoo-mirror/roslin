@@ -6,7 +6,7 @@ inherit kadu
 
 DESCRIPTION="Configuration wizard for Kadu"
 HOMEPAGE="http://kadu.net"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND=">=x11-libs/qt-gui-4.7.0

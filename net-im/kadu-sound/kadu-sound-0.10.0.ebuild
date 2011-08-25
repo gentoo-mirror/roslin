@@ -6,7 +6,7 @@ inherit kadu
 
 DESCRIPTION="Sound support module for Kadu"
 HOMEPAGE="http://kadu.net"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND=">=x11-libs/qt-gui-4.7.0

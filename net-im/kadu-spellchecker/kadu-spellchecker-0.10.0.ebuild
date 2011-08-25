@@ -8,7 +8,7 @@ inherit kadu
 
 DESCRIPTION="Spellchecker module for Kadu"
 HOMEPAGE="http://kadu.net"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 IUSE="aspell +enchant"
 
 RDEPEND=">=x11-libs/qt-gui-4.7.0

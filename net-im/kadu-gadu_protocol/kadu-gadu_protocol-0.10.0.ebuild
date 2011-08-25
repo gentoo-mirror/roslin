@@ -8,7 +8,7 @@ inherit kadu
 
 DESCRIPTION="GaduGadu support module for Kadu"
 HOMEPAGE="http://kadu.net"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND=">=x11-libs/qt-gui-4.7.0

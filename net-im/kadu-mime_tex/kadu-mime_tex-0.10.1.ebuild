@@ -7,7 +7,7 @@ inherit kadu
 DESCRIPTION="Mathematical TeX formula support in Kadu chats"
 HOMEPAGE="http://www.kadu.net/w/Mime_tex"
 SRC_URI="http://kadu.net/~weagle/${NAME}-${PV}.tar.bz2"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND=">=x11-libs/qt-gui-4.7.0

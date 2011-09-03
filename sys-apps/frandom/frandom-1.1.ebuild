@@ -29,5 +29,5 @@ src_install() {
 	linux-mod_src_install
 
 	insinto /etc/udev/rules.d/
-	doins "${FILESDIR}/10-${PN}.rules"
+	doins "${S}"/10-${PN}.rules
 }

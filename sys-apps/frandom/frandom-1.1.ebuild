@@ -8,9 +8,9 @@ inherit linux-mod
 
 DESCRIPTION="Fast kernel-land pseudo-random number generator using the RC4 algorithm"
 HOMEPAGE="http://billauer.co.il/frandom.html"
-SRC_URI="mirror://sourceforge/project/frandom/frandom/${P}/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/project/frandom//${P}.tar.gz"
 
-LICENSE="GPL-1"
+LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
@@ -29,5 +29,5 @@ src_install() {
 	linux-mod_src_install
 
 	insinto /etc/udev/rules.d/
-	doins "${FILESDIR}/60-${PN}.rules"
+	doins "${FILESDIR}/10-${PN}.rules"
 }

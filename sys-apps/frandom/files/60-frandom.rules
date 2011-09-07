@@ -1,2 +1,0 @@
-ACTION=="add", DEVPATH=="/module/frandom" RUN+="/bin/sh -c '/bin/mknod -m 0444 /dev/frandom c 235 11'", RUN+="/bin/sh -c '/bin/mknod -m 0444 /dev/erandom c 235 12'"
-ACTION=="remove", DEVPATH=="/module/frandom", RUN+="/bin/sh -c 'rm /dev/{e,f}random'"

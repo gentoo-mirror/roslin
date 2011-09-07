@@ -2,6 +2,16 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  03 Sep 2011; Piotr Szymaniak <szarpaj@grubelek.pl> -files/10-frandom.rules,
+  frandom-1.1.ebuild:
+  We should use .rules from the tarball…
+
+*frandom-1.1 (03 Sep 2011)
+
+  03 Sep 2011; Piotr Szymaniak <szarpaj@grubelek.pl> +files/10-frandom.rules,
+  -files/60-frandom.rules, -frandom-1.0.ebuild, +frandom-1.1.ebuild:
+  Version bump, changed .rules file.
+
   28 Jan 2011; Piotr Szymaniak <szarpaj@grubelek.pl> frandom-1.0.ebuild,
   +metadata.xml:
   Added metadata, removed trailing whitespace.

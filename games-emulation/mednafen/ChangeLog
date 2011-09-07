@@ -2,6 +2,11 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*mednafen-0.9.18 (07 Sep 2011)
+
+  07 Sep 2011; Michał Ziąbkowski <mziab@o2.pl> +mednafen-0.9.18.ebuild:
+  Bumped.
+
   10 Jun 2011; Michał Ziąbkowski <mziab@o2.pl>
   files/mednafen-0.9.17-gcc46.patch:
   Updated gcc-4.6 patch as per upstream's change.

@@ -21,7 +21,7 @@ case ${PV} in
 esac
 
 SRC_URI="http://download.kadu.im/${KADU_SRC_DIR}/kadu-${K_PV}.tar.bz2
-	http://kadu.net/download/${KADU_SRC_DIR}/kadu-${K_PV}.tar.bz2"
+	http://kadu.googlecode.com/files/kadu-${K_PV}.tar.bz2"
 
 NAME="${PN#*-}"
 

@@ -32,6 +32,7 @@ S=${WORKDIR}/${PN}
 
 pkg_setup() {
 	append-flags -fno-strict-overflow
+	append-flags -fomit-frame-pointer
 	games_pkg_setup
 }
 

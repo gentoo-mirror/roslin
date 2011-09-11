@@ -2,6 +2,9 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  11 Sep 2011; Michał Ziąbkowski <mziab@o2.pl> mednafen-0.9.18-r1.ebuild:
+  Added -fomit-frame-pointer to make sure it builds.
+
 *mednafen-0.9.18-r1 (11 Sep 2011)
 
   11 Sep 2011; Michał Ziąbkowski <mziab@o2.pl> +mednafen-0.9.18-r1.ebuild:

@@ -2,6 +2,12 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*mednafen-0.9.18-r1 (11 Sep 2011)
+
+  11 Sep 2011; Michał Ziąbkowski <mziab@o2.pl> +mednafen-0.9.18-r1.ebuild:
+  Apparently -fno-strict-overflow is required for the new WIP to run properly.
+  Bumped with fix.
+
 *mednafen-0.9.18 (07 Sep 2011)
 
   07 Sep 2011; Michał Ziąbkowski <mziab@o2.pl> +mednafen-0.9.18.ebuild:

@@ -22,9 +22,10 @@ RDEPEND="app-crypt/qca:2
 
 DEPEND="${RDEPEND}"
 
-src_prepare() {
+src_configure() {
 	# Disable plugins
-	sed -e "/plugins/d" -i CMakeLists.txt || die
+	local mycmakeargs="-DBUILD_PLUGINS:BOOL=OFF"
+	kadu_src_configure
 }
 
 pkg_postinst() {

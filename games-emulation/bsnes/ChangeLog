@@ -1,6 +1,13 @@
 # ChangeLog for games-emulation/bsnes
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 
+*bsnes-0.082-r1 (16 Sep 2011)
+
+  16 Sep 2011; Michał Ziąbkowski <mziab@o2.pl> +bsnes-0.082-r1.ebuild,
+  +files/bsnes-0.082-global-paths.patch:
+  Bumped. Now installs cheat database, shaders and optionally filters globally
+  and uses them if none are found in the config dir.
+
 *bsnes-0.082 (21 Aug 2011)
 
   21 Aug 2011; Michał Ziąbkowski <mziab@o2.pl> +bsnes-0.082.ebuild:

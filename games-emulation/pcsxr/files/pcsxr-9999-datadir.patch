@@ -3,7 +3,7 @@ index 1594f1c..8cb0f27 100644
 --- a/gui/Makefile.am
 +++ b/gui/Makefile.am
 @@ -1,5 +1,5 @@
- AM_CPPFLAGS = -DPACKAGE_DATA_DIR=\"${datadir}/pcsx/\" \
+ AM_CPPFLAGS = -DPACKAGE_DATA_DIR=\"${datadir}/pcsxr/\" \
 -	-DPIXMAPDIR=\"${datadir}/pixmaps/\" \
 +	-DPIXMAPDIR=\"/usr/share/pixmaps/\" \
  	-DLOCALE_DIR=\"${datadir}/locale/\" \
@@ -14,11 +14,24 @@ index ea6e2d2..2f04173 100644
 --- a/pixmaps/Makefile.am
 +++ b/pixmaps/Makefile.am
 @@ -1,7 +1,7 @@
- pixmapdir = "$(datadir)/pcsx"
- pixmap_DATA = pcsx.jpg
+ pixmapdir = "$(datadir)/pcsxr"
+ pixmap_DATA = pcsxr.png iso-open.png iso-reopen.png cd.png cdr.png gpu.png memcard.png pad.png play.png spu.png
  
 -icondir = "$(datadir)/pixmaps"
 +icondir = "/usr/share/pixmaps"
- icon_DATA = pcsx-icon.png
+ icon_DATA = pcsxr-icon.png
  
- EXTRA_DIST = pcsx.jpg pcsx-icon.png
+ EXTRA_DIST = pcsxr.png iso-open.png iso-reopen.png cd.png cdr.png gpu.png memcard.png pad.png play.png spu.png pcsxr-icon.png
+diff --git a/data/Makefile.am b/data/Makefile.am
+index e2b3ef5..270cd6e 100644
+--- a/data/Makefile.am
++++ b/data/Makefile.am
+@@ -1,7 +1,7 @@
+ glade_DATA = pcsxr.glade2
+ gladedir = $(datadir)/pcsxr
+ 
+-desktopdir = $(datadir)/applications
++desktopdir = /usr/share/applications/applications
+ desktop_DATA = pcsxr.desktop
+ 
+ EXTRA_DIST = $(glade_DATA) pcsxr.desktop

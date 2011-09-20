@@ -16,7 +16,7 @@ SRC_URI=""
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS=""
-IUSE="alsa cdio opengl oss pulseaudio +sdl-sound"
+IUSE="alsa cdio openal opengl oss pulseaudio +sdl-sound"
 
 RDEPEND="x11-libs/gtk+:2
 	gnome-base/libglade
@@ -26,6 +26,7 @@ RDEPEND="x11-libs/gtk+:2
 	x11-libs/libXv
 	x11-libs/libXtst
 	alsa? ( media-libs/alsa-lib )
+	openal? ( media-libs/openal )
 	opengl? ( virtual/opengl
 	x11-libs/libXxf86vm )
 	pulseaudio? ( >=media-sound/pulseaudio-0.9.16 )
@@ -38,14 +39,16 @@ DEPEND="${RDEPEND}
 
 
 pkg_setup() {
-	if use sdl-sound; then
-		sound_backend="sdl"
+	if use alsa; then
+		sound_backend="alsa"
 	elif use pulseaudio; then
 		sound_backend="pulseaudio"
-	elif use alsa; then
-		sound_backend="alsa"
 	elif use oss; then
 		sound_backend="oss"
+	elif use openal; then
+		sound_backend="openal"
+	elif use sdl-sound; then
+		sound_backend="sdl"
 	else
 		sound_backend="null"
 	fi

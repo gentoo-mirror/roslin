@@ -15,7 +15,7 @@ EGIT_REPO_URI="git://github.com/Themaister/${PN}.git"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS=""
-IUSE="alsa cg dynamic ffmpeg jack libsamplerate netplay openal oss pulseaudio truetype xml"
+IUSE="alsa cg dynamic ffmpeg jack libsamplerate netplay openal oss pulseaudio truetype xml xv"
 
 RDEPEND="media-libs/libsdl[joystick]
 	alsa? ( media-libs/alsa-lib )
@@ -27,6 +27,7 @@ RDEPEND="media-libs/libsdl[joystick]
 	truetype? ( media-libs/freetype:2 )
 	pulseaudio? ( media-sound/pulseaudio )
 	libsamplerate? ( media-libs/libsamplerate )
+	xv? ( x11-libs/libXv )
 	!dynamic? ( || ( dev-games/libsnes
 	dev-games/snes9x-libsnes ) )"
 DEPEND="dev-util/pkgconfig

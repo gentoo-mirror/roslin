@@ -2,6 +2,12 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*osmose-0.9.96-r1 (23 Sep 2011)
+
+  23 Sep 2011; Michał Ziąbkowski <mziab@o2.pl> +osmose-0.9.96-r1.ebuild,
+  +files/osmose-unbundle-minizip.patch:
+  Bumped with patch to unbundle minizip.
+
 *osmose-0.9.96 (06 Jun 2011)
 
   06 Jun 2011; Michał Ziąbkowski <mziab@o2.pl> -osmose-0.9.1.ebuild,

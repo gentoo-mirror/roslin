@@ -17,11 +17,14 @@ SLOT="0"
 KEYWORDS=""
 IUSE="debug"
 
-DEPEND="x11-libs/qt-gui:4"
+DEPEND="x11-libs/qt-gui:4
+	>=dev-libs/quazip-0.4.3-r1"
 RDEPEND="${DEPEND}
 	media-video/mplayer[ass,png]"
 
 S="${WORKDIR}/${PN}"
+
+PATCHES=("${FILESDIR}/${PN}-unbundle-quazip.patch")
 
 src_prepare() {
 	# Upstream Makefile sucks
@@ -36,6 +39,8 @@ src_prepare() {
 		sed -i 's:# \(DEFINES += NO_DEBUG_ON_CONSOLE\):\1:g' \
 			"${S}"/src/umplayer.pro || die "sed failed"
 	fi
+
+	qt4-r2_src_prepare
 }
 
 src_configure() {

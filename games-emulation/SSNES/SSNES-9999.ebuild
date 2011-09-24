@@ -28,9 +28,11 @@ RDEPEND="media-libs/libsdl[joystick]
 	pulseaudio? ( media-sound/pulseaudio )
 	libsamplerate? ( media-libs/libsamplerate )
 	xv? ( x11-libs/libXv )
-	!dynamic? ( || ( dev-games/libsnes
-	dev-games/snes9x-libsnes ) )"
+	|| ( dev-games/libsnes
+	dev-games/snes9x-libsnes )"
 DEPEND="dev-util/pkgconfig
+	!dynamic? ( || ( dev-games/libsnes
+	dev-games/snes9x-libsnes ) )
 	${RDEPEND}"
 
 pkg_setup() {

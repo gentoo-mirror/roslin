@@ -1,0 +1,162 @@
+diff --git a/Makefiles/Makefile.SDL.UNIX.GCC b/Makefiles/Makefile.SDL.UNIX.GCC
+index 030c85b..6cc4368 100644
+--- a/Makefiles/Makefile.SDL.UNIX.GCC
++++ b/Makefiles/Makefile.SDL.UNIX.GCC
+@@ -66,10 +66,10 @@ OUTFILE = $(BIN_DIR)/Supermodel
+ 
+ CC = gcc
+ LD = gcc
+-COMPILER_FLAGS = `sdl-config --cflags` -ISrc/ -ISrc/OSD/SDL/ -ISrc/Pkgs/ -c -Wall -O3
++COMPILER_FLAGS = `sdl-config --cflags` -ISrc/ -ISrc/OSD/SDL/ -c -Wall -O3 `pkg-config --cflags minizip glew`
+ CFLAGS = $(COMPILER_FLAGS)
+ CPPFLAGS = $(COMPILER_FLAGS)
+-LFLAGS = -o $(OUTFILE) -L$(SDL_LIBPATH) -lGL -lGLU -lSDL -lz -lm -lstdc++
++LFLAGS = -o $(OUTFILE) -L$(SDL_LIBPATH) -lGL -lGLU -lSDL -lz `pkg-config --libs minizip glew` -lm -lstdc++
+ 
+ #
+ # Build options...
+@@ -90,7 +90,7 @@ endif
+ #
+ HEADERS = Src/Supermodel.h Src/Games.h Src/OSD/SDL/Types.h
+ OBJ = $(OBJ_DIR)/PPCDisasm.o $(OBJ_DIR)/Games.o $(OBJ_DIR)/Config.o $(OBJ_DIR)/INIFile.o $(OBJ_DIR)/BlockFile.o $(OBJ_DIR)/93C46.o \
+-	$(OBJ_DIR)/ROMLoad.o $(OBJ_DIR)/unzip.o $(OBJ_DIR)/ioapi.o $(OBJ_DIR)/Error.o $(OBJ_DIR)/glew.o $(OBJ_DIR)/Shader.o \
++	$(OBJ_DIR)/ROMLoad.o $(OBJ_DIR)/Error.o $(OBJ_DIR)/Shader.o \
+ 	$(OBJ_DIR)/Real3D.o $(OBJ_DIR)/Render3D.o $(OBJ_DIR)/Models.o $(OBJ_DIR)/Render2D.o $(OBJ_DIR)/TileGen.o \
+ 	$(OBJ_DIR)/Model3.o $(OBJ_DIR)/ppc.o $(OBJ_DIR)/Main.o $(OBJ_DIR)/Audio.o $(OBJ_DIR)/Thread.o $(OBJ_DIR)/SoundBoard.o \
+ 	$(OBJ_DIR)/SCSP.o $(OBJ_DIR)/SCSPDSP.o $(OBJ_DIR)/68K.o $(OBJ_DIR)/m68kcpu.o $(OBJ_DIR)/m68kopnz.o $(OBJ_DIR)/m68kopdm.o \
+@@ -203,12 +203,6 @@ $(OBJ_DIR)/%.o: Src/Inputs/%.cpp Src/Inputs/%.h $(HEADERS)
+ $(OBJ_DIR)/%.o:	Src/OSD/SDL/%.cpp $(HEADERS)
+ 	$(CC) $< $(CPPFLAGS) -o $(OBJ_DIR)/$(*F).o
+ 	
+-$(OBJ_DIR)/%.o:	Src/Pkgs/%.c Src/Pkgs/%.h
+-	$(CC) $< $(CFLAGS) -o $(OBJ_DIR)/$(*F).o
+-
+-$(OBJ_DIR)/%.o:	Src/Pkgs/%.c
+-	$(CC) $< $(CFLAGS) -o $(OBJ_DIR)/$(*F).o
+-
+ #
+ # AMP MPEG decoder library
+ #
+diff --git a/Src/Graphics/Render2D.cpp b/Src/Graphics/Render2D.cpp
+index cb1fbfd..e211f6a 100644
+--- a/Src/Graphics/Render2D.cpp
++++ b/Src/Graphics/Render2D.cpp
+@@ -37,7 +37,7 @@
+  */
+ 
+ #include <string.h>
+-#include "Pkgs/glew.h"
++#include "glew.h"
+ #include "Supermodel.h"
+ #include "Graphics/Shaders2D.h"	// fragment and vertex shaders
+ 
+diff --git a/Src/Graphics/Render2D.h b/Src/Graphics/Render2D.h
+index 44056ed..7e66dc9 100644
+--- a/Src/Graphics/Render2D.h
++++ b/Src/Graphics/Render2D.h
+@@ -28,7 +28,7 @@
+ #ifndef INCLUDED_RENDER2D_H
+ #define INCLUDED_RENDER2D_H
+ 
+-#include "Pkgs/glew.h"
++#include "glew.h"
+ 
+ 
+ // Dirty rectangle size, must be multiples of 4 because masking code relies on this
+diff --git a/Src/Graphics/Render3D.h b/Src/Graphics/Render3D.h
+index 8f25784..d4abeee 100644
+--- a/Src/Graphics/Render3D.h
++++ b/Src/Graphics/Render3D.h
+@@ -28,7 +28,7 @@
+ #ifndef INCLUDED_RENDER3D_H
+ #define INCLUDED_RENDER3D_H
+ 
+-#include "Pkgs/glew.h"
++#include "glew.h"
+ 
+ /******************************************************************************
+  Internal Definitions and Data Structures
+diff --git a/Src/Graphics/Shader.cpp b/Src/Graphics/Shader.cpp
+index 1daf0d6..046892d 100644
+--- a/Src/Graphics/Shader.cpp
++++ b/Src/Graphics/Shader.cpp
+@@ -44,7 +44,7 @@
+ 
+ #include <new>
+ #include <stdio.h>
+-#include "Pkgs/glew.h"
++#include "glew.h"
+ #include "Supermodel.h"
+ 
+ 
+diff --git a/Src/Graphics/Shader.h b/Src/Graphics/Shader.h
+index 60a00f2..bed944d 100644
+--- a/Src/Graphics/Shader.h
++++ b/Src/Graphics/Shader.h
+@@ -28,7 +28,7 @@
+ #ifndef INCLUDED_SHADER_H
+ #define INCLUDED_SHADER_H
+ 
+-#include "Pkgs/glew.h"
++#include "glew.h"
+ 
+ /*
+  * LoadShaderProgram(shaderProgramPtr, vertexShaderPtr, fragmentShaderPtr, 
+diff --git a/Src/OSD/SDL/Main.cpp b/Src/OSD/SDL/Main.cpp
+index e3286b9..da75147 100644
+--- a/Src/OSD/SDL/Main.cpp
++++ b/Src/OSD/SDL/Main.cpp
+@@ -37,7 +37,7 @@
+ #include <cstdio>
+ #include <cstring>
+ #include <cstdarg>
+-#include "Pkgs/glew.h"
++#include "glew.h"
+ #ifdef SUPERMODEL_OSX
+ #include <SDL/SDL.h>
+ #else
+diff --git a/Src/Pkgs/glew.c b/Src/Pkgs/glew.c
+index 934f575..d5daf2d 100644
+--- a/Src/Pkgs/glew.c
++++ b/Src/Pkgs/glew.c
+@@ -29,11 +29,11 @@
+ ** THE POSSIBILITY OF SUCH DAMAGE.
+ */
+ 
+-#include "Pkgs/glew.h"
++#include "glew.h"
+ #if defined(_WIN32)
+-#  include "Pkgs/wglew.h"
++#  include "wglew.h"
+ #elif !defined(__APPLE__) || defined(GLEW_APPLE_GLX)
+-#  include "Pkgs/glxew.h"
++#  include "glxew.h"
+ #endif
+ 
+ /*
+diff --git a/Src/Pkgs/glxew.h b/Src/Pkgs/glxew.h
+index 566b507..4ead4e7 100644
+--- a/Src/Pkgs/glxew.h
++++ b/Src/Pkgs/glxew.h
+@@ -97,7 +97,7 @@
+ #include <X11/Xlib.h>
+ #include <X11/Xutil.h>
+ #include <X11/Xmd.h>
+-#include "Pkgs/glew.h"
++#include "glew.h"
+ 
+ #ifdef __cplusplus
+ extern "C" {
+diff --git a/Src/ROMLoad.cpp b/Src/ROMLoad.cpp
+index def9104..36469e3 100644
+--- a/Src/ROMLoad.cpp
++++ b/Src/ROMLoad.cpp
+@@ -28,7 +28,7 @@
+ #include <new>
+ #include <cstring>
+ #include "Supermodel.h"
+-#include "Pkgs/unzip.h"
++#include "unzip.h"
+ 
+ 
+ /*

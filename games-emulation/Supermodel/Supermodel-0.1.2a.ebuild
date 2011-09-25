@@ -9,8 +9,8 @@ inherit games
 MY_P="${PN}_${PV}_Src"
 
 DESCRIPTION="A Sega Model 3 Arcade Emulator"
-HOMEPAGE="http://www.trzy.org/Supermodel/"
-SRC_URI="http://www.trzy.org/Supermodel/Files/${MY_P}.zip"
+HOMEPAGE="http://www.supermodel3.com/"
+SRC_URI="http://www.supermodel3.com/Files/${MY_P}.zip"
 
 LICENSE="GPL-3"
 SLOT="0"

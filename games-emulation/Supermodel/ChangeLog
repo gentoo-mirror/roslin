@@ -2,6 +2,13 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*Supermodel-0.2a (25 Sep 2011)
+
+  25 Sep 2011; Michał Ziąbkowski <mziab@o2.pl> Supermodel-0.1.2a.ebuild,
+  Supermodel-0.1.2a-r1.ebuild, +Supermodel-0.2a.ebuild,
+  +files/Supermodel-0.2a-unbundle-libs.patch:
+  Bumped. Still has some issues with parallel make. Updated URIs.
+
 *Supermodel-0.1.2a-r1 (23 Sep 2011)
 
   23 Sep 2011; Michał Ziąbkowski <mziab@o2.pl> +Supermodel-0.1.2a-r1.ebuild,

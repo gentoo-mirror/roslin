@@ -26,10 +26,14 @@ S="${WORKDIR}/${MY_P}"
 
 src_prepare() {
 	ln -s Makefiles/Makefile.SDL.UNIX.GCC Makefile
-	epatch "${FILESDIR}"/${PN}-unbundle-libs.patch
+	epatch "${FILESDIR}"/${P}-unbundle-libs.patch
+}
+
+src_compile() {
+	emake -j1 || die
 }
 
 src_install() {
-	dogamesbin ${PN} || die
-	dodoc README.txt || die
+	dogamesbin bin/${PN} || die
+	dodoc Docs/README.txt || die
 }

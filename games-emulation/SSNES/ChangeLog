@@ -2,6 +2,10 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  26 Sep 2011; Michał Ziąbkowski <mziab@o2.pl> SSNES-9999.ebuild,
+  metadata.xml:
+  Added sdl-image flag.
+
   24 Sep 2011; Michał Ziąbkowski <mziab@o2.pl> SSNES-9999.ebuild:
   Fixed deps with USE=dynamic. A libsnes implementation is always required at
   runtime, but not necessarily at build time.

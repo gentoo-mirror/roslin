@@ -10,6 +10,7 @@
   <flag name='cg'>Enables support for NVidia CG shaders</flag>
   <flag name='dynamic'>Enables libsnes hot-swapping via the config</flag>
   <flag name='netplay'>Enables netplay support</flag>
+  <flag name='sdl-image'>Enables sdl-image support for image loading</flag>
   <flag name='xml'>Enables support for bsnes xml-style shaders</flag>
 </use>
 </pkgmetadata>

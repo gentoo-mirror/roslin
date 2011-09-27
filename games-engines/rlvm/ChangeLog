@@ -2,6 +2,10 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  27 Sep 2011; Michał Ziąbkowski <mziab@o2.pl> rlvm-0.09.ebuild,
+  rlvm-0.10.ebuild, rlvm-0.11.ebuild, rlvm-0.12.ebuild:
+  Ported from icky snapshot stuff to proper git tags.
+
 *rlvm-0.12 (17 May 2011)
 
   17 May 2011; Michał Ziąbkowski <mziab@o2.pl> +rlvm-0.12.ebuild,

@@ -4,11 +4,14 @@
 
 EAPI=2
 
-inherit games
+inherit games git-2
 
 DESCRIPTION="An open source implementation of the RealLive virtual machine for Linux and OSX"
 HOMEPAGE="http://www.elliotglaysher.org/rlvm/"
-SRC_URI="http://github.com/eglaysher/${PN}/tarball/release-${PV} -> ${P}.tar.gz"
+SRC_URI=""
+
+EGIT_REPO_URI="git://github.com/eglaysher/${PN}.git"
+EGIT_COMMIT="release-${PV}"
 
 LICENSE="GPL-3"
 SLOT="0"
@@ -26,10 +29,7 @@ RDEPEND="media-libs/libsdl[opengl]
 	x11-libs/gtk+:2"
 
 DEPEND="${RDEPEND}
-	dev-util/scons
-	>=net-misc/wget-1.12-r3"
-
-S="${WORKDIR}/eglaysher-rlvm-bee99d3"
+	dev-util/scons"
 
 src_prepare() {
 	# custom flag goodness

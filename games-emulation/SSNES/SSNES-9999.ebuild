@@ -59,6 +59,7 @@ src_configure() {
 		$(use_enable dynamic) \
 		$(use_enable netplay) \
 		$(use_enable sdl-image sdl_image) \
+		$(use_enable xv xvideo) \
 		|| die
 }
 

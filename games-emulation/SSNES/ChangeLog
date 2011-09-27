@@ -2,6 +2,11 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  27 Sep 2011; Michał Ziąbkowski <mziab@o2.pl> SSNES-0.8.2.ebuild,
+  SSNES-9999.ebuild:
+  libsnes dep can now be satisfied by C++98 fork, which is now also used as the
+  default due to not being tied down to recent GCC versions.
+
 *SSNES-0.8.2 (27 Sep 2011)
 
   27 Sep 2011; Michał Ziąbkowski <mziab@o2.pl> +SSNES-0.8.2.ebuild:

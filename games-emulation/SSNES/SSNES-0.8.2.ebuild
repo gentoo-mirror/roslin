@@ -30,10 +30,12 @@ RDEPEND="media-libs/libsdl[joystick]
 	sdl-image? ( media-libs/sdl-image )
 	libsamplerate? ( media-libs/libsamplerate )
 	xv? ( x11-libs/libXv )
-	|| ( dev-games/libsnes
+	|| ( dev-games/libsnes-c++98
+	dev-games/libsnes
 	dev-games/snes9x-libsnes )"
 DEPEND="dev-util/pkgconfig
-	!dynamic? ( || ( dev-games/libsnes
+	!dynamic? ( || ( dev-games/libsnes-c++98
+	dev-games/libsnes
 	dev-games/snes9x-libsnes ) )
 	${RDEPEND}"
 

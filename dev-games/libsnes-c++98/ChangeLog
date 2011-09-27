@@ -1,0 +1,11 @@
+# ChangeLog for dev-games/libsnes-c++98
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*libsnes-c++98-0.82 (27 Sep 2011)
+
+  27 Sep 2011; Michał Ziąbkowski <mziab@o2.pl> +libsnes-c++98-0.82.ebuild,
+  +files/libsnes-c++98-0.82-makefile.patch, +metadata.xml:
+  New ebuild for libsnes C++98 fork. Based mostly on the ebuild from bug
+  #380887.
+

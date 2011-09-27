@@ -2,6 +2,11 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*SSNES-0.8.2 (27 Sep 2011)
+
+  27 Sep 2011; Michał Ziąbkowski <mziab@o2.pl> +SSNES-0.8.2.ebuild:
+  Added regular snapshot.
+
   27 Sep 2011; Michał Ziąbkowski <mziab@o2.pl> SSNES-9999.ebuild:
   Oops, forgot to add xvideo in src_configure.
 

@@ -17,7 +17,8 @@ KEYWORDS=""
 IUSE="captcha"
 
 DEPEND=""
-RDEPEND="dev-perl/WWW-Curl
+RDEPEND="dev-perl/URI
+	dev-perl/WWW-Curl
 	captcha? ( app-text/tesseract
 	dev-perl/GD )"
 

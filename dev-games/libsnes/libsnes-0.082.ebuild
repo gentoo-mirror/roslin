@@ -24,6 +24,7 @@ REQUIRED_USE="^^ ( profile_accuracy profile_compatibility profile_performance )"
 RDEPEND=""
 
 DEPEND=">=sys-devel/gcc-4.5
+	!dev-games/libsnes-c++98
 	!dev-games/snes9x-libsnes"
 
 S="${WORKDIR}/${MY_P}/bsnes"

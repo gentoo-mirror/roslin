@@ -3,6 +3,9 @@
 # $Header: $
 
   29 Sep 2011; Michał Ziąbkowski <mziab@o2.pl> deltapatcher-1.0.ebuild:
+  Fixed last commit.
+
+  29 Sep 2011; Michał Ziąbkowski <mziab@o2.pl> deltapatcher-1.0.ebuild:
   Needs to depend on wxGTK[X].
 
   04 May 2011; Piotr Szymaniak <szarpaj@grubelek.pl> deltapatcher-1.0.ebuild:

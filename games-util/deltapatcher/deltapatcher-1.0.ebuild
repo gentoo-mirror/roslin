@@ -15,10 +15,10 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="x11-libs/wxGTK[X]:2.8
+DEPEND="x11-libs/wxGTK:2.8[X]
 	app-arch/p7zip"
 
-RDEPEND="x11-libs/wxGTK[X]:2.8
+RDEPEND="x11-libs/wxGTK:2.8[X]
 	dev-util/xdelta:3"
 
 S="${WORKDIR}/DeltaPatcher/src"

@@ -4,7 +4,7 @@
 
 EAPI=2
 
-inherit eutils flag-o-matic games
+inherit eutils games
 
 DESCRIPTION="A fork of the ONScripter engine with added English support"
 HOMEPAGE="http://onscripter.denpa.mobi/?page_id=26"
@@ -24,11 +24,6 @@ RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${P}-src"
 
-pkg_setup() {
-	append-flags "-Wno-error"
-	games_pkg_setup
-}
-
 src_prepare() {
 	edos2unix configure
 	epatch "${FILESDIR}"/${PN}-20110314-compiler.patch
@@ -38,6 +33,10 @@ src_prepare() {
 	    -e 's:-DLINUX:-DLINUX -DRCA_SCALE:' configure \
 	    || die "sed failed"
 	fi
+}
+
+src_configure() {
+	egamesconf --no-werror || die
 }
 
 src_install() {

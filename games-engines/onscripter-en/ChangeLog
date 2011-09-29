@@ -4,6 +4,10 @@
 
   29 Sep 2011; Michał Ziąbkowski <mziab@o2.pl>
   onscripter-en-20110628-r1.ebuild:
+  Added ~amd64 keyword.
+
+  29 Sep 2011; Michał Ziąbkowski <mziab@o2.pl>
+  onscripter-en-20110628-r1.ebuild:
   Try number 2.
 
 *onscripter-en-20110628-r1 (29 Sep 2011)

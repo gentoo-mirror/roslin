@@ -12,7 +12,7 @@ SRC_URI="http://onscripter.denpa.mobi/pub/onscr/${P}-src.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="scale"
 
 DEPEND="media-libs/sdl-image[jpeg,png]

@@ -15,6 +15,6 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
 
-DEPEND="x11-libs/wxGTK[X]:2.8
+DEPEND="x11-libs/wxGTK:2.8[X]
 	>=dev-libs/boost-1.33"
 RDEPEND="${DEPEND}"

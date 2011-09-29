@@ -16,7 +16,7 @@ SRC_URI="http://corsix-th.googlecode.com/files/${MY_P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="truetype opengl +sdl +sound"
 
 RDEPEND=">=dev-lang/lua-5.1

@@ -123,7 +123,7 @@ src_install() {
 
 	# install shaders
 	insinto "${GAMES_DATADIR}/${PN}/shaders"
-	doins ../snesshader/*.shader || die
+	doins ../snesshader/*OpenGL*.shader || die
 
 	# install filters
 	if use snesfilter; then

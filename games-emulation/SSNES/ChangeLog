@@ -3,6 +3,10 @@
 # $Header: $
 
   30 Sep 2011; Michał Ziąbkowski <mziab@o2.pl> SSNES-0.8.2.ebuild,
+  SSNES-9999.ebuild, metadata.xml:
+  Added fbo flag.
+
+  30 Sep 2011; Michał Ziąbkowski <mziab@o2.pl> SSNES-0.8.2.ebuild,
   SSNES-9999.ebuild:
   Set sane defaults for libsnes_path, when using USE=dynamic.
 

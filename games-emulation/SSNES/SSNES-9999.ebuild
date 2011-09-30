@@ -15,7 +15,7 @@ EGIT_REPO_URI="git://github.com/Themaister/${PN}.git"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS=""
-IUSE="alsa cg dynamic ffmpeg jack libsamplerate netplay openal oss pulseaudio sdl-image truetype xml xv"
+IUSE="alsa cg dynamic +fbo ffmpeg jack libsamplerate netplay openal oss pulseaudio python sdl-image truetype xml xv"
 
 RDEPEND="media-libs/libsdl[joystick]
 	alsa? ( media-libs/alsa-lib )
@@ -56,6 +56,7 @@ src_configure() {
 		$(use_enable oss) \
 		$(use_enable cg) \
 		$(use_enable xml) \
+		$(use_enable fbo) \
 		$(use_enable truetype freetype) \
 		$(use_enable pulseaudio pulse) \
 		$(use_enable libsamplerate src) \

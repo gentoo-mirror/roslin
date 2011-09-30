@@ -4,7 +4,7 @@
 
 EAPI=2
 
-inherit games confutils git-2
+inherit games confutils multilib git-2
 
 DESCRIPTION="Simple SNES emulator frontend based on libsnes"
 HOMEPAGE="https://github.com/Themaister/SSNES"
@@ -41,6 +41,11 @@ pkg_setup() {
 
 src_prepare() {
 	epatch "${FILESDIR}/${PN}-build.patch"
+
+	# set sane defaults, so it works out of the box
+	if use dynamic; then
+		echo "libsnes_path = \"/usr/$(get_libdir)/libsnes.so\"" >>ssnes.cfg
+	fi
 }
 
 src_configure() {

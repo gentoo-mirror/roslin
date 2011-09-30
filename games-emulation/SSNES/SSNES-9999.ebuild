@@ -29,13 +29,9 @@ RDEPEND="media-libs/libsdl[joystick]
 	sdl-image? ( media-libs/sdl-image )
 	libsamplerate? ( media-libs/libsamplerate )
 	xv? ( x11-libs/libXv )
-	|| ( dev-games/libsnes-c++98
-	dev-games/libsnes
-	dev-games/snes9x-libsnes )"
+	virtual/libsnes"
 DEPEND="dev-util/pkgconfig
-	!dynamic? ( || ( dev-games/libsnes-c++98
-	dev-games/libsnes
-	dev-games/snes9x-libsnes ) )
+	!dynamic? ( virtual/libsnes )
 	${RDEPEND}"
 
 pkg_setup() {

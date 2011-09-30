@@ -2,6 +2,9 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 
   30 Sep 2011; Michał Ziąbkowski <mziab@o2.pl> bsnes-0.082-r1.ebuild:
+  Fixed pre-stripped filters.
+
+  30 Sep 2011; Michał Ziąbkowski <mziab@o2.pl> bsnes-0.082-r1.ebuild:
   Only install OpenGL shaders.
 
 *bsnes-0.082-r1 (16 Sep 2011)

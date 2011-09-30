@@ -104,6 +104,7 @@ src_compile() {
 	if use snesfilter; then
 		emake \
 			compiler=gcc \
+			link="" \
 			-C "${S}/../snesfilter" \
 			|| die "emake failed"
 	fi

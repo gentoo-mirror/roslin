@@ -1,0 +1,45 @@
+diff --git a/Makefile b/Makefile
+index dca1881..87651fe 100755
+--- a/Makefile
++++ b/Makefile
+@@ -4,7 +4,7 @@ ui := qt
+ # compiler
+ c       := $(compiler) -std=gnu99
+ cpp     := $(subst cc,++,$(compiler)) -std=gnu++0x
+-flags   := -g -I.
++flags   := $(CXXFLAGS) -g -I.
+ link    := -lsnes
+ objects :=
+ 
+@@ -145,12 +145,9 @@ endif
+ 
+ install:
+ ifeq ($(platform),x)
+-	install -D -m 755 out/bsnes $(DESTDIR)$(prefix)/bin/bsnes
+-	install -D -m 644 data/bsnes.png $(DESTDIR)$(prefix)/share/pixmaps/bsnes.png
+-	install -D -m 644 data/bsnes.desktop $(DESTDIR)$(prefix)/share/applications/bsnes.desktop
+-	test -d ~/.bsnes || mkdir ~/.bsnes
+-	cp data/cheats.xml ~/.bsnes/cheats.xml
+-	chmod 777 ~/.bsnes ~/.bsnes/cheats.xml
++	install -D -m 755 out/bsnes $(DESTDIR)$(prefix)/bin/bsnes-qt
++	install -D -m 644 data/bsnes.png $(DESTDIR)/usr/share/pixmaps/bsnes-qt.png
++	install -D -m 644 data/bsnes.desktop $(DESTDIR)/usr/share/applications/bsnes-qt.desktop
+ endif
+ 
+ uninstall:
+diff --git a/data/bsnes.desktop b/data/bsnes.desktop
+index d527e97..0972e5f 100755
+--- a/data/bsnes.desktop
++++ b/data/bsnes.desktop
+@@ -1,8 +1,8 @@
+ [Desktop Entry]
+-Name=bsnes
++Name=bsnes Qt
+ Comment=SNES emulator
+-Exec=bsnes
+-Icon=bsnes
++Exec=bsnes-qt
++Icon=bsnes-qt
+ Terminal=false
+ Type=Application
+ Categories=Game;Emulator;

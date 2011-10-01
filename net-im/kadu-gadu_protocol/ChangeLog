@@ -2,6 +2,10 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  01 Oct 2011; Michał Ziąbkowski <mziab@o2.pl>
+  kadu-gadu_protocol-0.10.0.ebuild:
+  Added qt-xmlpatterns dep, which was brought in by qt-webkit anyway.
+
 *kadu-gadu_protocol-0.10.0 (24 Aug 2011)
 
   24 Aug 2011; Michał Ziąbkowski <mziab@o2.pl>

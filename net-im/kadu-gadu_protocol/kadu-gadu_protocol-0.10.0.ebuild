@@ -12,6 +12,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND=">=x11-libs/qt-gui-4.7.0
+	>=x11-libs/qt-xmlpatterns-4.7.0
 	~net-im/kadu-core-${PV}
 	>=net-libs/libgadu-1.11.0[threads]
 	>=app-crypt/qca-2.0"

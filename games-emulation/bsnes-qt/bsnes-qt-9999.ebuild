@@ -11,7 +11,6 @@ HOMEPAGE="http://byuu.org/bsnes/"
 SRC_URI=""
 
 EGIT_REPO_URI="git://gitorious.org/bsnes-qt/bsnes-qt.git"
-EGIT_BRANCH="patches"
 
 LICENSE="GPL-2"
 SLOT="0"

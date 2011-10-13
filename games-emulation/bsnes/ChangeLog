@@ -1,6 +1,12 @@
 # ChangeLog for games-emulation/bsnes
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 
+*bsnes-0.083 (13 Oct 2011)
+
+  13 Oct 2011; Michał Ziąbkowski <mziab@o2.pl> +bsnes-0.083.ebuild,
+  +files/bsnes-0.083-global-paths.patch, +files/bsnes-0.083-makefile.patch:
+  Bumped. Missing keywords for now due to dep on gcc-4.6.
+
   30 Sep 2011; Michał Ziąbkowski <mziab@o2.pl> bsnes-0.082-r1.ebuild:
   Fixed pre-stripped filters.
 

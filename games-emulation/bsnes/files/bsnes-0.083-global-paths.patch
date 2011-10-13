@@ -1,0 +1,40 @@
+diff --git a/bsnes/ui/general/main-window.cpp b/bsnes/ui/general/main-window.cpp
+index 3e8f35b..aadadce 100755
+--- a/bsnes/ui/general/main-window.cpp
++++ b/bsnes/ui/general/main-window.cpp
+@@ -330,6 +330,10 @@ void MainWindow::setupVideoFilters() {
+     path = { application->userpath, "filters/" };
+     files = directory::files(path, "*.filter");
+   }
++  if(files.size() == 0) {
++    path = "%GAMES_DATADIR/bsnes/filters/";
++    files = directory::files(path, "*.filter");
++  }
+   reference_array<RadioItem&> group;
+ 
+   settingsVideoFilterList = new RadioItem[files.size()];
+@@ -361,6 +365,10 @@ void MainWindow::setupVideoShaders() {
+     path = { application->userpath, "shaders/" };
+     files = directory::files(path, { "*.", config->video.driver, ".shader" });
+   }
++  if(files.size() == 0) {
++    path = "%GAMES_DATADIR%/bsnes/shaders/";
++    files = directory::files(path, { "*.", config->video.driver, ".shader" });
++  }
+   reference_array<RadioItem&> group;
+ 
+   settingsVideoShaderList = new RadioItem[files.size()];
+diff --git a/bsnes/ui/tools/cheat-database.cpp b/bsnes/ui/tools/cheat-database.cpp
+index b8a3c1f..9ff27bf 100755
+--- a/bsnes/ui/tools/cheat-database.cpp
++++ b/bsnes/ui/tools/cheat-database.cpp
+@@ -34,7 +34,8 @@ void CheatDatabase::findCodes() {
+   cheatCode.reset();
+ 
+   string data;
+-  data.readfile(application->path("cheats.bml"));
++  if(data.readfile(application->path("cheats.bml")) == false)
++    data.readfile("%GAMES_DATADIR%/bsnes/cheats.bml");
+   BML::Document document(data);
+   for(auto &root : document) {
+     if(root.name != "cartridge") continue;

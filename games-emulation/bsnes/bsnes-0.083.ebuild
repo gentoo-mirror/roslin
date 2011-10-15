@@ -94,12 +94,12 @@ src_compile() {
 	local myoptions
 	use debug && myoptions="debugger"
 
-	#emake \
-	#	platform=x \
-	#	compiler=gcc \
-	#	profile=${myprofile} \
-	#	phoenix=${mytoolkit} \
-	#	options=${myoptions} || die "emake failed"
+	emake \
+		platform=x \
+		compiler=gcc \
+		profile=${myprofile} \
+		phoenix=${mytoolkit} \
+		options=${myoptions} || die "emake failed"
 
 	if use snesfilter; then
 		emake \

@@ -2,6 +2,11 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*kadu-nextinfo-0.10_p7 (18 Oct 2011)
+
+  18 Oct 2011; Michał Ziąbkowski <mziab@o2.pl> +kadu-nextinfo-0.10_p7.ebuild:
+  Bumped.
+
 *kadu-nextinfo-0.10_p6 (25 Aug 2011)
 
   25 Aug 2011; Michał Ziąbkowski <mziab@o2.pl> +kadu-nextinfo-0.10_p6.ebuild:

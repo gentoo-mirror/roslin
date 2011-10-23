@@ -11,10 +11,11 @@ HOMEPAGE="https://github.com/Themaister/SSNES"
 SRC_URI=""
 
 EGIT_REPO_URI="git://github.com/Themaister/${PN}.git"
+EGIT_COMMIT="v${PV}"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 IUSE="alsa cg dynamic +fbo ffmpeg jack netplay openal oss pulseaudio sdl-image truetype xml xv"
 
 RDEPEND="media-libs/libsdl[joystick]

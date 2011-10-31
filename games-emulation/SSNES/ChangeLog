@@ -2,6 +2,11 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*SSNES-0.9.1 (31 Oct 2011)
+
+  31 Oct 2011; Michał Ziąbkowski <mziab@o2.pl> +SSNES-0.9.1.ebuild:
+  Bumped.
+
 *SSNES-0.9 (23 Oct 2011)
 
   23 Oct 2011; Michał Ziąbkowski <mziab@o2.pl> +SSNES-0.9.ebuild,

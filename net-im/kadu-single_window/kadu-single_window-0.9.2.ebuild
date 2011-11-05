@@ -8,5 +8,5 @@ inherit kadu-base kadu-mod
 
 DESCRIPTION="Adds single-window mode"
 HOMEPAGE="http://kadu.net"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""

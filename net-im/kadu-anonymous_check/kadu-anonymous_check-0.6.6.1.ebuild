@@ -13,6 +13,6 @@ inherit kadu-mod
 
 DESCRIPTION="Automatic sender lookup module for Kadu"
 HOMEPAGE="http://kadu.net/~patryk"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 
 IUSE=""

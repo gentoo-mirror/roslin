@@ -12,5 +12,5 @@ inherit kadu-mod
 
 DESCRIPTION="Kadu module for detecting idle time"
 HOMEPAGE="http://kadu.net"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""

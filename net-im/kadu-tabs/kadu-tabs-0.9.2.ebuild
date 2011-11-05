@@ -8,6 +8,6 @@ inherit kadu-base kadu-mod
 
 DESCRIPTION="Tabbed chat module for Kadu"
 HOMEPAGE="http://kadu.net/~weagle"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 
 IUSE=""

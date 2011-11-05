@@ -6,7 +6,7 @@ inherit kadu
 
 DESCRIPTION="Text message support module for Kadu"
 HOMEPAGE="http://kadu.net"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND=">=x11-libs/qt-gui-4.7.0

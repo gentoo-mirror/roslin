@@ -12,6 +12,6 @@ inherit kadu-mod
 
 DESCRIPTION="Kadu notification using Qt4 docking module"
 HOMEPAGE="http://kadu.net"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 
 IUSE=""

@@ -12,6 +12,6 @@ inherit kadu-mod
 
 DESCRIPTION="Kadu module for KDE4 notifications"
 HOMEPAGE="http://kadu.net/~dorr"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 
 IUSE=""

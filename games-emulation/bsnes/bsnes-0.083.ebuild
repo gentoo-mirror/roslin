@@ -17,7 +17,7 @@ SRC_URI="http://bsnes.googlecode.com/files/${MY_P}.tar.bz2"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS=""
-IUSE="ao alsa debug +gtk openal opengl oss profile_accuracy +profile_compatibility profile_performance pulseaudio qt4 sdl sgb snesfilter xv"
+IUSE="ao alsa debug +gtk openal opengl oss profile_accuracy +profile_compatibility profile_performance pulseaudio qt4 sdl snesfilter xv"
 
 RDEPEND="ao? ( media-libs/libao )
 	openal? ( media-libs/openal )
@@ -26,7 +26,6 @@ RDEPEND="ao? ( media-libs/libao )
 	xv? ( x11-libs/libXv )
 	opengl? ( virtual/opengl )
 	sdl? ( media-libs/libsdl[joystick] )
-	sgb? ( dev-games/supergameboy )
 	gtk? ( x11-libs/gtk+:2 )
 	qt4? ( >=x11-libs/qt-gui-4.5:4 )"
 

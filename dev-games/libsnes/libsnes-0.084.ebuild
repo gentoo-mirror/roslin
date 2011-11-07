@@ -30,7 +30,8 @@ DEPEND=">=sys-devel/gcc-4.6
 S="${WORKDIR}/${MY_P}/bsnes"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-0.083-makefile.patch
+	epatch "${FILESDIR}"/${PN}-0.083-makefile.patch \
+		"${FILESDIR}"/${P}-linker.patch
 }
 
 src_compile() {

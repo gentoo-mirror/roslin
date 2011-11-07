@@ -1,6 +1,12 @@
 # ChangeLog for games-emulation/bsnes
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 
+  07 Nov 2011; Michał Ziąbkowski <mziab@o2.pl>
+  -files/bsnes-0.076-toolkit.patch, -bsnes-0.077.ebuild, -bsnes-0.078.ebuild,
+  -bsnes-0.079.ebuild, -bsnes-0.080.ebuild, -bsnes-0.081.ebuild,
+  -bsnes-0.082.ebuild:
+  Removed cruft.
+
 *bsnes-0.084 (07 Nov 2011)
 
   07 Nov 2011; Michał Ziąbkowski <mziab@o2.pl> +bsnes-0.084.ebuild:

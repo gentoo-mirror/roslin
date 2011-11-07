@@ -2,6 +2,11 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*libsnes-0.084 (07 Nov 2011)
+
+  07 Nov 2011; Michał Ziąbkowski <mziab@o2.pl> +libsnes-0.084.ebuild:
+  Bumped.
+
   05 Nov 2011; Michał Ziąbkowski <mziab@o2.pl> metadata.xml:
   Removed sgb flag from metadata.xml.
 

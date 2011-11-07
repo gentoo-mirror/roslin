@@ -27,7 +27,7 @@ DEPEND=">=sys-devel/gcc-4.6
 	!dev-games/libsnes-c++98
 	!dev-games/snes9x-libsnes"
 
-S="${WORKDIR}/${MY_P}/bsnes"
+S="${WORKDIR}/bsnes"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-0.083-makefile.patch \

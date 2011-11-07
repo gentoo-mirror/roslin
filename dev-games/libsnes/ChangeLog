@@ -2,6 +2,9 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  07 Nov 2011; Michał Ziąbkowski <mziab@o2.pl> libsnes-0.084.ebuild:
+  Upstream re-uploaded the tarball.
+
   07 Nov 2011; Michał Ziąbkowski <mziab@o2.pl> libsnes-0.084.ebuild,
   +files/libsnes-0.084-linker.patch:
   Added linker script to avoid exporting all the symbols as global.

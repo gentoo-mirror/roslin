@@ -33,7 +33,7 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	>=sys-devel/gcc-4.6"
 
-S="${WORKDIR}/${MY_P}/bsnes"
+S="${WORKDIR}/bsnes"
 
 disable_module() {
 	sed -i "ui/Makefile" -e "s|$1||"
@@ -48,8 +48,7 @@ pkg_setup() {
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-0.083-makefile.patch \
-		"${FILESDIR}"/${PN}-0.083-global-paths.patch \
-		"${FILESDIR}"/${P}-fix-crash.patch
+		"${FILESDIR}"/${PN}-0.083-global-paths.patch
 
 	sed -e "s:%GAMES_DATADIR%:${GAMES_DATADIR}:" \
 		-i "${S}/ui/tools/cheat-database.cpp" \

@@ -2,6 +2,10 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 
   07 Nov 2011; Michał Ziąbkowski <mziab@o2.pl> bsnes-0.084.ebuild,
+  -files/bsnes-0.084-fix-crash.patch:
+  Upstream re-uploaded the tarball.
+
+  07 Nov 2011; Michał Ziąbkowski <mziab@o2.pl> bsnes-0.084.ebuild,
   +files/bsnes-0.084-fix-crash.patch:
   Added patch to fix last-minute UI crash in 0.084.
 

@@ -48,7 +48,8 @@ pkg_setup() {
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-0.083-makefile.patch \
-		"${FILESDIR}"/${PN}-0.083-global-paths.patch
+		"${FILESDIR}"/${PN}-0.083-global-paths.patch \
+		"${FILESDIR}"/${P}-fix-crash.patch
 
 	sed -e "s:%GAMES_DATADIR%:${GAMES_DATADIR}:" \
 		-i "${S}/ui/tools/cheat-database.cpp" \

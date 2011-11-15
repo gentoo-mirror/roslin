@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/qmc2
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 
+  15 Nov 2011; Michał Ziąbkowski <mziab@o2.pl> qmc2-0.2_beta20.ebuild:
+  Added missing epatch.
+
   14 Nov 2011; Piotr Szymaniak <szarpaj@grubelek.pl> qmc2-0.2_beta20.ebuild,
   +files/qmc2-0.2_beta20-minizip.patch:
   Added patch for zlib, thanks to Steve Gill <necrotaur@gmail.com>.

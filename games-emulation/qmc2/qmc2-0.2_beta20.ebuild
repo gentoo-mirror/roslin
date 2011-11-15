@@ -46,7 +46,8 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}/${PN}-0.2_beta20-makefile.patch"
+	epatch "${FILESDIR}/${PN}-0.2_beta20-makefile.patch" \
+		"${FILESDIR}/${PN}-0.2_beta20-minizip.patch"
 
 	## This is not as it appears, ARCH means something different to qmc2's Makefile
 	## then it means to the portage/portage-compatible package manager

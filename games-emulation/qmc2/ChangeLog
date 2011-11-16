@@ -1,6 +1,14 @@
 # ChangeLog for games-emulation/qmc2
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 
+  16 Nov 2011; Michał Ziąbkowski <mziab@o2.pl>
+  -files/qmc2-0.2_beta6-makefile.patch, -files/qmc2-0.2_beta7-makefile.patch:
+  Removed old patches.
+
+  16 Nov 2011; Michał Ziąbkowski <mziab@o2.pl> -qmc2-0.2_beta15.ebuild,
+  -qmc2-0.2_beta16.ebuild, -qmc2-0.2_beta17.ebuild:
+  Removed cruft.
+
 *qmc2-0.34 (16 Nov 2011)
 
   16 Nov 2011; Michał Ziąbkowski <mziab@o2.pl> +qmc2-0.34.ebuild:

@@ -2,31 +2,49 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-inherit base games cmake-utils
+EAPI=2
 
-DESCRIPTION="Classic 2D jump'n run sidescroller game similar to SuperMario: Milestone 2"
-HOMEPAGE="http://supertux.lethargik.org/"
+inherit cmake-utils eutils games
+
+DESCRIPTION="A game similar to Super Mario Bros."
+HOMEPAGE="http://super-tux.sourceforge.net"
 SRC_URI="mirror://berlios/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="2"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
+IUSE="opengl curl debug"
 
-DEPEND="dev-games/physfs
-	dev-libs/boost
-	media-libs/glew
-	media-libs/libsdl
+RDEPEND="media-libs/libsdl[joystick]
+	media-libs/sdl-image[png,jpeg]
 	media-libs/libvorbis
-	media-libs/sdl-image
+	dev-games/physfs
 	media-libs/openal
-	virtual/opengl"
-RDEPEND="${DEPEND}"
+	x11-libs/libXt
+	media-libs/glew
+	opengl? ( virtual/opengl )
+	curl? ( >=net-misc/curl-7.21.7 )"
+DEPEND="${RDEPEND}"
 
-RESTRICT="mirror"
+src_prepare() {
+	epatch ${FILESDIR}/${PV}-notypes.patch
+	epatch ${FILESDIR}/${PV}-gcc46.patch
+}
 
-PATCHES=( "${FILESDIR}/0.3.3-fs-layout.patch"
-	"${FILESDIR}/desktop.patch" )
+src_configure() {
+	local mycmakeargs="-DWERROR=OFF \
+		-DINSTALL_SUBDIR_BIN=games/bin \
+		-DINSTALL_SUBDIR_DOC=share/doc/${P} \
+		$(cmake-utils_use_enable opengl OPENGL) \
+		$(cmake-utils_use_enable debug SQDBG) \
+		$(cmake-utils_use debug DEBUG)"
+
+	cmake-utils_src_configure
+}
+
+src_compile() {
+	cmake-utils_src_compile
+}
 
 src_install() {
 	cmake-utils_src_install

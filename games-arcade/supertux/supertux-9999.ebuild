@@ -4,36 +4,45 @@
 
 EAPI=2
 
-ESVN_REPO_URI="http://supertux.lethargik.org/svn/supertux/trunk/supertux"
+inherit subversion cmake-utils eutils games
 
-inherit cmake-utils games subversion
-
-DESCRIPTION="Classic 2D jump'n run sidescroller game similar to SuperMario: Milestone 2"
-HOMEPAGE="http://supertux.lethargik.org/"
+DESCRIPTION="A game similar to Super Mario Bros."
+HOMEPAGE="http://super-tux.sourceforge.net"
 SRC_URI=""
+
+ESVN_REPO_URI="http://supertux.lethargik.org/svn/supertux/trunk/supertux"
+ESVN_PROJECT="${PN}"
 
 LICENSE="GPL-2"
 SLOT="2"
 KEYWORDS=""
-IUSE=""
+IUSE="opengl curl debug"
 
-DEPEND="dev-games/physfs
-	dev-libs/boost
-	media-libs/glew
-	media-libs/libsdl
+RDEPEND="media-libs/libsdl[joystick]
+	media-libs/sdl-image[png,jpeg]
 	media-libs/libvorbis
-	media-libs/sdl-image
+	dev-games/physfs
 	media-libs/openal
-	virtual/opengl"
-RDEPEND="${DEPEND}"
+	media-libs/glew
+	x11-libs/libXt
+	opengl? ( virtual/opengl )
+	curl? ( net-misc/curl )"
+DEPEND="${RDEPEND}"
 
-S=${WORKDIR}/${PN}
+DOCS="README TODO WHATSNEW.txt data/credits.txt"
+
+src_unpack() {
+	subversion_src_unpack
+}
 
 src_configure() {
-	epatch "${FILESDIR}/9999-fs-layout.patch"
-	mycmakeargs=( "-DCMAKE_INSTALL_PREFIX=${GAMES_PREFIX}"
-		"-DINSTALL_SUBDIR_SHARE=${GAMES_DATADIR}/${PN}/data"
-		"-DAPPDATADIR=${GAMES_DATADIR}/${PN}" )
+	local mycmakeargs="-DWERROR=OFF
+			-DINSTALL_SUBDIR_BIN=games/bin
+			-DINSTALL_SUBDIR_DOC=share/doc/${P}
+			$(cmake-utils_use_enable opengl OPENGL)
+			$(cmake-utils_use_enable debug SQDBG)
+			$(cmake-utils_use debug DEBUG)"
+
 	cmake-utils_src_configure
 }
 
@@ -42,7 +51,6 @@ src_compile() {
 }
 
 src_install() {
-	DOCS="CODINGSTYLE README TODO" cmake-utils_src_install
-	doman man/man6/${PN}2.6
+	cmake-utils_src_install
 	prepgamesdirs
 }

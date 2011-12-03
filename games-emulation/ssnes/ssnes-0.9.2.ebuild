@@ -4,19 +4,16 @@
 
 EAPI=2
 
-inherit games confutils multilib git-2
+inherit games confutils
 
 DESCRIPTION="Simple SNES emulator frontend based on libsnes"
-HOMEPAGE="https://github.com/Themaister/SSNES"
-SRC_URI=""
-
-EGIT_REPO_URI="git://github.com/Themaister/${PN}.git"
-EGIT_COMMIT="v${PV}"
+HOMEPAGE="http://themaister.net/ssnes.html"
+SRC_URI="http://themaister.net/ssnes-dl/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="alsa cg dynamic +fbo ffmpeg jack libsamplerate netplay openal oss pulseaudio sdl-image truetype xml xv"
+IUSE="alsa cg dynamic +fbo ffmpeg jack netplay openal oss pulseaudio sdl-image truetype xml xv"
 
 RDEPEND="media-libs/libsdl[joystick]
 	alsa? ( media-libs/alsa-lib )
@@ -28,7 +25,6 @@ RDEPEND="media-libs/libsdl[joystick]
 	truetype? ( media-libs/freetype:2 )
 	pulseaudio? ( media-sound/pulseaudio )
 	sdl-image? ( media-libs/sdl-image )
-	libsamplerate? ( media-libs/libsamplerate )
 	xv? ( x11-libs/libXv )
 	virtual/libsnes"
 DEPEND="dev-util/pkgconfig
@@ -41,11 +37,6 @@ pkg_setup() {
 
 src_prepare() {
 	epatch "${FILESDIR}/${PN}-build.patch"
-
-	# set sane defaults, so it works out of the box
-	if use dynamic; then
-		echo "libsnes_path = \"/usr/$(get_libdir)/libsnes.so\"" >>ssnes.cfg
-	fi
 }
 
 src_configure() {
@@ -60,7 +51,6 @@ src_configure() {
 		$(use_enable fbo) \
 		$(use_enable truetype freetype) \
 		$(use_enable pulseaudio pulse) \
-		$(use_enable libsamplerate src) \
 		$(use_enable dynamic) \
 		$(use_enable netplay) \
 		$(use_enable sdl-image sdl_image) \

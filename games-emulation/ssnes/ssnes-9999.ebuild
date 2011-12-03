@@ -7,15 +7,14 @@ EAPI=2
 inherit games confutils git-2
 
 DESCRIPTION="Simple SNES emulator frontend based on libsnes"
-HOMEPAGE="https://github.com/Themaister/SSNES"
+HOMEPAGE="http://themaister.net/ssnes.html"
 SRC_URI=""
 
-EGIT_REPO_URI="git://github.com/Themaister/${PN}.git"
-EGIT_COMMIT="v${PV}"
+EGIT_REPO_URI="git://github.com/Themaister/SSNES.git"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS=""
 IUSE="alsa cg dynamic +fbo ffmpeg jack netplay openal oss pulseaudio sdl-image truetype xml xv"
 
 RDEPEND="media-libs/libsdl[joystick]

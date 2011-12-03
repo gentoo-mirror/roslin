@@ -10,7 +10,7 @@ DESCRIPTION="A simple GUI for SSNES using the phoenix toolkit"
 HOMEPAGE="https://github.com/Themaister/SSNES-Phoenix"
 SRC_URI=""
 
-EGIT_REPO_URI="git://github.com/Themaister/${PN}.git"
+EGIT_REPO_URI="git://github.com/Themaister/SSNES-Phoenix.git"
 
 LICENSE="GPL-3"
 SLOT="0"
@@ -19,7 +19,7 @@ IUSE=""
 
 RDEPEND="media-libs/libsdl[joystick]
 	>=x11-libs/qt-gui-4.6:4
-	games-emulation/SSNES"
+	games-emulation/ssnes"
 DEPEND="dev-util/pkgconfig
 	>=sys-devel/gcc-4.5
 	${RDEPEND}"

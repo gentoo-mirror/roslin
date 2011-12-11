@@ -6,4 +6,7 @@
   <email>mziab@o2.pl</email>
   <name>Michał Ziąbkowski</name>
 </maintainer>
+<use>
+	<flag name='wnck'>Manage game windows with libwnck</flag>
+</use>
 </pkgmetadata>

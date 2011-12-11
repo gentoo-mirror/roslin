@@ -12,17 +12,17 @@ HOMEPAGE="http://mbarnes.github.com/gnome-video-arcade/"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="dbus gstreamer"
+IUSE="gstreamer wnck"
 
-RDEPEND="x11-libs/gtk+:2
+RDEPEND="x11-libs/gtk+:3
 	x11-themes/gnome-icon-theme
 	dev-db/sqlite:3
-	>=x11-libs/libwnck-2.16
 	gnome-base/gconf:2
-	dbus? ( dev-libs/dbus-glib )
+	gnome-base/gsettings-desktop-schemas
 	gstreamer? ( >=media-libs/gst-plugins-base-0.10 )
 	|| ( games-emulation/sdlmame games-emulation/xmame )
-	dev-libs/libunique:1"
+	dev-libs/libunique:1
+	wnck? ( >=x11-libs/libwnck-2.16 )"
 DEPEND="${RDEPEND}
 	app-text/scrollkeeper
 	app-text/gnome-doc-utils
@@ -30,10 +30,7 @@ DEPEND="${RDEPEND}
 
 DOCS="AUTHORS ChangeLog INSTALL NEWS README"
 
-src_unpack() {
-	gnome2_src_unpack
-	cd "${S}"
-
+src_prepare() {
 	# change search patch to include /usr/games/bin
 	sed -e "s:/usr/games:${GAMES_BINDIR}:g" \
 	    -i configure.ac || die "sed failed"
@@ -41,12 +38,13 @@ src_unpack() {
 	eautoreconf
 }
 
-src_compile() {
-	gnome2_src_compile \
+src_configure() {
+	gnome2_src_configure \
 	    --bindir="${GAMES_BINDIR}" \
-	    $(use_with dbus) \
 	    $(use_with gstreamer) \
-	    || die "compile failed"
+		$(use_with wnck) \
+		--disable-static \
+	    || die "configure failed"
 }
 
 src_install() {

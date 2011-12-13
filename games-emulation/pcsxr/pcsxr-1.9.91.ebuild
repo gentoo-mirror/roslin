@@ -8,7 +8,7 @@ inherit eutils autotools games
 
 DESCRIPTION="PCSX-Reloaded: a fork of PCSX, the discontinued Playstation emulator"
 HOMEPAGE="http://pcsxr.codeplex.com"
-SRC_URI="http://download.codeplex.com/Project/Download/FileDownload.aspx?ProjectName=pcsxr&DownloadId=98581&FileTime=129064504645100000&Build=17501 -> ${P}.tar.bz2"
+SRC_URI="http://download.codeplex.com/Project/Download/FileDownload.aspx?ProjectName=pcsxr&DownloadId=98581&FileTime=129064504645100000&Build=18301 -> ${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"

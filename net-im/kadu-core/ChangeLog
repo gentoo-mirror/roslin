@@ -2,6 +2,11 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  21 Dec 2011; Michał Ziąbkowski <mziab@o2.pl>
+  -files/0.6.5.4-fix-double-free.patch, -files/0.6.5.4-gg_servers.patch,
+  -files/0.6.5.4-glibc-2.12.patch:
+  Removed stale patches.
+
 *kadu-core-0.11.0_beta1 (21 Dec 2011)
 
   21 Dec 2011; Michał Ziąbkowski <mziab@o2.pl>

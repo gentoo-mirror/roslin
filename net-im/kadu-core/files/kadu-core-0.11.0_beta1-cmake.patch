@@ -1,0 +1,28 @@
+diff --git a/kadu-core/CMakeLists.txt b/kadu-core/CMakeLists.txt
+index 5daf748..c1cdf03 100644
+--- a/kadu-core/CMakeLists.txt
++++ b/kadu-core/CMakeLists.txt
+@@ -337,6 +337,7 @@ kadu_api_directories (kadu-core
+ 	buddies
+ 	chat/filter
+ 	chat/message
++	chat/model
+ 	chat/style-engines/style-engine-adium
+ 	chat/style-engines/style-engine-kadu
+ 	chat/style-engines
+@@ -364,6 +365,7 @@ kadu_api_directories (kadu-core
+ 	multilogon/model
+ 	multilogon
+ 	network
++	network/proxy
+ 	notify
+ 	os/generic
+ 	os/qtsingleapplication
+@@ -378,6 +380,7 @@ kadu_api_directories (kadu-core
+ 	status
+ 	storage
+ 	talkable
++	talkable/filter
+ 	themes
+ 	url-handlers
+ 	.

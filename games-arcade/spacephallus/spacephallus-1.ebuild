@@ -11,7 +11,7 @@ HOMEPAGE="http://www.charliesgames.com/wordpress/?page_id=65"
 SRC_URI="http://www.charliesgames.com/phallus/${MY_PN}Linux.tar.gz"
 
 # Space Phallus is binary blob, no license included
-LICENSE="blob"
+LICENSE="public-domain"
 SLOT="0"
 KEYWORDS="~x86"
 IUSE=""

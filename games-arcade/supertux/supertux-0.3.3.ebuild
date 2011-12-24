@@ -27,8 +27,8 @@ RDEPEND="media-libs/libsdl[joystick]
 DEPEND="${RDEPEND}"
 
 src_prepare() {
-	epatch ${FILESDIR}/${PV}-notypes.patch
-	epatch ${FILESDIR}/${PV}-gcc46.patch
+	epatch "${FILESDIR}/${PV}"-notypes.patch
+	epatch "${FILESDIR}/${PV}"-gcc46.patch
 }
 
 src_configure() {

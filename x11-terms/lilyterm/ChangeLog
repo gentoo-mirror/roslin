@@ -1,0 +1,10 @@
+# ChangeLog for x11-terms/lilyterm
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*lilyterm-0.9.9_rc9 (24 Dec 2011)
+
+  24 Dec 2011; Piotr Szymaniak <szarpaj@grubelek.pl>
+  +lilyterm-0.9.9_rc9.ebuild, +metadata.xml:
+  New package.
+

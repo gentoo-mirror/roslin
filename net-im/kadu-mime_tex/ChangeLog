@@ -2,6 +2,15 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  23 Dec 2011; Michał Ziąbkowski <mziab@o2.pl> kadu-mime_tex-0.10.1.ebuild:
+  Mirrored plugin for now.
+
+*kadu-mime_tex-0.11.0_beta1 (21 Dec 2011)
+
+  21 Dec 2011; Michał Ziąbkowski <mziab@o2.pl>
+  +kadu-mime_tex-0.11.0_beta1.ebuild:
+  Bumped.
+
 *kadu-mime_tex-0.10.1 (25 Aug 2011)
 
   25 Aug 2011; Michał Ziąbkowski <mziab@o2.pl> +kadu-mime_tex-0.10.1.ebuild:

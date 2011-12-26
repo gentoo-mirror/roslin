@@ -2,6 +2,9 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  26 Dec 2011; Michał Ziąbkowski <mziab@o2.pl> kadu-core-0.11.0_beta1.ebuild:
+  Fixed a possible bug in setting the network implementation.
+
   21 Dec 2011; Michał Ziąbkowski <mziab@o2.pl>
   -files/0.6.5.4-fix-double-free.patch, -files/0.6.5.4-gg_servers.patch,
   -files/0.6.5.4-glibc-2.12.patch:

@@ -15,7 +15,7 @@ EGIT_REPO_URI="git://github.com/Themaister/SSNES-Phoenix.git"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS=""
-IUSE=""
+IUSE="gtk qt4"
 
 RDEPEND="media-libs/libsdl[joystick]
 	>=x11-libs/qt-gui-4.6:4
@@ -24,8 +24,21 @@ DEPEND="dev-util/pkgconfig
 	>=sys-devel/gcc-4.5
 	${RDEPEND}"
 
+pkg_setup() {
+	confutils_require_one gtk qt4
+	games_pkg_setup
+}
+
 src_prepare() {
 	epatch "${FILESDIR}/${PN}-makefile.patch"
+}
+
+src_compile() {
+	if use gtk; then
+		emake -f Makefile.gtk
+	elif use qt4; then
+		emake -f Makefile.qt
+	fi
 }
 
 src_install() {

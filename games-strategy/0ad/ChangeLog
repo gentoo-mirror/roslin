@@ -2,6 +2,13 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*0ad-10803 (25 Dec 2011)
+
+  25 Dec 2011; Piotr Szymaniak <szarpaj@grubelek.pl> -0ad-10288.ebuild,
+  +0ad-10803.ebuild, +files/premake-archless.patch,
+  +files/premake-script-archless.patch:
+  Updated ebuild.
+
 *0ad-9786 (10 Jul 2011)
 
   10 Jul 2011; Piotr Szymaniak <szarpaj@grubelek.pl> -0ad-8413.ebuild,

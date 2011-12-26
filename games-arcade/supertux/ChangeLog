@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/supertux
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 
+  24 Dec 2011; Piotr Szymaniak <szarpaj@grubelek.pl> supertux-0.3.3.ebuild,
+  metadata.xml:
+  Updated metadata.
+
   29 Nov 2011; Piotr Szymaniak <szarpaj@grubelek.pl> +files/0.3.3-gcc46.patch,
   +files/0.3.3-notypes.patch, -files/0.3.3-fs-layout.patch,
   supertux-0.3.3.ebuild, supertux-9999.ebuild, -files/desktop.patch:

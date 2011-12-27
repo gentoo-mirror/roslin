@@ -31,12 +31,6 @@ src_configure() {
 
 	use ayatana && mycmakeargs="${mycmakeargs} -DWITH_LIBINDICATE_QT:BOOL=ON"
 
-	if use ntrack ; then
-		mycmakeargs="${mycmakeargs} -DNETWORK_IMPLEMENTATION:STRING='ntrack'"
-	else
-		mycmakeargs="${mycmakeargs} -DNETWORK_IMPLEMENTATION:STRING='Qt'"
-	fi
-
 	kadu_src_configure
 }
 

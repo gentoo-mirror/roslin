@@ -2,6 +2,9 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  27 Dec 2011; Michał Ziąbkowski <mziab@o2.pl> kadu-core-0.11.0_beta1.ebuild:
+  Removed network implementation switch which broke build for some people.
+
   26 Dec 2011; Michał Ziąbkowski <mziab@o2.pl> kadu-core-0.11.0_beta1.ebuild:
   Fixed a possible bug in setting the network implementation.
 

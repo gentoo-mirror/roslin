@@ -8,12 +8,12 @@ inherit eutils autotools games
 
 DESCRIPTION="PCSX-Reloaded: a fork of PCSX, the discontinued Playstation emulator"
 HOMEPAGE="http://pcsxr.codeplex.com"
-SRC_URI="http://download.codeplex.com/Project/Download/FileDownload.aspx?ProjectName=pcsxr&DownloadId=98581&FileTime=129064504645100000&Build=18301 -> ${P}.tar.bz2"
+SRC_URI="mirror://sabayon/${CATEGORY}/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~ppc"
-IUSE="alsa opengl"
+IUSE="alsa cdio opengl oss pulseaudio +sdl-sound"
 
 RDEPEND="x11-libs/gtk+:2
 	gnome-base/libglade
@@ -24,12 +24,32 @@ RDEPEND="x11-libs/gtk+:2
 	x11-libs/libXtst
 	alsa? ( media-libs/alsa-lib )
 	opengl? ( virtual/opengl
-	x11-libs/libXxf86vm )"
+	x11-libs/libXxf86vm )
+	pulseaudio? ( >=media-sound/pulseaudio-0.9.16 )
+	cdio? ( dev-libs/libcdio )"
 
 DEPEND="${RDEPEND}
 	!games-emulation/pcsx
 	!games-emulation/pcsx-df
 	x86? ( dev-lang/nasm )"
+
+
+pkg_setup() {
+	if use sdl-sound; then
+		sound_backend="sdl"
+	elif use pulseaudio; then
+		sound_backend="pulseaudio"
+	elif use alsa; then
+		sound_backend="alsa"
+	elif use oss; then
+		sound_backend="oss"
+	else
+		sound_backend="null"
+	fi
+
+	elog "Using ${sound_backend} sound"
+	games_pkg_setup
+}
 
 src_prepare() {
 	# fix plugin path
@@ -41,7 +61,8 @@ src_prepare() {
 	done
 
 	# fix icon and .desktop path
-	epatch "${FILESDIR}/${PN}-datadir.patch"
+	epatch "${FILESDIR}/${PN}-datadir.patch" \
+		"${FILESDIR}/${PN}-include.patch"
 
 	# regenerate for changes to spread
 	eautoreconf
@@ -49,8 +70,9 @@ src_prepare() {
 
 src_configure() {
 	egamesconf \
-		$(use_enable alsa) \
+		$(use_enable cdio libcdio) \
 		$(use_enable opengl) \
+		--enable-sound=${sound_backend} \
 		|| die "econf failed"
 }
 

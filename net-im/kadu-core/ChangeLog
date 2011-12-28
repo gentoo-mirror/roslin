@@ -2,6 +2,10 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  28 Dec 2011; Michał Ziąbkowski <mziab@o2.pl>
+  kadu-core-0.11.0_beta1-r1.ebuild:
+  Explicitly disable libindicate when USE=ayatana is unset.
+
 *kadu-core-0.11.0_beta1-r1 (28 Dec 2011)
 
   28 Dec 2011; Michał Ziąbkowski <mziab@o2.pl>

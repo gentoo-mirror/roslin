@@ -30,7 +30,11 @@ src_configure() {
 	# Disable plugins
 	local mycmakeargs="-DBUILD_PLUGINS:BOOL=OFF"
 
-	use ayatana && mycmakeargs="${mycmakeargs} -DWITH_LIBINDICATE_QT:BOOL=ON"
+	if use ayatana ; then
+		mycmakeargs="${mycmakeargs} -DWITH_LIBINDICATE_QT:BOOL=ON"
+	else
+		mycmakeargs="${mycmakeargs} -DWITH_LIBINDICATE_QT:BOOL=OFF"
+	fi
 
 	if use ntrack ; then
 		mycmakeargs="${mycmakeargs} -DNETWORK_IMPLEMENTATION:STRING='ntrack'"

@@ -1,0 +1,13 @@
+diff --git a/bsnes/Makefile b/bsnes/Makefile
+index 2e7c628..c3c820b 100755
+--- a/bsnes/Makefile
++++ b/bsnes/Makefile
+@@ -12,7 +12,7 @@ ui := ui
+ # compiler
+ c       := $(compiler) -std=gnu99
+ cpp     := $(subst cc,++,$(compiler)) -std=gnu++0x
+-flags   := -I. -O3 -fomit-frame-pointer
++flags   := -I. $(CXXFLAGS) -fomit-frame-pointer
+ link    :=
+ objects := libco
+ 

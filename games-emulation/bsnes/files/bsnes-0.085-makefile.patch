@@ -1,0 +1,31 @@
+diff --git a/bsnes/Makefile b/bsnes/Makefile
+index 2e7c628..c3c820b 100755
+--- a/bsnes/Makefile
++++ b/bsnes/Makefile
+@@ -12,7 +12,7 @@ ui := ui
+ # compiler
+ c       := $(compiler) -std=gnu99
+ cpp     := $(subst cc,++,$(compiler)) -std=gnu++0x
+-flags   := -I. -O3 -fomit-frame-pointer
++flags   := -I. $(CXXFLAGS) -fomit-frame-pointer
+ link    :=
+ objects := libco
+ 
+diff --git a/bsnes/ui/Makefile b/bsnes/ui/Makefile
+index 0f24d48..9dc2052 100755
+--- a/bsnes/ui/Makefile
++++ b/bsnes/ui/Makefile
+@@ -67,11 +67,8 @@ endif
+ install:
+ ifeq ($(platform),x)
+ 	install -D -m 755 out/$(name) $(DESTDIR)$(prefix)/bin/$(name)
+-	mkdir -p ~/.config/$(name)
+-	install -D -m 644 data/$(name).png $(DESTDIR)$(prefix)/share/pixmaps/$(name).png
+-	install -D -m 644 data/$(name).desktop $(DESTDIR)$(prefix)/share/applications/$(name).desktop
+-	cp data/cheats.xml ~/.config/$(name)/cheats.xml
+-	chmod 777 ~/.config/$(name) ~/.config/$(name)/cheats.xml
++	install -D -m 644 data/$(name).png $(DESTDIR)/usr/share/pixmaps/$(name).png
++	install -D -m 644 data/$(name).desktop $(DESTDIR)/usr/share/applications/$(name).desktop
+ endif
+ 
+ uninstall:

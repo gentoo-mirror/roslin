@@ -1,0 +1,56 @@
+diff --git a/bsnes/ui-libsnes/libsnes.cpp b/bsnes/ui-libsnes/libsnes.cpp
+index fbb4482..351221e 100755
+--- a/bsnes/ui-libsnes/libsnes.cpp
++++ b/bsnes/ui-libsnes/libsnes.cpp
+@@ -50,6 +50,42 @@ struct Interface : public SNES::Interface {
+     return { basename, hint };
+   }
+ 
++  void initialize(Interface *derived_interface) {
++    SNES::interface = derived_interface;
++    SNES::system.init();
++  }
++
++  void setCheats(const lstring &list = lstring{}) {
++    if(SNES::cartridge.mode() == SNES::Cartridge::Mode::SuperGameBoy) {
++      GameBoy::cheat.reset();
++      for(auto &code : list) {
++        lstring codelist;
++        codelist.split("+", code);
++        for(auto &part : codelist) {
++          unsigned addr, data, comp;
++          if(GameBoy::Cheat::decode(part, addr, data, comp)) {
++            GameBoy::cheat.append({ addr, data, comp });
++          }
++        }
++      }
++      GameBoy::cheat.synchronize();
++      return;
++    }
++
++    SNES::cheat.reset();
++    for(auto &code : list) {
++      lstring codelist;
++      codelist.split("+", code);
++      for(auto &part : codelist) {
++        unsigned addr, data;
++        if(SNES::Cheat::decode(part, addr, data)) {
++          SNES::cheat.append({ addr, data });
++        }
++      }
++    }
++    SNES::cheat.synchronize();
++  }
++
+   Interface() : pvideo_refresh(0), paudio_sample(0), pinput_poll(0), pinput_state(0) {
+     buffer = new uint16_t[512 * 480];
+     palette = new uint32_t[16 * 32768];
+@@ -244,7 +281,7 @@ bool snes_load_cartridge_super_game_boy(
+     uint8_t *data = new uint8_t[dmg_size];
+     memcpy(data, dmg_data, dmg_size);
+     string xmldmg = (dmg_xml && *dmg_xml) ? string(dmg_xml) : GameBoyCartridge(data, dmg_size).markup;
+-    GameBoy::cartridge.load(xmldmg, data, dmg_size);
++    GameBoy::cartridge.load(GameBoy::System::Revision::SuperGameBoy, xmldmg, data, dmg_size);
+     delete[] data;
+   }
+   SNES::cartridge.load(SNES::Cartridge::Mode::SuperGameBoy, xmlrom);

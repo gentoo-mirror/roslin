@@ -31,7 +31,8 @@ S="${WORKDIR}/${MY_P}/bsnes"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-makefile.patch \
-		"${FILESDIR}"/${PN}-0.084-linker.patch
+		"${FILESDIR}"/${PN}-0.084-linker.patch \
+		"${FILESDIR}"/${PN}-0.084-build.patch
 }
 
 src_compile() {

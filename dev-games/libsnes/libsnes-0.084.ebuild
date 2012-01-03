@@ -1,4 +1,4 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -31,7 +31,8 @@ S="${WORKDIR}/bsnes"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-0.083-makefile.patch \
-		"${FILESDIR}"/${P}-linker.patch
+		"${FILESDIR}"/${P}-linker.patch \
+		"${FILESDIR}"/${P}-build.patch
 }
 
 src_compile() {

@@ -2,6 +2,10 @@
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  03 Jan 2012; Michał Ziąbkowski <mziab@o2.pl> libsnes-0.084.ebuild,
+  +files/libsnes-0.084-build.patch, libsnes-0.085.ebuild:
+  Added tentative patch to fix build.
+
 *libsnes-0.085 (02 Jan 2012)
 
   02 Jan 2012; Michał Ziąbkowski <mziab@o2.pl> +libsnes-0.085.ebuild,

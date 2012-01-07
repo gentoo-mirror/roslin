@@ -1,6 +1,12 @@
 # ChangeLog for net-im/kadu-encryption_ng_simlite
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+
+*kadu-encryption_ng_simlite-0.11.0_rc1 (07 Jan 2012)
+
+  07 Jan 2012; Michał Ziąbkowski <mziab@o2.pl>
+  +kadu-encryption_ng_simlite-0.11.0_rc1.ebuild:
+  Bumped.
 
 *kadu-encryption_ng_simlite-0.11.0_beta2 (30 Dec 2011)
 

@@ -1,4 +1,4 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -6,7 +6,7 @@ MOD_TITLE="Scourge of Armagon"
 MOD_CMDLINE_OPTIONS="-hipnotic"
 MOD_DEPEND_UNZIP=n
 
-inherit eutils games games-mod
+inherit cdrom eutils games games-mod
 
 DESCRIPTION="Scourge of Armagon mission pack for Quake 1"
 HOMEPAGE="http://www.idsoftware.com/games/quake/quake-mp1/"
@@ -16,7 +16,7 @@ SRC_URI="vispatch? ( mirror://sourceforge/vispatch/hipnotic_vis.tgz )"
 #		ftp://ftp.lublin.pl/vol/8/planetquake/qng/hipnotic.zip
 #		http://shub-hub.com/idgames2/planetquake/qng/hipnotic.zip
 
-DEPEND="vispatch? ( games-util/vispatch )"
+RDEPEND="vispatch? ( games-util/vispatch )"
 
 # See manual.txt for license
 

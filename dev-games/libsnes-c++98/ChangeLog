@@ -1,6 +1,19 @@
 # ChangeLog for dev-games/libsnes-c++98
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+
+*libsnes-c++98-9999 (13 Jan 2012)
+*libsnes-c++98-084 (13 Jan 2012)
+*libsnes-c++98-083 (13 Jan 2012)
+*libsnes-c++98-082 (13 Jan 2012)
+
+  13 Jan 2012; Michał Ziąbkowski <mziab@o2.pl> -libsnes-c++98-0.82.ebuild,
+  -files/libsnes-c++98-0.82-makefile.patch, -libsnes-c++98-0.83.ebuild,
+  -libsnes-c++98-0.84.ebuild, +libsnes-c++98-082.ebuild,
+  +files/libsnes-c++98-082-makefile.patch, +libsnes-c++98-083.ebuild,
+  +libsnes-c++98-084.ebuild, +libsnes-c++98-9999.ebuild:
+  Changed versioning. Fixed QA warning about library symlink. Added live git
+  ebuild.
 
 *libsnes-c++98-0.84 (19 Dec 2011)
 

@@ -4,7 +4,7 @@
 
 EAPI=4
 
-inherit eutils
+inherit eutils multilib
 
 MY_PV="${PV/0./}"
 MY_PV="${MY_PV/_/}"
@@ -27,12 +27,10 @@ DEPEND=">=sys-devel/gcc-4.6
 	!dev-games/libsnes-c++98
 	!dev-games/snes9x-libsnes"
 
-S="${WORKDIR}/bsnes"
+S="${WORKDIR}/${MY_P}/bsnes"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-0.083-makefile.patch \
-		"${FILESDIR}"/${P}-linker.patch \
-		"${FILESDIR}"/${P}-build.patch
+	epatch "${FILESDIR}"/${P}-makefile.patch
 }
 
 src_compile() {
@@ -55,6 +53,7 @@ src_compile() {
 src_install() {
 	dolib.so out/libsnes.so || die
 	dolib.a out/libsnes.a || die
+	dosym libsnes.so usr/$(get_libdir)/libsnes.so.1
 	insinto /usr/include
 	doins ui-libsnes/libsnes.hpp || die
 }

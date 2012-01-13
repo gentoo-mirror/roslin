@@ -2,6 +2,24 @@
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*libsnes-085 (13 Jan 2012)
+*libsnes-084 (13 Jan 2012)
+*libsnes-083 (13 Jan 2012)
+*libsnes-082 (13 Jan 2012)
+
+  13 Jan 2012; Michał Ziąbkowski <mziab@o2.pl>
+  -files/libsnes-0.075-makefile.patch, -libsnes-0.082.ebuild,
+  -files/libsnes-0.082-sgb-build.patch, -libsnes-0.083.ebuild,
+  -files/libsnes-0.083-makefile.patch, -libsnes-0.084.ebuild,
+  -files/libsnes-0.084-build.patch, -files/libsnes-0.084-linker.patch,
+  -libsnes-0.085.ebuild, -files/libsnes-0.085-makefile.patch,
+  +files/libsnes-075-makefile.patch, +libsnes-082.ebuild,
+  +files/libsnes-082-sgb-build.patch, +libsnes-083.ebuild,
+  +files/libsnes-083-makefile.patch, +libsnes-084.ebuild,
+  +files/libsnes-084-build.patch, +files/libsnes-084-linker.patch,
+  +libsnes-085.ebuild, +files/libsnes-085-makefile.patch:
+  Changed versioning. Fixed QA warning about library symlink.
+
   03 Jan 2012; Michał Ziąbkowski <mziab@o2.pl> libsnes-0.084.ebuild,
   +files/libsnes-0.084-build.patch, libsnes-0.085.ebuild:
   Added tentative patch to fix build.

@@ -1,4 +1,4 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -6,7 +6,7 @@ MOD_TITLE="Dissolution of Eternity"
 MOD_CMDLINE_OPTIONS="-rogue"
 MOD_DEPEND_UNZIP=n
 
-inherit eutils games games-mod
+inherit cdrom eutils games games-mod
 
 DESCRIPTION="Dissolution of Eternity mission pack for Quake 1"
 HOMEPAGE="http://www.idsoftware.com/games/quake/quake-mp2/"

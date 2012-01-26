@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: /var/cvsroot/gentoo-x86/games-emulation/snes9x/snes9x-1.52-r1.ebuild,v 1.10 2010/11/15 09:49:52 tupone Exp $
 
 EAPI=2
 
-inherit eutils autotools git-2
+inherit eutils autotools multilib git-2
 
 DESCRIPTION="libsnes implementation utilizing the snes9x core"
 HOMEPAGE="https://github.com/Themaister/snes9x-libsnes/"
@@ -32,6 +32,7 @@ src_prepare() {
 src_install() {
 	dolib.so libsnes.so || die
 	dolib.a libsnes.a || die
+	dosym libsnes.so usr/$(get_libdir)/libsnes.so.1
 
 	sed -e "/port.h/d" \
 		-i libsnes.hpp \

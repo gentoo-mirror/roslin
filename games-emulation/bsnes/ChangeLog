@@ -1,6 +1,26 @@
 # ChangeLog for games-emulation/bsnes
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 
+*bsnes-085 (13 Jan 2012)
+*bsnes-084 (13 Jan 2012)
+*bsnes-083 (13 Jan 2012)
+*bsnes-082-r1 (13 Jan 2012)
+*bsnes-073 (13 Jan 2012)
+
+  13 Jan 2012; Michał Ziąbkowski <mziab@o2.pl> -bsnes-0.073.ebuild,
+  -files/bsnes-0.073-makefile.patch, -files/bsnes-0.077-makefile.patch,
+  -bsnes-0.082-r1.ebuild, -files/bsnes-0.082-global-paths.patch,
+  -bsnes-0.083.ebuild, -files/bsnes-0.083-global-paths.patch,
+  -files/bsnes-0.083-makefile.patch, -bsnes-0.084.ebuild, -bsnes-0.085.ebuild,
+  -files/bsnes-0.085-global-paths.patch, -files/bsnes-0.085-makefile.patch,
+  +bsnes-073.ebuild, +files/bsnes-073-makefile.patch,
+  +files/bsnes-077-makefile.patch, +bsnes-082-r1.ebuild,
+  +files/bsnes-082-global-paths.patch, +bsnes-083.ebuild,
+  +files/bsnes-083-global-paths.patch, +files/bsnes-083-makefile.patch,
+  +bsnes-084.ebuild, +bsnes-085.ebuild, +files/bsnes-085-global-paths.patch,
+  +files/bsnes-085-makefile.patch:
+  Changed versioning.
+
 *bsnes-0.085 (02 Jan 2012)
 
   02 Jan 2012; Michał Ziąbkowski <mziab@o2.pl> +bsnes-0.085.ebuild,

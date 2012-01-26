@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
 EAPI=4
 
-inherit eutils
+inherit eutils multilib
 
 MY_PV="${PV/0./}"
 MY_PV="${MY_PV/_/}"
@@ -30,7 +30,9 @@ DEPEND=">=sys-devel/gcc-4.6
 S="${WORKDIR}/${MY_P}/bsnes"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-makefile.patch
+	epatch "${FILESDIR}"/${P}-makefile.patch \
+		"${FILESDIR}"/${PN}-084-linker.patch \
+		"${FILESDIR}"/${PN}-084-build.patch
 }
 
 src_compile() {
@@ -53,6 +55,7 @@ src_compile() {
 src_install() {
 	dolib.so out/libsnes.so || die
 	dolib.a out/libsnes.a || die
+	dosym libsnes.so usr/$(get_libdir)/libsnes.so.1
 	insinto /usr/include
 	doins ui-libsnes/libsnes.hpp || die
 }

@@ -1,4 +1,4 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -14,9 +14,9 @@ DESCRIPTION="A Super Famicom/SNES emulator written with absolute accuracy in min
 HOMEPAGE="http://byuu.org/bsnes/"
 SRC_URI="http://bsnes.googlecode.com/files/${MY_P}.tar.bz2"
 
-LICENSE="GPL-3"
+LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 IUSE="ao alsa debug +gtk openal opengl oss profile_accuracy +profile_compatibility profile_performance pulseaudio qt4 sdl snesfilter xv"
 
 RDEPEND="ao? ( media-libs/libao )
@@ -31,7 +31,7 @@ RDEPEND="ao? ( media-libs/libao )
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
-	>=sys-devel/gcc-4.6"
+	>=sys-devel/gcc-4.5"
 
 S="${WORKDIR}/${MY_P}/bsnes"
 
@@ -47,7 +47,7 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-makefile.patch \
+	epatch "${FILESDIR}"/${PN}-077-makefile.patch \
 		"${FILESDIR}"/${P}-global-paths.patch
 
 	sed -e "s:%GAMES_DATADIR%:${GAMES_DATADIR}:" \
@@ -119,13 +119,11 @@ src_install() {
 
 	# install cheat db
 	insinto "${GAMES_DATADIR}/${PN}"
-	doins data/cheats.bml || die
+	doins data/cheats.xml || die
 
 	# install shaders
-	if use opengl; then
-		insinto "${GAMES_DATADIR}/${PN}/shaders"
-		doins ../snesshader/*OpenGL*.shader || die
-	fi
+	insinto "${GAMES_DATADIR}/${PN}/shaders"
+	doins ../snesshader/*OpenGL*.shader || die
 
 	# install filters
 	if use snesfilter; then

@@ -2,6 +2,11 @@
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*kadu-hints-0.11.0_rc2 (16 Jan 2012)
+
+  16 Jan 2012; Michał Ziąbkowski <mziab@o2.pl> +kadu-hints-0.11.0_rc2.ebuild:
+  Bumped.
+
 *kadu-hints-0.11.0_rc1 (07 Jan 2012)
 
   07 Jan 2012; Michał Ziąbkowski <mziab@o2.pl> +kadu-hints-0.11.0_rc1.ebuild:

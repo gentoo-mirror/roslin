@@ -1,4 +1,4 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -12,7 +12,8 @@ IUSE=""
 RESTRICT="primaryuri"
 
 SRC_URI="http://www.kadu.net/download/additions/kompatybilne_z_GG6.tar.gz
-	http://www.kadu.net/download/additions/kadu-0.6.5.4-emots-tango.tar.gz"
+	http://www.kadu.net/download/additions/kadu-0.6.5.4-emots-tango.tar.gz
+	http://wilku.tk/files/emots_gg10.zip"
 
 S="${WORKDIR}"
 

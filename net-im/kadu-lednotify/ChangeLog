@@ -2,6 +2,10 @@
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  30 Jan 2012; Michał Ziąbkowski <mziab@o2.pl>
+  -kadu-lednotify-0.9.0_p28.ebuild:
+  Removed 0.9.*.
+
 *kadu-lednotify-0.11_p32 (30 Jan 2012)
 
   30 Jan 2012; Michał Ziąbkowski <mziab@o2.pl>

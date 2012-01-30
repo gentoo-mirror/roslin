@@ -2,6 +2,9 @@
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  30 Jan 2012; Michał Ziąbkowski <mziab@o2.pl> -kadu-cenzor-0.9.2.ebuild:
+  Removed 0.9.*.
+
   30 Jan 2012; Michał Ziąbkowski <mziab@o2.pl> kadu-cenzor-0.10.1.ebuild,
   -kadu-cenzor-0.11.0_beta1.ebuild, -kadu-cenzor-0.11.0_beta2.ebuild:
   Removed cruft.

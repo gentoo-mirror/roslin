@@ -2,6 +2,17 @@
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  30 Jan 2012; Michał Ziąbkowski <mziab@o2.pl> kadu-word_fix-0.10.1.ebuild,
+  -kadu-word_fix-0.11.0_beta1.ebuild, -kadu-word_fix-0.11.0_beta2.ebuild:
+  Removed cruft.
+
+  30 Jan 2012; Michał Ziąbkowski <mziab@o2.pl> kadu-word_fix-0.10.1.ebuild,
+  -kadu-word_fix-0.11.0_beta1.ebuild, -kadu-word_fix-0.11.0_beta2.ebuild:
+  Removed cruft.
+
+  30 Jan 2012; Michał Ziąbkowski <mziab@o2.pl> kadu-word_fix-0.10.1.ebuild:
+  Stabled.
+
 *kadu-word_fix-0.11.0_rc3 (29 Jan 2012)
 
   27 Jan 2012; Michał Ziąbkowski <mziab@o2.pl> +kadu-word_fix-0.11.0_rc3.ebuild:

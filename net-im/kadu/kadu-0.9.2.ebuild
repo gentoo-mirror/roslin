@@ -1,4 +1,4 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -8,7 +8,7 @@ inherit eutils
 
 DESCRIPTION="A Qt4 client for the popular Polish Gadu-Gadu IM network"
 HOMEPAGE="http://kadu.net"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 LICENSE="GPL-2"
 
 IUSE="alsa debug emoticons +gadu icons +jabber kde phonon sound spell ssl"

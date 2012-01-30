@@ -38,8 +38,7 @@ kadu_src_configure() {
 	use debug && local CMAKE_BUILD_TYPE="debug"
 
 	local mycmakeargs="${mycmakeargs} \
-		-DBUILD_DESCRIPTION:STRING='Gentoo Linux' \
-		-DENABLE_AUTODOWNLOAD:BOOL=OFF"
+		-DBUILD_DESCRIPTION:STRING='Gentoo Linux'"
 
 	cmake-utils_src_configure
 }

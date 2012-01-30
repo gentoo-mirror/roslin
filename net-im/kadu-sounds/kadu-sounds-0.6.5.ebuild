@@ -1,4 +1,4 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -11,12 +11,12 @@ SLOT="0"
 IUSE=""
 RESTRICT="primaryuri"
 
-SRC_URI="http://www.kadu.net/download/additions/kadu-sound-bns.tar.bz2
-	http://www.kadu.net/download/additions/kadu-sound-drums.tar.bz2
-	http://www.kadu.net/download/additions/kadu-sound-florkus.tar.bz2
-	http://www.kadu.net/download/additions/kadu-sound-michalsrodek.tar.bz2
-	http://www.kadu.net/download/additions/kadu-sound-percussion.tar.bz2
-	http://www.kadu.net/download/additions/kadu-sound-ultr.tar.bz2"
+SRC_URI="http://download.kadu.im/additions/kadu-sound-bns.tar.bz2
+	http://download.kadu.im/additions/kadu-sound-drums.tar.bz2
+	http://download.kadu.im/additions/kadu-sound-florkus.tar.bz2
+	http://download.kadu.im/additions/kadu-sound-michalsrodek.tar.bz2
+	http://download.kadu.im/additions/kadu-sound-percussion.tar.bz2
+	http://download.kadu.im/additions/kadu-sound-ultr.tar.bz2"
 
 S="${WORKDIR}"
 

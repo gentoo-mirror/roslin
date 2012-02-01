@@ -1,4 +1,4 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -14,9 +14,8 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64 ~ia64"
 IUSE="dbus nls"
 RDEPEND=">=dev-libs/glib-2.0:2
-	|| ( =x11-libs/qt-4.3*[dbus?]
-	( x11-libs/qt-gui:4
-	    dbus? ( x11-libs/qt-dbus:4 ) ) )"
+	x11-libs/qt-gui:4
+	dbus? ( x11-libs/qt-dbus:4 )"
 DEPEND="${RDEPEND}"
 
 PATCHES=("${FILESDIR}/${P}-gcc44.patch")

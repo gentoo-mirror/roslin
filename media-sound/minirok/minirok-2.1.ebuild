@@ -1,4 +1,4 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -16,7 +16,7 @@ IUSE="dbus flac mp3 musepack vorbis"
 DEPEND="kde-base/pykde4
 	media-libs/mutagen
 	|| ( dev-python/simplejson
-	>=sys-lang/python-2.6 )
+	    >=dev-lang/python-2.6 )
 	dev-python/gst-python
 	media-plugins/gst-plugins-alsa
 	dbus? ( dev-python/dbus-python )

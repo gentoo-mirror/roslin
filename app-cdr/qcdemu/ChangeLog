@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/qcdemu
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+
+  01 Feb 2012; Michał Ziąbkowski <mziab@o2.pl> qcdemu-0.2.4.ebuild:
+  Fixed qt dep.
 
   29 Jan 2010; Michał Ziąbkowski <mziab@o2.pl> -qcdemu-0.2.2.ebuild,
   -qcdemu-0.2.3.ebuild:

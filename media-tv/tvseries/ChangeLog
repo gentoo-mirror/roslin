@@ -1,6 +1,9 @@
 # ChangeLog for media-tv/tvseries
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+
+  02 Feb 2012; Piotr Szymaniak <szarpaj@grubelek.pl> tvseries-0.6.6.ebuild:
+  Masked, SRC_URI dead.
 
 *tvseries-0.6.6 (02 Jun 2010)
 

@@ -1,4 +1,4 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -11,9 +11,11 @@ SLOT="0"
 IUSE=""
 RESTRICT="primaryuri"
 
-SRC_URI="http://www.kadu.net/download/additions/kadu-0.6.6-theme-glass.tar.gz
-	http://www.kadu.net/download/additions/kadu-0.6.6-theme-oxygen.tar.gz
-	http://www.kadu.net/download/additions/kadu-0.6.6-theme-tango.tar.gz"
+SRC_URI="http://download.kadu.im/additions/kadu-0.6.6-theme-glass-16.tar.gz
+	http://download.kadu.im/additions/kadu-0.6.6-theme-glass-22.tar.gz
+	http://download.kadu.im/additions/kadu-0.6.6-theme-glass.tar.gz
+	http://download.kadu.im/additions/kadu-0.6.6-theme-oxygen.tar.gz
+	http://download.kadu.im/additions/kadu-0.6.6-theme-tango.tar.gz"
 
 S="${WORKDIR}"
 

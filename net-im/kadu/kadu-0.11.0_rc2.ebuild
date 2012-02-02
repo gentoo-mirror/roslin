@@ -30,20 +30,6 @@ RDEPEND=">=net-im/kadu-core-${PV}[debug?]
 	jabber? ( >=net-im/kadu-jabber_protocol-${PV}[debug?] )
 	spell? ( >=net-im/kadu-spellchecker-${PV}[debug?] )
 	ssl? ( >=net-im/kadu-encryption_ng_simlite-${PV}[debug?] )
-	!net-im/kadu-alsa_sound
-	!net-im/kadu-amarok2_mediaplayer
-	!net-im/kadu-audacious_mediaplayer
-	!net-im/kadu-bmpx_mediaplayer
-	!net-im/kadu-dragon_mediaplayer
-	!net-im/kadu-mpris_mediaplayer
-	!net-im/kadu-kde_notify
-	!net-im/kadu-parser_extender
-	!net-im/kadu-server_monitor
-	!net-im/kadu-splitmessages
-	!net-im/kadu-split_messages
-	!net-im/kadu-vlc_mediaplayer
-	!net-im/kadu-icons
-	!net-im/kadu-emoticons
 "
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"

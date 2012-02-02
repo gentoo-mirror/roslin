@@ -1,4 +1,4 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -15,9 +15,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="nls"
 
-DEPEND="|| ( =x11-libs/qt-4.3*[dbus]
-	( x11-libs/qt-gui:4
-	x11-libs/qt-dbus:4 ) )"
+DEPEND="x11-libs/qt-gui:4
+	x11-libs/qt-dbus:4"
 RDEPEND="${DEPEND}
 	>=app-cdr/cdemud-1.2.0"
 

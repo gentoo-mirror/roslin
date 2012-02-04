@@ -7,7 +7,7 @@ inherit kadu
 DESCRIPTION="History import module"
 HOMEPAGE="http://www.kadu.im/w/Importhistory"
 SRC_URI="http://kicer.sileman.net.pl/kadu/${NAME}-${PV}.tar.bz2"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND=">=x11-libs/qt-gui-4.7.0

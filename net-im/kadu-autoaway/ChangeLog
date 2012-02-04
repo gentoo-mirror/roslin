@@ -2,6 +2,14 @@
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  04 Feb 2012; Michał Ziąbkowski <mziab@o2.pl> +kadu-autoaway-0.11.0.ebuild:
+  Re-added keywords
+
+*kadu-autoaway-0.11.0 (04 Feb 2012)
+
+  04 Feb 2012; Michał Ziąbkowski <mziab@o2.pl> +kadu-autoaway-0.11.0.ebuild:
+  Bumped.
+
   30 Jan 2012; Michał Ziąbkowski <mziab@o2.pl> -kadu-autoaway-0.9.2.ebuild:
   Removed 0.9.*.
 

@@ -2,6 +2,13 @@
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*mednafen-0.9.19-r1 (04 Feb 2012)
+
+  04 Feb 2012; Michał Ziąbkowski <mziab@o2.pl> +mednafen-0.9.19-r1.ebuild,
+  +files/mednafen-0.9.19-psx-debug.patch,
+  +files/mednafen-0.9.19-zlib-1.2.6.patch:
+  Rev-bumped with patches to fix build with disabled debug and zlib-1.2.6.
+
 *mednafen-0.9.19 (02 Feb 2012)
 
   02 Feb 2012; Michał Ziąbkowski <mziab@o2.pl> +mednafen-0.9.19.ebuild:

@@ -31,6 +31,10 @@ S="${WORKDIR}/${MY_P}/bsnes"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-makefile.patch
+
+	sed -i "ui-libsnes/Makefile" \
+		-e "s:lib/:$(get_libdir)/:g" \
+		|| die
 }
 
 src_compile() {
@@ -51,9 +55,7 @@ src_compile() {
 }
 
 src_install() {
-	dolib.so out/libsnes.so || die
-	dolib.a out/libsnes.a || die
-	dosym libsnes.so usr/$(get_libdir)/libsnes.so.1
+	emake DESTDIR="${D}" ui=ui-libsnes prefix=/usr install || die
 	insinto /usr/include
 	doins ui-libsnes/libsnes.hpp || die
 }

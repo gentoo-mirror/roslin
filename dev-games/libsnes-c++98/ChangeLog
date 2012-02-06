@@ -2,6 +2,11 @@
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  06 Feb 2012; Michał Ziąbkowski <mziab@o2.pl> libsnes-c++98-082.ebuild,
+  libsnes-c++98-083.ebuild, libsnes-c++98-084.ebuild,
+  libsnes-c++98-9999.ebuild:
+  Reworked src_install.
+
 *libsnes-c++98-9999 (13 Jan 2012)
 *libsnes-c++98-084 (13 Jan 2012)
 *libsnes-c++98-083 (13 Jan 2012)

@@ -26,6 +26,10 @@ DEPEND="!dev-games/libsnes
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-082-makefile.patch
+
+	sed -i "snes/Makefile" \
+		-e "s:lib/:$(get_libdir)/:g" \
+		|| die
 }
 
 src_compile() {
@@ -44,9 +48,5 @@ src_compile() {
 }
 
 src_install() {
-	dolib.so out/libsnes.so || die "libsnes.so install failed"
-	dolib.a out/libsnes.a || die "libsnes.a install failed"
-	dosym libsnes.so usr/$(get_libdir)/libsnes.so.1
-	insinto /usr/include
-	doins snes/libsnes/libsnes.hpp || die "libsnes.hpp install failed"
+	emake DESTDIR="${D}" prefix=/usr install || die
 }

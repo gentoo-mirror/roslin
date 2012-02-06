@@ -70,6 +70,11 @@ src_prepare() {
 
 	# input modules
 	use sdl || disable_module input.sdl
+
+	# regenerate .moc if needed
+	if qt4; then
+		cd phoenix/qt && moc -i -I. -o platform.moc platform.moc.hpp
+	fi
 }
 
 src_compile() {

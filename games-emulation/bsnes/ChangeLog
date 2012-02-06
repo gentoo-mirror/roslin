@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/bsnes
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 
+  06 Feb 2012; Michał Ziąbkowski <mziab@o2.pl> bsnes-082-r1.ebuild,
+  bsnes-083.ebuild, bsnes-084.ebuild, bsnes-085.ebuild:
+  Regenerate .moc to fix build with qt-4.8.
+
 *bsnes-085 (13 Jan 2012)
 *bsnes-084 (13 Jan 2012)
 *bsnes-083 (13 Jan 2012)

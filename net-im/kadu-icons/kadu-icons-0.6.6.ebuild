@@ -13,8 +13,6 @@ RESTRICT="primaryuri"
 
 SRC_URI="http://download.kadu.im/additions/kadu-0.6.6-theme-glass-16.tar.gz
 	http://download.kadu.im/additions/kadu-0.6.6-theme-glass-22.tar.gz
-	http://download.kadu.im/additions/kadu-0.6.6-theme-glass.tar.gz
-	http://download.kadu.im/additions/kadu-0.6.6-theme-oxygen.tar.gz
 	http://download.kadu.im/additions/kadu-0.6.6-theme-tango.tar.gz"
 
 S="${WORKDIR}"

@@ -11,8 +11,7 @@ SLOT="0"
 IUSE=""
 RESTRICT="primaryuri"
 
-SRC_URI="http://www.kadu.net/download/additions/kompatybilne_z_GG6.tar.gz
-	http://www.kadu.net/download/additions/kadu-0.6.5.4-emots-tango.tar.gz
+SRC_URI="http://download.kadu.im/additions/kompatybilne_z_GG6.tar.gz
 	http://wilku.tk/files/emots_gg10.zip"
 
 S="${WORKDIR}"

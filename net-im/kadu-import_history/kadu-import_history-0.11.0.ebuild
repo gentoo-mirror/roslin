@@ -2,11 +2,13 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
+EAPI=3
+
 inherit kadu
 
 DESCRIPTION="History import module"
 HOMEPAGE="http://www.kadu.im/w/Importhistory"
-SRC_URI="http://kicer.sileman.net.pl/kadu/${NAME}-${PV}.tar.bz2"
+SRC_URI="http://kicer.sileman.net.pl/kadu/${NAME}-${PV}.tar.bz2 -> ${NAME}-${PV}-.tar"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 

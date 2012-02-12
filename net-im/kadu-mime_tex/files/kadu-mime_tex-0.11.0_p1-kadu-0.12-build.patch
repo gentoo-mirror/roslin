@@ -1,0 +1,23 @@
+diff --git a/tex_formula_dialog.cpp b/tex_formula_dialog.cpp
+index f7f55d0..8baec2b 100644
+--- a/tex_formula_dialog.cpp
++++ b/tex_formula_dialog.cpp
+@@ -625,7 +625,7 @@ void MimeTeX::TeXFormulaDialog::timeoutSlot()
+ 		for(it = arguments.constBegin(); it != arguments.constEnd(); ++it)
+ 			kdebugm(KDEBUG_INFO, "Arg[%d]=%s\n", i++, (*it).toLocal8Bit().constData());
+ #endif
+-		mimeTeXProcess.start(libPath("kadu/plugins/bin/mime_tex/mimetex"),
++		mimeTeXProcess.start(pluginsLibPath("bin/mime_tex/mimetex"),
+ 			arguments);
+ 		mimeTeXProcess.waitForStarted();
+ 	}
+diff --git a/mimetex/CMakeLists.txt b/mimetex/CMakeLists.txt
+index 7405de6..4b40769 100644
+--- a/mimetex/CMakeLists.txt
++++ b/mimetex/CMakeLists.txt
+@@ -10,4 +10,4 @@ STRING(REGEX REPLACE "-Werror(=.*\ )?" " " CMAKE_C_FLAGS ${CMAKE_C_FLAGS})
+ 
+ add_executable(mimetex ${SOURCES})
+ target_link_libraries(mimetex m)
+-install (TARGETS mimetex DESTINATION ${KADU_LIBDIR}/kadu/plugins/bin/mime_tex)
++install (TARGETS mimetex DESTINATION ${KADU_PLUGINS_LIBDIR}/bin/mime_tex)

@@ -7,7 +7,7 @@ index 3e8f35b..aadadce 100755
      files = directory::files(path, "*.filter");
    }
 +  if(files.size() == 0) {
-+    path = "%GAMES_DATADIR/bsnes/filters/";
++    path = "%GAMES_DATADIR%/bsnes/filters/";
 +    files = directory::files(path, "*.filter");
 +  }
    reference_array<RadioItem&> group;

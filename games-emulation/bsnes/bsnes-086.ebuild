@@ -17,7 +17,7 @@ SRC_URI="http://bsnes.googlecode.com/files/${MY_P}.tar.bz2"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS=""
-IUSE="ao alsa debug +gtk openal opengl oss profile_accuracy +profile_compatibility profile_performance pulseaudio qt4 sdl snesfilter xv"
+IUSE="ao alsa +gtk openal opengl oss profile_accuracy +profile_compatibility profile_performance pulseaudio qt4 sdl snesfilter xv"
 
 RDEPEND="ao? ( media-libs/libao )
 	openal? ( media-libs/openal )
@@ -47,7 +47,7 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-makefile.patch \
+	epatch "${FILESDIR}"/${PN}-085-makefile.patch \
 		"${FILESDIR}"/${P}-global-paths.patch
 
 	sed -e "s:%GAMES_DATADIR%:${GAMES_DATADIR}:" \
@@ -95,15 +95,11 @@ src_compile() {
 		mytoolkit="qt"
 	fi
 
-	local myoptions
-	use debug && myoptions="debugger"
-
 	emake \
 		platform=x \
 		compiler=gcc \
 		profile=${myprofile} \
-		phoenix=${mytoolkit} \
-		options=${myoptions} || die "emake failed"
+		phoenix=${mytoolkit} || die "emake failed"
 
 	if use snesfilter; then
 		emake \

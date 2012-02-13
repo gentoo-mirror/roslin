@@ -2,6 +2,9 @@
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  13 Feb 2012; Michał Ziąbkowski <mziab@o2.pl> laevateinn-086.ebuild:
+  Install binary manually instead of relying on make install.
+
 *laevateinn-086 (13 Feb 2012)
 
   13 Feb 2012; Michał Ziąbkowski <mziab@o2.pl> +laevateinn-086.ebuild,

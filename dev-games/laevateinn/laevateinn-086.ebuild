@@ -45,3 +45,6 @@ src_compile() {
 		ui=ui-debugger || die "emake failed"
 }
 
+src_install() {
+	dobin out/${PN} || die
+}

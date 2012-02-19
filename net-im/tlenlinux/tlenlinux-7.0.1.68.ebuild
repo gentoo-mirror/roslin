@@ -15,7 +15,6 @@ LICENSE="tlen"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="phonon qt-static"
-PROPERTIES="interactive"
 RESTRICT="strip"
 
 RDEPEND="!qt-static? ( >=x11-libs/qt-gui-4.6:4

@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/supertux
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 
+  19 Feb 2012; Piotr Szymaniak <szarpaj@grubelek.pl>
+  +files/0.3.3-missing-sstream-include.patch, supertux-0.3.3.ebuild:
+  Fixed missing include.
+
   19 Feb 2012; Piotr Szymaniak <szarpaj@grubelek.pl> supertux-0.3.3.ebuild,
   supertux-9999.ebuild:
   Added missing boost depend.

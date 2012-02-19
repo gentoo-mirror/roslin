@@ -30,6 +30,7 @@ DEPEND="${RDEPEND}"
 src_prepare() {
 	epatch "${FILESDIR}/${PV}"-notypes.patch
 	epatch "${FILESDIR}/${PV}"-gcc46.patch
+	epatch "${FILESDIR}/${PV}"-missing-sstream-include.patch
 }
 
 src_configure() {

@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/osmose
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+
+  19 Feb 2012; Piotr Szymaniak <szarpaj@grubelek.pl> osmose-0.9.96.ebuild,
+  osmose-0.9.96-r1.ebuild:
+  Added missing depend.
 
 *osmose-0.9.96-r1 (23 Sep 2011)
 

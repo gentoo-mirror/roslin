@@ -1,4 +1,4 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -17,11 +17,12 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="media-libs/alsa-lib
+RDEPEND="media-libs/alsa-lib
 	sys-libs/zlib[minizip]
 	>=x11-libs/qt-gui-4.6:4
 	>=x11-libs/qt-opengl-4.6:4"
-RDEPEND="${DEPEND}"
+DEPEND="${RDEPEND}
+	app-arch/unzip"
 
 S="${WORKDIR}/${MY_P}"
 

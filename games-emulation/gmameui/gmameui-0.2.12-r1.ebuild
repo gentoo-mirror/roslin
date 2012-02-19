@@ -1,4 +1,4 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -19,7 +19,7 @@ RDEPEND="dev-libs/expat
 	>=x11-libs/gtk+-2.12:2
 	>=gnome-base/libglade-2.0
 	x11-themes/gnome-icon-theme
-	>=x11-libs/vte-0.9.0
+	x11-libs/vte:0
 	app-arch/libarchive
 	nls? ( virtual/libintl )
 	gnome? ( gnome-base/libgnome )

@@ -1,4 +1,4 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -27,6 +27,7 @@ S=${WORKDIR}/${P/_/.}.1615
 
 src_prepare() {
 	epatch "${FILESDIR}/${MY_PV}-Makefile.patch"
+	epatch "${FILESDIR}/${MY_PV}-curl.patch"
 }
 
 src_install() {

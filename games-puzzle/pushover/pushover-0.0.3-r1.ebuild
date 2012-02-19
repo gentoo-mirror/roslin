@@ -1,4 +1,4 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -16,6 +16,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="nls"
 
 DEPEND="dev-lang/lua
+	media-libs/libpng
 	media-libs/sdl-mixer
 	media-libs/sdl-ttf"
 RDEPEND="${DEPEND}"

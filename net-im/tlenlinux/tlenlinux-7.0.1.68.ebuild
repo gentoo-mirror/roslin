@@ -1,4 +1,4 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -32,10 +32,6 @@ S="${WORKDIR}"
 TLEN_DIR="/opt/tlen"
 STATIC_FILES="designer/* imageformats/* phonon_backend/* qt_libs/*"
 SHARED_FILES="plugins/* tlen_libs/* tlen-bin updater"
-
-pkg_setup() {
-	check_license
-}
 
 src_unpack() {
 	unpack_makeself

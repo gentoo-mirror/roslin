@@ -1,6 +1,10 @@
 # ChangeLog for games-rpg/amnesia-tdd-demo
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+
+  19 Feb 2012; Piotr Szymaniak <szarpaj@grubelek.pl>
+  amnesia-tdd-demo-1.0.1.ebuild:
+  Added unpacker eclass.
 
   09 Apr 2011; Piotr Szymaniak <szarpaj@grubelek.pl>
   -amnesia-tdd-demo-1.0.ebuild, amnesia-tdd-demo-1.0.1.ebuild, +metadata.xml:

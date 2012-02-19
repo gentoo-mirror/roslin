@@ -1,6 +1,16 @@
 # ChangeLog for net-im/tlenlinux
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+
+  19 Feb 2012; Piotr Szymaniak <szarpaj@grubelek.pl> tlenlinux-7.0.1.68.ebuild,
+  tlenlinux-7.0.1.71.ebuild, tlenlinux-7.0.1.72.ebuild,
+  tlenlinux-7.0.2.1.ebuild:
+  Added unpacker eclass.
+
+  19 Feb 2012; Piotr Szymaniak <szarpaj@grubelek.pl> tlenlinux-7.0.1.68.ebuild,
+  tlenlinux-7.0.1.71.ebuild, tlenlinux-7.0.1.72.ebuild,
+  tlenlinux-7.0.2.1.ebuild:
+  Removed check_license.
 
 *tlenlinux-7.0.2.1 (19 Apr 2011)
 

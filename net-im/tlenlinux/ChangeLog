@@ -5,6 +5,11 @@
   19 Feb 2012; Piotr Szymaniak <szarpaj@grubelek.pl> tlenlinux-7.0.1.68.ebuild,
   tlenlinux-7.0.1.71.ebuild, tlenlinux-7.0.1.72.ebuild,
   tlenlinux-7.0.2.1.ebuild:
+  Added unpacker eclass.
+
+  19 Feb 2012; Piotr Szymaniak <szarpaj@grubelek.pl> tlenlinux-7.0.1.68.ebuild,
+  tlenlinux-7.0.1.71.ebuild, tlenlinux-7.0.1.72.ebuild,
+  tlenlinux-7.0.2.1.ebuild:
   Removed check_license.
 
 *tlenlinux-7.0.2.1 (19 Apr 2011)

@@ -4,7 +4,7 @@
 
 EAPI=2
 
-inherit fdo-mime eutils
+inherit fdo-mime eutils unpacker
 
 DESCRIPTION="Tlen IM client"
 HOMEPAGE="http://tlen.pl"

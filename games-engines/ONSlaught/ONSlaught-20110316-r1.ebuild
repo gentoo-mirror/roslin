@@ -1,4 +1,4 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -26,6 +26,7 @@ RDEPEND="media-libs/sdl-image[jpeg,png]
 	media-libs/flac
 	media-libs/libmikmod
 	media-libs/openal
+	media-libs/tiff
 	media-sound/mpg123
 	sys-libs/zlib"
 DEPEND="${RDEPEND}

@@ -1,4 +1,4 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -15,15 +15,16 @@ SLOT="2"
 KEYWORDS="~amd64 ~x86"
 IUSE="opengl curl debug"
 
-RDEPEND="media-libs/libsdl[joystick]
-	media-libs/sdl-image[png,jpeg]
-	media-libs/libvorbis
-	dev-games/physfs
-	media-libs/openal
-	x11-libs/libXt
+RDEPEND="dev-games/physfs
+	dev-libs/boost
 	media-libs/glew
-	opengl? ( virtual/opengl )
-	curl? ( >=net-misc/curl-7.21.7 )"
+	media-libs/libsdl[joystick]
+	media-libs/libvorbis
+	media-libs/openal
+	media-libs/sdl-image[png,jpeg]
+	x11-libs/libXt
+	curl? ( >=net-misc/curl-7.21.7 )
+	opengl? ( virtual/opengl )"
 DEPEND="${RDEPEND}"
 
 src_prepare() {

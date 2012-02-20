@@ -1,0 +1,23 @@
+diff --git a/qmc2main.cpp b/qmc2main.cpp
+index ca3cf6d..40e0abc 100644
+--- a/qmc2main.cpp
++++ b/qmc2main.cpp
+@@ -61,8 +61,8 @@
+ #if defined(QMC2_EMUTYPE_MESS)
+ #include "messdevcfg.h"
+ #endif
+-#if QMC2_USE_PHONON_API
+ #include <QTest>
++#if QMC2_USE_PHONON_API
+ #include "audioeffects.h"
+ #endif
+ #include "toolexec.h"
+@@ -1309,7 +1309,7 @@ MainWindow::MainWindow(QWidget *parent)
+ 
+ #if !(QMC2_USE_PHONON_API)
+   tabWidgetLogsAndEmulators->removeTab(tabWidgetLogsAndEmulators->indexOf(tabAudioPlayer));
+-  menu_Tools->removeAction(menuAudio_player->menuAction());
++  menu_Tools->removeAction(menuAudioPlayer->menuAction());
+ #else
+   audioState = Phonon::StoppedState;
+   phononAudioPlayer = new Phonon::MediaObject(this);

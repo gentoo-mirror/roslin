@@ -2,6 +2,10 @@
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  23 Feb 2012; Michał Ziąbkowski <mziab@o2.pl>
+  files/kadu-mime_tex-0.11.0_p1-kadu-0.12-build.patch:
+  Updated Kadu 0.12 build patch.
+
 *kadu-mime_tex-0.11.0_p1-r1 (12 Feb 2012)
 
   12 Feb 2012; Michał Ziąbkowski <mziab@o2.pl>

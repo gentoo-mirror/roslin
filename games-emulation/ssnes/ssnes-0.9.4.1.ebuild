@@ -13,12 +13,13 @@ SRC_URI="http://themaister.net/ssnes-dl/${P}.tar.gz"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="alsa cg dynamic +fbo ffmpeg jack netplay openal oss pulseaudio sdl-image truetype xml xv"
+IUSE="alsa cg dynamic +fbo ffmpeg jack netplay openal oss pulseaudio sdl-image truetype x264rgb xml xv"
 
 RDEPEND="media-libs/libsdl[joystick]
 	alsa? ( media-libs/alsa-lib )
 	cg? ( media-gfx/nvidia-cg-toolkit )
-	ffmpeg? ( virtual/ffmpeg )
+	ffmpeg? ( x264rgb? ( >=media-video/ffmpeg-0.9 )
+		!x264rgb? ( virtual/ffmpeg ) )
 	jack? ( media-sound/jack-audio-connection-kit )
 	openal? ( media-libs/openal )
 	xml? ( dev-libs/libxml2 )
@@ -55,6 +56,7 @@ src_configure() {
 		$(use_enable netplay) \
 		$(use_enable sdl-image sdl_image) \
 		$(use_enable xv xvideo) \
+		$(use_enable x264rgb) \
 		|| die
 }
 

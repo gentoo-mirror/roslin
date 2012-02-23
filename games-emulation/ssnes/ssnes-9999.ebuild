@@ -15,7 +15,7 @@ EGIT_REPO_URI="git://github.com/Themaister/SSNES.git"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS=""
-IUSE="alsa cg dynamic +fbo ffmpeg jack netplay openal oss pulseaudio sdl-image truetype x264rgb xml xv"
+IUSE="alsa cg dynamic +fbo ffmpeg jack netplay openal oss pulseaudio python sdl-image truetype x264rgb xml xv"
 
 RDEPEND="media-libs/libsdl[joystick]
 	alsa? ( media-libs/alsa-lib )
@@ -36,10 +36,18 @@ DEPEND="dev-util/pkgconfig
 
 pkg_setup() {
 	confutils_require_any alsa jack openal oss pulseaudio
+	use python && python_set_active_version 3
 }
 
 src_prepare() {
-	epatch "${FILESDIR}/${PN}-build.patch"
+	epatch "${FILESDIR}/${PN}-build.patch" \
+		"${FILESDIR}/${PN}-python.patch"
+
+	if use python; then
+		sed -i qb/config.libs.sh \
+			-e "s:%PYTHON_VER%:$(python_get_version):" \
+			|| die
+	fi
 }
 
 src_configure() {
@@ -59,6 +67,7 @@ src_configure() {
 		$(use_enable sdl-image sdl_image) \
 		$(use_enable xv xvideo) \
 		$(use_enable x264rgb) \
+		$(use_enable python) \
 		|| die
 }
 

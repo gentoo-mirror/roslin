@@ -1,4 +1,4 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -20,7 +20,8 @@ RDEPEND="milter? (
 		|| ( mail-filter/libmilter mail-mta/sendmail ) )"
 DEPEND="${RDEPEND}
 	>=sys-devel/gcc-4.3
-	dev-util/icmake"
+	dev-util/icmake
+	x11-libs/libX11"
 
 S=${WORKDIR}/${MY_PN}-${PV}
 

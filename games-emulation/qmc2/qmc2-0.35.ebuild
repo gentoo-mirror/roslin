@@ -17,12 +17,13 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64"
 IUSE="debug joystick opengl phonon +sdlmame sdlmess sqlite"
 
-DEPEND=">=x11-libs/qt-gui-4.5:4[accessibility]
-	>=x11-libs/qt-webkit-4.5:4
-	phonon? ( || ( media-libs/phonon >=x11-libs/qt-phonon-4.5 ) )
+DEPEND=">=x11-libs/qt-gui-4.7:4[accessibility]
+	>=x11-libs/qt-webkit-4.7:4
+	>=x11-libs/qt-test-4.7:4
+	phonon? ( || ( media-libs/phonon >=x11-libs/qt-phonon-4.7 ) )
 	joystick? ( media-libs/libsdl[joystick] )
-	opengl? ( >=x11-libs/qt-opengl-4.5:4 )
-	sqlite? ( >=x11-libs/qt-sql-4.5:4[sqlite] )"
+	opengl? ( >=x11-libs/qt-opengl-4.7:4 )
+	sqlite? ( >=x11-libs/qt-sql-4.7:4[sqlite] )"
 
 RDEPEND="${DEPEND}
 	sdlmame? ( games-emulation/sdlmame )
@@ -46,7 +47,8 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}/${PN}-0.2_beta20-makefile.patch"
+	epatch "${FILESDIR}/${PN}-0.2_beta20-makefile.patch" \
+		"${FILESDIR}/${P}-nophonon-build.patch"
 	sed -i '1i#define OF(x) x' minizip/ioapi.h
 
 	## This is not as it appears, ARCH means something different to qmc2's Makefile

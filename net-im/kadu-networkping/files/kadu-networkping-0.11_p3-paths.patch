@@ -1,0 +1,22 @@
+diff --git a/networkping.cpp b/networkping.cpp
+index dda787d..4843345 100644
+--- a/networkping.cpp
++++ b/networkping.cpp
+@@ -35,7 +35,7 @@ int NetworkPing::init( bool firstLoad )
+ {
+ 	Q_UNUSED( firstLoad );
+ 	kdebugf();
+-	MainConfigurationWindow::registerUiFile( dataPath("kadu/plugins/configuration/networkping.ui") );
++	MainConfigurationWindow::registerUiFile( KaduPaths::instance()->pluginsLibPath() + QLatin1String("configuration/networkping.ui") );
+ 	kdebugf2();
+ 	return 0;
+ }
+@@ -44,7 +44,7 @@ int NetworkPing::init( bool firstLoad )
+ void NetworkPing::done()
+ {
+ 	kdebugf();
+-	MainConfigurationWindow::unregisterUiFile( dataPath("kadu/plugins/configuration/networkping.ui") );
++	MainConfigurationWindow::unregisterUiFile( KaduPaths::instance()->pluginsLibPath() + QLatin1String("configuration/networkping.ui") );
+ 	kdebugf2();
+ }
+ 

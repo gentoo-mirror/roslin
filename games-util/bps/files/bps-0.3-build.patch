@@ -1,0 +1,25 @@
+diff --git a/cc-gtk.sh b/cc-gtk.sh
+index 70e9699..79af455 100755
+--- a/cc-gtk.sh
++++ b/cc-gtk.sh
+@@ -1,4 +1,4 @@
+-g++-4.5 -std=gnu++0x -I. -O3 -fomit-frame-pointer -c phoenix/phoenix.cpp `pkg-config --cflags gtk+-2.0` -DPHOENIX_GTK
+-g++-4.5 -std=gnu++0x -I. -O3 -fomit-frame-pointer -c bps.cpp
+-g++-4.5 -s -o bps-gtk bps.o phoenix.o `pkg-config --libs gtk+-2.0` -lX11
++g++ -std=gnu++0x -I. ${CXXFLAGS} -c phoenix/phoenix.cpp `pkg-config --cflags gtk+-2.0` -DPHOENIX_GTK
++g++ -std=gnu++0x -I. ${CXXFLAGS} -c bps.cpp
++g++ -o bps-gtk bps.o phoenix.o `pkg-config --libs gtk+-2.0` -lX11
+ rm *.o
+diff --git a/cc-qt.sh b/cc-qt.sh
+index d93a0c5..872605b 100755
+--- a/cc-qt.sh
++++ b/cc-qt.sh
+@@ -1,5 +1,5 @@
+ moc -i -o phoenix/qt/qt.moc phoenix/qt/qt.moc.hpp
+-g++-4.5 -std=gnu++0x -I. -O3 -fomit-frame-pointer -c phoenix/phoenix.cpp `pkg-config --cflags QtCore QtGui` -DPHOENIX_QT
+-g++-4.5 -std=gnu++0x -I. -O3 -fomit-frame-pointer -c bps.cpp
+-g++-4.5 -s -o bps-qt bps.o phoenix.o `pkg-config --libs QtCore QtGui`
++g++ -std=gnu++0x -I. ${CXXFLAGS} -c phoenix/phoenix.cpp `pkg-config --cflags QtCore QtGui` -DPHOENIX_QT
++g++ -std=gnu++0x -I. ${CXXFLAGS} -c bps.cpp
++g++ -o bps-qt bps.o phoenix.o `pkg-config --libs QtCore QtGui`
+ rm *.o

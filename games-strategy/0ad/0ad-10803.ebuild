@@ -26,7 +26,7 @@ RDEPEND=">=dev-lang/spidermonkey-1.8.5
 	media-libs/openal
 	media-libs/libogg
 	media-libs/libpng
-	media-libs/libsdl[joystick]
+	media-libs/libsdl[X,joystick]
 	media-libs/libvorbis
 	net-libs/enet:1.3
 	net-misc/curl

@@ -7,6 +7,8 @@
   <name>Michał Ziąbkowski</name>
 </maintainer>
 <use>
-  <flag name='glib'>Build glib bindings</flag>
+	<flag name='glib'>Build glib bindings</flag>
+	<flag name='libnl'>Build libnl backend</flag>
+	<flag name='rtnetlink'>Build experimental rtnetlink backend</flag>
 </use>
 </pkgmetadata>

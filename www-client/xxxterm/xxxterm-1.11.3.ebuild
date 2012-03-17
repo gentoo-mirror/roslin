@@ -21,7 +21,7 @@ if [[ ${PV} = *9999* ]]; then
 	EGIT_SOURCEDIR="${WORKDIR}/${P}"
 else
 	SRC_URI="http://opensource.conformal.com/snapshots/${PN}/${P}.tgz"
-	KEYWORDS="~x86"
+	KEYWORDS="~amd64 ~x86"
 fi
 
 LICENSE="ISC"
@@ -48,6 +48,19 @@ src_prepare() {
 	sed -i \
 		"s#Icon=#Icon=/usr/share/${PN}/#" \
 		../xxxterm.desktop || die 'sed ../xxxterm.desktop failed.'
+# Switching from Scroogle to DuckDuckGo:
+	sed -i \
+		"s#http://www.scroogle.org/cgi-bin/nbbw.cgi?Gw=#http://duckduckgo.com/?q=#" \
+		../xxxterm.conf || die 'sed ../xxxterm.conf failed.'
+	sed -i \
+		"s#https://ssl.scroogle.org/cgi-bin/nbbwssl.cgi?Gw=#https://duckduckgo.com/?q=#" \
+		../xxxterm.conf || die 'sed ../xxxterm.conf failed.'
+	sed -i \
+		"s#alias = s#alias = d#" \
+		../xxxterm.conf || die 'sed ../xxxterm.conf failed.'
+	sed -i \
+		"s#https://ssl.scroogle.org/cgi-bin/nbbwssl.cgi?Gw=#https://duckduckgo.com/?q=#" \
+		../xxxterm.c || die 'sed ../xxxterm.conf failed.'
 }
 
 src_compile() {

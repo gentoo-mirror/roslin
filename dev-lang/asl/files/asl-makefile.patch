@@ -1,0 +1,30 @@
+diff --git a/Makefile.def b/Makefile.def
+index 6171f14..abcaeab 100644
+--- a/Makefile.def
++++ b/Makefile.def
+@@ -4,8 +4,6 @@
+ 
+ CC = gcc
+ LD = gcc
+-CFLAGS = -O3 -fomit-frame-pointer -Wall
+-LDFLAGS =
+ 
+ TARG_OBJEXTENSION = .o
+ TARG_EXEXTENSION =
+@@ -17,11 +15,11 @@ HOST_EXEXTENSION = $(TARG_EXEXTENSION)
+ # directories where binaries, includes, and manpages should go during
+ # installation
+ 
+-BINDIR = /usr/local/bin
+-INCDIR = /usr/local/include/asl
+-MANDIR = /usr/local/man
+-LIBDIR = /usr/local/lib/asl
+-DOCDIR = /usr/local/doc/asl
++BINDIR = $(DESTDIR)/usr/bin
++INCDIR = $(DESTDIR)/usr/include/asl
++MANDIR = $(DESTDIR)/usr/share/man
++LIBDIR = $(DESTDIR)/usr/lib/asl
++DOCDIR = $(DESTDIR)/usr/share/doc/asl
+ 
+ # -------------------------------------------------------------------------
+ # character encoding to use (choose one of them)

@@ -2,6 +2,12 @@
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*ssnes-0.9.5 (02 Apr 2012)
+
+  02 Apr 2012; Michał Ziąbkowski <mziab@o2.pl> -ssnes-0.9.4.1.ebuild,
+  +ssnes-0.9.5.ebuild:
+  Bumped. Removed previous version, since upstream removed the old tarball.
+
   23 Feb 2012; Michał Ziąbkowski <mziab@o2.pl> ssnes-0.9.4.1.ebuild,
   ssnes-9999.ebuild, +files/ssnes-python.patch:
   Added python flag.

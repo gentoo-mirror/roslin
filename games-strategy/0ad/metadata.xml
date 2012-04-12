@@ -8,6 +8,7 @@
 	</maintainer>
 	<use>
 		<flag name="editor">Include editor</flag>
+		<flag name="nvtt">Use nvidia-texture-tools</flag>
 	</use>
 </pkgmetadata>
 

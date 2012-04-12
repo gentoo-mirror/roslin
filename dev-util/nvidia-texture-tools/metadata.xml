@@ -6,5 +6,10 @@
 		<email>szarpaj@grubelek.pl</email>
 		<name>Piotr Szymaniak</name>
 	</maintainer>
+	<use>
+		<flag name='cg'>Build with NVIDIA's C grapshics compiler support</flag>
+		<flag name='cuda'>Use NVIDIA CUDA Toolkit</flag>
+		<flag name='glew'>Use media-libs/glew</flag>
+	</use>
 </pkgmetadata>
 

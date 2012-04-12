@@ -53,11 +53,6 @@ pkg_setup() {
 	fi
 }
 
-src_prepare() {
-	epatch "${FILESDIR}"/premake-archless.patch
-	epatch "${FILESDIR}"/premake-script-archless.patch
-}
-
 src_compile() {
 	UPDATE_ARGS="--with-system-enet --with-system-mozjs185"
 

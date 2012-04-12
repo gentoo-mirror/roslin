@@ -2,54 +2,61 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=2
-inherit cmake-utils eutils
+EAPI=4
 
-DESCRIPTION="a set of cuda-enabled texture tools and compressors"
+inherit cmake-utils eutils multilib
+
+DESCRIPTION="A set of cuda-enabled texture tools and compressors"
 HOMEPAGE="http://developer.nvidia.com/object/texture_tools.html"
-SRC_URI="http://nvidia-texture-tools.googlecode.com/files/${P}-1.tar.gz"
+SRC_URI="http://${PN}.googlecode.com/files/${P}-1.tar.gz"
+
 LICENSE="MIT"
-
 SLOT="0"
-
 KEYWORDS="~amd64 ~x86"
+IUSE="cg cuda glew glut openexr static"
 
-IUSE="debug"
-
-DEPEND="x11-libs/libX11
+DEPEND="media-libs/libpng:0
+	media-libs/ilmbase
+	media-libs/tiff
+	sys-libs/zlib
 	virtual/jpeg
-	media-libs/libpng
-	media-libs/tiff"
-#	optional:
-#	media-libs/glew
-#	media-gfx/nvidia-cg-toolkit
-#	dev-util/nvidia-cuda-toolkit
+	virtual/opengl
+	x11-libs/libX11
+	cg? ( media-gfx/nvidia-cg-toolkit )
+	cuda? ( dev-util/nvidia-cuda-toolkit )
+	glew? ( media-libs/glew )
+	glut? ( media-libs/freeglut )
+	openexr? ( media-libs/openexr )
+	"
 RDEPEND="${DEPEND}"
 
-S="${WORKDIR}/${PN}"
+S=${WORKDIR}/${PN}
+
+src_prepare() {
+	epatch "${FILESDIR}"/gcc4.4.4-aliasing.patch \
+		"${FILESDIR}"/libpng1.5-build.patch \
+		"${FILESDIR}"/valgrind.patch \
+		"${FILESDIR}"/cuda.patch \
+		"${FILESDIR}"/libtiff4.patch \
+		"${FILESDIR}"/${P}-cmake.patch
+}
 
 src_configure() {
-	mycmakeargs=(
-		"--prefix=/usr"
+	local mycmakeargs=(
+		-DLIBDIR=$(get_libdir)
+		$(cmake-utils_use cg CG)
+		$(cmake-utils_use cuda CUDA)
+		$(cmake-utils_use glew GLEW)
+		$(cmake-utils_use glut GLUT)
+		$(cmake-utils_use openexr OPENEXR)
+		$(cmake-utils_use !static NVTT_SHARED)
 		)
-
-	if use debug; then
-		mycmakeargs+=(
-			"--debug"
-			)
-	else
-		mycmakeargs+=(
-			"--release"
-			)
-	fi
 
 	cmake-utils_src_configure
 }
 
-src_compile() {
-	cmake-utils_src_make
-}
-
 src_install() {
 	cmake-utils_src_install
+
+	dodoc ChangeLog
 }

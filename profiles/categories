@@ -28,6 +28,7 @@ net-libs
 net-misc
 net-p2p
 net-wireless
+perl-gcpan
 sys-apps
 sys-libs
 x11-misc

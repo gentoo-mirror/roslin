@@ -2,6 +2,12 @@
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*kadu-single_window-0.11.2 (02 Apr 2012)
+
+  02 Apr 2012; Michał Ziąbkowski <mziab@o2.pl>
+  +kadu-single_window-0.11.2.ebuild:
+  Bumped.
+
 *kadu-single_window-0.12.0_alpha4 (27 Mar 2012)
 
   27 Mar 2012; Michał Ziąbkowski <mziab@o2.pl>

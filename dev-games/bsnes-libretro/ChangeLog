@@ -1,0 +1,10 @@
+# ChangeLog for dev-games/bsnes-libretro
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*bsnes-libretro-9999 (18 Apr 2012)
+
+  18 Apr 2012; Michał Ziąbkowski <mziab@o2.pl> +bsnes-libretro-9999.ebuild,
+  +files/bsnes-libretro-makefile.patch, +metadata.xml:
+  Initial ebuild.
+

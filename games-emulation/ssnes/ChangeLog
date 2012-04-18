@@ -2,6 +2,10 @@
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  18 Apr 2012; Michał Ziąbkowski <mziab@o2.pl> ssnes-9999.ebuild:
+  Fixed missing inherit and made the live ebuild depend on bsnes-libretro for
+  now.
+
 *ssnes-0.9.5 (02 Apr 2012)
 
   02 Apr 2012; Michał Ziąbkowski <mziab@o2.pl> -ssnes-0.9.4.1.ebuild,

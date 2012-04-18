@@ -1,12 +1,12 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=2
+EAPI="2"
 
 inherit games
 
-DESCRIPTION="A *nix firendly FitzQuake with new features."
+DESCRIPTION="A *nix firendly FitzQuake with new features"
 HOMEPAGE="http://quakespasm.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tgz"
 
@@ -27,10 +27,11 @@ S=${WORKDIR}/${P}/Quake
 
 src_prepare() {
 	epatch "${FILESDIR}/${PV}"-makefile.patch
+	epatch "${FILESDIR}"/homedir_0.patch
 
-	sed -i \
-		-e "s!basedir, host_parms.basedir!basedir, \"${GAMES_DATADIR}/quake1\"!" \
-		common.c || die "sed failed"
+	sed -i -e \
+		"s!parms.basedir = \".\"!parms.basedir = \"${GAMES_DATADIR}/quake1\"!" \
+		main_sdl.c || die "sed failed"
 }
 
 src_compile() {

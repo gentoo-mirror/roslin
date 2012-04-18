@@ -6,27 +6,25 @@ EAPI=4
 
 inherit eutils multilib git-2
 
-DESCRIPTION="Self-contained Super Nintendo emulation core, C++98 variant"
+DESCRIPTION="bsnes emulation core ported to libretro"
 HOMEPAGE="https://github.com/Themaister/bsnes-libretro"
 SRC_URI=""
 
 EGIT_REPO_URI="git://github.com/Themaister/bsnes-libretro.git"
-EGIT_COMMIT="v${PV}"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS=""
 IUSE="profile_accuracy +profile_compatibility profile_performance"
 
 REQUIRED_USE="^^ ( profile_accuracy profile_compatibility profile_performance )"
 
 RDEPEND=""
 
-DEPEND="!dev-games/libsnes
-	!dev-games/snes9x-libsnes"
+DEPEND=""
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-082-makefile.patch
+	epatch "${FILESDIR}"/${PN}-makefile.patch
 
 	sed -i "snes/Makefile" \
 		-e "s:lib/:$(get_libdir)/:g" \

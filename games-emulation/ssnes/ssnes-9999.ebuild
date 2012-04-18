@@ -4,9 +4,9 @@
 
 EAPI=2
 
-inherit games confutils git-2
+inherit games confutils python git-2
 
-DESCRIPTION="Simple SNES emulator frontend based on libsnes"
+DESCRIPTION="Universal frontend for libretro-based emulators"
 HOMEPAGE="http://themaister.net/ssnes.html"
 SRC_URI=""
 
@@ -29,9 +29,9 @@ RDEPEND="media-libs/libsdl[joystick]
 	pulseaudio? ( media-sound/pulseaudio )
 	sdl-image? ( media-libs/sdl-image )
 	xv? ( x11-libs/libXv )
-	virtual/libsnes"
+	dev-games/bsnes-libretro"
 DEPEND="dev-util/pkgconfig
-	!dynamic? ( virtual/libsnes )
+	!dynamic? ( dev-games/bsnes-libretro )
 	${RDEPEND}"
 
 pkg_setup() {

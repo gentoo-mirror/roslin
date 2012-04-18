@@ -7,10 +7,10 @@ EAPI=4
 inherit eutils multilib git-2
 
 DESCRIPTION="Self-contained Super Nintendo emulation core, C++98 variant"
-HOMEPAGE="https://github.com/Themaister/libsnes"
+HOMEPAGE="https://github.com/Themaister/bsnes-libretro"
 SRC_URI=""
 
-EGIT_REPO_URI="git://github.com/Themaister/libsnes.git"
+EGIT_REPO_URI="git://github.com/Themaister/bsnes-libretro.git"
 EGIT_COMMIT="v${PV}"
 
 LICENSE="GPL-2"

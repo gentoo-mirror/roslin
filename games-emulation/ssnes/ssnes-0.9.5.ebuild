@@ -5,11 +5,14 @@
 EAPI=2
 PYTHON_DEPEND="python? 3"
 
-inherit games confutils python
+inherit games confutils python git-2
 
 DESCRIPTION="Simple SNES emulator frontend based on libsnes"
 HOMEPAGE="http://themaister.net/ssnes.html"
-SRC_URI="http://themaister.net/ssnes-dl/${P}.tar.gz"
+SRC_URI=""
+
+EGIT_REPO_URI="git://github.com/Themaister/RetroArch.git"
+EGIT_COMMIT="v${PV}"
 
 LICENSE="GPL-3"
 SLOT="0"

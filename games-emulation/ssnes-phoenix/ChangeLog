@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/ssnes-phoenix
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+
+  22 Apr 2012; Michał Ziąbkowski <mziab@o2.pl> ssnes-phoenix-9999.ebuild:
+  Fixed repo URI. Hardcoded to use the last libsnes-based revision.
 
   26 Dec 2011; Michał Ziąbkowski <mziab@o2.pl> ssnes-phoenix-9999.ebuild:
   Added gtk and qt4 flags.

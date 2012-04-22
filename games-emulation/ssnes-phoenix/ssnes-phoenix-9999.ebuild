@@ -1,4 +1,4 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -7,10 +7,11 @@ EAPI=3
 inherit games git-2
 
 DESCRIPTION="A simple GUI for SSNES using the phoenix toolkit"
-HOMEPAGE="https://github.com/Themaister/SSNES-Phoenix"
+HOMEPAGE="https://github.com/Themaister/RetroArch-Phoenix"
 SRC_URI=""
 
-EGIT_REPO_URI="git://github.com/Themaister/SSNES-Phoenix.git"
+EGIT_REPO_URI="git://github.com/Themaister/RetroArch-Phoenix.git"
+EGIT_COMMIT="f0706a1092"
 
 LICENSE="GPL-3"
 SLOT="0"

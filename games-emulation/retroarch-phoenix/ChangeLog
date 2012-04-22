@@ -1,0 +1,11 @@
+# ChangeLog for games-emulation/retroarch-phoenix
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*retroarch-phoenix-9999 (22 Apr 2012)
+
+  22 Apr 2012; Michał Ziąbkowski <mziab@o2.pl>
+  +retroarch-phoenix-9999.ebuild, +files/retroarch-phoenix-makefile.patch,
+  +metadata.xml:
+  New ebuild based on the ssnes-phoenix one.
+

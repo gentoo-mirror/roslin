@@ -1,0 +1,13 @@
+diff --git a/Makefile.qt b/Makefile.qt
+index 0855fd8..c0b660e 100644
+--- a/Makefile.qt
++++ b/Makefile.qt
+@@ -33,7 +33,7 @@ ruby/ruby.o: $(wildcard ruby/**/*.hpp) $(wildcard ruby/**/*.cpp)
+ 
+ 
+ $(TARGET): $(OBJ)
+-	$(CXX) -o $@ $(OBJ) $(QT_LIBS) $(RUBYLIBS) -s
++	$(CXX) -o $@ $(OBJ) $(QT_LIBS) $(RUBYLIBS)
+ 
+ clean:
+ 	rm -f *.o

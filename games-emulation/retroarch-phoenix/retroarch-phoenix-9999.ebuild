@@ -7,7 +7,7 @@ EAPI=3
 inherit games git-2
 
 DESCRIPTION="A simple GUI for RetroArch using the phoenix toolkit"
-HOMEPAGE="https://github.com/Themaister/SSNES-Phoenix"
+HOMEPAGE="https://github.com/Themaister/RetroArch-Phoenix"
 SRC_URI=""
 
 EGIT_REPO_URI="git://github.com/Themaister/RetroArch-Phoenix.git"

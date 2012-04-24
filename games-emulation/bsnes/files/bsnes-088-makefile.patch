@@ -1,0 +1,42 @@
+diff --git a/bsnes/Makefile b/bsnes/Makefile
+index 97fbab0..819e450 100755
+--- a/bsnes/Makefile
++++ b/bsnes/Makefile
+@@ -13,8 +13,8 @@ target  := ui
+ # compiler
+ c       := $(compiler) -std=gnu99
+ cpp     := $(subst cc,++,$(compiler)) -std=gnu++0x
+-flags   := -I. -O3 -fomit-frame-pointer
+-link    := -s
++flags   := -I. $(CXXFLAGS) -fomit-frame-pointer
++link    :=
+ objects := libco
+ 
+ # profile-guided optimization mode
+diff --git a/bsnes/target-ui/Makefile b/bsnes/target-ui/Makefile
+index 3c70a2b..b9eee2b 100755
+--- a/bsnes/target-ui/Makefile
++++ b/bsnes/target-ui/Makefile
+@@ -69,18 +69,10 @@ else
+ endif
+ 
+ install:
+-ifeq ($(USER),root)
+-	@echo Please do not run make install as root.
+-	@echo The installer needs to know your home directory to install important files.
+-else ifeq ($(platform),x)
+-	sudo install -D -m 755 out/$(name) $(DESTDIR)$(prefix)/bin/$(name)
+-	sudo install -D -m 644 data/$(name).png $(DESTDIR)$(prefix)/share/pixmaps/$(name).png
+-	sudo install -D -m 644 data/$(name).desktop $(DESTDIR)$(prefix)/share/applications/$(name).desktop
+-
+-	mkdir -p ~/.config/$(name)
+-	cp -R profile/* ~/.config/$(name)
+-	cp data/cheats.xml ~/.config/$(name)/cheats.xml
+-	chmod -R 777 ~/.config/$(name)
++ifeq ($(platform),x)
++	install -D -m 755 out/$(name) $(DESTDIR)$(prefix)/bin/$(name)
++	install -D -m 644 data/$(name).png $(DESTDIR)/usr/share/pixmaps/$(name).png
++	install -D -m 644 data/$(name).desktop $(DESTDIR)/usr/share/applications/$(name).desktop
+ endif
+ 
+ uninstall:

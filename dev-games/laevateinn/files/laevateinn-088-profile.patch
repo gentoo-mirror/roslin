@@ -1,0 +1,13 @@
+diff --git a/bsnes/target-debugger/interface/interface.cpp b/bsnes/target-debugger/interface/interface.cpp
+index 24aace9..b383a98 100755
+--- a/bsnes/target-debugger/interface/interface.cpp
++++ b/bsnes/target-debugger/interface/interface.cpp
+@@ -163,4 +163,8 @@ Interface::Interface() {
+     memcpy(SNES::smp.iplrom, data, min(64u, size));
+     delete[] data;
+   }
++  else if(file::read({dir("%GAMES_DATADIR%/bsnes"), "Super Famicom.sys/spc700.rom"}, data, size)) {
++    memcpy(SNES::smp.iplrom, data, min(64u, size));
++    delete[] data;
++  }
+ }

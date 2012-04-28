@@ -2,6 +2,11 @@
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*kadu-core-0.11.3 (28 Apr 2012)
+
+  28 Apr 2012; Michał Ziąbkowski <mziab@o2.pl> +kadu-core-0.11.3.ebuild:
+  Bumped.
+
 *kadu-core-0.11.2 (02 Apr 2012)
 
   02 Apr 2012; Michał Ziąbkowski <mziab@o2.pl> +kadu-core-0.11.2.ebuild:

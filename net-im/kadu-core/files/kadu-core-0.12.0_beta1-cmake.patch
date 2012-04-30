@@ -1,0 +1,14 @@
+diff --git a/kadu-core/CMakeLists.txt b/kadu-core/CMakeLists.txt
+index f03517a..96ad95f 100644
+--- a/kadu-core/CMakeLists.txt
++++ b/kadu-core/CMakeLists.txt
+@@ -369,7 +369,9 @@ kadu_api_directories (kadu-core
+ 	protocols/filter
+ 	protocols/model
+ 	protocols/services
++	protocols/services/roster
+ 	protocols
++	provider
+ 	qt
+ 	status
+ 	storage

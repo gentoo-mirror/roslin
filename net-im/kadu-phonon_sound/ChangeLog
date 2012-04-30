@@ -2,6 +2,12 @@
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*kadu-phonon_sound-0.12.0_beta1 (30 Apr 2012)
+
+  30 Apr 2012; Michał Ziąbkowski <mziab@o2.pl>
+  +kadu-phonon_sound-0.12.0_beta1.ebuild:
+  Bumped.
+
 *kadu-phonon_sound-0.11.3 (28 Apr 2012)
 
   28 Apr 2012; Michał Ziąbkowski <mziab@o2.pl>

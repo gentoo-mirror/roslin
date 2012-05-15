@@ -2,6 +2,12 @@
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*kadu-chat_notify-0.12.0_beta2 (15 May 2012)
+
+  15 May 2012; Michał Ziąbkowski <mziab@o2.pl>
+  +kadu-chat_notify-0.12.0_beta2.ebuild:
+  Bumped.
+
 *kadu-chat_notify-0.12.0_beta1 (30 Apr 2012)
 
   30 Apr 2012; Michał Ziąbkowski <mziab@o2.pl>

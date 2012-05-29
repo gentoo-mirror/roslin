@@ -2,6 +2,11 @@
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*mednafen-0.9.22 (29 May 2012)
+
+  29 May 2012; Michał Ziąbkowski <mziab@o2.pl> +mednafen-0.9.22.ebuild:
+  Bumped.
+
 *mednafen-0.9.21 (12 Apr 2012)
 
   12 Apr 2012; Michał Ziąbkowski <mziab@o2.pl> +mednafen-0.9.21.ebuild:

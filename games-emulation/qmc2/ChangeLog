@@ -1,6 +1,11 @@
 # ChangeLog for games-emulation/qmc2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 
+*qmc2-0.36 (01 Jun 2012)
+
+  01 Jun 2012; Michał Ziąbkowski <mziab@o2.pl> +qmc2-0.36.ebuild:
+  Bumped.
+
   20 Feb 2012; Michał Ziąbkowski <mziab@o2.pl> qmc2-0.35.ebuild,
   +files/qmc2-0.35-nophonon-build.patch:
   Fixed build without phonon and fixed Qt deps.

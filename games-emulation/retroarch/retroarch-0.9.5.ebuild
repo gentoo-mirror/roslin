@@ -11,10 +11,11 @@ HOMEPAGE="http://themaister.net/retroarch.html"
 SRC_URI=""
 
 EGIT_REPO_URI="git://github.com/Themaister/RetroArch.git"
+EGIT_COMMIT="v${PV}"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 IUSE="alsa cg +dynamic +fbo ffmpeg jack netplay openal oss pulseaudio python sdl-image truetype x264rgb xml xv"
 
 RDEPEND="media-libs/libsdl[joystick]

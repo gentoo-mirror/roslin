@@ -2,6 +2,12 @@
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*retroarch-0.9.5 (01 Jun 2012)
+
+  01 Jun 2012; Michał Ziąbkowski <mziab@o2.pl> +retroarch-0.9.5.ebuild,
+  retroarch-9999.ebuild:
+  Bumped. Fixed URI.
+
 *retroarch-9999 (22 Apr 2012)
 
   22 Apr 2012; Michał Ziąbkowski <mziab@o2.pl> +retroarch-9999.ebuild,

@@ -7,10 +7,10 @@ EAPI=4
 inherit eutils multilib git-2
 
 DESCRIPTION="bsnes emulation core ported to libretro"
-HOMEPAGE="https://github.com/Themaister/bsnes-libretro"
+HOMEPAGE="https://github.com/libretro/bsnes-libretro"
 SRC_URI=""
 
-EGIT_REPO_URI="git://github.com/Themaister/bsnes-libretro.git"
+EGIT_REPO_URI="git://github.com/libretro/bsnes-libretro.git"
 
 LICENSE="GPL-2"
 SLOT="0"

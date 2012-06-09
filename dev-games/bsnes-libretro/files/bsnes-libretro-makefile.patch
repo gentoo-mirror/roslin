@@ -1,26 +1,13 @@
-diff --git a/Makefile b/Makefile
-index fe88aec..4ed442c 100644
---- a/Makefile
-+++ b/Makefile
-@@ -16,7 +16,7 @@ endif
- ifeq ($(DEBUG),1)
-    extraflags = -O0 -g -I. -I$(snes) $(fpic)
+diff --git a/bsnes/Makefile b/bsnes/Makefile
+index d57a530..d7e5695 100755
+--- a/bsnes/Makefile
++++ b/bsnes/Makefile
+@@ -17,7 +17,7 @@ cpp     := $(subst cc,++,$(compiler)) -std=gnu++0x
+ ifneq ($(debug),)
+   flags := -I. -O0 -g
  else
--   extraflags = -O3 -fomit-frame-pointer -I. -I$(snes) $(fpic)
-+   extraflags = $(CXXFLAGS) -fomit-frame-pointer -I. -I$(snes) $(fpic)
+-  flags   := -I. -O3 -fomit-frame-pointer
++  flags   := -I. $(CXXFLAGS) -fomit-frame-pointer
  endif
  
- ifeq ($(PROFILING),gen)
-diff --git a/snes/Makefile b/snes/Makefile
-index e29573e..3abaa56 100644
---- a/snes/Makefile
-+++ b/snes/Makefile
-@@ -90,7 +90,7 @@ library-install:
- ifeq ($(platform),x)
- 	install -D -m 755 out/libretro.a $(DESTDIR)$(prefix)/lib/libretro.a
- 	install -D -m 755 out/libretro.so $(DESTDIR)$(prefix)/lib/libretro.so
--	install -D -m 644 snes/libretro/libretro.hpp $(DESTDIR)$(prefix)/include/libretro.hpp
-+	install -D -m 644 snes/libretro/libretro.h $(DESTDIR)$(prefix)/include/libretro.h
- 	ldconfig -n $(DESTDIR)$(prefix)/lib
- else ifeq ($(platform),osx)
- 	cp out/libretro.dylib $(DESTDIR)$(prefix)/lib/libretro.dylib
+ link    := -s

@@ -6,12 +6,11 @@ EAPI=4
 
 inherit eutils multilib git-2
 
-DESCRIPTION="bsnes emulation core ported to libretro"
-HOMEPAGE="http://gitorious.org/bsnes/bsnes"
+DESCRIPTION="bsnes emulation core ported to libretro, C++98-compatible variant"
+HOMEPAGE="https://github.com/libretro/bsnes-libretro"
 SRC_URI=""
 
-EGIT_REPO_URI="git://gitorious.org/bsnes/bsnes.git"
-EGIT_BRANCH="libretro"
+EGIT_REPO_URI="git://github.com/libretro/bsnes-libretro.git"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -24,16 +23,10 @@ RDEPEND=""
 
 DEPEND=""
 
-S="${WORKDIR}/bsnes"
-
-src_unpack() {
-	S="${WORKDIR}" git-2_src_unpack
-}
-
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-makefile.patch
 
-	sed -i "target-libretro/Makefile" \
+	sed -i "snes/Makefile" \
 		-e "s:lib/:$(get_libdir)/:g" \
 		|| die
 }
@@ -50,11 +43,9 @@ src_compile() {
 	fi
 
 	emake profile=${myprofile} \
-		target=libretro \
-		compiler=gcc \
 		|| die "emake failed"
 }
 
 src_install() {
-	emake DESTDIR="${D}" prefix=/usr target=libretro install || die
+	emake DESTDIR="${D}" prefix=/usr install || die
 }

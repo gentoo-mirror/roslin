@@ -1,4 +1,4 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -27,7 +27,7 @@ RDEPEND="ao? ( media-libs/libao )
 	snesfilter? ( dev-games/snesfilter )
 	snesreader? ( dev-games/snesreader )
 	>=x11-libs/qt-gui-4.5:4
-	virtual/libsnes"
+	dev-games/bsnes-libretro"
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig

@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: /var/cvsroot/gentoo-x86/games-emulation/visualboyadvance/visualboyadvance-1.7.2.ebuild,v 1.3 2004/11/22 20:37:06 plasmaroo Exp $
 
-EAPI=2
+EAPI=4
 
 ESVN_REPO_URI="http://${PN}.svn.sourceforge.net/svnroot/${PN}/trunk/"
 ESVN_PROJECT="vbam"
@@ -40,11 +40,9 @@ DEPEND="${RDEPEND}
 
 S="${WORKDIR}/${PN}"
 
-DOCS="doc/DevInfo.txt doc/ReadMe.SDL.txt"
+REQUIRED_USE="|| ( sdl gtk wxwidgets )"
 
-pkg_setup() {
-	confutils_require_any sdl gtk wxwidgets
-}
+DOCS="doc/DevInfo.txt doc/ReadMe.SDL.txt"
 
 src_prepare() {
 	sed -i CMakeLists.txt \
@@ -52,8 +50,6 @@ src_prepare() {
 	    -e "s:\${CMAKE_INSTALL_PREFIX}/::" \
 	    -e "s: share: ../share:g" \
 	    	    || die "sed failed"
-
-	epatch "${FILESDIR}"/${PN}-build.patch
 }
 
 src_configure() {

@@ -8,7 +8,7 @@ index dca1881..87651fe 100755
  cpp     := $(subst cc,++,$(compiler)) -std=gnu++0x
 -flags   := -g -I.
 +flags   := $(CXXFLAGS) -I.
- link    := -lsnes
+ link    := -lretro
  objects :=
  
 @@ -145,9 +145,9 @@ endif

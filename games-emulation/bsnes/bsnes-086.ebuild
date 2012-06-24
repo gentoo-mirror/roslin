@@ -16,7 +16,7 @@ SRC_URI="http://bsnes.googlecode.com/files/${MY_P}.tar.bz2"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 IUSE="ao alsa +gtk openal opengl oss profile_accuracy +profile_compatibility profile_performance pulseaudio qt4 sdl snesfilter xv"
 
 RDEPEND="ao? ( media-libs/libao )

@@ -1,6 +1,11 @@
 # ChangeLog for games-emulation/bsnes
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 
+  24 Jun 2012; Michał Ziąbkowski <mziab@o2.pl> bsnes-083.ebuild,
+  bsnes-084.ebuild, bsnes-085.ebuild, bsnes-086.ebuild, bsnes-086-r1.ebuild,
+  bsnes-087.ebuild, bsnes-088.ebuild, bsnes-088-r1.ebuild:
+  Re-added keywords, since gcc-4.6 isn't hardmasked anymore.
+
 *bsnes-088-r1 (24 Jun 2012)
 
   24 Jun 2012; Michał Ziąbkowski <mziab@o2.pl> +bsnes-088-r1.ebuild:

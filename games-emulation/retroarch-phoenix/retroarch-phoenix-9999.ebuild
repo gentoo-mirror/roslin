@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=3
+EAPI=4
 
 inherit games git-2
 
@@ -24,10 +24,7 @@ DEPEND="dev-util/pkgconfig
 	>=sys-devel/gcc-4.5
 	${RDEPEND}"
 
-pkg_setup() {
-	confutils_require_one gtk qt4
-	games_pkg_setup
-}
+REQUIRED_USE="^^ ( gtk qt4 )"
 
 src_prepare() {
 	epatch "${FILESDIR}/${PN}-makefile.patch"

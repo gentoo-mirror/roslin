@@ -1,6 +1,11 @@
 # ChangeLog for games-emulation/bsnes
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 
+*bsnes-088-r1 (24 Jun 2012)
+
+  24 Jun 2012; Michał Ziąbkowski <mziab@o2.pl> +bsnes-088-r1.ebuild:
+  Rev-bumped with EAPI=4 port.
+
   25 Apr 2012; Michał Ziąbkowski <mziab@o2.pl> files/bsnes-088-profile.patch:
   Fixed profile path.
 

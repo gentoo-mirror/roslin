@@ -2,9 +2,9 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=2
+EAPI=4
 
-inherit eutils confutils games
+inherit eutils games
 
 MY_PV=${PV/_beta/.b}
 
@@ -32,10 +32,9 @@ RDEPEND="${DEPEND}
 
 S="${WORKDIR}/${PN}"
 
-pkg_setup() {
-	# Make sure at least one is selected
-	confutils_require_any sdlmame sdlmess
+REQUIRED_USE="|| ( sdlmame sdlmess )"
 
+pkg_setup() {
 	# Set proper parameters for make
 	FLAGS="DESTDIR=${D} PREFIX=\"${GAMES_PREFIX}\" DATADIR=\"${GAMES_DATADIR}\" CTIME=0"
 
@@ -44,6 +43,8 @@ pkg_setup() {
 	use opengl && FLAGS="${FLAGS} OPENGL=1"
 	use phonon || FLAGS="${FLAGS} PHONON=0"
 	use sqlite && FLAGS="${FLAGS} DATABASE=1"
+
+	games_pkg_setup
 }
 
 src_prepare() {

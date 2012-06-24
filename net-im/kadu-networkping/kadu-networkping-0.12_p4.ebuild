@@ -8,13 +8,11 @@ DESCRIPTION="Periodically checks the network state"
 HOMEPAGE="http://www.ultr.pl/kadu/"
 SRC_URI="http://www.ultr.pl/kadu/${NAME}-${PV/_p/-}.tar.gz"
 LICENSE="GPL-3"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND=">=x11-libs/qt-gui-4.7.0
-	>=net-im/kadu-core-0.11.0"
+	>=net-im/kadu-core-0.12.0"
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${NAME}"
-
-PATCHES=( "${FILESDIR}/${P}-paths.patch" )

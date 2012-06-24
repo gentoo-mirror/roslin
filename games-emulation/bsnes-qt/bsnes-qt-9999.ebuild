@@ -2,9 +2,9 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=2
+EAPI=4
 
-inherit eutils confutils games git-2
+inherit eutils games git-2
 
 DESCRIPTION="A libsnes frontend based on the old bsnes GUI"
 HOMEPAGE="http://byuu.org/bsnes/"
@@ -33,13 +33,11 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	>=sys-devel/gcc-4.4"
 
+REQUIRED_USE="|| ( ao openal alsa pulseaudio oss )
+	|| ( xv opengl sdl )"
+
 disable_module() {
 	sed -i "Makefile" -e "s|$1||"
-}
-
-pkg_setup() {
-	confutils_require_any ao openal alsa pulseaudio oss
-	confutils_require_any xv opengl sdl
 }
 
 src_prepare() {

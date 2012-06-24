@@ -2,6 +2,21 @@
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  23 Jun 2012; Michał Ziąbkowski <mziab@o2.pl>
+  -kadu-config_wizard-0.12.0_alpha1.ebuild,
+  -kadu-config_wizard-0.12.0_alpha2.ebuild,
+  -kadu-config_wizard-0.12.0_alpha3.ebuild,
+  -kadu-config_wizard-0.12.0_alpha4.ebuild,
+  -kadu-config_wizard-0.12.0_beta1.ebuild,
+  -kadu-config_wizard-0.12.0_beta2.ebuild:
+  Removed cruft.
+
+*kadu-config_wizard-0.12.0 (16 Jun 2012)
+
+  16 Jun 2012; Michał Ziąbkowski <mziab@o2.pl>
+  +kadu-config_wizard-0.12.0.ebuild:
+  Bumped.
+
 *kadu-config_wizard-0.12.0_rc1 (27 May 2012)
 
   27 May 2012; Michał Ziąbkowski <mziab@o2.pl>

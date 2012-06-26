@@ -2,6 +2,14 @@
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  26 Jun 2012; Michał Ziąbkowski <mziab@o2.pl>
+  -kadu-import_history-0.10.0.ebuild, kadu-import_history-0.11.0.ebuild:
+  Stabled Kadu-0.11.3 and plugins.
+
+  26 Jun 2012; Michał Ziąbkowski <mziab@o2.pl>
+  -kadu-import_history-0.10.0.ebuild:
+  Removed obsoleted versions.
+
 *kadu-import_history-0.12.0 (23 Jun 2012)
 
   23 Jun 2012; Michał Ziąbkowski <mziab@o2.pl>

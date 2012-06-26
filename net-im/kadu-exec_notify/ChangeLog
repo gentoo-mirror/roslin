@@ -2,6 +2,19 @@
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  26 Jun 2012; Michał Ziąbkowski <mziab@o2.pl>
+  -kadu-exec_notify-0.10.0.ebuild, -kadu-exec_notify-0.10.1.ebuild,
+  -kadu-exec_notify-0.11.0.ebuild, -kadu-exec_notify-0.11.1.ebuild,
+  -kadu-exec_notify-0.11.2.ebuild, kadu-exec_notify-0.11.3.ebuild,
+  -kadu-exec_notify-0.12.0_rc1.ebuild:
+  Stabled Kadu-0.11.3 and plugins.
+
+  26 Jun 2012; Michał Ziąbkowski <mziab@o2.pl>
+  -kadu-exec_notify-0.10.0.ebuild, -kadu-exec_notify-0.10.1.ebuild,
+  -kadu-exec_notify-0.11.0.ebuild, -kadu-exec_notify-0.11.1.ebuild,
+  -kadu-exec_notify-0.11.2.ebuild, -kadu-exec_notify-0.12.0_rc1.ebuild:
+  Removed obsoleted versions.
+
   23 Jun 2012; Michał Ziąbkowski <mziab@o2.pl>
   -kadu-exec_notify-0.12.0_alpha1.ebuild,
   -kadu-exec_notify-0.12.0_alpha2.ebuild,

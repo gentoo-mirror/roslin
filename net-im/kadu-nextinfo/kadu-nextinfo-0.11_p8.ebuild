@@ -8,7 +8,7 @@ DESCRIPTION="A module providing extended contact information support"
 HOMEPAGE="http://www.ultr.pl/kadu"
 SRC_URI="http://www.ultr.pl/kadu/${NAME}-${PV/_p/-}.tar.gz"
 LICENSE="GPL-3"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND=">=x11-libs/qt-gui-4.7.0

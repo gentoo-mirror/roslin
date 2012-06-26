@@ -2,6 +2,15 @@
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  26 Jun 2012; Michał Ziąbkowski <mziab@o2.pl>
+  -kadu-globalhotkeys-0.10_p25.ebuild, -kadu-globalhotkeys-0.10_p26.ebuild,
+  kadu-globalhotkeys-0.11_p31.ebuild:
+  Stabled Kadu-0.11.3 and plugins.
+
+  26 Jun 2012; Michał Ziąbkowski <mziab@o2.pl>
+  -kadu-globalhotkeys-0.10_p25.ebuild, -kadu-globalhotkeys-0.10_p26.ebuild:
+  Removed obsoleted versions.
+
 *kadu-globalhotkeys-0.12_p32 (24 Jun 2012)
 
   24 Jun 2012; Michał Ziąbkowski <mziab@o2.pl>

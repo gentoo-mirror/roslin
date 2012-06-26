@@ -2,6 +2,14 @@
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  26 Jun 2012; Michał Ziąbkowski <mziab@o2.pl> -kadu-nextinfo-0.10_p6.ebuild,
+  -kadu-nextinfo-0.10_p7.ebuild, kadu-nextinfo-0.11_p8.ebuild:
+  Stabled Kadu-0.11.3 and plugins.
+
+  26 Jun 2012; Michał Ziąbkowski <mziab@o2.pl> -kadu-nextinfo-0.10_p6.ebuild,
+  -kadu-nextinfo-0.10_p7.ebuild:
+  Removed obsoleted versions.
+
 *kadu-nextinfo-0.12_p9 (24 Jun 2012)
 
   24 Jun 2012; Michał Ziąbkowski <mziab@o2.pl> +kadu-nextinfo-0.12_p9.ebuild:

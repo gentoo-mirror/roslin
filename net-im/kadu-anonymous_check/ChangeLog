@@ -2,6 +2,14 @@
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  26 Jun 2012; Michał Ziąbkowski <mziab@o2.pl>
+  -kadu-anonymous_check-0.10.1.ebuild, kadu-anonymous_check-0.11.0_p1.ebuild:
+  Stabled Kadu-0.11.3 and plugins.
+
+  26 Jun 2012; Michał Ziąbkowski <mziab@o2.pl>
+  -kadu-anonymous_check-0.10.1.ebuild:
+  Removed obsoleted versions.
+
   04 Feb 2012; Michał Ziąbkowski <mziab@o2.pl>
   kadu-anonymous_check-0.11.0_p1.ebuild:
   Re-added keywords

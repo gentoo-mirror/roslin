@@ -7,7 +7,7 @@ inherit kadu
 DESCRIPTION="Automatic sender lookup module for Kadu"
 HOMEPAGE="http://www.kadu.net/w/Anonymous_check"
 SRC_URI="http://download.kadu.im/external-plugins/${NAME}/${NAME}-${PV/_p/-}.tar.bz2"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND=">=x11-libs/qt-gui-4.7.0

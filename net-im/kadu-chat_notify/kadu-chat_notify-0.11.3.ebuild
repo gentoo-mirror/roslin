@@ -6,7 +6,7 @@ inherit kadu
 
 DESCRIPTION="Kadu module for in-chat notifications"
 HOMEPAGE="http://kadu.im"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND=">=x11-libs/qt-gui-4.7.0

@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/frandom
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+
+  21 Jul 2012; Piotr Szymaniak <szarpaj@grubelek.pl> frandom-1.1.ebuild:
+  Updated ebuild, thanks to Chris Slycord (bug #325541).
 
   03 Sep 2011; Piotr Szymaniak <szarpaj@grubelek.pl> -files/10-frandom.rules,
   frandom-1.1.ebuild:

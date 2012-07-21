@@ -1,4 +1,4 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -28,6 +28,6 @@ src_prepare() {
 src_install() {
 	linux-mod_src_install
 
-	insinto /etc/udev/rules.d/
+	insinto /lib/udev/rules.d/
 	doins "${S}"/10-${PN}.rules
 }

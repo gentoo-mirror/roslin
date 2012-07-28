@@ -2,6 +2,15 @@
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*mednafen-0.9.24 (28 Jul 2012)
+
+  28 Jul 2012; Piotr Szymaniak <szarpaj@grubelek.pl> -mednafen-0.9.17.1.ebuild,
+  -mednafen-0.9.17.1-r1.ebuild, -mednafen-0.9.18.ebuild,
+  -mednafen-0.9.18-r1.ebuild, -mednafen-0.9.18-r2.ebuild,
+  -mednafen-0.9.19.ebuild, -mednafen-0.9.19-r1.ebuild, -mednafen-0.9.21.ebuild,
+  -mednafen-0.9.22.ebuild, +mednafen-0.9.24.ebuild:
+  Bumped WIP release. Remove cruft.
+
 *mednafen-0.9.22 (29 May 2012)
 
   29 May 2012; Michał Ziąbkowski <mziab@o2.pl> +mednafen-0.9.22.ebuild:

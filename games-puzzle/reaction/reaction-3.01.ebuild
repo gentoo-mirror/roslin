@@ -1,4 +1,4 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -7,8 +7,8 @@ EAPI=2
 inherit eutils games
 
 DESCRIPTION="Addictive, multi-player 'board' game. It's easy to learn to play."
-HOMEPAGE="http://discussionator.com/reaction.html"
-SRC_URI="http://discussionator.com/s/${P}.src.tgz"
+HOMEPAGE="http://leehaywood.org/games/reaction/"
+SRC_URI="http://leehaywood.org/games/reaction/files/${P}.src.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"

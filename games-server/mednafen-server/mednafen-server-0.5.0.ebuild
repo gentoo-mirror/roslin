@@ -1,4 +1,4 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: /var/cvsroot/gentoo-x86/games-emulation/mednafen/mednafen-0.8.1.ebuild,v 1.1 2007/07/04 01:25:10 mr_bones_ Exp $
 
@@ -8,7 +8,7 @@ inherit games
 
 DESCRIPTION="Server for Mednafen emulator"
 HOMEPAGE="http://mednafen.sourceforge.net/"
-SRC_URI="mirror://sourceforge/mednafen/${P}.tar.bz2"
+SRC_URI="mirror://sourceforge/mednafen/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"

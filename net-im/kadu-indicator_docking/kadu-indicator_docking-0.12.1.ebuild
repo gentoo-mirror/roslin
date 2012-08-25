@@ -16,4 +16,4 @@ DEPEND=">=x11-libs/qt-gui-4.7.0
 	~net-im/kadu-docking-${PV}"
 RDEPEND="${DEPEND}"
 
-PATCHES=( "${FILESDIR}/${P}-cmake.patch" )
+PATCHES=( "${FILESDIR}/${P}-0.11.0_beta1-cmake.patch" )

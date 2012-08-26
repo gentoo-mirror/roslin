@@ -23,7 +23,7 @@ RDEPEND="app-crypt/qca:2
 
 DEPEND="${RDEPEND}"
 
-PATCHES=("${FILESDIR}/${PN}-0.12.1_beta2-cmake.patch")
+PATCHES=("${FILESDIR}/${PN}-0.12.0_beta2-cmake.patch")
 
 src_configure() {
 	# Disable plugins

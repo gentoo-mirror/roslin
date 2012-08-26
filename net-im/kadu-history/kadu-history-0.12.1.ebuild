@@ -13,4 +13,4 @@ DEPEND=">=x11-libs/qt-gui-4.7.0
 	~net-im/kadu-core-${PV}"
 RDEPEND="${DEPEND}"
 
-PATCHES=( "${FILESDIR}/${PN}-0.12.1_alpha1-includes.patch" )
+PATCHES=( "${FILESDIR}/${PN}-0.12.0_alpha1-includes.patch" )

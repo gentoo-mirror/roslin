@@ -1,6 +1,11 @@
 # ChangeLog for games-emulation/qmc2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 
+*qmc2-0.37 (23 Sep 2012)
+
+  23 Sep 2012; Michał Ziąbkowski <mziab@o2.pl> +qmc2-0.37.ebuild:
+  Bumped. Fixed HOMEPAGE and URI.
+
 *qmc2-0.36-r1 (24 Jun 2012)
 
   24 Jun 2012; Michał Ziąbkowski <mziab@o2.pl> qmc2-0.36.ebuild,

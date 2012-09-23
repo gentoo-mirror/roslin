@@ -2,9 +2,9 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=2
+EAPI=4
 
-inherit games confutils python git-2
+inherit games python git-2
 
 DESCRIPTION="Universal frontend for libretro-based emulators"
 HOMEPAGE="http://themaister.net/retroarch.html"
@@ -15,20 +15,20 @@ EGIT_REPO_URI="git://github.com/Themaister/RetroArch.git"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS=""
-IUSE="alsa cg +dynamic +fbo ffmpeg jack netplay openal oss pulseaudio python sdl-image truetype x264rgb xml xv"
+IUSE="alsa cg +dynamic +fbo ffmpeg jack netplay openal oss png pulseaudio python sdl-image truetype xml xv"
 
-RDEPEND="media-libs/libsdl[joystick]
+RDEPEND=">=media-libs/libsdl-1.2.10[joystick]
 	alsa? ( media-libs/alsa-lib )
 	cg? ( media-gfx/nvidia-cg-toolkit )
-	ffmpeg? ( x264rgb? ( >=media-video/ffmpeg-0.9 )
-		!x264rgb? ( virtual/ffmpeg ) )
-	jack? ( media-sound/jack-audio-connection-kit )
+	ffmpeg? ( virtual/ffmpeg )
+	jack? ( >=media-sound/jack-audio-connection-kit-0.120.1 )
 	openal? ( media-libs/openal )
 	xml? ( dev-libs/libxml2 )
 	truetype? ( media-libs/freetype:2 )
 	pulseaudio? ( media-sound/pulseaudio )
 	sdl-image? ( media-libs/sdl-image )
 	xv? ( x11-libs/libXv )
+	png? ( >=media-libs/libpng-1.5 )
 	dev-games/bsnes-libretro"
 DEPEND="dev-util/pkgconfig
 	!dynamic? ( dev-games/bsnes-libretro )
@@ -42,7 +42,7 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}/${PN}-0.9.6-build.patch" \
+	epatch "${FILESDIR}/${PN}-0.9.7-build.patch" \
 		"${FILESDIR}/${PN}-python.patch"
 
 	if use python; then
@@ -68,8 +68,8 @@ src_configure() {
 		$(use_enable netplay) \
 		$(use_enable sdl-image sdl_image) \
 		$(use_enable xv xvideo) \
-		$(use_enable x264rgb) \
 		$(use_enable python) \
+		$(use_enable png libpng) \
 		|| die
 }
 

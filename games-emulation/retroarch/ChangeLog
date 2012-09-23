@@ -2,6 +2,14 @@
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*retroarch-0.9.7 (23 Sep 2012)
+
+  23 Sep 2012; Michał Ziąbkowski <mziab@o2.pl> -retroarch-0.9.5.ebuild,
+  -retroarch-0.9.6.ebuild, +retroarch-0.9.7.ebuild,
+  +files/retroarch-0.9.7-build.patch, retroarch-9999.ebuild,
+  -files/retroarch-build.patch:
+  Bumped. Fixed 9999 ebuild. Removed cruft.
+
 *retroarch-0.9.6-r1 (24 Jun 2012)
 
   24 Jun 2012; Michał Ziąbkowski <mziab@o2.pl> +retroarch-0.9.6-r1.ebuild,

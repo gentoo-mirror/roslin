@@ -1,8 +1,8 @@
 diff --git a/Makefile b/Makefile
-index b651050..7d1f38a 100644
+index 6b07033..94b3cf8 100644
 --- a/Makefile
 +++ b/Makefile
-@@ -186,11 +186,11 @@ tools/ssnes-joyconfig: $(JOYCONFIG_OBJ)
+@@ -311,11 +311,11 @@ endif
  install: $(TARGET)
  	mkdir -p $(DESTDIR)$(PREFIX)/bin 2>/dev/null || /bin/true
  	mkdir -p $(DESTDIR)/etc 2>/dev/null || /bin/true
@@ -18,16 +18,24 @@ index b651050..7d1f38a 100644
  
  uninstall:
 diff --git a/qb/qb.params.sh b/qb/qb.params.sh
-index 668b881..7706313 100644
+index 13a962c..e71aeb0 100644
 --- a/qb/qb.params.sh
 +++ b/qb/qb.params.sh
-@@ -139,8 +139,7 @@ parse_input()
-             exit 0
-             ;;
-          *)
--            print_help
--            exit 1
-+            echo "Unknown option: $1"
-             ;;
+@@ -39,7 +39,7 @@ EOF
+ opt_exists() # $opt is returned if exists in OPTS
+ {	opt=$(echo "$1" | tr '[a-z]' '[A-Z]')
+ 	for OPT in $OPTS; do [ "$opt" = "$OPT" ] && return; done
+-	print_help; exit 1
++	print_help; echo "Unknown option: $1"; exit 1
+ }
  
-       esac
+ parse_input() # Parse stuff :V
+@@ -65,7 +65,7 @@ parse_input() # Parse stuff :V
+ 				eval "$opt=$val"
+ 			;;
+ 			-h|--help) print_help; exit 0;;
+-			*) print_help; exit 1;;
++			*) echo "Unknown option: $1";;
+ 		esac
+ 		shift
+ 	done

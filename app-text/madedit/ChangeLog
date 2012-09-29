@@ -1,6 +1,16 @@
 # ChangeLog for app-text/madedit
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+
+*madedit-0.2.9-r1 (29 Sep 2012)
+
+  29 Sep 2012; Michał Ziąbkowski <mziab@o2.pl> +madedit-0.2.9-r1.ebuild,
+  +files/madedit-add-file-changed-event.patch,
+  +files/madedit-desktop-file.patch, +files/madedit-highlight-blink-fix.patch,
+  +files/madedit-max-linelength-fix.patch, +files/madedit-onpaint-fix.patch,
+  +files/madedit-unbundle-xpressive.patch:
+  Rev-bump. Fixes build with newer boost versions and adds hotfixes from Arch's
+  AUR to make it actually usable.
 
   29 Sep 2011; Michał Ziąbkowski <mziab@o2.pl> madedit-0.2.9.ebuild:
   Added ~amd64 keyword.

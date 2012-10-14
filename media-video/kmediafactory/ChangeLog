@@ -1,6 +1,14 @@
 # ChangeLog for media-video/kmediafactory
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+
+*kmediafactory-0.8.1 (14 Oct 2012)
+
+  14 Oct 2012; Michał Ziąbkowski <mziab@o2.pl> +kmediafactory-0.8.1.ebuild,
+  +files/kmediafactory-0.8.1-cmake.patch,
+  +files/kmediafactory-0.8.1-desktop.patch,
+  +files/kmediafactory-0.8.1-header.patch:
+  Bumped with patches to fix build.
 
   04 May 2011; Michał Ziąbkowski <mziab@o2.pl> -kmediafactory-0.7.2.ebuild,
   -kmediafactory-0.7.5.ebuild, -kmediafactory-0.8.0.ebuild,

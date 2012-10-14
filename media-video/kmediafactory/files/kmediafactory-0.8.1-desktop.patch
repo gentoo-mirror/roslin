@@ -1,0 +1,10 @@
+diff --git a/src/kmediafactory.desktop b/src/kmediafactory.desktop
+index 5f5bbf8..7c94c0e 100644
+--- a/src/kmediafactory.desktop
++++ b/src/kmediafactory.desktop
+@@ -11,4 +11,4 @@ GenericName[fi]=DVD:n kokoaminen
+ Terminal=false
+ MimeType=application/x-kmediafactory;
+ X-KDE-NativeMimeType=application/x-kmediafactory;
+-Categories=KDE;AudioVideo;AudioVideoEditing
++Categories=Qt;KDE;AudioVideo;AudioVideoEditing;

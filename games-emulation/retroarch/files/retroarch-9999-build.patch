@@ -1,0 +1,43 @@
+diff --git a/Makefile b/Makefile
+index d66bac1..49b9eaa 100644
+--- a/Makefile
++++ b/Makefile
+@@ -342,12 +342,12 @@ endif
+ install: $(TARGET)
+ 	mkdir -p $(DESTDIR)$(PREFIX)/bin 2>/dev/null || /bin/true
+ 	mkdir -p $(DESTDIR)/etc 2>/dev/null || /bin/true
+-	mkdir -p $(DESTDIR)$(PREFIX)/share/man/man1 2>/dev/null || /bin/true
+-	mkdir -p $(DESTDIR)$(PREFIX)/share/icons 2>/dev/null || /bin/true
++	mkdir -p $(DESTDIR)/usr/share/man/man1 2>/dev/null || /bin/true
++	mkdir -p $(DESTDIR)/usr/share/icons 2>/dev/null || /bin/true
+ 	install -m755 $(TARGET) $(DESTDIR)$(PREFIX)/bin 
+ 	install -m644 retroarch.cfg $(DESTDIR)/etc/retroarch.cfg
+-	install -m644 docs/retroarch.1 $(DESTDIR)$(PREFIX)/share/man/man1
+-	install -m644 docs/retroarch-joyconfig.1 $(DESTDIR)$(PREFIX)/share/man/man1
++	install -m644 docs/retroarch.1 $(DESTDIR)/usr/share/man/man1
++	install -m644 docs/retroarch-joyconfig.1 $(DESTDIR)/usr/share/man/man1
+ 	install -m755 retroarch-zip $(DESTDIR)$(PREFIX)/bin
+ 	install -m644 media/retroarch.png $(DESTDIR)/usr/share/icons
+ 
+diff --git a/qb/qb.params.sh b/qb/qb.params.sh
+index 13a962c..0eaef0c 100644
+--- a/qb/qb.params.sh
++++ b/qb/qb.params.sh
+@@ -39,7 +39,7 @@ EOF
+ opt_exists() # $opt is returned if exists in OPTS
+ {	opt=$(echo "$1" | tr '[a-z]' '[A-Z]')
+ 	for OPT in $OPTS; do [ "$opt" = "$OPT" ] && return; done
+-	print_help; exit 1
++	print_help; echo "Unknown option $1"
+ }
+ 
+ parse_input() # Parse stuff :V
+@@ -65,7 +65,7 @@ parse_input() # Parse stuff :V
+ 				eval "$opt=$val"
+ 			;;
+ 			-h|--help) print_help; exit 0;;
+-			*) print_help; exit 1;;
++			*) echo "Unknown option $1";;
+ 		esac
+ 		shift
+ 	done

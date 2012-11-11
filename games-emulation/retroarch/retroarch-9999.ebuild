@@ -15,9 +15,9 @@ EGIT_REPO_URI="git://github.com/Themaister/RetroArch.git"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS=""
-IUSE="alsa cg +dynamic +fbo ffmpeg jack netplay openal oss png pulseaudio python sdl-image truetype xml xv"
+IUSE="alsa cg +dynamic +fbo ffmpeg jack netplay openal oss png pulseaudio python sdl sdl-image truetype xml xv"
 
-RDEPEND=">=media-libs/libsdl-1.2.10[joystick]
+RDEPEND="sdl? ( >=media-libs/libsdl-1.2.10[joystick] )
 	alsa? ( media-libs/alsa-lib )
 	cg? ( media-gfx/nvidia-cg-toolkit )
 	ffmpeg? ( virtual/ffmpeg )
@@ -42,8 +42,8 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}/${PN}-0.9.7-build.patch" \
-		"${FILESDIR}/${PN}-python.patch"
+	epatch "${FILESDIR}/${P}-build.patch" \
+		"${FILESDIR}/${P}-python.patch"
 
 	if use python; then
 		sed -i qb/config.libs.sh \
@@ -70,6 +70,7 @@ src_configure() {
 		$(use_enable xv xvideo) \
 		$(use_enable python) \
 		$(use_enable png libpng) \
+		$(use_enable sdl) \
 		|| die
 }
 

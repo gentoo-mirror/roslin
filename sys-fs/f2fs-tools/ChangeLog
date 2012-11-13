@@ -1,0 +1,9 @@
+# ChangeLog for sys-fs/f2fs-tools
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*f2fs-tools-9999 (13 Nov 2012)
+
+  13 Nov 2012; Piotr Szymaniak <szarpaj@grubelek.pl> +f2fs-tools-9999.ebuild,
+  -Manifest, -f2fs-tools-1.0.0.ebuild:
+  sys-fs/f2fs-tools: f2fs-tools: Changed to live ebuild, removed keywords.

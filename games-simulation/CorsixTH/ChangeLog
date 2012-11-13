@@ -1,6 +1,21 @@
 # ChangeLog for games-simulation/CorsixTH
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+
+*CorsixTH-0.10 (11 Nov 2012)
+*CorsixTH-0.8-r1 (11 Nov 2012)
+
+  11 Nov 2012; Michał Ziąbkowski <mziab@o2.pl>
+  +files/CorsixTH-0.7-nodoc.patch, +CorsixTH-0.8-r1.ebuild,
+  +files/CorsixTH-0.8-unbundle-agg.patch, +CorsixTH-0.10.ebuild,
+  +files/CorsixTH-0.10-cmake.patch, -CorsixTH-1.0_beta4.ebuild,
+  -CorsixTH-1.0_beta4-r1.ebuild, -CorsixTH-1.0_beta5.ebuild,
+  -CorsixTH-1.0_beta6.ebuild, -CorsixTH-1.0_beta7.ebuild,
+  -CorsixTH-1.0_beta8.ebuild, -CorsixTH-1.0_beta8-r1.ebuild,
+  -files/CorsixTH-1.0_beta6-nodoc.patch, -files/CorsixTH-1.0_beta7-nodoc.patch,
+  -files/CorsixTH-1.0_beta8-unbundle-agg.patch,
+  -files/CorsixTH-unbundle-agg.patch:
+  Bumped. Changed versioning scheme. Removed cruft.
 
   29 Sep 2011; Michał Ziąbkowski <mziab@o2.pl> CorsixTH-1.0_beta8-r1.ebuild:
   Added ~amd64 keyword.

@@ -1,0 +1,13 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 099d8a9..dc0123f 100755
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -11,7 +11,7 @@
+ #   - BUILD_MAPEDITOR
+ 
+ PROJECT(CorsixTH_Top_Level)
+-CMAKE_MINIMUM_REQUIRED(VERSION 2.6)
++cmake_minimum_required(VERSION 2.6)
+ INCLUDE(CheckIncludeFiles)
+ SET(CORSIX_TH_DONE_TOP_LEVEL_CMAKE ON)
+ 

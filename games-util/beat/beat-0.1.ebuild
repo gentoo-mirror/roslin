@@ -19,7 +19,7 @@ IUSE=""
 
 RDEPEND="x11-libs/gtk+:2"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	>=sys-devel/gcc-4.5"
 
 S="${WORKDIR}/${PN}"

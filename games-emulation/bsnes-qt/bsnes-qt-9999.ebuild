@@ -30,7 +30,7 @@ RDEPEND="ao? ( media-libs/libao )
 	dev-games/bsnes-libretro"
 
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	>=sys-devel/gcc-4.4"
 
 REQUIRED_USE="|| ( ao openal alsa pulseaudio oss )

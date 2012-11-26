@@ -20,7 +20,7 @@ IUSE="gtk qt4"
 RDEPEND="gtk? ( x11-libs/gtk+:2 )
 	qt4? ( >=x11-libs/qt-gui-4.5:4 )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	>=sys-devel/gcc-4.5"
 
 S="${WORKDIR}/${PN}"

@@ -20,7 +20,7 @@ RDEPEND="sys-libs/libnih
 
 DEPEND="${RDEPEND}
 	sys-devel/gettext
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 CONFIG_CHECK="~FTRACE ~DEBUG_FS"
 

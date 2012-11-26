@@ -30,7 +30,7 @@ RDEPEND="ao? ( media-libs/libao )
 	qt4? ( >=x11-libs/qt-gui-4.5:4 )"
 
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	>=sys-devel/gcc-4.5"
 
 S="${WORKDIR}/${MY_P}/bsnes"

@@ -31,7 +31,7 @@ RDEPEND="media-libs/alsa-lib
 	x11-libs/libXext
 	x11-libs/libXxf86vm"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	x11-proto/xextproto
 	x11-proto/xf86dgaproto
 	x11-proto/xf86vidmodeproto

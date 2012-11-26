@@ -28,7 +28,7 @@ COMMON="media-libs/alsa-lib
 RDEPEND="${COMMON}
 	cdinstall? ( games-fps/quake1-data )"
 DEPEND="${COMMON}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	x11-proto/xextproto
 	x11-proto/xf86dgaproto
 	x11-proto/xf86vidmodeproto

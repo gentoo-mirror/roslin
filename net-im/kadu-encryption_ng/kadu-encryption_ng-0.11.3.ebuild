@@ -15,4 +15,4 @@ RDEPEND=">=x11-libs/qt-gui-4.7.0
 	~net-im/kadu-core-${PV}
 	app-crypt/qca-ossl:2"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"

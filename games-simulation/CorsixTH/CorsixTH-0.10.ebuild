@@ -25,7 +25,7 @@ RDEPEND=">=dev-lang/lua-5.1
 	sdl? ( x11-libs/agg )
 	sound? ( media-libs/sdl-mixer[timidity] )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 #S="${WORKDIR}/${PN}"
 S="${WORKDIR}"

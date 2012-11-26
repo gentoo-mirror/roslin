@@ -32,4 +32,4 @@ RDEPEND=">=net-im/kadu-core-${PV}[debug?]
 	ssl? ( >=net-im/kadu-encryption_ng_simlite-${PV}[debug?] )
 "
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"

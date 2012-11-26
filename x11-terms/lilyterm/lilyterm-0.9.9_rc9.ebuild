@@ -21,7 +21,7 @@ RDEPEND="dev-libs/glib:2
 	x11-libs/gtk+:2
 	x11-libs/vte:0"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	dev-util/intltool
 	sys-devel/gettext"
 

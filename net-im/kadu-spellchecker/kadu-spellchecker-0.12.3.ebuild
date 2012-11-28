@@ -16,7 +16,7 @@ RDEPEND=">=x11-libs/qt-gui-4.7.0
 	aspell? ( app-text/aspell )
 	enchant? ( app-text/enchant )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 
 src_configure() {

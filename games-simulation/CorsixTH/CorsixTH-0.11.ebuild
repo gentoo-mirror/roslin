@@ -6,8 +6,7 @@ EAPI=3
 
 inherit games cmake-utils
 
-#MY_P="${P}-Source"
-MY_P="${P}-Sourze"
+MY_P="${P}-Source"
 
 DESCRIPTION="Open source clone of Theme Hospital"
 HOMEPAGE="http://code.google.com/p/corsix-th/"
@@ -27,12 +26,11 @@ RDEPEND=">=dev-lang/lua-5.1
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
-#S="${WORKDIR}/${PN}"
-S="${WORKDIR}"
+S="${WORKDIR}/${MY_P}"
 
 PATCHES=("${FILESDIR}/${PN}-0.8-unbundle-agg.patch" \
 		"${FILESDIR}/${PN}-0.7-nodoc.patch" \
-		"${FILESDIR}/${P}-cmake.patch")
+		"${FILESDIR}/${PN}-0.10-cmake.patch")
 
 src_configure() {
 	local mycmakeargs="$(cmake-utils_use_with opengl OPENGL) \

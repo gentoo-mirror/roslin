@@ -30,7 +30,7 @@ RDEPEND="sdl? ( >=media-libs/libsdl-1.2.10[joystick] )
 	xv? ( x11-libs/libXv )
 	png? ( >=media-libs/libpng-1.5 )
 	dev-games/bsnes-libretro"
-DEPEND="dev-util/pkgconfig
+DEPEND="virtual/pkgconfig
 	!dynamic? ( dev-games/bsnes-libretro )
 	${RDEPEND}"
 

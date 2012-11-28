@@ -14,5 +14,5 @@ RDEPEND=">=x11-libs/qt-gui-4.7.0
 	|| ( media-libs/phonon x11-libs/qt-phonon )
 	~net-im/kadu-sound-${PV}"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 

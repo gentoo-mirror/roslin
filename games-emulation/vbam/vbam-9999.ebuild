@@ -35,7 +35,7 @@ RDEPEND="gtk? ( >=dev-cpp/libglademm-2.4.0
 DEPEND="${RDEPEND}
 	x86? ( dev-lang/nasm )
 	>=dev-util/cmake-2.4.0
-	gtk? ( dev-util/pkgconfig
+	gtk? ( virtual/pkgconfig
 	sys-devel/gettext )"
 
 S="${WORKDIR}/${PN}"

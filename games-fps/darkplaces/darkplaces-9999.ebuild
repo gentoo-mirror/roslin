@@ -61,7 +61,7 @@ DEPEND="lights? ( || (
 	!opengl? ( !sdl? ( !dedicated? (
 		${UIRDEPEND}
 		${UIDEPEND} ) ) )
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	app-arch/unzip"
 
 S=${WORKDIR}/${PN}

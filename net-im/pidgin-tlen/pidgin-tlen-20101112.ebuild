@@ -14,7 +14,7 @@ IUSE=""
 RDEPEND=">=net-im/pidgin-2.6.5"
 
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_compile() {
 	emake LOCALBASE="/usr" || die "Compile failed"

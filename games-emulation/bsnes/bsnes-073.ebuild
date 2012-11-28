@@ -31,7 +31,7 @@ RDEPEND="ao? ( media-libs/libao )
 	>=x11-libs/qt-gui-4.5:4"
 
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	>=sys-devel/gcc-4.4"
 
 S="${WORKDIR}/${PN}"

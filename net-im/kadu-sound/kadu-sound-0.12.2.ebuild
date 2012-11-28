@@ -12,4 +12,4 @@ IUSE=""
 RDEPEND=">=x11-libs/qt-gui-4.7.0
 	~net-im/kadu-core-${PV}"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"

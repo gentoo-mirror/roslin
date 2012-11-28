@@ -25,7 +25,7 @@ RDEPEND="virtual/opengl
 	jack? ( media-sound/jack-audio-connection-kit )
 	nls? ( virtual/libintl )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	nls? ( sys-devel/gettext )"
 
 S=${WORKDIR}/${PN}

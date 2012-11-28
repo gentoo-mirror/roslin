@@ -26,7 +26,7 @@ RDEPEND="x11-libs/gtk+:3
 DEPEND="${RDEPEND}
 	app-text/scrollkeeper
 	app-text/gnome-doc-utils
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 DOCS="AUTHORS ChangeLog INSTALL NEWS README"
 

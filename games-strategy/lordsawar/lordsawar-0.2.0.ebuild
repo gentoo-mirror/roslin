@@ -27,7 +27,7 @@ RDEPEND="dev-libs/boost
 	nls? ( sys-devel/gettext )
 	sound? ( media-libs/sdl-mixer[vorbis] )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 S=${WORKDIR}/${P/_pre*/}
 

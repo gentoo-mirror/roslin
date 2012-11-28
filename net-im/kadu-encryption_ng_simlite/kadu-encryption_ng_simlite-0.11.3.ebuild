@@ -18,4 +18,4 @@ RDEPEND=">=x11-libs/qt-gui-4.7.0
 DEPEND="${RDEPEND}
     !net-im/kadu-encryption
     !net-im/kadu-encryption_old
-	dev-util/pkgconfig"
+	virtual/pkgconfig"

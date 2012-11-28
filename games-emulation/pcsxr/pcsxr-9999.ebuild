@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=2
+EAPI=4
 
 ESVN_REPO_URI="https://pcsxr.svn.codeplex.com/svn/pcsxr"
 ESVN_PROJECT="pcsxr"
@@ -18,8 +18,7 @@ SLOT="0"
 KEYWORDS=""
 IUSE="alsa cdio openal opengl oss pulseaudio +sdl-sound"
 
-RDEPEND="x11-libs/gtk+:2
-	gnome-base/libglade
+RDEPEND="x11-libs/gtk+:3
 	media-libs/libsdl
 	sys-libs/zlib
 	app-arch/bzip2
@@ -37,21 +36,14 @@ DEPEND="${RDEPEND}
 	!games-emulation/pcsx-df
 	x86? ( dev-lang/nasm )"
 
+REQUIRED_USE="^^ ( alsa openal oss pulseaudio sdl-sound )"
 
 pkg_setup() {
-	if use alsa; then
-		sound_backend="alsa"
-	elif use pulseaudio; then
-		sound_backend="pulseaudio"
-	elif use oss; then
-		sound_backend="oss"
-	elif use openal; then
-		sound_backend="openal"
-	elif use sdl-sound; then
-		sound_backend="sdl"
-	else
-		sound_backend="null"
-	fi
+	use alsa &&	sound_backend="alsa"
+	use pulseaudio && sound_backend="pulseaudio"
+	use oss && sound_backend="oss"
+	use openal && sound_backend="openal"
+	use sdl-sound && sound_backend="sdl"
 
 	elog "Using ${sound_backend} sound"
 	games_pkg_setup
@@ -68,6 +60,11 @@ src_prepare() {
 
 	# fix icon and .desktop path
 	epatch "${FILESDIR}/${P}-datadir.patch"
+
+	# fix .desktop
+	sed -i "data/pcsxr.desktop" \
+		-e "/Encoding/d" \
+		|| die
 
 	# regenerate for changes to spread
 	eautoreconf

@@ -15,5 +15,5 @@ RDEPEND=">=x11-libs/qt-gui-4.7.0
 	>=app-crypt/qca-ossl-2.0
 	sys-libs/zlib"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 

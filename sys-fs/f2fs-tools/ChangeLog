@@ -2,6 +2,9 @@
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  28 Nov 2012; Piotr Szymaniak <szarpaj@grubelek.pl> f2fs-tools-9999.ebuild:
+  sys-fs/f2fs-tools: f2fs-tools: Updated git repo.
+
 *f2fs-tools-9999 (13 Nov 2012)
 
   13 Nov 2012; Piotr Szymaniak <szarpaj@grubelek.pl> +f2fs-tools-9999.ebuild,

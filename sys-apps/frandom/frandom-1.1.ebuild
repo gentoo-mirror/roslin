@@ -28,6 +28,6 @@ src_prepare() {
 src_install() {
 	linux-mod_src_install
 
-	insinto /lib/udev/rules.d/
+	insinto /usr/lib/udev/rules.d/
 	doins "${S}"/10-${PN}.rules
 }

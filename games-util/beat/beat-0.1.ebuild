@@ -1,4 +1,4 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -12,7 +12,7 @@ DESCRIPTION="A utility for applying and creating BPS patches"
 HOMEPAGE="http://byuu.org"
 SRC_URI="http://byuu.org/files/${PN}_v${MY_PV}.tar.xz"
 
-LICENSE="public-domain"
+LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""

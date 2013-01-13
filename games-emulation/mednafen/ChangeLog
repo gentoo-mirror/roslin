@@ -1,6 +1,11 @@
 # ChangeLog for games-emulation/mednafen
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+
+*mednafen-0.9.28 (13 Jan 2013)
+
+  13 Jan 2013; Michał Ziąbkowski <mziab@o2.pl> +mednafen-0.9.28.ebuild:
+  Bumped.
 
 *mednafen-0.9.26 (21 Dec 2012)
 

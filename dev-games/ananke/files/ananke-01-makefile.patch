@@ -1,5 +1,5 @@
 diff --git a/Makefile b/Makefile
-index 46d0160..4307f3f 100755
+index 46d0160..4f160e7 100755
 --- a/Makefile
 +++ b/Makefile
 @@ -1,8 +1,8 @@
@@ -13,7 +13,7 @@ index 46d0160..4307f3f 100755
  
  all:
  	$(cpp) $(flags) -fPIC -o obj/ananke.o -c ananke.cpp
-@@ -21,11 +21,9 @@ clean:
+@@ -21,11 +21,10 @@ clean:
  	-@$(call delete,obj/*.o)
  	-@$(call delete,*.so)
  
@@ -23,7 +23,8 @@ index 46d0160..4307f3f 100755
 -	if [ ! -d ~/.config/ananke ]; then mkdir ~/.config/ananke; fi
 -	sudo cp libananke.so $(path)/libananke.so.1
 -	sudo ln -s $(path)/libananke.so.1 $(path)/libananke.so
-+	install -D -m 755 libananke.so $(DESTDIR)$(path)/libananke.so.1
++	install -D -m 755 libananke.so $(DESTDIR)$(path)/libananke.so
++	ln -s libananke.so $(DESTDIR)$(path)/libananke.so.1
  endif
  
  uninstall:

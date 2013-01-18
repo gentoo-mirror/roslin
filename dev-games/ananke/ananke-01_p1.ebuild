@@ -1,0 +1,37 @@
+# Copyright 1999-2013 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: $
+
+EAPI=4
+
+inherit eutils toolchain-funcs
+
+MY_PV="${PV/0./}"
+MY_PV="${MY_PV/_p/r0}"
+
+DESCRIPTION="A higan helper library needed for extra rom load options"
+HOMEPAGE="http://byuu.org/higan/"
+#SRC_URI="http://higan.googlecode.com/files/higan_v${MY_PV}.tar.bz2"
+SRC_URI="http://byuu.org/temp/ananke_v${MY_PV}.tar.xz"
+
+LICENSE="GPL-3"
+SLOT="0"
+KEYWORDS="~amd64 ~x86"
+IUSE=""
+
+RDEPEND=""
+DEPEND=">=sys-devel/gcc-4.6"
+
+S="${WORKDIR}/${PN}"
+
+src_prepare() {
+	epatch "${FILESDIR}/${PN}-01-makefile.patch" \
+		"${FILESDIR}/${PN}-01-gcc46-build.patch"
+}
+
+src_compile() {
+	emake \
+		platform="x" \
+		compiler="$(tc-getCXX)" \
+	    || die "emake $1 failed"
+}

@@ -1,0 +1,29 @@
+diff --git a/purify/Makefile b/purify/Makefile
+index 53ba038..be4c043 100755
+--- a/purify/Makefile
++++ b/purify/Makefile
+@@ -1,9 +1,9 @@
+ include nall/Makefile
+ include phoenix/Makefile
+ 
+-path := /usr/local/bin
+-flags := -I. -O3 -fomit-frame-pointer
+-link := -s
++path := $(DESTDIR)/usr/bin
++flags := -I. $(CXXFLAGS)
++link :=
+ objects := obj/phoenix.o obj/purify.o
+ 
+ ifeq ($(platform),x)
+@@ -35,9 +35,9 @@ resource: force
+ clean:
+ 	-@$(call delete,obj/*.o)
+ 
+-install: uninstall
++install:
+ ifeq ($(platform),x)
+-	sudo cp ./purify $(path)/purify
++	install -D -m 755 ./purify $(path)/purify
+ endif
+ 
+ uninstall:

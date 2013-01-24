@@ -1,0 +1,10 @@
+# ChangeLog for dev-lang/bass
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*bass-10 (24 Jan 2013)
+
+  24 Jan 2013; Michał Ziąbkowski <mziab@o2.pl> +bass-10.ebuild,
+  +files/bass-10-makefile.patch, +metadata.xml:
+  New ebuild.
+

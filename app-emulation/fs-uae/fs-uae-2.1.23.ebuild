@@ -4,9 +4,12 @@
 
 EAPI=4
 
+MY_PV="${PV}dev"
+MY_P="${PN}-${MY_PV}"
+
 DESCRIPTION="Amiga emulator based on WinUAE emulation code"
 HOMEPAGE="http://fengestad.no/fs-uae/"
-SRC_URI="http://fengestad.no/fs-uae/stable/${PV}/${P}.tar.gz"
+SRC_URI="http://fengestad.no/fs-uae/devel/${MY_PV}/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -20,3 +23,5 @@ DEPEND="virtual/opengl
 	dev-libs/glib:2
 	sys-libs/zlib"
 RDEPEND="${DEPEND}"
+
+S="${WORKDIR}/${MY_P}"

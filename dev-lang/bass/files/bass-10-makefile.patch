@@ -1,0 +1,37 @@
+diff --git a/Makefile b/Makefile
+index 87562b5..df4e776 100755
+--- a/Makefile
++++ b/Makefile
+@@ -1,8 +1,8 @@
+ include nall/Makefile
+ 
+ application := bass
+-flags := -I. -DBASS_BINARY -O3 -fomit-frame-pointer
+-link := -s
++flags := -I. -DBASS_BINARY $(CXXFLAGS)
++link :=
+ 
+ all: $(application).o
+ 	$(cpp) -o $(application) $(application).o $(link)
+@@ -12,7 +12,7 @@ $(application).o: $(application).cpp
+ 	$(cpp) $(flags) -c -o $(application).o $(application).cpp
+ 
+ install:
+-	sudo cp $(application) /usr/local/bin/$(application)
++	install -D -m 755 $(application) $(DESTDIR)/usr/bin/$(application)
+ 
+ clean:
+ 	$(call delete,*.o)
+diff --git a/nall/Makefile b/nall/Makefile
+index 9929d10..4e5ffeb 100755
+--- a/nall/Makefile
++++ b/nall/Makefile
+@@ -45,7 +45,7 @@ ifeq ($(compiler),)
+ endif
+ 
+ c := $(compiler) -std=gnu99
+-cpp := $(subst cc,++,$(compiler)) -std=gnu++11
++cpp := $(subst cc,++,$(compiler)) -std=gnu++0x
+ 
+ ifeq ($(arch),x86)
+   c := $(c) -m32

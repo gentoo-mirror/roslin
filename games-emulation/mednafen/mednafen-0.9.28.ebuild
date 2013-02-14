@@ -15,10 +15,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="alsa altivec cjk debug jack nls"
 
-RDEPEND="virtual/opengl
-	media-libs/libsndfile
+RDEPEND="media-libs/libsndfile
 	dev-libs/libcdio
-	media-libs/libsdl[audio,joystick,video]
+	media-libs/libsdl[audio,joystick,video,opengl]
 	media-libs/sdl-net
 	sys-libs/zlib
 	alsa? ( media-libs/alsa-lib )

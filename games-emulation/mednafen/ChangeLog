@@ -2,6 +2,11 @@
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  14 Feb 2013; Michał Ziąbkowski <mziab@o2.pl> -mednafen-0.9.24.ebuild,
+  -mednafen-0.9.25.ebuild, -mednafen-0.9.26.ebuild, mednafen-0.9.28.ebuild:
+  Update dep to require libsdl[opengl] instead of virtual/opengl. Removed
+  cruft.
+
 *mednafen-0.9.28 (13 Jan 2013)
 
   13 Jan 2013; Michał Ziąbkowski <mziab@o2.pl> +mednafen-0.9.28.ebuild:

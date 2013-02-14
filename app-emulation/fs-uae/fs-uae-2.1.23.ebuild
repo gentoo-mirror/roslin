@@ -16,8 +16,7 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
 
-DEPEND="virtual/opengl
-	>=media-libs/libsdl-1.2[joystick]
+DEPEND=">=media-libs/libsdl-1.2[joystick,opengl]
 	media-libs/openal
 	media-libs/libpng
 	dev-libs/glib:2

@@ -1,0 +1,28 @@
+diff --git a/sysdefs.h b/sysdefs.h
+index 50a29db..83d4362 100644
+--- a/sysdefs.h
++++ b/sysdefs.h
+@@ -991,11 +991,11 @@ typedef unsigned long Card32;
+ 
+ 
+ /*===========================================================================*/
+-/* AMD opteron/athlon64/k8 platforms */
++/* x86-64 platforms */
+ 
+-#ifdef __k8__
++#ifdef __x86_64__
+ 
+-#define ARCHPRNAME "k8"
++#define ARCHPRNAME "x86_64"
+ 
+ /*---------------------------------------------------------------------------*/
+ /* x86-64 with Linux and GCC:
+@@ -1023,7 +1023,7 @@ typedef unsigned long long Card64;
+ #define LOCALE_NLS
+ #endif
+ 
+-#endif /* __k8__ */
++#endif /* __x86_64___ */
+ 
+ /*===========================================================================*/
+ /* ARM platform */

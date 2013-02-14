@@ -22,7 +22,8 @@ S="${WORKDIR}/asl-current"
 
 src_prepare() {
 	cp Makefile.def.tmpl Makefile.def
-	epatch "${FILESDIR}"/${PN}-makefile.patch
+	epatch "${FILESDIR}"/${PN}-makefile.patch \
+		"${FILESDIR}"/${PN}-amd64-ifdef.patch
 	sed -i install.sh \
 	    -e "s:mkdirhier:mkdir -p:g" \
 	    -e "/strip/d" \

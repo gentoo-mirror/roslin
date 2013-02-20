@@ -11,10 +11,11 @@ HOMEPAGE="http://themaister.net/retroarch.html"
 SRC_URI=""
 
 EGIT_REPO_URI="git://github.com/Themaister/RetroArch.git"
+EGIT_COMMIT="v${PV}"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 IUSE="alsa cg +dynamic +fbo ffmpeg jack netplay openal oss png pulseaudio python sdl sdl-image truetype xml xv"
 
 RDEPEND="sdl? ( >=media-libs/libsdl-1.2.10[joystick] )
@@ -43,7 +44,7 @@ pkg_setup() {
 
 src_prepare() {
 	epatch "${FILESDIR}/${P}-build.patch" \
-		"${FILESDIR}/${P}-python.patch"
+		"${FILESDIR}/${PN}-python.patch"
 
 	if use python; then
 		sed -i qb/config.libs.sh \

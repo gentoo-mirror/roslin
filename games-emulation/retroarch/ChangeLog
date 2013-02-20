@@ -1,6 +1,13 @@
 # ChangeLog for games-emulation/retroarch
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+
+*retroarch-0.9.8 (20 Feb 2013)
+
+  20 Feb 2013; Michał Ziąbkowski <mziab@o2.pl> +retroarch-0.9.8.ebuild,
+  +files/retroarch-0.9.8-build.patch, retroarch-9999.ebuild,
+  files/retroarch-9999-build.patch:
+  Bumped. Fixed patch in live ebuild.
 
   11 Nov 2012; Michał Ziąbkowski <mziab@o2.pl> retroarch-9999.ebuild,
   +files/retroarch-9999-build.patch, +files/retroarch-9999-python.patch:

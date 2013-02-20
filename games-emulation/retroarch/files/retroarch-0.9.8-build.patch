@@ -1,5 +1,5 @@
 diff --git a/Makefile b/Makefile
-index 7baff23..272f62f 100644
+index 344a4cb..dd21fd0 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -365,14 +365,14 @@ tools/retrolaunch/retrolaunch: $(RETROLAUNCH_OBJ)
@@ -7,16 +7,16 @@ index 7baff23..272f62f 100644
  	mkdir -p $(DESTDIR)$(PREFIX)/bin 2>/dev/null || /bin/true
  	mkdir -p $(DESTDIR)/etc 2>/dev/null || /bin/true
 -	mkdir -p $(DESTDIR)$(PREFIX)/share/man/man1 2>/dev/null || /bin/true
--	mkdir -p $(DESTDIR)$(PREFIX)/share/pixmaps 2>/dev/null || /bin/true
+-	mkdir -p $(DESTDIR)$(PREFIX)/share/icons 2>/dev/null || /bin/true
 +	mkdir -p $(DESTDIR)/usr/share/man/man1 2>/dev/null || /bin/true
-+	mkdir -p $(DESTDIR)/usr/share/pixmaps 2>/dev/null || /bin/true
++	mkdir -p $(DESTDIR)/usr/share/icons 2>/dev/null || /bin/true
  	install -m755 $(TARGET) $(DESTDIR)$(PREFIX)/bin 
  	install -m644 retroarch.cfg $(DESTDIR)/etc/retroarch.cfg
  	install -m644 docs/retroarch.1 $(DESTDIR)$(MAN_DIR)
  	install -m644 docs/retroarch-joyconfig.1 $(DESTDIR)$(MAN_DIR)
  	install -m755 retroarch-zip $(DESTDIR)$(PREFIX)/bin
--	install -m644 media/retroarch.png $(DESTDIR)$(PREFIX)/share/pixmaps
-+	install -m644 media/retroarch.png $(DESTDIR)/usr/share/pixmaps
+-	install -m644 media/retroarch.png $(DESTDIR)$(PREFIX)/share/icons
++	install -m644 media/retroarch.png $(DESTDIR)/usr/share/icons
  
  uninstall:
  	rm -f $(DESTDIR)$(PREFIX)/bin/retroarch

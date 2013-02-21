@@ -1,5 +1,14 @@
 # ChangeLog for games-emulation/qmc2
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+
+*qmc2-0.38 (21 Feb 2013)
+
+  21 Feb 2013; Michał Ziąbkowski <mziab@o2.pl> -qmc2-0.2_beta18.ebuild,
+  -qmc2-0.2_beta19.ebuild, -qmc2-0.2_beta20.ebuild,
+  -files/qmc2-0.2_beta17-makefile.patch, -files/qmc2-0.2_beta20-minizip.patch,
+  -qmc2-0.34.ebuild, -qmc2-0.35.ebuild, -files/qmc2-0.35-nophonon-build.patch,
+  -qmc2-0.36.ebuild, +qmc2-0.38.ebuild:
+  Bumped. Removed cruft.
 
 *qmc2-0.37 (23 Sep 2012)
 

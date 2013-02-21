@@ -1,28 +1,29 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=2
+EAPI=4
 
-inherit eutils confutils games
+inherit eutils games
 
 MY_PV=${PV/_beta/.b}
 
 DESCRIPTION="An MAME frontend for SDLMAME/SDLMESS"
-HOMEPAGE="http://www.mameworld.net/mamecat/"
-SRC_URI="mirror://sourceforge/${PN}/${PN}-${MY_PV}.tar.bz2"
+HOMEPAGE="http://qmc2.arcadehits.net/wordpress/"
+SRC_URI="mirror://sourceforge/${PN}/${PN}-${MY_PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
 IUSE="debug joystick opengl phonon +sdlmame sdlmess sqlite"
 
-DEPEND=">=x11-libs/qt-gui-4.5:4[accessibility]
-	>=x11-libs/qt-webkit-4.5:4
-	phonon? ( || ( media-libs/phonon >=x11-libs/qt-phonon-4.5 ) )
+DEPEND=">=x11-libs/qt-gui-4.7:4[accessibility]
+	>=x11-libs/qt-webkit-4.7:4
+	>=x11-libs/qt-test-4.7:4
+	phonon? ( || ( media-libs/phonon >=x11-libs/qt-phonon-4.7 ) )
 	joystick? ( media-libs/libsdl[joystick] )
-	opengl? ( >=x11-libs/qt-opengl-4.5:4 )
-	sqlite? ( >=x11-libs/qt-sql-4.5:4[sqlite] )"
+	opengl? ( >=x11-libs/qt-opengl-4.7:4 )
+	sqlite? ( >=x11-libs/qt-sql-4.7:4[sqlite] )"
 
 RDEPEND="${DEPEND}
 	sdlmame? ( games-emulation/sdlmame )
@@ -31,10 +32,9 @@ RDEPEND="${DEPEND}
 
 S="${WORKDIR}/${PN}"
 
-pkg_setup() {
-	# Make sure at least one is selected
-	confutils_require_any sdlmame sdlmess
+REQUIRED_USE="|| ( sdlmame sdlmess )"
 
+pkg_setup() {
 	# Set proper parameters for make
 	FLAGS="DESTDIR=${D} PREFIX=\"${GAMES_PREFIX}\" DATADIR=\"${GAMES_DATADIR}\" CTIME=0"
 
@@ -43,11 +43,13 @@ pkg_setup() {
 	use opengl && FLAGS="${FLAGS} OPENGL=1"
 	use phonon || FLAGS="${FLAGS} PHONON=0"
 	use sqlite && FLAGS="${FLAGS} DATABASE=1"
+
+	games_pkg_setup
 }
 
 src_prepare() {
-	epatch "${FILESDIR}/${PN}-0.2_beta20-makefile.patch" \
-		"${FILESDIR}/${PN}-0.2_beta20-minizip.patch"
+	epatch "${FILESDIR}/${PN}-0.2_beta20-makefile.patch"
+	sed -i '1i#define OF(x) x' minizip/ioapi.h
 
 	## This is not as it appears, ARCH means something different to qmc2's Makefile
 	## then it means to the portage/portage-compatible package manager

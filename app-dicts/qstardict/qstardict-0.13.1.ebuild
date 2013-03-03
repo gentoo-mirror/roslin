@@ -14,8 +14,8 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64 ~ia64"
 IUSE="dbus nls"
 RDEPEND=">=dev-libs/glib-2.0:2
-	x11-libs/qt-gui:4
-	dbus? ( x11-libs/qt-dbus:4 )"
+	dev-qt/qtgui:4
+	dbus? ( dev-qt/qtdbus:4 )"
 DEPEND="${RDEPEND}"
 
 PATCHES=("${FILESDIR}/${P}-gcc44.patch")

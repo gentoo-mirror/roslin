@@ -15,8 +15,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="nls"
 
-DEPEND="x11-libs/qt-gui:4
-	x11-libs/qt-dbus:4"
+DEPEND="dev-qt/qtgui:4
+	dev-qt/qtdbus:4"
 RDEPEND="${DEPEND}
 	>=app-cdr/cdemu-daemon-1.2.0"
 

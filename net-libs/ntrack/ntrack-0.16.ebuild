@@ -19,7 +19,7 @@ IUSE="glib qt4"
 
 DEPEND="dev-libs/libnl
 	glib? ( dev-libs/glib:2 )
-	qt4? ( x11-libs/qt-core:4 )"
+	qt4? ( dev-qt/qtcore:4 )"
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${PN}-${MY_PV}"

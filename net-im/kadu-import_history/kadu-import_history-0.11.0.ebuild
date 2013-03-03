@@ -12,7 +12,7 @@ SRC_URI="http://kicer.sileman.net.pl/kadu/${NAME}-${PV}.tar.bz2 -> ${NAME}-${PV}
 KEYWORDS="amd64 x86"
 IUSE=""
 
-DEPEND=">=x11-libs/qt-gui-4.7.0
+DEPEND=">=dev-qt/qtgui-4.7.0
 	>=net-im/kadu-core-0.11.0
 	>=net-im/kadu-gadu_protocol-0.11.0
 	>=net-im/kadu-sql_history-0.11.0"

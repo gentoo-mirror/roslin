@@ -18,7 +18,7 @@ KEYWORDS=""
 IUSE="gtk qt4"
 
 RDEPEND="media-libs/libsdl[joystick]
-	>=x11-libs/qt-gui-4.6:4
+	>=dev-qt/qtgui-4.6:4
 	games-emulation/retroarch"
 DEPEND="virtual/pkgconfig
 	>=sys-devel/gcc-4.5

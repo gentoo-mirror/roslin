@@ -17,13 +17,13 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64"
 IUSE="debug joystick opengl phonon +sdlmame sdlmess sqlite"
 
-DEPEND=">=x11-libs/qt-gui-4.7:4[accessibility]
-	>=x11-libs/qt-webkit-4.7:4
-	>=x11-libs/qt-test-4.7:4
-	phonon? ( || ( media-libs/phonon >=x11-libs/qt-phonon-4.7 ) )
+DEPEND=">=dev-qt/qtgui-4.7:4[accessibility]
+	>=dev-qt/qtwebkit-4.7:4
+	>=dev-qt/qttest-4.7:4
+	phonon? ( || ( media-libs/phonon >=dev-qt/qtphonon-4.7 ) )
 	joystick? ( media-libs/libsdl[joystick] )
-	opengl? ( >=x11-libs/qt-opengl-4.7:4 )
-	sqlite? ( >=x11-libs/qt-sql-4.7:4[sqlite] )"
+	opengl? ( >=dev-qt/qtopengl-4.7:4 )
+	sqlite? ( >=dev-qt/qtsql-4.7:4[sqlite] )"
 
 RDEPEND="${DEPEND}
 	sdlmame? ( games-emulation/sdlmame )

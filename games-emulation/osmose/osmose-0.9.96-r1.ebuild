@@ -19,8 +19,8 @@ IUSE=""
 
 RDEPEND="media-libs/alsa-lib
 	sys-libs/zlib[minizip]
-	>=x11-libs/qt-gui-4.6:4
-	>=x11-libs/qt-opengl-4.6:4"
+	>=dev-qt/qtgui-4.6:4
+	>=dev-qt/qtopengl-4.6:4"
 DEPEND="${RDEPEND}
 	app-arch/unzip"
 

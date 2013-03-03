@@ -28,7 +28,7 @@ RDEPEND="ao? ( media-libs/libao )
 	sgb? ( dev-games/supergameboy )
 	snesfilter? ( dev-games/snesfilter )
 	snesreader? ( dev-games/snesreader )
-	>=x11-libs/qt-gui-4.5:4"
+	>=dev-qt/qtgui-4.5:4"
 
 DEPEND="${RDEPEND}
 	virtual/pkgconfig

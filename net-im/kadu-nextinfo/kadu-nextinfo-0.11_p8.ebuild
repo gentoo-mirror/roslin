@@ -11,7 +11,7 @@ LICENSE="GPL-3"
 KEYWORDS="amd64 x86"
 IUSE=""
 
-DEPEND=">=x11-libs/qt-gui-4.7.0
+DEPEND=">=dev-qt/qtgui-4.7.0
 	>=net-im/kadu-core-0.11.0"
 RDEPEND="${DEPEND}"
 

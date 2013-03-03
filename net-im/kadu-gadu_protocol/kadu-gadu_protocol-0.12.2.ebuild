@@ -11,8 +11,8 @@ HOMEPAGE="http://kadu.im"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND=">=x11-libs/qt-gui-4.7.0
-	>=x11-libs/qt-xmlpatterns-4.7.0
+DEPEND=">=dev-qt/qtgui-4.7.0
+	>=dev-qt/qtxmlpatterns-4.7.0
 	~net-im/kadu-core-${PV}
 	>=net-libs/libgadu-1.11.1[threads]
 	>=app-crypt/qca-2.0"

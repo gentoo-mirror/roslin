@@ -10,7 +10,7 @@ SRC_URI="http://download.kadu.im/external-plugins/${NAME}/${NAME}-${PV/_p/-}.tar
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND=">=x11-libs/qt-gui-4.7.0
+DEPEND=">=dev-qt/qtgui-4.7.0
 	>=net-im/kadu-core-0.12.0"
 RDEPEND="${DEPEND}"
 

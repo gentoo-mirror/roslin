@@ -27,7 +27,7 @@ RDEPEND="ao? ( media-libs/libao )
 	opengl? ( virtual/opengl )
 	sdl? ( media-libs/libsdl[joystick] )
 	gtk? ( x11-libs/gtk+:2 )
-	qt4? ( >=x11-libs/qt-gui-4.5:4 )"
+	qt4? ( >=dev-qt/qtgui-4.5:4 )"
 
 DEPEND="${RDEPEND}
 	virtual/pkgconfig

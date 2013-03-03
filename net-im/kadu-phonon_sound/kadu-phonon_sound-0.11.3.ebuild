@@ -9,9 +9,9 @@ HOMEPAGE="http://kadu.im"
 KEYWORDS="amd64 x86"
 IUSE=""
 
-RDEPEND=">=x11-libs/qt-gui-4.7.0
+RDEPEND=">=dev-qt/qtgui-4.7.0
 	~net-im/kadu-core-${PV}
-	|| ( media-libs/phonon x11-libs/qt-phonon )
+	|| ( media-libs/phonon dev-qt/qtphonon )
 	~net-im/kadu-sound-${PV}"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"

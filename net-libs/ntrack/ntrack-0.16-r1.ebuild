@@ -19,7 +19,7 @@ IUSE="glib +libnl rtnetlink qt4"
 
 RDEPEND="libnl? ( dev-libs/libnl )
 	glib? ( dev-libs/glib:2 )
-	qt4? ( x11-libs/qt-core:4 )"
+	qt4? ( dev-qt/qtcore:4 )"
 DEPEND="rtnetlink? ( >=sys-kernel/linux-headers-2.6 )
 	${RDEPEND}"
 

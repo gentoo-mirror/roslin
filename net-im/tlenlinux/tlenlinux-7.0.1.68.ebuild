@@ -17,9 +17,9 @@ KEYWORDS="~amd64 ~x86"
 IUSE="phonon qt-static"
 RESTRICT="strip"
 
-RDEPEND="!qt-static? ( >=x11-libs/qt-gui-4.6:4
+RDEPEND="!qt-static? ( >=dev-qt/qtgui-4.6:4
 	phonon? (
-		|| ( >=x11-libs/qt-phonon-4.6:4
+		|| ( >=dev-qt/qtphonon-4.6:4
 	        media-libs/phonon )
 	        )
 	)

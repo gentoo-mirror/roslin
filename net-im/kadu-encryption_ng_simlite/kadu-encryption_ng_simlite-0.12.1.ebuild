@@ -11,7 +11,7 @@ HOMEPAGE="http://kadu.im"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND=">=x11-libs/qt-gui-4.7.0
+RDEPEND=">=dev-qt/qtgui-4.7.0
 	~net-im/kadu-core-${PV}
     app-crypt/qca-ossl:2
 	~net-im/kadu-encryption_ng-${PV}"

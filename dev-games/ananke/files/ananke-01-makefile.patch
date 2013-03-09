@@ -8,7 +8,7 @@ index 46d0160..4f160e7 100755
  
 -path := /usr/local/lib
 -flags := -I. -O3 -fomit-frame-pointer
-+path := /usr/lib
++path := @LIBDIR@
 +flags := -I. $(CXXFLAGS)
  
  all:

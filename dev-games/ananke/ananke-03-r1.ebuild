@@ -4,7 +4,7 @@
 
 EAPI=4
 
-inherit eutils toolchain-funcs
+inherit eutils multilib toolchain-funcs
 
 MY_PV="${PV/0./}"
 MY_PV="v${MY_PV/_p/r0}-source"
@@ -27,6 +27,8 @@ src_prepare() {
 	epatch "${FILESDIR}/${PN}-01-makefile.patch" \
 		"${FILESDIR}/${PN}-01-gcc46-build.patch" \
 		"${FILESDIR}/${PN}-01-bps-path-fix.patch"
+	sed -i \
+		-e "s:@LIBDIR@:${EPREFIX}/usr/$(get_libdir):" ${S}/Makefile || die
 }
 
 src_compile() {

@@ -3,6 +3,10 @@
 # $Header: $
 
   18 Apr 2013; Michał Ziąbkowski <mziab@o2.pl>
+  kadu-lednotify-0.12_p33.ebuild:
+  Stabled.
+
+  18 Apr 2013; Michał Ziąbkowski <mziab@o2.pl>
   -kadu-lednotify-0.11_p32.ebuild:
   Removed cruft.
 

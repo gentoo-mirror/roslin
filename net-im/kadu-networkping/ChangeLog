@@ -3,6 +3,10 @@
 # $Header: $
 
   18 Apr 2013; Michał Ziąbkowski <mziab@o2.pl>
+  kadu-networkping-0.12_p4.ebuild:
+  Stabled.
+
+  18 Apr 2013; Michał Ziąbkowski <mziab@o2.pl>
   -kadu-networkping-0.11_p3.ebuild:
   Removed cruft.
 

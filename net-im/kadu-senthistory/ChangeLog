@@ -3,6 +3,10 @@
 # $Header: $
 
   18 Apr 2013; Michał Ziąbkowski <mziab@o2.pl>
+  kadu-senthistory-0.12_p11.ebuild:
+  Stabled.
+
+  18 Apr 2013; Michał Ziąbkowski <mziab@o2.pl>
   -kadu-senthistory-0.11_p10.ebuild:
   Removed cruft.
 

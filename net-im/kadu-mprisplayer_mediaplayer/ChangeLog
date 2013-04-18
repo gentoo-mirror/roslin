@@ -3,6 +3,10 @@
 # $Header: $
 
   18 Apr 2013; Michał Ziąbkowski <mziab@o2.pl>
+  kadu-mprisplayer_mediaplayer-0.12.3.ebuild:
+  Stabled.
+
+  18 Apr 2013; Michał Ziąbkowski <mziab@o2.pl>
   -kadu-mprisplayer_mediaplayer-0.11.3.ebuild,
   -kadu-mprisplayer_mediaplayer-0.12.0.ebuild,
   -kadu-mprisplayer_mediaplayer-0.12.1.ebuild,

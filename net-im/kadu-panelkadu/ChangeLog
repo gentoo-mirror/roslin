@@ -3,6 +3,10 @@
 # $Header: $
 
   18 Apr 2013; Michał Ziąbkowski <mziab@o2.pl>
+  kadu-panelkadu-0.12_p10.ebuild:
+  Stabled.
+
+  18 Apr 2013; Michał Ziąbkowski <mziab@o2.pl>
   -kadu-panelkadu-0.11_p9.ebuild:
   Removed cruft.
 

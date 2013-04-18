@@ -1,6 +1,9 @@
 # ChangeLog for net-im/kadu-icons
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+
+  18 Apr 2013; Michał Ziąbkowski <mziab@o2.pl> kadu-icons-0.6.6.ebuild:
+  Stabled.
 
   12 Feb 2012; Michał Ziąbkowski <mziab@o2.pl> kadu-icons-0.6.6.ebuild:
   Don't install themes that are now included with kadu-core.

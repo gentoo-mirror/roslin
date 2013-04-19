@@ -1,5 +1,11 @@
 # ChangeLog for games-emulation/bsnes
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+
+*bsnes-073-r1 (19 Apr 2013)
+
+  19 Apr 2013; Michał Ziąbkowski <mziab@o2.pl> +bsnes-073-r1.ebuild,
+  +files/bsnes-073-gcc46.patch, +files/bsnes-073-gcc47.patch:
+  Rev-bump with build fixes for GCC 4.6 and 4.7.
 
   24 Jun 2012; Michał Ziąbkowski <mziab@o2.pl> bsnes-083.ebuild,
   bsnes-084.ebuild, bsnes-085.ebuild, bsnes-086.ebuild, bsnes-086-r1.ebuild,

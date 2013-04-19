@@ -1,0 +1,12 @@
+diff --git a/bsnes/nall/array.hpp b/bsnes/nall/array.hpp
+index 9cfe775..61fd4cb 100755
+--- a/bsnes/nall/array.hpp
++++ b/bsnes/nall/array.hpp
+@@ -5,6 +5,7 @@
+ #include <initializer_list>
+ #include <type_traits>
+ #include <utility>
++#include <cstring>
+ #include <nall/algorithm.hpp>
+ #include <nall/bit.hpp>
+ #include <nall/concept.hpp>

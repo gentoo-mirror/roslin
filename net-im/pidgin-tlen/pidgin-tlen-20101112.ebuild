@@ -1,10 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
 DESCRIPTION="Tlen.pl support for Pidgin (plugin)"
 HOMEPAGE="http://nic.com.pl/~alek/pidgin-tlen"
-SRC_URI="https://github.com/downloads/pelotasplus/${PN}/${P}.tar.gz"
+SRC_URI="mirror://github/pelotasplus/${PN}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"

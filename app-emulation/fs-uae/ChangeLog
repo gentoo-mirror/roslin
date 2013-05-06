@@ -2,6 +2,11 @@
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*fs-uae-2.2.2 (06 May 2013)
+
+  06 May 2013; Michał Ziąbkowski <mziab@o2.pl> +fs-uae-2.2.2.ebuild:
+  Bumped.
+
 *fs-uae-2.2.0 (17 Apr 2013)
 
   17 Apr 2013; Michał Ziąbkowski <mziab@o2.pl> +fs-uae-2.2.0.ebuild:

@@ -2,6 +2,15 @@
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*retroarch-0.9.8-r1 (21 May 2013)
+
+  21 May 2013; Michał Ziąbkowski <mziab@o2.pl> -retroarch-0.9.6-r1.ebuild,
+  -retroarch-0.9.7.ebuild, +retroarch-0.9.8-r1.ebuild, retroarch-9999.ebuild,
+  -files/retroarch-0.9.6-build.patch, -files/retroarch-0.9.7-build.patch:
+  Removed old versions. Removed the dynamic USE flag. Due to the multitude of
+  libretro ports available, it makes little sense to have a hard dependency on
+  any one of them, so dynamic loading is always on.
+
 *retroarch-0.9.8 (20 Feb 2013)
 
   20 Feb 2013; Michał Ziąbkowski <mziab@o2.pl> +retroarch-0.9.8.ebuild,

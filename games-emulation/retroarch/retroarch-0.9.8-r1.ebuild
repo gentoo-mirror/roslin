@@ -1,4 +1,4 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -16,23 +16,21 @@ EGIT_COMMIT="v${PV}"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="alsa cg +dynamic +fbo ffmpeg jack netplay openal oss pulseaudio python sdl-image truetype x264rgb xml xv"
+IUSE="alsa cg +fbo ffmpeg jack netplay openal oss png pulseaudio python sdl sdl-image truetype xml xv"
 
-RDEPEND="media-libs/libsdl[joystick]
+RDEPEND="sdl? ( >=media-libs/libsdl-1.2.10[joystick] )
 	alsa? ( media-libs/alsa-lib )
 	cg? ( media-gfx/nvidia-cg-toolkit )
-	ffmpeg? ( x264rgb? ( >=media-video/ffmpeg-0.9 )
-		!x264rgb? ( virtual/ffmpeg ) )
-	jack? ( media-sound/jack-audio-connection-kit )
+	ffmpeg? ( virtual/ffmpeg )
+	jack? ( >=media-sound/jack-audio-connection-kit-0.120.1 )
 	openal? ( media-libs/openal )
 	xml? ( dev-libs/libxml2 )
 	truetype? ( media-libs/freetype:2 )
 	pulseaudio? ( media-sound/pulseaudio )
 	sdl-image? ( media-libs/sdl-image )
 	xv? ( x11-libs/libXv )
-	dev-games/bsnes-libretro"
+	png? ( >=media-libs/libpng-1.5 )"
 DEPEND="virtual/pkgconfig
-	!dynamic? ( dev-games/bsnes-libretro )
 	${RDEPEND}"
 
 REQUIRED_USE="|| ( alsa jack openal oss pulseaudio )"
@@ -65,12 +63,14 @@ src_configure() {
 		$(use_enable fbo) \
 		$(use_enable truetype freetype) \
 		$(use_enable pulseaudio pulse) \
-		$(use_enable dynamic) \
 		$(use_enable netplay) \
 		$(use_enable sdl-image sdl_image) \
 		$(use_enable xv xvideo) \
-		$(use_enable x264rgb) \
 		$(use_enable python) \
+		$(use_enable png libpng) \
+		$(use_enable sdl) \
+		--enable-dynamic \
+		--with-man_dir="/usr/share/man/man1" \
 		|| die
 }
 

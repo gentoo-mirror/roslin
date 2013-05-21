@@ -15,7 +15,7 @@ EGIT_REPO_URI="git://github.com/Themaister/RetroArch.git"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS=""
-IUSE="alsa cg +dynamic +fbo ffmpeg jack netplay openal oss png pulseaudio python sdl sdl-image truetype xml xv"
+IUSE="alsa cg +fbo ffmpeg jack netplay openal oss png pulseaudio python sdl sdl-image truetype xml xv"
 
 RDEPEND="sdl? ( >=media-libs/libsdl-1.2.10[joystick] )
 	alsa? ( media-libs/alsa-lib )
@@ -28,10 +28,8 @@ RDEPEND="sdl? ( >=media-libs/libsdl-1.2.10[joystick] )
 	pulseaudio? ( media-sound/pulseaudio )
 	sdl-image? ( media-libs/sdl-image )
 	xv? ( x11-libs/libXv )
-	png? ( >=media-libs/libpng-1.5 )
-	dev-games/bsnes-libretro"
+	png? ( >=media-libs/libpng-1.5 )"
 DEPEND="virtual/pkgconfig
-	!dynamic? ( dev-games/bsnes-libretro )
 	${RDEPEND}"
 
 REQUIRED_USE="|| ( alsa jack openal oss pulseaudio )"
@@ -64,13 +62,13 @@ src_configure() {
 		$(use_enable fbo) \
 		$(use_enable truetype freetype) \
 		$(use_enable pulseaudio pulse) \
-		$(use_enable dynamic) \
 		$(use_enable netplay) \
 		$(use_enable sdl-image sdl_image) \
 		$(use_enable xv xvideo) \
 		$(use_enable python) \
 		$(use_enable png libpng) \
 		$(use_enable sdl) \
+		--enable-dynamic \
 		--with-man_dir="/usr/share/man/man1" \
 		|| die
 }

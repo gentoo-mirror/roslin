@@ -1,0 +1,44 @@
+diff --git a/Makefile b/Makefile
+index 2b2731f..70a59bd 100644
+--- a/Makefile
++++ b/Makefile
+@@ -395,14 +395,14 @@ tools/input_common_joyconfig.o: input/input_common.c
+ install: $(TARGET)
+ 	mkdir -p $(DESTDIR)$(PREFIX)/bin 2>/dev/null || /bin/true
+ 	mkdir -p $(DESTDIR)$(GLOBAL_CONFIG_DIR) 2>/dev/null || /bin/true
+-	mkdir -p $(DESTDIR)$(PREFIX)/share/man/man1 2>/dev/null || /bin/true
+-	mkdir -p $(DESTDIR)$(PREFIX)/share/pixmaps 2>/dev/null || /bin/true
++	mkdir -p $(DESTDIR)/usr/share/man/man1 2>/dev/null || /bin/true
++	mkdir -p $(DESTDIR)/usr/share/pixmaps 2>/dev/null || /bin/true
+ 	install -m755 $(TARGET) $(DESTDIR)$(PREFIX)/bin 
+ 	install -m644 retroarch.cfg $(DESTDIR)$(GLOBAL_CONFIG_DIR)/retroarch.cfg
+ 	install -m644 docs/retroarch.1 $(DESTDIR)$(MAN_DIR)
+ 	install -m644 docs/retroarch-joyconfig.1 $(DESTDIR)$(MAN_DIR)
+ 	install -m755 retroarch-zip $(DESTDIR)$(PREFIX)/bin
+-	install -m644 media/retroarch.png $(DESTDIR)$(PREFIX)/share/pixmaps
++	install -m644 media/retroarch.png $(DESTDIR)/usr/share/pixmaps
+ 
+ uninstall:
+ 	rm -f $(DESTDIR)$(PREFIX)/bin/retroarch
+diff --git a/qb/qb.params.sh b/qb/qb.params.sh
+index 2ef9233..a85197d 100644
+--- a/qb/qb.params.sh
++++ b/qb/qb.params.sh
+@@ -41,7 +41,7 @@ EOF
+ opt_exists() # $opt is returned if exists in OPTS
+ {	opt=$(echo "$1" | tr '[a-z]' '[A-Z]')
+ 	for OPT in $OPTS; do [ "$opt" = "$OPT" ] && return; done
+-	print_help; exit 1
++	print_help; echo "Unknown option $1"
+ }
+ 
+ parse_input() # Parse stuff :V
+@@ -69,7 +69,7 @@ parse_input() # Parse stuff :V
+ 				eval "$opt=$val"
+ 			;;
+ 			-h|--help) print_help; exit 0;;
+-			*) print_help; exit 1;;
++			*) echo "Unknown option $1";;
+ 		esac
+ 		shift
+ 	done

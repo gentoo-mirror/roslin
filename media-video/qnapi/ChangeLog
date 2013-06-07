@@ -1,6 +1,9 @@
 # ChangeLog for media-video/qnapi
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
 # $Header
+
+  07 Jun 2013; Michał Ziąbkowski <mziab@o2.pl> qnapi-0.1.6_rc2-r1.ebuild:
+  Bumped to EAPI=4, so that newer kde4-functions.eclass doesn't complain.
 
   05 May 2011; Michał Ziąbkowski <mziab@o2.pl> qnapi-0.1.6_rc2-r1.ebuild:
   Bumped EAPI to appease kde4-base.eclass.

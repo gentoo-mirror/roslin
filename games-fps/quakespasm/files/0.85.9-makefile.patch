@@ -1,8 +1,8 @@
 diff --git a/Quake/Makefile b/Quake/Makefile
-index 6c10d3d..7f17557 100644
+index 6ad9a72..bd665dd 100644
 --- a/Quake/Makefile
 +++ b/Quake/Makefile
-@@ -10,9 +10,9 @@
+@@ -9,9 +9,9 @@
  USE_QS_CONBACK=1
  
  ### Enable/Disable codecs for streaming music support
@@ -15,21 +15,12 @@ index 6c10d3d..7f17557 100644
  
  # which library to use for mp3 decoding: mad or mpg123
  MP3LIB=mad
-@@ -59,7 +59,7 @@ endif
- 
+@@ -38,7 +38,7 @@ SDLNET  ?= 0
  CC ?= gcc
- WINDRES ?= windres
+ LINKER = $(CC)
+ 
 -STRIP ?= strip
 +STRIP ?= echo
  
  #CPUFLAGS= -mtune=i686
  #CPUFLAGS= -march=pentium4
-@@ -272,7 +272,7 @@ OBJS := strlcat.o \
- # ------------------------
- 
- quakespasm:	$(OBJS)
--	$(CC) $(OBJS) $(X11_LFLAGS) $(LIBS) $(SDL_LIBS) -o $@
-+	$(CC) $(OBJS) $(X11_LFLAGS) $(LDFLAGS) $(LIBS) $(SDL_LIBS) -o $@
- 	$(call do_strip,$@)
- 
- release:	quakespasm

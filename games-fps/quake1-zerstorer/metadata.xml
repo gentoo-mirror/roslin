@@ -10,7 +10,6 @@
 		<flag name="darkplaces">Create darkplaces start script</flag>
 		<flag name="qrack">Create qrack start script</flag>
 		<flag name="tyrquake">Create tyrquake start script</flag>
-		<flag name="vispatch">Apply transparent water patch</flag>
 	</use>
 </pkgmetadata>
 

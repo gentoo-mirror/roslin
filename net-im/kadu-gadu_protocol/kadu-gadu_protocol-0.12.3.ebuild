@@ -17,4 +17,3 @@ DEPEND=">=dev-qt/qtgui-4.7.0
 	>=net-libs/libgadu-1.11.1[threads]
 	>=app-crypt/qca-2.0"
 RDEPEND="${DEPEND}"
-

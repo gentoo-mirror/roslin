@@ -15,4 +15,3 @@ DEPEND=">=dev-qt/qtgui-4.7.0
 	~net-im/kadu-core-${PV}
 	~net-im/kadu-qt4_docking-${PV}"
 RDEPEND="${DEPEND}"
-

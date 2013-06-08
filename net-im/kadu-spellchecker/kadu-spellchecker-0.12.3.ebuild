@@ -18,7 +18,6 @@ RDEPEND=">=dev-qt/qtgui-4.7.0
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
-
 src_configure() {
 	local mycmakeargs="${mycmakeargs} \
 		$(cmake-utils_use_with aspell ASPELL)

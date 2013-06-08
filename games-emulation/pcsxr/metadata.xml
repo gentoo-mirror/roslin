@@ -6,4 +6,8 @@
   <email>mziab@o2.pl</email>
   <name>Michał Ziąbkowski</name>
 </maintainer>
+<use>
+  <flag name='cdio'>Enable libcdio support</flag>
+  <flag name='sdl-sound'>Use SDL backend for sound output</flag>
+</use>
 </pkgmetadata>

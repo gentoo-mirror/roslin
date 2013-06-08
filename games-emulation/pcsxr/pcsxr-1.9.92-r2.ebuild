@@ -33,7 +33,6 @@ DEPEND="${RDEPEND}
 	!games-emulation/pcsx-df
 	x86? ( dev-lang/nasm )"
 
-
 pkg_setup() {
 	if use sdl-sound; then
 		sound_backend="sdl"

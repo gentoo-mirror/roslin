@@ -1,5 +1,8 @@
 # ChangeLog for games-puzzle/hex-a-hop
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+
+  07 Jun 2013; Piotr Szymaniak <szarpaj@grubelek.pl> metadata.xml:
+  games-puzzle/hex-a-hop: Updated metadata.
 
   04 May 2011; Piotr Szymaniak <szarpaj@grubelek.pl> hex-a-hop-1.1.0.ebuild:
   Added amd64 keyword, removed cruft.

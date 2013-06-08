@@ -1,5 +1,8 @@
 # ChangeLog for games-fps/tyrquake
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+
+  07 Jun 2013; Piotr Szymaniak <szarpaj@grubelek.pl> metadata.xml:
+  games-fps/tyrquake: Updated metadata.
 
   22 Aug 2011; Michał Ziąbkowski <mziab@o2.pl> tyrquake-9999.ebuild:
   Migrated to git-2.eclass.

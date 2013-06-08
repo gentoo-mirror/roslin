@@ -1,4 +1,4 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -26,29 +26,29 @@ SRC_URI="${SRC_PM}/${MOD_DIR}.zip
 	${SRC_PM}/${MOD_DIR}${MY_PV}.zip
 	${SRC_B}/${MOD_DIR}${MY_PV}.zip
 	${SRC_ADDICT}/${MOD_DIR}${MY_PV}.zip
-	${SRC_G}/${MOD_DIR}${MY_PV}.zip
-	vispatch? ( http://mlodyinteligent.pl/~lazy_bum/quake-vis/zervis.zip )"
+	${SRC_G}/${MOD_DIR}${MY_PV}.zip"
+#	vispatch? ( http://mlodyinteligent.pl/~lazy_bum/quake-vis/zervis.zip )
 
-IUSE="vispatch"
+#IUSE="vispatch"
 KEYWORDS="~x86"
 
-DEPEND="vispatch? (
-		games-util/vispatch
-		app-arch/zip
-		)"
+#DEPEND="vispatch? (
+#		games-util/vispatch
+#		app-arch/zip
+#		)"
 
 src_unpack() {
 	unpack ${A}
 
 	rm DEVKIT.* *.{DAT,CFG}
 
-	if use vispatch; then
-		mv PAK0.PAK pak0.pak
-		vispatch -dir "${S}" -data "${S}"/zer.vis \
-			|| die "vispatch failed"
+#	if use vispatch; then
+#		mv PAK0.PAK pak0.pak
+#		vispatch -dir "${S}" -data "${S}"/zer.vis \
+#			|| die "vispatch failed"
 		# Clean the vis files
-		rm zer.vis zer.dat
-	fi
+#		rm zer.vis zer.dat
+#	fi
 
 	games-mod_src_unpack_tidy
 }

@@ -1,4 +1,4 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -35,7 +35,7 @@ src_configure() {
 src_install() {
 	emake DESTDIR="${D}" install || die "einstall failed"
 
-	dodoc AUTHORS ChangeLog NEWS *txt || die "dodoc failed"
+	dodoc AUTHORS ChangeLog NEWS README || die "dodoc failed"
 
 	prepgamesdirs
 }

@@ -3,8 +3,13 @@
 <pkgmetadata>
 	<herd></herd>
 	<maintainer>
-		<email>lazy_bum@o2.pl</email>
+		<email>szarpaj@grubelek.pl</email>
 		<name>Piotr Szymaniak</name>
 	</maintainer>
+	<use>
+		<flag name="darkplaces">Create darkplaces start script</flag>
+		<flag name="qrack">Create qrack start script</flag>
+		<flag name="soundtrack">Enable mod soundtrack</flag>
+	</use>
 </pkgmetadata>
 

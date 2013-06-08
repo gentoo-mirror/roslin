@@ -1,40 +1,39 @@
-diff -Naur pushover-0.0.2/configure pushover-0.0.2.old/configure
---- pushover-0.0.2/configure	2009-12-15 17:38:43.000000000 +0100
-+++ pushover-0.0.2.old/configure	2009-12-23 23:55:28.308131752 +0100
-@@ -15323,7 +15323,7 @@
- if test "${enable_nls+set}" = set; then
+diff --git a/Makefile.in b/Makefile.in
+index c8b1e1a..6974910 100644
+--- a/Makefile.in
++++ b/Makefile.in
+@@ -64,7 +64,6 @@ DIST_COMMON = README $(am__configure_deps) $(dist_doc_DATA) \
+ 	$(top_srcdir)/config_aux/install-sh \
+ 	$(top_srcdir)/config_aux/ltmain.sh \
+ 	$(top_srcdir)/config_aux/missing $(top_srcdir)/configure \
+-	ABOUT-NLS AUTHORS COPYING ChangeLog INSTALL NEWS \
+ 	config_aux/config.guess config_aux/config.rpath \
+ 	config_aux/config.sub config_aux/depcomp config_aux/install-sh \
+ 	config_aux/ltmain.sh config_aux/missing
+@@ -387,12 +386,7 @@ pushover_SOURCES = \
+   src/tools.cpp src/tools.h \
+   src/window.cpp src/window.h
+ 
+-dist_doc_DATA = \
+-  README \
+-  AUTHORS \
+-  COPYING \
+-  NEWS \
+-  ChangeLog
++dist_doc_DATA =
+ 
+ nobase_dist_pkgdata_DATA = \
+   data/ant.png \
+diff --git a/configure b/configure
+index ade7715..d9e7a1a 100755
+--- a/configure
++++ b/configure
+@@ -15302,7 +15302,7 @@ $as_echo_n "checking whether NLS is requested... " >&6; }
+ if test "${enable_nls+set}" = set; then :
    enableval=$enable_nls; USE_NLS=$enableval
  else
 -  USE_NLS=yes
 +  USE_NLS=no
  fi
  
-   { $as_echo "$as_me:$LINENO: result: $USE_NLS" >&5
-diff -Naur pushover-0.0.2/Makefile.in pushover-0.0.2.old/Makefile.in
---- pushover-0.0.2/Makefile.in	2009-12-15 17:38:53.000000000 +0100
-+++ pushover-0.0.2.old/Makefile.in	2009-12-24 00:10:10.867728844 +0100
-@@ -36,11 +36,11 @@
- target_triplet = @target@
- bin_PROGRAMS = pushover$(EXEEXT)
- subdir = .
--DIST_COMMON = README $(am__configure_deps) $(dist_doc_DATA) \
-+DIST_COMMON = $(am__configure_deps) $(dist_doc_DATA) \
- 	$(dist_noinst_DATA) $(nobase_dist_pkgdata_DATA) \
- 	$(srcdir)/Makefile.am $(srcdir)/Makefile.in \
--	$(srcdir)/config.h.in $(top_srcdir)/configure ABOUT-NLS \
--	AUTHORS COPYING ChangeLog INSTALL NEWS config_aux/config.guess \
-+	$(srcdir)/config.h.in $(top_srcdir)/configure \
-+	config_aux/config.guess \
- 	config_aux/config.rpath config_aux/config.sub \
- 	config_aux/depcomp config_aux/install-sh config_aux/ltmain.sh \
- 	config_aux/missing
-@@ -296,9 +296,6 @@
-   src/tools.cpp src/tools.h \
-   src/window.cpp src/window.h
- 
--dist_doc_DATA = \
--  readme.txt
--
- nobase_dist_pkgdata_DATA = \
-   data/ant.png \
-   data/dominos.png \
+   { $as_echo "$as_me:${as_lineno-$LINENO}: result: $USE_NLS" >&5

@@ -1,4 +1,4 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -17,7 +17,7 @@ SRC_URI="x86? ( ${X86_URI} )
 		multilib? ( ${X86_URI} )
 	)"
 
-LICENSE="NVIDIA"
+LICENSE="NVIDIA-r1"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc examples multilib"

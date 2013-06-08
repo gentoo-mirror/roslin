@@ -15,4 +15,3 @@ DEPEND=">=dev-qt/qtgui-4.7.0
 	~net-im/kadu-core-${PV}"
 RDEPEND="${DEPEND}
 	app-accessibility/powiedz"
-

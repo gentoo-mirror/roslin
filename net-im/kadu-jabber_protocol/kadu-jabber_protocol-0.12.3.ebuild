@@ -18,4 +18,3 @@ RDEPEND=">=dev-qt/qtgui-4.7.0
 	sys-libs/zlib"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
-

@@ -1,4 +1,4 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -73,4 +73,3 @@ src_configure() {
 	# run configure
 	./configure ${myconf} || die "configure failed"
 }
-

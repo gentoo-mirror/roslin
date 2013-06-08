@@ -8,7 +8,7 @@ inherit eutils games
 
 DESCRIPTION="Nestopia Undead: A cycle-accurate NES/Famicom and FDS emulator"
 HOMEPAGE="http://0ldsk00l.ca/nestopia.html"
-SRC_URI="https://github.com/downloads/rdanbrook/${PN}/${P}.tgz"
+SRC_URI="mirror://github/rdanbrook/${PN}/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"

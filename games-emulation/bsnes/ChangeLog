@@ -1,6 +1,16 @@
 # ChangeLog for games-emulation/bsnes
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
 
+  08 Jun 2013; Michał Ziąbkowski <mziab@o2.pl> -bsnes-073.ebuild,
+  -bsnes-082-r1.ebuild, -bsnes-083.ebuild, -bsnes-084.ebuild,
+  -bsnes-085.ebuild, -bsnes-086.ebuild, -bsnes-086-r1.ebuild,
+  -bsnes-087.ebuild, -bsnes-088.ebuild, -files/bsnes-077-makefile.patch,
+  -files/bsnes-082-global-paths.patch, -files/bsnes-083-global-paths.patch,
+  -files/bsnes-083-makefile.patch, -files/bsnes-085-global-paths.patch,
+  -files/bsnes-085-makefile.patch, -files/bsnes-086-global-paths.patch,
+  -files/bsnes-086-performance-build.patch, -files/bsnes-087-makefile.patch:
+  Removed cruft.
+
 *bsnes-073-r1 (19 Apr 2013)
 
   19 Apr 2013; Michał Ziąbkowski <mziab@o2.pl> +bsnes-073-r1.ebuild,

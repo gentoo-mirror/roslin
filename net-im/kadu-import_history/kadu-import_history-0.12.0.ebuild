@@ -8,7 +8,7 @@ inherit kadu
 
 DESCRIPTION="History import module"
 HOMEPAGE="http://www.kadu.im/w/Importhistory"
-SRC_URI="http://download.kadu.im/external-plugins/${NAME}/${NAME}-${PV}.tar.bz2 -> ${NAME}-${PV}-.tar"
+SRC_URI="http://download.kadu.im/external-plugins/${MOD_NAME}/${MOD_NAME}-${PV}.tar.bz2 -> ${MOD_NAME}-${PV}-.tar"
 KEYWORDS="amd64 x86"
 IUSE=""
 
@@ -18,4 +18,4 @@ DEPEND=">=dev-qt/qtgui-4.7.0
 	>=net-im/kadu-sql_history-0.12.0"
 RDEPEND="${DEPEND}"
 
-S="${WORKDIR}/${NAME}"
+S="${WORKDIR}/${MOD_NAME}"

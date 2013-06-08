@@ -8,7 +8,7 @@ inherit kadu
 
 DESCRIPTION="Periodically checks the network state"
 HOMEPAGE="http://www.ultr.pl/kadu/"
-SRC_URI="http://www.ultr.pl/kadu/${NAME}-${PV/_p/-}.tar.gz"
+SRC_URI="http://www.ultr.pl/kadu/${MOD_NAME}-${PV/_p/-}.tar.gz"
 LICENSE="GPL-3"
 KEYWORDS="amd64 x86"
 IUSE=""
@@ -17,4 +17,4 @@ DEPEND=">=dev-qt/qtgui-4.7.0
 	>=net-im/kadu-core-0.12.0"
 RDEPEND="${DEPEND}"
 
-S="${WORKDIR}/${NAME}"
+S="${WORKDIR}/${MOD_NAME}"

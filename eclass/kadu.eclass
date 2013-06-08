@@ -1,8 +1,12 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-# Author: Michał "mziab" Ziąbkowski
+# @ECLASS: kadu.eclass
+# @MAINTAINER:
+# Michał "mziab" Ziąbkowski <mziab@o2.pl>
+# @BLURB: Base eclass for modular Kadu ebuilds
+# @DESCRIPTION:
 # Base eclass for modular Kadu ebuilds
 
 inherit base flag-o-matic cmake-utils
@@ -12,9 +16,15 @@ SLOT="0"
 RESTRICT="primaryuri"
 IUSE="debug"
 
+# @ECLASS-VARIABLE: K_PV
+# @DESCRIPTION:
+# Package version in the format used by Kadu tarballs.
 K_PV="${PV/_p/.}"
 K_PV="${K_PV/_/-}"
 
+# @ECLASS-VARIABLE: KADU_SRC_DIR
+# @DESCRIPTION:
+# Upstream tarball subdirectory
 case ${PV} in
 	*alpha*|*beta*|*rc*) KADU_SRC_DIR="unstable" ;;
 	*) KADU_SRC_DIR="stable" ;;
@@ -23,14 +33,20 @@ esac
 SRC_URI="http://download.kadu.im/${KADU_SRC_DIR}/kadu-${K_PV}.tar.bz2
 	http://kadu.googlecode.com/files/kadu-${K_PV}.tar.bz2"
 
-NAME="${PN#*-}"
+# @ECLASS-VARIABLE: MOD_NAME
+# @DESCRIPTION:
+# Package name the kadu- prefix. Used for plugins.
+MOD_NAME="${PN#*-}"
 
 S="${WORKDIR}/kadu-${K_PV}"
 
-if [ "${NAME}" != "core" ]; then
-	S="${S}/plugins/${NAME}"
+if [ "${MOD_NAME}" != "core" ]; then
+	S="${S}/plugins/${MOD_NAME}"
 fi
 
+# @FUNCTION: kadu_src_configure
+# @DESCRIPTION:
+# Calls its parent from cmake-utils with some extra parameters
 kadu_src_configure() {
 	# Filter compiler flags
 	filter-flags -fno-rtti
@@ -38,21 +54,12 @@ kadu_src_configure() {
 	use debug && local CMAKE_BUILD_TYPE="debug"
 
 	local mycmakeargs="${mycmakeargs} \
-		-DBUILD_DESCRIPTION:STRING='Gentoo Linux'"
+		-DBUILD_DESCRIPTION:STRING=Gentoo"
 
 	cmake-utils_src_configure
 }
 
-kadu_src_compile() {
-	case ${EAPI:-0} in
-	0|1) kadu_src_configure ;;
-	esac
-
-	cmake-utils_src_compile
-}
-
 case ${EAPI:-0} in
-	0|1) EXPORT_FUNCTIONS src_compile ;;
-    2|3) EXPORT_FUNCTIONS src_configure src_compile ;;
-    *) die "no support for EAPI=${EAPI}" ;;
+	2|3|4|5) EXPORT_FUNCTIONS src_configure ;;
+	*) die "no support for EAPI=${EAPI}" ;;
 esac

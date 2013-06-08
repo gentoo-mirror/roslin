@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/flac2mp3
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+
+  08 Jun 2013; Michał Ziąbkowski <mziab@o2.pl> flac2mp3-0.3.0_rc3.ebuild:
+  Fixed repoman warning.
 
 *flac2mp3-0.3.0_rc3 (02 Feb 2012)
 

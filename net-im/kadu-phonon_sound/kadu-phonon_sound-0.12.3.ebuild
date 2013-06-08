@@ -17,4 +17,3 @@ RDEPEND=">=dev-qt/qtgui-4.7.0
 	~net-im/kadu-sound-${PV}"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
-

@@ -14,6 +14,5 @@ IUSE=""
 DEPEND=">=dev-qt/qtgui-4.7.0
 	~net-im/kadu-core-${PV}
 	~net-im/kadu-gadu_protocol-${PV}
-    ~net-im/kadu-history_migration-${PV}"
+	~net-im/kadu-history_migration-${PV}"
 RDEPEND="${DEPEND}"
-

@@ -16,4 +16,3 @@ DEPEND=">=dev-qt/qtgui-4.7.0
 	media-libs/libmpdclient
 	~net-im/kadu-mediaplayer-${PV}"
 RDEPEND="${DEPEND}"
-

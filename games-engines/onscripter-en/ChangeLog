@@ -1,6 +1,13 @@
 # ChangeLog for games-engines/onscripter-en
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+
+  08 Jun 2013; Michał Ziąbkowski <mziab@o2.pl>
+  -onscripter-en-20110314.ebuild, -onscripter-en-20110321.ebuild,
+  -onscripter-en-20110331.ebuild, -onscripter-en-20110404.ebuild,
+  -onscripter-en-20110413.ebuild, -onscripter-en-20110628.ebuild,
+  -files/onscripter-en-20091215-compiler.patch:
+  Removed cruft.
 
   29 Sep 2011; Michał Ziąbkowski <mziab@o2.pl>
   onscripter-en-20110628-r1.ebuild:

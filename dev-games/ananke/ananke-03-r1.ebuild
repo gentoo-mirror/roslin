@@ -28,7 +28,7 @@ src_prepare() {
 		"${FILESDIR}/${PN}-01-gcc46-build.patch" \
 		"${FILESDIR}/${PN}-01-bps-path-fix.patch"
 	sed -i \
-		-e "s:@LIBDIR@:${EPREFIX}/usr/$(get_libdir):" ${S}/Makefile || die
+		-e "s:@LIBDIR@:${EPREFIX}/usr/$(get_libdir):" "${S}"/Makefile || die
 }
 
 src_compile() {

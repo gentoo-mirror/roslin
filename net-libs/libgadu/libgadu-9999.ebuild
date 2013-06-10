@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-inherit subversion eutils libtool
+inherit subversion eutils
 
 DESCRIPTION="This library implements the client side of the Gadu-Gadu protocol"
 HOMEPAGE="http://toxygen.net/libgadu/"
@@ -37,8 +37,8 @@ src_unpack() {
 src_compile() {
 	econf \
 	    --enable-shared \
-	    `use_with threads pthread` \
-	    `use_with ssl openssl` \
+	    $(use_with threads pthread) \
+	    $(use_with ssl openssl) \
 	     || die "econf failed"
 
 	emake || die "emake failed"

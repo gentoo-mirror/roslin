@@ -11,8 +11,8 @@ inherit eutils distutils-r1
 MY_P="fs-uae-${PV}"
 
 DESCRIPTION="WxPython launcher for FS-UAE"
-HOMEPAGE="http://fengestad.no/fs-uae/"
-SRC_URI="http://fengestad.no/fs-uae/stable/${PV}/${MY_P}.tar.gz"
+HOMEPAGE="http://fs-uae.net/"
+SRC_URI="http://fs-uae.net/fs-uae/stable/${PV}/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"

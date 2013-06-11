@@ -5,8 +5,8 @@
 EAPI=4
 
 DESCRIPTION="Amiga emulator based on WinUAE emulation code"
-HOMEPAGE="http://fengestad.no/fs-uae/"
-SRC_URI="http://fengestad.no/fs-uae/stable/${PV}/${P}.tar.gz"
+HOMEPAGE="http://fs-uae.net/"
+SRC_URI="http://fs-uae.net/fs-uae/stable/${PV}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"

@@ -12,7 +12,7 @@ DESCRIPTION="Universal frontend for libretro-based emulators"
 HOMEPAGE="http://themaister.net/retroarch.html"
 SRC_URI=""
 
-EGIT_REPO_URI="git://github.com/Themaister/RetroArch.git"
+EGIT_REPO_URI="git://github.com/libretro/RetroArch.git"
 
 LICENSE="GPL-3"
 SLOT="0"

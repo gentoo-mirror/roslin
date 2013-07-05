@@ -2,6 +2,11 @@
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*fs-uae-launcher-2.2.3 (05 Jul 2013)
+
+  05 Jul 2013; Michał Ziąbkowski <mziab@o2.pl> +fs-uae-launcher-2.2.3.ebuild:
+  Bumped.
+
   11 Jun 2013; Michał Ziąbkowski <mziab@o2.pl> fs-uae-launcher-2.2.0.ebuild,
   fs-uae-launcher-2.2.2.ebuild, fs-uae-launcher-2.2.2-r1.ebuild:
   Updated urls.

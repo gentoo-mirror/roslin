@@ -7,7 +7,7 @@ EAPI=4
 inherit games python git-2
 
 DESCRIPTION="Universal frontend for libretro-based emulators"
-HOMEPAGE="http://themaister.net/retroarch.html"
+HOMEPAGE="http://www.libretro.com/"
 SRC_URI=""
 
 EGIT_REPO_URI="git://github.com/libretro/RetroArch.git"

@@ -9,7 +9,7 @@ PYTHON_COMPAT=( python{3_1,3_2,3_3} )
 inherit games python-single-r1 git-2
 
 DESCRIPTION="Universal frontend for libretro-based emulators"
-HOMEPAGE="http://themaister.net/retroarch.html"
+HOMEPAGE="http://www.libretro.com/"
 SRC_URI=""
 
 EGIT_REPO_URI="git://github.com/libretro/RetroArch.git"

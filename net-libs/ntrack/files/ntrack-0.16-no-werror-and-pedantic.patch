@@ -1,0 +1,244 @@
+diff --git a/common/Makefile.am b/common/Makefile.am
+index 7ea4107..314f569 100644
+--- a/common/Makefile.am
++++ b/common/Makefile.am
+@@ -25,9 +25,7 @@ NTRACK_LT_VERSION = 3:3:3
+ ntrackmodulesdir = $(pkglibdir)/modules/
+ 
+ AM_CFLAGS = \
+-	-Wall \
+-	-Werror \
+-	-pedantic
++	-Wall
+ 
+ AM_LDFLAGS =
+ 
+diff --git a/common/Makefile.in b/common/Makefile.in
+index f55d3bf..ef39081 100644
+--- a/common/Makefile.in
++++ b/common/Makefile.in
+@@ -320,9 +320,7 @@ SUBDIRS = test
+ NTRACK_LT_VERSION = 3:3:3
+ ntrackmodulesdir = $(pkglibdir)/modules/
+ AM_CFLAGS = \
+-	-Wall \
+-	-Werror \
+-	-pedantic
++	-Wall
+ 
+ AM_LDFLAGS = 
+ lib_LTLIBRARIES = libntrack.la
+diff --git a/common/test/Makefile.am b/common/test/Makefile.am
+index bfaf919..f2c707d 100644
+--- a/common/test/Makefile.am
++++ b/common/test/Makefile.am
+@@ -23,9 +23,7 @@ test_libs = \
+ 	../libntrack.la
+ 
+ AM_CFLAGS = \
+-	-pedantic \
+ 	-Wall \
+-	-Werror \
+ 	-I$(srcdir)/..
+ 
+ check_PROGRAMS = \
+diff --git a/common/test/Makefile.in b/common/test/Makefile.in
+index 4d5c8f4..dbdf656 100644
+--- a/common/test/Makefile.in
++++ b/common/test/Makefile.in
+@@ -267,9 +267,7 @@ test_libs = \
+ 	../libntrack.la
+ 
+ AM_CFLAGS = \
+-	-pedantic \
+ 	-Wall \
+-	-Werror \
+ 	-I$(srcdir)/..
+ 
+ test_ntracklist_SOURCES = \
+diff --git a/glib/Makefile.am b/glib/Makefile.am
+index 6db288e..214f69c 100644
+--- a/glib/Makefile.am
++++ b/glib/Makefile.am
+@@ -25,8 +25,6 @@ NTRACK_GLIB_LT_VERSION = 2:1:0
+ 
+ AM_CFLAGS = \
+ 	-Wall \
+-	-Werror \
+-	-pedantic \
+ 	-I$(srcdir)/../common/
+ 
+ AM_LDFLAGS =
+diff --git a/glib/Makefile.in b/glib/Makefile.in
+index 243a184..a300ad6 100644
+--- a/glib/Makefile.in
++++ b/glib/Makefile.in
+@@ -324,8 +324,6 @@ CLEANFILES =
+ NTRACK_GLIB_LT_VERSION = 2:1:0
+ AM_CFLAGS = \
+ 	-Wall \
+-	-Werror \
+-	-pedantic \
+ 	-I$(srcdir)/../common/
+ 
+ AM_LDFLAGS = 
+diff --git a/glib/test/Makefile.am b/glib/test/Makefile.am
+index fa0de94..af0b466 100644
+--- a/glib/test/Makefile.am
++++ b/glib/test/Makefile.am
+@@ -27,9 +27,7 @@ test_libs = \
+ 	../../common/libntrack.la
+ 
+ AM_CFLAGS = \
+-	-pedantic \
+ 	-Wall \
+-	-Werror \
+ 	-I$(srcdir)/.. \
+ 	-I$(srcdir)/../../common \
+ 	$(GLIB_CFLAGS)
+diff --git a/glib/test/Makefile.in b/glib/test/Makefile.in
+index 4013750..cc94b09 100644
+--- a/glib/test/Makefile.in
++++ b/glib/test/Makefile.in
+@@ -260,9 +260,7 @@ test_libs = \
+ 	../../common/libntrack.la
+ 
+ AM_CFLAGS = \
+-	-pedantic \
+ 	-Wall \
+-	-Werror \
+ 	-I$(srcdir)/.. \
+ 	-I$(srcdir)/../../common \
+ 	$(GLIB_CFLAGS)
+diff --git a/gobject/Makefile.am b/gobject/Makefile.am
+index f4b1b12..a9e3d53 100644
+--- a/gobject/Makefile.am
++++ b/gobject/Makefile.am
+@@ -25,8 +25,6 @@ NTRACK_GOBJECT_LT_VERSION = 1:0:0
+ 
+ AM_CFLAGS = \
+ 	-Wall \
+-	-Werror \
+-	-pedantic \
+ 	-I$(srcdir)/../common/ \
+ 	-I$(srcdir)/../glib/
+ 
+diff --git a/gobject/Makefile.in b/gobject/Makefile.in
+index 1dddb27..7b651ed 100644
+--- a/gobject/Makefile.in
++++ b/gobject/Makefile.in
+@@ -346,8 +346,6 @@ CLEANFILES = ntrack-gmarshal.h ntrack-enumtypes.h ntrack-enumtypes.c \
+ NTRACK_GOBJECT_LT_VERSION = 1:0:0
+ AM_CFLAGS = \
+ 	-Wall \
+-	-Werror \
+-	-pedantic \
+ 	-I$(srcdir)/../common/ \
+ 	-I$(srcdir)/../glib/
+ 
+diff --git a/gobject/test/Makefile.am b/gobject/test/Makefile.am
+index 44c5270..8d5d427 100644
+--- a/gobject/test/Makefile.am
++++ b/gobject/test/Makefile.am
+@@ -28,9 +28,7 @@ test_libs = \
+ 	../../common/libntrack.la
+ 
+ AM_CFLAGS = \
+-	-pedantic \
+ 	-Wall \
+-	-Werror \
+ 	-I$(srcdir)/.. \
+ 	-I$(srcdir)/../../common \
+ 	-I$(srcdir)/../../glib \
+diff --git a/gobject/test/Makefile.in b/gobject/test/Makefile.in
+index 56e5629..cccb57b 100644
+--- a/gobject/test/Makefile.in
++++ b/gobject/test/Makefile.in
+@@ -267,9 +267,7 @@ test_libs = \
+ 	../../common/libntrack.la
+ 
+ AM_CFLAGS = \
+-	-pedantic \
+ 	-Wall \
+-	-Werror \
+ 	-I$(srcdir)/.. \
+ 	-I$(srcdir)/../../common \
+ 	-I$(srcdir)/../../glib \
+diff --git a/modules/Makefile.am b/modules/Makefile.am
+index 6d564e8..eaaae37 100644
+--- a/modules/Makefile.am
++++ b/modules/Makefile.am
+@@ -24,9 +24,7 @@ ntrackmodulesdir = $(pkglibdir)/modules
+ 
+ AM_CFLAGS = \
+ 	-Wall \
+-	-Werror \
+ 	-Wno-variadic-macros \
+-	-pedantic \
+ 	-I$(top_srcdir)/common/
+ 
+ AM_LDFLAGS =
+diff --git a/modules/Makefile.in b/modules/Makefile.in
+index 425bfa3..9fac1ee 100644
+--- a/modules/Makefile.in
++++ b/modules/Makefile.in
+@@ -350,9 +350,7 @@ NTRACK_LT_VERSION = 2:0:2
+ ntrackmodulesdir = $(pkglibdir)/modules
+ AM_CFLAGS = \
+ 	-Wall \
+-	-Werror \
+ 	-Wno-variadic-macros \
+-	-pedantic \
+ 	-I$(top_srcdir)/common/
+ 
+ AM_LDFLAGS = 
+diff --git a/qt4/Makefile.am b/qt4/Makefile.am
+index 4373e2f..7cb4988 100644
+--- a/qt4/Makefile.am
++++ b/qt4/Makefile.am
+@@ -27,8 +27,6 @@ NTRACK_QT4_LT_VERSION = 1:1:0
+ 
+ AM_CFLAGS = \
+ 	-Wall \
+-	-Werror \
+-	-pedantic \
+ 	-isystem $(shell pkg-config --variable=includedir QtCore)
+ 
+ AM_LDFLAGS =
+diff --git a/qt4/Makefile.in b/qt4/Makefile.in
+index 735ee02..3fba491 100644
+--- a/qt4/Makefile.in
++++ b/qt4/Makefile.in
+@@ -325,8 +325,6 @@ qt4pkgincludedir = $(pkgincludedir)/qt4
+ NTRACK_QT4_LT_VERSION = 1:1:0
+ AM_CFLAGS = \
+ 	-Wall \
+-	-Werror \
+-	-pedantic \
+ 	-isystem $(shell pkg-config --variable=includedir QtCore)
+ 
+ AM_LDFLAGS = 
+diff --git a/qt4/test/Makefile.am b/qt4/test/Makefile.am
+index 725691d..8a3a825 100644
+--- a/qt4/test/Makefile.am
++++ b/qt4/test/Makefile.am
+@@ -26,7 +26,6 @@ test_libs = \
+ 
+ AM_CXXFLAGS = \
+ 	-Wall \
+-	-Werror \
+ 	-I$(srcdir)/.. \
+ 	-I$(srcdir)/../../common \
+ 	$(QTCORE_CFLAGS)
+diff --git a/qt4/test/Makefile.in b/qt4/test/Makefile.in
+index 3a5067c..822b96c 100644
+--- a/qt4/test/Makefile.in
++++ b/qt4/test/Makefile.in
+@@ -256,7 +256,6 @@ test_libs = \
+ 
+ AM_CXXFLAGS = \
+ 	-Wall \
+-	-Werror \
+ 	-I$(srcdir)/.. \
+ 	-I$(srcdir)/../../common \
+ 	$(QTCORE_CFLAGS)

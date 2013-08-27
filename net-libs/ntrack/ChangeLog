@@ -2,12 +2,6 @@
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
-*ntrack-0.16-r2 (19 Jul 2013)
-
-  19 Jul 2013; Michał Ziąbkowski <mziab@o2.pl> +ntrack-0.16-r2.ebuild,
-  +files/ntrack-0.16-no-werror-and-pedantic.patch:
-  Rev-bumped with patch to hopefully fix build with recent libnl3 versions.
-
   08 Jun 2013; Michał Ziąbkowski <mziab@o2.pl> -ntrack-0.14.ebuild,
   -ntrack-0.14-r1.ebuild, -ntrack-0.14-r2.ebuild, ntrack-0.16-r1.ebuild:
   Stabled. Removed cruft.

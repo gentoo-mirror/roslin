@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=3
+EAPI=5
 
 inherit kde4-base
 
@@ -27,7 +27,7 @@ RDEPEND="${DEPEND}
 	>=media-video/dvdauthor-0.6.11
 	media-video/mjpegtools
 	media-video/mplayer
-	virtual/ffmpeg
+	media-video/ffmpeg:0.10
 	slideshow? ( >=media-video/dvd-slideshow-0.7.2 )
 	office? ( >=virtual/ooo-2.0
 		app-text/ghostscript-gpl )
@@ -36,3 +36,7 @@ RDEPEND="${DEPEND}
 	kaffeine? ( media-video/kaffeine )
 	xine? ( media-video/xine-ui )
 	exiv? ( kde-base/libkexiv2 )"
+
+PATCHES=("${FILESDIR}/${P}-header.patch" \
+	"${FILESDIR}/${P}-cmake.patch" \
+	"${FILESDIR}/${P}-desktop.patch")

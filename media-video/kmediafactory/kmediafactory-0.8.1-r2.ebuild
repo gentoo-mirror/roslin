@@ -27,7 +27,7 @@ RDEPEND="${DEPEND}
 	>=media-video/dvdauthor-0.6.11
 	media-video/mjpegtools
 	media-video/mplayer
-	media-video/ffmpeg:0.10
+	virtual/ffmpeg
 	slideshow? ( >=media-video/dvd-slideshow-0.7.2 )
 	office? ( >=virtual/ooo-2.0
 		app-text/ghostscript-gpl )
@@ -39,4 +39,6 @@ RDEPEND="${DEPEND}
 
 PATCHES=("${FILESDIR}/${P}-header.patch" \
 	"${FILESDIR}/${P}-cmake.patch" \
-	"${FILESDIR}/${P}-desktop.patch")
+	"${FILESDIR}/${P}-desktop.patch" \
+	"${FILESDIR}/${P}-ffmpeg.patch" \
+	"${FILESDIR}/${P}-gcc47.patch")

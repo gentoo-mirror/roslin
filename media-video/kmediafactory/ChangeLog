@@ -2,6 +2,15 @@
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*kmediafactory-0.8.1-r2 (01 Sep 2013)
+
+  01 Sep 2013; Michał Ziąbkowski <mziab@o2.pl>
+  -kmediafactory-0.8.1-r1.ebuild, +kmediafactory-0.8.1-r2.ebuild,
+  +files/kmediafactory-0.8.1-ffmpeg.patch,
+  +files/kmediafactory-0.8.1-gcc47.patch:
+  Rev-bump with cumulative patch to fix several build issues with newer ffmpeg
+  and GCC 4.7.
+
   27 Aug 2013; Michał Ziąbkowski <mziab@o2.pl>
   -kmediafactory-0.8.0-r1.ebuild:
   Removed cruft.

@@ -29,7 +29,7 @@ RDEPEND="${DEPEND}
 	media-video/mplayer
 	virtual/ffmpeg
 	slideshow? ( >=media-video/dvd-slideshow-0.7.2 )
-	office? ( >=virtual/ooo-2.0
+	office? ( virtual/ooo
 		app-text/ghostscript-gpl )
 	pdf? ( app-text/ghostscript-gpl )
 	k3b? ( app-cdr/k3b )

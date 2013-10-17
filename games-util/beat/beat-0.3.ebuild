@@ -4,7 +4,7 @@
 
 EAPI=4
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 MY_PV="${PV/./}"
 
@@ -20,7 +20,7 @@ IUSE=""
 RDEPEND="x11-libs/gtk+:2"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
-	>=sys-devel/gcc-4.5"
+	>=sys-devel/gcc-4.7"
 
 S="${WORKDIR}/${PN}"
 
@@ -29,10 +29,11 @@ src_prepare() {
 }
 
 src_compile() {
-	emake compiler=gcc || die
+	emake compiler="$(tc-getCXX)" || die
 }
 
 src_install() {
-	dobin ${PN}
+	default
 	make_desktop_entry ${PN}
+	dohtml ${PN}.html
 }

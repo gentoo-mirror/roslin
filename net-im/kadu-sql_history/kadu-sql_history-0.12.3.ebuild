@@ -13,6 +13,6 @@ IUSE=""
 
 DEPEND=">=dev-qt/qtgui-4.7.0:4
 	~net-im/kadu-core-${PV}
-	 >=dev-qt/qtsql-4.5.0:4[sqlite]
+	 >=dev-qt/qtsql-4.7.0:4[sqlite]
 	 ~net-im/kadu-history-${PV}"
 RDEPEND="${DEPEND}"

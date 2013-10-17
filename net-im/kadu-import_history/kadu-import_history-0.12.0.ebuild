@@ -12,7 +12,7 @@ SRC_URI="http://download.kadu.im/external-plugins/${MOD_NAME}/${MOD_NAME}-${PV}.
 KEYWORDS="amd64 x86"
 IUSE=""
 
-DEPEND=">=dev-qt/qtgui-4.7.0
+DEPEND=">=dev-qt/qtgui-4.7.0:4
 	>=net-im/kadu-core-0.12.0
 	>=net-im/kadu-gadu_protocol-0.12.0
 	>=net-im/kadu-sql_history-0.12.0"

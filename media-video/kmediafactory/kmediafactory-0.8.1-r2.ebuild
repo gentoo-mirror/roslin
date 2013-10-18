@@ -20,7 +20,7 @@ DEPEND="sys-devel/gettext
 	media-libs/fontconfig
 	dvdread? ( media-libs/libdvdread )
 	|| ( media-libs/phonon
-	    dev-qt/qtphonon )"
+	    dev-qt/qtphonon:4 )"
 
 RDEPEND="${DEPEND}
 	app-arch/zip

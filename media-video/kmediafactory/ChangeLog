@@ -2,6 +2,10 @@
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  18 Oct 2013; Michał Ziąbkowski <mziab@o2.pl> -kmediafactory-0.8.1.ebuild,
+  kmediafactory-0.8.1-r2.ebuild:
+  Fixed slot in phonon dep. Removed cruft.
+
   01 Sep 2013; Michał Ziąbkowski <mziab@o2.pl> kmediafactory-0.8.1.ebuild,
   kmediafactory-0.8.1-r2.ebuild:
   Fixed outdated virtual/ooo dep.

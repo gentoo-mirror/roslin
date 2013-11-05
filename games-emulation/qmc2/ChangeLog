@@ -1,6 +1,12 @@
 # ChangeLog for games-emulation/qmc2
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
 
+*qmc2-0.40 (05 Nov 2013)
+
+  05 Nov 2013; Michał Ziąbkowski <mziab@o2.pl> +qmc2-0.40.ebuild,
+  +files/qmc2-0.40-makefile.patch:
+  Bumped.
+
   18 Oct 2013; Michał Ziąbkowski <mziab@o2.pl> -qmc2-0.36-r1.ebuild,
   -qmc2-0.37.ebuild, qmc2-0.38.ebuild:
   Fixed slot in phonon dep. Removed cruft.

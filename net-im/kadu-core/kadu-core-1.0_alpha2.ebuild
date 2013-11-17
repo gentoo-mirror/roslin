@@ -24,6 +24,8 @@ RDEPEND="app-crypt/qca:2
 
 DEPEND="${RDEPEND}"
 
+PATCHES=("${FILESDIR}/${P}-missing-includes.patch")
+
 src_configure() {
 	# Disable plugins
 	local mycmakeargs="-DBUILD_PLUGINS:BOOL=OFF"

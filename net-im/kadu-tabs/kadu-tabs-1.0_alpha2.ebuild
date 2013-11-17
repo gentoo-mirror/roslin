@@ -14,3 +14,9 @@ IUSE=""
 DEPEND=">=dev-qt/qtgui-4.8.0:4
 	~net-im/kadu-core-${PV}"
 RDEPEND="${DEPEND}"
+
+# workaround
+src_configure () {
+	append-cxxflags -std=c++11
+	kadu_src_configure
+}

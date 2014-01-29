@@ -24,7 +24,7 @@ RDEPEND="app-crypt/qca:2
 
 DEPEND="${RDEPEND}"
 
-PATCHES=("${FILESDIR}/${P}-missing-includes.patch")
+PATCHES=("${FILESDIR}/${PN}-1.0_alpha2-missing-includes.patch")
 
 src_configure() {
 	# Disable plugins

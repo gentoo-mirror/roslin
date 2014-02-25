@@ -2,6 +2,11 @@
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*fs-uae-launcher-2.4.0 (25 Feb 2014)
+
+  25 Feb 2014; Michał Ziąbkowski <mziab@o2.pl> +fs-uae-launcher-2.4.0.ebuild:
+  Bumped.
+
 *fs-uae-launcher-2.3.99_beta2 (06 Feb 2014)
 
   06 Feb 2014; Michał Ziąbkowski <mziab@o2.pl>

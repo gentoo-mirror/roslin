@@ -18,7 +18,9 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="x11-libs/wxGTK:2.8[X]
-	>=dev-libs/boost-1.33"
+	>=dev-libs/boost-1.33
+	dev-libs/icu
+	net-misc/curl"
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${MY_P}"

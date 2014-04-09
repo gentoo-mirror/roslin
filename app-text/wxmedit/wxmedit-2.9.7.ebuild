@@ -12,7 +12,7 @@ DESCRIPTION="wxMEdit, a cross-platform Text/Hex Editor, a fork of MadEdit"
 HOMEPAGE="http://code.google.com/p/wxmedit/"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 
-LICENSE="GPL-2"
+LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""

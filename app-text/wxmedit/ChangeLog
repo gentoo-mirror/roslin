@@ -2,6 +2,9 @@
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  09 Apr 2014; Michał Ziąbkowski <mziab@o2.pl> wxmedit-2.9.7.ebuild:
+  Fixed LICENSE.
+
 *wxmedit-2.9.7 (09 Apr 2014)
 
   09 Apr 2014; Michał Ziąbkowski <mziab@o2.pl> +wxmedit-2.9.7.ebuild,

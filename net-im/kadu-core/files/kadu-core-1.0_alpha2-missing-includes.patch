@@ -1,0 +1,12 @@
+diff --git a/kadu-core/CMakeLists.txt b/kadu-core/CMakeLists.txt
+index 0963518..1a5ca57 100644
+--- a/kadu-core/CMakeLists.txt
++++ b/kadu-core/CMakeLists.txt
+@@ -320,6 +320,7 @@ kadu_api_directories (kadu-core
+ 	gui/widgets
+ 	gui/widgets/configuration
+ 	gui/widgets/dialog
++	gui/widgets/chat-widget
+ 	gui/windows
+ 	gui/windows/open-chat-with
+ 	icons

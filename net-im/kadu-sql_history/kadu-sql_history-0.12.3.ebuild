@@ -11,8 +11,8 @@ HOMEPAGE="http://kadu.im"
 KEYWORDS="amd64 x86"
 IUSE=""
 
-DEPEND=">=dev-qt/qtgui-4.7.0
+DEPEND=">=dev-qt/qtgui-4.7.0:4
 	~net-im/kadu-core-${PV}
-	 >=dev-qt/qtsql-4.5.0[sqlite]
+	 >=dev-qt/qtsql-4.7.0:4[sqlite]
 	 ~net-im/kadu-history-${PV}"
 RDEPEND="${DEPEND}"

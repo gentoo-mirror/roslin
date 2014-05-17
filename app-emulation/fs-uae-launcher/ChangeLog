@@ -1,6 +1,23 @@
 # ChangeLog for app-emulation/fs-uae-launcher
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+
+*fs-uae-launcher-2.4.1 (03 Apr 2014)
+
+  03 Apr 2014; Michał Ziąbkowski <mziab@o2.pl> +fs-uae-launcher-2.4.1.ebuild:
+  Bumped.
+
+*fs-uae-launcher-2.4.0 (25 Feb 2014)
+
+  25 Feb 2014; Michał Ziąbkowski <mziab@o2.pl> +fs-uae-launcher-2.4.0.ebuild:
+  Bumped.
+
+*fs-uae-launcher-2.3.99_beta2 (06 Feb 2014)
+
+  06 Feb 2014; Michał Ziąbkowski <mziab@o2.pl>
+  +fs-uae-launcher-2.3.99_beta2.ebuild,
+  +files/fs-uae-launcher-drop-bundled-lhafile.patch:
+  Bumped with no keywords. Updated deps. Now installs translations.
 
 *fs-uae-launcher-2.2.3 (05 Jul 2013)
 

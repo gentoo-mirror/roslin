@@ -7,7 +7,7 @@ index b2cbe2b..832ef57 100644
  kde4_add_executable(kmediafactory ${kmediafactory_SRCS})
  if (KDE_4_4)
 -target_link_libraries(kmediafactory kmf kmediafactoryinterfaces ${KDE4_KNEWSTUFF3_LIBS} ${QT_QTWEBKIT_LIBRARY})
-+target_link_libraries(kmediafactory kmf kmediafactoryinterfaces ${KDE4_KNEWSTUFF3_LIBS} ${QT_QTWEBKIT_LIBRARY}  ${QT_QTXML_LIBRARY})
++target_link_libraries(kmediafactory kmf kmediafactoryinterfaces ${KDE4_KNEWSTUFF3_LIBS} ${KDE4_KIO_LIBS} ${KDE4_THREADWEAVER_LIBRARIES} ${QT_QTWEBKIT_LIBRARY}  ${QT_QTXML_LIBRARY} ${X11_X11_LIB})
  else (KDE_4_4)
 -target_link_libraries(kmediafactory kmf kmediafactoryinterfaces ${KDE4_KNEWSTUFF2_LIBS} ${QT_QTWEBKIT_LIBRARY})
 +target_link_libraries(kmediafactory kmf kmediafactoryinterfaces ${KDE4_KNEWSTUFF2_LIBS} ${QT_QTWEBKIT_LIBRARY}  ${QT_QTXML_LIBRARY})

@@ -11,6 +11,6 @@ HOMEPAGE="http://kadu.im"
 KEYWORDS="amd64 x86"
 IUSE=""
 
-DEPEND=">=dev-qt/qtgui-4.7.0
+DEPEND=">=dev-qt/qtgui-4.7.0:4
 	~net-im/kadu-core-${PV}"
 RDEPEND="${DEPEND}"

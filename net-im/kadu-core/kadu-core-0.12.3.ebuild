@@ -13,10 +13,10 @@ KEYWORDS="amd64 x86"
 IUSE="ayatana +ntrack"
 
 RDEPEND="app-crypt/qca:2
-	>=dev-qt/qtgui-4.7.0
-	>=dev-qt/qtwebkit-4.7.0
-	>=dev-qt/qtdbus-4.7.0
-	>=dev-qt/qtsvg-4.7.0
+	>=dev-qt/qtgui-4.7.0:4
+	>=dev-qt/qtwebkit-4.7.0:4
+	>=dev-qt/qtdbus-4.7.0:4
+	>=dev-qt/qtsvg-4.7.0:4
 	x11-libs/libXfixes
 	ayatana? ( dev-libs/libindicate-qt )
 	ntrack? ( >=net-libs/ntrack-0.14[qt4] )"

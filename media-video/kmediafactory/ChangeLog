@@ -1,6 +1,43 @@
 # ChangeLog for media-video/kmediafactory
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+
+*kmediafactory-0.8.1-r3 (23 Feb 2014)
+
+  23 Feb 2014; Michał Ziąbkowski <mziab@o2.pl>
+  -kmediafactory-0.8.1-r2.ebuild, +kmediafactory-0.8.1-r3.ebuild:
+  Fake revbump to make sure the patch update is noticed.
+
+  23 Feb 2014; Michał Ziąbkowski <mziab@o2.pl>
+  files/kmediafactory-0.8.1-cmake.patch:
+  Updated cmake patch to fix linker issue.
+
+  18 Oct 2013; Michał Ziąbkowski <mziab@o2.pl> -kmediafactory-0.8.1.ebuild,
+  kmediafactory-0.8.1-r2.ebuild:
+  Fixed slot in phonon dep. Removed cruft.
+
+  01 Sep 2013; Michał Ziąbkowski <mziab@o2.pl> kmediafactory-0.8.1.ebuild,
+  kmediafactory-0.8.1-r2.ebuild:
+  Fixed outdated virtual/ooo dep.
+
+*kmediafactory-0.8.1-r2 (01 Sep 2013)
+
+  01 Sep 2013; Michał Ziąbkowski <mziab@o2.pl>
+  -kmediafactory-0.8.1-r1.ebuild, +kmediafactory-0.8.1-r2.ebuild,
+  +files/kmediafactory-0.8.1-ffmpeg.patch,
+  +files/kmediafactory-0.8.1-gcc47.patch:
+  Rev-bump with cumulative patch to fix several build issues with newer ffmpeg
+  and GCC 4.7.
+
+  27 Aug 2013; Michał Ziąbkowski <mziab@o2.pl>
+  -kmediafactory-0.8.0-r1.ebuild:
+  Removed cruft.
+
+*kmediafactory-0.8.1-r1 (27 Aug 2013)
+
+  27 Aug 2013; Michał Ziąbkowski <mziab@o2.pl>
+  +kmediafactory-0.8.1-r1.ebuild:
+  Forced ffmpeg:0.10 dep to work around several build bugs.
 
   07 Jun 2013; Michał Ziąbkowski <mziab@o2.pl> kmediafactory-0.8.1.ebuild:
   Bumped EAPI to make newer kde4-functions.eclass shut up.

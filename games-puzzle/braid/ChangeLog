@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/braid
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+
+  17 May 2014; Piotr Szymaniak <szarpaj@grubelek.pl> braid-1.0.2.ebuild:
+  Updated to fit new libsdl sound flag.
 
   10 Jan 2011; Piotr Szymaniak <szarpaj@grubelek.pl> braid-1.0.2.ebuild:
   Seems that it's not working with some Radeon cards without the
@@ -11,4 +14,3 @@
 
   03 Jan 2011; Piotr Szymaniak <lazy_bum@o2.pl> braid-1.0.2.ebuild:
   Updated ebuild with some ideas from Luca Zorzo ebuild (see bug #349136).
-

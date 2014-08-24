@@ -2,6 +2,11 @@
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*kadu-docking-1.0_rc8 (23 Aug 2014)
+
+  23 Aug 2014; Michał Ziąbkowski <mziab@o2.pl> +kadu-docking-1.0_rc8.ebuild:
+  Bumped.
+
 *kadu-docking-1.0_rc7 (21 Aug 2014)
 
   21 Aug 2014; Michał Ziąbkowski <mziab@o2.pl> +kadu-docking-1.0_rc7.ebuild:

@@ -30,8 +30,7 @@ case ${PV} in
 	*) KADU_SRC_DIR="stable" ;;
 esac
 
-SRC_URI="http://download.kadu.im/${KADU_SRC_DIR}/kadu-${K_PV}.tar.bz2
-	http://kadu.googlecode.com/files/kadu-${K_PV}.tar.bz2"
+SRC_URI="http://download.kadu.im/${KADU_SRC_DIR}/kadu-${K_PV}.tar.bz2"
 
 # @ECLASS-VARIABLE: MOD_NAME
 # @DESCRIPTION:

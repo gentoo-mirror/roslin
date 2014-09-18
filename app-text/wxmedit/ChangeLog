@@ -2,6 +2,11 @@
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*wxmedit-2.9.8 (18 Sep 2014)
+
+  18 Sep 2014; Michał Ziąbkowski <mziab@o2.pl> +wxmedit-2.9.8.ebuild:
+  Bumped.
+
   09 Apr 2014; Michał Ziąbkowski <mziab@o2.pl> wxmedit-2.9.7.ebuild:
   Updated deps yet again.
 

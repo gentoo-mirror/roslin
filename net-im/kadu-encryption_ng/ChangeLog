@@ -2,6 +2,12 @@
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*kadu-encryption_ng-1.0_rc11 (20 Sep 2014)
+
+  20 Sep 2014; Michał Ziąbkowski <mziab@o2.pl>
+  +kadu-encryption_ng-1.0_rc11.ebuild:
+  Bumped.
+
 *kadu-encryption_ng-1.0_rc10 (16 Sep 2014)
 
   16 Sep 2014; Michał Ziąbkowski <mziab@o2.pl>

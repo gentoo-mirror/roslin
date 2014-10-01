@@ -1,6 +1,12 @@
 # ChangeLog for net-im/kadu-senthistory
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+
+*kadu-senthistory-1.0_p12 (01 Oct 2014)
+
+  01 Oct 2014; Michał Ziąbkowski <mziab@o2.pl>
+  +kadu-senthistory-1.0_p12.ebuild:
+  Bumped.
 
   18 Apr 2013; Michał Ziąbkowski <mziab@o2.pl>
   kadu-senthistory-0.12_p11.ebuild:

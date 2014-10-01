@@ -15,9 +15,9 @@ EGIT_REPO_URI="git://github.com/libretro/bsnes-libretro.git"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS=""
-IUSE="profile_accuracy +profile_compatibility profile_performance"
+IUSE="profile_accuracy +profile_balanced profile_performance"
 
-REQUIRED_USE="^^ ( profile_accuracy profile_compatibility profile_performance )"
+REQUIRED_USE="^^ ( profile_accuracy profile_balanced profile_performance )"
 
 RDEPEND=""
 
@@ -25,10 +25,6 @@ DEPEND=""
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-makefile.patch
-
-	sed -i "snes/Makefile" \
-		-e "s:lib/:$(get_libdir)/:g" \
-		|| die
 }
 
 src_compile() {
@@ -36,8 +32,8 @@ src_compile() {
 
 	if use profile_accuracy; then
 		myprofile="accuracy"
-	elif use profile_compatibility; then
-		myprofile="compatibility"
+	elif use profile_balanced; then
+		myprofile="balanced"
 	else
 		myprofile="performance"
 	fi

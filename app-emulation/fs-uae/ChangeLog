@@ -2,6 +2,11 @@
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  27 Sep 2014; Piotr Szymaniak <szarpaj@grubelek.pl> fs-uae-2.2.0.ebuild,
+  fs-uae-2.2.2.ebuild, fs-uae-2.2.3.ebuild, fs-uae-2.4.0.ebuild,
+  fs-uae-2.4.1.ebuild:
+  Fixed missing x11-apps/xinput depend.
+
 *fs-uae-2.4.1 (03 Apr 2014)
 
   03 Apr 2014; Michał Ziąbkowski <mziab@o2.pl> +fs-uae-2.4.1.ebuild:
@@ -79,4 +84,3 @@
   12 Jan 2013; Michał Ziąbkowski <mziab@o2.pl> +fs-uae-2.0.1.ebuild,
   +metadata.xml:
   New ebuild.
-

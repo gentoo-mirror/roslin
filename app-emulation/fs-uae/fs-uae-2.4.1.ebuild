@@ -16,12 +16,13 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND=">=media-libs/libsdl-1.2[joystick,opengl,X]
+DEPEND="media-libs/freetype:2
+	>=media-libs/libsdl-1.2[joystick,opengl,X]
 	media-libs/openal
 	media-libs/libpng
 	dev-libs/glib:2
 	sys-libs/zlib
-	media-libs/freetype:2"
+	x11-apps/xinput"
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${MY_P}"

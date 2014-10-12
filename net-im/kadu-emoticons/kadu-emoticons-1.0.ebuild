@@ -8,7 +8,7 @@ inherit kadu
 
 DESCRIPTION="Plugin for displaying emoticons in chats"
 HOMEPAGE="http://kadu.im"
-KEYWORDS=""
+KEYWORDS=" ~amd64 ~x86"
 IUSE=""
 
 DEPEND=">=dev-qt/qtgui-4.8.0:4

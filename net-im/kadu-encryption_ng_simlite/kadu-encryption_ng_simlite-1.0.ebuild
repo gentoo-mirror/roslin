@@ -8,7 +8,7 @@ inherit kadu
 
 DESCRIPTION="QCA encryption module for Kadu"
 HOMEPAGE="http://kadu.im"
-KEYWORDS=""
+KEYWORDS=" ~amd64 ~x86"
 IUSE=""
 
 RDEPEND=">=dev-qt/qtgui-4.8.0:4

@@ -8,7 +8,7 @@ inherit kadu
 
 DESCRIPTION="PC Speaker notification for Kadu"
 HOMEPAGE="http://kadu.im"
-KEYWORDS=""
+KEYWORDS=" ~amd64 ~x86"
 IUSE=""
 
 DEPEND=">=dev-qt/qtgui-4.8.0:4

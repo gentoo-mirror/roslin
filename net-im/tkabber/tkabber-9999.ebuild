@@ -25,7 +25,7 @@ DEPEND="!net-im/tkabber
 RDEPEND="${DEPEND}"
 
 LICENSE="GPL-2"
-KEYWORDS=""
+KEYWORDS=" ~amd64 ~x86"
 SLOT="0"
 
 src_unpack() {

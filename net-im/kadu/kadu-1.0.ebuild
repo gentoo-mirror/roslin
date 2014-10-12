@@ -6,7 +6,7 @@ EAPI=2
 
 DESCRIPTION="A multi-protocol IM client written in Qt4"
 HOMEPAGE="http://kadu.im"
-KEYWORDS=""
+KEYWORDS=" ~amd64 ~x86"
 LICENSE="GPL-2"
 
 IUSE="debug +emoticons +gadu +jabber +phonon spell ssl"

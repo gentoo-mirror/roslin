@@ -2,6 +2,13 @@
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*kadu-jabber_protocol-1.0-r1 (12 Oct 2014)
+
+  12 Oct 2014; Michał Ziąbkowski <mziab@o2.pl>
+  +kadu-jabber_protocol-1.0-r1.ebuild,
+  +files/kadu-jabber_protocol-1.0-fix-double-messages.patch:
+  Rev-bumped with fix for duplicated messages.
+
   01 Oct 2014; Michał Ziąbkowski <mziab@o2.pl>
   -kadu-jabber_protocol-1.0_alpha2.ebuild,
   -kadu-jabber_protocol-1.0_alpha3.ebuild,

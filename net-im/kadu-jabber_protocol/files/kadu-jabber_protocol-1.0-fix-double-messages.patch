@@ -1,0 +1,40 @@
+From 2ca7e2e5dc758200c55891efc98c998e192547bb Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Rafa=C5=82=20Przemys=C5=82aw=20Malinowski?= <rafal.przemyslaw.malinowski@gmail.com>
+Date: Sun, 12 Oct 2014 20:46:03 +0200
+Subject: [PATCH] jabber: #2861 fixed: double messages removed
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+Signed-off-by: Rafał Przemysław Malinowski <rafal.przemyslaw.malinowski@gmail.com>
+---
+ ChangeLog                                          |    1 +
+ .../services/jabber-chat-service.cpp               |    5 ++++-
+ 2 files changed, 5 insertions(+), 1 deletions(-)
+
+diff --git a/plugins/jabber_protocol/services/jabber-chat-service.cpp b/plugins/jabber_protocol/services/jabber-chat-service.cpp
+index 5d0071d..b9596eb 100644
+--- a/plugins/jabber_protocol/services/jabber-chat-service.cpp
++++ b/plugins/jabber_protocol/services/jabber-chat-service.cpp
+@@ -51,6 +51,8 @@
+ 
+ #include "jabber-chat-service.h"
+ 
++#include <QtGui/QTextDocument>
++
+ namespace XMPP
+ {
+ 
+@@ -380,7 +382,8 @@ void JabberChatService::handleReceivedMessage(const XMPP::Message &msg)
+ 	if (rawMessageTransformerService())
+ 		body = QString::fromUtf8(rawMessageTransformerService()->transform(body.toUtf8(), message).rawContent());
+ 
+-	auto formattedString = CurrentFormattedStringFactory.data()->fromPlainText(body);
++	auto htmlBody = replacedNewLine(Qt::escape(body), QLatin1String("<br/>"));
++	auto formattedString = CurrentFormattedStringFactory.data()->fromHtml(htmlBody);
+ 	if (!formattedString || formattedString->isEmpty())
+ 		return;
+ 
+-- 
+1.7.1
+

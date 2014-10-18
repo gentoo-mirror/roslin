@@ -2,6 +2,11 @@
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*kadu-autoaway-1.1 (18 Oct 2014)
+
+  18 Oct 2014; Michał Ziąbkowski <mziab@o2.pl> +kadu-autoaway-1.1.ebuild:
+  Bumped.
+
   01 Oct 2014; Michał Ziąbkowski <mziab@o2.pl>
   -kadu-autoaway-1.0_alpha2.ebuild, -kadu-autoaway-1.0_alpha3.ebuild,
   -kadu-autoaway-1.0_alpha4.ebuild, -kadu-autoaway-1.0_alpha5.ebuild,

@@ -2,6 +2,12 @@
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*kadu-history_migration-1.2 (07 Nov 2014)
+
+  07 Nov 2014; Michał Ziąbkowski <mziab@o2.pl>
+  +kadu-history_migration-1.2.ebuild:
+  Bumped.
+
 *kadu-history_migration-1.1 (18 Oct 2014)
 
   18 Oct 2014; Michał Ziąbkowski <mziab@o2.pl>

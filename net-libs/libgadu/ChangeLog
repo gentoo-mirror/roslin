@@ -1,5 +1,10 @@
 # ChangeLog for net-libs/libgadu
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+
+*libgadu-1.12.1 (03 Jan 2015)
+
+  03 Jan 2015; Michał Ziąbkowski <mziab@o2.pl> +libgadu-1.12.1.ebuild:
+  Bumped.
 
 *libgadu-1.12.0_rc1 (02 Feb 2014)
 

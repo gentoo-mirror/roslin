@@ -13,7 +13,7 @@ IUSE=""
 
 RDEPEND=">=dev-qt/qtgui-5.2.0:5
 	~net-im/kadu-core-${PV}
-	|| ( media-libs/phonon dev-qt/qtphonon:4 )
+	media-libs/phonon[qt5]
 	~net-im/kadu-sound-${PV}"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"

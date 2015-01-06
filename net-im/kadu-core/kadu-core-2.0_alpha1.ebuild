@@ -17,28 +17,20 @@ RDEPEND="app-crypt/qca:2
 	>=dev-qt/qtwebkit-5.2.0:5
 	>=dev-qt/qtdbus-5.2.0:5
 	>=dev-qt/qtsvg-5.2.0:5
+	>=dev-qt/qtdeclarative-5.2.0:5
+	>=dev-qt/qtx11extras-5.2.0:5
+	>=dev-qt/linguist-tools-5.2.0:5
+	>=dev-qt/qtxml-5.2.0:5
 	x11-libs/libXfixes
 	>=app-arch/libarchive-2.6[lzma]
-	ayatana? ( dev-libs/libindicate-qt )
-	ntrack? ( >=net-libs/ntrack-0.14[qt4] )"
+	dev-libs/injeqt"
 
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	virtual/pkgconfig"
 
 src_configure() {
 	# Disable plugins
 	local mycmakeargs="-DBUILD_PLUGINS:BOOL=OFF"
-
-	if use ayatana ; then
-		mycmakeargs="${mycmakeargs} -DWITH_LIBINDICATE_QT:BOOL=ON"
-	else
-		mycmakeargs="${mycmakeargs} -DWITH_LIBINDICATE_QT:BOOL=OFF"
-	fi
-
-	if use ntrack ; then
-		mycmakeargs="${mycmakeargs} -DNETWORK_IMPLEMENTATION:STRING='ntrack'"
-	else
-		mycmakeargs="${mycmakeargs} -DNETWORK_IMPLEMENTATION:STRING='Qt'"
-	fi
 
 	kadu_src_configure
 }

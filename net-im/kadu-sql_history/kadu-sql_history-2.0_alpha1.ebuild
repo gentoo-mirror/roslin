@@ -12,6 +12,7 @@ KEYWORDS=" "
 IUSE=""
 
 DEPEND=">=dev-qt/qtgui-5.2.0:5
+	>=dev-qt/qtconcurrent-5.2.0:5
 	~net-im/kadu-core-${PV}
 	 >=dev-qt/qtsql-5.2.0:5[sqlite]
 	 ~net-im/kadu-history-${PV}"

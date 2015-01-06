@@ -12,6 +12,7 @@ KEYWORDS=" "
 IUSE=""
 
 DEPEND=">=dev-qt/qtgui-5.2.0:5
+	>=dev-qt/qtscript-5.2.0:5
 	~net-im/kadu-core-${PV}
 	~net-im/kadu-history-${PV}"
 RDEPEND="${DEPEND}"

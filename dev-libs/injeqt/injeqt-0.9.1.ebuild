@@ -15,8 +15,8 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE="test"
 
-DEPEND=">=dev-qt/qtcore-5.2.0:5
-	test? ( >=dev-qt/qttest-5.2.0:5 )"
+DEPEND="dev-qt/qtcore:5
+	test? ( dev-qt/qttest:5 )"
 RDEPEND="${DEPEND}"
 
 src_configure() {

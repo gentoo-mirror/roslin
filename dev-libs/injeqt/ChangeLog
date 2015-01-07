@@ -3,6 +3,9 @@
 # $Header: $
 
   07 Jan 2015; Michał Ziąbkowski <mziab@o2.pl> injeqt-0.9.1.ebuild:
+  Updated deps.
+
+  07 Jan 2015; Michał Ziąbkowski <mziab@o2.pl> injeqt-0.9.1.ebuild:
   Add flag and disable tests by default, as they are broken right now.
 
 *injeqt-0.9.1 (07 Jan 2015)

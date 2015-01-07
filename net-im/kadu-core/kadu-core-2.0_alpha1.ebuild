@@ -17,6 +17,7 @@ RDEPEND=">=app-crypt/qca-2.1.0:2[qt5]
 	>=dev-qt/qtwebkit-5.2.0:5
 	>=dev-qt/qtdbus-5.2.0:5
 	>=dev-qt/qtsvg-5.2.0:5
+	>=dev-qt/qtwidgets-5.2.0:5
 	>=dev-qt/qtdeclarative-5.2.0:5
 	>=dev-qt/qtx11extras-5.2.0:5
 	>=dev-qt/linguist-tools-5.2.0:5

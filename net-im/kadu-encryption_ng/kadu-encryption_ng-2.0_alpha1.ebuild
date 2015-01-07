@@ -13,6 +13,6 @@ IUSE=""
 
 RDEPEND=">=dev-qt/qtgui-5.2.0:5
 	~net-im/kadu-core-${PV}
-	app-crypt/qca-ossl:2"
+	>=app-crypt/qca-2.1.0:2[qt5,ssl]"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"

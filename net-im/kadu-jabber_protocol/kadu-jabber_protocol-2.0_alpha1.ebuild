@@ -14,7 +14,7 @@ IUSE=""
 RDEPEND=">=dev-qt/qtgui-5.2.0:5
 	~net-im/kadu-core-${PV}
 	net-dns/libidn
-	>=app-crypt/qca-ossl-2.0
+	>=app-crypt/qca-2.1.0:2[qt5,ssl]
 	sys-libs/zlib"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"

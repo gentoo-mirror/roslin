@@ -12,7 +12,7 @@ KEYWORDS=" "
 
 IUSE="ayatana +ntrack"
 
-RDEPEND="app-crypt/qca:2
+RDEPEND=">=app-crypt/qca-2.1.0:2[qt5]
 	>=dev-qt/qtgui-5.2.0:5
 	>=dev-qt/qtwebkit-5.2.0:5
 	>=dev-qt/qtdbus-5.2.0:5

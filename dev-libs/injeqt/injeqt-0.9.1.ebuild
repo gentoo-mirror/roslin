@@ -13,7 +13,15 @@ SRC_URI="https://github.com/vogel/injeqt/archive/${PV}.tar.gz -> ${P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~x86"
-IUSE=""
+IUSE="test"
 
-DEPEND=">=dev-qt/qtcore-5.2.0:5"
+DEPEND=">=dev-qt/qtcore-5.2.0:5
+	test? ( >=dev-qt/qttest-5.2.0:5 )"
 RDEPEND="${DEPEND}"
+
+src_configure() {
+	# Disable plugins
+	use test || local mycmakeargs="-DDISABLE_TESTS:BOOL=ON"
+
+	cmake-utils_src_configure
+}

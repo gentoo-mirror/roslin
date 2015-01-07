@@ -23,7 +23,8 @@ RDEPEND="botan? ( dev-libs/botan )
 	sasl? ( dev-libs/cyrus-sasl )
 	ssl? ( dev-libs/openssl )
 	pkcs11? ( dev-libs/pkcs11-helper )
-	qt4? ( dev-qt/qtcore:4[debug?] )
+	qt4? ( dev-qt/qtcore:4[debug?]
+	       ssl? ( !<app-crypt/qca-ossl-2.1.0 ) )
 	qt5? ( dev-qt/qtcore:5[debug?]
 	       dev-qt/qtnetwork:5[debug?] )"
 DEPEND="${RDEPEND} qt4? ( dev-qt/qttest:4[debug?] )

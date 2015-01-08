@@ -2,6 +2,9 @@
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  08 Jan 2015; Michał Ziąbkowski <mziab@o2.pl> +metadata.xml:
+  Added missing metadata.
+
 *kadu-encryption_otr-2.0_alpha1 (08 Jan 2015)
 *kadu-encryption_otr-1.4 (08 Jan 2015)
 *kadu-encryption_otr-1.3 (08 Jan 2015)

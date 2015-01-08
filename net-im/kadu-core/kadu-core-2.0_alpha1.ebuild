@@ -10,7 +10,7 @@ DESCRIPTION="The core of Kadu IM"
 HOMEPAGE="http://kadu.im"
 KEYWORDS=""
 
-IUSE="ayatana"
+IUSE=""
 
 RDEPEND=">=app-crypt/qca-2.1.0:2[qt5]
 	>=dev-qt/qtgui-5.2.0:5

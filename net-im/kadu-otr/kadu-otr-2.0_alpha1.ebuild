@@ -11,7 +11,18 @@ HOMEPAGE="http://kadu.im"
 KEYWORDS=""
 IUSE=""
 
-DEPEND=">=dev-qt/qtgui-5.2.0:5
-	~net-im/kadu-core-${PV}
-	net-libs/libotr:4"
-RDEPEND="${DEPEND}"
+RDEPEND=">=dev-qt/qtcore-5.2.0:5
+	>=dev-qt/qtgui-5.2.0:5
+	>=dev-qt/qtwidgets-5.2.0:5
+	>=dev-qt/qtnetwork-5.2.0:5
+	>=dev-qt/qtxml-5.2.0:5
+	>=dev-qt/qtwebkit-5.2.0:5
+	>=dev-qt/qtquick1-5.2.0:5
+	>=dev-qt/qtdbus-5.2.0:5
+	>=dev-qt/qtx11extras-5.2.0:5
+	dev-libs/injeqt
+	net-libs/libotr:4
+	>=app-arch/qca-2.1.0[qt5]
+	~net-im/kadu-core-${PV}"
+DEPEND="${RDEPEND}
+	virtual/pkgconfig"

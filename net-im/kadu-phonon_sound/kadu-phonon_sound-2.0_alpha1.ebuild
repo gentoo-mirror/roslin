@@ -8,7 +8,7 @@ inherit kadu
 
 DESCRIPTION="Phonon sound output module for Kadu"
 HOMEPAGE="http://kadu.im"
-KEYWORDS=" "
+KEYWORDS=""
 IUSE=""
 
 RDEPEND=">=dev-qt/qtgui-5.2.0:5

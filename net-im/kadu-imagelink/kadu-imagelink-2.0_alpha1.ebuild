@@ -8,7 +8,7 @@ inherit kadu
 
 DESCRIPTION="Automatic parser for image and YouTube video links"
 HOMEPAGE="http://kadu.im"
-KEYWORDS=" "
+KEYWORDS=""
 IUSE=""
 
 DEPEND=">=dev-qt/qtgui-5.2.0:5

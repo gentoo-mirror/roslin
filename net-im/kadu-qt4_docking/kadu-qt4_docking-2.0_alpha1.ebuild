@@ -8,7 +8,7 @@ inherit kadu
 
 DESCRIPTION="Qt4 docking module for Kadu"
 HOMEPAGE="http://kadu.im"
-KEYWORDS=" "
+KEYWORDS=""
 IUSE=""
 
 DEPEND=">=dev-qt/qtgui-5.2.0:5

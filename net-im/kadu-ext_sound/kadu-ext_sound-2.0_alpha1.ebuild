@@ -8,7 +8,7 @@ inherit kadu
 
 DESCRIPTION="External sound module for Kadu"
 HOMEPAGE="http://kadu.im"
-KEYWORDS=" "
+KEYWORDS=""
 IUSE=""
 
 DEPEND=">=dev-qt/qtgui-5.2.0:5

@@ -1,8 +1,16 @@
 diff --git a/kadu-core/CMakeLists.txt b/kadu-core/CMakeLists.txt
-index 40ee01a..a485fa3 100644
+index 40ee01a..cc34c43 100644
 --- a/kadu-core/CMakeLists.txt
 +++ b/kadu-core/CMakeLists.txt
-@@ -348,6 +348,7 @@ kadu_api_directories (kadu-core
+@@ -341,6 +341,7 @@ kadu_api_directories (kadu-core
+ 	os/qtsingleapplication
+ 	parser
+ 	plugin
++	plugin/activation
+ 	plugin/model
+ 	protocols
+ 	protocols/filter
+@@ -348,6 +349,7 @@ kadu_api_directories (kadu-core
  	protocols/services
  	protocols/services/roster
  	provider

@@ -2,6 +2,11 @@
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  10 Jan 2015; Michał Ziąbkowski <mziab@o2.pl>
+  kadu-spellchecker-1.4-r1.ebuild, kadu-spellchecker-2.0_alpha1.ebuild:
+  Change REQUIRED_USE to exactly-one-of to make it more obvious what's going
+  on.
+
 *kadu-spellchecker-1.4-r1 (10 Jan 2015)
 
   10 Jan 2015; Michał Ziąbkowski <mziab@o2.pl>

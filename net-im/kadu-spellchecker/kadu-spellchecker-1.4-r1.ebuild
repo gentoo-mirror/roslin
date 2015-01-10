@@ -18,7 +18,7 @@ RDEPEND=">=dev-qt/qtgui-4.8.0:4
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
-REQUIRED_USE="|| ( aspell enchant )"
+REQUIRED_USE="^^ ( aspell enchant )"
 
 src_configure() {
 	local mycmakeargs="${mycmakeargs} \

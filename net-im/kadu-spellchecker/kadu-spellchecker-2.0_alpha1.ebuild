@@ -27,7 +27,7 @@ RDEPEND=">=dev-qt/qtcore-5.2.0:5
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
-REQUIRED_USE="|| ( aspell enchant )"
+REQUIRED_USE="^^ ( aspell enchant )"
 
 src_configure() {
 	local mycmakeargs="${mycmakeargs} \

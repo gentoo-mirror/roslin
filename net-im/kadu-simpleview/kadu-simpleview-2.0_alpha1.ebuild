@@ -21,6 +21,7 @@ RDEPEND=">=dev-qt/qtcore-5.2.0:5
 	>=dev-qt/qtdbus-5.2.0:5
 	>=dev-qt/qtx11extras-5.2.0:5
 	dev-libs/injeqt
+	~net-im/kadu-docking-${PV}
 	~net-im/kadu-core-${PV}"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"

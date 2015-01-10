@@ -2,6 +2,10 @@
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  10 Jan 2015; Michał Ziąbkowski <mziab@o2.pl>
+  kadu-simpleview-2.0_alpha1.ebuild:
+  Restored missing dep.
+
 *kadu-simpleview-2.0_alpha1 (04 Jan 2015)
 
   04 Jan 2015; Michał Ziąbkowski <mziab@o2.pl>

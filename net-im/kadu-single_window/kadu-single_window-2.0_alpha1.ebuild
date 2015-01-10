@@ -24,3 +24,9 @@ RDEPEND=">=dev-qt/qtcore-5.2.0:5
 	~net-im/kadu-core-${PV}"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
+
+# workaround
+src_configure () {
+	append-cxxflags -std=c++11
+	kadu_src_configure
+}

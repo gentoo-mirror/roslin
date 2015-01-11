@@ -1,5 +1,5 @@
 diff --git a/kadu-core/CMakeLists.txt b/kadu-core/CMakeLists.txt
-index 40ee01a..017769d 100644
+index 40ee01a..2aaf4d8 100644
 --- a/kadu-core/CMakeLists.txt
 +++ b/kadu-core/CMakeLists.txt
 @@ -318,6 +318,7 @@ kadu_api_directories (kadu-core
@@ -10,16 +10,17 @@ index 40ee01a..017769d 100644
  	gui/widgets/webkit-messages-view
  	chat-style/engine
  	gui/windows
-@@ -341,6 +342,8 @@ kadu_api_directories (kadu-core
+@@ -341,13 +342,17 @@ kadu_api_directories (kadu-core
  	os/qtsingleapplication
  	parser
  	plugin
 +	plugin/activation
 +	plugin/metadata
  	plugin/model
++	plugin/state
  	protocols
  	protocols/filter
-@@ -348,6 +351,7 @@ kadu_api_directories (kadu-core
+ 	protocols/model
  	protocols/services
  	protocols/services/roster
  	provider

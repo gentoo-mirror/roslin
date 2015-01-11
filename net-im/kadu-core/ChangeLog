@@ -2,6 +2,10 @@
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  11 Jan 2015; Michał Ziąbkowski <mziab@o2.pl>
+  files/kadu-core-2.0_alpha1-missing-includes.patch:
+  Fixed another missing api header.
+
   10 Jan 2015; Michał Ziąbkowski <mziab@o2.pl>
   files/kadu-core-2.0_alpha1-missing-includes.patch:
   Fixed more missing includes to fix autoaway.

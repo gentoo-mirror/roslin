@@ -21,7 +21,7 @@ RDEPEND=">=dev-qt/qtcore-5.2.0:5
 	>=dev-qt/qtdbus-5.2.0:5
 	>=dev-qt/qtx11extras-5.2.0:5
 	dev-libs/injeqt
-	media-libs/libmpdlient
+	media-libs/libmpdclient
 	~net-im/kadu-mediaplayer-${PV}
 	~net-im/kadu-core-${PV}"
 DEPEND="${RDEPEND}

@@ -1,4 +1,4 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -9,7 +9,7 @@ MY_P="wxMEdit-${PV}"
 inherit base wxwidgets
 
 DESCRIPTION="wxMEdit, a cross-platform Text/Hex Editor, a fork of MadEdit"
-HOMEPAGE="http://code.google.com/p/wxmedit/"
+HOMEPAGE="http://wxmedit.github.io/"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 
 LICENSE="GPL-3"

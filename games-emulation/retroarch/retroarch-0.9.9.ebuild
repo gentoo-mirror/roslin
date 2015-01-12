@@ -1,4 +1,4 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -32,6 +32,7 @@ RDEPEND="sdl? ( >=media-libs/libsdl-1.2.10[joystick] )
 	sdl-image? ( media-libs/sdl-image )
 	xv? ( x11-libs/libXv )
 	zlib? ( sys-libs/zlib )
+	rgui? ( virtual/opengl )
 	python? ( ${PYTHON_DEPS} )"
 DEPEND="virtual/pkgconfig
 	${RDEPEND}"

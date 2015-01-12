@@ -21,6 +21,7 @@ DEPEND=">=dev-qt/qtgui-4.7:4[accessibility]
 	>=dev-qt/qtwebkit-4.7:4
 	>=dev-qt/qttest-4.7:4
 	>=dev-qt/qtsql-4.7:4[sqlite]
+	>=dev-qt/qtsvg-4.7:4
 	phonon? ( || ( media-libs/phonon >=dev-qt/qtphonon-4.7:4 ) )
 	joystick? ( media-libs/libsdl[joystick] )
 	opengl? ( >=dev-qt/qtopengl-4.7:4 )"

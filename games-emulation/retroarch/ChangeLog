@@ -3,6 +3,9 @@
 # $Header: $
 
   12 Jan 2015; Michał Ziąbkowski <mziab@o2.pl> retroarch-0.9.9.ebuild:
+  Made opengl a hard dependency.
+
+  12 Jan 2015; Michał Ziąbkowski <mziab@o2.pl> retroarch-0.9.9.ebuild:
   Fixed thinko.
 
   12 Jan 2015; Michał Ziąbkowski <mziab@o2.pl> retroarch-0.9.9.ebuild,

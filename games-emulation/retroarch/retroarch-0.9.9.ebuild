@@ -32,8 +32,8 @@ RDEPEND="sdl? ( >=media-libs/libsdl-1.2.10[joystick] )
 	sdl-image? ( media-libs/sdl-image )
 	xv? ( x11-libs/libXv )
 	zlib? ( sys-libs/zlib )
-	rgui? ( virtual/opengl )
-	python? ( ${PYTHON_DEPS} )"
+	python? ( ${PYTHON_DEPS} )
+	virtual/opengl"
 DEPEND="virtual/pkgconfig
 	${RDEPEND}"
 

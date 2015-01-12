@@ -1,5 +1,10 @@
 # ChangeLog for games-emulation/qmc2
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+
+*qmc2-0.47 (12 Jan 2015)
+
+  12 Jan 2015; Michał Ziąbkowski <mziab@o2.pl> +qmc2-0.47.ebuild:
+  Bumped. Removed sqlite flag, as there is now a hard dependency on qtsql.
 
 *qmc2-0.42 (06 Feb 2014)
 

@@ -1,6 +1,12 @@
 # ChangeLog for games-emulation/osmose
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+
+*osmose-0.9.96-r2 (12 Jan 2015)
+
+  12 Jan 2015; Michał Ziąbkowski <mziab@o2.pl> +osmose-0.9.96-r2.ebuild,
+  +files/osmose-0.9.96-gcc47.patch:
+  Rev-bump with gcc 4.7 build fix.
 
   19 Feb 2012; Piotr Szymaniak <szarpaj@grubelek.pl> osmose-0.9.96.ebuild,
   osmose-0.9.96-r1.ebuild:

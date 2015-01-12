@@ -18,7 +18,7 @@ EGIT_COMMIT="v${PV}"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="alsa cg +fbo ffmpeg jack netplay openal oss pulseaudio python sdl sdl-image truetype xml xv zlib"
+IUSE="alsa cg +fbo ffmpeg jack netplay openal oss pulseaudio python rgui sdl sdl-image truetype xml xv zlib"
 
 RDEPEND="sdl? ( >=media-libs/libsdl-1.2.10[joystick] )
 	alsa? ( media-libs/alsa-lib )
@@ -74,6 +74,7 @@ src_configure() {
 		$(use_enable python) \
 		$(use_enable zlib) \
 		$(use_enable sdl) \
+		$(use_enable rgui) \
 		--enable-dynamic \
 		--with-man_dir="/usr/share/man/man1" \
 		|| die

@@ -1,6 +1,12 @@
 # ChangeLog for games-emulation/psx-bin
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+
+*psx-bin-1.13-r1 (15 Jan 2015)
+
+  15 Jan 2015; Michał Ziąbkowski <mziab@o2.pl> +psx-bin-1.13-r1.ebuild:
+  Rev-bump with tentative multilib support. Just abi_x86_32, since gtkglext
+  isn't provided by any emul-linux-x86 package.
 
   06 May 2011; Michał Ziąbkowski <mziab@o2.pl> psx-bin-1.13.ebuild:
   Fixed gtk+ dep.

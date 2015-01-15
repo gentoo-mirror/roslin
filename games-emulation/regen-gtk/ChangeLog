@@ -1,6 +1,11 @@
 # ChangeLog for games-emulation/regen-gtk
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+
+*regen-gtk-0.95-r1 (15 Jan 2015)
+
+  15 Jan 2015; Michał Ziąbkowski <mziab@o2.pl> +regen-gtk-0.95-r1.ebuild:
+  Rev-bump with proper multilib support.
 
   23 Jan 2010; Michał Ziąbkowski <mziab@o2.pl> regen-gtk-0.95.ebuild:
   Moved binary to GAMES_PREFIX_OPT.

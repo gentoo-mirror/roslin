@@ -2,21 +2,23 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=2
+EAPI=5
 
 inherit kadu
 
 DESCRIPTION="Spellchecker module for Kadu"
 HOMEPAGE="http://kadu.im"
-KEYWORDS=" "
+KEYWORDS=" ~amd64 ~x86"
 IUSE="aspell +enchant"
 
-RDEPEND=">=dev-qt/qtgui-5.2.0:5
+RDEPEND=">=dev-qt/qtgui-4.8.0:4
 	~net-im/kadu-core-${PV}
 	aspell? ( app-text/aspell )
 	enchant? ( app-text/enchant )"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
+
+REQUIRED_USE="^^ ( aspell enchant )"
 
 src_configure() {
 	local mycmakeargs="${mycmakeargs} \

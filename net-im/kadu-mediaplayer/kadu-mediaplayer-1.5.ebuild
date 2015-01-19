@@ -8,10 +8,11 @@ inherit kadu
 
 DESCRIPTION="Media player support module for Kadu"
 HOMEPAGE="http://kadu.im"
-KEYWORDS=" "
+KEYWORDS=" ~amd64 ~x86"
 IUSE=""
 
-DEPEND=">=dev-qt/qtgui-5.2.0:5
-	>=dev-qt/qtdbus-5.2.0:5
+DEPEND=">=dev-qt/qtgui-4.8.0:4
+	>=dev-qt/qtdbus-4.8.0:4
+	~net-im/kadu-docking-${PV}
 	~net-im/kadu-core-${PV}"
 RDEPEND="${DEPEND}"

@@ -2,6 +2,11 @@
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*kadu-core-1.5 (19 Jan 2015)
+
+  19 Jan 2015; Michał Ziąbkowski <mziab@o2.pl> +kadu-core-1.5.ebuild:
+  Bumped.
+
   11 Jan 2015; Michał Ziąbkowski <mziab@o2.pl>
   files/kadu-core-2.0_alpha1-missing-includes.patch:
   Yet another missing api header. Hopefully fixes mpris_mediaplayer.

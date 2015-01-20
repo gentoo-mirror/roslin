@@ -2,6 +2,11 @@
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*wxmedit-2.9.9-r1 (20 Jan 2015)
+
+  20 Jan 2015; Michał Ziąbkowski <mziab@o2.pl> +wxmedit-2.9.9-r1.ebuild:
+  Added eclass var to explicitly require wxGTK-2.8.
+
   11 Jan 2015; Michał Ziąbkowski <mziab@o2.pl> wxmedit-2.9.7.ebuild,
   wxmedit-2.9.8.ebuild, wxmedit-2.9.9.ebuild:
   Updated HOMEPAGE.

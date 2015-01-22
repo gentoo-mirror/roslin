@@ -1,6 +1,11 @@
 # ChangeLog for games-util/deltapatcher
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+
+*deltapatcher-1.0-r1 (22 Jan 2015)
+
+  22 Jan 2015; Michał Ziąbkowski <mziab@o2.pl> +deltapatcher-1.0-r1.ebuild:
+  Explicitly require wxGTK-2.8.
 
   29 Sep 2011; Michał Ziąbkowski <mziab@o2.pl> deltapatcher-1.0.ebuild:
   Fixed last commit.

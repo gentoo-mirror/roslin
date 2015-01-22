@@ -2,6 +2,9 @@
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  22 Jan 2015; Michał Ziąbkowski <mziab@o2.pl> retroarch-9999.ebuild:
+  Added opengl as a hard dependency to the live ebuild as well.
+
   22 Jan 2015; Michał Ziąbkowski <mziab@o2.pl> retroarch-9999.ebuild,
   files/retroarch-9999-build.patch:
   Fixed live build.

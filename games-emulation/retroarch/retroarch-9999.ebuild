@@ -1,4 +1,4 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -43,7 +43,7 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}/${PN}-0.9.9-build.patch" \
+	epatch "${FILESDIR}/${P}-build.patch" \
 		"${FILESDIR}/${PN}-python.patch"
 
 	if use python; then

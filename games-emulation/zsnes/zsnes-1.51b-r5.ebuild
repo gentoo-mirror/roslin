@@ -13,7 +13,7 @@ SRC_URI="http://zsnes.sf.net/${PN}${PV//./}src.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="-* ~amd64 ~x86 ~x86-fbsd"
-IUSE="ao custom-cflags experimental opengl png"
+IUSE="ao custom-cflags experimental opengl pax_kernel png"
 
 RDEPEND="
 	|| (

@@ -8,11 +8,11 @@ inherit kadu
 
 DESCRIPTION="GaduGadu support module for Kadu"
 HOMEPAGE="http://kadu.im"
-KEYWORDS=" "
+KEYWORDS=" ~amd64 ~x86"
 IUSE=""
 
-DEPEND=">=dev-qt/qtgui-5.2.0:5
-	>=dev-qt/qtxmlpatterns-5.2.0:5
+DEPEND=">=dev-qt/qtgui-4.8.0:4
+	>=dev-qt/qtxmlpatterns-4.8.0:4
 	~net-im/kadu-core-${PV}
 	>=net-libs/libgadu-1.12.1[threads]
 	>=app-crypt/qca-2.0"

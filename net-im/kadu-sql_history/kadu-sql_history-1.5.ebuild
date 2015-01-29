@@ -8,11 +8,11 @@ inherit kadu
 
 DESCRIPTION="SQL history module for Kadu"
 HOMEPAGE="http://kadu.im"
-KEYWORDS=" "
+KEYWORDS=" ~amd64 ~x86"
 IUSE=""
 
-DEPEND=">=dev-qt/qtgui-5.2.0:5
+DEPEND=">=dev-qt/qtgui-4.8.0:4
 	~net-im/kadu-core-${PV}
-	 >=dev-qt/qtsql-5.2.0:5[sqlite]
+	 >=dev-qt/qtsql-4.8.0:4[sqlite]
 	 ~net-im/kadu-history-${PV}"
 RDEPEND="${DEPEND}"

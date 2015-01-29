@@ -8,10 +8,10 @@ inherit kadu
 
 DESCRIPTION="Phonon sound output module for Kadu"
 HOMEPAGE="http://kadu.im"
-KEYWORDS=" "
+KEYWORDS=" ~amd64 ~x86"
 IUSE=""
 
-RDEPEND=">=dev-qt/qtgui-5.2.0:5
+RDEPEND=">=dev-qt/qtgui-4.8.0:4
 	~net-im/kadu-core-${PV}
 	|| ( media-libs/phonon dev-qt/qtphonon:4 )
 	~net-im/kadu-sound-${PV}"

@@ -8,15 +8,15 @@ inherit kadu
 
 DESCRIPTION="The core of Kadu IM"
 HOMEPAGE="http://kadu.im"
-KEYWORDS=" "
+KEYWORDS=" ~amd64 ~x86"
 
 IUSE="ayatana +ntrack"
 
 RDEPEND="app-crypt/qca:2
-	>=dev-qt/qtgui-5.2.0:5
-	>=dev-qt/qtwebkit-5.2.0:5
-	>=dev-qt/qtdbus-5.2.0:5
-	>=dev-qt/qtsvg-5.2.0:5
+	>=dev-qt/qtgui-4.8.0:4
+	>=dev-qt/qtwebkit-4.8.0:4
+	>=dev-qt/qtdbus-4.8.0:4
+	>=dev-qt/qtsvg-4.8.0:4
 	x11-libs/libXfixes
 	>=app-arch/libarchive-2.6[lzma]
 	ayatana? ( dev-libs/libindicate-qt )

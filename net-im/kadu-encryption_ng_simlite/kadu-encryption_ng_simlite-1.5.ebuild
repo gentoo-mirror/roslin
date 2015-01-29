@@ -13,8 +13,8 @@ IUSE=""
 
 RDEPEND=">=dev-qt/qtgui-4.8.0:4
 	~net-im/kadu-core-${PV}
-	app-crypt/qca-ossl:2
-	~net-im/kadu-encryption_ng-${PV}"
+	~net-im/kadu-encryption_ng-${PV}
+	|| ( app-crypt/qca-ossl:2 app-crypt/qca:2[openssl] )"
 DEPEND="${RDEPEND}
 	!net-im/kadu-encryption
 	!net-im/kadu-encryption_old

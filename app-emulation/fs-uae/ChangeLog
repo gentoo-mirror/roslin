@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/fs-uae
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+
+*fs-uae-2.4.3 (07 Feb 2015)
+
+  07 Feb 2015; Michał Ziąbkowski <mziab@o2.pl> +fs-uae-2.4.3.ebuild:
+  Bumped.
 
   27 Sep 2014; Piotr Szymaniak <szarpaj@grubelek.pl> fs-uae-2.2.0.ebuild,
   fs-uae-2.2.2.ebuild, fs-uae-2.2.3.ebuild, fs-uae-2.4.0.ebuild,

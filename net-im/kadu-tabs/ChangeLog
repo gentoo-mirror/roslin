@@ -2,6 +2,11 @@
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*kadu-tabs-2.0_rc3 (14 Feb 2015)
+
+  14 Feb 2015; Michał Ziąbkowski <mziab@o2.pl> +kadu-tabs-2.0_rc3.ebuild:
+  Bumped.
+
 *kadu-tabs-2.0_rc2 (07 Feb 2015)
 
   07 Feb 2015; Michał Ziąbkowski <mziab@o2.pl> +kadu-tabs-2.0_rc2.ebuild:

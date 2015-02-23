@@ -24,7 +24,7 @@ RDEPEND=">=app-crypt/qca-2.1.0:2[qt5]
 	>=dev-qt/qtxml-5.2.0:5
 	x11-libs/libXfixes
 	>=app-arch/libarchive-2.6[lzma]
-	>=>=>=>=dev-libs/injeqt-1.0.0-1.0.0-1.0.0-1.0.0"
+	>=dev-libs/injeqt-1.0.0"
 
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"

@@ -20,7 +20,7 @@ RDEPEND=">=dev-qt/qtcore-5.2.0:5
 	>=dev-qt/qtquick1-5.2.0:5
 	>=dev-qt/qtdbus-5.2.0:5
 	>=dev-qt/qtx11extras-5.2.0:5
-	>=>=>=>=dev-libs/injeqt-1.0.0-1.0.0-1.0.0-1.0.0
+	>=dev-libs/injeqt-1.0.0
 	net-libs/libotr:4
 	>=app-arch/qca-2.1.0[qt5]
 	~net-im/kadu-core-${PV}"

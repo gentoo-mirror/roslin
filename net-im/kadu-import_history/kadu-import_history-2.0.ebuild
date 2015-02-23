@@ -21,7 +21,7 @@ RDEPEND=">=dev-qt/qtcore-5.2.0:5
 	>=dev-qt/qtquick1-5.2.0:5
 	>=dev-qt/qtdbus-5.2.0:5
 	>=dev-qt/qtx11extras-5.2.0:5
-	dev-libs/injeqt
+	>=dev-libs/injeqt-1.0.0
 	>=net-im/kadu-gadu_protocol-2.0_alpha
 	>=net-im/kadu-sql_history-2.0_alpha
 	>=net-im/kadu-core-2.0_alpha"

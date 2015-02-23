@@ -22,7 +22,7 @@ RDEPEND=">=dev-qt/qtcore-5.2.0:5
 	>=dev-qt/qtx11extras-5.2.0:5
 	>=dev-qt/qtconcurrent-5.2.0:5
 	>=dev-qt/qtsql-5.2.0:5[sqlite]
-	>=>=dev-libs/injeqt-1.0.0-1.0.0
+	>=dev-libs/injeqt-1.0.0
 	~net-im/kadu-history-${PV}
 	~net-im/kadu-core-${PV}"
 DEPEND="${RDEPEND}

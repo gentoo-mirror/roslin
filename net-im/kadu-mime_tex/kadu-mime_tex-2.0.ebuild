@@ -8,7 +8,7 @@ inherit kadu
 
 DESCRIPTION="Mathematical TeX formula support in Kadu chats"
 HOMEPAGE="http://www.kadu.net/w/Mime_tex"
-SRC_URI="http://download.kadu.im/external-plugins/${PV:0:3}/${MOD_NAME}-${PV/_p/-}.tar.bz2"
+SRC_URI="http://download.kadu.im/external-plugins/2.0/${MOD_NAME}-${PV/_p/-}.tar.bz2"
 KEYWORDS=""
 IUSE=""
 

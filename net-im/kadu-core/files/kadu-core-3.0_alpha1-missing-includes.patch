@@ -1,0 +1,17 @@
+diff --git a/kadu-core/CMakeLists.txt b/kadu-core/CMakeLists.txt
+index 27b681d..f646b1d 100644
+--- a/kadu-core/CMakeLists.txt
++++ b/kadu-core/CMakeLists.txt
+@@ -312,10 +312,12 @@ kadu_api_directories (kadu-core
+ 	execution-arguments
+ 	file-system
+ 	file-transfer
++	file-transfer/gui
+ 	formatted-string
+ 	gui
+ 	gui/actions
+ 	gui/actions/chat
++    gui/configuration
+ 	gui/menu
+ 	gui/model
+ 	gui/services

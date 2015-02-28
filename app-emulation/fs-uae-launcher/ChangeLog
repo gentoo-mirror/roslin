@@ -2,6 +2,14 @@
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*fs-uae-launcher-2.4.3-r1 (28 Feb 2015)
+
+  28 Feb 2015; Michał Ziąbkowski <mziab@o2.pl>
+  +fs-uae-launcher-2.4.3-r1.ebuild,
+  +files/fs-uae-launcher-drop-bundled-lhafile-and-six.patch:
+  Don't install bundled six. It's incompatible with upstream import semantics
+  and breaks other consumers.
+
 *fs-uae-launcher-2.4.3 (07 Feb 2015)
 
   07 Feb 2015; Michał Ziąbkowski <mziab@o2.pl> +fs-uae-launcher-2.4.3.ebuild:

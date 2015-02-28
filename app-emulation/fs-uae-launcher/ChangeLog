@@ -2,6 +2,10 @@
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  28 Feb 2015; Michał Ziąbkowski <mziab@o2.pl>
+  fs-uae-launcher-2.4.3-r1.ebuild:
+  Bundled six was 1.4.1, so let's require this as the minimum version.
+
 *fs-uae-launcher-2.4.3-r1 (28 Feb 2015)
 
   28 Feb 2015; Michał Ziąbkowski <mziab@o2.pl>

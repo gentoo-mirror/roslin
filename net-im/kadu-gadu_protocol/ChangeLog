@@ -2,6 +2,13 @@
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*kadu-gadu_protocol-3.0_alpha1-r2 (28 Feb 2015)
+
+  28 Feb 2015; Michał Ziąbkowski <mziab@o2.pl>
+  +kadu-gadu_protocol-3.0_alpha1-r2.ebuild,
+  +files/kadu-gadu_protocol-3.0_alpha1-revert-ack11.patch:
+  Rev-bump to fix regression.
+
   27 Feb 2015; Michał Ziąbkowski <mziab@o2.pl>
   kadu-gadu_protocol-3.0_alpha1-r1.ebuild:
   New file transfer code requires SSL support in libgadu.

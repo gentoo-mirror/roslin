@@ -1,0 +1,106 @@
+diff --git a/plugins/gadu_protocol/gadu-protocol.cpp b/plugins/gadu_protocol/gadu-protocol.cpp
+index 77a63be..d1f0649 100644
+--- a/plugins/gadu_protocol/gadu-protocol.cpp
++++ b/plugins/gadu_protocol/gadu-protocol.cpp
+@@ -260,8 +260,8 @@ void GaduProtocol::connectSocketNotifiersToServices()
+ 	        CurrentChatService, SLOT(handleEventMsg(gg_event*)));
+ 	connect(SocketNotifiers, SIGNAL(multilogonMsgEventReceived(gg_event*)),
+ 	        CurrentChatService, SLOT(handleEventMultilogonMsg(gg_event*)));
+-	connect(SocketNotifiers, SIGNAL(ack11EventReceived(gg_event*)),
+-	        CurrentChatService, SLOT(handleEventAck11(gg_event*)));
++	connect(SocketNotifiers, SIGNAL(ackEventReceived(gg_event*)),
++	        CurrentChatService, SLOT(handleEventAck(gg_event*)));
+ 	connect(SocketNotifiers, SIGNAL(typingNotifyEventReceived(gg_event*)),
+ 	        CurrentChatStateService, SLOT(handleEventTypingNotify(gg_event*)));
+ }
+diff --git a/plugins/gadu_protocol/services/gadu-chat-service.cpp b/plugins/gadu_protocol/services/gadu-chat-service.cpp
+index 1c1a80a..da759d4 100644
+--- a/plugins/gadu_protocol/services/gadu-chat-service.cpp
++++ b/plugins/gadu_protocol/services/gadu-chat-service.cpp
+@@ -343,16 +343,41 @@ void GaduChatService::handleEventMultilogonMsg(gg_event *e)
+ 	handleMsg(sender, recipients, MessageTypeSent, e);
+ }
+ 
+-void GaduChatService::handleEventAck11(gg_event *e)
++void GaduChatService::handleEventAck(struct gg_event *e)
+ {
+-	auto messageId = e->event.ack110.seq;
++	kdebugf();
++
++	int messageId = e->event.ack.seq;
+ 	if (!UndeliveredMessages.contains(messageId))
+ 		return;
+ 
+-	UndeliveredMessages[messageId].setStatus(MessageStatusDelivered);
+-	emit sentMessageStatusChanged(UndeliveredMessages[messageId]);
++	UinType uin = e->event.ack.recipient;
++	Q_UNUSED(uin) // only in debug mode
++
++	switch (e->event.ack.status)
++	{
++		case GG_ACK_DELIVERED:
++		case GG_ACK_QUEUED:
++			kdebugm(KDEBUG_NETWORK|KDEBUG_INFO, "message delivered (uin: %u, seq: %d, status: %d)\n", uin, messageId, e->event.ack.status);
++			UndeliveredMessages[messageId].setStatus(MessageStatusDelivered);
++			emit sentMessageStatusChanged(UndeliveredMessages[messageId]);
++			break;
++		case GG_ACK_BLOCKED:
++		case GG_ACK_MBOXFULL:
++		case GG_ACK_NOT_DELIVERED:
++			kdebugm(KDEBUG_NETWORK|KDEBUG_INFO, "message not delivered (uin: %u, seq: %d, status: %d)\n", uin, messageId, e->event.ack.status);
++			UndeliveredMessages[messageId].setStatus(MessageStatusWontDeliver);
++			emit sentMessageStatusChanged(UndeliveredMessages[messageId]);
++			break;
++		default:
++			kdebugm(KDEBUG_NETWORK|KDEBUG_WARNING, "unknown acknowledge! (uin: %u, seq: %d, status:%d)\n", uin, messageId, e->event.ack.status);
++			return;
++	}
++	UndeliveredMessages.remove(messageId);
+ 
+ 	removeTimeoutUndeliveredMessages();
++
++	kdebugf2();
+ }
+ 
+ void GaduChatService::removeTimeoutUndeliveredMessages()
+diff --git a/plugins/gadu_protocol/services/gadu-chat-service.h b/plugins/gadu_protocol/services/gadu-chat-service.h
+index b353f35..a2c9d6b 100644
+--- a/plugins/gadu_protocol/services/gadu-chat-service.h
++++ b/plugins/gadu_protocol/services/gadu-chat-service.h
+@@ -132,7 +132,7 @@ public slots:
+ 
+ 	void handleEventMsg(struct gg_event *e);
+ 	void handleEventMultilogonMsg(struct gg_event *e);
+-	void handleEventAck11(struct gg_event *e);
++	void handleEventAck(struct gg_event *e);
+ 
+ signals:
+ 	void chatImageKeyReceived(const QString &id, const ChatImage &chatImage);
+diff --git a/plugins/gadu_protocol/socket-notifiers/gadu-protocol-socket-notifiers.cpp b/plugins/gadu_protocol/socket-notifiers/gadu-protocol-socket-notifiers.cpp
+index 7bb59dd..f43adc5 100644
+--- a/plugins/gadu_protocol/socket-notifiers/gadu-protocol-socket-notifiers.cpp
++++ b/plugins/gadu_protocol/socket-notifiers/gadu-protocol-socket-notifiers.cpp
+@@ -262,8 +262,8 @@ void GaduProtocolSocketNotifiers::socketEvent()
+ 			handleEventStatus(e);
+ 			break;
+ 
+-		case GG_EVENT_ACK110:
+-			emit ack11EventReceived(e);
++		case GG_EVENT_ACK:
++			emit ackEventReceived(e);
+ 			break;
+ 
+ 		case GG_EVENT_CONN_FAILED:
+diff --git a/plugins/gadu_protocol/socket-notifiers/gadu-protocol-socket-notifiers.h b/plugins/gadu_protocol/socket-notifiers/gadu-protocol-socket-notifiers.h
+index 3d42e33..33641da 100644
+--- a/plugins/gadu_protocol/socket-notifiers/gadu-protocol-socket-notifiers.h
++++ b/plugins/gadu_protocol/socket-notifiers/gadu-protocol-socket-notifiers.h
+@@ -45,7 +45,7 @@ public:
+ signals:
+ 	void msgEventReceived(struct gg_event *e);
+ 	void multilogonMsgEventReceived(struct gg_event *e);
+-	void ack11EventReceived(struct gg_event *e);
++	void ackEventReceived(struct gg_event *e);
+ 
+ 	void typingNotifyEventReceived(struct gg_event *e);
+ 

@@ -9,5 +9,6 @@
 <use>
   <flag name='phonon'>Installs phonon audio plugin</flag>
   <flag name='gadu'>Installs GaduGadu support module</flag>
+  <flag name='emoticons'>Installs emoticons</flag>
 </use>
 </pkgmetadata>

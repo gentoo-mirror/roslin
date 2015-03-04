@@ -2,6 +2,9 @@
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  04 Mar 2015; Michał Ziąbkowski <mziab@o2.pl> metadata.xml:
+  Added missing flag to metadata.
+
   04 Mar 2015; Michał Ziąbkowski <mziab@o2.pl> kadu-1.5.ebuild:
   Stabled Kadu 1.5.
 

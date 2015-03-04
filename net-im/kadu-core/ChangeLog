@@ -2,6 +2,17 @@
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  04 Mar 2015; Michał Ziąbkowski <mziab@o2.pl> -kadu-core-0.12.3.ebuild,
+  -kadu-core-1.0.ebuild, -kadu-core-1.1.ebuild, -kadu-core-1.2.ebuild,
+  -kadu-core-1.3.ebuild, -kadu-core-1.4.ebuild, -kadu-core-1.5.ebuild,
+  -kadu-core-2.0_rc1.ebuild, -kadu-core-2.0_rc2.ebuild,
+  -kadu-core-2.0_rc3.ebuild,
+  -files/kadu-core-1.0_alpha2-missing-includes.patch,
+  -files/kadu-core-1.0_alpha5-missing-includes.patch,
+  -files/kadu-core-1.0_alpha5-sort-by-receive-date.patch,
+  -files/kadu-core-2.0_alpha1-missing-includes.patch:
+  Remove cruft.
+
 *kadu-core-3.0_alpha1-r1 (27 Feb 2015)
 
   27 Feb 2015; Michał Ziąbkowski <mziab@o2.pl>

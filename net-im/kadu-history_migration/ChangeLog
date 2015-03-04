@@ -2,6 +2,15 @@
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  04 Mar 2015; Michał Ziąbkowski <mziab@o2.pl>
+  -kadu-history_migration-0.12.3.ebuild, -kadu-history_migration-1.0.ebuild,
+  -kadu-history_migration-1.1.ebuild, -kadu-history_migration-1.2.ebuild,
+  -kadu-history_migration-1.3.ebuild, -kadu-history_migration-1.4.ebuild,
+  -kadu-history_migration-2.0_rc1.ebuild,
+  -kadu-history_migration-2.0_rc2.ebuild,
+  -kadu-history_migration-2.0_rc3.ebuild:
+  Remove cruft.
+
 *kadu-history_migration-3.0_alpha1 (23 Feb 2015)
 
   23 Feb 2015; Michał Ziąbkowski <mziab@o2.pl>

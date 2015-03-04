@@ -2,6 +2,10 @@
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  04 Mar 2015; Michał Ziąbkowski <mziab@o2.pl>
+  -kadu-mime_tex-0.12.0_p2.ebuild:
+  Remove cruft.
+
 *kadu-mime_tex-2.0 (26 Jan 2015)
 
   26 Jan 2015; Michał Ziąbkowski <mziab@o2.pl> +kadu-mime_tex-2.0.ebuild:

@@ -13,5 +13,5 @@ IUSE=""
 
 DEPEND=">=dev-qt/qtgui-4.8.0:4
 	~net-im/kadu-core-${PV}
-	net-libs/libotr:4"
+	>=net-libs/libotr-4.0.0"
 RDEPEND="${DEPEND}"

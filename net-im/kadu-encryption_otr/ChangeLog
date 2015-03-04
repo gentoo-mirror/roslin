@@ -3,6 +3,10 @@
 # $Header: $
 
   04 Mar 2015; Michał Ziąbkowski <mziab@o2.pl>
+  kadu-encryption_otr-1.5.ebuild:
+  Stabled Kadu 1.5.
+
+  04 Mar 2015; Michał Ziąbkowski <mziab@o2.pl>
   -kadu-encryption_otr-1.0.ebuild, -kadu-encryption_otr-1.1.ebuild,
   -kadu-encryption_otr-1.2.ebuild, -kadu-encryption_otr-1.3.ebuild,
   -kadu-encryption_otr-1.4.ebuild, -kadu-encryption_otr-2.0_rc1.ebuild,

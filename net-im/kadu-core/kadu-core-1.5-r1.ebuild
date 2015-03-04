@@ -8,7 +8,7 @@ inherit kadu
 
 DESCRIPTION="The core of Kadu IM"
 HOMEPAGE="http://kadu.im"
-KEYWORDS=" ~amd64 ~x86"
+KEYWORDS="amd64 x86"
 
 IUSE="ayatana +ntrack"
 

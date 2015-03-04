@@ -3,6 +3,10 @@
 # $Header: $
 
   04 Mar 2015; Michał Ziąbkowski <mziab@o2.pl>
+  kadu-jabber_protocol-1.5.ebuild:
+  Stabled Kadu 1.5.
+
+  04 Mar 2015; Michał Ziąbkowski <mziab@o2.pl>
   -kadu-jabber_protocol-0.12.3.ebuild, -kadu-jabber_protocol-0.12.3-r1.ebuild,
   -kadu-jabber_protocol-1.0.ebuild, -kadu-jabber_protocol-1.0-r1.ebuild,
   -kadu-jabber_protocol-1.1.ebuild, -kadu-jabber_protocol-1.2.ebuild,

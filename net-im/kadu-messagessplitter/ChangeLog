@@ -3,6 +3,10 @@
 # $Header: $
 
   04 Mar 2015; Michał Ziąbkowski <mziab@o2.pl>
+  kadu-messagessplitter-1.0_p6.ebuild:
+  Stabled Kadu 1.5.
+
+  04 Mar 2015; Michał Ziąbkowski <mziab@o2.pl>
   -kadu-messagessplitter-0.12_p5.ebuild:
   Remove cruft.
 

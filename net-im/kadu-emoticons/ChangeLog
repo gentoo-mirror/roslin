@@ -2,6 +2,9 @@
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  04 Mar 2015; Michał Ziąbkowski <mziab@o2.pl> kadu-emoticons-1.5.ebuild:
+  Stabled Kadu 1.5.
+
   04 Mar 2015; Michał Ziąbkowski <mziab@o2.pl>
   -kadu-emoticons-0.6.5-r1.ebuild, -kadu-emoticons-1.0.ebuild,
   -kadu-emoticons-1.1.ebuild, -kadu-emoticons-1.2.ebuild,

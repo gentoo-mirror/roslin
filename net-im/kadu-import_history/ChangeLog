@@ -3,6 +3,10 @@
 # $Header: $
 
   04 Mar 2015; Michał Ziąbkowski <mziab@o2.pl>
+  kadu-import_history-1.0_p4.ebuild:
+  Stabled Kadu 1.5.
+
+  04 Mar 2015; Michał Ziąbkowski <mziab@o2.pl>
   -kadu-import_history-0.12.0.ebuild:
   Remove cruft.
 

@@ -2,6 +2,9 @@
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  04 Mar 2015; Michał Ziąbkowski <mziab@o2.pl> kadu-imagelink-1.5.ebuild:
+  Stabled Kadu 1.5.
+
   04 Mar 2015; Michał Ziąbkowski <mziab@o2.pl> -kadu-imagelink-0.12.3.ebuild,
   -kadu-imagelink-1.0.ebuild, -kadu-imagelink-1.1.ebuild,
   -kadu-imagelink-1.2.ebuild, -kadu-imagelink-1.3.ebuild,

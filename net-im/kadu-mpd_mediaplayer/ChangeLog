@@ -3,6 +3,10 @@
 # $Header: $
 
   04 Mar 2015; Michał Ziąbkowski <mziab@o2.pl>
+  kadu-mpd_mediaplayer-1.5.ebuild:
+  Stabled Kadu 1.5.
+
+  04 Mar 2015; Michał Ziąbkowski <mziab@o2.pl>
   -kadu-mpd_mediaplayer-0.12.3.ebuild, -kadu-mpd_mediaplayer-1.0.ebuild,
   -kadu-mpd_mediaplayer-1.1.ebuild, -kadu-mpd_mediaplayer-1.2.ebuild,
   -kadu-mpd_mediaplayer-1.3.ebuild, -kadu-mpd_mediaplayer-1.4.ebuild,

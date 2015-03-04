@@ -3,6 +3,10 @@
 # $Header: $
 
   04 Mar 2015; Michał Ziąbkowski <mziab@o2.pl>
+  kadu-freedesktop_notify-1.5.ebuild:
+  Stabled Kadu 1.5.
+
+  04 Mar 2015; Michał Ziąbkowski <mziab@o2.pl>
   -kadu-freedesktop_notify-0.12.3.ebuild, -kadu-freedesktop_notify-1.0.ebuild,
   -kadu-freedesktop_notify-1.1.ebuild, -kadu-freedesktop_notify-1.2.ebuild,
   -kadu-freedesktop_notify-1.3.ebuild, -kadu-freedesktop_notify-1.4.ebuild,

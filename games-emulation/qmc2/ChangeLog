@@ -1,6 +1,11 @@
 # ChangeLog for games-emulation/qmc2
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
 
+*qmc2-0.49 (08 Mar 2015)
+
+  08 Mar 2015; Michał Ziąbkowski <mziab@o2.pl> +qmc2-0.49.ebuild:
+  Bumped.
+
   12 Jan 2015; Michał Ziąbkowski <mziab@o2.pl> -qmc2-0.38.ebuild,
   -qmc2-0.40.ebuild, -qmc2-0.42.ebuild, qmc2-0.47.ebuild:
   Added missing dep. Removed cruft.

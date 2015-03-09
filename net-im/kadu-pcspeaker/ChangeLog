@@ -2,6 +2,12 @@
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*kadu-pcspeaker-3.0_alpha2 (09 Mar 2015)
+
+  09 Mar 2015; Michał Ziąbkowski <mziab@o2.pl>
+  +kadu-pcspeaker-3.0_alpha2.ebuild:
+  Bumped.
+
   04 Mar 2015; Michał Ziąbkowski <mziab@o2.pl> kadu-pcspeaker-1.5.ebuild:
   Stabled Kadu 1.5.
 

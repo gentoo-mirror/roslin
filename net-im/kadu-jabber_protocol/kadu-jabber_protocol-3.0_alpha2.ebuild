@@ -22,7 +22,7 @@ RDEPEND=">=dev-qt/qtcore-5.2.0:5
 	>=dev-qt/qtx11extras-5.2.0:5
 	>=dev-libs/injeqt-1.0.0
 	net-dns/libidn
-	net-libs/qxmpp
+	>=net-libs/qxmpp-0.8.2
 	>=app-crypt/qca-2.1.0:2[qt5,openssl]
 	sys-libs/zlib
 	~net-im/kadu-core-${PV}"

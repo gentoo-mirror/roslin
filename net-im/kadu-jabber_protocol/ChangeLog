@@ -2,6 +2,14 @@
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*kadu-jabber_protocol-3.0_alpha2-r1 (10 Mar 2015)
+
+  10 Mar 2015; Michał Ziąbkowski <mziab@o2.pl>
+  -kadu-jabber_protocol-3.0_alpha2.ebuild,
+  +kadu-jabber_protocol-3.0_alpha2-r1.ebuild,
+  +files/kadu-jabber_protocol-3.0_alpha2-qxmpp-path.patch:
+  Rev-bumped with proper qxmpp dep. Removed non-working version.
+
   10 Mar 2015; Michał Ziąbkowski <mziab@o2.pl>
   kadu-jabber_protocol-3.0_alpha2.ebuild:
   Seems to require qxmpp-0.8.1 or higher, but the lowest working version in

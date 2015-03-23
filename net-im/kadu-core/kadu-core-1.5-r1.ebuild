@@ -17,6 +17,7 @@ RDEPEND="app-crypt/qca:2
 	>=dev-qt/qtwebkit-4.8.0:4
 	>=dev-qt/qtdbus-4.8.0:4
 	>=dev-qt/qtsvg-4.8.0:4
+	>=dev-qt/qtdeclarative-4.8.0:4
 	x11-libs/libXfixes
 	>=app-arch/libarchive-2.6[lzma]
 	ayatana? ( dev-libs/libindicate-qt )

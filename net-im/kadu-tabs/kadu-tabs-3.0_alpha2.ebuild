@@ -27,6 +27,6 @@ DEPEND="${RDEPEND}
 
 # workaround
 src_configure () {
-	append-cxxflags -std=c++11
+	#append-cxxflags -std=c++11
 	kadu_src_configure
 }

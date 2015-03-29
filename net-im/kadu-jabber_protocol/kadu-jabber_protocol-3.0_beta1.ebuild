@@ -22,11 +22,11 @@ RDEPEND=">=dev-qt/qtcore-5.2.0:5
 	>=dev-qt/qtdeclarative-5.2.0:5[widgets]
 	>=dev-libs/injeqt-1.0.0
 	net-dns/libidn
-	>=net-libs/qxmpp-0.8.2[qt5]
+	>=net-libs/qxmpp-0.8.3[qt5]
 	>=app-crypt/qca-2.1.0:2[qt5,openssl]
 	sys-libs/zlib
 	~net-im/kadu-core-${PV}"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
-PATCHES=("${FILESDIR}/${PN}-3.0_alpha2-qxmpp-path.patch")
+PATCHES=("${FILESDIR}/${P}-qxmpp-path.patch")

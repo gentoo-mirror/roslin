@@ -20,6 +20,7 @@ RDEPEND=">=app-crypt/qca-2.1.0:2[qt5]
 	>=dev-qt/qtwidgets-5.2.0:5
 	>=dev-qt/qtquick1-5.2.0:5
 	>=dev-qt/qtx11extras-5.2.0:5
+	>=dev-qt/qtdeclarative-5.2.0:5[widgets]
 	>=dev-qt/linguist-tools-5.2.0:5
 	>=dev-qt/qtxml-5.2.0:5
 	x11-libs/libXfixes

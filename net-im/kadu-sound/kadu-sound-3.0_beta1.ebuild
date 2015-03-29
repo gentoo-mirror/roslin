@@ -17,9 +17,9 @@ RDEPEND=">=dev-qt/qtcore-5.2.0:5
 	>=dev-qt/qtnetwork-5.2.0:5
 	>=dev-qt/qtxml-5.2.0:5
 	>=dev-qt/qtwebkit-5.2.0:5
-	>=dev-qt/qtquick1-5.2.0:5
 	>=dev-qt/qtdbus-5.2.0:5
 	>=dev-qt/qtx11extras-5.2.0:5
+	>=dev-qt/qtdeclarative-5.2.0:5[widgets]
 	>=dev-qt/qtmultimedia-5.2.0:5
 	>=dev-libs/injeqt-1.0.0
 	~net-im/kadu-core-${PV}"

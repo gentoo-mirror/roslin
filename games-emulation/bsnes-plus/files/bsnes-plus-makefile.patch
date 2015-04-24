@@ -1,0 +1,38 @@
+diff --git a/bsnes/Makefile b/bsnes/Makefile
+old mode 100644
+new mode 100755
+index b6de78c..b3ca043
+--- a/bsnes/Makefile
++++ b/bsnes/Makefile
+@@ -10,7 +10,7 @@ endif
+ # compiler
+ c       := $(compiler) -std=gnu99
+ cpp     := $(subst cc,++,$(compiler)) -std=gnu++0x
+-flags   := -O3 -fomit-frame-pointer -I. -I$(snes)
++flags   := $(CXXFLAGS) -fomit-frame-pointer -I. -I$(snes)
+ link    :=
+ objects :=
+ 
+@@ -23,7 +23,7 @@ objects :=
+ 
+ # platform
+ ifeq ($(platform),x)
+-  link += -s -ldl -lX11 -lXext
++  link += -ldl -lX11 -lXext
+ else ifeq ($(platform),osx)
+ else ifeq ($(platform),win)
+   link += -mwindows
+@@ -66,11 +66,8 @@ endif
+ install:
+ ifeq ($(platform),x)
+ 	install -D -m 755 out/bsnes $(DESTDIR)$(prefix)/bin/bsnes
+-	install -D -m 644 data/bsnes.png $(DESTDIR)$(prefix)/share/pixmaps/bsnes.png
+-	install -D -m 644 data/bsnes.desktop $(DESTDIR)$(prefix)/share/applications/bsnes.desktop
+-	test -d ~/.bsnes || mkdir ~/.bsnes
+-	cp data/cheats.xml ~/.bsnes/cheats.xml
+-	chmod 777 ~/.bsnes ~/.bsnes/cheats.xml
++	install -D -m 644 data/bsnes.png $(DESTDIR)/usr/share/pixmaps/bsnes.png
++	install -D -m 644 data/bsnes.desktop $(DESTDIR)/usr/share/applications/bsnes.desktop
+ endif
+ 
+ uninstall:

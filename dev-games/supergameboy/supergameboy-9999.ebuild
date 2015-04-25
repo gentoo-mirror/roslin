@@ -2,16 +2,14 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=2
+EAPI=5
 
-inherit eutils
-
-MY_PV="${PV/0./}"
-MY_PV="${MY_PV/_/}"
+inherit git-r3 multilib toolchain-funcs eutils
 
 DESCRIPTION="A bsnes helper library needed for Super Gameboy emulation"
-HOMEPAGE="http://byuu.org/bsnes/"
-SRC_URI="http://bsnes.googlecode.com/files/bsnes_v${MY_PV}.tar.bz2"
+HOMEPAGE="https://github.com/devinacker/bsnes-plus"
+SRC_URI=""
+EGIT_REPO_URI="https://github.com/devinacker/bsnes-plus.git"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -21,22 +19,18 @@ IUSE=""
 RDEPEND=""
 DEPEND="!<games-emulation/bsnes-0.073[sgb]"
 
-S="${WORKDIR}/${PN}"
+S="${WORKDIR}/${P}/${PN}"
 
 src_prepare() {
 	epatch "${FILESDIR}/${P}-makefile.patch"
 }
 
 src_compile() {
-	emake \
-	    platform=x \
-	    compiler=gcc \
+	emake platform=x compiler="$(tc-getCC)" \
 	    || die "emake $1 failed"
 }
 
 src_install() {
-	emake \
-	    prefix="/usr" \
-	    DESTDIR="${D}" install \
-	    || die "install $1 failed"
+	newlib.so libsupergameboy.so libsupergameboy.so.1
+	dosym libsupergameboy.so.1 /usr/$(get_libdir)/libsupergameboy.so
 }

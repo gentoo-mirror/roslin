@@ -6,8 +6,8 @@ index b6de78c..b3ca043
 +++ b/bsnes/Makefile
 @@ -10,7 +10,7 @@ endif
  # compiler
- c       := $(compiler) -x c -std=gnu99
- cpp     := $(compiler) -std=gnu++0x
+ c       := $(compiler) -std=gnu99
+ cpp     := $(subst cc,++,$(compiler)) -std=gnu++0x
 -flags   := -O3 -fomit-frame-pointer -I. -I$(snes)
 +flags   := $(CXXFLAGS) -fomit-frame-pointer -I. -I$(snes)
  link    :=

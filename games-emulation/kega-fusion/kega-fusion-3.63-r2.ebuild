@@ -1,14 +1,14 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=2
+EAPI=5
 
 inherit multilib games
 
 DESCRIPTION="Sega SG1000/SC3000/Master System/Game Gear/Genesis/Megadrive/SVP/Pico/SegaCD/MegaCD/32X emulator"
-HOMEPAGE="http://www.eidolons-inn.net/tiki-index.php?page=Kega"
-SRC_URI="http://www.eidolons-inn.net/tiki-download_file.php?fileId=572 -> ${P}.tar.gz"
+HOMEPAGE="http://www.carpeludum.com/kega-fusion/"
+SRC_URI="http://www.carpeludum.com/download/Fusion363x.tar.gz -> ${P}.tar.gz"
 
 LICENSE="freedist"
 SLOT="0"
@@ -19,14 +19,25 @@ QA_PRESTRIPPED="${GAMES_PREFIX_OPT:1}/bin/${PN}"
 
 S="${WORKDIR}/Fusion"
 
-DEPEND="virtual/opengl
-	x86? ( x11-libs/gtk+:2
-		x11-libs/libXinerama
-		media-libs/alsa-lib
-		mp3? ( media-sound/mpg123 ) )
-	amd64? ( app-emulation/emul-linux-x86-gtklibs
-		app-emulation/emul-linux-x86-soundlibs[alsa] )"
-RDEPEND="${DEPEND}"
+DEPEND=""
+
+RDEPEND="
+	|| (
+		(
+			virtual/opengl[abi_x86_32(-)]
+			x11-libs/gtk+:2[abi_x86_32(-)]
+			x11-libs/libXinerama[abi_x86_32(-)]
+			media-libs/alsa-lib[abi_x86_32(-)]
+			media-plugins/alsa-plugins[abi_x86_32(-)]
+			mp3? ( media-sound/mpg123[abi_x86_32(-)] )
+		)
+		amd64? (
+			app-emulation/emul-linux-x86-gtklibs[-abi_x86_32(-)]
+			app-emulation/emul-linux-x86-soundlibs[alsa,-abi_x86_32(-)]
+			app-emulation/emul-linux-x86-opengllibs[-abi_x86_32(-)]
+			)
+	)
+"
 
 pkg_setup() {
 	# x86 binary package, ABI=x86

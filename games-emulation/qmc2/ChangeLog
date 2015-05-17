@@ -1,6 +1,11 @@
 # ChangeLog for games-emulation/qmc2
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
 
+*qmc2-0.51 (17 May 2015)
+
+  17 May 2015; Michał Ziąbkowski <mziab@o2.pl> +qmc2-0.51.ebuild:
+  Bumped.
+
 *qmc2-0.49 (08 Mar 2015)
 
   08 Mar 2015; Michał Ziąbkowski <mziab@o2.pl> +qmc2-0.49.ebuild:

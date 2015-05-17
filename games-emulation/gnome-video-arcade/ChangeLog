@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/gnome-video-arcade
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+
+  17 May 2015; Michał Ziąbkowski <mziab@o2.pl>
+  -gnome-video-arcade-0.8.0.ebuild:
+  Removed cruft.
 
 *gnome-video-arcade-0.8.3 (18 Oct 2012)
 

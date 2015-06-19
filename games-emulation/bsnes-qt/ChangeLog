@@ -1,0 +1,27 @@
+# ChangeLog for games-emulation/bsnes-qt
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  24 Jun 2012; Michał Ziąbkowski <mziab@o2.pl>
+  files/bsnes-qt-9999-makefile.patch:
+  Updated patch.
+
+  24 Jun 2012; Michał Ziąbkowski <mziab@o2.pl> bsnes-qt-9999.ebuild:
+  Ported to EAPI=4.
+
+  09 Jun 2012; Michał Ziąbkowski <mziab@o2.pl> bsnes-qt-9999.ebuild:
+  Updated obsolete libsnes dep.
+
+  02 Nov 2011; Michał Ziąbkowski <mziab@o2.pl>
+  files/bsnes-qt-9999-makefile.patch:
+  Updated patch.
+
+  10 Oct 2011; Michał Ziąbkowski <mziab@o2.pl> bsnes-qt-9999.ebuild:
+  The patches branch was renamed to master.
+
+*bsnes-qt-9999 (01 Oct 2011)
+
+  01 Oct 2011; Michał Ziąbkowski <mziab@o2.pl> +bsnes-qt-9999.ebuild,
+  +files/bsnes-qt-9999-makefile.patch, +metadata.xml:
+  New ebuild.
+

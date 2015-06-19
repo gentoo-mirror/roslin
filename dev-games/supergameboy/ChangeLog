@@ -1,0 +1,23 @@
+# ChangeLog for dev-games/supergameboy
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  27 Apr 2015; Michał Ziąbkowski <mziab@o2.pl>
+  files/supergameboy-9999-makefile.patch:
+  Update Makefile patch for live ebuild.
+
+*supergameboy-9999 (25 Apr 2015)
+
+  25 Apr 2015; Michał Ziąbkowski <mziab@o2.pl> supergameboy-0.073.ebuild,
+  +supergameboy-9999.ebuild, +files/supergameboy-9999-makefile.patch:
+  Moved to bsnes-plus repo. Corrected DESCRIPTION.
+
+  25 Dec 2010; Michał Ziąbkowski <mziab@o2.pl> supergameboy-0.073.ebuild:
+  Block on previous bsnes with included plugin.
+
+*supergameboy-0.073 (25 Dec 2010)
+
+  25 Dec 2010; Michał Ziąbkowski <mziab@o2.pl> +supergameboy-0.073.ebuild,
+  +files/supergameboy-0.073-makefile.patch, +metadata.xml:
+  New ebuild.
+

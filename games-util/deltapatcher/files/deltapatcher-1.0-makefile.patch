@@ -1,0 +1,96 @@
+commit 6a8490cab6b7b21c1a68f2753bb167bc4a2147fa
+Author: Michał Ziąbkowski <mziab@o2.pl>
+Date:   Mon Feb 28 19:04:58 2011 +0100
+
+    Makefile and mimetypes.
+
+diff --git a/src/Makefile Makefile
+new file mode 100644
+index 0000000..1f5d8a1
+--- /dev/null
++++ Makefile
+@@ -0,0 +1,33 @@
++CXX = $(shell wx-config --cxx)
++CXXFLAGS += -I. -I ../include $(shell wx-config --cxxflags)
++DEFINES =
++PROGRAM = deltapatcher
++PREFIX = /usr/local
++OBJECTS = DPApp.o \
++		  patcher/XDeltaPatch.o \
++		  gui/dpgui.o \
++		  gui/DeltaPatcherAboutDialog.o \
++		  gui/DeltaPatcherDecodePanel.o \
++		  gui/DeltaPatcherDropTarget.o \
++		  gui/DeltaPatcherEncodePanel.o \
++		  gui/DeltaPatcherMainDialog.o
++
++.SUFFIXES: .o .cpp
++
++.cpp.o :
++	$(CXX) -c $(CXXFLAGS) $(DEFINES) -o $@ $<
++
++all: $(PROGRAM)
++
++$(PROGRAM): $(OBJECTS)
++	$(CXX) -o $@ $(OBJECTS) $(shell wx-config --libs) $(LDFLAGS)
++
++install: $(PROGRAM)
++	install -D -m755 $(PROGRAM) $(DESTDIR)/$(PREFIX)/bin/$(PROGRAM)
++	install -D -m644 xdelta1.xml $(DESTDIR)/$(PREFIX)/share/mime/packages/xdelta1.xml
++	install -D -m644 xdelta3.xml $(DESTDIR)/$(PREFIX)/share/mime/packages/xdelta3.xml
++	install -D -m644 deltapatcher.desktop $(DESTDIR)/$(PREFIX)/share/applications/deltapatcher.desktop
++
++clean:
++	rm -f $(OBJECTS) $(PROGRAM)
++
+diff --git a/src/deltapatcher.desktop deltapatcher.desktop
+new file mode 100644
+index 0000000..47ab1af
+--- /dev/null
++++ deltapatcher.desktop
+@@ -0,0 +1,9 @@
++[Desktop Entry]
++Name=DeltaPatcher
++Type=Application
++Comment=A frontend for the xdelta patching utility
++Exec=deltapatcher
++TryExec=deltapatcher
++Icon=deltapatcher
++Categories=Game;
++MimeType=application/xdelta3-patch
+diff --git a/src/xdelta1.xml xdelta1.xml
+new file mode 100644
+index 0000000..73d807f
+--- /dev/null
++++ xdelta1.xml
+@@ -0,0 +1,12 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<mime-info xmlns="http://www.freedesktop.org/standards/shared-mime-info">
++	<mime-type type="application/xdelta1-patch">
++		<sub-class-of type="application/octet-stream"/>
++        <comment>xdelta patch file</comment>
++        <magic priority="70">
++            <match value="%XDZ004%" type="string" offset="0"/>
++		</magic>
++
++        <glob pattern="*.xdelta"/>
++    </mime-type>
++</mime-info>
+diff --git a/src/xdelta3.xml xdelta3.xml
+new file mode 100644
+index 0000000..b583b84
+--- /dev/null
++++ xdelta3.xml
+@@ -0,0 +1,12 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<mime-info xmlns="http://www.freedesktop.org/standards/shared-mime-info">
++	<mime-type type="application/xdelta3-patch">
++		<sub-class-of type="application/octet-stream"/>
++        <comment>xdelta3 patch file</comment>
++        <magic priority="70">
++            <match value="0xC4C3D6" type="little32" offset="0"/>
++		</magic>
++
++        <glob pattern="*.xdelta"/>
++    </mime-type>
++</mime-info>

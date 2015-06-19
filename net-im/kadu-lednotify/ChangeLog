@@ -1,0 +1,59 @@
+# ChangeLog for net-im/kadu-lednotify
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  04 Mar 2015; Michał Ziąbkowski <mziab@o2.pl> kadu-lednotify-1.0_p34.ebuild:
+  Stabled Kadu 1.5.
+
+  04 Mar 2015; Michał Ziąbkowski <mziab@o2.pl>
+  -kadu-lednotify-0.12_p33.ebuild:
+  Remove cruft.
+
+*kadu-lednotify-1.0_p34 (01 Oct 2014)
+
+  01 Oct 2014; Michał Ziąbkowski <mziab@o2.pl>
+  +kadu-lednotify-1.0_p34.ebuild:
+  Bumped.
+
+  18 Apr 2013; Michał Ziąbkowski <mziab@o2.pl>
+  kadu-lednotify-0.12_p33.ebuild:
+  Stabled.
+
+  18 Apr 2013; Michał Ziąbkowski <mziab@o2.pl>
+  -kadu-lednotify-0.11_p32.ebuild:
+  Removed cruft.
+
+  26 Jun 2012; Michał Ziąbkowski <mziab@o2.pl>
+  -kadu-lednotify-0.10_p29.ebuild, kadu-lednotify-0.11_p32.ebuild:
+  Stabled Kadu-0.11.3 and plugins.
+
+  26 Jun 2012; Michał Ziąbkowski <mziab@o2.pl>
+  -kadu-lednotify-0.10_p29.ebuild:
+  Removed obsoleted versions.
+
+*kadu-lednotify-0.12_p33 (24 Jun 2012)
+
+  24 Jun 2012; Michał Ziąbkowski <mziab@o2.pl>
+  +kadu-lednotify-0.12_p33.ebuild:
+  Bumped.
+
+  04 Feb 2012; Michał Ziąbkowski <mziab@o2.pl>
+  kadu-lednotify-0.11_p32.ebuild:
+  Re-added keywords
+
+  30 Jan 2012; Michał Ziąbkowski <mziab@o2.pl>
+  -kadu-lednotify-0.9.0_p28.ebuild:
+  Removed 0.9.*.
+
+*kadu-lednotify-0.11_p32 (30 Jan 2012)
+
+  30 Jan 2012; Michał Ziąbkowski <mziab@o2.pl>
+  +kadu-lednotify-0.11_p32.ebuild:
+  Bumped.
+
+*kadu-lednotify-0.10_p29 (25 Aug 2011)
+
+  25 Aug 2011; Michał Ziąbkowski <mziab@o2.pl>
+  +kadu-lednotify-0.10_p29.ebuild:
+  Bumped.
+

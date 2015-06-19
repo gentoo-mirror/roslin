@@ -1,0 +1,31 @@
+# ChangeLog for games-util/deltapatcher
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*deltapatcher-1.0-r1 (22 Jan 2015)
+
+  22 Jan 2015; Michał Ziąbkowski <mziab@o2.pl> +deltapatcher-1.0-r1.ebuild:
+  Explicitly require wxGTK-2.8.
+
+  29 Sep 2011; Michał Ziąbkowski <mziab@o2.pl> deltapatcher-1.0.ebuild:
+  Fixed last commit.
+
+  29 Sep 2011; Michał Ziąbkowski <mziab@o2.pl> deltapatcher-1.0.ebuild:
+  Needs to depend on wxGTK[X].
+
+  04 May 2011; Piotr Szymaniak <szarpaj@grubelek.pl> deltapatcher-1.0.ebuild:
+  Added amd64 keyword.
+
+  28 Feb 2011; Michał Ziąbkowski <mziab@o2.pl> deltapatcher-1.0.ebuild,
+  files/deltapatcher-1.0-makefile.patch:
+  More work on the Makefile. Now installs mimetypes and .desktop.
+
+  26 Feb 2011; Michał Ziąbkowski <mziab@o2.pl> deltapatcher-1.0.ebuild:
+  Added wxwidgets inherit. Tweaked wxGTK dep.
+
+*deltapatcher-1.0 (26 Feb 2011)
+
+  26 Feb 2011; Michał Ziąbkowski <mziab@o2.pl> +deltapatcher-1.0.ebuild,
+  +files/deltapatcher-1.0-makefile.patch, +metadata.xml:
+  New ebuild. Might add a 'minimal' flag later.
+

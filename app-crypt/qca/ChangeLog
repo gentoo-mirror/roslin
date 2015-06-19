@@ -1,0 +1,10 @@
+# ChangeLog for app-crypt/qca
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  07 Jan 2015; Michał Ziąbkowski <mziab@o2.pl> qca-2.1.0-r1.ebuild:
+  Might as well do this for the other plugins, too.
+
+  07 Jan 2015; Michał Ziąbkowski <mziab@o2.pl> qca-2.1.0-r1.ebuild:
+  Add blocker for older qca-ossl to avoid file collision.
+

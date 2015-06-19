@@ -1,0 +1,59 @@
+--- qcc_pr_comp.c
++++ qcc_pr_comp.c
+@@ -7322,7 +7322,7 @@
+ 	QCC_def_t		*def, *d;
+ 	QCC_function_t	*f;
+ 	QCC_dfunction_t	*df;
+-	int			i;
++	int			i = 0;
+ 	pbool shared=false;
+ 	pbool externfnc=false;
+ 	pbool isconstant = false;
+--- hash.h
++++ hash.h
+@@ -19,12 +19,12 @@
+ int Hash_Key(char *name, int modulus);
+ void *Hash_Get(hashtable_t *table, char *name);
+ void *Hash_GetInsensative(hashtable_t *table, char *name);
+-void *Hash_GetKey(hashtable_t *table, int key);
++void *Hash_GetKey(hashtable_t *table, long key);
+ void *Hash_GetNext(hashtable_t *table, char *name, void *old);
+ void *Hash_GetNextInsensative(hashtable_t *table, char *name, void *old);
+ void *Hash_Add(hashtable_t *table, char *name, void *data, bucket_t *buck);
+ void *Hash_AddInsensative(hashtable_t *table, char *name, void *data, bucket_t *buck);
+ void Hash_Remove(hashtable_t *table, char *name);
+ void Hash_RemoveData(hashtable_t *table, char *name, void *data);
+-void Hash_RemoveKey(hashtable_t *table, int key);
+-void *Hash_AddKey(hashtable_t *table, int key, void *data, bucket_t *buck);
++void Hash_RemoveKey(hashtable_t *table, long key);
++void *Hash_AddKey(hashtable_t *table, long key, void *data, bucket_t *buck);
+--- hash.c
++++ hash.c
+@@ -68,7 +68,7 @@
+ 	}
+ 	return NULL;
+ }
+-void *Hash_GetKey(hashtable_t *table, int key)
++void *Hash_GetKey(hashtable_t *table, long key)
+ {
+ 	int bucknum = key%table->numbuckets;
+ 	bucket_t *buck;
+@@ -168,7 +168,7 @@
+ 
+ 	return buck;
+ }
+-void *Hash_AddKey(hashtable_t *table, int key, void *data, bucket_t *buck)
++void *Hash_AddKey(hashtable_t *table, long key, void *data, bucket_t *buck)
+ {
+ 	int bucknum = key%table->numbuckets;
+ 
+@@ -237,7 +237,7 @@
+ }
+ 
+ 
+-void Hash_RemoveKey(hashtable_t *table, int key)
++void Hash_RemoveKey(hashtable_t *table, long key)
+ {
+ 	int bucknum = key%table->numbuckets;
+ 	bucket_t *buck;	
+

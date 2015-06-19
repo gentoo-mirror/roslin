@@ -1,0 +1,29 @@
+# ChangeLog for dev-games/snesreader
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  27 Apr 2015; Michał Ziąbkowski <mziab@o2.pl>
+  files/snesreader-9999-makefile.patch:
+  Update Makefile patch for live ebuild.
+
+*snesreader-9999 (25 Apr 2015)
+
+  25 Apr 2015; Michał Ziąbkowski <mziab@o2.pl> +snesreader-9999.ebuild,
+  +files/snesreader-9999-makefile.patch:
+  Moved to bsnes-plus repo.
+
+*snesreader-0.072-r1 (19 Apr 2013)
+
+  19 Apr 2013; Michał Ziąbkowski <mziab@o2.pl> +snesreader-0.072-r1.ebuild,
+  +files/snesreader-0.072-gcc47.patch:
+  Rev-bumped to fix build with GCC 4.7.
+
+  25 Dec 2010; Michał Ziąbkowski <mziab@o2.pl> snesreader-0.072.ebuild:
+  Block on previous bsnes with included plugin.
+
+*snesreader-0.072 (25 Dec 2010)
+
+  25 Dec 2010; Michał Ziąbkowski <mziab@o2.pl> +snesreader-0.072.ebuild,
+  +files/snesreader-0.072-makefile.patch, +metadata.xml:
+  New ebuild.
+

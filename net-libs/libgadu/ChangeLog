@@ -1,0 +1,72 @@
+# ChangeLog for net-libs/libgadu
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+
+*libgadu-1.12.1 (03 Jan 2015)
+
+  03 Jan 2015; Michał Ziąbkowski <mziab@o2.pl> +libgadu-1.12.1.ebuild:
+  Bumped.
+
+*libgadu-1.12.0_rc1 (02 Feb 2014)
+
+  02 Feb 2014; Michał Ziąbkowski <mziab@o2.pl> +libgadu-1.12.0_rc1.ebuild:
+  Bumped.
+
+  10 Jun 2013; Michał Ziąbkowski <mziab@o2.pl> libgadu-9999.ebuild:
+  Fixed errors from repoman.
+
+  29 Nov 2011; Michał Ziąbkowski <mziab@o2.pl> -libgadu-1.11.0.ebuild:
+  Removed libgadu-1.11.0. In portage.
+
+  11 Mar 2010; Michał Ziąbkowski <mziab@o2.pl> -libgadu-1.9.0_rc2.ebuild,
+  -libgadu-1.9.0_rc2-r1.ebuild,
+  -files/libgadu-1.9.0_rc2-fix-images-gg10.patch:
+  Removed libgadu-1.9_rc2. Obsoleted by _rc3 from portage.
+
+  12 Jan 2010; Michał Ziąbkowski <mziab@o2.pl>
+  files/libgadu-1.9.0_rc2-fix-images-gg10.patch:
+  Added better fix for images from
+  http://gitorious.org/kadu/libgadu/commit/563b00f1ac39721bc8192369afddd8b92
+  eeee1fe
+
+*libgadu-1.9.0_rc2-r1 (12 Jan 2010)
+
+  12 Jan 2010; Michał Ziąbkowski <mziab@o2.pl>
+  +libgadu-1.9.0_rc2-r1.ebuild,
+  +files/libgadu-1.9.0_rc2-fix-images-gg10.patch:
+  Bumped with patch from
+  http://gitorious.org/kadu/libgadu/commit/23345ac2fce4d170ce621f186f2e0665e
+  719f116 to fix image receive and send with gg10 proto.
+
+  11 Dec 2009; Michał Ziąbkowski <mziab@o2.pl> +libgadu-1.9.0_rc2.ebuild:
+  Needed by Kadu 0.6.5.4_rc1.
+
+  04 Feb 2009; Piotr Szymaniak <lazy_bum@o2.pl> -libgadu-1.8.2.ebuild:
+  In portage now.
+
+  21 Jan 2009; Michał Ziąbkowski <mziab@o2.pl> libgadu-1.8.2.ebuild,
+  libgadu-9999.ebuild:
+  Added RDEPEND.
+
+  03 Jan 2009; Piotr Szymaniak <lazy_bum@o2.pl> libgadu-9999.ebuild:
+  Fixed repoman reported errors.
+
+  01 Jan 2009; Piotr Szymaniak <lazy_bum@o2.pl> +libgadu-1.8.2.ebuild:
+  Added temporary libgadu version with security fix (gentoo bug #244888).
+
+  22 Apr 2008; Michał Ziąbkowski <mziab@o2.pl> -libgadu-1.8.0.ebuild:
+  1.8.0 added to official tree. Removing.
+
+  12 Mar 2008; Michał Ziąbkowski <mziab@o2.pl> +libgadu-1.8.0.ebuild:
+  Added newest stable version. It's supposed to have some security holes fixed
+  and Kadu 0.6.0 relies on it.
+
+  20 Feb 2008; Piotr Szymaniak <lazy_bum@o2.pl> libgadu-9999.ebuild:
+  CVS -> SVN.
+
+  14 Dec 2007; Piotr Szymaniak <lazy_bum@o2.pl> libgadu-9999.ebuild:
+  Changed KEYWORDS to "".
+
+*libgadu-9999.ebuild
+
+  25 Oct 2007; Piotr Szymaniak <lazy_bum@o2.pl> +libgadu-9999.ebuild:
+  New ebuild.

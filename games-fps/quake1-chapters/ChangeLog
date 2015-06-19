@@ -1,0 +1,10 @@
+# ChangeLog for games-fps/quake1-chapters
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  01 Mar 2010; Piotr Szymaniak <lazy_bum@o2.pl> quake1-chapters-1.ebuild:
+  Updated homepage and src_uri.
+
+  22 Jan 2009; Michał Ziąbkowski <mziab@o2.pl> quake1-chapters-1.ebuild:
+  Added missing IUSE.
+

@@ -1,0 +1,16 @@
+# ChangeLog for games-fps/quake1-panzer
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  22 Jan 2009; Michał Ziąbkowski <mziab@o2.pl>
+  quake1-panzer-0_beta2.ebuild:
+  Added missing IUSE.
+
+  25 Apr 2008; Piotr Szymaniak <lazy_bum@o2.pl>
+  quake1-panzer-0_beta2.ebuild:
+  Added tyrqw USE flag.
+
+  27 Mar 2008; Piotr Szymaniak <lazy_bum@o2.pl>
+  +quake1-panzer-0_beta2.ebuild:
+  New package.
+

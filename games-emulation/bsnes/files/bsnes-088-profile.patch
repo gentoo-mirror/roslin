@@ -1,0 +1,17 @@
+diff --git a/bsnes/target-ui/interface/core.cpp b/bsnes/target-ui/interface/core.cpp
+index 1826e26..a8a19ec 100755
+--- a/bsnes/target-ui/interface/core.cpp
++++ b/bsnes/target-ui/interface/core.cpp
+@@ -1,7 +1,11 @@
+ bool InterfaceCore::loadFirmware(string filename, string keyname, uint8_t *targetdata, unsigned targetsize) {
+   bool result = false;
+ 
+-  filename = application->path(filename);
++  if(file::exists(application->path(filename)))
++    filename = application->path(filename);
++  else
++    filename = {"%GAMES_DATADIR%/bsnes/profile/", filename};
++
+   string markup;
+   markup.readfile(filename);
+   XML::Document document(markup);

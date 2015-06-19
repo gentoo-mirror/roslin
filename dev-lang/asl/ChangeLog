@@ -1,0 +1,17 @@
+# ChangeLog for dev-lang/asl
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  14 Feb 2013; Michał Ziąbkowski <mziab@o2.pl> +files/asl-amd64-ifdef.patch,
+  asl-1.42_p81.ebuild, -files/asl-install.patch:
+  Fixed build on amd64.
+
+  14 Feb 2013; Michał Ziąbkowski <mziab@o2.pl> asl-1.42_p81.ebuild:
+  Replaced symlink with copy to work around patching problems.
+
+*asl-1.42_p81 (01 Apr 2012)
+
+  01 Apr 2012; Michał Ziąbkowski <mziab@o2.pl> +asl-1.42_p81.ebuild,
+  +files/asl-install.patch, +files/asl-makefile.patch, +metadata.xml:
+  New ebuild.
+

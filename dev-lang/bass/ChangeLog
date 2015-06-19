@@ -1,0 +1,22 @@
+# ChangeLog for dev-lang/bass
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*bass-14 (27 Feb 2014)
+
+  27 Feb 2014; Michał Ziąbkowski <mziab@o2.pl> -bass-13.ebuild,
+  +bass-14.ebuild, +files/bass-14-makefile.patch:
+  Bumped and removed cruft (upstream removes old tarballs).
+
+*bass-11 (19 Apr 2013)
+
+  19 Apr 2013; Michał Ziąbkowski <mziab@o2.pl> +bass-11.ebuild,
+  +files/bass-11-makefile.patch:
+  Bumped.
+
+*bass-10 (24 Jan 2013)
+
+  24 Jan 2013; Michał Ziąbkowski <mziab@o2.pl> +bass-10.ebuild,
+  +files/bass-10-makefile.patch, +metadata.xml:
+  New ebuild.
+

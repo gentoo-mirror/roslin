@@ -1,0 +1,11 @@
+diff -Nur promile-qt-0.8.0.bak/obliczenia.cpp promile-qt-0.8.0/obliczenia.cpp
+--- promile-qt-0.8.0.bak/obliczenia.cpp	2008-04-16 16:12:12.000000000 +0200
++++ promile-qt-0.8.0/obliczenia.cpp	2009-06-02 16:07:10.992497157 +0200
+@@ -19,6 +19,7 @@
+ #include "promile-qt.h"
+ #include "ui_promile-qt.h"
+ #include <string.h>
++#include <cstdio>
+ #define ILOSC_NAPOJOW 100
+ 
+ using namespace Ui;

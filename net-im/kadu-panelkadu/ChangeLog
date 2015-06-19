@@ -1,0 +1,135 @@
+# ChangeLog for net-im/kadu-panelkadu
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  04 Mar 2015; Michał Ziąbkowski <mziab@o2.pl> kadu-panelkadu-1.0_p11.ebuild:
+  Stabled Kadu 1.5.
+
+  04 Mar 2015; Michał Ziąbkowski <mziab@o2.pl>
+  -kadu-panelkadu-0.12_p10.ebuild:
+  Remove cruft.
+
+*kadu-panelkadu-1.0_p11 (01 Oct 2014)
+
+  01 Oct 2014; Michał Ziąbkowski <mziab@o2.pl>
+  +kadu-panelkadu-1.0_p11.ebuild:
+  Bumped.
+
+  18 Apr 2013; Michał Ziąbkowski <mziab@o2.pl>
+  kadu-panelkadu-0.12_p10.ebuild:
+  Stabled.
+
+  18 Apr 2013; Michał Ziąbkowski <mziab@o2.pl>
+  -kadu-panelkadu-0.11_p9.ebuild:
+  Removed cruft.
+
+  26 Jun 2012; Michał Ziąbkowski <mziab@o2.pl>
+  -kadu-panelkadu-0.10_p8.ebuild, kadu-panelkadu-0.11_p9.ebuild:
+  Stabled Kadu-0.11.3 and plugins.
+
+  26 Jun 2012; Michał Ziąbkowski <mziab@o2.pl>
+  -kadu-panelkadu-0.10_p8.ebuild:
+  Removed obsoleted versions.
+
+*kadu-panelkadu-0.12_p10 (24 Jun 2012)
+
+  24 Jun 2012; Michał Ziąbkowski <mziab@o2.pl>
+  +kadu-panelkadu-0.12_p10.ebuild:
+  Bumped.
+
+  04 Feb 2012; Michał Ziąbkowski <mziab@o2.pl> kadu-panelkadu-0.11_p9.ebuild:
+  Re-added keywords
+
+  30 Jan 2012; Michał Ziąbkowski <mziab@o2.pl>
+  -kadu-panelkadu-0.9.0_p7.ebuild:
+  Removed 0.9.*.
+
+*kadu-panelkadu-0.11_p9 (30 Jan 2012)
+
+  30 Jan 2012; Michał Ziąbkowski <mziab@o2.pl>
+  +kadu-panelkadu-0.11_p9.ebuild:
+  Bumped.
+
+*kadu-panelkadu-0.10_p8 (25 Aug 2011)
+
+  25 Aug 2011; Michał Ziąbkowski <mziab@o2.pl>
+  +kadu-panelkadu-0.10_p8.ebuild:
+  Bumped.
+
+*kadu-panelkadu-0.6.5_p5-r5 (09 Mar 2011)
+
+  09 Mar 2011; Michał Ziąbkowski <mziab@o2.pl>
+  +kadu-panelkadu-0.6.5_p5-r5.ebuild:
+  Bumped.
+
+*kadu-panelkadu-0.6.5_p5-r4 (08 Feb 2010)
+
+  08 Feb 2010; Michał Ziąbkowski <mziab@o2.pl>
+  +kadu-panelkadu-0.6.5_p5-r4.ebuild:
+  Bumped to Kadu 0.6.5.4.
+
+  16 Jan 2010; Michał Ziąbkowski <mziab@o2.pl>
+  -kadu-panelkadu-0.6.5_p5-r1.ebuild:
+  Removed Kadu 0.6.5.4_rc1.
+
+  02 Jan 2010; Michał Ziąbkowski <mziab@o2.pl>
+  -kadu-panelkadu-0.6.5_p3.ebuild:
+  Removed cruft.
+
+*kadu-panelkadu-0.6.5_p5-r2 (01 Jan 2010)
+
+  01 Jan 2010; Michał Ziąbkowski <mziab@o2.pl>
+  +kadu-panelkadu-0.6.5_p5-r2.ebuild:
+  Bumped.
+
+*kadu-panelkadu-0.6.5_p5-r1 (21 Dec 2009)
+
+  21 Dec 2009; Michał Ziąbkowski <mziab@o2.pl>
+  +kadu-panelkadu-0.6.5_p5-r1.ebuild:
+  Rev-bump with explicit deps for the ~arch crowd.
+
+  17 Dec 2009; Michał Ziąbkowski <mziab@o2.pl>
+  -kadu-panelkadu-0.6.5_p2.ebuild:
+  Removed cruft.
+
+  04 Oct 2009; Michał Ziąbkowski <mziab@o2.pl>
+  -kadu-panelkadu-0.6.0_p2.ebuild:
+  Removing Kadu 0.6.0.* ebuilds.
+
+  14 Sep 2009; Michał Ziąbkowski <mziab@o2.pl>
+  +kadu-panelkadu-0.6.5_p5.ebuild:
+  Bumped.
+
+  25 Jan 2009; Michał Ziąbkowski <mziab@o2.pl>
+  +kadu-panelkadu-0.6.5_p3.ebuild:
+  Bumped.
+
+  25 Jan 2009; Michał Ziąbkowski <mziab@o2.pl>
+  kadu-panelkadu-0.6_rc1.ebuild, kadu-panelkadu-0.6.0_p1.ebuild,
+  kadu-panelkadu-0.6.0_p2.ebuild, kadu-panelkadu-0.6.5_p2.ebuild,
+  +metadata.xml:
+  Some repoman fixes.
+
+  08 Dec 2008; Michał Ziąbkowski <mziab@o2.pl> Manifest:
+  Removed remnants of rc2 from Manifest.
+
+  03 Jul 2008; Michał Ziąbkowski <mziab@o2.pl>
+  +kadu-panelkadu-0.6.0_p2.ebuild:
+  Bumped.
+
+  07 Jun 2008; Michał Ziąbkowski <mziab@o2.pl>
+  kadu-panelkadu-0.6_rc1.ebuild, kadu-panelkadu-0.6.0_p1.ebuild:
+  Fixed missing MOD_LDFLAGS.
+
+  07 Jun 2008; Michał Ziąbkowski <mziab@o2.pl>
+  +kadu-panelkadu-0.6.0_p1.ebuild:
+  Bumped.
+
+  20 May 2008; Michał Ziąbkowski <mziab@o2.pl>
+  -kadu-panelkadu-0.6_beta3.ebuild:
+  Removed cruft.
+
+  31 Mar 2008; Michał Ziąbkowski <mziab@o2.pl>
+  +kadu-panelkadu-0.6_rc1.ebuild:
+  Bumped
+

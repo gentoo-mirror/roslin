@@ -1,0 +1,10 @@
+# ChangeLog for games-util/fteqcc
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  07 Jun 2013; Piotr Szymaniak <szarpaj@grubelek.pl> metadata.xml:
+  games-util/fteqcc: Updated metadata.
+
+  22 Mar 2008; Piotr Szymaniak <lazy_bum@o2.pl> +fteqcc-3343.ebuild,
+  +files/fteqcc-3343-cleanup-source.patch:
+  Version bump, fixed patch from 2501 build.

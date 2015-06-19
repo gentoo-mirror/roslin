@@ -1,0 +1,32 @@
+# ChangeLog for games-sports/f1spirit
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  20 Sep 2014; Piotr Szymaniak <szarpaj@grubelek.pl> files/0.rc9-Makefile.patch:
+  Fixed linker errors.
+
+  07 Jun 2013; Piotr Szymaniak <szarpaj@grubelek.pl> metadata.xml:
+  games-sports/f1spirit: Updated metadata.
+
+  19 Feb 2012; Piotr Szymaniak <szarpaj@grubelek.pl> +files/0.rc9-curl.patch,
+  f1spirit-0_rc9-r1615.ebuild:
+  Added patch for newer curl.
+
+*f1spirit-0_rc9-r1615 (12 Jan 2010)
+
+  12 Jan 2010; Piotr Szymaniak <lazy_bum@o2.pl> files/0.rc9-Makefile.patch,
+  -f1spirit-0_rc9.ebuild, +f1spirit-0_rc9-r1615.ebuild:
+  Updated ebuild, thanks to Ville Aakko (bug #261773).
+
+  10 Mar 2009; Piotr Szymaniak <lazy_bum@o2.pl> f1spirit-0_rc9.ebuild:
+  Added missing use-depend.
+
+  09 Mar 2009; Piotr Szymaniak <lazy_bum@o2.pl> f1spirit-0_rc9.ebuild:
+  Added ~amd64 keyword.
+
+  08 Mar 2009; Piotr Szymaniak <lazy_bum@o2.pl> f1spirit-0_rc9.ebuild:
+  Fixed KEYWORDS, added proper die.
+
+  08 Mar 2009; Piotr Szymaniak <lazy_bum@o2.pl> +files/0.rc9-Makefile.patch,
+  +f1spirit-0_rc9.ebuild:
+  Initial ebuild (thanks to idl0r from #gentoo-sunrise for help).

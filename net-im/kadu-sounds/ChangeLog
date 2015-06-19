@@ -1,0 +1,40 @@
+# ChangeLog for net-im/kadu-sounds
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  30 Jan 2012; Michał Ziąbkowski <mziab@o2.pl> kadu-sounds-0.6.5.ebuild:
+  Updated URIs.
+
+  30 Jan 2010; Michał Ziąbkowski <mziab@o2.pl> kadu-sounds-0.6.5.ebuild:
+  Abandoned redundant inherit.
+
+  30 Jan 2010; Michał Ziąbkowski <mziab@o2.pl> kadu-sounds-0.6.5.ebuild:
+  Style fixes.
+
+  19 Jan 2010; Michał Ziąbkowski <mziab@o2.pl> kadu-sounds-0.6.5.ebuild:
+  Dropped dep on kadu-core.
+
+  04 Oct 2009; Michał Ziąbkowski <mziab@o2.pl> -kadu-sounds-0.6.0.ebuild:
+  Removing Kadu 0.6.0.* ebuilds.
+
+  25 Jan 2009; Michał Ziąbkowski <mziab@o2.pl> kadu-sounds-0.6.0.ebuild,
+  kadu-sounds-0.6.5.ebuild, +metadata.xml:
+  Some repoman fixes.
+
+  15 Jan 2009; Piotr Szymaniak <lazy_bum@o2.pl> Manifest:
+  Tarball changed, fixed Manifest.
+
+  08 Dec 2008; Michał Ziąbkowski <mziab@o2.pl> +kadu-sounds-0.6.0.ebuild,
+  -kadu-sounds-1.1-r1.ebuild:
+  Changed versioning scheme to avoid problems during update.
+
+  08 Dec 2008; Michał Ziąbkowski <mziab@o2.pl> +kadu-sounds-0.6.5.ebuild:
+  Initial ebuild for extra sound themes.
+
+  20 May 2008; Michał Ziąbkowski <mziab@o2.pl> -kadu-sounds-1.1.ebuild:
+  Removed cruft.
+
+  13 Mar 2008; Michał Ziąbkowski <mziab@o2.pl> +kadu-sounds-1.1-r1.ebuild:
+  Fixed variable names in sound.conf, thus making the themes actually work.
+  Added a small fix to kadu.eclass while I was at it.
+

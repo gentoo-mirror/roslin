@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<herd></herd>
+	<maintainer>
+		<email>szarpaj@grubelek.pl</email>
+		<name>Piotr Szymaniak</name>
+	</maintainer>
+	<use>
+		<flag name="demo">Uses the demo data from quake1
+			(quake1-demodata)</flag>
+		<flag name="sdl-net">use SDL_net (not recommended)</flag>
+	</use>
+</pkgmetadata>
+

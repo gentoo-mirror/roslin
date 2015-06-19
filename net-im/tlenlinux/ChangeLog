@@ -1,0 +1,76 @@
+# ChangeLog for net-im/tlenlinux
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  19 Feb 2012; Piotr Szymaniak <szarpaj@grubelek.pl> tlenlinux-7.0.1.68.ebuild,
+  tlenlinux-7.0.1.71.ebuild, tlenlinux-7.0.1.72.ebuild,
+  tlenlinux-7.0.2.1.ebuild:
+  Removed PROPERTIES interactive.
+
+  19 Feb 2012; Piotr Szymaniak <szarpaj@grubelek.pl> tlenlinux-7.0.1.68.ebuild,
+  tlenlinux-7.0.1.71.ebuild, tlenlinux-7.0.1.72.ebuild,
+  tlenlinux-7.0.2.1.ebuild:
+  Added unpacker eclass.
+
+  19 Feb 2012; Piotr Szymaniak <szarpaj@grubelek.pl> tlenlinux-7.0.1.68.ebuild,
+  tlenlinux-7.0.1.71.ebuild, tlenlinux-7.0.1.72.ebuild,
+  tlenlinux-7.0.2.1.ebuild:
+  Removed check_license.
+
+*tlenlinux-7.0.2.1 (19 Apr 2011)
+
+  19 Apr 2011; Michał Ziąbkowski <mziab@o2.pl> +tlenlinux-7.0.2.1.ebuild:
+  Bumped.
+
+  27 Mar 2011; Michał Ziąbkowski <mziab@o2.pl> tlenlinux-7.0.1.68.ebuild,
+  tlenlinux-7.0.1.71.ebuild, tlenlinux-7.0.1.72.ebuild:
+  Updated phonon dep.
+
+*tlenlinux-7.0.1.72 (14 Feb 2011)
+
+  14 Feb 2011; Michał Ziąbkowski <mziab@o2.pl> +tlenlinux-7.0.1.72.ebuild:
+  Bumped.
+
+  09 Jan 2011; Michał Ziąbkowski <mziab@o2.pl> -tlenlinux-7.0.1.65.ebuild,
+  -tlenlinux-7.0.1.67.ebuild, tlenlinux-7.0.1.68.ebuild,
+  tlenlinux-7.0.1.71.ebuild:
+  Fixed phonon deps. Removed some cruft.
+
+*tlenlinux-7.0.1.71 (27 Nov 2010)
+
+  27 Nov 2010; Michał Ziąbkowski <mziab@o2.pl> +tlenlinux-7.0.1.71.ebuild:
+  Bumped. Upped Qt dep to 4.7.
+
+*tlenlinux-7.0.1.68 (07 Jul 2010)
+
+  07 Jul 2010; Michał Ziąbkowski <mziab@o2.pl> -tlenlinux-7.0.1.58.ebuild,
+  -tlenlinux-7.0.1.63.ebuild, +tlenlinux-7.0.1.68.ebuild:
+  Bumped. Removed cruft.
+
+*tlenlinux-7.0.1.67 (29 Jun 2010)
+
+  29 Jun 2010; Michał Ziąbkowski <mziab@o2.pl> +tlenlinux-7.0.1.67.ebuild:
+  Bumped. Upped required Qt4 version.
+
+*tlenlinux-7.0.1.65 (09 May 2010)
+
+  09 May 2010; Michał Ziąbkowski <mziab@o2.pl> +tlenlinux-7.0.1.65.ebuild:
+  Bumped.
+
+*tlenlinux-7.0.1.63 (01 May 2010)
+
+  01 May 2010; Michał Ziąbkowski <mziab@o2.pl> +tlenlinux-7.0.1.63.ebuild:
+  Bumped.
+
+  23 Feb 2010; Michał Ziąbkowski <mziab@o2.pl> tlenlinux-7.0.1.58.ebuild:
+  Replaced insinto/doins with domenu.
+
+  30 Jan 2010; Michał Ziąbkowski <mziab@o2.pl> metadata.xml:
+  Added description for phonon flag.
+
+*tlenlinux-7.0.1.58 (30 Jan 2010)
+
+  30 Jan 2010; Michał Ziąbkowski <mziab@o2.pl> +tlenlinux-7.0.1.58.ebuild,
+  +metadata.xml:
+  New ebuild based on the one from piczu-overlay. Seems to work :)
+

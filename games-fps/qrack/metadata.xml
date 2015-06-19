@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<herd></herd>
+	<maintainer>
+		<email>szarpaj@grubelek.pl</email>
+		<name>Piotr Szymaniak</name>
+	</maintainer>
+	<use>
+		<flag name='doe'>Install also Dissolution of Eternity mission
+			pack.</flag>
+		<flag name='dzip'>Adds extra dzip support.</flag>
+		<flag name='lights'>Adds extra lights.</flag>
+		<flag name='skins'>Install extra skins for models.</flag>
+		<flag name='soa'>Install also Scourge of Armagon mission pack.</flag>
+		<flag name='textures'>Install high quality textures.</flag>
+	</use>
+</pkgmetadata>
+

@@ -1,0 +1,54 @@
+# ChangeLog for games-puzzle/pushover
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*pushover-0.0.5 (07 Jun 2013)
+
+  07 Jun 2013; Piotr Szymaniak <szarpaj@grubelek.pl> +pushover-0.0.5.ebuild,
+  -pushover-0.0.3-r1.ebuild, files/pushover-nodocs.patch:
+  games-puzzle/pushover: Version bump.
+
+*pushover-0.0.3-r1 (19 Feb 2012)
+
+  19 Feb 2012; Piotr Szymaniak <szarpaj@grubelek.pl> -pushover-0.0.3.ebuild,
+  +pushover-0.0.3-r1.ebuild:
+  Added missing depend.
+
+*pushover-0.0.3 (13 May 2011)
+
+  13 May 2011; Piotr Szymaniak <szarpaj@grubelek.pl> -pushover-0.0.2.ebuild,
+  +pushover-0.0.3.ebuild, metadata.xml:
+  Bumped.
+
+  28 Jan 2011; Piotr Szymaniak <szarpaj@grubelek.pl> -pushover-0.0.1.ebuild:
+  Removed cruft.
+
+  02 Jan 2010; Michał Ziąbkowski <mziab@o2.pl> pushover-0.0.2.ebuild:
+  Fixed unquoted variable.
+
+  23 Dec 2009; Piotr Szymaniak <lazy_bum@o2.pl> pushover-0.0.2.ebuild:
+  Readded ~amd64.
+
+  23 Dec 2009; Piotr Szymaniak <lazy_bum@o2.pl> pushover-0.0.2.ebuild,
+  files/pushover-nodocs.patch:
+  Gha.
+
+  23 Dec 2009; Piotr Szymaniak <lazy_bum@o2.pl> pushover-0.0.2.ebuild,
+  +files/pushover-nodocs.patch:
+  Fixed doc installation, nls is still borked.
+
+  23 Dec 2009; Piotr Szymaniak <lazy_bum@o2.pl> pushover-0.0.1.ebuild:
+  Masked with same reason as 0.0.2.
+
+  23 Dec 2009; Piotr Szymaniak <lazy_bum@o2.pl> pushover-0.0.1.ebuild,
+  +pushover-0.0.2.ebuild:
+  Version bump. Masked due to borked install dirs.
+
+  05 Dec 2008; Piotr Szymaniak <lazy_bum@o2.pl> pushover-0.0.1.ebuild:
+  Added ~amd64 keyword (bug #248940).
+
+  16 Nov 2008; Piotr Szymaniak <lazy_bum@o2.pl> pushover-0.0.1.ebuild:
+  Fixed missing depend.
+
+  16 Nov 2008; Piotr Szymaniak <lazy_bum@o2.pl> +pushover-0.0.1.ebuild:
+  New package.

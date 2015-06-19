@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd></herd>
+<maintainer>
+  <email>mziab@o2.pl</email>
+  <name>Michał Ziąbkowski</name>
+</maintainer>
+<use>
+	<flag name='debug'>Enables bsnes debugger</flag>
+	<flag name='profile_accuracy'>Enables the 'accuracy' emulation core</flag>
+	<flag name='profile_compatibility'>Enables the 'compatibility' emulation core</flag>
+	<flag name='profile_performance'>Enables the 'performance' emulation core</flag>
+	<flag name='sgb'>Enables Super Gameboy emulation</flag>
+	<flag name='snesfilter'>Enables additional image filters</flag>
+	<flag name='snesreader'>Provides extra loading features, including IPS patching and support for multiple compression formats</flag>
+</use>
+</pkgmetadata>

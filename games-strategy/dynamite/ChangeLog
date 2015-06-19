@@ -1,0 +1,12 @@
+# ChangeLog for games-strategy/dynamite
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  07 Jun 2013; Piotr Szymaniak <szarpaj@grubelek.pl> metadata.xml:
+  games-strategy/dynamite: Updated metadata.
+
+  26 Jan 2009; Piotr Szymaniak <lazy_bum@o2.pl> dynamite-1.1.ebuild:
+  Fixed missing || die and typo in description.
+
+  01 May 2008; Piotr Szymaniak <lazy_bum@o2.pl> dynamite-1.1.ebuild:
+  Remove icon extension from desktop entry to match Icon Theme Specification.

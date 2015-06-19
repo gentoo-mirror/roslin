@@ -1,0 +1,25 @@
+# ChangeLog for games-fps/nprquake-sdl
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  07 Jun 2013; Piotr Szymaniak <szarpaj@grubelek.pl> metadata.xml:
+  Updated metadata information.
+
+  07 Mar 2010; Piotr Szymaniak <lazy_bum@o2.pl> nprquake-sdl-1-r2.ebuild:
+  Updated depends. Dropped keywords as it segfaults for me.
+
+  07 Mar 2010; Piotr Szymaniak <lazy_bum@o2.pl> nprquake-sdl-1-r2.ebuild:
+  Updated SRC_URI, Shub-Niggurath bless quaddicted.
+
+  22 Jan 2009; Michał Ziąbkowski <mziab@o2.pl> Manifest:
+  Fixed Manifest.
+
+  26 Mar 2008; Piotr Szymaniak <lazy_bum@o2.pl> nprquake-sdl-1-r2.ebuild,
+  +files/nprquake-sdl-exec-stack.patch, +files/nprquake-sdl-makefiles.patch,
+  files/nprquake-sdl-save-in-home.patch,
+  +files/nprquake-sdl-sys_printf.patch:
+  Patches are now separeted.
+
+  25 Mar 2008; Piotr Szymaniak <lazy_bum@o2.pl> +nprquake-sdl-1-r2.ebuild,
+  +files/nprquake-sdl-save-in-home.patch:
+  New version - one new render and proper save dir.

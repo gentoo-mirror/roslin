@@ -1,0 +1,24 @@
+diff --git a/bass/Makefile b/bass/Makefile
+index 8dbe753..054833f 100755
+--- a/bass/Makefile
++++ b/bass/Makefile
+@@ -1,8 +1,8 @@
+ include ../nall/Makefile
+ 
+ application := bass
+-flags := $(flags) -O3 -fomit-frame-pointer -I.. -DBASS_BINARY
+-link := $(link) -s
++flags := $(flags) $(CXXFLAGS) -std=c++11 -I.. -DBASS_BINARY
++link := $(link)
+ objects := obj/$(application).o
+ 
+ all: $(objects)
+@@ -13,7 +13,7 @@ obj/$(application).o: $(application).cpp $(application).hpp $(call rwildcard,cor
+ 	$(compiler) $(cppflags) $(flags) -o obj/$(application).o -c $(application).cpp
+ 
+ install:
+-	sudo cp $(application) /usr/local/bin/$(application)
++	install -D -m 755 $(application) $(DESTDIR)/usr/bin/$(application)
+ 
+ clean:
+ 	$(call delete,obj/*.o)

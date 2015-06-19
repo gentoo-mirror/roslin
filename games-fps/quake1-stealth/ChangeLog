@@ -1,0 +1,18 @@
+# ChangeLog for games-fps/quake1-stealth
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  22 Jan 2009; Michał Ziąbkowski <mziab@o2.pl> quake1-stealth-1.2.ebuild:
+  Added missing IUSE.
+
+  13 Apr 2008; Piotr Szymaniak <lazy_bum@o2.pl> -quake1-stealth-1.1.ebuild,
+  +quake1-stealth-1.2.ebuild:
+  Version bump.
+
+  20 Mar 2008; Piotr Szymaniak <lazy_bum@o2.pl> -quake1-stealth-1.ebuild,
+  +quake1-stealth-1.1.ebuild:
+  New version released, bumped to 1.1.
+
+  20 Mar 2008; Piotr Szymaniak <lazy_bum@o2.pl> +quake1-stealth-1.ebuild:
+  New package.
+

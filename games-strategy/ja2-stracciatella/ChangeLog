@@ -1,0 +1,48 @@
+# ChangeLog for games-strategy/ja2-stracciatella
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+
+  07 Jun 2013; Piotr Szymaniak <szarpaj@grubelek.pl> metadata.xml:
+  games-strategy/ja2-stracciatella: Updated metadata.
+
+  22 Nov 2010; Piotr Szymaniak <lazy_bum@o2.pl>
+  ja2-stracciatella-0.12.1.ebuild, ja2-stracciatella-9999.ebuild:
+  Updated homepage.
+
+*ja2-stracciatella-0.12.1 (08 Jun 2010)
+
+  08 Jun 2010; Piotr Szymaniak <lazy_bum@o2.pl>
+  -ja2-stracciatella-0.10.ebuild, -ja2-stracciatella-0.11.ebuild,
+  +ja2-stracciatella-0.12.1.ebuild:
+  Version bump.
+
+  25 Jan 2009; Michał Ziąbkowski <mziab@o2.pl>
+  +ja2-stracciatella-0.11.ebuild:
+  Bumped.
+
+  22 Jan 2009; Michał Ziąbkowski <mziab@o2.pl>
+  ja2-stracciatella-0.10.ebuild, ja2-stracciatella-9999.ebuild:
+  Fixed trailing whitespace and license.
+
+  06 Jun 2008; Piotr Szymaniak <lazy_bum@o2.pl>
+  -ja2-stracciatella-0.7.ebuild, -ja2-stracciatella-0.8.ebuild,
+  +ja2-stracciatella-0.10.ebuild:
+  Version bump.
+
+*ja2-stracciatella-0.8 (26 Feb 2008)
+
+  26 Feb 2008; Piotr Szymaniak <lazy_bum@o2.pl>
+  +ja2-stracciatella-0.8.ebuild:
+  Version bump (don't know if this works ;).
+
+*ja2-stracciatella-9999 (14 Dec 2007)
+
+  14 Dec 2007; Piotr Szymaniak <lazy_bum@o2.pl>
+  ja2-stracciatella-9999.ebuild:
+  New ebuild.
+
+*ja2-stracciatella-0.7 (25 Oct 2007)
+
+  25 Oct 2007; Piotr Szymaniak <lazy_bum@o2.pl>
+  +ja2-stracciatella-0.7.ebuild, -ja2-stracciatella-0.5.ebuild,
+  -ja2-stracciatella-0.6.ebuild:
+  Version bump.

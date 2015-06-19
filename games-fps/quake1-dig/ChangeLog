@@ -1,0 +1,11 @@
+# ChangeLog for games-fps/quake1-dig
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+
+  22 Jan 2009; Michał Ziąbkowski <mziab@o2.pl> quake1-dig-1.ebuild:
+  Added missing IUSE.
+
+  21 Jan 2009; Piotr Szymaniak <lazy_bum@o2.pl> quake1-dig-1.ebuild:
+  Added die to dodoc.
+
+  22 Sep 2007; Piotr Szymaniak <lazy_bum@o2.pl> quake1-dig-1.ebuild:
+  Improved previous ebuild. This one works!

@@ -1,0 +1,12 @@
+diff --git a/Joystick.h b/Joystick.h
+index 10914aa..3b7d78a 100755
+--- a/Joystick.h
++++ b/Joystick.h
+@@ -39,6 +39,7 @@
+ #include <fcntl.h>
+ #include <errno.h>
+ #include <string.h>
++#include <unistd.h>
+ #include <sys/ioctl.h>
+ #include <sys/time.h>
+ #include <linux/joystick.h>

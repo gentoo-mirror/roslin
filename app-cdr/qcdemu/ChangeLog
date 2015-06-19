@@ -1,0 +1,77 @@
+# ChangeLog for app-cdr/qcdemu
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  01 Feb 2013; Michał Ziąbkowski <mziab@o2.pl> qcdemu-0.2.4.ebuild:
+  Fixed dep.
+
+  01 Feb 2012; Michał Ziąbkowski <mziab@o2.pl> qcdemu-0.2.4.ebuild:
+  Fixed qt dep.
+
+  29 Jan 2010; Michał Ziąbkowski <mziab@o2.pl> -qcdemu-0.2.2.ebuild,
+  -qcdemu-0.2.3.ebuild:
+  Dropped old cruft.
+
+  29 Jan 2010; Michał Ziąbkowski <mziab@o2.pl> qcdemu-0.2.4.ebuild:
+  Ported to qt4-r2.
+
+*qcdemu-0.2.4 (11 Jan 2010)
+
+  11 Jan 2010; Michał Ziąbkowski <mziab@o2.pl> +qcdemu-0.2.4.ebuild:
+  Bumped. Added nls flag.
+
+  23 Dec 2009; Michał Ziąbkowski <mziab@o2.pl> qcdemu-0.2.2.ebuild,
+  qcdemu-0.2.3.ebuild:
+  Regenerate translations.
+
+  21 Dec 2009; Michał Ziąbkowski <mziab@o2.pl> -qcdemu-0.2.1.ebuild,
+  -qcdemu-0.2.1-r1.ebuild:
+  Removed cruft.
+
+  21 Nov 2009; Michał Ziąbkowski <mziab@o2.pl> +qcdemu-0.2.3.ebuild:
+  Bumped.
+
+  31 Aug 2009; Michał Ziąbkowski <mziab@o2.pl> qcdemu-0.2.1.ebuild,
+  qcdemu-0.2.1-r1.ebuild, +qcdemu-0.2.2.ebuild:
+  Bumped. Fixed deps.
+
+  12 May 2009; Michał Ziąbkowski <mziab@o2.pl> qcdemu-0.2.1.ebuild,
+  qcdemu-0.2.1-r1.ebuild:
+  Updated SRC_URI
+
+  29 Apr 2009; Michał Ziąbkowski <mziab@o2.pl> +qcdemu-0.2.1-r1.ebuild,
+  +files/qcdemu-mimelnk.patch:
+  Bumped with patch.
+
+  07 Feb 2009; Michał Ziąbkowski <mziab@o2.pl> qcdemu-0.2.1.ebuild:
+  Fixed monolithic Qt4 dep.
+
+  14 Jan 2009; Michał Ziąbkowski <mziab@o2.pl> qcdemu-0.2.1.ebuild:
+  Ported to EAPI 2
+
+  06 Aug 2008; Michał Ziąbkowski <mziab@o2.pl> -qcdemu-0.1-r1.ebuild,
+  -qcdemu-0.2.ebuild, +qcdemu-0.2.1.ebuild:
+  Bumped. Removed previous versions.
+
+  02 Aug 2008; Michał Ziąbkowski <mziab@o2.pl> qcdemu-0.1-r1.ebuild,
+  qcdemu-0.2.ebuild:
+  Simplified USE flag check.
+
+  29 Jul 2008; Michał Ziąbkowski <mziab@o2.pl> qcdemu-0.1-r1.ebuild,
+  qcdemu-0.2.ebuild:
+  Replaced qt4_min_version.
+
+  24 Jul 2008; Michał Ziąbkowski <mziab@o2.pl> qcdemu-0.1-r1.ebuild,
+  +qcdemu-0.2.ebuild:
+  Bumped. Fixed deps.
+
+  12 Jun 2008; Michał Ziąbkowski <mziab@o2.pl> qcdemu-0.1-r1.ebuild:
+  Added EAPI.
+
+  12 Jun 2008; Michał Ziąbkowski <mziab@o2.pl> -qcdemu-0.1.ebuild,
+  +qcdemu-0.1-r1.ebuild:
+  Fixed split Qt deps.
+
+  02 Jun 2008; Michał Ziąbkowski <mziab@o2.pl> +qcdemu-0.1.ebuild:
+  Initial ebuild.
+

@@ -1,0 +1,13 @@
+diff --git a/qb/config.libs.sh b/qb/config.libs.sh
+index bdd3d29..ab54853 100644
+--- a/qb/config.libs.sh
++++ b/qb/config.libs.sh
+@@ -186,7 +186,7 @@ fi
+ 
+ check_lib STRL -lc strlcpy
+ 
+-check_pkgconf PYTHON python3
++check_pkgconf PYTHON python-%PYTHON_VER%
+ 
+ add_define_make OS "$OS"
+ 

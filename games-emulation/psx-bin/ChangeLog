@@ -1,0 +1,28 @@
+# ChangeLog for games-emulation/psx-bin
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*psx-bin-1.13-r1 (15 Jan 2015)
+
+  15 Jan 2015; Michał Ziąbkowski <mziab@o2.pl> +psx-bin-1.13-r1.ebuild:
+  Rev-bump with tentative multilib support. Just abi_x86_32, since gtkglext
+  isn't provided by any emul-linux-x86 package.
+
+  06 May 2011; Michał Ziąbkowski <mziab@o2.pl> psx-bin-1.13.ebuild:
+  Fixed gtk+ dep.
+
+  28 Jan 2010; Michał Ziąbkowski <mziab@o2.pl> psx-bin-1.13.ebuild:
+  Make desktop entry.
+
+  21 Jan 2010; Michał Ziąbkowski <mziab@o2.pl> psx-bin-1.13.ebuild:
+  Dropped RESTRICT=strip.
+
+  19 Feb 2009; Michał Ziąbkowski <mziab@o2.pl> psx-bin-1.13.ebuild:
+  Added some missing deps.
+
+  19 Jan 2009; Michał Ziąbkowski <mziab@o2.pl> psx-bin-1.13.ebuild:
+  Changed license to freedist.
+
+  09 Jun 2008; Piotr Szymaniak <lazy_bum@o2.pl> psx-bin-1.13.ebuild:
+  Fixed LICENSE and gtk+ dependency.
+

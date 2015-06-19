@@ -1,0 +1,55 @@
+commit c9ec0c559ffea15853d383f374efacb03b0600ba
+Author: Michał Ziąbkowski <mziab@o2.pl>
+Date:   Fri Sep 23 19:48:34 2011 +0200
+
+    Unbundle minizip.
+
+diff --git a/Osmose-0-9-96-QT.pro b/Osmose-0-9-96-QT.pro
+index 8ea6a05..6b6cf73 100644
+--- a/Osmose-0-9-96-QT.pro
++++ b/Osmose-0-9-96-QT.pro
+@@ -4,9 +4,11 @@
+ 
+ TEMPLATE = app
+ TARGET = 
+-DEPENDPATH += . cpu osmose unzip
+-INCLUDEPATH += . cpu osmose unzip
++DEPENDPATH += . cpu osmose
++INCLUDEPATH += . cpu osmose
+ LIBS += -lz -lasound
++CONFIG += link_pkgconfig
++PKGCONFIG += minizip
+ QT+=opengl
+ 
+ # Input
+@@ -44,10 +46,7 @@ HEADERS += EmulationThread.h \
+            osmose/VDP.h \
+            osmose/VDP_GG.h \
+            osmose/Version.h \
+-           osmose/WaveWriter.h \
+-           unzip/crypt.h \
+-           unzip/ioapi.h \
+-           unzip/unzip.h
++           osmose/WaveWriter.h
+ FORMS += Configuration.ui LogWindow.ui
+ SOURCES += EmulationThread.cpp \
+            Joystick.cpp \
+@@ -84,5 +83,3 @@ SOURCES += EmulationThread.cpp \
+            osmose/VDP.cpp \
+            osmose/VDP_GG.cpp \
+            osmose/WaveWriter.cpp \
+-           unzip/ioapi.c \
+-           unzip/unzip.c
+diff --git a/osmose/MemoryMapper.h b/osmose/MemoryMapper.h
+index a42f912..e62e8bb 100755
+--- a/osmose/MemoryMapper.h
++++ b/osmose/MemoryMapper.h
+@@ -36,7 +36,7 @@
+ #include <fstream>
+ #include <sstream>
+ #include <iomanip>
+-#include "unzip/unzip.h"
++#include "unzip.h"
+ #include "Options.h"
+ #include "Definitions.h"
+ #include "DebugEventThrower.h"

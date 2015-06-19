@@ -1,0 +1,49 @@
+# ChangeLog for games-server/mednafen-server
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+
+  28 Jul 2012; Piotr Szymaniak <szarpaj@grubelek.pl> metadata.xml:
+  Changed contact info.
+
+*mednafen-server-0.5.0 (28 Jul 2012)
+
+  28 Jul 2012; Piotr Szymaniak <szarpaj@grubelek.pl>
+  -mednafen-server-0.4.1.ebuild, +mednafen-server-0.5.0.ebuild:
+  Bumped.
+
+  04 May 2011; Piotr Szymaniak <szarpaj@grubelek.pl>
+  -mednafen-server-0.3.0.ebuild, mednafen-server-0.4.1.ebuild:
+  Added amd64 keyword, removed cruft.
+
+*mednafen-server-0.4.1 (08 Mar 2011)
+
+  08 Mar 2011; Piotr Szymaniak <szarpaj@grubelek.pl>
+  +mednafen-server-0.4.1.ebuild:
+  Quick and dirty version bump.
+
+  21 Jan 2009; Piotr Szymaniak <lazy_bum@o2.pl>
+  mednafen-server-0.3.0.ebuild:
+  Ported to EAPI 2, added missing || die.
+
+  21 Jan 2009; Michał Ziąbkowski <mziab@o2.pl>
+  mednafen-server-0.3.0.ebuild:
+  Removed redundant inherit.
+
+  20 Nov 2008; Piotr Szymaniak <lazy_bum@o2.pl>
+  mednafen-server-0.3.0.ebuild:
+  Removed useless src_compile.
+
+  13 Aug 2008; Piotr Szymaniak <lazy_bum@o2.pl>
+  mednafen-server-0.3.0.ebuild:
+  Fixed quoting.
+
+  30 Nov 2007; Piotr Szymaniak <lazy_bum@o2.pl> mednafen-server-0.3.0.ebuild:
+  Changed category to games-server.
+
+  22 Nov 2007; Piotr Szymaniak <lazy_bum@o2.pl> mednafen-server-0.3.0.ebuild:
+  Changed HOMEPAGE.
+
+*mednafen-server-0.3.0 (13 Nov 2007)
+
+  13 Nov 2007; Piotr Szymaniak <lazy_bum@o2.pl>
+  +mednafen-server-0.3.0.ebuild:
+  Initial ebuild.

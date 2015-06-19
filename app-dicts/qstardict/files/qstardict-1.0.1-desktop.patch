@@ -1,0 +1,13 @@
+diff --git a/qstardict/qstardict.desktop b/qstardict/qstardict.desktop
+index 2041606..2cd3c38 100644
+--- a/qstardict/qstardict.desktop
++++ b/qstardict/qstardict.desktop
+@@ -6,7 +6,7 @@ GenericName=Dictionary
+ Icon=qstardict
+ Name=QStarDict
+ Type=Application
+-Categories=Qt;Dictionary;Utility;
++Categories=Qt;Dictionary;Utility;Office;TextTools;
+ Name[ru]=QStarDict
+ GenericName[ru]=Словарь
+ Name[tr]=QStarDict

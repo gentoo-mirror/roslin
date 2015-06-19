@@ -1,0 +1,518 @@
+# ChangeLog for games-emulation/bsnes
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+
+  08 Jun 2013; Michał Ziąbkowski <mziab@o2.pl> -bsnes-073.ebuild,
+  -bsnes-082-r1.ebuild, -bsnes-083.ebuild, -bsnes-084.ebuild,
+  -bsnes-085.ebuild, -bsnes-086.ebuild, -bsnes-086-r1.ebuild,
+  -bsnes-087.ebuild, -bsnes-088.ebuild, -files/bsnes-077-makefile.patch,
+  -files/bsnes-082-global-paths.patch, -files/bsnes-083-global-paths.patch,
+  -files/bsnes-083-makefile.patch, -files/bsnes-085-global-paths.patch,
+  -files/bsnes-085-makefile.patch, -files/bsnes-086-global-paths.patch,
+  -files/bsnes-086-performance-build.patch, -files/bsnes-087-makefile.patch:
+  Removed cruft.
+
+*bsnes-073-r1 (19 Apr 2013)
+
+  19 Apr 2013; Michał Ziąbkowski <mziab@o2.pl> +bsnes-073-r1.ebuild,
+  +files/bsnes-073-gcc46.patch, +files/bsnes-073-gcc47.patch:
+  Rev-bump with build fixes for GCC 4.6 and 4.7.
+
+  24 Jun 2012; Michał Ziąbkowski <mziab@o2.pl> bsnes-083.ebuild,
+  bsnes-084.ebuild, bsnes-085.ebuild, bsnes-086.ebuild, bsnes-086-r1.ebuild,
+  bsnes-087.ebuild, bsnes-088.ebuild, bsnes-088-r1.ebuild:
+  Re-added keywords, since gcc-4.6 isn't hardmasked anymore.
+
+*bsnes-088-r1 (24 Jun 2012)
+
+  24 Jun 2012; Michał Ziąbkowski <mziab@o2.pl> +bsnes-088-r1.ebuild:
+  Rev-bumped with EAPI=4 port.
+
+  25 Apr 2012; Michał Ziąbkowski <mziab@o2.pl> files/bsnes-088-profile.patch:
+  Fixed profile path.
+
+*bsnes-088 (24 Apr 2012)
+
+  24 Apr 2012; Michał Ziąbkowski <mziab@o2.pl> +bsnes-088.ebuild,
+  +files/bsnes-088-makefile.patch, +files/bsnes-088-profile.patch:
+  Bumped.
+
+*bsnes-087 (06 Mar 2012)
+
+  06 Mar 2012; Michał Ziąbkowski <mziab@o2.pl> +bsnes-087.ebuild,
+  +files/bsnes-087-global-paths.patch, +files/bsnes-087-makefile.patch:
+  Bumped.
+
+*bsnes-086-r1 (16 Feb 2012)
+
+  16 Feb 2012; Michał Ziąbkowski <mziab@o2.pl> +bsnes-086-r1.ebuild,
+  +files/bsnes-086-performance-build.patch:
+  Rev-bumped with patch to fix building the performance profile.
+
+*bsnes-086 (13 Feb 2012)
+
+  13 Feb 2012; Michał Ziąbkowski <mziab@o2.pl>
+  files/bsnes-083-global-paths.patch, bsnes-085.ebuild,
+  files/bsnes-085-global-paths.patch, +bsnes-086.ebuild,
+  +files/bsnes-086-global-paths.patch:
+  Bumped. Fixed some flubs that went unnoticed.
+
+  06 Feb 2012; Michał Ziąbkowski <mziab@o2.pl> bsnes-082-r1.ebuild,
+  bsnes-083.ebuild, bsnes-084.ebuild, bsnes-085.ebuild:
+  Regenerate .moc to fix build with qt-4.8.
+
+*bsnes-085 (13 Jan 2012)
+*bsnes-084 (13 Jan 2012)
+*bsnes-083 (13 Jan 2012)
+*bsnes-082-r1 (13 Jan 2012)
+*bsnes-073 (13 Jan 2012)
+
+  13 Jan 2012; Michał Ziąbkowski <mziab@o2.pl> -bsnes-0.073.ebuild,
+  -files/bsnes-0.073-makefile.patch, -files/bsnes-0.077-makefile.patch,
+  -bsnes-0.082-r1.ebuild, -files/bsnes-0.082-global-paths.patch,
+  -bsnes-0.083.ebuild, -files/bsnes-0.083-global-paths.patch,
+  -files/bsnes-0.083-makefile.patch, -bsnes-0.084.ebuild, -bsnes-0.085.ebuild,
+  -files/bsnes-0.085-global-paths.patch, -files/bsnes-0.085-makefile.patch,
+  +bsnes-073.ebuild, +files/bsnes-073-makefile.patch,
+  +files/bsnes-077-makefile.patch, +bsnes-082-r1.ebuild,
+  +files/bsnes-082-global-paths.patch, +bsnes-083.ebuild,
+  +files/bsnes-083-global-paths.patch, +files/bsnes-083-makefile.patch,
+  +bsnes-084.ebuild, +bsnes-085.ebuild, +files/bsnes-085-global-paths.patch,
+  +files/bsnes-085-makefile.patch:
+  Changed versioning.
+
+*bsnes-0.085 (02 Jan 2012)
+
+  02 Jan 2012; Michał Ziąbkowski <mziab@o2.pl> +bsnes-0.085.ebuild,
+  +files/bsnes-0.085-global-paths.patch, +files/bsnes-0.085-makefile.patch:
+  Bumped.
+
+  07 Nov 2011; Michał Ziąbkowski <mziab@o2.pl> bsnes-0.084.ebuild,
+  -files/bsnes-0.084-fix-crash.patch:
+  Upstream re-uploaded the tarball.
+
+  07 Nov 2011; Michał Ziąbkowski <mziab@o2.pl> bsnes-0.084.ebuild,
+  +files/bsnes-0.084-fix-crash.patch:
+  Added patch to fix last-minute UI crash in 0.084.
+
+  07 Nov 2011; Michał Ziąbkowski <mziab@o2.pl>
+  -files/bsnes-0.076-toolkit.patch, -bsnes-0.077.ebuild, -bsnes-0.078.ebuild,
+  -bsnes-0.079.ebuild, -bsnes-0.080.ebuild, -bsnes-0.081.ebuild,
+  -bsnes-0.082.ebuild:
+  Removed cruft.
+
+*bsnes-0.084 (07 Nov 2011)
+
+  07 Nov 2011; Michał Ziąbkowski <mziab@o2.pl> +bsnes-0.084.ebuild:
+  Bumped.
+
+  15 Oct 2011; Michał Ziąbkowski <mziab@o2.pl> bsnes-0.083.ebuild:
+  Oops. Left in some testing code.
+
+*bsnes-0.083 (13 Oct 2011)
+
+  13 Oct 2011; Michał Ziąbkowski <mziab@o2.pl> +bsnes-0.083.ebuild,
+  +files/bsnes-0.083-global-paths.patch, +files/bsnes-0.083-makefile.patch:
+  Bumped. Missing keywords for now due to dep on gcc-4.6.
+
+  30 Sep 2011; Michał Ziąbkowski <mziab@o2.pl> bsnes-0.082-r1.ebuild:
+  Fixed pre-stripped filters.
+
+  30 Sep 2011; Michał Ziąbkowski <mziab@o2.pl> bsnes-0.082-r1.ebuild:
+  Only install OpenGL shaders.
+
+*bsnes-0.082-r1 (16 Sep 2011)
+
+  16 Sep 2011; Michał Ziąbkowski <mziab@o2.pl> +bsnes-0.082-r1.ebuild,
+  +files/bsnes-0.082-global-paths.patch:
+  Bumped. Now installs cheat database, shaders and optionally filters globally
+  and uses them if none are found in the config dir.
+
+*bsnes-0.082 (21 Aug 2011)
+
+  21 Aug 2011; Michał Ziąbkowski <mziab@o2.pl> +bsnes-0.082.ebuild:
+  Bumped.
+
+*bsnes-0.081 (19 Aug 2011)
+
+  19 Aug 2011; Michał Ziąbkowski <mziab@o2.pl> +bsnes-0.081.ebuild:
+  Bumped.
+
+*bsnes-0.080 (04 Jul 2011)
+*bsnes-0.079 (04 Jul 2011)
+*bsnes-0.078 (04 Jul 2011)
+*bsnes-0.077 (04 Jul 2011)
+
+  04 Jul 2011; Michał Ziąbkowski <mziab@o2.pl> bsnes-0.073.ebuild,
+  +files/bsnes-0.076-toolkit.patch, +bsnes-0.077.ebuild,
+  +files/bsnes-0.077-makefile.patch, +bsnes-0.078.ebuild, +bsnes-0.079.ebuild,
+  +bsnes-0.080.ebuild, metadata.xml:
+  Merged back bsnes-phoenix with some minor clean-up.
+
+  04 Jul 2011; Michał Ziąbkowski <mziab@o2.pl>
+  -files/bsnes-0.064-makefile.patch, -files/bsnes-0.068-makefile.patch,
+  -files/bsnes-0.069-makefile.patch, -bsnes-0.070.ebuild,
+  -files/bsnes-0.070-makefile.patch, -bsnes-0.071.ebuild,
+  -files/bsnes-0.071-makefile.patch, -bsnes-0.072.ebuild:
+  Removed old patches.
+
+  26 Dec 2010; Michał Ziąbkowski <mziab@o2.pl> bsnes-0.073.ebuild:
+  Block on bsnes-qt.
+
+  26 Dec 2010; Michał Ziąbkowski <mziab@o2.pl> bsnes-0.073.ebuild:
+  Added missing supergameboy dep.
+
+  25 Dec 2010; Michał Ziąbkowski <mziab@o2.pl> bsnes-0.073.ebuild,
+  files/bsnes-0.073-makefile.patch:
+  Cleaned up Makefile patch a bit.
+
+  25 Dec 2010; Michał Ziąbkowski <mziab@o2.pl> bsnes-0.073.ebuild:
+  Block on bsnes-phoenix.
+
+*bsnes-0.073 (25 Dec 2010)
+
+  25 Dec 2010; Michał Ziąbkowski <mziab@o2.pl> +bsnes-0.073.ebuild,
+  +files/bsnes-0.073-makefile.patch:
+  Bumped. Moved plugins out to separate packages in preparation for further
+  changes.
+
+*bsnes-0.072 (23 Oct 2010)
+
+  23 Oct 2010; Michał Ziąbkowski <mziab@o2.pl> -bsnes-0.068.ebuild,
+  -bsnes-0.069.ebuild, +bsnes-0.072.ebuild:
+  Bumped. Remove some old ebuilds.
+
+*bsnes-0.071 (22 Oct 2010)
+
+  22 Oct 2010; Michał Ziąbkowski <mziab@o2.pl> +bsnes-0.071.ebuild,
+  +files/bsnes-0.071-makefile.patch:
+  Bumped. Sticking to the Qt gui for now.
+
+  26 Sep 2010; Michał Ziąbkowski <mziab@o2.pl> bsnes-0.069.ebuild,
+  files/bsnes-0.069-makefile.patch, files/bsnes-0.070-makefile.patch:
+  Fixed one glaring omission in Makefile patches.
+
+*bsnes-0.070 (26 Sep 2010)
+
+  26 Sep 2010; Michał Ziąbkowski <mziab@o2.pl> +bsnes-0.070.ebuild,
+  +files/bsnes-0.070-makefile.patch:
+  Bumped again.
+
+*bsnes-0.069 (25 Sep 2010)
+
+  25 Sep 2010; Michał Ziąbkowski <mziab@o2.pl> +bsnes-0.069.ebuild,
+  +files/bsnes-0.069-makefile.patch:
+  Bumped.
+
+*bsnes-0.068 (21 Aug 2010)
+
+  21 Aug 2010; Michał Ziąbkowski <mziab@o2.pl> -bsnes-0.067.ebuild,
+  +bsnes-0.068.ebuild, +files/bsnes-0.068-makefile.patch:
+  Bumped. This version adds selectable cpu cores and a launcher. The ebuild
+  compiles all of them, so build times will be longer than in previous
+  versions.
+
+*bsnes-0.067 (01 Aug 2010)
+
+  01 Aug 2010; Michał Ziąbkowski <mziab@o2.pl> -bsnes-0.066.ebuild,
+  -files/bsnes-0.066-ppu.patch, +bsnes-0.067.ebuild:
+  The old version was revoked. Bumped to new one.
+
+  01 Aug 2010; Michał Ziąbkowski <mziab@o2.pl> bsnes-0.066.ebuild,
+  +files/bsnes-0.066-ppu.patch:
+  Added hotfix for sprite corruption.
+
+*bsnes-0.066 (01 Aug 2010)
+
+  01 Aug 2010; Michał Ziąbkowski <mziab@o2.pl> -bsnes-0.065.ebuild,
+  +bsnes-0.066.ebuild:
+  Bumped. Upstream removed previous tarball, so purging the old ebuild.
+
+*bsnes-0.065 (27 Jun 2010)
+
+  27 Jun 2010; Michał Ziąbkowski <mziab@o2.pl> -bsnes-0.064.ebuild,
+  +bsnes-0.065.ebuild:
+  Bumped. Removed previous version.
+
+*bsnes-0.064 (14 Apr 2010)
+
+  14 Apr 2010; Michał Ziąbkowski <mziab@o2.pl> -bsnes-0.063.ebuild,
+  -bsnes-0.063_p10.ebuild, -files/bsnes-0.063-makefile.patch,
+  -files/bsnes-0.063_p10-makefile.patch, -bsnes-0.064_rc1.ebuild,
+  +bsnes-0.064.ebuild, +files/bsnes-0.064-makefile.patch,
+  -files/bsnes-0.064_rc1-debugger-fix.patch,
+  -files/bsnes-0.064_rc1-makefile.patch:
+  Bumped. Removed cruft, since upstream removed the old tarballs.
+
+  12 Apr 2010; Michał Ziąbkowski <mziab@o2.pl> bsnes-0.064_rc1.ebuild,
+  +files/bsnes-0.064_rc1-debugger-fix.patch:
+  Reinstanted debug flag in _rc1 thanks to patch.
+
+*bsnes-0.064_rc1 (12 Apr 2010)
+
+  12 Apr 2010; Michał Ziąbkowski <mziab@o2.pl> +bsnes-0.064_rc1.ebuild,
+  +files/bsnes-0.064_rc1-makefile.patch:
+  Another test build, this time from the stable branch. No snesreader,
+  snesfilter or sgb bundled and the debugger is broken, so no keywords this
+  time either.
+
+  11 Apr 2010; Michał Ziąbkowski <mziab@o2.pl> bsnes-0.063.ebuild,
+  bsnes-0.063_p10.ebuild:
+  Fixed stupid typo. Added missing dep.
+
+  08 Apr 2010; Michał Ziąbkowski <mziab@o2.pl> bsnes-0.063.ebuild,
+  files/bsnes-0.063-makefile.patch:
+  Refactored install phase.
+
+*bsnes-0.063_p10 (08 Apr 2010)
+
+  08 Apr 2010; Michał Ziąbkowski <mziab@o2.pl> +bsnes-0.063_p10.ebuild,
+  +files/bsnes-0.063_p10-makefile.patch:
+  Added technical preview with cycle-based PPU. Not meant for mere mortals.
+  Also, no snesreader, snesfilter and sgb bundled with this release. Use
+  this only if you know what you're doing.
+
+  28 Mar 2010; Michał Ziąbkowski <mziab@o2.pl>
+  -files/bsnes-0.059-makefile.patch, -files/bsnes-0.061_p1-makefile.patch,
+  bsnes-0.063.ebuild, +files/bsnes-0.063-makefile.patch:
+  Replaced sed magic with a new Makefile patch. Purged old patches.
+
+*bsnes-0.063 (28 Mar 2010)
+
+  28 Mar 2010; Michał Ziąbkowski <mziab@o2.pl> -bsnes-0.060.ebuild,
+  -bsnes-0.062_p4.ebuild, +bsnes-0.063.ebuild:
+  Bumped to newest stable. Cleaned out old cruft.
+
+*bsnes-0.062_p4 (16 Mar 2010)
+
+  16 Mar 2010; Michał Ziąbkowski <mziab@o2.pl> -bsnes-0.062.ebuild,
+  +bsnes-0.062_p4.ebuild:
+  Last beta was obsoleted. Bumped to new one.
+
+*bsnes-0.062 (15 Mar 2010)
+
+  15 Mar 2010; Michał Ziąbkowski <mziab@o2.pl> -bsnes-0.061_p1.ebuild,
+  +bsnes-0.062.ebuild:
+  Previous 0.061_p1 superseded by 0.062. Upstream still considers it beta,
+  so no keywords for now.
+
+  09 Mar 2010; Michał Ziąbkowski <mziab@o2.pl> bsnes-0.061_p1.ebuild:
+  Fixed link flags for snesfilter.
+
+*bsnes-0.061_p1 (09 Mar 2010)
+
+  09 Mar 2010; Michał Ziąbkowski <mziab@o2.pl> +bsnes-0.061_p1.ebuild,
+  +files/bsnes-0.061_p1-makefile.patch:
+  Added beta with missing keywords.
+
+  22 Feb 2010; Michał Ziąbkowski <mziab@o2.pl> bsnes-0.060.ebuild:
+  Upped qt dep.
+
+  15 Feb 2010; Michał Ziąbkowski <mziab@o2.pl> bsnes-0.060.ebuild:
+  Dropped external plugins and related blockers.
+
+*bsnes-0.060 (09 Feb 2010)
+
+  09 Feb 2010; Michał Ziąbkowski <mziab@o2.pl> -bsnes-0.059.ebuild,
+  -bsnes-0.059_p2.ebuild, -bsnes-0.059_p6.ebuild, +bsnes-0.060.ebuild:
+  Bumped. Now packaged like snapshots. Removed cruft.
+
+*bsnes-0.059_p6 (25 Jan 2010)
+
+  25 Jan 2010; Michał Ziąbkowski <mziab@o2.pl> +bsnes-0.059_p6.ebuild:
+  Added new snapshot.
+
+  23 Jan 2010; Michał Ziąbkowski <mziab@o2.pl> bsnes-0.059.ebuild,
+  bsnes-0.059_p2.ebuild:
+  Moved all instances of sed to src_prepare.
+
+  20 Jan 2010; Michał Ziąbkowski <mziab@o2.pl> bsnes-0.059_p2.ebuild:
+  Fixed stripping in snapshot.
+
+  20 Jan 2010; Michał Ziąbkowski <mziab@o2.pl>
+  -files/bsnes-0.047-makefile.patch, bsnes-0.059.ebuild,
+  bsnes-0.059_p2.ebuild, +files/bsnes-0.059-makefile.patch:
+  Applied SpanKY's suggestions. Updated Makefile patch. Still need to
+  disable stripping in the plugins.
+
+  14 Jan 2010; Michał Ziąbkowski <mziab@o2.pl> -bsnes-0.057.ebuild,
+  -bsnes-0.058.ebuild:
+  Cleaned out old versions.
+
+*bsnes-0.059_p2 (14 Jan 2010)
+
+  14 Jan 2010; Michał Ziąbkowski <mziab@o2.pl> +bsnes-0.059_p2.ebuild:
+  Added latest development snapshot. Since those are packaged with extra
+  libraries, the ebuild blocks on external copies of snesreader, snesfilter
+  and supergameboy, and builds the bundled ones. To my mind, that's the best
+  solution.
+
+*bsnes-0.059 (07 Jan 2010)
+
+  07 Jan 2010; Michał Ziąbkowski <mziab@o2.pl> +bsnes-0.059.ebuild:
+  Bumped.
+
+  21 Dec 2009; Michał Ziąbkowski <mziab@o2.pl> metadata.xml:
+  Fixed metadata.xml.
+
+  09 Dec 2009; Michał Ziąbkowski <mziab@o2.pl> -bsnes-0.053.ebuild,
+  -bsnes-0.054.ebuild, -bsnes-0.055.ebuild, +bsnes-0.058.ebuild:
+  Bumped. Removed cruft.
+
+  23 Nov 2009; Michał Ziąbkowski <mziab@o2.pl> +bsnes-0.057.ebuild:
+  Bumped.
+
+  04 Nov 2009; Michał Ziąbkowski <mziab@o2.pl> +bsnes-0.055.ebuild,
+  metadata.xml:
+  Bumped. Now with optional Super Gameboy support.
+
+  19 Oct 2009; Michał Ziąbkowski <mziab@o2.pl> +bsnes-0.054.ebuild:
+  Bumped.
+
+  18 Oct 2009; Michał Ziąbkowski <mziab@o2.pl> -bsnes-0.052.ebuild,
+  +bsnes-0.053.ebuild, metadata.xml:
+  Bumped. Removed previous version. Added snesfilter flag for enabling extra
+  image filters. Made snesreader optional, but enabled by default.
+
+  08 Oct 2009; Michał Ziąbkowski <mziab@o2.pl> bsnes-0.052.ebuild:
+  Fixed whitespace.
+
+  03 Oct 2009; Michał Ziąbkowski <mziab@o2.pl> -bsnes-0.050.ebuild,
+  -bsnes-0.051.ebuild, metadata.xml:
+  Removed cruft. Updated metadata.xml.
+
+  29 Sep 2009; Michał Ziąbkowski <mziab@o2.pl> +bsnes-0.052.ebuild:
+  Bumped.
+
+  28 Sep 2009; Michał Ziąbkowski <mziab@o2.pl> +bsnes-0.051.ebuild:
+  Bumped. New license. Decompression moved to new helper library. Added USE
+  flag for debugger.
+
+  25 Aug 2009; Michał Ziąbkowski <mziab@o2.pl> -bsnes-0.048.ebuild,
+  +bsnes-0.050.ebuild:
+  Bumped. Removed previous version.
+
+  21 Jul 2009; Michał Ziąbkowski <mziab@o2.pl> bsnes-0.048.ebuild:
+  Fixed disabling modules.
+
+  20 Jul 2009; Michał Ziąbkowski <mziab@o2.pl> -bsnes-0.047.ebuild,
+  +bsnes-0.048.ebuild:
+  Bumped. Removed cruft.
+
+  07 Jun 2009; Michał Ziąbkowski <mziab@o2.pl> -bsnes-0.046.ebuild,
+  -files/bsnes-0.046-makefile.patch, +bsnes-0.047.ebuild,
+  +files/bsnes-0.047-makefile.patch:
+  Bumped. Removed previous version.
+
+  12 May 2009; Michał Ziąbkowski <mziab@o2.pl>
+  +files/bsnes-0.046-makefile.patch:
+  Bumped. Removed cruft.
+
+  21 Apr 2009; Michał Ziąbkowski <mziab@o2.pl> -bsnes-0.042.ebuild,
+  +bsnes-0.045.ebuild:
+  Bumped.
+
+  20 Apr 2009; Michał Ziąbkowski <mziab@o2.pl> bsnes-0.042.ebuild:
+  Removed cruft from IUSE.
+
+  01 Apr 2009; Michał Ziąbkowski <mziab@o2.pl> -bsnes-0.041.ebuild,
+  +bsnes-0.042.ebuild:
+  Bumped.
+
+  23 Mar 2009; Michał Ziąbkowski <mziab@o2.pl> -bsnes-0.039.ebuild,
+  -bsnes-0.040.ebuild, bsnes-0.041.ebuild:
+  Updated homepage. Removed cruft.
+
+  16 Mar 2009; Michał Ziąbkowski <mziab@o2.pl> +bsnes-0.041.ebuild:
+  Bumped.
+
+  10 Mar 2009; Michał Ziąbkowski <mziab@o2.pl> +bsnes-0.040.ebuild,
+  +files/bsnes-0.040-makefile.patch:
+  Bumped. Added USE flags for selecting the gui.
+
+  17 Feb 2009; Michał Ziąbkowski <mziab@o2.pl> bsnes-0.039.ebuild:
+  Fixed libsdl dep.
+
+  11 Feb 2009; Michał Ziąbkowski <mziab@o2.pl> bsnes-0.039.ebuild:
+  Ported pkg_setup to confutils.
+
+  21 Jan 2009; Michał Ziąbkowski <mziab@o2.pl> +metadata.xml:
+  Added metadata.xml.
+
+  19 Jan 2009; Michał Ziąbkowski <mziab@o2.pl> -bsnes-0.038.ebuild,
+  +bsnes-0.039.ebuild, files/bsnes-makefile.patch:
+  Bumped. Removed previous version. Updated patch.
+
+  12 Jan 2009; Piotr Szymaniak <lazy_bum@o2.pl> ChangeLog:
+  Fixed typo. :P
+
+  12 Jan 2009; Piotr Szymaniak <lazy_bum@o2.pl> bsnes-0.038.ebuild:
+  Fixed trailing whitespaces.
+
+  15 Dec 2008; Michał Ziąbkowski <mziab@o2.pl> -bsnes-0.037a.ebuild,
+  +bsnes-0.038.ebuild, +files/bsnes-makefile.patch:
+  Bumped. Added USE flags for enabling video/audio modules. Changed deps.
+  Replaced sed with patch.
+
+  06 Nov 2008; Michał Ziąbkowski <mziab@o2.pl> -bsnes-0.036.ebuild,
+  +bsnes-0.037a.ebuild:
+  Bumped. Removed previous version.
+
+  18 Sep 2008; Michał Ziąbkowski <mziab@o2.pl> -bsnes-0.035.ebuild,
+  +bsnes-0.036.ebuild:
+  Bumped. Removed previous version.
+
+  23 Aug 2008; Michał Ziąbkowski <mziab@o2.pl> -bsnes-0.034.ebuild,
+  +bsnes-0.035.ebuild:
+  Bumped. Removed previous version.
+
+  21 Aug 2008; Michał Ziąbkowski <mziab@o2.pl> -bsnes-0.033.ebuild,
+  +bsnes-0.034.ebuild:
+  Bumped. Removed previous version.
+
+  13 Aug 2008; Piotr Szymaniak <lazy_bum@o2.pl> bsnes-0.033.ebuild:
+  Fixed whitespace.
+
+  20 Jul 2008; Michał Ziąbkowski <mziab@o2.pl> -bsnes-0.032a.ebuild,
+  +bsnes-0.033.ebuild:
+  Bumped. Removed previous version.
+
+  26 May 2008; Michał Ziąbkowski <mziab@o2.pl> -bsnes-0.032.ebuild,
+  +bsnes-0.032a.ebuild:
+  Bumped.
+
+  25 May 2008; Michał Ziąbkowski <mziab@o2.pl> -bsnes-0.031.ebuild,
+  +bsnes-0.032.ebuild:
+  Bumped. Previous version removed.
+
+  13 Apr 2008; Michał Ziąbkowski <mziab@o2.pl> -bsnes-0.030.ebuild,
+  -bsnes-0.030-r1.ebuild, +bsnes-0.031.ebuild:
+  Bumped. Removed old versions.
+
+  02 Apr 2008; Michał Ziąbkowski <mziab@o2.pl> +bsnes-0.030-r1.ebuild:
+  Fixed some more bad deps. Seems freealut isn't needed anymore. Missed libao
+  and libXv the last time. Rev-bumped.
+
+  01 Apr 2008; Michał Ziąbkowski <mziab@o2.pl> bsnes-0.030.ebuild:
+  Added missing dep
+
+  27 Mar 2008; Michał Ziąbkowski <mziab@o2.pl> -bsnes-0.028.ebuild,
+  -bsnes-0.028.01.ebuild, -bsnes-0.029.ebuild, bsnes-0.030.ebuild:
+  Clean out old ebuilds. Some cosmetic fixes.
+
+  26 Mar 2008; Michał Ziąbkowski <mziab@o2.pl> +bsnes-0.030.ebuild:
+  Bumped.
+
+  17 Mar 2008; Michał Ziąbkowski <mziab@o2.pl> +bsnes-0.029.ebuild:
+  Bumped.
+
+  15 Feb 2008; Piotr Szymaniak <lazy_bum@o2.pl> +bsnes-0.028.01.ebuild:
+  Version bump by Michał "mziab" Ziąbkowski.
+
+  06 Feb 2008; Piotr Szymaniak <lazy_bum@o2.pl> bsnes-0.028.ebuild:
+  Keyworded ~ for x86 and added ~amd64.
+  Michał "mziab" Ziąbkowski added jma and zip USE flags.
+
+*bsnes-0.028 (05 Feb 2008)
+
+  05 Feb 2008; Piotr Szymaniak <lazy_bum@o2.pl> +bsnes-0.028.ebuild:
+  Initial ebuild. A little thanks goes to Michał "mziab" Ziąbkowski.

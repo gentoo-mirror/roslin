@@ -1,0 +1,32 @@
+# Copyright 1999-2007 Gentoo Foundation.
+# Distributed under the terms of the GNU General Public License v2
+
+# This file contains descriptions of local USE flags, and the ebuilds which
+# contain them.
+
+# Keep it sorted.
+
+app-portage/portage-bashrc-ng:autopatch - Enable autopatch module.
+app-portage/portage-bashrc-ng:distclean - Enable distclean module.
+app-portage/portage-bashrc-ng:localepurge - Enable localepurge module.
+app-portage/portage-bashrc-ng:oldtmpfs - Enable old tmpfs module.
+app-portage/portage-bashrc-ng:perpackage - Enable perpackage module.
+app-portage/portage-bashrc-ng:resumemerge - Enable resumemerge module.
+app-portage/portage-bashrc-ng:tmpfs - Enable tmpfs module.
+games-emulation/bsnes:jma - Adds support for reading JMA archives
+games-emulation/snes9x-gtk:jma - Adds support for reading JMA archives
+games-emulation/snes9x-gtk:netplay - Adds network play support
+games-emulation/snes9x-gtk:xrandr - Enables XRandR support
+games-emulation/sdlmame:wolfmame - Adds WolfMAME patches
+games-emulation/zsnes:custom-cflags - Enables compilation with custom CFLAGS
+games-emulation/zsnes:experimental - Enables work-in-progress code
+games-engines/onscripter-en:scale - Enables experimental scaling support
+games-fps/quake1-soa:vispatch - Adds patches for transparent water
+games-fps/quake1-zerstorer:vispatch - Adds patches for transparent water
+net-im/kadu:dcop - Installs dcop export module
+net-im/kadu:emoticons - Installs additional emoticon themes
+net-im/kadu:icons - Installs additional icon themes
+net-im/kadu:nodefmodules - Disables default modules
+net-im/kadu:powerkadu - Installs powerkadu modules
+net-im/kadu:sounds - Installs additional sound themes
+net-im/kadu:voice - Installs voice chat module

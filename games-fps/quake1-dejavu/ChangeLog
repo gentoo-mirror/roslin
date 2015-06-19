@@ -1,0 +1,14 @@
+# ChangeLog for games-fps/quake1-dejavu
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+
+  22 Jan 2009; Michał Ziąbkowski <mziab@o2.pl> quake1-dejavu-1.0.ebuild:
+  Added missing IUSE.
+
+  31 Mar 2008; Piotr Szymaniak <lazy_bum@o2.pl> quake1-dejavu-1.0.ebuild:
+  Download link is dead.
+
+  01 Oct 2007; Piotr Szymaniak <lazy_bum@o2.pl> quake1-dejavu-1.0.ebuild:
+  Updated MOD_TITLE to more reasonable name.
+
+  22 Sep 2007; Piotr Szymaniak <lazy_bum@o2.pl> quake1-dejavu-1.0.ebuild:
+  New ebuild.

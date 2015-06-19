@@ -1,0 +1,21 @@
+# ChangeLog for games-fps/quake1-quoth
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  01 Mar 2010; Piotr Szymaniak <lazy_bum@o2.pl> quake1-quoth-2.1.ebuild:
+  Updated homepage and src_uri.
+
+  22 Jan 2009; Michał Ziąbkowski <mziab@o2.pl> quake1-quoth-2.1.ebuild:
+  Added missing IUSE.
+
+  06 Sep 2008; Piotr Szymaniak <lazy_bum@o2.pl> -quake1-quoth-2.ebuild,
+  +quake1-quoth-2.1.ebuild:
+  Added latest patch.
+
+  17 Mar 2008; Piotr Szymaniak <lazy_bum@o2.pl> quake1-quoth-2.ebuild:
+  Fixed the ebuild to download FULL Quoth2, doh.
+  Added experimental "tyrquake" support.
+
+  10 Mar 2008; Piotr Szymaniak <lazy_bum@o2.pl> -quake1-quoth-1.ebuild,
+  +quake1-quoth-2.ebuild:
+  Small fixes and name change (this looks more like "part 2")

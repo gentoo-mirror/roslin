@@ -1,0 +1,72 @@
+# ChangeLog for games-fps/darkplaces
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  09 Nov 2010; Piotr Szymaniak <lazy_bum@o2.pl> darkplaces-9999.ebuild:
+  Changed deps: media-libs/jpeg -> virtual/jpeg
+
+  21 Jul 2009; Piotr Szymaniak <lazy_bum@o2.pl>
+  -darkplaces-20090106_beta1.ebuild, -darkplaces-20090128.ebuild:
+  Updated in portage.
+
+  09 Feb 2009; Piotr Szymaniak <lazy_bum@o2.pl> -darkplaces-20081004.ebuild,
+  +darkplaces-20090128.ebuild:
+  Version bump.
+
+  22 Jan 2009; Michał Ziąbkowski <mziab@o2.pl> Manifest:
+  Fixed Manifest.
+
+  08 Jan 2009; Piotr Szymaniak <lazy_bum@o2.pl> -darkplaces-20070927.ebuild,
+  -darkplaces-20080723_beta2.ebuild, -darkplaces-20080826_beta1.ebuild,
+  +darkplaces-20081004.ebuild, +darkplaces-20090106_beta1.ebuild:
+  Version bump.
+
+  27 Aug 2008; Piotr Szymaniak <lazy_bum@o2.pl>
+  -darkplaces-20080705_beta1.ebuild, +darkplaces-20080826_beta1.ebuild:
+  Version bump.
+
+  05 Aug 2008; Piotr Szymaniak <lazy_bum@o2.pl>
+  +darkplaces-20080723_beta2.ebuild:
+  Version bump.
+
+  13 Jul 2008; Piotr Szymaniak <lazy_bum@o2.pl>
+  -darkplaces-20080517_beta1.ebuild, +darkplaces-20080705_beta1.ebuild:
+  Version bump.
+
+  18 May 2008; Piotr Szymaniak <lazy_bum@o2.pl>
+  -darkplaces-20080508_beta2.ebuild, +darkplaces-20080517_beta1.ebuild:
+  Version bump.
+
+  11 May 2008; Piotr Szymaniak <lazy_bum@o2.pl>
+  -darkplaces-20080425_beta1.ebuild, +darkplaces-20080508_beta2.ebuild:
+  Version bump.
+
+  01 May 2008; Piotr Szymaniak <lazy_bum@o2.pl>
+  -darkplaces-20080410_beta1.ebuild, +darkplaces-20080425_beta1.ebuild:
+  Version bump.
+
+  13 Apr 2008; Piotr Szymaniak <lazy_bum@o2.pl>
+  -darkplaces-20080324_beta3.ebuild, -darkplaces-20080406_beta1.ebuild,
+  +darkplaces-20080410_beta1.ebuild:
+  Version bump.
+
+  09 Apr 2008; Piotr Szymaniak <lazy_bum@o2.pl>
+  +darkplaces-20080406_beta1.ebuild:
+  Version bump.
+
+  07 Apr 2008; Piotr Szymaniak <lazy_bum@o2.pl>
+  -darkplaces-20080311_beta1.ebuild:
+  Removed previous beta
+
+  03 Apr 2008; Piotr Szymaniak <lazy_bum@o2.pl>
+  +darkplaces-20080324_beta3.ebuild:
+  Version bump.
+
+  18 Mar 2008; Piotr Szymaniak <lazy_bum@o2.pl>
+  +darkplaces-20080311_beta1.ebuild:
+  Newest beta added, with some small ebuild changes.
+
+  13 Mar 2008; Piotr Szymaniak <lazy_bum@o2.pl> -darkplaces-20070412.ebuild,
+  +darkplaces-20070927.ebuild:
+  Version bump, thanks to Paul Bredbury (bug #140074)
+

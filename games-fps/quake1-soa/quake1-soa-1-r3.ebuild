@@ -1,10 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
 MOD_TITLE="Scourge of Armagon"
 MOD_CMDLINE_OPTIONS="-hipnotic"
-use !lights && MOD_DEPEND_UNZIP=n
+MOD_DEPEND_UNZIP=n
 
 inherit cdrom eutils games games-mod
 

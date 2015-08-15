@@ -1,6 +1,12 @@
 # ChangeLog for media-video/qnapi
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
 # $Header
+
+*qnapi-0.1.8 (15 Aug 2015)
+
+  15 Aug 2015; Michał Ziąbkowski <mziab@o2.pl> -qnapi-0.1.6_rc2-r1.ebuild,
+  +qnapi-0.1.8.ebuild:
+  Bumped. Removed old broken ebuild.
 
   18 Oct 2013; Michał Ziąbkowski <mziab@o2.pl> qnapi-0.1.6_rc2-r1.ebuild:
   Fixed slots in Qt deps.

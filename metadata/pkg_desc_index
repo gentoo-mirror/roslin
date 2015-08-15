@@ -134,6 +134,7 @@ media-gfx/svg2pdf 0.1.3: Convert an SVG file to a PDF file (using cairo)
 media-gfx/svg2png 0.1.3: Render an SVG image to a PNG image (using cairo)
 media-sound/flac2mp3 0.3.0_rc3: A perl script to convert FLAC files to mp3 files.
 media-video/kmediafactory 0.8.1-r3: Template based DVD authoring software
+media-video/qnapi 0.1.8: Free software for automatic fetching movie subtitles using online databases
 media-video/v4l2ucp 2.0.2 2.0.2-r1: A universal control panel for all Video for Linux Two (V4L2) devices
 net-im/kadu 1.5 2.0 2.1 3.0_alpha1 3.0_alpha2 3.0_beta1: A multi-protocol IM client written in Qt4
 net-im/kadu-anonymous_check 1.0_p3 2.0.1: Automatic sender lookup module for Kadu

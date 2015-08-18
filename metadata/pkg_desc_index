@@ -122,6 +122,7 @@ games-sports/roadfighter 1.0.1269: Konami's Road Fighter remake
 games-strategy/dynamite 1.1: A thrilling isometric game where you use dynamite against evil
 games-strategy/ja2-stracciatella 0.12.1 9999: An enhanced port of Jagged Alliance 2 to SDL
 games-strategy/lordsawar 0.2.0: Another Free Warlords II clone
+games-util/beat 0.3: A utility for applying and creating BPS patches
 games-util/deltapatcher 1.0 1.0-r1: A frontend for the xdelta patching utility
 games-util/fteqcc 3343: QC compiler
 games-util/hmap2 20121222: Maps compiler with colored lighting and lots of other features.

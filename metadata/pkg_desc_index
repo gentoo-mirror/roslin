@@ -6,7 +6,7 @@ app-dicts/qstardict 0.13.1 1.0.1: QStarDict is a StarDict clone written with usi
 app-emulation/fs-uae 2.2.0 2.2.2 2.2.3 2.3.99_beta2 2.4.0 2.4.1 2.4.3: Amiga emulator based on WinUAE emulation code
 app-emulation/fs-uae-launcher 2.2.0 2.2.2 2.2.2-r1 2.2.3 2.3.99_beta2 2.4.0 2.4.1 2.4.3 2.4.3-r1: PyQt4 launcher for FS-UAE
 app-office/qfaktury 0.6.2_p1: A Polish tool for printing and managing invoices
-app-text/wxmedit 2.9.7 2.9.8 2.9.9 2.9.9-r1 3.0: wxMEdit, a cross-platform Text/Hex Editor, a fork of MadEdit
+app-text/wxmedit 2.9.7 2.9.8 2.9.9 2.9.9-r1 3.0 3.0.2: wxMEdit, a cross-platform Text/Hex Editor, a fork of MadEdit
 dev-games/bsnes-c++98-libretro 9999: bsnes emulation core ported to libretro, C++98-compatible variant
 dev-games/bsnes-libretro 9999: bsnes emulation core ported to libretro
 dev-games/snesfilter 0.072 9999: A bsnes helper library which provides image filters

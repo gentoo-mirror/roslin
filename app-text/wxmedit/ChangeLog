@@ -2,6 +2,11 @@
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*wxmedit-3.0.2 (31 Aug 2015)
+
+  31 Aug 2015; Michał Ziąbkowski <mziab@o2.pl> +wxmedit-3.0.2.ebuild:
+  Bumped.
+
 *wxmedit-3.0 (10 Aug 2015)
 
   10 Aug 2015; Michał Ziąbkowski <mziab@o2.pl> +wxmedit-3.0.ebuild:

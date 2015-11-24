@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile install
+DEPEND=>=net-im/pidgin-2.6.5 virtual/pkgconfig
+DESCRIPTION=Tlen.pl support for Pidgin (plugin)
+EAPI=0
+HOMEPAGE=http://nic.com.pl/~alek/pidgin-tlen
+KEYWORDS=~amd64 ~x86
+LICENSE=BSD
+RDEPEND=>=net-im/pidgin-2.6.5
+SLOT=0
+SRC_URI=mirror://github/pelotasplus/pidgin-tlen/pidgin-tlen-20101112.tar.gz
+_eclass_exported_funcs=src_compile:- src_install:-
+_md5_=519828fd2dc2db3359dbf7d7fc5452ba

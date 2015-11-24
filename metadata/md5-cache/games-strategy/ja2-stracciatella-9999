@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile install postinst preinst setup unpack
+DEPEND=sys-libs/zlib media-libs/libsdl dev-vcs/subversion net-misc/rsync
+DESCRIPTION=An enhanced port of Jagged Alliance 2 to SDL
+EAPI=0
+HOMEPAGE=http://tron.homeunix.org/ja2
+IUSE=linguas_nl linguas_en linguas_fr linguas_de linguas_it linguas_pl linguas_ru linguas_ru_gold
+LICENSE=SFI-SCLA
+RDEPEND=sys-libs/zlib media-libs/libsdl games-misc/games-envd
+SLOT=0
+_eclass_exported_funcs=pkg_preinst:subversion pkg_postinst:- pkg_setup:- src_unpack:subversion src_compile:- src_install:-
+_eclasses_=base	3fe4f8980633fd7bc69e9887209ba2fe	eutils	f20548a2f7b0128068388cd2ec26708a	games	4dae170e58f773c484e07d18ef441804	multilib	3972ca401cf7dbb430df9995f5d8d580	subversion	4fee0a764150bb4dda27ed4d2c4ed7ce	toolchain-funcs	7a212e5e01adfa4805c9978366e6ee85	user	906f3c8eb3a2350a4f1191a89baa3e46
+_md5_=978c27420d06ba0591ace00758d4bd92

@@ -1,0 +1,15 @@
+DEFINED_PHASES=compile configure install prepare test
+DEPEND=dev-libs/libnl glib? ( dev-libs/glib:2 ) qt4? ( dev-qt/qtcore:4 )
+DESCRIPTION=A lightweight library for getting events on network online status changes
+EAPI=4
+HOMEPAGE=https://launchpad.net/ntrack
+IUSE=glib qt4
+KEYWORDS=~amd64 ~x86
+LICENSE=|| ( GPL-3 LGPL-3 )
+RDEPEND=dev-libs/libnl glib? ( dev-libs/glib:2 ) qt4? ( dev-qt/qtcore:4 )
+REQUIRED_USE=|| ( glib qt4 )
+SLOT=0
+SRC_URI=http://launchpad.net/ntrack/main/016/+download/ntrack-016.tar.gz
+_eclass_exported_funcs=src_prepare:- src_configure:- src_compile:autotools-utils src_test:autotools-utils src_install:autotools-utils
+_eclasses_=autotools	07e71b3b5690738ef7e8bc097077e00c	autotools-utils	419811142edf3516b0d0cf1a254d93cb	eutils	f20548a2f7b0128068388cd2ec26708a	libtool	b75230758539a7da029e24afdb693960	multilib	3972ca401cf7dbb430df9995f5d8d580	toolchain-funcs	7a212e5e01adfa4805c9978366e6ee85
+_md5_=ac6d3c4a0acbc7be981f11d9c1be4554

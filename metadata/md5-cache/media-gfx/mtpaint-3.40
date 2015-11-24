@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install prepare unpack
+DEPEND=>=sys-libs/zlib-1.2.1 >=media-libs/libpng-1.2.7 >=sys-devel/gettext-0.14.1 >=dev-libs/glib-2.6.4:2 >=x11-libs/gtk+-2.6.4:2 >=x11-libs/pango-1.8.0 gif? ( >=media-libs/giflib-4.1.4 ) jpeg? ( virtual/jpeg ) tiff? ( >=media-libs/tiff-3.6.1 )
+DESCRIPTION=Simple gtk+ painting program
+EAPI=3
+HOMEPAGE=http://mtpaint.sourceforge.net/
+IUSE=gif jpeg tiff
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-3
+RDEPEND=>=sys-libs/zlib-1.2.1 >=media-libs/libpng-1.2.7 >=sys-devel/gettext-0.14.1 >=dev-libs/glib-2.6.4:2 >=x11-libs/gtk+-2.6.4:2 >=x11-libs/pango-1.8.0 gif? ( >=media-libs/giflib-4.1.4 ) jpeg? ( virtual/jpeg ) tiff? ( >=media-libs/tiff-3.6.1 )
+SLOT=0
+SRC_URI=mirror://sourceforge/mtpaint/mtpaint-3.40.tar.bz2
+_eclass_exported_funcs=src_unpack:base src_prepare:- src_configure:- src_compile:base src_install:base
+_eclasses_=base	3fe4f8980633fd7bc69e9887209ba2fe	eutils	f20548a2f7b0128068388cd2ec26708a	multilib	3972ca401cf7dbb430df9995f5d8d580	toolchain-funcs	7a212e5e01adfa4805c9978366e6ee85
+_md5_=b52b289024f88314e87f9289a1dc5b43

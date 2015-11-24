@@ -1,0 +1,15 @@
+DEFINED_PHASES=compile configure install prepare test unpack
+DEPEND=>=dev-qt/qtgui-4.8.0:4 ~net-im/kadu-core-1.5 sys-devel/make >=dev-util/cmake-2.8.12 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
+DESCRIPTION=Screenshot module for Kadu
+EAPI=3
+HOMEPAGE=http://kadu.im
+IUSE=debug
+KEYWORDS=amd64 x86
+LICENSE=GPL-2
+RDEPEND=>=dev-qt/qtgui-4.8.0:4 ~net-im/kadu-core-1.5
+RESTRICT=primaryuri
+SLOT=0
+SRC_URI=http://download.kadu.im/stable/kadu-1.5.tar.bz2
+_eclass_exported_funcs=src_unpack:base src_prepare:cmake-utils src_configure:kadu src_compile:cmake-utils src_test:cmake-utils src_install:cmake-utils
+_eclasses_=base	3fe4f8980633fd7bc69e9887209ba2fe	cmake-utils	f16fa5681153277df51f001deaf17ff8	eutils	f20548a2f7b0128068388cd2ec26708a	flag-o-matic	85dc1eac3c64d8141374490ed64122e5	kadu	04d0a4ae3837a7804abe1e5c34463d63	multilib	3972ca401cf7dbb430df9995f5d8d580	toolchain-funcs	7a212e5e01adfa4805c9978366e6ee85	versionator	99ae9d758cbe7cfed19170e7d48f5a9c
+_md5_=9c0e9572f07b7c4189fe91d75526876a

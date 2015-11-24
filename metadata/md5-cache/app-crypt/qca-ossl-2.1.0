@@ -1,0 +1,11 @@
+DEFINED_PHASES=-
+DEPEND=>=app-crypt/qca-2.1.0:2
+DESCRIPTION=Fake qca-ossl package
+EAPI=5
+HOMEPAGE=http://rion-overlay.googlecode.com
+KEYWORDS=~amd64 ~x86
+LICENSE=LGPL-2
+RDEPEND=>=app-crypt/qca-2.1.0:2
+SLOT=2
+_eclass_exported_funcs=-
+_md5_=1809d7bb38dc127b67fc77ba2ef29fbd

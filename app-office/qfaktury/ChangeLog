@@ -1,6 +1,9 @@
 # ChangeLog for app-office/qfaktury
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+
+  16 Dec 2015; Michał Ziąbkowski <mziab@o2.pl> qfaktury-0.6.2_p1.ebuild:
+  Fixed bad dep.
 
   18 Oct 2013; Michał Ziąbkowski <mziab@o2.pl> qfaktury-0.6.2_p1.ebuild:
   Fixed slot in Qt dep.

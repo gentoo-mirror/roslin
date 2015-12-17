@@ -1,4 +1,4 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -17,7 +17,7 @@ SLOT="0"
 KEYWORDS=""
 IUSE=""
 
-DEPEND=">=dev-qt/qtgui-4.4[qt3support]:4"
+DEPEND=">=dev-qt/qtgui-4.4:4[qt3support]"
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${MY_P}"

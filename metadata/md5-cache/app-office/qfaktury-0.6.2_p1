@@ -1,12 +1,12 @@
 DEFINED_PHASES=compile configure install prepare unpack
-DEPEND=>=dev-qt/qtgui-4.4[qt3support]:4
+DEPEND=>=dev-qt/qtgui-4.4:4[qt3support]
 DESCRIPTION=A Polish tool for printing and managing invoices
 EAPI=2
 HOMEPAGE=http://e-linux.pl/
 LICENSE=GPL-3
-RDEPEND=>=dev-qt/qtgui-4.4[qt3support]:4
+RDEPEND=>=dev-qt/qtgui-4.4:4[qt3support]
 SLOT=0
 SRC_URI=mirror://sourceforge/qfaktury/qfaktury-0.6.2_1.tar.gz
 _eclass_exported_funcs=src_unpack:qt4-r2 src_prepare:- src_configure:qt4-r2 src_compile:qt4-r2 src_install:-
 _eclasses_=base	3fe4f8980633fd7bc69e9887209ba2fe	eutils	d9bd2ddd85a58e470b49ca997e255a4c	multilib	3972ca401cf7dbb430df9995f5d8d580	qmake-utils	bd69cb386c63df4642cf1392b50c8d81	qt4-r2	cb2cb5856695b300266b425da70e82d8	toolchain-funcs	7a212e5e01adfa4805c9978366e6ee85
-_md5_=495159287e2d932ccfbef117cca742ee
+_md5_=2d76357a0261271dfc85a84da6236681

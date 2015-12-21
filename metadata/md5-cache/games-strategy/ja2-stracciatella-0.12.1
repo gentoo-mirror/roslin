@@ -1,4 +1,4 @@
-DEFINED_PHASES=compile install postinst preinst setup
+DEFINED_PHASES=compile install postinst preinst setup unpack
 DEPEND=sys-libs/zlib media-libs/libsdl
 DESCRIPTION=An enhanced port of Jagged Alliance 2 to SDL
 EAPI=0
@@ -9,6 +9,6 @@ LICENSE=SFI-SCLA
 RDEPEND=sys-libs/zlib media-libs/libsdl games-misc/games-envd
 SLOT=0
 SRC_URI=http://tron.homeunix.org/ja2/ja2-0.12.1-source.tar.bz2
-_eclass_exported_funcs=pkg_preinst:games pkg_postinst:- pkg_setup:- src_compile:- src_install:-
-_eclasses_=eutils	d9bd2ddd85a58e470b49ca997e255a4c	games	a8dfd875e0a0eaa6accad260cd038779	multilib	3972ca401cf7dbb430df9995f5d8d580	toolchain-funcs	7a212e5e01adfa4805c9978366e6ee85	user	906f3c8eb3a2350a4f1191a89baa3e46
+_eclass_exported_funcs=pkg_preinst:games pkg_postinst:- pkg_setup:- src_unpack:base src_compile:- src_install:-
+_eclasses_=base	3fe4f8980633fd7bc69e9887209ba2fe	eutils	d9bd2ddd85a58e470b49ca997e255a4c	games	4dae170e58f773c484e07d18ef441804	multilib	3972ca401cf7dbb430df9995f5d8d580	toolchain-funcs	7a212e5e01adfa4805c9978366e6ee85	user	906f3c8eb3a2350a4f1191a89baa3e46
 _md5_=050a25d7b8514d335039e8a16a05e956

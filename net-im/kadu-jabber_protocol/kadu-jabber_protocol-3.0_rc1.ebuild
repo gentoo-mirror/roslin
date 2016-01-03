@@ -29,4 +29,4 @@ RDEPEND=">=dev-qt/qtcore-5.2.0:5
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
-PATCHES=("${FILESDIR}/${P}-qxmpp-path.patch")
+PATCHES=("${FILESDIR}/${PN}-3.0_beta1-qxmpp-path.patch")

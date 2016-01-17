@@ -136,67 +136,67 @@ media-sound/flac2mp3 0.3.0_rc3: A perl script to convert FLAC files to mp3 files
 media-video/kmediafactory 0.8.1-r3: Template based DVD authoring software
 media-video/qnapi 0.1.8: Free software for automatic fetching movie subtitles using online databases
 media-video/v4l2ucp 2.0.2 2.0.2-r1: A universal control panel for all Video for Linux Two (V4L2) devices
-net-im/kadu 1.5 2.0 2.1 3.0_alpha1 3.0_alpha2 3.0_beta1 3.0_rc1 3.0_rc2: A multi-protocol IM client written in Qt4
+net-im/kadu 1.5 2.0 2.1 3.0_alpha1 3.0_alpha2 3.0_beta1 3.0_rc1 3.0_rc2 3.0_rc3: A multi-protocol IM client written in Qt4
 net-im/kadu-anonymous_check 1.0_p3 2.0.1: Automatic sender lookup module for Kadu
-net-im/kadu-antistring 1.5 2.0 2.1 3.0_alpha1 3.0_alpha2 3.0_beta1 3.0_rc1 3.0_rc2: Protection against chain-letters for Kadu
-net-im/kadu-auto_hide 1.5 2.0 2.1 3.0_alpha1 3.0_alpha2 3.0_beta1 3.0_rc1 3.0_rc2: Kadu module for automatic window hiding
-net-im/kadu-autoaway 1.5 2.0 2.1 3.0_alpha1 3.0_alpha2 3.0_beta1 3.0_rc1 3.0_rc2: Autoaway module for Kadu
-net-im/kadu-autoresponder 1.5 2.0 2.1 3.0_alpha1 3.0_alpha2 3.0_beta1 3.0_rc1 3.0_rc2: Autoresponder module for Kadu
-net-im/kadu-autostatus 1.5 2.0 2.1 3.0_alpha1 3.0_alpha2 3.0_beta1 3.0_rc1 3.0_rc2: Autostatus module for Kadu
-net-im/kadu-cenzor 1.5 2.0 2.1 3.0_alpha1 3.0_alpha2 3.0_beta1 3.0_rc1 3.0_rc2: Profanity filter for Kadu
-net-im/kadu-chat_notify 1.5 2.0 2.1 3.0_alpha1 3.0_alpha2 3.0_beta1 3.0_rc1 3.0_rc2: Kadu module for in-chat notifications
-net-im/kadu-config_wizard 1.5 2.0 2.1 3.0_alpha1 3.0_alpha2 3.0_beta1 3.0_rc1 3.0_rc2: Configuration wizard for Kadu
-net-im/kadu-core 1.5-r1 2.0 2.1 3.0_alpha1 3.0_alpha1-r1 3.0_alpha2 3.0_beta1 3.0_rc1 3.0_rc2: The core of Kadu IM
+net-im/kadu-antistring 1.5 2.0 2.1 3.0_alpha1 3.0_alpha2 3.0_beta1 3.0_rc1 3.0_rc2 3.0_rc3: Protection against chain-letters for Kadu
+net-im/kadu-auto_hide 1.5 2.0 2.1 3.0_alpha1 3.0_alpha2 3.0_beta1 3.0_rc1 3.0_rc2 3.0_rc3: Kadu module for automatic window hiding
+net-im/kadu-autoaway 1.5 2.0 2.1 3.0_alpha1 3.0_alpha2 3.0_beta1 3.0_rc1 3.0_rc2 3.0_rc3: Autoaway module for Kadu
+net-im/kadu-autoresponder 1.5 2.0 2.1 3.0_alpha1 3.0_alpha2 3.0_beta1 3.0_rc1 3.0_rc2 3.0_rc3: Autoresponder module for Kadu
+net-im/kadu-autostatus 1.5 2.0 2.1 3.0_alpha1 3.0_alpha2 3.0_beta1 3.0_rc1 3.0_rc2 3.0_rc3: Autostatus module for Kadu
+net-im/kadu-cenzor 1.5 2.0 2.1 3.0_alpha1 3.0_alpha2 3.0_beta1 3.0_rc1 3.0_rc2 3.0_rc3: Profanity filter for Kadu
+net-im/kadu-chat_notify 1.5 2.0 2.1 3.0_alpha1 3.0_alpha2 3.0_beta1 3.0_rc1 3.0_rc2 3.0_rc3: Kadu module for in-chat notifications
+net-im/kadu-config_wizard 1.5 2.0 2.1 3.0_alpha1 3.0_alpha2 3.0_beta1 3.0_rc1 3.0_rc2 3.0_rc3: Configuration wizard for Kadu
+net-im/kadu-core 1.5-r1 2.0 2.1 3.0_alpha1 3.0_alpha1-r1 3.0_alpha2 3.0_beta1 3.0_rc1 3.0_rc2 3.0_rc3: The core of Kadu IM
 net-im/kadu-desktop_docking 1.5 2.0 2.1 3.0_alpha1 3.0_alpha2 3.0_beta1: Kadu module for desktop docking
-net-im/kadu-docking 1.5 2.0 2.1 3.0_alpha1 3.0_alpha2 3.0_beta1 3.0_rc1 3.0_rc2: Docking module for Kadu
-net-im/kadu-emoticons 1.5 2.0 2.1 3.0_alpha1 3.0_alpha2 3.0_beta1 3.0_rc1 3.0_rc2: Plugin for displaying emoticons in chats
-net-im/kadu-encryption_ng 1.5 2.0 2.1 3.0_alpha1 3.0_alpha1-r1 3.0_alpha2 3.0_beta1 3.0_rc1 3.0_rc2: Base encryption module for Kadu
-net-im/kadu-encryption_ng_simlite 1.5 2.0 2.1 3.0_alpha1 3.0_alpha2 3.0_beta1 3.0_rc1 3.0_rc2: QCA encryption module for Kadu
-net-im/kadu-encryption_otr 1.5 2.0 2.1 3.0_alpha1 3.0_alpha2 3.0_beta1 3.0_rc1 3.0_rc2: Provides extended encryption using the OTR library
-net-im/kadu-exec_notify 1.5 2.0 2.1 3.0_alpha1 3.0_alpha2 3.0_beta1 3.0_rc1 3.0_rc2: Exec notification module for Kadu
-net-im/kadu-ext_sound 1.5 2.0 2.1 3.0_alpha1 3.0_alpha2 3.0_beta1 3.0_rc1 3.0_rc2: External sound module for Kadu
-net-im/kadu-filedesc 1.5 2.0 2.1 3.0_alpha1 3.0_alpha2 3.0_beta1 3.0_rc1 3.0_rc2: File descriptions module for Kadu
-net-im/kadu-firewall 1.5 2.0 2.1 3.0_alpha1 3.0_alpha2 3.0_beta1 3.0_rc1 3.0_rc2: Protection against unwanted chats for Kadu
-net-im/kadu-freedesktop_notify 1.5 2.0 2.1 3.0_alpha1 3.0_alpha2 3.0_beta1 3.0_rc1 3.0_rc2: Kadu module for freedesktop notifications
-net-im/kadu-gadu_protocol 1.5 2.0 2.1 3.0_alpha1 3.0_alpha1-r1 3.0_alpha1-r2 3.0_alpha2 3.0_beta1 3.0_rc1 3.0_rc2: GaduGadu support module for Kadu
+net-im/kadu-docking 1.5 2.0 2.1 3.0_alpha1 3.0_alpha2 3.0_beta1 3.0_rc1 3.0_rc2 3.0_rc3: Docking module for Kadu
+net-im/kadu-emoticons 1.5 2.0 2.1 3.0_alpha1 3.0_alpha2 3.0_beta1 3.0_rc1 3.0_rc2 3.0_rc3: Plugin for displaying emoticons in chats
+net-im/kadu-encryption_ng 1.5 2.0 2.1 3.0_alpha1 3.0_alpha1-r1 3.0_alpha2 3.0_beta1 3.0_rc1 3.0_rc2 3.0_rc3: Base encryption module for Kadu
+net-im/kadu-encryption_ng_simlite 1.5 2.0 2.1 3.0_alpha1 3.0_alpha2 3.0_beta1 3.0_rc1 3.0_rc2 3.0_rc3: QCA encryption module for Kadu
+net-im/kadu-encryption_otr 1.5 2.0 2.1 3.0_alpha1 3.0_alpha2 3.0_beta1 3.0_rc1 3.0_rc2 3.0_rc3: Provides extended encryption using the OTR library
+net-im/kadu-exec_notify 1.5 2.0 2.1 3.0_alpha1 3.0_alpha2 3.0_beta1 3.0_rc1 3.0_rc2 3.0_rc3: Exec notification module for Kadu
+net-im/kadu-ext_sound 1.5 2.0 2.1 3.0_alpha1 3.0_alpha2 3.0_beta1 3.0_rc1 3.0_rc2 3.0_rc3: External sound module for Kadu
+net-im/kadu-filedesc 1.5 2.0 2.1 3.0_alpha1 3.0_alpha2 3.0_beta1 3.0_rc1 3.0_rc2 3.0_rc3: File descriptions module for Kadu
+net-im/kadu-firewall 1.5 2.0 2.1 3.0_alpha1 3.0_alpha2 3.0_beta1 3.0_rc1 3.0_rc2 3.0_rc3: Protection against unwanted chats for Kadu
+net-im/kadu-freedesktop_notify 1.5 2.0 2.1 3.0_alpha1 3.0_alpha2 3.0_beta1 3.0_rc1 3.0_rc2 3.0_rc3: Kadu module for freedesktop notifications
+net-im/kadu-gadu_protocol 1.5 2.0 2.1 3.0_alpha1 3.0_alpha1-r1 3.0_alpha1-r2 3.0_alpha2 3.0_beta1 3.0_rc1 3.0_rc2 3.0_rc3: GaduGadu support module for Kadu
 net-im/kadu-globalhotkeys 1.0_p33: Global hotkey module for Kadu
-net-im/kadu-hints 1.5 2.0 2.1 3.0_alpha1 3.0_alpha2 3.0_beta1 3.0_rc1 3.0_rc2: Hint notification module for Kadu
-net-im/kadu-history 1.5 2.0 2.1 3.0_alpha1 3.0_alpha2 3.0_beta1 3.0_rc1 3.0_rc2: History module for Kadu
-net-im/kadu-history_migration 1.5 2.0 2.1 3.0_alpha1 3.0_alpha2 3.0_beta1 3.0_rc1 3.0_rc2: History migration module for Kadu
+net-im/kadu-hints 1.5 2.0 2.1 3.0_alpha1 3.0_alpha2 3.0_beta1 3.0_rc1 3.0_rc2 3.0_rc3: Hint notification module for Kadu
+net-im/kadu-history 1.5 2.0 2.1 3.0_alpha1 3.0_alpha2 3.0_beta1 3.0_rc1 3.0_rc2 3.0_rc3: History module for Kadu
+net-im/kadu-history_migration 1.5 2.0 2.1 3.0_alpha1 3.0_alpha2 3.0_beta1 3.0_rc1 3.0_rc2 3.0_rc3: History migration module for Kadu
 net-im/kadu-icons 0.6.6: Extra icon themes for Kadu
-net-im/kadu-idle 1.5 2.0 2.1 3.0_alpha1 3.0_alpha2 3.0_beta1 3.0_rc1 3.0_rc2: Kadu module for detecting idle time
-net-im/kadu-imagelink 1.5 2.0 2.1 3.0_alpha1 3.0_alpha2 3.0_beta1 3.0_rc1 3.0_rc2: Automatic parser for image and YouTube video links
+net-im/kadu-idle 1.5 2.0 2.1 3.0_alpha1 3.0_alpha2 3.0_beta1 3.0_rc1 3.0_rc2 3.0_rc3: Kadu module for detecting idle time
+net-im/kadu-imagelink 1.5 2.0 2.1 3.0_alpha1 3.0_alpha2 3.0_beta1 3.0_rc1 3.0_rc2 3.0_rc3: Automatic parser for image and YouTube video links
 net-im/kadu-import_history 1.0_p4 2.0: History import module
 net-im/kadu-indicator_docking 1.5: Ayatana docking module for Kadu
-net-im/kadu-jabber_protocol 1.5 2.0 2.1 3.0_alpha1 3.0_alpha2-r1 3.0_beta1 3.0_rc1 3.0_rc2: Jabber support module for Kadu
+net-im/kadu-jabber_protocol 1.5 2.0 2.1 3.0_alpha1 3.0_alpha2-r1 3.0_beta1 3.0_rc1 3.0_rc2 3.0_rc3: Jabber support module for Kadu
 net-im/kadu-kadu_completion 1.0_p4 2.0: Bash completion-like module for Kadu
-net-im/kadu-last_seen 1.5 2.0 2.1 3.0_alpha1 3.0_alpha2 3.0_beta1 3.0_rc1 3.0_rc2: Last seen module for Kadu
+net-im/kadu-last_seen 1.5 2.0 2.1 3.0_alpha1 3.0_alpha2 3.0_beta1 3.0_rc1 3.0_rc2 3.0_rc3: Last seen module for Kadu
 net-im/kadu-lednotify 1.0_p34: LED notification module for Kadu
-net-im/kadu-mediaplayer 1.5 2.0 2.1 3.0_alpha1 3.0_alpha2 3.0_beta1 3.0_rc1 3.0_rc2: Media player support module for Kadu
+net-im/kadu-mediaplayer 1.5 2.0 2.1 3.0_alpha1 3.0_alpha2 3.0_beta1 3.0_rc1 3.0_rc2 3.0_rc3: Media player support module for Kadu
 net-im/kadu-messagessplitter 1.0_p6: Automatically splits too long messages
 net-im/kadu-mime_tex 1.0_p3 2.0: Mathematical TeX formula support in Kadu chats
-net-im/kadu-mpd_mediaplayer 1.5 2.0 2.1 3.0_alpha1 3.0_alpha2 3.0_beta1 3.0_rc1 3.0_rc2: mpd mediaplayer module for Kadu
-net-im/kadu-mprisplayer_mediaplayer 1.5 2.0 2.1 3.0_alpha1 3.0_alpha2 3.0_beta1 3.0_rc1 3.0_rc2: Generic MPRIS mediaplayer module for Kadu
+net-im/kadu-mpd_mediaplayer 1.5 2.0 2.1 3.0_alpha1 3.0_alpha2 3.0_beta1 3.0_rc1 3.0_rc2 3.0_rc3: mpd mediaplayer module for Kadu
+net-im/kadu-mprisplayer_mediaplayer 1.5 2.0 2.1 3.0_alpha1 3.0_alpha2 3.0_beta1 3.0_rc1 3.0_rc2 3.0_rc3: Generic MPRIS mediaplayer module for Kadu
 net-im/kadu-networkping 1.0_p5: Periodically checks the network state
 net-im/kadu-nextinfo 1.0_p10: A module providing extended contact information support
 net-im/kadu-panelkadu 1.0_p11: Makes Kadu look and behave like a panel
-net-im/kadu-pcspeaker 1.5 2.0 2.1 3.0_alpha1 3.0_alpha2 3.0_beta1 3.0_rc1 3.0_rc2: PC Speaker notification for Kadu
-net-im/kadu-phonon_sound 1.5 2.0 2.1 3.0_alpha1 3.0_alpha2 3.0_beta1 3.0_rc1 3.0_rc2: Phonon sound output module for Kadu
-net-im/kadu-profiles_import 1.5 2.0 2.1 3.0_alpha1 3.0_alpha2 3.0_beta1 3.0_rc1 3.0_rc2: Imports profiles from older Kadu versions
+net-im/kadu-pcspeaker 1.5 2.0 2.1 3.0_alpha1 3.0_alpha2 3.0_beta1 3.0_rc1 3.0_rc2 3.0_rc3: PC Speaker notification for Kadu
+net-im/kadu-phonon_sound 1.5 2.0 2.1 3.0_alpha1 3.0_alpha2 3.0_beta1 3.0_rc1 3.0_rc2 3.0_rc3: Phonon sound output module for Kadu
+net-im/kadu-profiles_import 1.5 2.0 2.1 3.0_alpha1 3.0_alpha2 3.0_beta1 3.0_rc1 3.0_rc2 3.0_rc3: Imports profiles from older Kadu versions
 net-im/kadu-qt4_docking 1.5 2.0 2.1 3.0_alpha1 3.0_alpha2 3.0_beta1: Qt4 docking module for Kadu
 net-im/kadu-qt4_docking_notify 1.5 2.0 2.1 3.0_alpha1 3.0_alpha2 3.0_beta1: Kadu notification using Qt4 docking module
-net-im/kadu-screenshot 1.5 2.0 2.1 3.0_alpha1 3.0_alpha2 3.0_beta1 3.0_rc1 3.0_rc2: Screenshot module for Kadu
+net-im/kadu-screenshot 1.5 2.0 2.1 3.0_alpha1 3.0_alpha2 3.0_beta1 3.0_rc1 3.0_rc2 3.0_rc3: Screenshot module for Kadu
 net-im/kadu-senthistory 1.0_p12: Adds history of sent messages to Kadu chat window
-net-im/kadu-simpleview 1.5 2.0 2.1 3.0_alpha1 3.0_alpha2 3.0_beta1 3.0_rc1 3.0_rc2: Simple view module for Kadu
-net-im/kadu-single_window 1.5 2.0 2.1 3.0_alpha1 3.0_alpha2 3.0_beta1 3.0_rc1 3.0_rc2: Adds single-window mode
-net-im/kadu-sms 1.5 2.0 2.1 3.0_alpha1 3.0_alpha2 3.0_beta1 3.0_rc1 3.0_rc2: Text message support module for Kadu
-net-im/kadu-sound 1.5 2.0 2.1 3.0_alpha1 3.0_alpha1-r1 3.0_alpha2 3.0_beta1 3.0_rc1 3.0_rc2: Sound support module for Kadu
+net-im/kadu-simpleview 1.5 2.0 2.1 3.0_alpha1 3.0_alpha2 3.0_beta1 3.0_rc1 3.0_rc2 3.0_rc3: Simple view module for Kadu
+net-im/kadu-single_window 1.5 2.0 2.1 3.0_alpha1 3.0_alpha2 3.0_beta1 3.0_rc1 3.0_rc2 3.0_rc3: Adds single-window mode
+net-im/kadu-sms 1.5 2.0 2.1 3.0_alpha1 3.0_alpha2 3.0_beta1 3.0_rc1 3.0_rc2 3.0_rc3: Text message support module for Kadu
+net-im/kadu-sound 1.5 2.0 2.1 3.0_alpha1 3.0_alpha1-r1 3.0_alpha2 3.0_beta1 3.0_rc1 3.0_rc2 3.0_rc3: Sound support module for Kadu
 net-im/kadu-sounds 0.6.5: Extra sound themes for Kadu
-net-im/kadu-speech 1.5 2.0 2.1 3.0_alpha1 3.0_alpha2 3.0_beta1 3.0_rc1 3.0_rc2: Reads Kadu messages with the powiedz speech synthetizer
-net-im/kadu-spellchecker 1.5 2.0 2.1 3.0_alpha1 3.0_alpha2 3.0_beta1 3.0_rc1 3.0_rc2: Spellchecker module for Kadu
-net-im/kadu-sql_history 1.5 2.0 2.1 3.0_alpha1 3.0_alpha2 3.0_beta1 3.0_rc1 3.0_rc2: SQL history module for Kadu
-net-im/kadu-tabs 1.5 2.0 2.1 3.0_alpha1 3.0_alpha2 3.0_beta1 3.0_rc1 3.0_rc2: Tabbed chat module for Kadu
-net-im/kadu-word_fix 1.5 2.0 2.1 3.0_alpha1 3.0_alpha2 3.0_beta1 3.0_rc1 3.0_rc2: Word replacement module for Kadu
+net-im/kadu-speech 1.5 2.0 2.1 3.0_alpha1 3.0_alpha2 3.0_beta1 3.0_rc1 3.0_rc2 3.0_rc3: Reads Kadu messages with the powiedz speech synthetizer
+net-im/kadu-spellchecker 1.5 2.0 2.1 3.0_alpha1 3.0_alpha2 3.0_beta1 3.0_rc1 3.0_rc2 3.0_rc3: Spellchecker module for Kadu
+net-im/kadu-sql_history 1.5 2.0 2.1 3.0_alpha1 3.0_alpha2 3.0_beta1 3.0_rc1 3.0_rc2 3.0_rc3: SQL history module for Kadu
+net-im/kadu-tabs 1.5 2.0 2.1 3.0_alpha1 3.0_alpha2 3.0_beta1 3.0_rc1 3.0_rc2 3.0_rc3: Tabbed chat module for Kadu
+net-im/kadu-word_fix 1.5 2.0 2.1 3.0_alpha1 3.0_alpha2 3.0_beta1 3.0_rc1 3.0_rc2 3.0_rc3: Word replacement module for Kadu
 net-im/pidgin-tlen 20101112: Tlen.pl support for Pidgin (plugin)
 net-im/tkabber 9999: GUI client for XMPP (Jabber) instant messaging protocol, written in Tcl/Tk.
 net-im/tlenlinux 7.0.1.68 7.0.1.71 7.0.1.72 7.0.2.1: Tlen IM client

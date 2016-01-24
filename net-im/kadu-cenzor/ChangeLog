@@ -2,6 +2,11 @@
 # Copyright 1999-2016 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*kadu-cenzor-3.0_rc4 (23 Jan 2016)
+
+  23 Jan 2016; Michał Ziąbkowski <mziab@o2.pl> +kadu-cenzor-3.0_rc4.ebuild:
+  Bumped.
+
 *kadu-cenzor-3.0_rc3 (16 Jan 2016)
 
   16 Jan 2016; Michał Ziąbkowski <mziab@o2.pl> +kadu-cenzor-3.0_rc3.ebuild:

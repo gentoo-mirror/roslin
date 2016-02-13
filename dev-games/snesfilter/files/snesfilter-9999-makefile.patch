@@ -1,19 +1,22 @@
-diff --git a/snesfilter/Makefile b/snesfilter/Makefile
-index 089b86e..08ba81b 100755
---- a/snesfilter/Makefile
-+++ b/snesfilter/Makefile
-@@ -5,12 +5,12 @@ include nall/qt/Makefile
+diff --git a/Makefile b/Makefile
+index 0d6280c..83e9505 100644
+--- a/Makefile
++++ b/Makefile
+@@ -11,7 +11,7 @@ link  :=
+ ifeq ($(DEBUG), 1)
+   flags += -O0 -g
+ else
+-  flags += -O3 -fomit-frame-pointer
++  flags += $(CXXFLAGS) -fomit-frame-pointer
+ endif
  
- c     := $(compiler) -x c -std=gnu99
- cpp   := $(compiler) -std=gnu++0x
--flags := -O3 -I. -Iobj -fomit-frame-pointer $(qtinc)
-+flags := $(CXXFLAGS) -I. -Iobj -fomit-frame-pointer $(qtinc)
- link  :=
+ # silence warnings
+@@ -19,7 +19,7 @@ flags += -Wno-switch -Wno-absolute-value -Wno-parentheses
  
  ifeq ($(platform),x)
    flags := -fPIC -fopenmp $(flags)
 -  link += -s -fopenmp -lpthread -lgomp
 +  link += -fopenmp -lpthread -lgomp
  else ifeq ($(platform),osx)
-   flags := -fPIC -fopenmp $(flags)
-   link += -fopenmp -lpthread -lgomp
+ # TODO: openmp not currently supported in Apple clang
+ #  flags := -fPIC -fopenmp $(flags)

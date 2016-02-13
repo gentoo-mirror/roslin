@@ -8,7 +8,7 @@ inherit kadu
 
 DESCRIPTION="Kadu module for freedesktop notifications"
 HOMEPAGE="http://kadu.im"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND=">=dev-qt/qtcore-5.2.0:5

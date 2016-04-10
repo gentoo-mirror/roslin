@@ -2,6 +2,12 @@
 # Copyright 1999-2016 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*kadu-encryption_otr-4.0_alpha1 (10 Apr 2016)
+
+  10 Apr 2016; Michał Ziąbkowski <mziab@o2.pl>
+  +kadu-encryption_otr-4.0_alpha1.ebuild:
+  Bumped.
+
 *kadu-encryption_otr-3.0 (13 Feb 2016)
 
   13 Feb 2016; Michał Ziąbkowski <mziab@o2.pl>

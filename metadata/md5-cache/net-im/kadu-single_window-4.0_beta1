@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install prepare test unpack
+DEPEND=>=dev-qt/qtcore-5.2.0:5 >=dev-qt/qtgui-5.2.0:5 >=dev-qt/qtwidgets-5.2.0:5 >=dev-qt/qtnetwork-5.2.0:5 >=dev-qt/qtxml-5.2.0:5 >=dev-qt/qtwebkit-5.2.0:5 >=dev-qt/qtdbus-5.2.0:5 >=dev-qt/qtx11extras-5.2.0:5 >=dev-qt/qtdeclarative-5.2.0:5[widgets] >=dev-libs/injeqt-1.0.100 ~net-im/kadu-core-4.0_beta1 virtual/pkgconfig sys-devel/make >=dev-util/cmake-2.8.12
+DESCRIPTION=Adds single-window mode
+EAPI=3
+HOMEPAGE=http://kadu.im
+IUSE=debug
+LICENSE=GPL-2
+RDEPEND=>=dev-qt/qtcore-5.2.0:5 >=dev-qt/qtgui-5.2.0:5 >=dev-qt/qtwidgets-5.2.0:5 >=dev-qt/qtnetwork-5.2.0:5 >=dev-qt/qtxml-5.2.0:5 >=dev-qt/qtwebkit-5.2.0:5 >=dev-qt/qtdbus-5.2.0:5 >=dev-qt/qtx11extras-5.2.0:5 >=dev-qt/qtdeclarative-5.2.0:5[widgets] >=dev-libs/injeqt-1.0.100 ~net-im/kadu-core-4.0_beta1
+RESTRICT=primaryuri
+SLOT=0
+SRC_URI=http://download.kadu.im/unstable/kadu-4.0-beta1.tar.bz2
+_eclass_exported_funcs=src_unpack:base src_prepare:cmake-utils src_configure:kadu src_compile:cmake-utils src_test:cmake-utils src_install:cmake-utils
+_eclasses_=base	3fe4f8980633fd7bc69e9887209ba2fe	cmake-utils	d6c1714cc58fd2168bf150f2a01f3801	eutils	792f83d5ec9536cb5ccef375469d8bde	flag-o-matic	d270fa247153df66074f795fa42dba3e	kadu	04d0a4ae3837a7804abe1e5c34463d63	multilib	d062ae4ba2fc40a19c11de2ad89b6616	toolchain-funcs	d513d423d449877e49d99af3f7af7acb	versionator	99ae9d758cbe7cfed19170e7d48f5a9c
+_md5_=68a8faac35baca076dc4c5cdd812a0ee

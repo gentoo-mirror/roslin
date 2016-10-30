@@ -33,7 +33,7 @@ games-emulation/pcsxr 1.9.92-r2 9999: PCSX-Reloaded: a fork of PCSX, the discont
 games-emulation/psx-bin 1.13 1.13-r1: An easy, self-contained Sony Playstation emulator
 games-emulation/qmc2 0.47 0.49 0.51: An MAME frontend for SDLMAME/SDLMESS
 games-emulation/regen-gtk 0.95 0.95-r1: An accuracy-focused Sega Genesis/MegaDrive/Master System/Game Gear/SC-3000/SG-1000 emulator
-games-emulation/retroarch 0.9.8-r1: Universal frontend for libretro-based emulators
+games-emulation/retroarch 0.9.9-r1 9999: Universal frontend for libretro-based emulators
 games-emulation/retroarch-phoenix 9999: A simple GUI for RetroArch using the phoenix toolkit
 games-emulation/zsnes 1.51b-r2 1.51b-r3 1.51b-r4 1.51b-r5: SNES (Super Nintendo) emulator that uses x86 assembly
 games-engines/ONSlaught 20111126: An ONScripter clone with Unicode support and other features

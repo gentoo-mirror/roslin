@@ -1,10 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
 EAPI=5
 
-PYTHON_COMPAT=( python{3_1,3_2,3_3} )
+PYTHON_COMPAT=( python{3_1,3_2,3_3,3_4,3_5} )
 
 inherit games python-single-r1 git-2
 
@@ -18,7 +18,7 @@ EGIT_COMMIT="v${PV}"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="alsa cg +fbo ffmpeg jack netplay openal oss pulseaudio python sdl sdl-image truetype xml xv zlib"
+IUSE="alsa cg +fbo ffmpeg jack netplay openal oss pulseaudio python rgui sdl sdl-image truetype xml xv zlib"
 
 RDEPEND="sdl? ( >=media-libs/libsdl-1.2.10[joystick] )
 	alsa? ( media-libs/alsa-lib )
@@ -32,7 +32,8 @@ RDEPEND="sdl? ( >=media-libs/libsdl-1.2.10[joystick] )
 	sdl-image? ( media-libs/sdl-image )
 	xv? ( x11-libs/libXv )
 	zlib? ( sys-libs/zlib )
-	python? ( ${PYTHON_DEPS} )"
+	python? ( ${PYTHON_DEPS} )
+	virtual/opengl"
 DEPEND="virtual/pkgconfig
 	${RDEPEND}"
 
@@ -73,6 +74,7 @@ src_configure() {
 		$(use_enable python) \
 		$(use_enable zlib) \
 		$(use_enable sdl) \
+		$(use_enable rgui) \
 		--enable-dynamic \
 		--with-man_dir="/usr/share/man/man1" \
 		|| die

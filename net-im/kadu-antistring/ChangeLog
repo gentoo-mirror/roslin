@@ -2,6 +2,11 @@
 # Copyright 1999-2016 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*kadu-antistring-4.1 (01 Nov 2016)
+
+  01 Nov 2016; Michał Ziąbkowski <mziab@o2.pl> +kadu-antistring-4.1.ebuild:
+  Bumped.
+
 *kadu-antistring-4.0_beta1 (19 May 2016)
 
   19 May 2016; Michał Ziąbkowski <mziab@o2.pl>

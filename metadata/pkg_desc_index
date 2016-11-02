@@ -14,7 +14,7 @@ dev-games/snesreader 0.072 0.072-r1 9999: A bsnes helper library needed for extr
 dev-games/supergameboy 0.073 9999: A bsnes helper library needed for Super Gameboy emulation
 dev-lang/asl 1.42_p81: Macroassembler AS
 dev-lang/bass 14: A multi-target cross assembler
-dev-libs/injeqt 0.9.1 1.0.0 9999: Dependency injection framework for Qt5
+dev-libs/injeqt 0.9.1 1.0.0 1.1.0 9999: Dependency injection framework for Qt5
 dev-python/python-lhafile 0.1.0_p3: LHA Archive Support for Python
 dev-util/nvidia-texture-tools 2.0.8: A set of cuda-enabled texture tools and compressors
 games-arcade/paintown 3.2 3.4.0: Side-scrolling beat-em-up in the style of Beats of Rage

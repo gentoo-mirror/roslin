@@ -168,7 +168,7 @@ net-im/kadu-idle 1.5 2.0 2.1 3.0 4.0_alpha1 4.0_beta1 4.1: Kadu module for detec
 net-im/kadu-imagelink 1.5 2.0 2.1 3.0 4.0_alpha1 4.0_beta1 4.1: Automatic parser for image and YouTube video links
 net-im/kadu-import_history 1.0_p4 2.0: History import module
 net-im/kadu-indicator_docking 1.5: Ayatana docking module for Kadu
-net-im/kadu-jabber_protocol 1.5 2.0 2.1 3.0 4.0_alpha1 4.0_beta1 4.1: Jabber support module for Kadu
+net-im/kadu-jabber_protocol 1.5 2.0 2.1 3.0 4.0_alpha1 4.0_beta1 4.1 4.1-r1: Jabber support module for Kadu
 net-im/kadu-kadu_completion 1.0_p4 2.0: Bash completion-like module for Kadu
 net-im/kadu-last_seen 1.5 2.0 2.1 3.0 4.0_alpha1 4.0_beta1 4.1: Last seen module for Kadu
 net-im/kadu-lednotify 1.0_p34: LED notification module for Kadu

@@ -6,7 +6,7 @@ EAPI=3
 
 inherit kadu
 
-DESCRIPTION="Kadu module for detecting idle time"
+DESCRIPTION="Jabber support module for Kadu"
 HOMEPAGE="http://kadu.im"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
@@ -21,7 +21,10 @@ RDEPEND=">=dev-qt/qtcore-5.2.0:5
 	>=dev-qt/qtx11extras-5.2.0:5
 	>=dev-qt/qtdeclarative-5.2.0:5[widgets]
 	>=dev-libs/injeqt-1.1.0
-	x11-libs/libXScrnSaver
+	net-dns/libidn
+	>=net-libs/qxmpp-0.8.3[qt5]
+	>=app-crypt/qca-2.1.0:2[qt5,ssl]
+	sys-libs/zlib
 	~net-im/kadu-core-${PV}"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"

@@ -1,5 +1,9 @@
 # ChangeLog for games-emulation/bsnes-plus
-# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2016 Gentoo Foundation; Distributed under the GPL v2
+
+  01 Dec 2016; Michał Ziąbkowski <mziab@o2.pl>
+  files/bsnes-plus-makefile.patch:
+  Fixed Makefile patch.
 
   16 Dec 2015; Michał Ziąbkowski <mziab@o2.pl>
   files/bsnes-plus-makefile.patch:

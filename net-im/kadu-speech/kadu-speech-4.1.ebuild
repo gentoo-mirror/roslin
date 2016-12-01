@@ -8,7 +8,7 @@ inherit kadu
 
 DESCRIPTION="Reads Kadu messages with the powiedz speech synthetizer"
 HOMEPAGE="http://kadu.im"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 COMMON_DEP=">=dev-qt/qtcore-5.2.0:5
@@ -20,7 +20,7 @@ COMMON_DEP=">=dev-qt/qtcore-5.2.0:5
 	>=dev-qt/qtdbus-5.2.0:5
 	>=dev-qt/qtx11extras-5.2.0:5
 	>=dev-qt/qtdeclarative-5.2.0:5[widgets]
-	>=dev-libs/injeqt-1.0.100
+	>=dev-libs/injeqt-1.1.0
 	~net-im/kadu-core-${PV}"
 RDEPEND="${COMMON_DEP}
 	app-accessibility/powiedz"

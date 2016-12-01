@@ -8,7 +8,7 @@ inherit kadu
 
 DESCRIPTION="SQL history module for Kadu"
 HOMEPAGE="http://kadu.im"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND=">=dev-qt/qtcore-5.2.0:5
@@ -22,7 +22,7 @@ RDEPEND=">=dev-qt/qtcore-5.2.0:5
 	>=dev-qt/qtdeclarative-5.2.0:5[widgets]
 	>=dev-qt/qtconcurrent-5.2.0:5
 	>=dev-qt/qtsql-5.2.0:5[sqlite]
-	>=dev-libs/injeqt-1.0.100
+	>=dev-libs/injeqt-1.1.0
 	~net-im/kadu-history-${PV}
 	~net-im/kadu-core-${PV}"
 DEPEND="${RDEPEND}

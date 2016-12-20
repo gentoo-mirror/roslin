@@ -1,5 +1,5 @@
 diff --git a/bsnes/Makefile b/bsnes/Makefile
-index 32a22ef..8513784 100644
+index 6bc9e5a..000432a 100644
 --- a/bsnes/Makefile
 +++ b/bsnes/Makefile
 @@ -20,11 +20,11 @@ objects :=
@@ -9,10 +9,10 @@ index 32a22ef..8513784 100644
 -  flags += -O3 -fomit-frame-pointer
 +  flags += $(CXXFLAGS) -fomit-frame-pointer
    ifeq ($(platform),osx)
-     # -s is deprecated as of clang 7.0, and using it breaks linking for some reason
+     # -s is deprecated as of Apple LLVM 7.0, and using it breaks linking with some versions
    else
 -    link += -s
-+    #link += -s
++    # link += -s
    endif
  endif
  

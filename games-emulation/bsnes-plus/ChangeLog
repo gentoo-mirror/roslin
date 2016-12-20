@@ -5,6 +5,10 @@
   files/bsnes-plus-makefile.patch:
   Fixed Makefile patch.
 
+  01 Dec 2016; Michał Ziąbkowski <mziab@o2.pl>
+  files/bsnes-plus-makefile.patch:
+  Fixed Makefile patch.
+
   16 Dec 2015; Michał Ziąbkowski <mziab@o2.pl>
   files/bsnes-plus-makefile.patch:
   Fixed patch.

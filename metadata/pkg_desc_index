@@ -17,7 +17,6 @@ dev-lang/bass 14: A multi-target cross assembler
 dev-libs/injeqt 0.9.1 1.0.0 1.1.0 9999: Dependency injection framework for Qt5
 dev-python/python-lhafile 0.1.0_p3: LHA Archive Support for Python
 dev-util/nvidia-texture-tools 2.0.8: A set of cuda-enabled texture tools and compressors
-games-arcade/paintown 3.2: Side-scrolling beat-em-up in the style of Beats of Rage
 games-arcade/sdl-ball 1.0 1.01: Arkanoid/Breakout clone with pretty graphics.
 games-arcade/slotracers 1.0: Slot racers is a race-and-shooting game based on Slot Racers for Atari
 games-arcade/spacephallus 1: Fun shoot-em-up with a retro 8 bit theme

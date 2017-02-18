@@ -4,7 +4,7 @@ app-crypt/qca 2.1.0-r1: Qt Cryptographic Architecture (QCA)
 app-crypt/qca-ossl 2.1.0: Fake qca-ossl package
 app-dicts/qstardict 0.13.1 1.0.1: QStarDict is a StarDict clone written with using Qt
 app-emulation/fs-uae 2.2.0 2.2.2 2.2.3 2.3.99_beta2 2.4.0 2.4.1 2.4.3: Amiga emulator based on WinUAE emulation code
-app-emulation/fs-uae-launcher 2.2.0 2.2.2 2.2.2-r1 2.2.3 2.3.99_beta2 2.4.0 2.4.1 2.4.3 2.4.3-r1: PyQt4 launcher for FS-UAE
+app-emulation/fs-uae-launcher 2.2.2-r1 2.2.3 2.3.99_beta2 2.4.0 2.4.1 2.4.3 2.4.3-r1: PyQt4 launcher for FS-UAE
 app-office/qfaktury 0.6.2_p1: A Polish tool for printing and managing invoices
 app-text/wxmedit 2.9.7 2.9.8 2.9.9 2.9.9-r1 3.0 3.0.2 3.1: wxMEdit, a cross-platform Text/Hex Editor, a fork of MadEdit
 dev-games/bsnes-c++98-libretro 9999: bsnes emulation core ported to libretro, C++98-compatible variant

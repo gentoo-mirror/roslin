@@ -112,7 +112,6 @@ games-puzzle/polly-b-gone 1.0: a 3D physics platform game - won the grand prize 
 games-puzzle/pushover 0.0.5: Pushover is a fun puzzle game originally published by Ocean in 1992.
 games-puzzle/reaction 3.01: Addictive, multi-player 'board' game. It's easy to learn to play.
 games-puzzle/vitetris 0.57: Terminal-based Tetris clone by Victor Nilsson.
-games-rpg/jrpg 201206271916: A kanji learning game styled after the classic SNES RPG games
 games-server/mednafen-server 0.5.0: Server for Mednafen emulator
 games-sports/blobby 9999: Blobby Volley 2 - 1-on-1 volleyball
 games-sports/etw 3.6: Arcade-style soccer game

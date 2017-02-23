@@ -134,60 +134,60 @@ media-sound/flac2mp3 0.3.0_rc3: A perl script to convert FLAC files to mp3 files
 media-video/kmediafactory 0.8.1-r3: Template based DVD authoring software
 media-video/qnapi 0.1.8: Free software for automatic fetching movie subtitles using online databases
 media-video/v4l2ucp 2.0.2 2.0.2-r1: A universal control panel for all Video for Linux Two (V4L2) devices
-net-im/kadu 3.0 4.1 4.2: A multi-protocol IM client written in Qt4
+net-im/kadu 3.0 4.1 4.2 4.3: A multi-protocol IM client written in Qt4
 net-im/kadu-anonymous_check 2.0.1: Automatic sender lookup module for Kadu
-net-im/kadu-antistring 3.0 4.1 4.2: Protection against chain-letters for Kadu
-net-im/kadu-auto_hide 3.0 4.1 4.2: Kadu module for automatic window hiding
-net-im/kadu-autoaway 3.0 4.1 4.2: Autoaway module for Kadu
-net-im/kadu-autoresponder 3.0 4.1 4.2: Autoresponder module for Kadu
-net-im/kadu-autostatus 3.0 4.1 4.2: Autostatus module for Kadu
-net-im/kadu-cenzor 3.0 4.1 4.2: Profanity filter for Kadu
-net-im/kadu-chat_notify 3.0 4.1 4.2: Kadu module for in-chat notifications
-net-im/kadu-config_wizard 3.0 4.1 4.2: Configuration wizard for Kadu
-net-im/kadu-core 3.0 4.1 4.2: The core of Kadu IM
-net-im/kadu-docking 3.0 4.1 4.2: Docking module for Kadu
-net-im/kadu-emoticons 3.0 4.1 4.2: Plugin for displaying emoticons in chats
+net-im/kadu-antistring 3.0 4.1 4.2 4.3: Protection against chain-letters for Kadu
+net-im/kadu-auto_hide 3.0 4.1 4.2 4.3: Kadu module for automatic window hiding
+net-im/kadu-autoaway 3.0 4.1 4.2 4.3: Autoaway module for Kadu
+net-im/kadu-autoresponder 3.0 4.1 4.2 4.3: Autoresponder module for Kadu
+net-im/kadu-autostatus 3.0 4.1 4.2 4.3: Autostatus module for Kadu
+net-im/kadu-cenzor 3.0 4.1 4.2 4.3: Profanity filter for Kadu
+net-im/kadu-chat_notify 3.0 4.1 4.2 4.3: Kadu module for in-chat notifications
+net-im/kadu-config_wizard 3.0 4.1 4.2 4.3: Configuration wizard for Kadu
+net-im/kadu-core 3.0 4.1 4.2 4.3: The core of Kadu IM
+net-im/kadu-docking 3.0 4.1 4.2 4.3: Docking module for Kadu
+net-im/kadu-emoticons 3.0 4.1 4.2 4.3: Plugin for displaying emoticons in chats
 net-im/kadu-encryption_ng 3.0: Base encryption module for Kadu
 net-im/kadu-encryption_ng_simlite 3.0: QCA encryption module for Kadu
-net-im/kadu-encryption_otr 3.0 4.1 4.2: Provides extended encryption using the OTR library
-net-im/kadu-exec_notify 3.0 4.1 4.2: Exec notification module for Kadu
-net-im/kadu-ext_sound 3.0 4.1 4.2: External sound module for Kadu
-net-im/kadu-filedesc 3.0 4.1 4.2: File descriptions module for Kadu
-net-im/kadu-firewall 3.0 4.1 4.2: Protection against unwanted chats for Kadu
-net-im/kadu-freedesktop_notify 3.0 4.1 4.2: Kadu module for freedesktop notifications
-net-im/kadu-gadu_protocol 3.0 4.1 4.2: GaduGadu support module for Kadu
-net-im/kadu-hints 3.0 4.1 4.2: Hint notification module for Kadu
-net-im/kadu-history 3.0 4.1 4.2: History module for Kadu
+net-im/kadu-encryption_otr 3.0 4.1 4.2 4.3: Provides extended encryption using the OTR library
+net-im/kadu-exec_notify 3.0 4.1 4.2 4.3: Exec notification module for Kadu
+net-im/kadu-ext_sound 3.0 4.1 4.2 4.3: External sound module for Kadu
+net-im/kadu-filedesc 3.0 4.1 4.2 4.3: File descriptions module for Kadu
+net-im/kadu-firewall 3.0 4.1 4.2 4.3: Protection against unwanted chats for Kadu
+net-im/kadu-freedesktop_notify 3.0 4.1 4.2 4.3: Kadu module for freedesktop notifications
+net-im/kadu-gadu_protocol 3.0 4.1 4.2 4.3: GaduGadu support module for Kadu
+net-im/kadu-hints 3.0 4.1 4.2 4.3: Hint notification module for Kadu
+net-im/kadu-history 3.0 4.1 4.2 4.3: History module for Kadu
 net-im/kadu-history_migration 3.0: History migration module for Kadu
 net-im/kadu-icons 0.6.6: Extra icon themes for Kadu
-net-im/kadu-idle 3.0 4.1 4.2: Kadu module for detecting idle time
-net-im/kadu-imagelink 3.0 4.1 4.2: Automatic parser for image and YouTube video links
+net-im/kadu-idle 3.0 4.1 4.2 4.3: Kadu module for detecting idle time
+net-im/kadu-imagelink 3.0 4.1 4.2 4.3: Automatic parser for image and YouTube video links
 net-im/kadu-import_history 2.0: History import module
-net-im/kadu-jabber_protocol 3.0-r1 4.1-r1 4.2: Jabber support module for Kadu
+net-im/kadu-jabber_protocol 3.0-r1 4.1-r1 4.2 4.3: Jabber support module for Kadu
 net-im/kadu-kadu_completion 2.0: Bash completion-like module for Kadu
-net-im/kadu-last_seen 3.0 4.1 4.2: Last seen module for Kadu
-net-im/kadu-mediaplayer 3.0 4.1 4.2: Media player support module for Kadu
+net-im/kadu-last_seen 3.0 4.1 4.2 4.3: Last seen module for Kadu
+net-im/kadu-mediaplayer 3.0 4.1 4.2 4.3: Media player support module for Kadu
 net-im/kadu-mime_tex 2.0: Mathematical TeX formula support in Kadu chats
-net-im/kadu-mpd_mediaplayer 3.0 4.1 4.2: mpd mediaplayer module for Kadu
-net-im/kadu-mprisplayer_mediaplayer 3.0 4.1 4.2: Generic MPRIS mediaplayer module for Kadu
-net-im/kadu-pcspeaker 3.0 4.1 4.2: PC Speaker notification for Kadu
+net-im/kadu-mpd_mediaplayer 3.0 4.1 4.2 4.3: mpd mediaplayer module for Kadu
+net-im/kadu-mprisplayer_mediaplayer 3.0 4.1 4.2 4.3: Generic MPRIS mediaplayer module for Kadu
+net-im/kadu-pcspeaker 3.0 4.1 4.2 4.3: PC Speaker notification for Kadu
 net-im/kadu-phonon_sound 3.0: Phonon sound output module for Kadu
 net-im/kadu-profiles_import 3.0: Imports profiles from older Kadu versions
-net-im/kadu-screenshot 3.0 4.1 4.2: Screenshot module for Kadu
-net-im/kadu-simpleview 3.0 4.1 4.2: Simple view module for Kadu
-net-im/kadu-single_window 3.0 4.1 4.2: Adds single-window mode
-net-im/kadu-sms 3.0 4.1 4.2: Text message support module for Kadu
-net-im/kadu-sound 3.0 4.1 4.2: Sound support module for Kadu
+net-im/kadu-screenshot 3.0 4.1 4.2 4.3: Screenshot module for Kadu
+net-im/kadu-simpleview 3.0 4.1 4.2 4.3: Simple view module for Kadu
+net-im/kadu-single_window 3.0 4.1 4.2 4.3: Adds single-window mode
+net-im/kadu-sms 3.0 4.1 4.2 4.3: Text message support module for Kadu
+net-im/kadu-sound 3.0 4.1 4.2 4.3: Sound support module for Kadu
 net-im/kadu-sounds 0.6.5: Extra sound themes for Kadu
-net-im/kadu-speech 3.0 4.1 4.2: Reads Kadu messages with the powiedz speech synthetizer
-net-im/kadu-spellchecker 3.0 4.1 4.2: Spellchecker module for Kadu
-net-im/kadu-sql_history 3.0 4.1 4.2: SQL history module for Kadu
-net-im/kadu-tabs 3.0 4.1 4.2: Tabbed chat module for Kadu
-net-im/kadu-word_fix 3.0 4.1 4.2: Word replacement module for Kadu
+net-im/kadu-speech 3.0 4.1 4.2 4.3: Reads Kadu messages with the powiedz speech synthetizer
+net-im/kadu-spellchecker 3.0 4.1 4.2 4.3: Spellchecker module for Kadu
+net-im/kadu-sql_history 3.0 4.1 4.2 4.3: SQL history module for Kadu
+net-im/kadu-tabs 3.0 4.1 4.2 4.3: Tabbed chat module for Kadu
+net-im/kadu-word_fix 3.0 4.1 4.2 4.3: Word replacement module for Kadu
 net-im/pidgin-tlen 20101112: Tlen.pl support for Pidgin (plugin)
 net-im/tkabber 9999: GUI client for XMPP (Jabber) instant messaging protocol, written in Tcl/Tk.
 net-im/tlenlinux 7.0.1.68 7.0.1.71 7.0.1.72 7.0.2.1: Tlen IM client
-net-libs/libgadu 1.12.0_rc1 1.12.1 9999: This library implements the client side of the Gadu-Gadu protocol
+net-libs/libgadu 1.12.0_rc1 1.12.1 1.12.2 9999: This library implements the client side of the Gadu-Gadu protocol
 net-libs/ntrack 0.16 0.16-r1 0.16-r2: A lightweight library for getting events on network online status changes
 net-libs/qxmpp 0.8.2 0.8.3: A cross-platform C++ XMPP client library based on the Qt framework.
 net-misc/rsget-pl 9999: Random content downloader

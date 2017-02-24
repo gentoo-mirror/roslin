@@ -1,4 +1,4 @@
-# Copyright 1999-2016 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -22,7 +22,7 @@ RDEPEND=">=dev-qt/qtcore-5.2.0:5
 	>=dev-qt/qtdeclarative-5.2.0:5[widgets]
 	>=dev-qt/qtxmlpatterns-5.2.0:5
 	>=dev-libs/injeqt-1.1.0
-	>=net-libs/libgadu-1.12.2[threads,ssl]
+	>=net-libs/libgadu-1.12.2[threads,ssl,gnutls]
 	>=app-crypt/qca-2.1.0[qt5]
 	~net-im/kadu-core-${PV}"
 DEPEND="${RDEPEND}

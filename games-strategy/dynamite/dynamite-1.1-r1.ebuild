@@ -1,8 +1,11 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-inherit python games
+EAPI=5
+PYTHON_COMPAT=( python{2_6,2_7} )
+
+inherit python-single-r1 games
 
 DESCRIPTION="A thrilling isometric game where you use dynamite against evil"
 HOMEPAGE="http://www.imitationpickles.org/pyweek1/"

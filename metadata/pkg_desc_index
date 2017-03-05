@@ -117,7 +117,7 @@ games-sports/blobby 9999: Blobby Volley 2 - 1-on-1 volleyball
 games-sports/etw 3.6: Arcade-style soccer game
 games-sports/f1spirit 0_rc9-r1615: Konami's MSX1 classic F1-Spirit remake
 games-sports/roadfighter 1.0.1269: Konami's Road Fighter remake
-games-strategy/dynamite 1.1: A thrilling isometric game where you use dynamite against evil
+games-strategy/dynamite 1.1-r1: A thrilling isometric game where you use dynamite against evil
 games-strategy/ja2-stracciatella 0.12.1 9999: An enhanced port of Jagged Alliance 2 to SDL
 games-strategy/lordsawar 0.2.0: Another Free Warlords II clone
 games-util/beat 0.3: A utility for applying and creating BPS patches

@@ -8,9 +8,6 @@ dev-games/bsnes-c++98-libretro:profile_performance - Enables the 'performance' e
 dev-games/bsnes-libretro:profile_accuracy - Enables the 'accuracy' emulation core
 dev-games/bsnes-libretro:profile_compatibility - Enables the 'compatibility' emulation core
 dev-games/bsnes-libretro:profile_performance - Enables the 'performance' emulation core
-dev-util/nvidia-texture-tools:cg - Build with NVIDIA's C grapshics compiler support
-dev-util/nvidia-texture-tools:cuda - Use NVIDIA CUDA Toolkit
-dev-util/nvidia-texture-tools:glew - Use media-libs/glew
 games-arcade/sdl-ball:leveleditor - Install level editor
 games-arcade/sdl-ball:sound - Enables sound
 games-emulation/bsnes:debug - Enables bsnes debugger
@@ -77,13 +74,9 @@ games-strategy/lordsawar:netplay - Compile netplay support
 games-strategy/lordsawar:pbm - Include Play-by-mail suport
 net-im/kadu:emoticons - Installs emoticons
 net-im/kadu:gadu - Installs GaduGadu support module
-net-im/kadu:phonon - Installs phonon audio plugin
-net-im/kadu-core:ayatana - Enable support to ayatana notifications. Needed for indicator-docking.
-net-im/kadu-core:ntrack - Use net-libs/ntrack for network state tracking
+net-im/kadu:jabber - Installs Jabber/XMPP plugin
 net-im/kadu-spellchecker:aspell - Uses the aspell backend
 net-im/kadu-spellchecker:enchant - Uses the enchant backend (takes priority over aspell)
-net-im/tlenlinux:phonon - Needed for audio/video support.
-net-im/tlenlinux:qt-static - Uses bundled Qt4 libs. May cause problems with Phonon support.
 net-libs/ntrack:glib - Build glib bindings
 net-libs/ntrack:libnl - Build libnl backend
 net-libs/ntrack:rtnetlink - Build experimental rtnetlink backend

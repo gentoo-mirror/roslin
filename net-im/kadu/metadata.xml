@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd></herd>
-<maintainer>
+<maintainer type="person">
   <email>mziab@o2.pl</email>
   <name>Michał Ziąbkowski</name>
 </maintainer>
 <use>
-  <flag name='phonon'>Installs phonon audio plugin</flag>
   <flag name='gadu'>Installs GaduGadu support module</flag>
   <flag name='emoticons'>Installs emoticons</flag>
+  <flag name='jabber'>Installs Jabber/XMPP plugin</flag>
 </use>
 </pkgmetadata>

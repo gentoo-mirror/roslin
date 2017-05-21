@@ -1,9 +1,0 @@
-# ChangeLog for app-crypt/qca-ossl
-# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: $
-
-*qca-ossl-2.1.0 (07 Jan 2015)
-
-  07 Jan 2015; Michał Ziąbkowski <mziab@o2.pl> +qca-ossl-2.1.0.ebuild:
-  Brought in qca-ossl ebuild from rion-overlay to resolve blockage.
-

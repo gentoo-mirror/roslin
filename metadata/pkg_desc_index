@@ -128,7 +128,7 @@ media-sound/flac2mp3 0.3.0_rc3: A perl script to convert FLAC files to mp3 files
 media-video/kmediafactory 0.8.1-r3: Template based DVD authoring software
 media-video/qnapi 0.1.8: Free software for automatic fetching movie subtitles using online databases
 media-video/v4l2ucp 2.0.2-r2: A universal control panel for all Video for Linux Two (V4L2) devices
-net-im/kadu 4.3: A multi-protocol IM client written in Qt4
+net-im/kadu 4.3-r1: A multi-protocol IM client written in Qt4
 net-im/kadu-antistring 4.3: Protection against chain-letters for Kadu
 net-im/kadu-auto_hide 4.3: Kadu module for automatic window hiding
 net-im/kadu-autoaway 4.3: Autoaway module for Kadu
@@ -152,7 +152,7 @@ net-im/kadu-history 4.3: History module for Kadu
 net-im/kadu-icons 0.6.6: Extra icon themes for Kadu
 net-im/kadu-idle 4.3: Kadu module for detecting idle time
 net-im/kadu-imagelink 4.3: Automatic parser for image and YouTube video links
-net-im/kadu-jabber_protocol 4.3: Jabber support module for Kadu
+net-im/kadu-jabber_protocol 4.3 4.3-r1: Jabber support module for Kadu
 net-im/kadu-last_seen 4.3: Last seen module for Kadu
 net-im/kadu-mediaplayer 4.3: Media player support module for Kadu
 net-im/kadu-mpd_mediaplayer 4.3: mpd mediaplayer module for Kadu

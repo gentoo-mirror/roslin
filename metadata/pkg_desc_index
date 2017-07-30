@@ -16,8 +16,7 @@ dev-python/python-lhafile 0.1.0_p3: LHA Archive Support for Python
 games-arcade/sdl-ball 1.0 1.01: Arkanoid/Breakout clone with pretty graphics.
 games-arcade/slotracers 1.0: Slot racers is a race-and-shooting game based on Slot Racers for Atari
 games-arcade/spacephallus 1: Fun shoot-em-up with a retro 8 bit theme
-games-emulation/bsnes 073-r1 088-r1: A Super Famicom/SNES emulator written with absolute accuracy in mind
-games-emulation/bsnes-plus 073_p1 9999: A feature-oriented fork of bsnes mostly aimed at debugging
+games-emulation/bsnes 088-r1: A Super Famicom/SNES emulator written with absolute accuracy in mind
 games-emulation/bsnes-qt 9999: A libsnes frontend based on the old bsnes GUI
 games-emulation/gens-gs 7 7-r1 7-r2: A Gens fork which aims to clean up the source code and combine features from other forks
 games-emulation/gnome-video-arcade 0.8.3: A simple MAME front-end for the GNOME Desktop Environment

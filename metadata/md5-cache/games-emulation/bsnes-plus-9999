@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile install prepare unpack
+DEPEND=ao? ( media-libs/libao ) openal? ( media-libs/openal ) alsa? ( media-libs/alsa-lib ) pulseaudio? ( media-sound/pulseaudio ) xv? ( x11-libs/libXv ) opengl? ( virtual/opengl ) sdl? ( media-libs/libsdl[joystick] ) sgb? ( dev-games/supergameboy ) snesfilter? ( dev-games/snesfilter ) snesreader? ( dev-games/snesreader ) >=dev-qt/qtgui-4.5:4 virtual/pkgconfig >=sys-devel/gcc-4.4 !games-emulation/bsnes >=dev-vcs/git-1.8.2.1
+DESCRIPTION=A feature-oriented fork of bsnes mostly aimed at debugging
+EAPI=5
+HOMEPAGE=https://github.com/devinacker/bsnes-plus
+IUSE=ao alsa openal opengl oss pulseaudio sdl sgb snesfilter +snesreader xv
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2
+RDEPEND=ao? ( media-libs/libao ) openal? ( media-libs/openal ) alsa? ( media-libs/alsa-lib ) pulseaudio? ( media-sound/pulseaudio ) xv? ( x11-libs/libXv ) opengl? ( virtual/opengl ) sdl? ( media-libs/libsdl[joystick] ) sgb? ( dev-games/supergameboy ) snesfilter? ( dev-games/snesfilter ) snesreader? ( dev-games/snesreader ) >=dev-qt/qtgui-4.5:4
+REQUIRED_USE=|| ( ao openal alsa pulseaudio oss ) || ( xv opengl sdl )
+SLOT=0
+_eclass_exported_funcs=src_unpack:git-r3 src_prepare:- src_compile:- src_install:-
+_eclasses_=epatch	8233751dc5105a6ae8fcd86ce2bb0247	estack	43ddf5aaffa7a8d0482df54d25a66a1f	eutils	9c113d6a64826c40154cad7be15d95ea	git-r3	cbafa3261c37c7e3af44bb16a34ea390	ltprune	2770eed66a9b8ef944714cd0e968182e	multilib	97f470f374f2e94ccab04a2fb21d811e	toolchain-funcs	8fec6b1eb195836560e70b66d98fb163
+_md5_=457ebd09cf58f0ce9806a371a97bb5d8

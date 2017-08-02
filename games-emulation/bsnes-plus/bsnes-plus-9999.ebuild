@@ -1,10 +1,10 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
 EAPI=5
 
-inherit eutils confutils games toolchain-funcs git-r3
+inherit eutils toolchain-funcs git-r3
 
 MY_PV="${PV/0./}"
 MY_PV="${MY_PV/_/}"
@@ -38,13 +38,11 @@ DEPEND="${RDEPEND}
 
 S="${WORKDIR}/${P}/bsnes"
 
+REQUIRED_USE="|| ( ao openal alsa pulseaudio oss )
+	|| ( xv opengl sdl )"
+
 disable_module() {
 	sed -i "ui-qt/Makefile" -e "s|$1||"
-}
-
-pkg_setup() {
-	confutils_require_any ao openal alsa pulseaudio oss
-	confutils_require_any xv opengl sdl
 }
 
 src_prepare() {
@@ -74,8 +72,6 @@ src_compile() {
 src_install() {
 	emake \
 		DESTDIR="${D}" \
-		prefix="${GAMES_PREFIX}" \
+		prefix="/usr" \
 		install || die "install failed"
-
-	prepgamesdirs
 }

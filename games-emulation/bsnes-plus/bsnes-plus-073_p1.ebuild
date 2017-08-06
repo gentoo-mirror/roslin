@@ -72,6 +72,6 @@ src_compile() {
 src_install() {
 	emake \
 		DESTDIR="${D}" \
-		prefix="${GAMES_PREFIX}" \
+		prefix="/usr" \
 		install || die "install failed"
 }

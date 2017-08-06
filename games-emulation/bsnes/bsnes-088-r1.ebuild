@@ -1,10 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=4
+EAPI=5
 
-inherit eutils games
+inherit eutils
 
 MY_PV="${PV/0./}"
 MY_PV="${MY_PV/_/}"
@@ -113,10 +113,10 @@ src_compile() {
 src_install() {
 	emake \
 		DESTDIR="${D}" \
-		prefix="${GAMES_PREFIX}" \
+		prefix="/usr" \
 		install || die "install failed"
 
-	dogamesbin out/bsnes || die
+	dobin out/bsnes || die
 
 	# install cheat db and profile files
 	insinto "${GAMES_DATADIR}/${PN}"
@@ -134,6 +134,4 @@ src_install() {
 		insinto "${GAMES_DATADIR}/${PN}/filters"
 		doins ../snesfilter/out/*.filter || die
 	fi
-
-	prepgamesdirs
 }

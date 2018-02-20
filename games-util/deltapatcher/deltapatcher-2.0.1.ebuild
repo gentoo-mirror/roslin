@@ -1,0 +1,45 @@
+# Copyright 1999-2018 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: $
+
+EAPI=5
+
+WX_GTK_VER="3.0"
+
+MY_P="DeltaPatcher-${PV}"
+
+inherit eutils wxwidgets fdo-mime
+
+DESCRIPTION="A frontend for the xdelta patching utility"
+HOMEPAGE="http://www.sadnescity.it/utilita.php"
+SRC_URI="https://github.com/marco-calautti/DeltaPatcher/archive/${PV}.tar.gz -> ${P}.tar.gz"
+
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="~amd64 ~x86"
+IUSE=""
+
+DEPEND="x11-libs/wxGTK:3.0[X]
+	app-arch/p7zip"
+
+RDEPEND="x11-libs/wxGTK:3.0[X]
+	dev-util/xdelta:3"
+
+S="${WORKDIR}/${MY_P}/src"
+
+src_prepare() {
+	epatch "${FILESDIR}/${P}-makefile.patch"
+}
+
+src_install() {
+	emake install \
+		DESTDIR="${D}" \
+		PREFIX="/usr/" || die
+
+	dodoc "${WORKDIR}/${MY_P}/README.md"
+	newicon gui/icons/icon.xpm ${PN}.xpm
+}
+
+pkg_postinst() {
+	fdo-mime_mime_database_update
+}

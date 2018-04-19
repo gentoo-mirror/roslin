@@ -1,7 +1,7 @@
 [Desktop Entry]
 Type=Application
 Name=Floating IPS
-MimeType=application/bps-patch;application/ips-patch;
+MimeType=application/x-bps-patch;application/x-ips-patch;
 Exec=flips %f
 NoDisplay=true
 StartupNotify=true

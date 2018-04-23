@@ -7,5 +7,5 @@ LICENSE=Artistic
 RDEPEND=dev-perl/Audio-FLAC-Header dev-perl/MP3-Tag dev-perl/File-Which dev-perl/File-Find-Rule dev-perl/Text-Glob dev-perl/Number-Compare media-libs/flac media-sound/lame
 SLOT=0
 SRC_URI=http://robinbowes.com/download/flac2mp3/flac2mp3-0.3.0rc3.tar.gz
-_eclasses_=estack	43ddf5aaffa7a8d0482df54d25a66a1f	versionator	ce21313503c41896ebcd7d58b0607e37
+_eclasses_=estack	43ddf5aaffa7a8d0482df54d25a66a1f	versionator	26ca8a8bd95d6a74122c08ba98a4ee72
 _md5_=99bc4a11299235619ea740591b9bb5f3

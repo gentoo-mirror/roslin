@@ -1,4 +1,4 @@
-DEFINED_PHASES=compile install postinst preinst setup unpack
+DEFINED_PHASES=compile install nofetch postinst preinst setup unpack
 DEPEND=app-arch/unzip
 DESCRIPTION=Masque of the Red Death - An atmospheric trail of medieval carnage.
 EAPI=0

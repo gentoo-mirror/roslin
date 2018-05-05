@@ -1,4 +1,4 @@
-DEFINED_PHASES=compile install postinst preinst setup unpack
+DEFINED_PHASES=compile install nofetch postinst preinst setup unpack
 DESCRIPTION=Scourge of Armagon mission pack for Quake 1
 EAPI=0
 HOMEPAGE=http://www.idsoftware.com/games/quake/quake-mp1/

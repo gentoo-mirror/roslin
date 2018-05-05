@@ -1,4 +1,4 @@
-DEFINED_PHASES=compile install postinst preinst setup unpack
+DEFINED_PHASES=compile install nofetch postinst preinst setup unpack
 DEPEND=vispatch? ( games-util/vispatch app-arch/zip )
 DESCRIPTION=Dissolution of Eternity mission pack for Quake 1
 EAPI=0

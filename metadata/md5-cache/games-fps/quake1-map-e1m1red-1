@@ -1,4 +1,4 @@
-DEFINED_PHASES=compile install postinst preinst setup unpack
+DEFINED_PHASES=compile install nofetch postinst preinst setup unpack
 DEPEND=app-arch/unzip
 DESCRIPTION=Bloody Slipgates - map evolved from The Slipgate Duplex.
 EAPI=0

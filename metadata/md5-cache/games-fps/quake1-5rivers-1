@@ -1,4 +1,4 @@
-DEFINED_PHASES=compile install postinst preinst setup unpack
+DEFINED_PHASES=compile install nofetch postinst preinst setup unpack
 DEPEND=app-arch/unzip
 DESCRIPTION=Mini campaign in DOOM 3 hell-style with three small to medium sized, dark and scrary maps
 EAPI=0

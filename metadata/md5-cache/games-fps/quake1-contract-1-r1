@@ -1,4 +1,4 @@
-DEFINED_PHASES=compile install postinst preinst setup unpack
+DEFINED_PHASES=compile install nofetch postinst preinst setup unpack
 DEPEND=app-arch/unzip
 DESCRIPTION=Contract Revoked - Quake 1 single-player pack
 EAPI=0

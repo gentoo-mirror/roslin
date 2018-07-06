@@ -1,0 +1,70 @@
+diff --git a/plugins/sql_history/storage/history-sql-storage.cpp b/plugins/sql_history/storage/history-sql-storage.cpp
+index 6c6c199..97547e3 100644
+--- a/plugins/sql_history/storage/history-sql-storage.cpp
++++ b/plugins/sql_history/storage/history-sql-storage.cpp
+@@ -192,7 +192,7 @@ void HistorySqlStorage::init()
+ 	        this, SLOT(initializerProgressMessage(QString,QString)));
+ 	connect(initializer, SIGNAL(progressFinished(bool,QString,QString)),
+ 	        this, SLOT(initializerProgressFinished(bool,QString,QString)));
+-	connect(initializer, SIGNAL(databaseReady(bool)), this, SLOT(databaseReady(bool)));
++	connect(initializer, SIGNAL(databaseReady(bool,QString)), this, SLOT(databaseReady(bool,QString)));
+ 
+ 	InitializerThread->start();
+ 
+@@ -234,10 +234,14 @@ void HistorySqlStorage::initializerProgressFinished(bool ok, const QString &icon
+ 		ImportProgressWindow->progressFinished(ok, iconName, message);
+ }
+ 
+-void HistorySqlStorage::databaseReady(bool ok)
++void HistorySqlStorage::databaseReady(bool ok, const QString &historyFilePath)
+ {
+ 	if (ok)
+-		Database = QSqlDatabase::database("kadu-history", true);
++	{
++		Database = QSqlDatabase::addDatabase("QSQLITE", "kadu-history");
++		Database.setDatabaseName(historyFilePath);
++		Database.open();
++	}
+ 
+ 	if (!Database.isOpen() || Database.isOpenError())
+ 	{
+diff --git a/plugins/sql_history/storage/history-sql-storage.h b/plugins/sql_history/storage/history-sql-storage.h
+index 609ac2e..201324c 100644
+--- a/plugins/sql_history/storage/history-sql-storage.h
++++ b/plugins/sql_history/storage/history-sql-storage.h
+@@ -146,7 +146,7 @@ private slots:
+ 	void initializerProgressMessage(const QString &iconName, const QString &message);
+ 	void initializerProgressFinished(bool ok, const QString &iconName, const QString &message);
+ 
+-	void databaseReady(bool ok);
++	void databaseReady(bool ok, const QString &historyFilePath);
+ 
+ public:
+ 	Q_INVOKABLE explicit HistorySqlStorage(QObject *parent = nullptr);
+diff --git a/plugins/sql_history/storage/sql-initializer.cpp b/plugins/sql_history/storage/sql-initializer.cpp
+index 5c437ce..7ca5954 100644
+--- a/plugins/sql_history/storage/sql-initializer.cpp
++++ b/plugins/sql_history/storage/sql-initializer.cpp
+@@ -71,7 +71,8 @@ void SqlInitializer::initialize()
+ 	bool ok = Database.isOpen() && !Database.isOpenError();
+ 	Database.close();
+ 
+-	emit databaseReady(ok);
++	QString historyFilePath = m_pathsProvider->profilePath() + QStringLiteral(HISTORY_FILE_CURRENT);
++	emit databaseReady(ok,historyFilePath);
+ 
+ 	deleteLater();
+ }
+diff --git a/plugins/sql_history/storage/sql-initializer.h b/plugins/sql_history/storage/sql-initializer.h
+index 1bc1911..f952143 100644
+--- a/plugins/sql_history/storage/sql-initializer.h
++++ b/plugins/sql_history/storage/sql-initializer.h
+@@ -62,7 +62,7 @@ public slots:
+ 	void initialize();
+ 
+ signals:
+-	void databaseReady(bool ok);
++	void databaseReady(bool ok, const QString &historyFilePath);
+ 
+ 	void progressMessage(const QString &iconName, const QString &message);
+ 	void progressFinished(bool ok, const QString &iconName, const QString &message);

@@ -1,4 +1,4 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -16,7 +16,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND=">=dev-qt/qtgui-4.5:4"
+RDEPEND=">=dev-qt/qtgui-5.4:5
+	>=dev-qt/qtwidgets-5.4:5"
 DEPEND="${RDEPEND}
 	!<games-emulation/bsnes-0.073[snesreader]"
 
@@ -24,6 +25,7 @@ S="${WORKDIR}/${P}/${PN}"
 
 src_prepare() {
 	epatch "${FILESDIR}/${P}-makefile.patch"
+	epatch "${FILESDIR}/${P}-qt5.patch"
 }
 
 src_compile() {

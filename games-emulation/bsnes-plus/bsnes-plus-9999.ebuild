@@ -1,4 +1,4 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -29,7 +29,8 @@ RDEPEND="ao? ( media-libs/libao )
 	sgb? ( dev-games/supergameboy )
 	snesfilter? ( dev-games/snesfilter )
 	snesreader? ( dev-games/snesreader )
-	>=dev-qt/qtgui-4.5:4"
+	>=dev-qt/qtgui-5.4:5
+	>=dev-qt/qtwidgets-5.4:5"
 
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
@@ -47,6 +48,11 @@ disable_module() {
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-makefile.patch
+	epatch "${FILESDIR}"/${PN}-qt5.patch
+
+	sed -i Makefile \
+		-e 's:build plugins:build:g' \
+		|| die "sed failed"
 
 	# audio modules
 	use ao || disable_module audio.ao

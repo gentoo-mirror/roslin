@@ -1,0 +1,62 @@
+diff --git a/bsnes/Makefile b/bsnes/Makefile
+index 46c2ec9..b9cf795 100644
+--- a/bsnes/Makefile
++++ b/bsnes/Makefile
+@@ -15,7 +15,7 @@ version := v04
+ # compiler
+ c       := $(compiler) -xc -std=gnu99
+ cpp     := $(compiler) -std=gnu++0x
+-flags   := -I. -I$(common) -I$(snes)
++flags   := -I. -I$(common) -I$(snes) -fPIC
+ link    :=
+ objects :=
+ 
+diff --git a/bsnes/ruby/ruby_impl.cpp b/bsnes/ruby/ruby_impl.cpp
+index 4dec581..e344be4 100644
+--- a/bsnes/ruby/ruby_impl.cpp
++++ b/bsnes/ruby/ruby_impl.cpp
+@@ -2,7 +2,7 @@
+ 
+ #if defined(VIDEO_QTOPENGL) || defined(VIDEO_QTRASTER)
+   #include <QApplication>
+-  #include <QtGui>
++  #include <QtWidgets>
+ #endif
+ 
+ #if defined(VIDEO_QTOPENGL)
+diff --git a/bsnes/ui-qt/Makefile b/bsnes/ui-qt/Makefile
+index 7ce4c20..8407af6 100644
+--- a/bsnes/ui-qt/Makefile
++++ b/bsnes/ui-qt/Makefile
+@@ -1,4 +1,4 @@
+-qtlibs := $(strip QtCore QtGui $(if $(findstring osx,$(platform)),QtOpenGL))
++qtlibs := $(strip Qt5Core Qt5Gui Qt5Widgets $(if $(findstring osx,$(platform)),Qt5OpenGL))
+ include $(nall)/qt/Makefile
+ 
+ ui_objects := ui-main ui-base ui-cartridge ui-debugger ui-input ui-movie ui-settings ui-state ui-tools
+diff --git a/bsnes/ui-qt/settings/input.cpp b/bsnes/ui-qt/settings/input.cpp
+index 3b149b9..ace0bca 100644
+--- a/bsnes/ui-qt/settings/input.cpp
++++ b/bsnes/ui-qt/settings/input.cpp
+@@ -17,7 +17,7 @@ InputSettingsWindow::InputSettingsWindow() {
+   list->setAllColumnsShowFocus(true);
+   list->setSortingEnabled(false);
+   list->header()->hide();
+-  list->header()->setResizeMode(QHeaderView::ResizeToContents);
++  list->header()->setSectionResizeMode(QHeaderView::ResizeToContents);
+   layout->addWidget(list);
+ 
+   modifierEnable = new QCheckBox("Allow modifier keys to be assigned standalone");
+diff --git a/bsnes/ui-qt/ui-base.hpp b/bsnes/ui-qt/ui-base.hpp
+index 487a26a..8fe0bf9 100644
+--- a/bsnes/ui-qt/ui-base.hpp
++++ b/bsnes/ui-qt/ui-base.hpp
+@@ -5,7 +5,7 @@
+ #endif
+ 
+ #include <QApplication>
+-#include <QtGui>
++#include <QtWidgets>
+ //Q_IMPORT_PLUGIN(QJpegPlugin)
+ //Q_IMPORT_PLUGIN(QMngPlugin)
+ 

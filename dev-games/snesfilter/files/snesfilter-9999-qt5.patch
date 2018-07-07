@@ -1,0 +1,26 @@
+diff --git a/snesfilter/Makefile b/snesfilter/Makefile
+index 682457f..67b8119 100644
+--- a/snesfilter/Makefile
++++ b/snesfilter/Makefile
+@@ -3,7 +3,7 @@ nall   := $(common)/nall
+ zlib   := $(common)/zlib
+ include $(nall)/Makefile
+ 
+-qtlibs := QtCore QtGui
++qtlibs := Qt5Core Qt5Gui Qt5Widgets
+ include $(nall)/qt/Makefile
+ 
+ c     := $(compiler) -xc -std=gnu99
+diff --git a/snesfilter/snesfilter.cpp b/snesfilter/snesfilter.cpp
+index 683d1af..b94c3d9 100644
+--- a/snesfilter/snesfilter.cpp
++++ b/snesfilter/snesfilter.cpp
+@@ -11,7 +11,7 @@
+ extern "C" char* uncompressStream(int, int);  //micro-bunzip
+ 
+ #define QT_CORE_LIB
+-#include <QtGui>
++#include <QtWidgets>
+ 
+ #include <nall/file.hpp>
+ #include <nall/string.hpp>

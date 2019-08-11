@@ -2,6 +2,81 @@
 # Please add your descriptions to your package's metadata.xml ONLY.
 # * generated automatically using pmaint *
 
+dev-games/bsnes-c++98-libretro:profile_accuracy - Enables the 'accuracy' emulation core
+dev-games/bsnes-c++98-libretro:profile_balanced - Enables the 'balanced' emulation core
+dev-games/bsnes-c++98-libretro:profile_performance - Enables the 'performance' emulation core
+dev-games/bsnes-libretro:profile_accuracy - Enables the 'accuracy' emulation core
+dev-games/bsnes-libretro:profile_compatibility - Enables the 'compatibility' emulation core
+dev-games/bsnes-libretro:profile_performance - Enables the 'performance' emulation core
+games-arcade/sdl-ball:leveleditor - Install level editor
+games-arcade/sdl-ball:sound - Enables sound
+games-emulation/bsnes:debug - Enables bsnes debugger
+games-emulation/bsnes:profile_accuracy - Enables the 'accuracy' emulation core
+games-emulation/bsnes:profile_compatibility - Enables the 'compatibility' emulation core
+games-emulation/bsnes:profile_performance - Enables the 'performance' emulation core
+games-emulation/bsnes:sgb - Enables Super Gameboy emulation
+games-emulation/bsnes:snesfilter - Enables additional image filters
+games-emulation/bsnes:snesreader - Provides extra loading features, including IPS patching and support for multiple compression formats
+games-emulation/bsnes-plus:sgb - Enables Super Gameboy emulation
+games-emulation/bsnes-plus:snesfilter - Enables additional image filters
+games-emulation/bsnes-plus:snesreader - Provides extra loading features, including IPS patching and support for multiple compression formats
+games-emulation/bsnes-qt:snesfilter - Enables additional image filters
+games-emulation/bsnes-qt:snesreader - Provides extra loading features, including IPS patching and support for multiple compression formats
+games-emulation/gnome-video-arcade:wnck - Manage game windows with libwnck
+games-emulation/kega-fusion:mp3 - Optional ISO+MP3 support for SegaCD games
+games-emulation/pcsxr:cdio - Enable libcdio support
+games-emulation/pcsxr:sdl-sound - Use SDL backend for sound output
+games-emulation/qmc2:phonon - Enables support for the Phonon media library
+games-emulation/qmc2:sdlmame - Enables SDLMAME backend
+games-emulation/qmc2:sdlmess - Enables SDLMESS backend
+games-emulation/retroarch:cg - Enables support for NVidia CG shaders
+games-emulation/retroarch:fbo - Enables render-to-texture (FBO) support
+games-emulation/retroarch:netplay - Enables netplay support
+games-emulation/retroarch:rgui - Enable basic built-in gui
+games-emulation/retroarch:sdl-image - Enables sdl-image support for image loading
+games-emulation/retroarch:xml - Use libxml2 instead of the built-in parser
+games-emulation/zsnes:experimental - Enables work-in-progress code
+games-engines/onscripter-en:scale - Enables experimental scaling support
+games-fps/qrack:doe - Install also Dissolution of Eternity mission pack.
+games-fps/qrack:dzip - Adds extra dzip support.
+games-fps/qrack:lights - Adds extra lights.
+games-fps/qrack:skins - Install extra skins for models.
+games-fps/qrack:soa - Install also Scourge of Armagon mission pack.
+games-fps/qrack:textures - Install high quality textures.
+games-fps/quake1-data:vispatch - Adds patches for transparent water.
+games-fps/quake1-dd:darkplaces - Make Darkplaces wrapper.
+games-fps/quake1-doe:darkplaces - Add darkplaces engine startup script
+games-fps/quake1-doe:vispatch - Adds patches for transparent water
+games-fps/quake1-map-grendels-keep:darkplaces - Make Darkplaces wrapper.
+games-fps/quake1-map-grendels-keep:qrack - Make Qrack wrapper.
+games-fps/quake1-map-grendels-keep:tyrquake - Make TyrQuake wrapper.
+games-fps/quake1-soa:darkplaces - Add darkplaces engine startup script
+games-fps/quake1-soa:lights - Use custom lighting
+games-fps/quake1-soa:vispatch - Adds patches for transparent water
+games-fps/quake1-soe:darkplaces - Create darkplaces start script
+games-fps/quake1-soe:tyrquake - Create tyrquake start script
+games-fps/quake1-travail:darkplaces - Create darkplaces start script
+games-fps/quake1-travail:qrack - Create qrack start script
+games-fps/quake1-travail:soundtrack - Enable mod soundtrack
+games-fps/quake1-warpspasm:darkplaces - Create darkplaces start script
+games-fps/quake1-zerstorer:darkplaces - Create darkplaces start script
+games-fps/quake1-zerstorer:qrack - Create qrack start script
+games-fps/quake1-zerstorer:tyrquake - Create tyrquake start script
+games-fps/quakespasm:demo - Uses the demo data from quake1 (quake1-demodata)
+games-fps/quakespasm:sdl-net - use SDL_net (not recommended)
+games-fps/tyrqw:server - Build with dedicated server support
+games-puzzle/reaction:single - Build AI for singleplayer using dev-lang/fpc
+games-puzzle/vitetris:allegro - Enable media-libs/allegro support
+games-puzzle/vitetris:net - Enable netplay
+games-strategy/ja2-stracciatella:linguas_ru_gold - Russian from Gold edition
+games-strategy/lordsawar:editor - Include level editor
+games-strategy/lordsawar:netplay - Compile netplay support
+games-strategy/lordsawar:pbm - Include Play-by-mail suport
+net-im/kadu:emoticons - Installs emoticons
+net-im/kadu:gadu - Installs GaduGadu support module
+net-im/kadu:jabber - Installs Jabber/XMPP plugin
+net-im/kadu-spellchecker:aspell - Uses the aspell backend
+net-im/kadu-spellchecker:enchant - Uses the enchant backend (takes priority over aspell)
 net-libs/ntrack:glib - Build glib bindings
 net-libs/ntrack:libnl - Build libnl backend
 net-libs/ntrack:rtnetlink - Build experimental rtnetlink backend

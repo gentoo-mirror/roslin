@@ -68,7 +68,6 @@ games-fps/tyrqw:server - Build with dedicated server support
 games-puzzle/reaction:single - Build AI for singleplayer using dev-lang/fpc
 games-puzzle/vitetris:allegro - Enable media-libs/allegro support
 games-puzzle/vitetris:net - Enable netplay
-games-strategy/ja2-stracciatella:linguas_ru_gold - Russian from Gold edition
 games-strategy/lordsawar:editor - Include level editor
 games-strategy/lordsawar:netplay - Compile netplay support
 games-strategy/lordsawar:pbm - Include Play-by-mail suport

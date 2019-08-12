@@ -28,7 +28,6 @@ games-emulation/retroarch-phoenix 9999: A simple GUI for RetroArch using the pho
 games-emulation/zsnes 1.51b-r2 1.51b-r3 1.51b-r4 1.51b-r5: SNES (Super Nintendo) emulator that uses x86 assembly
 games-engines/onscripter-en 20110628-r1: A fork of the ONScripter engine with added English support
 games-engines/rlvm 0.09 0.10 0.11 0.12 0.13 0.13.1 0.14: An open source implementation of the RealLive virtual machine for Linux and OSX
-games-fps/fteqw 3343: FTE QuakeWorld (Quake 1) client & server
 games-fps/joequake 0.15_beta1862: Improved Quake 1 engine with ZQuake and FuhQuake graphical effects
 games-fps/kmquake2 0.19.2-r1: Enhanced Quake 2 engine with Lazarus mod support
 games-fps/kmquake2-mods 1: Mod collection for kmquake2, for additional features in maps
@@ -106,7 +105,6 @@ games-sports/etw 3.6: Arcade-style soccer game
 games-sports/f1spirit 0_rc9-r1615: Konami's MSX1 classic F1-Spirit remake
 games-sports/roadfighter 1.0.1269: Konami's Road Fighter remake
 games-strategy/dynamite 1.1-r1: A thrilling isometric game where you use dynamite against evil
-games-strategy/ja2-stracciatella 0.12.1: An enhanced port of Jagged Alliance 2 to SDL
 games-strategy/lordsawar 0.2.0: Another Free Warlords II clone
 games-util/beat 0.3: A utility for applying and creating BPS patches
 games-util/deltapatcher 1.0 1.0-r1 2.0.1: A frontend for the xdelta patching utility
@@ -164,7 +162,6 @@ net-im/kadu-sql_history 4.3 4.3-r1: SQL history module for Kadu
 net-im/kadu-tabs 4.3: Tabbed chat module for Kadu
 net-im/kadu-word_fix 4.3: Word replacement module for Kadu
 net-im/pidgin-tlen 20101112: Tlen.pl support for Pidgin (plugin)
-net-libs/libgadu 1.12.0_rc1 1.12.1 1.12.2: This library implements the client side of the Gadu-Gadu protocol
 net-libs/ntrack 0.16 0.16-r1 0.16-r2: A lightweight library for getting events on network online status changes
 net-p2p/sopcast-bin 3.2.6: SopCast free P2P Internet TV binary
 sys-apps/frandom 1.1: Fast kernel-land pseudo-random number generator using the RC4 algorithm

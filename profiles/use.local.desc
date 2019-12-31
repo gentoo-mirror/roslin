@@ -29,12 +29,6 @@ games-emulation/pcsxr:sdl-sound - Use SDL backend for sound output
 games-emulation/qmc2:phonon - Enables support for the Phonon media library
 games-emulation/qmc2:sdlmame - Enables SDLMAME backend
 games-emulation/qmc2:sdlmess - Enables SDLMESS backend
-games-emulation/retroarch:cg - Enables support for NVidia CG shaders
-games-emulation/retroarch:fbo - Enables render-to-texture (FBO) support
-games-emulation/retroarch:netplay - Enables netplay support
-games-emulation/retroarch:rgui - Enable basic built-in gui
-games-emulation/retroarch:sdl-image - Enables sdl-image support for image loading
-games-emulation/retroarch:xml - Use libxml2 instead of the built-in parser
 games-emulation/zsnes:experimental - Enables work-in-progress code
 games-engines/onscripter-en:scale - Enables experimental scaling support
 games-fps/qrack:doe - Install also Dissolution of Eternity mission pack.

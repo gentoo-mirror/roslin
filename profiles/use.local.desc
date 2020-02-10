@@ -2,12 +2,6 @@
 # Please add your descriptions to your package's metadata.xml ONLY.
 # * generated automatically using pmaint *
 
-dev-games/bsnes-c++98-libretro:profile_accuracy - Enables the 'accuracy' emulation core
-dev-games/bsnes-c++98-libretro:profile_balanced - Enables the 'balanced' emulation core
-dev-games/bsnes-c++98-libretro:profile_performance - Enables the 'performance' emulation core
-dev-games/bsnes-libretro:profile_accuracy - Enables the 'accuracy' emulation core
-dev-games/bsnes-libretro:profile_compatibility - Enables the 'compatibility' emulation core
-dev-games/bsnes-libretro:profile_performance - Enables the 'performance' emulation core
 games-arcade/sdl-ball:leveleditor - Install level editor
 games-arcade/sdl-ball:sound - Enables sound
 games-emulation/bsnes:debug - Enables bsnes debugger
@@ -20,8 +14,6 @@ games-emulation/bsnes:snesreader - Provides extra loading features, including IP
 games-emulation/bsnes-plus:sgb - Enables Super Gameboy emulation
 games-emulation/bsnes-plus:snesfilter - Enables additional image filters
 games-emulation/bsnes-plus:snesreader - Provides extra loading features, including IPS patching and support for multiple compression formats
-games-emulation/bsnes-qt:snesfilter - Enables additional image filters
-games-emulation/bsnes-qt:snesreader - Provides extra loading features, including IPS patching and support for multiple compression formats
 games-emulation/gnome-video-arcade:wnck - Manage game windows with libwnck
 games-emulation/kega-fusion:mp3 - Optional ISO+MP3 support for SegaCD games
 games-emulation/pcsxr:cdio - Enable libcdio support

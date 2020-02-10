@@ -84,8 +84,8 @@ games-fps/quake2-textures 1: 32-bit high-resolution textures for enhanced Quake 
 games-fps/quakespasm 0.85.9: A *nix firendly FitzQuake with new features
 games-fps/quetoo 0.6.1: Quake 2 performance engine
 games-fps/tenebrae 1.04-r1: Adds stencil shadows and per pixel lights to Quake
-games-fps/tyrquake 0.61 9999: Conservative Quake 1 engine
-games-fps/tyrqw 0.61 9999: Conservative Quake 1 engine, QuakeWorld client/server
+games-fps/tyrquake 0.61: Conservative Quake 1 engine
+games-fps/tyrqw 0.61: Conservative Quake 1 engine, QuakeWorld client/server
 games-puzzle/braid 1.0.2: Platform game where you manipulate flow of time
 games-puzzle/cogs 1.0.4: Award-winning puzzle game where players build an incredible variety of machines from sliding tiles
 games-puzzle/hex-a-hop 1.1.0: Hexagonal tile-based puzzle game

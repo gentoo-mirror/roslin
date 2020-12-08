@@ -14,7 +14,6 @@ games-arcade/spacephallus 1: Fun shoot-em-up with a retro 8 bit theme
 games-emulation/bsnes 073-r1 088-r1: A Super Famicom/SNES emulator written with absolute accuracy in mind
 games-emulation/bsnes-plus 9999: A feature-oriented fork of bsnes mostly aimed at debugging
 games-emulation/gens-gs 7 7-r1 7-r2: A Gens fork which aims to clean up the source code and combine features from other forks
-games-emulation/gnome-video-arcade 0.8.3: A simple MAME front-end for the GNOME Desktop Environment
 games-emulation/kega-fusion 3.63-r1 3.63-r2: Sega SG1000/SC3000/Master System/Game Gear/Genesis/Megadrive/SVP/Pico/SegaCD/MegaCD/32X emulator
 games-emulation/pcsxr 1.9.92-r2 9999: PCSX-Reloaded: a fork of PCSX, the discontinued Playstation emulator
 games-emulation/psx-bin 1.13 1.13-r1: An easy, self-contained Sony Playstation emulator

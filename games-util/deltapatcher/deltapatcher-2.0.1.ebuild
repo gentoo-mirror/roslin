@@ -19,10 +19,10 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="x11-libs/wxGTK:3.0[X]
+DEPEND="x11-libs/wxGTK:${WX_GTK_VER}[X]
 	app-arch/p7zip"
 
-RDEPEND="x11-libs/wxGTK:3.0[X]
+RDEPEND="x11-libs/wxGTK:${WX_GTK_VER}[X]
 	dev-util/xdelta:3"
 
 S="${WORKDIR}/${MY_P}/src"

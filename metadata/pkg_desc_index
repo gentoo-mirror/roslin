@@ -1,5 +1,4 @@
 app-accessibility/milena 0.2.90.1: A TTS system for raw Polish texts
-app-emulation/fs-uae 2.2.0 2.2.2 2.2.3 2.3.99_beta2 2.4.0 2.4.1 2.4.3: Amiga emulator based on WinUAE emulation code
 app-text/wxmedit 2.9.7 2.9.8 2.9.9 2.9.9-r1 3.0 3.0.2 3.1: wxMEdit, a cross-platform Text/Hex Editor, a fork of MadEdit
 dev-games/snesfilter 9999: A bsnes helper library which provides image filters
 dev-games/snesreader 9999: A bsnes helper library needed for extra rom load options

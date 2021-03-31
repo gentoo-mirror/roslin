@@ -2,6 +2,7 @@ DEFINED_PHASES=install
 DESCRIPTION=A perl script to convert FLAC files to mp3 files.
 EAPI=0
 HOMEPAGE=http://robinbowes.com/projects/flac2mp3/
+INHERIT=versionator
 KEYWORDS=~x86 ~amd64
 LICENSE=Artistic
 RDEPEND=dev-perl/Audio-FLAC-Header dev-perl/MP3-Tag dev-perl/File-Which dev-perl/File-Find-Rule dev-perl/Text-Glob dev-perl/Number-Compare media-libs/flac media-sound/lame

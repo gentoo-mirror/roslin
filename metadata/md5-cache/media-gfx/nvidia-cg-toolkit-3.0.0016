@@ -2,6 +2,7 @@ DEFINED_PHASES=install postinst unpack
 DESCRIPTION=NVIDIA's C graphics compiler toolkit
 EAPI=2
 HOMEPAGE=http://developer.nvidia.com/object/cg_toolkit.html
+INHERIT=versionator
 IUSE=doc examples multilib
 KEYWORDS=~amd64 ~x86
 LICENSE=NVIDIA-r1

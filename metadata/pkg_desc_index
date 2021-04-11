@@ -5,25 +5,20 @@ dev-games/snesreader 9999: A bsnes helper library needed for extra rom load opti
 dev-games/supergameboy 9999: A bsnes helper library needed for Super Gameboy emulation
 dev-lang/asl 1.42_p81: Macroassembler AS
 dev-lang/bass 14: A multi-target cross assembler
-games-arcade/sdl-ball 1.0 1.01: Arkanoid/Breakout clone with pretty graphics.
 games-arcade/slotracers 1.0: Slot racers is a race-and-shooting game based on Slot Racers for Atari
 games-arcade/spacephallus 1: Fun shoot-em-up with a retro 8 bit theme
 games-emulation/bsnes 073-r1 088-r1: A Super Famicom/SNES emulator written with absolute accuracy in mind
 games-emulation/bsnes-plus 9999: A feature-oriented fork of bsnes mostly aimed at debugging
 games-emulation/gens-gs 7 7-r1 7-r2: A Gens fork which aims to clean up the source code and combine features from other forks
 games-emulation/kega-fusion 3.63-r1 3.63-r2: Sega SG1000/SC3000/Master System/Game Gear/Genesis/Megadrive/SVP/Pico/SegaCD/MegaCD/32X emulator
-games-emulation/pcsxr 1.9.92-r2 9999: PCSX-Reloaded: a fork of PCSX, the discontinued Playstation emulator
 games-emulation/psx-bin 1.13 1.13-r1: An easy, self-contained Sony Playstation emulator
 games-emulation/qmc2 0.47 0.49 0.51: An MAME frontend for SDLMAME/SDLMESS
 games-emulation/regen-gtk 0.95 0.95-r1: An accuracy-focused Sega Genesis/MegaDrive/Master System/Game Gear/SC-3000/SG-1000 emulator
 games-emulation/zsnes 1.51b-r2 1.51b-r3 1.51b-r4 1.51b-r5: SNES (Super Nintendo) emulator that uses x86 assembly
 games-engines/onscripter-en 20110628-r1: A fork of the ONScripter engine with added English support
-games-fps/joequake 0.15_beta1862: Improved Quake 1 engine with ZQuake and FuhQuake graphical effects
-games-fps/kmquake2 0.19.2-r1: Enhanced Quake 2 engine with Lazarus mod support
 games-fps/kmquake2-mods 1: Mod collection for kmquake2, for additional features in maps
 games-fps/kmquake2-shanmaps 1.01: High-quality Quake 2 map packs for use with kmquake2
 games-fps/nprquake-sdl 1-r2: quake1 utilizing a hand drawn engine
-games-fps/qrack 1.60.1: Quake 1 engine based on ProQuake and JoeQuake
 games-fps/quake1-5rivers 1: Mini campaign in DOOM 3 hell-style with three small to medium sized, dark and scrary maps
 games-fps/quake1-aop 2: Abyss Of Pandemonium - The Final Mission v2.0
 games-fps/quake1-arcade 0.1: 2D Quake!
@@ -149,7 +144,6 @@ net-im/kadu-sql_history 4.3 4.3-r1: SQL history module for Kadu
 net-im/kadu-tabs 4.3: Tabbed chat module for Kadu
 net-im/kadu-word_fix 4.3: Word replacement module for Kadu
 net-im/pidgin-tlen 20101112: Tlen.pl support for Pidgin (plugin)
-net-libs/ntrack 0.16 0.16-r1 0.16-r2: A lightweight library for getting events on network online status changes
 net-p2p/sopcast-bin 3.2.6: SopCast free P2P Internet TV binary
 sys-apps/frandom 1.1: Fast kernel-land pseudo-random number generator using the RC4 algorithm
 sys-apps/ureadahead 0.100.0 0.100.0-r1 0.100.0-r3: Ureadahead - Read files in advance during boot

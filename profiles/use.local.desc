@@ -15,12 +15,9 @@ games-emulation/bsnes-plus:sgb - Enables Super Gameboy emulation
 games-emulation/bsnes-plus:snesfilter - Enables additional image filters
 games-emulation/bsnes-plus:snesreader - Provides extra loading features, including IPS patching and support for multiple compression formats
 games-emulation/kega-fusion:mp3 - Optional ISO+MP3 support for SegaCD games
-games-emulation/pcsxr:cdio - Enable libcdio support
-games-emulation/pcsxr:sdl-sound - Use SDL backend for sound output
 games-emulation/qmc2:phonon - Enables support for the Phonon media library
 games-emulation/qmc2:sdlmame - Enables SDLMAME backend
 games-emulation/qmc2:sdlmess - Enables SDLMESS backend
-games-emulation/zsnes:experimental - Enables work-in-progress code
 games-engines/onscripter-en:scale - Enables experimental scaling support
 games-fps/qrack:doe - Install also Dissolution of Eternity mission pack.
 games-fps/qrack:dzip - Adds extra dzip support.

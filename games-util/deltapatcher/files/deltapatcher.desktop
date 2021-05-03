@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=DeltaPatcher
+Type=Application
+Comment=A frontend for the xdelta patching utility
+Exec=deltapatcher
+TryExec=deltapatcher
+Icon=deltapatcher
+Categories=Game;
+MimeType=application/xdelta3-patch

@@ -1,8 +1,7 @@
-# Copyright 1999-2020 Gentoo Authors
+# Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
-# $Header: $
 
-EAPI=5
+EAPI=7
 
 WX_GTK_VER="3.0"
 
@@ -28,7 +27,8 @@ RDEPEND="x11-libs/wxGTK:${WX_GTK_VER}[X]
 S="${WORKDIR}/${MY_P}/src"
 
 src_prepare() {
-	epatch "${FILESDIR}/${P}-makefile.patch"
+	cp "${FILESDIR}/Makefile" "${S}"
+	default
 }
 
 src_install() {
@@ -38,6 +38,12 @@ src_install() {
 
 	dodoc "${WORKDIR}/${MY_P}/README.md"
 	newicon gui/icons/icon.xpm ${PN}.xpm
+
+	insinto /usr/share/mime/packages
+	doins "${FILESDIR}"/xdelta{1,3}.xml
+
+	insinto /usr/share/applications
+	doins "${FILESDIR}/${PN}.desktop"
 }
 
 pkg_postinst() {

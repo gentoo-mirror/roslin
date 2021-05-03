@@ -2,8 +2,6 @@
 # Please add your descriptions to your package's metadata.xml ONLY.
 # * generated automatically using pmaint *
 
-games-arcade/sdl-ball:leveleditor - Install level editor
-games-arcade/sdl-ball:sound - Enables sound
 games-emulation/bsnes:debug - Enables bsnes debugger
 games-emulation/bsnes:profile_accuracy - Enables the 'accuracy' emulation core
 games-emulation/bsnes:profile_compatibility - Enables the 'compatibility' emulation core
@@ -58,6 +56,3 @@ net-im/kadu:gadu - Installs GaduGadu support module
 net-im/kadu:jabber - Installs Jabber/XMPP plugin
 net-im/kadu-spellchecker:aspell - Uses the aspell backend
 net-im/kadu-spellchecker:enchant - Uses the enchant backend (takes priority over aspell)
-net-libs/ntrack:glib - Build glib bindings
-net-libs/ntrack:libnl - Build libnl backend
-net-libs/ntrack:rtnetlink - Build experimental rtnetlink backend

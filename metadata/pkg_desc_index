@@ -10,12 +10,8 @@ games-util/beat 0.3: A utility for applying and creating BPS patches
 games-util/deltapatcher 2.0.1: A frontend for the xdelta patching utility
 games-util/flips 1.40_pre20190227: Applies and creates IPS and BPS patches.
 games-util/fteqcc 3343: QC compiler
-media-gfx/nvidia-cg-toolkit 2.1.0017 3.0.0016: NVIDIA's C graphics compiler toolkit
 media-sound/flac2mp3 0.3.0_rc3: A perl script to convert FLAC files to mp3 files.
 media-video/v4l2ucp 2.0.2-r2: A universal control panel for all Video for Linux Two (V4L2) devices
-net-im/kadu 4.3-r2: A multi-protocol IM client written in Qt4
-net-im/kadu-icons 0.6.6: Extra icon themes for Kadu
-net-im/kadu-sounds 0.6.5: Extra sound themes for Kadu
 net-im/pidgin-tlen 20101112: Tlen.pl support for Pidgin (plugin)
 net-p2p/sopcast-bin 3.2.6: SopCast free P2P Internet TV binary
 sys-apps/frandom 1.1: Fast kernel-land pseudo-random number generator using the RC4 algorithm

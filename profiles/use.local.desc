@@ -12,11 +12,6 @@ games-emulation/bsnes:snesreader - Provides extra loading features, including IP
 games-emulation/bsnes-plus:sgb - Enables Super Gameboy emulation
 games-emulation/bsnes-plus:snesfilter - Enables additional image filters
 games-emulation/bsnes-plus:snesreader - Provides extra loading features, including IPS patching and support for multiple compression formats
-games-emulation/kega-fusion:mp3 - Optional ISO+MP3 support for SegaCD games
-games-emulation/qmc2:phonon - Enables support for the Phonon media library
-games-emulation/qmc2:sdlmame - Enables SDLMAME backend
-games-emulation/qmc2:sdlmess - Enables SDLMESS backend
-games-engines/onscripter-en:scale - Enables experimental scaling support
 games-fps/qrack:doe - Install also Dissolution of Eternity mission pack.
 games-fps/qrack:dzip - Adds extra dzip support.
 games-fps/qrack:lights - Adds extra lights.
@@ -51,8 +46,3 @@ games-puzzle/vitetris:net - Enable netplay
 games-strategy/lordsawar:editor - Include level editor
 games-strategy/lordsawar:netplay - Compile netplay support
 games-strategy/lordsawar:pbm - Include Play-by-mail suport
-net-im/kadu:emoticons - Installs emoticons
-net-im/kadu:gadu - Installs GaduGadu support module
-net-im/kadu:jabber - Installs Jabber/XMPP plugin
-net-im/kadu-spellchecker:aspell - Uses the aspell backend
-net-im/kadu-spellchecker:enchant - Uses the enchant backend (takes priority over aspell)

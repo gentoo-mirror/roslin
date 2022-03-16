@@ -1,7 +1,0 @@
-# ChangeLog for games-fps/quake1-quess
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: $
-
-  22 Jan 2009; Michał Ziąbkowski <mziab@o2.pl> quake1-quess-1.3.4.ebuild:
-  Added missing IUSE.
-

@@ -2,9 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=4
-
-inherit eutils
+EAPI=7
 
 MY_PV="${PV/./}"
 MY_PV="${MY_PV/_p/-bld}"
@@ -20,12 +18,16 @@ IUSE=""
 
 S="${WORKDIR}/asl-current"
 
+PATCHES=(
+	"${FILESDIR}"/${PN}-makefile.patch \
+	"${FILESDIR}"/${PN}-amd64-ifdef.patch
+)
+
 src_prepare() {
 	cp Makefile.def.tmpl Makefile.def
-	epatch "${FILESDIR}"/${PN}-makefile.patch \
-		"${FILESDIR}"/${PN}-amd64-ifdef.patch
 	sed -i install.sh \
 	    -e "s:mkdirhier:mkdir -p:g" \
 	    -e "/strip/d" \
 	    || die "sed failed"
+	default
 }

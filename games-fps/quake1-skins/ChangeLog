@@ -1,7 +1,0 @@
-# ChangeLog for games-fps/quake1-skins
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: $
-
-  21 Jan 2009; Piotr Szymaniak <lazy_bum@o2.pl> quake1-skins-1.ebuild:
-  Added die to dodoc.
-

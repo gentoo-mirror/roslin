@@ -1,7 +1,0 @@
-# ChangeLog for games-fps/quake2-dday
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: $
-
-  01 May 2008; Piotr Szymaniak <lazy_bum@o2.pl> quake2-dday-4.1.ebuild:
-  Remove icon extension from desktop entry to match Icon Theme Specification.
-

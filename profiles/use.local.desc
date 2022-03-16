@@ -12,37 +12,3 @@ games-emulation/bsnes:snesreader - Provides extra loading features, including IP
 games-emulation/bsnes-plus:sgb - Enables Super Gameboy emulation
 games-emulation/bsnes-plus:snesfilter - Enables additional image filters
 games-emulation/bsnes-plus:snesreader - Provides extra loading features, including IPS patching and support for multiple compression formats
-games-fps/qrack:doe - Install also Dissolution of Eternity mission pack.
-games-fps/qrack:dzip - Adds extra dzip support.
-games-fps/qrack:lights - Adds extra lights.
-games-fps/qrack:skins - Install extra skins for models.
-games-fps/qrack:soa - Install also Scourge of Armagon mission pack.
-games-fps/qrack:textures - Install high quality textures.
-games-fps/quake1-data:vispatch - Adds patches for transparent water.
-games-fps/quake1-dd:darkplaces - Make Darkplaces wrapper.
-games-fps/quake1-doe:darkplaces - Add darkplaces engine startup script
-games-fps/quake1-doe:vispatch - Adds patches for transparent water
-games-fps/quake1-map-grendels-keep:darkplaces - Make Darkplaces wrapper.
-games-fps/quake1-map-grendels-keep:qrack - Make Qrack wrapper.
-games-fps/quake1-map-grendels-keep:tyrquake - Make TyrQuake wrapper.
-games-fps/quake1-soa:darkplaces - Add darkplaces engine startup script
-games-fps/quake1-soa:lights - Use custom lighting
-games-fps/quake1-soa:vispatch - Adds patches for transparent water
-games-fps/quake1-soe:darkplaces - Create darkplaces start script
-games-fps/quake1-soe:tyrquake - Create tyrquake start script
-games-fps/quake1-travail:darkplaces - Create darkplaces start script
-games-fps/quake1-travail:qrack - Create qrack start script
-games-fps/quake1-travail:soundtrack - Enable mod soundtrack
-games-fps/quake1-warpspasm:darkplaces - Create darkplaces start script
-games-fps/quake1-zerstorer:darkplaces - Create darkplaces start script
-games-fps/quake1-zerstorer:qrack - Create qrack start script
-games-fps/quake1-zerstorer:tyrquake - Create tyrquake start script
-games-fps/quakespasm:demo - Uses the demo data from quake1 (quake1-demodata)
-games-fps/quakespasm:sdl-net - use SDL_net (not recommended)
-games-fps/tyrqw:server - Build with dedicated server support
-games-puzzle/reaction:single - Build AI for singleplayer using dev-lang/fpc
-games-puzzle/vitetris:allegro - Enable media-libs/allegro support
-games-puzzle/vitetris:net - Enable netplay
-games-strategy/lordsawar:editor - Include level editor
-games-strategy/lordsawar:netplay - Compile netplay support
-games-strategy/lordsawar:pbm - Include Play-by-mail suport

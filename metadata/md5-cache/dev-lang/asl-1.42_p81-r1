@@ -1,0 +1,9 @@
+DEFINED_PHASES=prepare
+DESCRIPTION=Macroassembler AS
+EAPI=7
+HOMEPAGE=http://john.ccac.rwth-aachen.de:8000/as/
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2
+SLOT=0
+SRC_URI=http://john.ccac.rwth-aachen.de:8000/ftp/as/source/c_version/asl-current-142-bld81.tar.bz2
+_md5_=cc379bd8801aa5ae65e98bb8526746e8

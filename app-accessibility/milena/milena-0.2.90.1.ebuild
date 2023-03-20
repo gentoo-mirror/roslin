@@ -2,9 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=5
-
-inherit eutils
+EAPI=7
 
 DESCRIPTION="A TTS system for raw Polish texts"
 HOMEPAGE="http://milena.polip.com/"
@@ -19,6 +17,4 @@ DEPEND="app-accessibility/mbrola[l10n_pl]"
 RDEPEND="${DEPEND}
 	media-sound/sox"
 
-src_prepare() {
-	epatch "${FILESDIR}/${PN}-makefile.patch"
-}
+PATCHES=( "${FILESDIR}/${PN}-makefile.patch" )

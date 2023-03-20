@@ -2,9 +2,9 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=5
+EAPI=7
 
-inherit eutils toolchain-funcs git-r3
+inherit toolchain-funcs git-r3
 
 MY_PV="${PV/0./}"
 MY_PV="${MY_PV/_/}"
@@ -46,9 +46,10 @@ disable_module() {
 	sed -i "ui-qt/Makefile" -e "s|$1||"
 }
 
+PATCHES=("${FILESDIR}"/${PN}-makefile.patch)
+
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-makefile.patch
-	epatch "${FILESDIR}"/${PN}-qt5.patch
+	default
 
 	sed -i Makefile \
 		-e 's:build plugins:build:g' \

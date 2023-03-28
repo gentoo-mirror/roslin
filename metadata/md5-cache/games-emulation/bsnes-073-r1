@@ -1,0 +1,15 @@
+DEFINED_PHASES=compile install prepare
+DEPEND=ao? ( media-libs/libao ) openal? ( media-libs/openal ) alsa? ( media-libs/alsa-lib ) pulseaudio? ( media-sound/pulseaudio ) xv? ( x11-libs/libXv ) opengl? ( virtual/opengl ) sdl? ( media-libs/libsdl[joystick] ) sgb? ( dev-games/supergameboy ) snesfilter? ( dev-games/snesfilter ) snesreader? ( dev-games/snesreader ) >=dev-qt/qtgui-4.5:4 virtual/pkgconfig >=sys-devel/gcc-4.4
+DESCRIPTION=A Super Famicom/SNES emulator written with absolute accuracy in mind
+EAPI=7
+HOMEPAGE=http://byuu.org/bsnes/
+INHERIT=eutils
+IUSE=ao alsa debug openal opengl oss pulseaudio sdl sgb snesfilter +snesreader xv
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2
+RDEPEND=ao? ( media-libs/libao ) openal? ( media-libs/openal ) alsa? ( media-libs/alsa-lib ) pulseaudio? ( media-sound/pulseaudio ) xv? ( x11-libs/libXv ) opengl? ( virtual/opengl ) sdl? ( media-libs/libsdl[joystick] ) sgb? ( dev-games/supergameboy ) snesfilter? ( dev-games/snesfilter ) snesreader? ( dev-games/snesreader ) >=dev-qt/qtgui-4.5:4
+REQUIRED_USE=|| ( ao openal alsa pulseaudio oss ) || ( xv opengl sdl )
+SLOT=0
+SRC_URI=http://bsnes.googlecode.com/files/bsnes_v073.tar.bz2
+_eclasses_=edos2unix	33e347e171066657f91f8b0c72ec8773	strip-linguas	ac3ee41ee2d31d8c41a77c0838320cc7	wrapper	4a1902f969e5718126434fc35f3a0d9c	eutils	8f942ebdcf04334697649d4a0bf65a32
+_md5_=dcc88146ec7a4dd6d544ecc33d1ba62c

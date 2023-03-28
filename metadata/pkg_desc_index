@@ -3,6 +3,7 @@ dev-games/snesfilter 9999: A bsnes helper library which provides image filters
 dev-games/snesreader 9999: A bsnes helper library needed for extra rom load options
 dev-games/supergameboy 9999: A bsnes helper library needed for Super Gameboy emulation
 dev-lang/asl 1.42_p81-r1: Macroassembler AS
+games-emulation/bsnes 073-r1 088-r1: A Super Famicom/SNES emulator written with absolute accuracy in mind
 games-emulation/bsnes-plus 9999: A feature-oriented fork of bsnes mostly aimed at debugging
 games-util/deltapatcher 2.0.1: A frontend for the xdelta patching utility
 games-util/flips 1.40_pre20190227: Applies and creates IPS and BPS patches.

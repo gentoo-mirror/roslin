@@ -12,5 +12,5 @@ PROPERTIES=live
 RDEPEND=ao? ( media-libs/libao ) openal? ( media-libs/openal ) alsa? ( media-libs/alsa-lib ) pulseaudio? ( media-sound/pulseaudio ) xv? ( x11-libs/libXv ) opengl? ( virtual/opengl ) sdl? ( media-libs/libsdl[joystick] ) sgb? ( dev-games/supergameboy ) snesfilter? ( dev-games/snesfilter ) snesreader? ( dev-games/snesreader ) >=dev-qt/qtgui-5.4:5 >=dev-qt/qtwidgets-5.4:5
 REQUIRED_USE=|| ( ao openal alsa pulseaudio oss ) || ( xv opengl sdl )
 SLOT=0
-_eclasses_=toolchain-funcs	14a8ae365191b518fad51caad7a08f3e	multilib	104e1332efb829e2f7cbf89307a474f1	git-r3	27e13c09a4c7e4c78ac812f74727e676
+_eclasses_=toolchain-funcs	14a8ae365191b518fad51caad7a08f3e	multilib	c19072c3cd7ac5cb21de013f7e9832e0	git-r3	27e13c09a4c7e4c78ac812f74727e676
 _md5_=241b3d27a412f7f40201e91bd49fc059

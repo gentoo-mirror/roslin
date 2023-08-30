@@ -4,7 +4,7 @@
 
 EAPI=7
 
-inherit git-r3 multilib toolchain-funcs eutils
+inherit git-r3 multilib toolchain-funcs
 
 DESCRIPTION="A bsnes helper library which provides image filters"
 HOMEPAGE="https://github.com/devinacker/bsnes-plus"

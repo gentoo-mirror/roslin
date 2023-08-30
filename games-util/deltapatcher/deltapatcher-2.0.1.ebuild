@@ -7,7 +7,7 @@ WX_GTK_VER="3.0"
 
 MY_P="DeltaPatcher-${PV}"
 
-inherit eutils wxwidgets xdg-utils
+inherit wxwidgets xdg-utils desktop
 
 DESCRIPTION="A frontend for the xdelta patching utility"
 HOMEPAGE="http://www.sadnescity.it/utilita.php"

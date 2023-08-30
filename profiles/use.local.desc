@@ -2,13 +2,6 @@
 # Please add your descriptions to your package's metadata.xml ONLY.
 # * generated automatically using pmaint *
 
-games-emulation/bsnes:debug - Enables bsnes debugger
-games-emulation/bsnes:profile_accuracy - Enables the 'accuracy' emulation core
-games-emulation/bsnes:profile_compatibility - Enables the 'compatibility' emulation core
-games-emulation/bsnes:profile_performance - Enables the 'performance' emulation core
-games-emulation/bsnes:sgb - Enables Super Gameboy emulation
-games-emulation/bsnes:snesfilter - Enables additional image filters
-games-emulation/bsnes:snesreader - Provides extra loading features, including IPS patching and support for multiple compression formats
 games-emulation/bsnes-plus:sgb - Enables Super Gameboy emulation
 games-emulation/bsnes-plus:snesfilter - Enables additional image filters
 games-emulation/bsnes-plus:snesreader - Provides extra loading features, including IPS patching and support for multiple compression formats

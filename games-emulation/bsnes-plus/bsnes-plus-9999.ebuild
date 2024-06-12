@@ -73,7 +73,7 @@ src_prepare() {
 }
 
 src_compile() {
-	emake platform=x compiler="$(tc-getCXX)" || die "emake failed"
+	emake platform=x compiler="$(tc-getCXX)" qtpath="/usr/lib64/qt5" || die "emake failed"
 }
 
 src_install() {

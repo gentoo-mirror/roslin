@@ -1,12 +1,12 @@
 # Copyright 1999-2020 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=6
+EAPI=7
 
 EGIT_REPO_URI="https://github.com/Alcaro/Flips.git"
 EGIT_COMMIT="21f6bfe75888f6b451307a11c7e74785b47171ea"
 
-inherit git-r3 eutils xdg-utils
+inherit git-r3 xdg-utils
 
 DESCRIPTION="Applies and creates IPS and BPS patches."
 HOMEPAGE="https://github.com/Alcaro/Flips/"

@@ -22,19 +22,18 @@ DEPEND="${RDEPEND}
 	sys-devel/gcc[openmp]
 	!<games-emulation/bsnes-0.073[snesfilter]"
 
-S="${WORKDIR}/${P}/${PN}"
-
-src_prepare() {
-	epatch "${FILESDIR}/${P}-makefile.patch"
-	epatch "${FILESDIR}/${P}-qt5.patch"
-}
+PATCHES=(
+	"${FILESDIR}/${P}-makefile.patch"
+)
 
 src_compile() {
-	emake platform=x compiler="$(tc-getCC)" \
+	cd ${PN}
+	emake platform=x compiler="$(tc-getCC)" qtpath="/usr/lib64/qt5" \
 	    || die "emake $1 failed"
 }
 
 src_install() {
+	cd ${PN}
 	newlib.so libsnesfilter.so libsnesfilter.so.1
 	dosym libsnesfilter.so.1 /usr/$(get_libdir)/libsnesfilter.so
 }

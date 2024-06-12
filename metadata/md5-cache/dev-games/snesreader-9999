@@ -1,5 +1,5 @@
 BDEPEND=>=dev-vcs/git-1.8.2.1[curl]
-DEFINED_PHASES=compile install prepare unpack
+DEFINED_PHASES=compile install unpack
 DEPEND=>=dev-qt/qtgui-5.4:5 >=dev-qt/qtwidgets-5.4:5 !<games-emulation/bsnes-0.073[snesreader]
 DESCRIPTION=A bsnes helper library needed for extra rom load options
 EAPI=7
@@ -11,4 +11,4 @@ PROPERTIES=live
 RDEPEND=>=dev-qt/qtgui-5.4:5 >=dev-qt/qtwidgets-5.4:5
 SLOT=0
 _eclasses_=git-r3	fbb2889c81f3a05910c1524db69425c1	multilib	c19072c3cd7ac5cb21de013f7e9832e0	toolchain-funcs	e56c7649b804f051623c8bc1a1c44084
-_md5_=120f77896cd1e5090946131e23a02b6b
+_md5_=018d595cbf71e6e430bc08567dbcd314

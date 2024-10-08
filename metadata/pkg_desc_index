@@ -6,5 +6,4 @@ dev-lang/asl 1.42_p81-r1: Macroassembler AS
 games-emulation/bsnes-plus 9999: A feature-oriented fork of bsnes mostly aimed at debugging
 games-util/deltapatcher 2.0.1: A frontend for the xdelta patching utility
 games-util/flips 1.40_pre20190227: Applies and creates IPS and BPS patches.
-media-sound/flac2mp3 0.3.0_rc3: A perl script to convert FLAC files to mp3 files.
 net-im/pidgin-tlen 20101112: Tlen.pl support for Pidgin (plugin)
